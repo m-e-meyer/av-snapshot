@@ -1,240 +1,240 @@
-1	f	Dark Jill-O-Lantern	Jill-O-Lantern	none	none	none	none	none
-2	f	hand turkey outline	Hand Turkey	none	none	none	none	none
-3	f	crimbo elfling	Crimbo Elf	none	none	none	none	none
-4	f	orphan baby yeti	Baby Yeti	none	none	none	none	none
-5	f	silk garter snake	Feather Boa Constrictor	none	none	none	none	none
-6	i	lucky Tam O'Shanter	lucky Tam O'Shatner
-7	f	emo roe	Emo Squid	none	none	none	none	none
-8	f	personal raindrop	Personal Raincloud	none	none	none	none	none
-9	i	miniature gravy-covered maypole	none	none	none	none	none	none
-10	f	deflated inflatable dodecapede	Inflatable Dodecapede	none	none	none	none	none
-11	i	wax lips
-12	f	pygmy bugbear shaman	Pygmy Bugbear Shaman	none	none	none	none	none
-13	i	Jekyllin hide belt
-14	f	doppelshifter egg	Doppelshifter	none	none	none	none	none
-15	f	miniscule temporal rip	Temporal Riftlet	none	none	none	none	none
-16	f	sweet nutcracker	Sweet Nutcracker	none	none	none	none	none
-17	t	Tome of Snowcone Summoning	Tome of Snowcone Summoning	none	none	none	none	none
-18	i	iceberglet	ice baby,ice pick,ice skates,ice sickle
-19	f	March hat	Wild Hare	none	none	none	none	none
-20	t	McPhee's Grimoire of Hilarious Object Summoning	McPhee	none	none	none	none	none
-21	f	homeless hobo spirit	Spirit Hobo	none	none	none	none	none
-22	f	astral badger	Astral Badger	none	none	none	none	none
-23	i	jewel-eyed wizard hat
-24	f	Comma Chameleon egg	Comma Chameleon	none	none	none	none	none
-25	i	travoltan trousers
-26	i	plastic pumpkin bucket
-27	i	pilgrim shield
-28	f	yuletide troll chrysalis	Ancient Yuletide Troll	none	none	none	none	none
-29	i	Great Ball of Frozen Fire	liar's pants,flaming juggler's balls,flaming pink shirt,flaming familiar doppelg&auml;nger,evil flaming eyeball pendant
-30	t	Libram of Candy Heart Summoning	Libram of Candy Heart Summoning	none	none	none	none	none
-31	f	dandy lion cub	Dandy Lion	none	none	none	none	none
-32	f	bad penguin egg	Penguin Goodfella	none	none	none	none	none
-33	i	Mayflower bouquet
-34	f	bottled green pixie	Green Pixie	none	none	none	none	none
-35	i	bottle-rocket crossbow
-36	f	wizard action figure	Wizard Action Figure	none	none	none	none	none
-37	i	navel ring of navel gazing
-38	f	class five ecto-larva	Gluttonous Green Ghost	none	none	none	none	none
-39	i	V for Vivala mask
-40	f	Crimbo P. R. E. S. S. I. E.	Crimbo P. R. E. S. S. I. E.	none	none	none	none	none
-41	t	Libram of Divine Favors	Libram of Divine Favors	none	none	none	none	none
-42	i	naughty origami kit	naughty paper shuriken,origami pasties,origami riding crop,origami "gentlemen's" magazine,naughty fortune teller	none
-43	f	sane hatrack	Mad Hatrack	none	none	none	none	none
-44	t	Sp'n-Zor's Grimoire of &quot;Tasteful&quot; Gifts	Sp'n-Zor's Grimoire of &quot;Tasteful&quot; Gifts	none	none	none	none	none
-45	i	packet of mayfly bait	mayfly bait necklace
-46	f	llama lama cria	Llama Lama	none	none	none	none	none
-47	i	little box of fireworks
-48	f	cotton candy cocoon	Cotton Candy Carnie	none	none	none	none	none
-49	i	haiku katana
-50	f	spooky rattling cigar box	Disembodied Hand	none	none	none	none	none
-51	t	Scratch 'n' Sniff Sticker Tome	Tome of Sticker Summoning	none	none	none	none	none
-52	f	candy cornucopia	Sugar Fruit Fairy	none	none	none	none	none
-53	i	container of Spooky Putty	Spooky Putty mitre,Spooky Putty leotard,Spooky Putty ball,Spooky Putty sheet,Spooky Putty snake,Spooky Putty monster
-54	t	Libram of Love Songs	Libram of Love Songs	none	none	none	none	none
-55	f	Apathargic Bandersnatch	Frumious Bandersnatch	none	none	none	none	none
-56	i	elvish sunglasses
-57	i	Clan VIP Lounge invitation	Clan VIP Lounge key
-58	f	infant sandworm	Baby Sandworm	none	none	none	none	none
-59	i	Bag o' Tricks
-60	f	floaty stone sphere	He-Boulder	none	none	none	none	none
-61	t	Tome of Sugar Shummoning	Tome of Sugar Shummoning	none	none	none	none	none
-62	f	squamous polyp	Squamous Gibberer	none	none	none	none	none
-63	i	moveable feast
-64	f	suspicious stocking	Stocking Mimic	none	none	none	none	none
-65	i	stinky cheese ball	stinky cheese sword,stinky cheese diaper,stinky cheese wheel,stinky cheese eye,Staff of Queso Escusado
-66	i	tiny costume wardrobe
-67	f	Cheshire Bitten	Cheshire Bat	none	none	none	none	none
-68	f	coffee sprite	Coffee Pixie	none	none	none	none	none
-69	f	uniclops egg	Uniclops	none	none	none	none	none
-70	f	passed-out psychedelic bear	Psychedelic Bear	none	none	none	none	none
-71	f	unemployed hunchbacked minion	Hunchbacked Minion	none	none	none	none	none
-72	f	siesta-ing Casagnova gnome	Casagnova Gnome	none	none	none	none	none
-73	f	nervous tick egg	Nervous Tick	none	none	none	none	none
-74	f	jitterbug larva	Jitterbug	none	none	none	none	none
-75	f	unwound cymbal-playing monkey	Cymbal-Playing Monkey	none	none	none	none	none
-76	f	calm attention-deficit demon	Attention-Deficit Demon	none	none	none	none	none
-77	f	hungover chauvinist pig	Chauvinist Pig	none	none	none	none	none
-78	f	perfectly ordinary frog	Dancing Frog	none	none	none	none	none
-79	t	Libram of BRICKOs	Libram of BRICKOs	none	none	none	none	none
-80	f	panicked kernel	Baby Bugged Bugbear	none	none	none	none	none
-81	i	crown of thrones
-82	f	glowing frisbee	Rogue Program	none	none	none	none	none
-83	i	Juju Mojo Mask
-84	f	Schmalz's First Prize Beer	Mini-Hipster	none	none	none	none	none
-85	i	Greatest American Pants
-86	f	organ grinder	Knob Goblin Organ Grinder	none	none	none	none	none
-87	f	sleeping piano cat	Piano Cat	none	none	none	none	none
-88	f	rehearsing dramatic hedgehog	Dramatic Hedgehog	none	none	none	none	none
-89	it	Grumpy Bumpkin's Pumpkin Seed Catalog	packet of pumpkin seeds	Pumpkin Patch
-90	f	hibernating robot reindeer	Robot Reindeer	none	none	none	none	none
-91	i	Loathing Legion knife	Loathing Legion abacus,Loathing Legion can opener,Loathing Legion chainsaw,Loathing Legion corkscrew,Loathing Legion defibrillator,Loathing,Legion double prism,Loathing Legion electric knife,Loathing Legion flamethrower,Loathing Legion hammer,Loathing Legion helicopter,Loathing Legion jackhammer,Loathing Legion kitchen sink,Loathing Legion many-purpose hook,Loathing Legion moondial,Loathing Legion necktie,Loathing Legion pizza stone,Loathing Legion rollerblades,Loathing Legion tape measure,Loathing Legion tattoo needle,Loathing Legion universal screwdriver
-92	i
-93	i
-94	f	a cute angel	Obtuse Angel
-95	t	Sorcerers of the Shore Grimoire	Sorcerers of the Shore Grimoire
-96	p	My Own Pen Pal kit	Pen Pal	Your pen pal	none	none	none	none
-97	f	mysterious chest	Li'l Xenomorph	none	none	none	none	none
-98	i	Operation Patriot Shield
-99	f	fairy-worn boots	Pair of Stomping Boots	none	none	none	none
-100	t	Tome of Clip Art	Tome of Clip Art	none	none	none	none
-101	i	Make-Your-Own-Vampire-Fangs kit	plastic vampire fangs
-102	f	stuffed-shirt scarecrow	Fancypants Scarecrow	pantscrow2	none	none	none	none	none
-103	it	Mint Salton Pepper's Peppermint Seed Catalog	Peppermint Pip Packet	Peppermint Patch
-104	t	Libram of Resolutions	Libram of Resolutions	none	none	none	none
-105	f	The Groose in the Hoose	Bloovian Groose
-106	f	The Kloop in the Coop	Blavious Kloop
-107	i	can of Rain-Doh	empty Rain-Doh can
-108	f	Small Medium	Happy Medium	medium_0	none	none	none	none
-109	i	Boris's Helm	Boris's Helm (askew)
-110	i
-111	f	Moping Artistic Goth Kid	Artistic Goth Kid	crayongoth	none	none	none	none
-112	i	Camp Scout backpack
-113	f	Unagnimated Gnome	Reagnimated Gnome
-114	i	box of bear arms	right bear arm,left bear arm
-115	it	Pete & Jackie's Dragon Tooth Emporium Catalog	packet of dragon's teeth	Bone Garden
-116	f	deactivated nanobots	Nanorhino	nanorhino
-117	t	Thinknerd's Grimoire of Geeky Gifts	Thinknerd Grimoire
-118	i	Snow Suit
-119	f	avatar of the Unconscious Collective	Unconscious Collective
-120	f	dreaming Jung man	Angry Jung Man
-121	p	GameInformPowerDailyPro subscription card	GameInformPowerDailyPro Magazine	GameInformPowerDailyPro
-122	i	Jarlsberg's pan	Jarlsberg's pan (Cosmic portal mode)
-123	t	Libram of Pulled Taffy	Libram of Pulled Taffy	none	none	none	none
-124	e	Order of the Green Thumb Order Form	forestvillage.php	friarcottage.gif
-125	f	adventurer clone egg	Mini-Adventurer	miniadv0
-126	i
-127	i	Folder Holder	over-the-shoulder Folder Holder
-128	f	KoLHS Pep Squad Box	Steam-Powered Cheerleader	cheerleader
-129	f	deanimated reanimator's coffin	Reanimated Reanimator	reanimator
-130	i	Pantsgiving
-131	t	The Smith's Tome	copy of The Smith
-132	it	Discontent™ Winter Garden Catalog	packet of winter seeds	Winter Garden
-133	f	praying Grim Brother	Grim Brother
-134	f	hibernating Grimstone Golem	Grimstone Golem
-135	i	Buddy Bjorn
-136	i	Sneaky Pete's leather jacket	Sneaky Pete's leather jacket (collar popped)
-137	i	Little Geneticist DNA-Splicing Lab
-138	s	airplane charter: Spring Break Beach	sleazeAirportAlways
-139	f	still grill	Galloping Grill	galgrill
-140	t	The Confiscator's Grimoire	Confiscator's Grimoire
-141	i	Thor's Pliers
-142	s	airplane charter: Conspiracy Island	spookyAirportAlways
-143	f	fist turkey outline	Fist Turkey	fistturkey
-144	f	Crimbo sapling	Crimbo Shrub	crimboshrub
-145	s	Chateau Mantegna room key	chateauAvailable
-146	f	golden monkey statuette	Golden Monkey	goldmonkey
-147	f	Professor of Spelunkology	Adventurous Spelunker	spelunker
-148	s	bottle of lovebug pheromones	lovebugsUnlocked
-149	i	Ed the Undying exhibit crate	The Crown of Ed the Undying
-150	s	airplane charter: Dinseylandfill	stenchAirportAlways
-151	i	portable Mayo Clinic
-152	f	yellow puck	Puck Man	puckman
-153	f	yellow puck with a bow on it	Ms. Puck Man	mspuckman
-154	i	Pack of Every Card	Deck of Every Card
-155	s	airplane charter: That 70s Volcano	hotAirportAlways
-156	s	shrine to the Barrel god	barrelShrineUnlocked
-157	i	Haunted Doghouse
-158	s	airplane charter: The Glaciest	coldAirportAlways
-159	f	machine elf capsule	Machine Elf	machelf
-160	s	X-32-F snowman crate	snojoAvailable
-161	f	basking robin	Rockin' Robin	rockinrobin
-162	s	LT&T telegraph office deed	telegraphOfficeAvailable
-163	i	Witchess Set
-164	f	disconnected intergnat	Intergnat	discognat
-165	i	Source terminal
-166	s	detective school application	hasDetectiveSchool
-167	i	DIY protonic accelerator kit	protonic accelerator pack
-168	i	Dear Past Self Package	Time-Spinner
-169	it	Gordon Beer's Beer Garden Catalog	packet of beer seeds	Beer Garden
-170	p	Xi Receiver Unit	Xi Receiver Unit	none	none	none	none
-171	i	potted tea tree
-172	f	li'l orphan tot	Trick-or-Treating Tot	boredtot
-173	it	Granny Tood's Thanksgarden Catalog	packet of thanksgarden seeds	A Thanksgarden
-174	s	Build-a-City Gingerbread kit	gingerbreadCityAvailable
-175	f	space planula	Space Jellyfish	spacejelly
-176	f	hopeful candle	Optimistic Candle	opticandle
-177	s	heart-shaped crate	loveTunnelAvailable
-178	f	unpowered Robortender	Robortender	robotender
-179	s	Spacegate access badge	spacegateAlways
-180	p	New-You Club Membership Form	New-You Club	New-You Club
-181	i	suspicious package	Kremlin's Greatest Briefcase
-182	i	LI-11 Motor Pool voucher	Asdon Martin keyfob
-183	i	Pocket Meteor Guide	Pocket Meteor Guide (well-thumbed)
-184	s	Horsery contract	horseryAvailable
-185	i	corked genie bottle	genie bottle
-186	f	xo-skeleton-in-a-box	XO Skeleton	xoskeleton
-187	i	pantogram	portable pantogram
-188	i	locked mumming trunk	mumming trunk
-189	i	January's Garbage Tote (unopened)	January's Garbage Tote
-190	f	kerosene-soaked skip	Garbage Fire	dumpsterfire
-191	it	Pokéfam Guide to Capturing All of Them	packet of tall grass seeds	Tall Grass
-192	s	FantasyRealm membership packet	frAlways
-193	f	God Lobster Egg	God Lobster	godlob
-194	i	SongBoom&trade; BoomBox Box	SongBoom&trade; BoomBox
-195	f	kitten burglar	Cat Burglar	catburglar
-196	i	Bastille Battalion control rig crate	Bastille Battalion control rig
-197	s	Neverending Party invitation envelope	neverendingPartyAlways
-198	i	latte lovers club card	latte lovers member's mug
-199	s	voter registration form	voteAlways
-200	s	Boxing Day care package	daycareOpen
-201	f	elf sleeper agent	Elf Operative	elfopelf
-202	i	Kramco Industries packing carton	Kramco Sausage-o-matic&trade;
-203	i	mint condition Lil' Doctor&trade; bag	Lil' Doctor&trade; bag
-204	i	vampyric cloake pattern	vampyric cloake
-205	s	PirateRealm membership packet	prAlways
-206	i	Fourth of May Cosplay Saber Kit	Fourth of May Cosplay Saber
-207	i	rune-strewn spoon cocoon	hewn moon-rune spoon
-208	i	Beach Comb Box	Beach Comb
-209	s	Distant Woods Getaway Brochure	getawayCampsiteUnlocked
-210	f	packaged Pocket Professor	Pocket Professor	lilprofessoron
-211	i	Unopened Eight Days a Week Pill Keeper	Eight Days a Week Pill Keeper
-212	i	unopened diabolic pizza cube box	diabolic pizza cube
-213	f	red-spotted snapper roe	Red-Nosed Snapper	redsnapper2
-214	i	Retrospecs try-at-home kit	Retrospecs	retrospecs
-215	i	unopened Bird-a-Day calendar	Bird-a-Day calendar	birdcal
-216	i	mint-in-box Powerful Glove	Powerful Glove	pglove
-217	it	Better Shrooms and Gardens catalog	packet of mushroom spores	Your Mushroom Garden
-218	f	sinistral homunculus	Left-Hand Man	righthandbody
-219	i	Guzzlr application	Guzzlr tablet	guzzlrapp
-220	i	bag of Iunion stones	Iunion Crown	iunionbag
-221	f	baby camelCalf	Melodramedary	camelfam
-222	i	packaged SpinMaster&trade; lathe	SpinMaster&trade; lathe	lathebox
-223	i	Bagged Cargo Cultist Shorts	Cargo Cultist Shorts	cultistshortsbag
-224	i	Comprehensive Cartographic Compendium	Comprehensive Cartographic Compendium (well-read)	cccbook
-225	i	packaged knock-off retro superhero cape	unwrapped knock-off retro superhero cape	retrocape0
-226	if	box o' ghosts	gregarious ghostling	Ghost of Crimbo Carols	cghostbox
-227	i	fresh can of paint	fresh coat of paint	freshcan
-228	i	packaged miniature crystal ball	miniature crystal ball	famballbox
-229	i	emotion chip	spinal-fluid-covered emotion chip	emochip_clean
-230	i	power seed	potted power plant	powerseed
-231	i	packaged backup camera	backup camera	backcamera
-232	f	shortest-order cook	Shorter-Order Cook	shortchef
-233	i	packaged familiar scrapbook	familiar scrapbook	fambook
-234	p	Our Daily Candles&trade;	Our Daily Candles	Our Daily Candles
-235	i	packaged industrial fire extinguisher	industrial fire extinguisher	exting2box
-236	f	bottled Vampire Vintner	Vampire Vintner	vampvintbottle
-237	i	packaged Daylight Shavings Helmet	Daylight Shavings Helmet	dshelmet_box
-238	i	packaged cold medicine cabinet	cold medicine cabinet	cmcabinet_box
-239	i	mint condition magnifying glass	cursed magnifying glass	cursedmagbox
-240	i	undrilled cosmic bowling ball	cosmic bowling ball	cosmicball
+1	f	Dark Jill-O-Lantern	Jill-O-Lantern	-	-	-	-	-
+2	f	hand turkey outline	Hand Turkey	-	-	-	-	-
+3	f	crimbo elfling	Crimbo Elf	-	-	-	-	-
+4	f	orphan baby yeti	Baby Yeti	-	-	-	-	-
+5	f	silk garter snake	Feather Boa Constrictor	-	-	-	-	-
+6	i	lucky Tam O'Shanter	lucky Tam O'Shatner	-	-	-	-	-
+7	f	emo roe	Emo Squid	-	-	-	-	-
+8	f	personal raindrop	Personal Raincloud	-	-	-	-	-
+9	i	miniature gravy-covered maypole	none	-	-	-	-	-
+10	f	deflated inflatable dodecapede	Inflatable Dodecapede	-	-	-	-	-
+11	i	wax lips		-	-	-	-	-
+12	f	pygmy bugbear shaman	Pygmy Bugbear Shaman	-	-	-	-	-
+13	i	Jekyllin hide belt		-	-	-	-	-
+14	f	doppelshifter egg	Doppelshifter	-	-	-	-	-
+15	f	miniscule temporal rip	Temporal Riftlet	-	-	-	-	-
+16	f	sweet nutcracker	Sweet Nutcracker	-	-	-	-	-
+17	t	Tome of Snowcone Summoning	Tome of Snowcone Summoning	-	-	-	-	-
+18	i	iceberglet	ice baby,ice pick,ice skates,ice sickle	-	-	-	-	-
+19	f	March hat	Wild Hare	-	-	-	-	-
+20	t	McPhee's Grimoire of Hilarious Object Summoning	McPhee	-	-	-	-	-
+21	f	homeless hobo spirit	Spirit Hobo	-	-	-	-	-
+22	f	astral badger	Astral Badger	-	-	-	-	-
+23	i	jewel-eyed wizard hat		-	-	-	-	-
+24	f	Comma Chameleon egg	Comma Chameleon	-	-	-	-	-
+25	i	travoltan trousers		-	-	-	-	-
+26	i	plastic pumpkin bucket		-	-	-	-	-
+27	i	pilgrim shield		-	-	-	-	-
+28	f	yuletide troll chrysalis	Ancient Yuletide Troll	-	-	-	-	-
+29	i	Great Ball of Frozen Fire	liar's pants,flaming juggler's balls,flaming pink shirt,flaming familiar doppelg&auml;nger,evil flaming eyeball pendant	-	-	-	-	-
+30	t	Libram of Candy Heart Summoning	Libram of Candy Heart Summoning	-	-	-	-	-
+31	f	dandy lion cub	Dandy Lion	-	-	-	-	-
+32	f	bad penguin egg	Penguin Goodfella	-	-	-	-	-
+33	i	Mayflower bouquet		-	-	-	-	-
+34	f	bottled green pixie	Green Pixie	-	-	-	-	-
+35	i	bottle-rocket crossbow		-	-	-	-	-
+36	f	wizard action figure	Wizard Action Figure	-	-	-	-	-
+37	i	navel ring of navel gazing		-	-	-	-	-
+38	f	class five ecto-larva	Gluttonous Green Ghost	-	-	-	-	-
+39	i	V for Vivala mask		-	-	-	-	-
+40	f	Crimbo P. R. E. S. S. I. E.	Crimbo P. R. E. S. S. I. E.	-	-	-	-	-
+41	t	Libram of Divine Favors	Libram of Divine Favors	-	-	-	-	-
+42	i	naughty origami kit	"naughty paper shuriken,origami pasties,origami riding crop,origami ""gentlemen's"" magazine,naughty fortune teller"	-	-	-	-	-
+43	f	sane hatrack	Mad Hatrack	-	-	-	-	-
+44	t	Sp'n-Zor's Grimoire of &quot;Tasteful&quot; Gifts	Sp'n-Zor's Grimoire of &quot;Tasteful&quot; Gifts	-	-	-	-	-
+45	i	packet of mayfly bait	mayfly bait necklace	-	-	-	-	-
+46	f	llama lama cria	Llama Lama	-	-	-	-	-
+47	i	little box of fireworks		-	-	-	-	-
+48	f	cotton candy cocoon	Cotton Candy Carnie	-	-	-	-	-
+49	i	haiku katana		-	-	-	-	-
+50	f	spooky rattling cigar box	Disembodied Hand	-	-	-	-	-
+51	t	Scratch 'n' Sniff Sticker Tome	Tome of Sticker Summoning	-	-	-	-	-
+52	f	candy cornucopia	Sugar Fruit Fairy	-	-	-	-	-
+53	i	container of Spooky Putty	Spooky Putty mitre,Spooky Putty leotard,Spooky Putty ball,Spooky Putty sheet,Spooky Putty snake,Spooky Putty monster	-	-	-	-	-
+54	t	Libram of Love Songs	Libram of Love Songs	-	-	-	-	-
+55	f	Apathargic Bandersnatch	Frumious Bandersnatch	-	-	-	-	-
+56	i	elvish sunglasses		-	-	-	-	-
+57	i	Clan VIP Lounge invitation	Clan VIP Lounge key	-	-	-	-	-
+58	f	infant sandworm	Baby Sandworm	-	-	-	-	-
+59	i	Bag o' Tricks		-	-	-	-	-
+60	f	floaty stone sphere	He-Boulder	-	-	-	-	-
+61	t	Tome of Sugar Shummoning	Tome of Sugar Shummoning	-	-	-	-	-
+62	f	squamous polyp	Squamous Gibberer	-	-	-	-	-
+63	i	moveable feast		-	-	-	-	-
+64	f	suspicious stocking	Stocking Mimic	-	-	-	-	-
+65	i	stinky cheese ball	stinky cheese sword,stinky cheese diaper,stinky cheese wheel,stinky cheese eye,Staff of Queso Escusado	-	-	-	-	-
+66	i	tiny costume wardrobe		-	-	-	-	-
+67	f	Cheshire Bitten	Cheshire Bat	-	-	-	-	-
+68	f	coffee sprite	Coffee Pixie	-	-	-	-	-
+69	f	uniclops egg	Uniclops	-	-	-	-	-
+70	f	passed-out psychedelic bear	Psychedelic Bear	-	-	-	-	-
+71	f	unemployed hunchbacked minion	Hunchbacked Minion	-	-	-	-	-
+72	f	siesta-ing Casagnova gnome	Casagnova Gnome	-	-	-	-	-
+73	f	nervous tick egg	Nervous Tick	-	-	-	-	-
+74	f	jitterbug larva	Jitterbug	-	-	-	-	-
+75	f	unwound cymbal-playing monkey	Cymbal-Playing Monkey	-	-	-	-	-
+76	f	calm attention-deficit demon	Attention-Deficit Demon	-	-	-	-	-
+77	f	hungover chauvinist pig	Chauvinist Pig	-	-	-	-	-
+78	f	perfectly ordinary frog	Dancing Frog	-	-	-	-	-
+79	t	Libram of BRICKOs	Libram of BRICKOs	-	-	-	-	-
+80	f	panicked kernel	Baby Bugged Bugbear	-	-	-	-	-
+81	i	crown of thrones		-	-	-	-	-
+82	f	glowing frisbee	Rogue Program	-	-	-	-	-
+83	i	Juju Mojo Mask		-	-	-	-	-
+84	f	Schmalz's First Prize Beer	Mini-Hipster	-	-	-	-	-
+85	i	Greatest American Pants		-	-	-	-	-
+86	f	organ grinder	Knob Goblin Organ Grinder	-	-	-	-	-
+87	f	sleeping piano cat	Piano Cat	-	-	-	-	-
+88	f	rehearsing dramatic hedgehog	Dramatic Hedgehog	-	-	-	-	-
+89	it	Grumpy Bumpkin's Pumpkin Seed Catalog	packet of pumpkin seeds	Pumpkin Patch	-	-	-	-
+90	f	hibernating robot reindeer	Robot Reindeer	none	-	-	-	-
+91	i	Loathing Legion knife	Loathing Legion abacus,Loathing Legion can opener,Loathing Legion chainsaw,Loathing Legion corkscrew,Loathing Legion defibrillator,Loathing,Legion double prism,Loathing Legion electric knife,Loathing Legion flamethrower,Loathing Legion hammer,Loathing Legion helicopter,Loathing Legion jackhammer,Loathing Legion kitchen sink,Loathing Legion many-purpose hook,Loathing Legion moondial,Loathing Legion necktie,Loathing Legion pizza stone,Loathing Legion rollerblades,Loathing Legion tape measure,Loathing Legion tattoo needle,Loathing Legion universal screwdriver					
+92	i			-	-	-	-	-
+93	i			-	-	-	-	-
+94	f	a cute angel	Obtuse Angel	-	-	-	-	-
+95	t	Sorcerers of the Shore Grimoire	Sorcerers of the Shore Grimoire	-	-	-	-	-
+96	p	My Own Pen Pal kit	Pen Pal	Your pen pal	-	-	-	-
+97	f	mysterious chest	Li'l Xenomorph	-	-	-	-	-
+98	i	Operation Patriot Shield		-	-	-	-	-
+99	f	fairy-worn boots	Pair of Stomping Boots	-	-	-	-	-
+100	t	Tome of Clip Art	Tome of Clip Art	-	-	-	-	-
+101	i	Make-Your-Own-Vampire-Fangs kit	plastic vampire fangs	-	-	-	-	-
+102	f	stuffed-shirt scarecrow	Fancypants Scarecrow	pantscrow2	-	-	-	-
+103	it	Mint Salton Pepper's Peppermint Seed Catalog	Peppermint Pip Packet	Peppermint Patch	-	-	-	-
+104	t	Libram of Resolutions	Libram of Resolutions	-	-	-	-	-
+105	f	The Groose in the Hoose	Bloovian Groose	-	-	-	-	-
+106	f	The Kloop in the Coop	Blavious Kloop	-	-	-	-	-
+107	i	can of Rain-Doh	empty Rain-Doh can	-	-	-	-	-
+108	f	Small Medium	Happy Medium	medium_0	-	-	-	-
+109	i	Boris's Helm	Boris's Helm (askew)	-	-	-	-	-
+110	i			-	-	-	-	-
+111	f	Moping Artistic Goth Kid	Artistic Goth Kid	crayongoth	-	-	-	-
+112	i	Camp Scout backpack		-	-	-	-	-
+113	f	Unagnimated Gnome	Reagnimated Gnome	-	-	-	-	-
+114	i	box of bear arms	right bear arm,left bear arm	-	-	-	-	-
+115	it	Pete & Jackie's Dragon Tooth Emporium Catalog	packet of dragon's teeth	Bone Garden	-	-	-	-
+116	f	deactivated nanobots	Nanorhino	nanorhino	-	-	-	-
+117	t	Thinknerd's Grimoire of Geeky Gifts	Thinknerd Grimoire	-	-	-	-	-
+118	i	Snow Suit		-	-	-	-	-
+119	f	avatar of the Unconscious Collective	Unconscious Collective	-	-	-	-	-
+120	f	dreaming Jung man	Angry Jung Man	-	-	-	-	-
+121	p	GameInformPowerDailyPro subscription card	GameInformPowerDailyPro Magazine	GameInformPowerDailyPro	-	-	-	-
+122	i	Jarlsberg's pan	Jarlsberg's pan (Cosmic portal mode)	-	-	-	-	-
+123	t	Libram of Pulled Taffy	Libram of Pulled Taffy	-	-	-	-	-
+124	e	Order of the Green Thumb Order Form	forestvillage.php	friarcottage.gif	-	-	-	-
+125	f	adventurer clone egg	Mini-Adventurer	miniadv0	-	-	-	-
+126	i			-	-	-	-	-
+127	i	Folder Holder	over-the-shoulder Folder Holder	-	-	-	-	-
+128	f	KoLHS Pep Squad Box	Steam-Powered Cheerleader	cheerleader	-	-	-	-
+129	f	deanimated reanimator's coffin	Reanimated Reanimator	reanimator	-	-	-	-
+130	i	Pantsgiving		-	-	-	-	-
+131	t	The Smith's Tome	copy of The Smith	-	-	-	-	-
+132	it	Discontent™ Winter Garden Catalog	packet of winter seeds	Winter Garden	-	-	-	-
+133	f	praying Grim Brother	Grim Brother	-	-	-	-	-
+134	f	hibernating Grimstone Golem	Grimstone Golem	-	-	-	-	-
+135	i	Buddy Bjorn		-	-	-	-	-
+136	i	Sneaky Pete's leather jacket	Sneaky Pete's leather jacket (collar popped)	-	-	-	-	-
+137	i	Little Geneticist DNA-Splicing Lab		-	-	-	-	-
+138	s	airplane charter: Spring Break Beach	sleazeAirportAlways	-	-	-	-	-
+139	f	still grill	Galloping Grill	galgrill	-	-	-	-
+140	t	The Confiscator's Grimoire	Confiscator's Grimoire	-	-	-	-	-
+141	i	Thor's Pliers		-	-	-	-	-
+142	s	airplane charter: Conspiracy Island	spookyAirportAlways	-	-	-	-	-
+143	f	fist turkey outline	Fist Turkey	fistturkey	-	-	-	-
+144	f	Crimbo sapling	Crimbo Shrub	crimboshrub	-	-	-	-
+145	s	Chateau Mantegna room key	chateauAvailable	-	-	-	-	-
+146	f	golden monkey statuette	Golden Monkey	goldmonkey	-	-	-	-
+147	f	Professor of Spelunkology	Adventurous Spelunker	spelunker	-	-	-	-
+148	s	bottle of lovebug pheromones	lovebugsUnlocked	-	-	-	-	-
+149	i	Ed the Undying exhibit crate	The Crown of Ed the Undying	-	-	-	-	-
+150	s	airplane charter: Dinseylandfill	stenchAirportAlways	-	-	-	-	-
+151	i	portable Mayo Clinic		-	-	-	-	-
+152	f	yellow puck	Puck Man	puckman	-	-	-	-
+153	f	yellow puck with a bow on it	Ms. Puck Man	mspuckman	-	-	-	-
+154	i	Pack of Every Card	Deck of Every Card	-	-	-	-	-
+155	s	airplane charter: That 70s Volcano	hotAirportAlways	-	-	-	-	-
+156	s	shrine to the Barrel god	barrelShrineUnlocked	-	-	-	-	-
+157	i	Haunted Doghouse		-	-	-	-	-
+158	s	airplane charter: The Glaciest	coldAirportAlways	-	-	-	-	-
+159	f	machine elf capsule	Machine Elf	machelf	-	-	-	-
+160	s	X-32-F snowman crate	snojoAvailable	-	-	-	-	-
+161	f	basking robin	Rockin' Robin	rockinrobin	-	-	-	-
+162	s	LT&T telegraph office deed	telegraphOfficeAvailable	-	-	-	-	-
+163	i	Witchess Set		-	-	-	-	-
+164	f	disconnected intergnat	Intergnat	discognat	-	-	-	-
+165	i	Source terminal		-	-	-	-	-
+166	s	detective school application	hasDetectiveSchool	-	-	-	-	-
+167	i	DIY protonic accelerator kit	protonic accelerator pack	-	-	-	-	-
+168	i	Dear Past Self Package	Time-Spinner	-	-	-	-	-
+169	it	Gordon Beer's Beer Garden Catalog	packet of beer seeds	Beer Garden	-	-	-	-
+170	p	Xi Receiver Unit	Xi Receiver Unit	-	-	-	-	-
+171	i	potted tea tree		-	-	-	-	-
+172	f	li'l orphan tot	Trick-or-Treating Tot	boredtot	-	-	-	-
+173	it	Granny Tood's Thanksgarden Catalog	packet of thanksgarden seeds	A Thanksgarden	-	-	-	-
+174	s	Build-a-City Gingerbread kit	gingerbreadCityAvailable	-	-	-	-	-
+175	f	space planula	Space Jellyfish	spacejelly	-	-	-	-
+176	f	hopeful candle	Optimistic Candle	opticandle	-	-	-	-
+177	s	heart-shaped crate	loveTunnelAvailable	-	-	-	-	-
+178	f	unpowered Robortender	Robortender	robotender	-	-	-	-
+179	s	Spacegate access badge	spacegateAlways	-	-	-	-	-
+180	p	New-You Club Membership Form	New-You Club	New-You Club	-	-	-	-
+181	i	suspicious package	Kremlin's Greatest Briefcase	-	-	-	-	-
+182	i	LI-11 Motor Pool voucher	Asdon Martin keyfob	-	-	-	-	-
+183	i	Pocket Meteor Guide	Pocket Meteor Guide (well-thumbed)	-	-	-	-	-
+184	s	Horsery contract	horseryAvailable	-	-	-	-	-
+185	i	corked genie bottle	genie bottle	-	-	-	-	-
+186	f	xo-skeleton-in-a-box	XO Skeleton	xoskeleton	-	-	-	-
+187	i	pantogram	portable pantogram	-	-	-	-	-
+188	i	locked mumming trunk	mumming trunk	-	-	-	-	-
+189	i	January's Garbage Tote (unopened)	January's Garbage Tote	-	-	-	-	-
+190	f	kerosene-soaked skip	Garbage Fire	dumpsterfire	-	-	-	-
+191	it	Pokéfam Guide to Capturing All of Them	packet of tall grass seeds	Tall Grass	-	-	-	-
+192	s	FantasyRealm membership packet	frAlways	-	-	-	-	-
+193	f	God Lobster Egg	God Lobster	godlob	-	-	-	-
+194	i	SongBoom&trade; BoomBox Box	SongBoom&trade; BoomBox	-	-	-	-	-
+195	f	kitten burglar	Cat Burglar	catburglar	-	-	-	-
+196	i	Bastille Battalion control rig crate	Bastille Battalion control rig	-	-	-	-	-
+197	s	Neverending Party invitation envelope	neverendingPartyAlways	-	-	-	-	-
+198	i	latte lovers club card	latte lovers member's mug	-	-	-	-	-
+199	s	voter registration form	voteAlways	-	-	-	-	-
+200	s	Boxing Day care package	daycareOpen	-	-	-	-	-
+201	f	elf sleeper agent	Elf Operative	elfopelf	-	-	-	-
+202	i	Kramco Industries packing carton	Kramco Sausage-o-matic&trade;	-	-	-	-	-
+203	i	mint condition Lil' Doctor&trade; bag	Lil' Doctor&trade; bag	-	-	-	-	-
+204	i	vampyric cloake pattern	vampyric cloake	-	-	-	-	-
+205	s	PirateRealm membership packet	prAlways	-	-	-	-	-
+206	i	Fourth of May Cosplay Saber Kit	Fourth of May Cosplay Saber	-	-	-	-	-
+207	i	rune-strewn spoon cocoon	hewn moon-rune spoon	-	-	-	-	-
+208	i	Beach Comb Box	Beach Comb	-	-	-	-	-
+209	s	Distant Woods Getaway Brochure	getawayCampsiteUnlocked	-	-	-	-	-
+210	f	packaged Pocket Professor	Pocket Professor	lilprofessoron	-	-	-	-
+211	i	Unopened Eight Days a Week Pill Keeper	Eight Days a Week Pill Keeper	-	-	-	-	-
+212	i	unopened diabolic pizza cube box	diabolic pizza cube	-	-	-	-	-
+213	f	red-spotted snapper roe	Red-Nosed Snapper	redsnapper2	-	-	-	-
+214	i	Retrospecs try-at-home kit	Retrospecs	retrospecs	-	-	-	-
+215	i	unopened Bird-a-Day calendar	Bird-a-Day calendar	birdcal	-	-	-	-
+216	i	mint-in-box Powerful Glove	Powerful Glove	pglove	-	-	-	-
+217	it	Better Shrooms and Gardens catalog	packet of mushroom spores	Your Mushroom Garden	-	-	-	-
+218	f	sinistral homunculus	Left-Hand Man	righthandbody	-	-	-	-
+219	i	Guzzlr application	Guzzlr tablet	guzzlrapp	-	-	-	-
+220	i	bag of Iunion stones	Iunion Crown	iunionbag	-	-	-	-
+221	f	baby camelCalf	Melodramedary	camelfam	-	-	-	-
+222	i	packaged SpinMaster&trade; lathe	SpinMaster&trade; lathe	lathebox	-	-	-	-
+223	i	Bagged Cargo Cultist Shorts	Cargo Cultist Shorts	cultistshortsbag	-	-	-	-
+224	i	Comprehensive Cartographic Compendium	Comprehensive Cartographic Compendium (well-read)	cccbook	-	-	-	-
+225	i	packaged knock-off retro superhero cape	unwrapped knock-off retro superhero cape	retrocape0	-	-	-	-
+226	if	box o' ghosts	gregarious ghostling	Ghost of Crimbo Carols	cghostbox	-	-	-
+227	i	fresh can of paint	fresh coat of paint	freshcan	-	-	-	-
+228	i	packaged miniature crystal ball	miniature crystal ball	famballbox	-	-	-	-
+229	i	emotion chip	spinal-fluid-covered emotion chip	emochip_clean	-	-	-	-
+230	i	power seed	potted power plant	powerseed	-	-	-	-
+231	i	packaged backup camera	backup camera	backcamera	-	-	-	-
+232	f	shortest-order cook	Shorter-Order Cook	shortchef	-	-	-	-
+233	i	packaged familiar scrapbook	familiar scrapbook	fambook	-	-	-	-
+234	p	Our Daily Candles&trade;	Our Daily Candles	Our Daily Candles	-	-	-	-
+235	i	packaged industrial fire extinguisher	industrial fire extinguisher	exting2box	-	-	-	-
+236	f	bottled Vampire Vintner	Vampire Vintner	vampvintbottle	-	-	-	-
+237	i	packaged Daylight Shavings Helmet	Daylight Shavings Helmet	dshelmet_box	-	-	-	-
+238	i	packaged cold medicine cabinet	cold medicine cabinet	cmcabinet_box	-	-	-	-
+239	i	mint condition magnifying glass	cursed magnifying glass	cursedmagbox	-	-	-	-
+240	i	undrilled cosmic bowling ball	cosmic bowling ball	cosmicball	-	-	-	-

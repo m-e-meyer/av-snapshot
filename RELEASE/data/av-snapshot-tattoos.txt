@@ -1,279 +1,279 @@
-1	SC	class1	none	none	none	none	none	none
-2	SC HC	class1hc	none	none	none	none	none	none
-3	SC HCO	class1hco	none	none	none	none	none	none
-4	TT	class2	none	none	none	none	none	none
-5	TT HC	class2hc	none	none	none	none	none	none
-6	TT HCO	class2hco	none	none	none	none	none	none
-7	PM	class3	none	none	none	none	none	none
-8	PM HC	class3hc	none	none	none	none	none	none
-9	PM HCO	class3hco	none	none	none	none	none	none
-10	S	class4	none	none	none	none	none	none
-11	S HC	class4hc	none	none	none	none	none	none
-12	S HCO	class4hco	none	none	none	none	none	none
-13	DB	class5	none	none	none	none	none	none
-14	DB HC	class5hc	none	none	none	none	none	none
-15	DB HCO	class5hco	none	none	none	none	none	none
-16	AT	class6	none	none	none	none	none	none
-17	AT HC	class6hc	none	none	none	none	none	none
-18	AT HCO	class6hco	none	none	none	none	none	none
-19	SC I	asc01	none	none	none	none	none	none
-20	SC II	asc02	none	none	none	none	none	none
-21	SC III	asc03	none	none	none	none	none	none
-22	SC IV	asc04	none	none	none	none	none	none
-23	SC V	asc05	none	none	none	none	none	none
-24	SC VI	asc06	none	none	none	none	none	none
-25	SC VII	asc07	none	none	none	none	none	none
-26	SC VIII	asc08	none	none	none	none	none	none
-27	SC IX	asc09	none	none	none	none	none	none
-28	SC X	asc10	none	none	none	none	none	none
-29	SC XI	asc11	none	none	none	none	none	none
-30	SC XI+	asc12	none	none	none	none	none	none
-31	HC I	hasc01	none	none	none	none	none	none
-32	HC II	hasc02	none	none	none	none	none	none
-33	HC III	hasc03	none	none	none	none	none	none
-34	HC IV	hasc04	none	none	none	none	none	none
-35	HC V	hasc05	none	none	none	none	none	none
-36	HC VI	hasc06	none	none	none	none	none	none
-37	HC VII	hasc07	none	none	none	none	none	none
-38	HC VIII	hasc08	none	none	none	none	none	none
-39	HC IX	hasc09	none	none	none	none	none	none
-40	HC X	hasc10	none	none	none	none	none	none
-41	HC XI	hasc11	none	none	none	none	none	none
-42	HC XI+	hasc12	none	none	none	none	none	none
-43	Teet	nobeer	none	none	none	none	none	none
-44	Booze	nofood	none	none	none	none	none	none
-45	Oxy	oxy	none	none	none	none	none	none
-46	8-Bit Finery	swordtat	pixel hat	pixel sword	pixel pants	none	none	none
-47	Antique Arms and Armor	armortat	antique helmet	antique spear	antique greaves	antique shield	none	none
-48	Arboreal Raiment	wreathtat	can of fake snow	tree skirt	coloured-light "necklace"	none	none	none
-49	Arrrbor Day Apparrrrrel	arbortat	willowy bonnet	crotchety pants	saccharine maple pendant	none	none	none
-50	Black Armaments	blacktat	black helmet	black sword	black shield	black greaves	none	none
-51	Bounty-Hunting Rig	meattat	bounty-hunting helmet	bounty-hunting rifle	bounty-hunting pants	none	none	none
-52	Bow Tux	bowtat	bowler	bow staff	bowlegged pants	none	none	none
-53	Bugbear Costume	bugbear	bugbear beanie	bugbear bungguard	none	none	none	none
-54	Cloaca-Cola Uniform	cola1tat	cloaca-cola helmet	cloaca-cola shield	cloaca-cola fatigues	none	none	none
-55	Clockwork Apparatus	clocktat	clockwork hat	clockwork pants	clockwork trench coat	none	none	none
-56	Crimbo Duds	pressietat	crimbo hat	crimbo sword	crimbo pants	none	none	none
-57	Crimborg Assault Armor	halotat	biomechanical crimborg helmet	c.b.f.g.	biomechanical crimbord leg armor	none	none	none
-58	Cursed Zombie Pirate Costume	zompirtat	cursed eyepatch	cursed cutlass	cursed breeches	none	none	none
-59	Dire Drifter Duds	spohobotat	zombo's skullcap	zombo's shield	zombo's grievous greaves	none	none	none
-60	Dwarvish War Uniform	dwarvish	dwarvish war helmet	dwarvish war mattock	dwarvish war kilt	none	none	none
-61	Dyspepsi-Cola Uniform	cola2tat	dyspepsi-cola helmet	dyspepsi-cola shield	dyspepsi-cola fatigues	none	none	none
-62	El Vibrato Relics	elvtat	el vibrato helmet	el vibrato energy spear	el vibrato leg guards	none	none	none
-63	Encephalic Ensemble	jfishtat	cerebral cloche	cerebral crossbow	cerebral culottes	none	none	none
-64	eXtreme Cold-Weather Gear	coldgear	extreme scarf	snowboarder pants	extreme mittens	none	none	none
-65	Filthy Hippy Disguise	hippy	filthy knitted dread sack	filthy corduroys	none	none	none	none
-66	Floaty Fatigues	rock_tat	floaty rock helmet	floaty prock pants	floaty rock necklace	none	none	none
-67	Frat Boy Ensemble	fratboy	orcish baseball cap	homoerotic frat-paddle	orcish cargo shorts	none	none	none
-68	Frat Warrior Fatigues	warfrattat	beer helmet	distressed denim pants	bejeweled pledge pin	none	none	none
-69	Furry Suit	losertat	wolf mask	furry pants	none	none	none	none
-70	Glad Bag Glad Rags	recyctat	giant discarded bottlecap	giant discarded plastic fork	giant discarded torn-up glove	none	none	none
-71	Gnauga Hides	gnaugatat	gnauga hide whip	gnauga hide buckler	gnauga hide chaps	none	none	none
-72	Grass Guise	eggtat	grass hat	grass blade	grass skirt	none	none	none
-73	Grimy Reaper's Vestments	reapertat	corrosive cowl	villanous scythe	corroded breeches	none	none	none
-74	Hodgman's Regal Frippery	hodgmantat	hodgman's porkpie hat	hodgman's lobsterskin pants	hodgman's bow tie	none	none	none
-75	Hot and Cold Running Ninja Suit	ninja	cold ninja mask	icy-hot katana	ninja hot pants	none	none	none
-76	Hyperborean Hobo Habiliments	colhobotat	frosty's old silk hat	frosty's nailbat	frosty's carrot	none	none	none
-77	Knob Goblin Elite Guard Uniform	eliteguard	knob goblin elite helm	knob goblin elite polearm	knob goblin elite pants	none	none	none
-78	Knob Goblin Harem Girl Disguise	haremgirl	knob goblin harem pants	knob goblin harem veil	none	none	none	none
-79	Mining Gear	miner	miner's helmet	7-fot dwarven mattock	miner's pants	none	none	none
-80	Mutant Couture	dnatat	parasitic headgnawer	parasitic claw	parasitic strangleworm	parasitic tentacles	none	none
-81	OK Lumber. Outfit	canadiatat	balaclava	los chinos	disbelief suspenders	none	none	none
-82	Palmist Para.	palmtat	extra-large palm-frond toupee	palm-frond whip	palm-frond capris	none	none	none
-83	Pork Elf Prizes	pigirontat	pig-iron helm	pig-iron shinguards	pig-iron bracers	none	none	none
-84	Primitive Radio Duds	vol_tat	voluminous radio hat	voluminous radio pants	voluminous radio sneakers	none	none	none
-85	Pyretic Panhandler Paraphernalia	hothobotat	ol' scratch's stovepipe hat	ol' scratch's ash can	ol' scratch's ol' britches	none	none	none
-86	Radio Free Regalia	radiotat	radio free baseball cap	radio free foil	radio free pants	none	none	none
-87	Roy Orbison Disguise	orbisontat	clingfilm cap	clingfilm trousers	clingfilm slippers	none	none	none
-88	Slimesuit	slimetat	hardened slime belt	hardened slime hat	hardened slime pants	none	none	none
-89	Snowman Suit	snowmantat	snow hat	snow pants	snow belt	none	none	none
-90	Star Garb	startat	star hat	star buckler	star pants	none	none	none
-91	Swashbuckling Getup	pirate	eyepatch	swashbuckling pants	stuffed shoulder parrot	none	none	none
-92	Tapered Threads	ducttat	duct tape fedora	duct tape sword	duct tape dockers	none	none	none
-93	Tawdry Tramp Togs	slehobotat	chester's bag of candy	chester's cutoffs	chester's moustache	none	none	none
-94	Terrifying Clown Suit	clown	foolscap fool's cap	bloody clown pants	big red clown nose	clown shoes	polka-dot bow tie	none
-95	Terrycloth Tackle	toweltat	makeshift turban	makeshift skirt	makeshift cape	none	none	none
-96	Time Trappings	hourtat	time helmet	time sword	time pants	none	none	none
-97	Tropical Crimbo Duds	tropictat	tropical crimbo hat	tropical crimbo pants	tropical crimbo sword	none	none	none
-98	Vestments of the Treeslayer	arborween	bark beret	bark boxers	bark bracelet	none	none	none
-99	Vile Vagrant Vestments	stehobotat	wand of oscus	oscus's dumpster waders	oscus's pelt	none	none	none
-100	War Hippy Fatigues	warhiptat	reinforced beaded headband	bullet-proof corduroys	round purple sunglasses	none	none	none
-101	Wumpus-Hair Wardrobe	wumpustat	wumpus-hair wig	wumpus-hair whip	wumpus-hair loincloth	none	none	none
-102	Yendorian Finery	elbereth	cornuthaum	vorpal blade	ring of aggravate monster	none	none	none
-103	Artist	palette	none	none	none	none	none	none
-104	Delicious Salad	saladtat	none	none	none	none	none	none
-106	Martini	martini	none	none	none	none	none	none
-107	BRICKOfig Outfit	minifigtat	BRICKO hat	BRICKO sword	BRICKO pants	none	none	none
-108	Legendary Regalia of the Seal Crusher	revclass1	Scalp of Gorgolok	Sledgehammer of the Vælkyr	Krakrox's Loincloth	Claw of the Infernal Seal	none	none
-109	Legendary Regalia of the Chelonian Overlord	revclass2	Elder Turtle Shell	Flail of the Seven Aspects	Galapagosian Cuisses	Garter of the Turtle Poacher	none	none
-110	Legendary Regalia of the Pasta Master	revclass3	Colander of Em-er'il	Wrath of the Capsaician Pastalords	Angelhair Culottes	Bandolier of the Spaghetti Elemental	none	none
-111	Legendary Regalia of the Saucemaestro	revclass4	Ancient Saucehelm	Windsor Pan of the Source	Newman's Own Trousers	Gravyskin Belt of the Sauceblob	none	none
-112	Legendary Regalia of the Groovelord	revclass5	Disco 'Fro Pick	Seeger's Unstoppable Banjo	Volartta's bellbottoms	Bling of the New Wave	none	none
-113	Legendary Regalia of the Master Squeezeboxer	revclass6	El Sombrero De Lopez	The Trickster's Trikitixa	Lederhosen of the Night	El Hebilla del Cinturón de Lopez	none	none
-114	Frigid Northlands Garb	nosealtat	sealhide hood	sealhide buckler	sealhide leggings	none	none
-115	Knight's Armor	bknight	helm of the white knight	trousers of the white knight	wristwatch of the white knight
-116	Fancy Tux	blacktie	fancy black tie	fancy tophat	fancy tuxedo pants
-117	Smoked Pottery	potterytat	pottery hat	pottery shield	pottery training pants	none	none
-118	Demon Tattoo	demontat	none	none	none	none	none	none
-119	Unblemished Uniform	staintat	none	none	none	none	none	none
-120	Transparent Trappings	plexitat	none	none	none	none	none	none
-121	Blasphemous Bedizenment	brimtat	none	none	none	none	none	none
-122	Thousandth Birthday Suit	skeletat	bonedanna	boneana hammock	bone spurs	none	none
-123	Uncle Hobo's Rags	crimbeard	Uncle Hobo's stocking cap	Uncle Hobo's gift baggy pants	Uncle Hobo's epic beard	none	none
-124	Paperclippery	cliptat	paperclip turban	paperclip-on tie	paperclip pants	paperclip cape	none
-125	Best Game Ever!!!	margaraxe	none	none	none	none	none	none
-126	Sneaky Pete XXIX	sspdtat1	none	none	none	none	none	none
-127	Loathing Legion	lltat	none	none	none	none	none	none
-128	Alice's Army	foilheart	none	none	none	none	none	none
-129	Cold Comforts	doubicetat	double-ice cap	double-ice box	double-ice britches
-130	Sneaky Pete XXIX 2	sspdpook2	none	none	none	none	none	none
-131	Sneaky Pete XXIX 3	sspdfipp3	none	none	none	none	none	none
-132	AWOL I	aol1	none	none	none	none	none	none
-133	AWOL II	aol2	none	none	none	none	none	none
-134	AWOL III	aol3	none	none	none	none	none	none
-135	AWOL IV	aol4	none	none	none	none	none	none
-136	AWOL V	aol5	none	none	none	none	none	none
-137	Honey	honeytat	honeycap	honey dipper	honeybritches	none	none	none
-138	Lunar	lunartat	Moonthril Circlet	Moonthril Flamberge	Moonthril Greaves	none	none	none
-139	Sneaky Pete XXIX 4	sspd4plunk	none	none	none	none	none	none
-140	Corrupted Data	datatat	none	none	none	none	none	none
-141	Dark Bro's Vestments	necbrotat	The Necbromancer's Hat	The Necbromancer's Stein	The Necbromancer's Shorts	none	none	none
-142	Sneaky Pete XXIX 5	sspdfi5if	none	none	none	none	none	none
-143	Sucker Samurai Suit	lollitat	sucker kabuto	sucker tachi	sucker hakama	none	none	none
-144	AoB	class11	none	none	none	none	none	none
-145	AoB HC	class11hc	none	none	none	none	none	none
-146	Clay Tattoo	claytat	hot daub bun	foot-long hot daub	hot daub stand
-147	Wax Wardrobe	crayontat	wax hat	wax pants	none	none	none
-148	FDKOL tattoo	fdkoltat	none	none	none	none	none
-149	Zombie Slayer	class12	none	none	none	none	none
-150	Zombie Slayer HC	class12hc	none	none	none	none	none
-151	Pinata Provisions	rad_tat	papier-mitre	papier-mâchuridars	papier-masque
-152	Oil Rig	oiltat	oil cap	oil lamp	oil slacks
-153	Animelf Apparel	animelftat	brainwave-controlled unicorn horn	electronic dulcimer pants	Frown Exerciser
-154	Seafaring Suit	sailortat	foam commodore's hat	miniature deck cannon	foam naval trousers
-155	AoJ	class14	none	none	none	none	none
-156	AoJ HC	class14hc	none	none	none	none	none
-157	Crappy Mer-kin Disguise	merkintat	crappy Mer-kin mask	crappy Mer-kin tailpiece
-158	Mer-kin Gladiatorial Gear	merkgtat	Mer-kin gladiator mask	Mer-kin gladiator tailpiece	none	none	none
-159	Mer-kin Scholar's Vestments	merkstat	Mer-kin scholar mask	Mer-kin scholar tailpiece	none	none	none
-160	Raiments of the Final Boss	bosstat	Helm of the Scream Emperor	Cloak of Dire Shadows	Sword of Dark Omens	Shield of Icy Fate	Greaves of the Murk Lord	Boots of Twilight Whispers	Belt of Howling Anger	Gauntlets of the Blood Moon
-161	Violent Vestments	shubtat	Ass-Stompers of Violence	Brand of Violence	Novelty Belt Buckle of Violence	Lens of Violence	Pigsticker of Violence	Jodhpurs of Violence
-162	Hateful Habiliment	yogtat	Cold Stone of Hatred	Girdle of Hatred	Staff of Simmering Hatred	Pantaloons of Hatred	Fuzzy Slippers of Hatred	Lens of Hatred
-163	Clothing of Loathing	loathetat	Goggles of Loathing	Stick-Knife of Loathing	Scepter of Loathing	Jeans of Loathing	Treads of Loathing	Belt of Loathing	Pocket Square of Loathing
-164	Dreadful Bugbear Tattoo	dvotat2	Covers-Your-Head	Drapes-You-Regally	Warms-Your-Tush
-165	Dreadful Ghost Tattoo	dvotat5	Mayor Ghost's toupee	Mayor Ghost's cloak	Mayor Ghost's khakis
-166	Dreadful Pajama Tattoo	dvotat1	dreadful fedora	dreadful sweater	dreadful glove
-167	Dreadful Skeleton Tattoo	dvotat6	Unkillable Skeleton's skullcap	Unkillable Skeleton's breastplate	Unkillable Skeleton's shinguards
-168	Dreadful Vampire Tattoo	dvotat7	Thunkula's drinking cap	Drunkula's cape	Drunkula's silky pants
-169	Dreadful Werewolf Tattoo	dvotat3	Great Wolf's headband	Great Wolf's right paw	Great Wolf's left paw
-170	Dreadful Zombie Tattoo	dvotat4	zombie mariachi hat	zombie accordion	zombie mariachi pants
-171	Cool Iron Tattoo	dvotat8	cool iron helmet	cool iron breastplate	cool iron greaves
-172	Mark of the Bugbear	dv_tat1
-173	Mark of the Werewolf	dv_tat2
-174	Mark of the Zombie	dv_tat3
-175	Mark of the Ghost	dv_tat4
-176	Mark of the Vampire	dv_tat5
-177	Mark of the Skeleton	dv_tat6
-178	Dreadsylvania 1000FK Tattoo	dvinntat
-179	AoSP	class15
-180	AoSP HC	class15hc
-181	Space Beast Furs	sbeasttat	space beast fur hat	space beast fur whip	space beast fur pants
-182	Brogre Brouture	brogretat	Brogre bucket hat	Brogre brolo shirt	Brogre brorts
-183	Xiblaxian Tattoo	xiblaxtat	Xiblaxian stealth cowl	Xiblaxian stealth vest	Xiblaxian stealth trousers
-184	SPQL Tattoo	spqktat	centurion helmet	gladiator tunica	madius	pteruges	Roman sadnals	radiator heater shield
-185	Bear Claw Tattoo	bearclawta	warbear dress helmet	warbear dress greaves	warbear dress bracers
-186	Workoutfit	workouttat	sweatband	gym shorts	ankleweights
-187	High-Radiation Tattoo	radminetat	radiation-resistant helmet	high-energy mining laser	servo-assisted exo-pants
-188	ZAP! Tattoo	zaptat	toy Crimbot mega face	toy Crimbot power glove	toy Crimbot super fist	toy Crimbot rocket legs
-189	Ceramic Suit Tattoo	porctat	porcelain porkpie	porcelain pelerine	porcelain police baton	porcelain pepper mill	porcelain plus-fours	porcelain phantom mask
-190	Synthetic Suit Tattoo	polytat	polyester panama hat	polyester parachute	polyester peeler	polyester pad	polyester pettipants	polyester pulsera
-191	Topiary Tattoo	topitat	topee	topiary tights	topiary necktie
-192	Merc Core challenge coin	merctat
-193	Spring Break Beach tattoo coupon	sbreaktat
-194	Ed	class17
-195	Ed HC	class17hc
-196	Dinsey tattoo kit	dinseytat
-197	Dinsey's Brain Tattoo	wdbraintat	dinsey's brain	dinsey's pizza cutter	dinsey's radar dish	dinsey's pants	dinsey's oculus	dinsey's glove
-198	Toxic Togs	toxictat	isotophat	toxic mop	three mile island shorts
-199	Spelunker Tattoo	spelunktat	spelunker's fedora	spelunker's whip	spelunker's khakis
-200	Hot Ghost Tattoo	hotghosttat	ghast iron garibaldi	ghast iron cleaver	ghast iron heater shield	ghast iron codpiece
-201	Emperor Tattoo	emperortat	The Emperor's new hat	The Emperor's new shirt	The Emperor's new pants
-202	SMOOCH Tattoo	smoochtat	SMOOCH breastplate	SMOOCH codpiece	SMOOCH bracers	SMOOCH kneepads	SMOOCH spaulders
-203	DEBBIE Tattoo	debbietat
-204	Cooper's Couture	barreltat	chest barrel	barrelhead	bottoms of the barrel
-205	Wal-Mart Tattoo	walmarttat
-206	Wicker Wear	wickertat	wicker kickers	wicker slicker	wicker knickers	wicker ticker	wicker sticker	wicker clicker
-207	Bakelite Brigandine	baketat	bakelite belt	bakelite badge	bakelite bowl	bakelite brooch	bakelite breeches	bakelite backpack
-208	LT&T Tattoo	ltttat
-209	Batfellow Tattoo	batmantat
-210	The Jokester's Tattoo	jokestertat	The Jokester's pants	The Jokester's wig	The Jokester's gun
-211	Cow Puncher	class18	none	none	none	none	none	none
-212	Cow Puncher HC	class18hc	none	none	none	none	none	none
-213	Beanslinger	class19	none	none	none	none	none	none
-214	Beanslinger HC	class19hc	none	none	none	none	none	none
-215	Snake Oiler	class20	none	none	none	none	none	none
-216	Snake Oiler HC	class20hc	none	none	none	none	none	none
-217	airplane tattoo	planetat	none	none	none	none	none	none
-218	Fluffy Bunny	sourcetat	none	none	none	none	none	none
-219	Detective Tattoo	detbadge	none	none	none	none	none	none
-220	Proton Tattoo	protontat	none	none	none	none	none	none
-221	Twitch Television Tattoo	twitchtat	none	none	none	none	none	none
-222	Eldritch Equipage	elditchtat	eldritch hat	eldritch pants	none	none	none	none	none
-223	Gingerbread Tattoo	gingertat	gingerbread top hat	gingerbread waistcoat	gingerbread trousers	candy dress shoes	candy necktie	chocolate pocketwatch
-224	Eternal Knot Tattoo	eternaltat	none	none	none	none	none	none
-225	Aeroutfit	aerotat	aerogel akubra	aerogel accordion	aerogel attache case	aerogel anvil	aerogel apron	aerogel ascot
-226	Wrought Wrappings	wroughttat	wrought-iron wig	wrought-iron whisk	wrought-iron waders	wrought-iron winch crank	wrought-iron widget	wrought-iron walker
-227	I Love Gingerbread City	gingercitytat	none	none	none	none	none	none
-228	Gelatinous Noob	class23	none	none	none	none	none	none
-229	Gelatinous Noob HC	class23hc	none	none	none	none	none	none
-230	Spant Armor	spantat	spant backplate	spant spear	spant shield	spants	spant shoulderpads	none
-231	Spacegate Initiative	sgtat	none	none	none	none	none	none
-232	New-You Tattoo	newyou	none	none	none	none	none	none
-233	KGB Tattoo	kgbtat	none	none	none	none	none	none
-234	Meteor Masquerade	meteortat	meteortarboard	shooting morning star	meteorb	asteroid belt	meteorthopedic shoes	meteorite guard
-235	Cheerful Reindeer Suit	reintat	cheerful antler hat	cheerful Crimbo sweater	cheerful pajama pants	none	none	none
-236	Miming Regalia	mimetat	miming beret	miming shirt	miming corduroys	miming gloves	miming boots	none
-237	Pyrotechnic Paper Paraphernalia	fpmtat	burning paper hat	burning cape	burning paper slippers	burning paper jorts	none	none
-238	Gabardine Guise	gabtat	gabardine garibaldi	gabardine gunnysack	gabardine gaiters	gabardine garland	gabardine girdle	gabardine gloves
-239	Fiberglass Finery	fibertat	fiberglass fedora	fiberglass foil	fiberglass fetish	fiberglass frock	fiberglass fannypack	fiberglass fingerguard
-240	Genie Lamp Tattoo	genietat	genie's turbane	genie's scimitar	genie's pants	genie's bracers
-241	Psychic Enpsemble	psychictat	psychic's circlet	psychic's pslacks	psychic's crystal ball	psychic's amulet
-242	FantasyRealm Tattoo	frtat	none	none	none	none	none	none
-243	Warrior's Tattoo	frtat1	FantasyRealm Warrior's Helm	Dragonscale breastplate	The Ghoul King's ghoulottes	belt of Ogrekind	none	none
-244	Wizard's Tattoo	frtat2	FantasyRealm Mage's Hat	nozzle of the Phoenix	the Archwizard's briefs	the Ley Incursion's waist	none	none
-245	Thief's Tattoo	frtat3	FantasyRealm Rogue's Mask	Duke Vampire's regal cloak	leggings of the Spider Queen	Master Thief's utility belt	none	none
-246	gattoo	gtat	none	none	none	none	none	none
-247	Bastille Battalion tattoo kit	bbatttat	none	none	none	none	none	none
-248	Party Tattoo&trade; gift certificate	partytat	none	none	none	none	none	none
-249	Government-Issued Garb	vwgovttat	government-issued eyeshade	government-issued slacks	government-issued necktie	none	none	none
-250	Mutant Parts Apparel	vwmuttat	mutant crown	mutant arm	mutant legs	none	none	none
-251	Slime Enslamble	vwslimetat	slime fedora	slime knuckles	slime waders	none	none	none
-252	Snakeskin Suit	vwsnaketat	snakeskin cowboy hat	snakeskin jacket	snakeskin thighboots	none	none	none
-253	Bauxite Tattoo	bauxtat	bauxite beret	bauxite boxers	bauxite bow-tie	none	none	none
-254	Crimbo 2018 Tattoo	c18tat	none	none	none	none	none	none
-255	Chalk Chostume	chalktat	chalk chapeau	chalk chlamys	chalk chalice	chalk chinos	chalk chain	chalk choker
-256	Marble Materials	marbletat	marble mariachi hat	marble mantle	marble mignonette bowl	marble maebari	marble magnet	marble medallion
-257	Vampyre	class24	none	none	none	none	none	none
-258	Vampyre HC	class24hc	none	none	none	none	none	none
-259	PirateRealm Tattoo	prealmtat	PirateRealm party hat	conquistador's breastplate	piratical blunderbuss	pirate radio ring	plush sea serpent
-260	Red Roger tattoo kit	redrogertat	none	none	none	none	none	none
-261	Shallow Sea Fishing Outfit	fishingtat	spearfish fishing spear	waders	lucky rabbitfish fin	none	none
-262	Cursed Skeleton Pirate Costume	skelepiratetat	cursed tricorn hat	cursed pirate cutlass	cursed swash buckle	none	none
-263	Whittled Wearables	whittletat	whittled tiara	whittled shorts	none
+1	SC	class1	-	-	-	-	-	-	-	-	-
+2	SC HC	class1hc	-	-	-	-	-	-	-	-	-
+3	SC HCO	class1hco	-	-	-	-	-	-	-	-	-
+4	TT	class2	-	-	-	-	-	-	-	-	-
+5	TT HC	class2hc	-	-	-	-	-	-	-	-	-
+6	TT HCO	class2hco	-	-	-	-	-	-	-	-	-
+7	PM	class3	-	-	-	-	-	-	-	-	-
+8	PM HC	class3hc	-	-	-	-	-	-	-	-	-
+9	PM HCO	class3hco	-	-	-	-	-	-	-	-	-
+10	S	class4	-	-	-	-	-	-	-	-	-
+11	S HC	class4hc	-	-	-	-	-	-	-	-	-
+12	S HCO	class4hco	-	-	-	-	-	-	-	-	-
+13	DB	class5	-	-	-	-	-	-	-	-	-
+14	DB HC	class5hc	-	-	-	-	-	-	-	-	-
+15	DB HCO	class5hco	-	-	-	-	-	-	-	-	-
+16	AT	class6	-	-	-	-	-	-	-	-	-
+17	AT HC	class6hc	-	-	-	-	-	-	-	-	-
+18	AT HCO	class6hco	-	-	-	-	-	-	-	-	-
+19	SC I	asc01	-	-	-	-	-	-	-	-	-
+20	SC II	asc02	-	-	-	-	-	-	-	-	-
+21	SC III	asc03	-	-	-	-	-	-	-	-	-
+22	SC IV	asc04	-	-	-	-	-	-	-	-	-
+23	SC V	asc05	-	-	-	-	-	-	-	-	-
+24	SC VI	asc06	-	-	-	-	-	-	-	-	-
+25	SC VII	asc07	-	-	-	-	-	-	-	-	-
+26	SC VIII	asc08	-	-	-	-	-	-	-	-	-
+27	SC IX	asc09	-	-	-	-	-	-	-	-	-
+28	SC X	asc10	-	-	-	-	-	-	-	-	-
+29	SC XI	asc11	-	-	-	-	-	-	-	-	-
+30	SC XI+	asc12	-	-	-	-	-	-	-	-	-
+31	HC I	hasc01	-	-	-	-	-	-	-	-	-
+32	HC II	hasc02	-	-	-	-	-	-	-	-	-
+33	HC III	hasc03	-	-	-	-	-	-	-	-	-
+34	HC IV	hasc04	-	-	-	-	-	-	-	-	-
+35	HC V	hasc05	-	-	-	-	-	-	-	-	-
+36	HC VI	hasc06	-	-	-	-	-	-	-	-	-
+37	HC VII	hasc07	-	-	-	-	-	-	-	-	-
+38	HC VIII	hasc08	-	-	-	-	-	-	-	-	-
+39	HC IX	hasc09	-	-	-	-	-	-	-	-	-
+40	HC X	hasc10	-	-	-	-	-	-	-	-	-
+41	HC XI	hasc11	-	-	-	-	-	-	-	-	-
+42	HC XI+	hasc12	-	-	-	-	-	-	-	-	-
+43	Teet	nobeer	-	-	-	-	-	-	-	-	-
+44	Booze	nofood	-	-	-	-	-	-	-	-	-
+45	Oxy	oxy	-	-	-	-	-	-	-	-	-
+46	8-Bit Finery	swordtat	pixel hat	pixel sword	pixel pants	-	-	-	-	-	-
+47	Antique Arms and Armor	armortat	antique helmet	antique spear	antique greaves	antique shield	-	-	-	-	-
+48	Arboreal Raiment	wreathtat	can of fake snow	tree skirt	"coloured-light ""necklace"""	-	-	-	-	-	-
+49	Arrrbor Day Apparrrrrel	arbortat	willowy bonnet	crotchety pants	saccharine maple pendant	-	-	-	-	-	-
+50	Black Armaments	blacktat	black helmet	black sword	black shield	black greaves	-	-	-	-	-
+51	Bounty-Hunting Rig	meattat	bounty-hunting helmet	bounty-hunting rifle	bounty-hunting pants	-	-	-	-	-	-
+52	Bow Tux	bowtat	bowler	bow staff	bowlegged pants	-	-	-	-	-	-
+53	Bugbear Costume	bugbear	bugbear beanie	bugbear bungguard	none	-	-	-	-	-	-
+54	Cloaca-Cola Uniform	cola1tat	cloaca-cola helmet	cloaca-cola shield	cloaca-cola fatigues	-	-	-	-	-	-
+55	Clockwork Apparatus	clocktat	clockwork hat	clockwork pants	clockwork trench coat	-	-	-	-	-	-
+56	Crimbo Duds	pressietat	crimbo hat	crimbo sword	crimbo pants	-	-	-	-	-	-
+57	Crimborg Assault Armor	halotat	biomechanical crimborg helmet	c.b.f.g.	biomechanical crimbord leg armor	-	-	-	-	-	-
+58	Cursed Zombie Pirate Costume	zompirtat	cursed eyepatch	cursed cutlass	cursed breeches	-	-	-	-	-	-
+59	Dire Drifter Duds	spohobotat	zombo's skullcap	zombo's shield	zombo's grievous greaves	-	-	-	-	-	-
+60	Dwarvish War Uniform	dwarvish	dwarvish war helmet	dwarvish war mattock	dwarvish war kilt	-	-	-	-	-	-
+61	Dyspepsi-Cola Uniform	cola2tat	dyspepsi-cola helmet	dyspepsi-cola shield	dyspepsi-cola fatigues	-	-	-	-	-	-
+62	El Vibrato Relics	elvtat	el vibrato helmet	el vibrato energy spear	el vibrato leg guards	-	-	-	-	-	-
+63	Encephalic Ensemble	jfishtat	cerebral cloche	cerebral crossbow	cerebral culottes	-	-	-	-	-	-
+64	eXtreme Cold-Weather Gear	coldgear	extreme scarf	snowboarder pants	extreme mittens	-	-	-	-	-	-
+65	Filthy Hippy Disguise	hippy	filthy knitted dread sack	filthy corduroys	none	-	-	-	-	-	-
+66	Floaty Fatigues	rock_tat	floaty rock helmet	floaty prock pants	floaty rock necklace	-	-	-	-	-	-
+67	Frat Boy Ensemble	fratboy	orcish baseball cap	homoerotic frat-paddle	orcish cargo shorts	-	-	-	-	-	-
+68	Frat Warrior Fatigues	warfrattat	beer helmet	distressed denim pants	bejeweled pledge pin	-	-	-	-	-	-
+69	Furry Suit	losertat	wolf mask	furry pants	none	-	-	-	-	-	-
+70	Glad Bag Glad Rags	recyctat	giant discarded bottlecap	giant discarded plastic fork	giant discarded torn-up glove	-	-	-	-	-	-
+71	Gnauga Hides	gnaugatat	gnauga hide whip	gnauga hide buckler	gnauga hide chaps	-	-	-	-	-	-
+72	Grass Guise	eggtat	grass hat	grass blade	grass skirt	-	-	-	-	-	-
+73	Grimy Reaper's Vestments	reapertat	corrosive cowl	villanous scythe	corroded breeches	-	-	-	-	-	-
+74	Hodgman's Regal Frippery	hodgmantat	hodgman's porkpie hat	hodgman's lobsterskin pants	hodgman's bow tie	-	-	-	-	-	-
+75	Hot and Cold Running Ninja Suit	ninja	cold ninja mask	icy-hot katana	ninja hot pants	-	-	-	-	-	-
+76	Hyperborean Hobo Habiliments	colhobotat	frosty's old silk hat	frosty's nailbat	frosty's carrot	-	-	-	-	-	-
+77	Knob Goblin Elite Guard Uniform	eliteguard	knob goblin elite helm	knob goblin elite polearm	knob goblin elite pants	-	-	-	-	-	-
+78	Knob Goblin Harem Girl Disguise	haremgirl	knob goblin harem pants	knob goblin harem veil	none	-	-	-	-	-	-
+79	Mining Gear	miner	miner's helmet	7-fot dwarven mattock	miner's pants	-	-	-	-	-	-
+80	Mutant Couture	dnatat	parasitic headgnawer	parasitic claw	parasitic strangleworm	parasitic tentacles	-	-	-	-	-
+81	OK Lumber. Outfit	canadiatat	balaclava	los chinos	disbelief suspenders	-	-	-	-	-	-
+82	Palmist Para.	palmtat	extra-large palm-frond toupee	palm-frond whip	palm-frond capris	-	-	-	-	-	-
+83	Pork Elf Prizes	pigirontat	pig-iron helm	pig-iron shinguards	pig-iron bracers	-	-	-	-	-	-
+84	Primitive Radio Duds	vol_tat	voluminous radio hat	voluminous radio pants	voluminous radio sneakers	-	-	-	-	-	-
+85	Pyretic Panhandler Paraphernalia	hothobotat	ol' scratch's stovepipe hat	ol' scratch's ash can	ol' scratch's ol' britches	-	-	-	-	-	-
+86	Radio Free Regalia	radiotat	radio free baseball cap	radio free foil	radio free pants	-	-	-	-	-	-
+87	Roy Orbison Disguise	orbisontat	clingfilm cap	clingfilm trousers	clingfilm slippers	-	-	-	-	-	-
+88	Slimesuit	slimetat	hardened slime belt	hardened slime hat	hardened slime pants	-	-	-	-	-	-
+89	Snowman Suit	snowmantat	snow hat	snow pants	snow belt	-	-	-	-	-	-
+90	Star Garb	startat	star hat	star buckler	star pants	-	-	-	-	-	-
+91	Swashbuckling Getup	pirate	eyepatch	swashbuckling pants	stuffed shoulder parrot	-	-	-	-	-	-
+92	Tapered Threads	ducttat	duct tape fedora	duct tape sword	duct tape dockers	-	-	-	-	-	-
+93	Tawdry Tramp Togs	slehobotat	chester's bag of candy	chester's cutoffs	chester's moustache	-	-	-	-	-	-
+94	Terrifying Clown Suit	clown	foolscap fool's cap	bloody clown pants	big red clown nose	clown shoes	polka-dot bow tie	-	-	-	-
+95	Terrycloth Tackle	toweltat	makeshift turban	makeshift skirt	makeshift cape	-	-	-	-	-	-
+96	Time Trappings	hourtat	time helmet	time sword	time pants	-	-	-	-	-	-
+97	Tropical Crimbo Duds	tropictat	tropical crimbo hat	tropical crimbo pants	tropical crimbo sword	-	-	-	-	-	-
+98	Vestments of the Treeslayer	arborween	bark beret	bark boxers	bark bracelet	-	-	-	-	-	-
+99	Vile Vagrant Vestments	stehobotat	wand of oscus	oscus's dumpster waders	oscus's pelt	-	-	-	-	-	-
+100	War Hippy Fatigues	warhiptat	reinforced beaded headband	bullet-proof corduroys	round purple sunglasses	-	-	-	-	-	-
+101	Wumpus-Hair Wardrobe	wumpustat	wumpus-hair wig	wumpus-hair whip	wumpus-hair loincloth	-	-	-	-	-	-
+102	Yendorian Finery	elbereth	cornuthaum	vorpal blade	ring of aggravate monster	-	-	-	-	-	-
+103	Artist	palette	-	-	-	-	-	-	-	-	-
+104	Delicious Salad	saladtat	-	-	-	-	-	-	-	-	-
+106	Martini	martini	-	-	-	-	-	-	-	-	-
+107	BRICKOfig Outfit	minifigtat	BRICKO hat	BRICKO sword	BRICKO pants	-	-	-	-	-	-
+108	Legendary Regalia of the Seal Crusher	revclass1	Scalp of Gorgolok	Sledgehammer of the Vælkyr	Krakrox's Loincloth	Claw of the Infernal Seal	-	-	-	-	-
+109	Legendary Regalia of the Chelonian Overlord	revclass2	Elder Turtle Shell	Flail of the Seven Aspects	Galapagosian Cuisses	Garter of the Turtle Poacher	-	-	-	-	-
+110	Legendary Regalia of the Pasta Master	revclass3	Colander of Em-er'il	Wrath of the Capsaician Pastalords	Angelhair Culottes	Bandolier of the Spaghetti Elemental	-	-	-	-	-
+111	Legendary Regalia of the Saucemaestro	revclass4	Ancient Saucehelm	Windsor Pan of the Source	Newman's Own Trousers	Gravyskin Belt of the Sauceblob	-	-	-	-	-
+112	Legendary Regalia of the Groovelord	revclass5	Disco 'Fro Pick	Seeger's Unstoppable Banjo	Volartta's bellbottoms	Bling of the New Wave	-	-	-	-	-
+113	Legendary Regalia of the Master Squeezeboxer	revclass6	El Sombrero De Lopez	The Trickster's Trikitixa	Lederhosen of the Night	El Hebilla del Cinturón de Lopez	-	-	-	-	-
+114	Frigid Northlands Garb	nosealtat	sealhide hood	sealhide buckler	sealhide leggings	-	-	-	-	-	-
+115	Knight's Armor	bknight	helm of the white knight	trousers of the white knight	wristwatch of the white knight	-	-	-	-	-	-
+116	Fancy Tux	blacktie	fancy black tie	fancy tophat	fancy tuxedo pants	-	-	-	-	-	-
+117	Smoked Pottery	potterytat	pottery hat	pottery shield	pottery training pants	-	-	-	-	-	-
+118	Demon Tattoo	demontat	-	-	-	-	-	-	-	-	-
+119	Unblemished Uniform	staintat	-	-	-	-	-	-	-	-	-
+120	Transparent Trappings	plexitat	-	-	-	-	-	-	-	-	-
+121	Blasphemous Bedizenment	brimtat	-	-	-	-	-	-	-	-	-
+122	Thousandth Birthday Suit	skeletat	bonedanna	boneana hammock	bone spurs	-	-	-	-	-	-
+123	Uncle Hobo's Rags	crimbeard	Uncle Hobo's stocking cap	Uncle Hobo's gift baggy pants	Uncle Hobo's epic beard	-	-	-	-	-	-
+124	Paperclippery	cliptat	paperclip turban	paperclip-on tie	paperclip pants	paperclip cape	-	-	-	-	-
+125	Best Game Ever!!!	margaraxe	-	-	-	-	-	-	-	-	-
+126	Sneaky Pete XXIX	sspdtat1	-	-	-	-	-	-	-	-	-
+127	Loathing Legion	lltat	-	-	-	-	-	-	-	-	-
+128	Alice's Army	foilheart	-	-	-	-	-	-	-	-	-
+129	Cold Comforts	doubicetat	double-ice cap	double-ice box	double-ice britches	-	-	-	-	-	-
+130	Sneaky Pete XXIX 2	sspdpook2	-	-	-	-	-	-	-	-	-
+131	Sneaky Pete XXIX 3	sspdfipp3	-	-	-	-	-	-	-	-	-
+132	AWOL I	aol1	-	-	-	-	-	-	-	-	-
+133	AWOL II	aol2	-	-	-	-	-	-	-	-	-
+134	AWOL III	aol3	-	-	-	-	-	-	-	-	-
+135	AWOL IV	aol4	-	-	-	-	-	-	-	-	-
+136	AWOL V	aol5	-	-	-	-	-	-	-	-	-
+137	Honey	honeytat	honeycap	honey dipper	honeybritches	-	-	-	-	-	-
+138	Lunar	lunartat	Moonthril Circlet	Moonthril Flamberge	Moonthril Greaves	-	-	-	-	-	-
+139	Sneaky Pete XXIX 4	sspd4plunk	-	-	-	-	-	-	-	-	-
+140	Corrupted Data	datatat	-	-	-	-	-	-	-	-	-
+141	Dark Bro's Vestments	necbrotat	The Necbromancer's Hat	The Necbromancer's Stein	The Necbromancer's Shorts	-	-	-	-	-	-
+142	Sneaky Pete XXIX 5	sspdfi5if	-	-	-	-	-	-	-	-	-
+143	Sucker Samurai Suit	lollitat	sucker kabuto	sucker tachi	sucker hakama	-	-	-	-	-	-
+144	AoB	class11	-	-	-	-	-	-	-	-	-
+145	AoB HC	class11hc	-	-	-	-	-	-	-	-	-
+146	Clay Tattoo	claytat	hot daub bun	foot-long hot daub	hot daub stand	-	-	-	-	-	-
+147	Wax Wardrobe	crayontat	wax hat	wax pants	-	-	-	-	-	-	-
+148	FDKOL tattoo	fdkoltat	-	-	-	-	-	-	-	-	-
+149	Zombie Slayer	class12	-	-	-	-	-	-	-	-	-
+150	Zombie Slayer HC	class12hc	-	-	-	-	-	-	-	-	-
+151	Pinata Provisions	rad_tat	papier-mitre	papier-mâchuridars	papier-masque	-	-	-	-	-	-
+152	Oil Rig	oiltat	oil cap	oil lamp	oil slacks	-	-	-	-	-	-
+153	Animelf Apparel	animelftat	brainwave-controlled unicorn horn	electronic dulcimer pants	Frown Exerciser	-	-	-	-	-	-
+154	Seafaring Suit	sailortat	foam commodore's hat	miniature deck cannon	foam naval trousers	-	-	-	-	-	-
+155	AoJ	class14	-	-	-	-	-	-	-	-	-
+156	AoJ HC	class14hc	-	-	-	-	-	-	-	-	-
+157	Crappy Mer-kin Disguise	merkintat	crappy Mer-kin mask	crappy Mer-kin tailpiece	-	-	-	-	-	-	-
+158	Mer-kin Gladiatorial Gear	merkgtat	Mer-kin gladiator mask	Mer-kin gladiator tailpiece	-	-	-	-	-	-	-
+159	Mer-kin Scholar's Vestments	merkstat	Mer-kin scholar mask	Mer-kin scholar tailpiece	-	-	-	-	-	-	-
+160	Raiments of the Final Boss	bosstat	Helm of the Scream Emperor	Cloak of Dire Shadows	Sword of Dark Omens	Shield of Icy Fate	Greaves of the Murk Lord	Boots of Twilight Whispers	Belt of Howling Anger	Gauntlets of the Blood Moon	-
+161	Violent Vestments	shubtat	Ass-Stompers of Violence	Brand of Violence	Novelty Belt Buckle of Violence	Lens of Violence	Pigsticker of Violence	Jodhpurs of Violence	-	-	-
+162	Hateful Habiliment	yogtat	Cold Stone of Hatred	Girdle of Hatred	Staff of Simmering Hatred	Pantaloons of Hatred	Fuzzy Slippers of Hatred	Lens of Hatred	-	-	-
+163	Clothing of Loathing	loathetat	Goggles of Loathing	Stick-Knife of Loathing	Scepter of Loathing	Jeans of Loathing	Treads of Loathing	Belt of Loathing	Pocket Square of Loathing	-	-
+164	Dreadful Bugbear Tattoo	dvotat2	Covers-Your-Head	Drapes-You-Regally	Warms-Your-Tush	-	-	-	-	-	-
+165	Dreadful Ghost Tattoo	dvotat5	Mayor Ghost's toupee	Mayor Ghost's cloak	Mayor Ghost's khakis	-	-	-	-	-	-
+166	Dreadful Pajama Tattoo	dvotat1	dreadful fedora	dreadful sweater	dreadful glove	-	-	-	-	-	-
+167	Dreadful Skeleton Tattoo	dvotat6	Unkillable Skeleton's skullcap	Unkillable Skeleton's breastplate	Unkillable Skeleton's shinguards	-	-	-	-	-	-
+168	Dreadful Vampire Tattoo	dvotat7	Thunkula's drinking cap	Drunkula's cape	Drunkula's silky pants	-	-	-	-	-	-
+169	Dreadful Werewolf Tattoo	dvotat3	Great Wolf's headband	Great Wolf's right paw	Great Wolf's left paw	-	-	-	-	-	-
+170	Dreadful Zombie Tattoo	dvotat4	zombie mariachi hat	zombie accordion	zombie mariachi pants	-	-	-	-	-	-
+171	Cool Iron Tattoo	dvotat8	cool iron helmet	cool iron breastplate	cool iron greaves	-	-	-	-	-	-
+172	Mark of the Bugbear	dv_tat1	-	-	-	-	-	-	-	-	-
+173	Mark of the Werewolf	dv_tat2	-	-	-	-	-	-	-	-	-
+174	Mark of the Zombie	dv_tat3	-	-	-	-	-	-	-	-	-
+175	Mark of the Ghost	dv_tat4	-	-	-	-	-	-	-	-	-
+176	Mark of the Vampire	dv_tat5	-	-	-	-	-	-	-	-	-
+177	Mark of the Skeleton	dv_tat6	-	-	-	-	-	-	-	-	-
+178	Dreadsylvania 1000FK Tattoo	dvinntat	-	-	-	-	-	-	-	-	-
+179	AoSP	class15	-	-	-	-	-	-	-	-	-
+180	AoSP HC	class15hc	-	-	-	-	-	-	-	-	-
+181	Space Beast Furs	sbeasttat	space beast fur hat	space beast fur whip	space beast fur pants	-	-	-	-	-	-
+182	Brogre Brouture	brogretat	Brogre bucket hat	Brogre brolo shirt	Brogre brorts	-	-	-	-	-	-
+183	Xiblaxian Tattoo	xiblaxtat	Xiblaxian stealth cowl	Xiblaxian stealth vest	Xiblaxian stealth trousers	-	-	-	-	-	-
+184	SPQL Tattoo	spqktat	centurion helmet	gladiator tunica	madius	pteruges	Roman sadnals	radiator heater shield	-	-	-
+185	Bear Claw Tattoo	bearclawta	warbear dress helmet	warbear dress greaves	warbear dress bracers	-	-	-	-	-	-
+186	Workoutfit	workouttat	sweatband	gym shorts	ankleweights	-	-	-	-	-	-
+187	High-Radiation Tattoo	radminetat	radiation-resistant helmet	high-energy mining laser	servo-assisted exo-pants	-	-	-	-	-	-
+188	ZAP! Tattoo	zaptat	toy Crimbot mega face	toy Crimbot power glove	toy Crimbot super fist	toy Crimbot rocket legs	-	-	-	-	-
+189	Ceramic Suit Tattoo	porctat	porcelain porkpie	porcelain pelerine	porcelain police baton	porcelain pepper mill	porcelain plus-fours	porcelain phantom mask	-	-	-
+190	Synthetic Suit Tattoo	polytat	polyester panama hat	polyester parachute	polyester peeler	polyester pad	polyester pettipants	polyester pulsera	-	-	-
+191	Topiary Tattoo	topitat	topee	topiary tights	topiary necktie	-	-	-	-	-	-
+192	Merc Core challenge coin	merctat	-	-	-	-	-	-	-	-	-
+193	Spring Break Beach tattoo coupon	sbreaktat	-	-	-	-	-	-	-	-	-
+194	Ed	class17	-	-	-	-	-	-	-	-	-
+195	Ed HC	class17hc	-	-	-	-	-	-	-	-	-
+196	Dinsey tattoo kit	dinseytat	-	-	-	-	-	-	-	-	-
+197	Dinsey's Brain Tattoo	wdbraintat	dinsey's brain	dinsey's pizza cutter	dinsey's radar dish	dinsey's pants	dinsey's oculus	dinsey's glove	-	-	-
+198	Toxic Togs	toxictat	isotophat	toxic mop	three mile island shorts	-	-	-	-	-	-
+199	Spelunker Tattoo	spelunktat	spelunker's fedora	spelunker's whip	spelunker's khakis	-	-	-	-	-	-
+200	Hot Ghost Tattoo	hotghosttat	ghast iron garibaldi	ghast iron cleaver	ghast iron heater shield	ghast iron codpiece	-	-	-	-	-
+201	Emperor Tattoo	emperortat	The Emperor's new hat	The Emperor's new shirt	The Emperor's new pants	-	-	-	-	-	-
+202	SMOOCH Tattoo	smoochtat	SMOOCH breastplate	SMOOCH codpiece	SMOOCH bracers	SMOOCH kneepads	SMOOCH spaulders	-	-	-	-
+203	DEBBIE Tattoo	debbietat	-	-	-	-	-	-	-	-	-
+204	Cooper's Couture	barreltat	chest barrel	barrelhead	bottoms of the barrel	-	-	-	-	-	-
+205	Wal-Mart Tattoo	walmarttat	-	-	-	-	-	-	-	-	-
+206	Wicker Wear	wickertat	wicker kickers	wicker slicker	wicker knickers	wicker ticker	wicker sticker	wicker clicker	-	-	-
+207	Bakelite Brigandine	baketat	bakelite belt	bakelite badge	bakelite bowl	bakelite brooch	bakelite breeches	bakelite backpack	-	-	-
+208	LT&T Tattoo	ltttat	-	-	-	-	-	-	-	-	-
+209	Batfellow Tattoo	batmantat	-	-	-	-	-	-	-	-	-
+210	The Jokester's Tattoo	jokestertat	The Jokester's pants	The Jokester's wig	The Jokester's gun	-	-	-	-	-	-
+211	Cow Puncher	class18	-	-	-	-	-	-	-	-	-
+212	Cow Puncher HC	class18hc	-	-	-	-	-	-	-	-	-
+213	Beanslinger	class19	-	-	-	-	-	-	-	-	-
+214	Beanslinger HC	class19hc	-	-	-	-	-	-	-	-	-
+215	Snake Oiler	class20	-	-	-	-	-	-	-	-	-
+216	Snake Oiler HC	class20hc	-	-	-	-	-	-	-	-	-
+217	airplane tattoo	planetat	-	-	-	-	-	-	-	-	-
+218	Fluffy Bunny	sourcetat	-	-	-	-	-	-	-	-	-
+219	Detective Tattoo	detbadge	-	-	-	-	-	-	-	-	-
+220	Proton Tattoo	protontat	-	-	-	-	-	-	-	-	-
+221	Twitch Television Tattoo	twitchtat	-	-	-	-	-	-	-	-	-
+222	Eldritch Equipage	elditchtat	eldritch hat	eldritch pants	-	-	-	-	-	-	-
+223	Gingerbread Tattoo	gingertat	gingerbread top hat	gingerbread waistcoat	gingerbread trousers	candy dress shoes	candy necktie	chocolate pocketwatch	-	-	-
+224	Eternal Knot Tattoo	eternaltat	-	-	-	-	-	-	-	-	-
+225	Aeroutfit	aerotat	aerogel akubra	aerogel accordion	aerogel attache case	aerogel anvil	aerogel apron	aerogel ascot	-	-	-
+226	Wrought Wrappings	wroughttat	wrought-iron wig	wrought-iron whisk	wrought-iron waders	wrought-iron winch crank	wrought-iron widget	wrought-iron walker	-	-	-
+227	I Love Gingerbread City	gingercitytat	-	-	-	-	-	-	-	-	-
+228	Gelatinous Noob	class23	-	-	-	-	-	-	-	-	-
+229	Gelatinous Noob HC	class23hc	-	-	-	-	-	-	-	-	-
+230	Spant Armor	spantat	spant backplate	spant spear	spant shield	spants	spant shoulderpads	-	-	-	-
+231	Spacegate Initiative	sgtat	-	-	-	-	-	-	-	-	-
+232	New-You Tattoo	newyou	-	-	-	-	-	-	-	-	-
+233	KGB Tattoo	kgbtat	-	-	-	-	-	-	-	-	-
+234	Meteor Masquerade	meteortat	meteortarboard	shooting morning star	meteorb	asteroid belt	meteorthopedic shoes	meteorite guard	-	-	-
+235	Cheerful Reindeer Suit	reintat	cheerful antler hat	cheerful Crimbo sweater	cheerful pajama pants	-	-	-	-	-	-
+236	Miming Regalia	mimetat	miming beret	miming shirt	miming corduroys	miming gloves	miming boots	-	-	-	-
+237	Pyrotechnic Paper Paraphernalia	fpmtat	burning paper hat	burning cape	burning paper slippers	burning paper jorts	none	-	-	-	-
+238	Gabardine Guise	gabtat	gabardine garibaldi	gabardine gunnysack	gabardine gaiters	gabardine garland	gabardine girdle	gabardine gloves	-	-	-
+239	Fiberglass Finery	fibertat	fiberglass fedora	fiberglass foil	fiberglass fetish	fiberglass frock	fiberglass fannypack	fiberglass fingerguard	-	-	-
+240	Genie Lamp Tattoo	genietat	genie's turbane	genie's scimitar	genie's pants	genie's bracers	-	-	-	-	-
+241	Psychic Enpsemble	psychictat	psychic's circlet	psychic's pslacks	psychic's crystal ball	psychic's amulet	-	-	-	-	-
+242	FantasyRealm Tattoo	frtat	-	-	-	-	-	-	-	-	-
+243	Warrior's Tattoo	frtat1	FantasyRealm Warrior's Helm	Dragonscale breastplate	The Ghoul King's ghoulottes	belt of Ogrekind	-	-	-	-	-
+244	Wizard's Tattoo	frtat2	FantasyRealm Mage's Hat	nozzle of the Phoenix	the Archwizard's briefs	the Ley Incursion's waist	-	-	-	-	-
+245	Thief's Tattoo	frtat3	FantasyRealm Rogue's Mask	Duke Vampire's regal cloak	leggings of the Spider Queen	Master Thief's utility belt	-	-	-	-	-
+246	gattoo	gtat	-	-	-	-	-	-	-	-	-
+247	Bastille Battalion tattoo kit	bbatttat	-	-	-	-	-	-	-	-	-
+248	Party Tattoo&trade; gift certificate	partytat	-	-	-	-	-	-	-	-	-
+249	Government-Issued Garb	vwgovttat	government-issued eyeshade	government-issued slacks	government-issued necktie	-	-	-	-	-	-
+250	Mutant Parts Apparel	vwmuttat	mutant crown	mutant arm	mutant legs	-	-	-	-	-	-
+251	Slime Enslamble	vwslimetat	slime fedora	slime knuckles	slime waders	-	-	-	-	-	-
+252	Snakeskin Suit	vwsnaketat	snakeskin cowboy hat	snakeskin jacket	snakeskin thighboots	-	-	-	-	-	-
+253	Bauxite Tattoo	bauxtat	bauxite beret	bauxite boxers	bauxite bow-tie	-	-	-	-	-	-
+254	Crimbo 2018 Tattoo	c18tat	none	none	none	-	-	-	-	-	-
+255	Chalk Chostume	chalktat	chalk chapeau	chalk chlamys	chalk chalice	chalk chinos	chalk chain	chalk choker	-	-	-
+256	Marble Materials	marbletat	marble mariachi hat	marble mantle	marble mignonette bowl	marble maebari	marble magnet	marble medallion	-	-	-
+257	Vampyre	class24	-	-	-	-	-	-	-	-	-
+258	Vampyre HC	class24hc	-	-	-	-	-	-	-	-	-
+259	PirateRealm Tattoo	prealmtat	PirateRealm party hat	conquistador's breastplate	piratical blunderbuss	pirate radio ring	plush sea serpent	-	-	-	-
+260	Red Roger tattoo kit	redrogertat	-	-	-	-	-	-	-	-	-
+261	Shallow Sea Fishing Outfit	fishingtat	spearfish fishing spear	waders	lucky rabbitfish fin	-	-	-	-	-	-
+262	Cursed Skeleton Pirate Costume	skelepiratetat	cursed tricorn hat	cursed pirate cutlass	cursed swash buckle	-	-	-	-	-	-
+263	Whittled Wearables	whittletat	whittled tiara	whittled shorts	-	-	-	-	-	-	-
 264	Antique Nutcracker Tattoo	nutctat	antique nutcracker hat	antique nutcracker cape	antique nutcracker waistcoat	antique nutcracker sword	antique nutcracker drumstick	antique nutcracker pants	antique nutcracker epaulets	antique nutcracker beard	antique nutcracker boots
-265	Terra Cotta Tackle Tattoo	tc_tat	terra cotta truss	terra cotta trousers	terra cotta tongs	terra cotta train	terra cotta tie tack	terra cotta tambourine
-266	Paraffinalia Tattoo	para_tat	paraffin punching bag	paraffin pith helmet	paraffin poncho	paraffin pendant	paraffin palazzos	paraffin pseudoaccordion
-267	Mushroom Masquerade	mushtat	mushroom cap	mushroom shield	mushroom pants	mushroom badge
-268	Plumber	class25	none	none	none	none	none	none
-269	Plumber HC	class25hc	none	none	none	none	none	none
-270	Guzzlr Tattoo	guzzlrtat	guzzlr hat	guzzlr pants	guzzlr shoes
-271	Guzzle Tattoo 2	guzzlrtat2	none	none	none	none	none	none
-272	Lathed Livery	lathetat	hemlock helm	balsam barrel	purpleheart &quot;pants&quot;	wormwood wedding ring
-273	Yeg's Tattoo	yegtat	none	none	none	none	none	none
-274	Crimbo Carol tattoo kit	c20carols
-275	Crimbo Cheer tattoo kit	c20cheer
-276	Crimbo Commerce tattoo kit	c20commerce
-277	Stained Glass Tattoo	stainedtat	stained glass suspenders	stained glass shield	stained glass stetson	stained glass spectacles	stained glass shiv	stained glass serape
-278	Velour Tattoo	velourtat	velour voulge	velour vambraces	velour veil	velour viscometer	velour valise	velour vaqueros
-279	Loofah Tattoo	loofahtat	loofah lumberjack's hat	loofah lei	loofah lederhosen	loofah ladle	loofah legwarmers	loofah lavalier
-280	Flagstone Tattoo	flagstonetat	flagstone flag	flagstone flail	flagstone flip-flops	flagstone fez	flagstone fleece	flagstone fringe
+265	Terra Cotta Tackle Tattoo	tc_tat	terra cotta truss	terra cotta trousers	terra cotta tongs	terra cotta train	terra cotta tie tack	terra cotta tambourine	-	-	-
+266	Paraffinalia Tattoo	para_tat	paraffin punching bag	paraffin pith helmet	paraffin poncho	paraffin pendant	paraffin palazzos	paraffin pseudoaccordion	-	-	-
+267	Mushroom Masquerade	mushtat	mushroom cap	mushroom shield	mushroom pants	mushroom badge	-	-	-	-	-
+268	Plumber	class25	-	-	-	-	-	-	-	-	-
+269	Plumber HC	class25hc	-	-	-	-	-	-	-	-	-
+270	Guzzlr Tattoo	guzzlrtat	guzzlr hat	guzzlr pants	guzzlr shoes	-	-	-	-	-	-
+271	Guzzle Tattoo 2	guzzlrtat2	-	-	-	-	-	-	-	-	-
+272	Lathed Livery	lathetat	hemlock helm	balsam barrel	purpleheart &quot;pants&quot;	wormwood wedding ring	-	-	-	-	-
+273	Yeg's Tattoo	yegtat	-	-	-	-	-	-	-	-	-
+274	Crimbo Carol tattoo kit	c20carols	-	-	-	-	-	-	-	-	-
+275	Crimbo Cheer tattoo kit	c20cheer	-	-	-	-	-	-	-	-	-
+276	Crimbo Commerce tattoo kit	c20commerce	-	-	-	-	-	-	-	-	-
+277	Stained Glass Tattoo	stainedtat	stained glass suspenders	stained glass shield	stained glass stetson	stained glass spectacles	stained glass shiv	stained glass serape	-	-	-
+278	Velour Tattoo	velourtat	velour voulge	velour vambraces	velour veil	velour viscometer	velour valise	velour vaqueros	-	-	-
+279	Loofah Tattoo	loofahtat	loofah lumberjack's hat	loofah lei	loofah lederhosen	loofah ladle	loofah legwarmers	loofah lavalier	-	-	-
+280	Flagstone Tattoo	flagstonetat	flagstone flag	flagstone flail	flagstone flip-flops	flagstone fez	flagstone fleece	flagstone fringe	-	-	-
