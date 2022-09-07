@@ -39,7 +39,7 @@
 39	i	V for Vivala mask		-	-	-	-	-
 40	f	Crimbo P. R. E. S. S. I. E.	Crimbo P. R. E. S. S. I. E.	-	-	-	-	-
 41	t	Libram of Divine Favors	Libram of Divine Favors	-	-	-	-	-
-42	i	naughty origami kit	"naughty paper shuriken,origami pasties,origami riding crop,origami ""gentlemen's"" magazine,naughty fortune teller"	-	-	-	-	-
+42	i	naughty origami kit	naughty paper shuriken,origami pasties,origami riding crop,origami &quot;gentlemen's&quot; magazine,naughty fortune teller	-	-	-	-	-
 43	f	sane hatrack	Mad Hatrack	-	-	-	-	-
 44	t	Sp'n-Zor's Grimoire of &quot;Tasteful&quot; Gifts	Sp'n-Zor's Grimoire of &quot;Tasteful&quot; Gifts	-	-	-	-	-
 45	i	packet of mayfly bait	mayfly bait necklace	-	-	-	-	-
