@@ -1,0 +1,466 @@
+1	sealskin drum	sealdrum
+2	washboard shield	washboard
+3	spaghetti-box banjo	spagbanjo
+4	marinara jug	jug
+5	makeshift castanets	castanets
+6	left-handed melodica	melodica
+7	monstrous monocle	futureeye
+8	brazen bracelet	futurebracelet
+9	molten medallion	futuremedal
+10	bewitching boots	futureboots
+11	bitter bowtie	futurebowtie
+12	musty moccasins	futureshoes
+13	Staff of the Short Order Cook	chefstaff3
+14	Staff of the Midnight Snack	chefstaff6
+15	Staff of Blood and Pudding	chefstaff7
+16	Staff of the Teapot Tempest	chefstaff18
+17	Staff of the Greasefire	chefstaff1
+18	Staff of the Black Kettle	chefstaff19
+19	Staff of the Soupbone	chefstaff21
+20	Staff of the Well-Tempered Cauldron	chefstaff20
+21	Staff of the Walk-In Freezer	chefstaff2
+22	Staff of the Grand Flamb&eacute;	chefstaff8
+23	Staff of the Kitchen Floor	chefstaff5
+24	Staff of the Grease Trap	chefstaff4
+25	Staff of the Deepest Freeze	chefstaff9
+26	crumpled felt fedora	hobofedora
+27	battered old top-hat	hobotophat
+28	shapeless wide-brimmed hat	hobowidehat
+29	mostly rat-hide leggings	yakpants
+30	hobo dungarees	dungarees
+31	old patched suit-pants	mailpants
+32	old soft shoes	softshoes
+33	hobo stogie	cigarbutt
+34	rope with some soap on it	ropesoap
+35	Underworld truncheon	ut_club
+36	Staff of the Woodfire	ut_staff
+37	Underworld flail	ut_flail
+38	17-ball	17ball
+39	Counterclockwise Watch	backwatch
+40	crazy bastard sword	bsword
+41	Dallas Dynasty Falcon Crest shield	falconcrest
+42	hockey stick of furious angry rage	hockstick
+43	hypnodisk	hypnodisk
+44	incredibly dense meat gem	meatgem
+45	Platinum Yendorian Express Card	pyec
+46	Talisman of Baio	baiotal
+47	Talisman of Bakula	bakutal
+48	consolation ribbon	ribbon
+49	Staff of the November Jack-O-Lantern
+50	The Necbromancer's Hat	necrocap	none	none	none	none	none
+51	The Necbromancer's Stein	necrostein	none	none	none	none	none
+52	The Necbromancer's Shorts	necroshorts	none	none	none	none	none
+53	The Necbromancer's Wizard Staff	necrostaff	none	none	none	none	none
+54	Thwaitgold bee statuette	thwaitbee
+55	Thwaitgold grasshopper statuette	thwaitgrass
+56	Thwaitgold butterfly statuette	thwaitbutt
+57	Thwaitgold stag beetle statuette	thwaitbeetle
+58	Staff of The Scummy Sink	scumsinkstaff
+59	Staff of Holiday Sensations	pepperstaff
+60	Thwaitgold woollybear statuette	thwaitwooly
+61	Thwaitgold maggot statuette	thwaitmaggot
+62	Thwaitgold praying mantis statuette	thwaitmantis
+63	Lens of Violence	vio_lens
+64	Pigsticker of Violence	vio_knife
+65	Brand of Violence	vio_brand
+66	Jodhpurs of Violence	vio_pants
+67	Ass-Stompers of Violence	vio_boots
+68	Novelty Belt Buckle of Violence	vio_buckle
+69	Lens of Hatred	hate_lens
+70	Staff of Simmering Hatred	hate_staff
+71	Cold Stone of Hatred	hate_stone
+72	Pantaloons of Hatred	hate_pants
+73	Fuzzy Slippers of Hatred	hate_slippers
+74	Girdle of Hatred	hate_girdle
+75	Goggles of Loathing	loathe_goggles
+76	Stick-Knife of Loathing	loathe_snife
+77	Scepter of Loathing	loathe_scepter
+78	Jeans of Loathing	loathe_jeans
+79	Treads of Loathing	loathe_boots
+80	Belt of Loathing	loathe_belt
+81	Pocket Square of Loathing	loathe_square
+82	Thwaitgold firefly statuette	thwaitfirefly
+83	Thwaitgold Goliath beetle statuette	thwaitgoliath
+84	Great Wolf's headband	ww_headband
+85	Great Wolf's right paw	ww_rightclaw
+86	Great Wolf's left paw	ww_leftclaw
+87	Great Wolf's lice	ww_lice
+88	Great Wolf's rocket launcher	ww_bazooka
+89	Great Wolf's beastly trousers	ww_pants
+90	Drapes-You-Regally	bb_cloak
+91	Warms-Your-Tush	bb_pants
+92	Covers-Your-Head	bb_hat
+93	Protects-Your-Junk	bb_speedo
+94	Quiets-Your-Steps	bb_shoes
+95	Helps-You-Sleep	bb_mask
+96	Mayor Ghost's cloak	mg_cape
+97	Mayor Ghost's khakis	mg_pants
+98	Mayor Ghost's toupee	mg_hat
+99	Mayor Ghost's scissors	mg_scissors
+100	Mayor Ghost's sash	mg_sash
+101	Mayor Ghost's gavel	mg_gavel
+102	zombie mariachi hat	zh_hat
+103	zombie accordion	zh_accordion
+104	zombie mariachi pants	zh_pants
+105	HOA regulation book	book4
+106	HOA zombie eyes	zh_eyes
+107	HOA citation pad	zh_pad
+108	Unkillable Skeleton's skullcap	sk_hat
+109	Unkillable Skeleton's shinguards	sk_pants
+110	Unkillable Skeleton's breastplate	sk_chest
+111	Unkillable Skeleton's shield	sk_shield
+112	Unkillable Skeleton's sawsword	sk_sword
+113	Unkillable Skeleton's restless leg	sk_leg
+114	Thunkula's drinking cap	dr_hat
+115	Drunkula's silky pants	dr_pants
+116	Drunkula's cape	dr_cape
+117	Drunkula's ring of haze	dr_ring
+118	Drunkula's wineglass	dr_wineglass
+119	Drunkula's bell	dr_bell
+120	Helm of the Scream Emperor	wtbhelmet
+121	Cloak of Dire Shadows	wtbcloak
+122	Sword of Dark Omens	wtbsword
+123	Shield of Icy Fate	wtbshield
+124	Greaves of the Murk Lord	wtbgreaves
+125	Boots of Twilight Whispers	wtbboots
+126	Belt of Howling Anger	wtbbelt
+127	Gauntlets of the Blood Moon	wtbgauntlets
+128	Truthsayer	truthseeker
+129	Byte	byte
+130	Sword of Procedural Generation	pcgsword
+131	Meatcleaver	meatcleaver
+132	Bloodbath	bloodbath
+133	Ginsu&trade;	ginsu
+134	White Dragon Fang	whitefang
+135	Thwaitgold bookworm statuette	thwaitbookworm
+136	Thwaitgold ant statuette	thwaitant
+137	optimal spreadsheet	spreadsheet
+138	warbear warscarf	wbscarf1
+139	warbear laser bowtie	wbbowtie1
+140	warbear goggles	wbgoggles1
+141	warbear fleece-lined warscarf	wbscarf2
+142	warbear plasma bowtie	wbbowtie2
+143	warbear snowblindness goggles	wbgoggles2
+144	warbear electric warscarf	wbscarf3
+145	warbear nuclear bowtie	wbbowtie3
+146	warbear polarized goggles	wbgoggles3
+147	warbear plain ushanka	wbhat7
+148	warbear plain helm	wbhat4
+149	warbear plain fedora	wbhat1
+150	warbear lined ushanka	wbhat8
+151	warbear spiked helm	wbhat5
+152	warbear feathered fedora	wbhat2
+153	warbear heated ushanka	wbhat9
+154	warbear electro-spiked helm	wbhat6
+155	warbear fancy fedora	wbhat3
+156	warbear long johns	wbpants7
+157	warbear battle greaves	wbpants4
+158	warbear party pants	wbpants1
+159	warbear fleece-lined long johns	wbpants8
+160	warbear officer greaves	wbpants5
+161	warbear ceremonial party pants	wbpants2
+162	warbear electric long johns	wbpants9
+163	warbear bearserker greaves	wbpants6
+164	warbear high festival pants	wbpants3
+165	warbear breakfast machine	wbbbox2
+166	warbear soda machine	wbsoda2
+167	silver cow creamer	cowcreamer
+168	wolf whistle	wolfwhistle
+169	witch's bra	bra
+170	spinning wheel	spinningwheel
+171	hare pin	harepin
+172	Staff of the Roaring Hearth	sk_staff
+173	Thwaitgold dragonfly statuette	thwaitdragon
+174	Thwaitgold wheel bug statuette	thwaitwheelbug
+175	Thwaitgold spider statuette	thwaitspider
+176	Thwaitgold nit statuette	thwaitnit
+177	Thwaitgold scarab beetle statuette	thwaitscarab
+178	The Nuge's favorite crossbow	nugebow
+179	Thwaitgold caterpillar statuette	thwaitcat
+180	Walrus ice cream	rricecream
+181	beautiful soup	soupbowl
+182	eggman noodles	eggnoodles
+183	vial of jus de larmes	potion2
+184	lobster qua grill	lobstertail
+185	missing wine	missingwine
+186	Humpty Dumplings	bowl
+187	ittah bittah hookah	hookah
+188	Dinsey's oculus	dinseyeye
+189	Dinsey's radar dish	dinseydish
+190	Dinsey's pizza cutter	dinseycutter
+191	Dinsey's brain	dinseybrain
+192	Dinsey's pants	disneypants
+193	Dinsey's glove	dinseyglove
+194	stinky fannypack	fannypack
+195	garbage sticker	arbsticker
+196	hazmat helmet	hazhelmet
+197	fake washboard	washboard
+198	backwoods banjo	seegerbanjo
+199	ratskin pajama pants	atpants
+200	Sasq&trade; watch	nicewatch
+201	pair of plants	pairofplants
+202	smoker's cloak	smokecloak
+203	camouflage T-shirt	camoshirt
+204	trench lighter	trenchlighter
+205	mercenary pistol	happiness
+206	mercenary rifle	mercrifle
+207	insulting hat	insultinghat
+208	offensive moustache	chaplinstache
+209	cursed microwave	microwave
+210	cursed pony keg	ponykeg
+211	hairshirt	hairshirt
+212	bagged stuffed "L"	baggedl
+213	stuffed club	stuffedclub
+214	stuffed "L"	stuffedl
+215	The Cocktail Shaker	theshaker
+216	Hand-carved bokken	carvedsword
+217	Hand-carved bow	carvedbow
+218	Hand-carved staff	carvedstaff
+219	pogo stick	pogostick
+220	Time-twitching toolbelt	time_belt
+221	Time Bandit Time Towel	towelcape
+222	Time Cape	timecape
+223	Time Cloak	timecape
+224	Time Lord Participation Mug	coffeecup
+225	Caveman Dan's Favorite Rock	danrock
+226	time shuriken	shuriken
+227	ninjammies	ninjammies
+228	glass eye	cglasseye
+229	ishield	ishield
+230	iflail	iflail
+231	white earbuds	earbuds
+232	wooly loincloth	loincloth
+233	yabba dabba doo rag	yabbadabba
+234	Mr. Explotier	mrexp
+235	Golden Mr. Accessory	gma
+236	Mr. Accessory	mracc
+237	Ms. Accessory	mrsacc
+238	Sister Accessory	sisteracc
+239	Mr. Accessory Jr.	babyacc
+240	Uncle Buck	unclebuck
+241	Sword of the Brouhaha Prince	vampsword
+242	Chalice of the Malkovich Prince	vampchalice
+243	Sceptre of the Torremolinos Prince	vampsceptre
+244	Medallion of the Ventrilo Prince	vampmedal
+245	The Legendary Beat	notes
+246	Ellsbury's skull	smartskull
+247	The Landscaper's leafblower	leafblower
+248	lavalarva	lavalarva
+249	basaltamander buckler	basbuckler
+250	lava balaclava	lavaclava
+251	powdered dice	scpowder
+252	Thwaitgold termite statuette	thwaittermite
+253	biker's hat	bikerhat
+254	feathered headdress	headdress
+255	electrician's hardhat	hardhat
+256	Royal scepter	scepter
+257	blue LavaCo Lamp&trade;	lavalamp
+258	green LavaCo Lamp&trade;	lavalamp
+259	red LavaCo Lamp&trade;	lavalamp
+260	Lavalos's shell	lavashell
+261	Mr. Cheeng's spectacles	chongglasses
+262	The One Mood Ring	onemoodring
+263	little deuce cape	deucecape
+264	Pener's drumstick	drumstick
+265	love	happiness
+266	Wal-Mart snowglobe	walglobe
+267	Wal-Mart nametag	waltag
+268	Wal-Mart overalls	walveralls
+269	octolus-skin cloak	octocloak
+270	norwhal helmet	vikinghat
+271	sardine can key	sardinekey
+272	Staff of the Electric Range	elecstaff
+273	Martialest Arts trophy	karatetrophy
+274	Amoon-Ra Cowtep's nemes	nemes
+275	Daisy's unclean bloomers	daisybloomers
+276	Fancy Jeff's fancy pocket square	fancysquare
+277	Former Sheriff Dan's tin star	danstar
+278	Glenn's golden dice	golddice
+279	El Vibrato restraints	lvcuff
+280	Clara's bell	clarabell
+281	Granny Hackleton's Gatling gun	grannygat
+282	western-style skinning knife	skinknife
+283	reliable sixgun	sixgun4
+284	steel knuckles	knuckles
+285	replica bat-oomerang	batarang
+286	The Jokester's pants	tuxpants
+287	The Jokester's wig	jokerwig
+288	The Jokester's gun	sixshooter
+289	Pecos Dave's sixgun	davesixgun
+290	exclusive club	exclusiveclub
+291	Thwaitgold scorpion statuette	thwaitscorp
+292	talking spade	gardenspade
+293	antique tacklebox	tacklebox
+294	sonar fishfinder	evilometer
+295	infinite BACON machine	baconmachine
+296	First Post shirt - Cir Senam	btee3
+297	Thwaitgold moth statuette	thwaitmoth
+298	noir fedora	hobofedora
+299	trench coat	trenchcoat
+300	detective roscoe	happiness
+301	burnt snowpants	burntpants
+302	Carpathian longsword	carpsword
+303	fleshy lump	skinshield
+304	frigid derringer	derringer	
+305	haunted bindle	bindle
+306	Liam's mail	liammail
+307	Mr. Screege's spectacles	spectacles
+308	smoldering bagel punch	bagelpunch
+309	Spookyraven signet	spookysignet
+310	standards and practices guide	book3
+311	tie-dyed fannypack	tiedyefanny
+312	Unfortunato's foolscap	foolscap
+313	Thwaitgold cockroach statuette	thwaitroach
+314	Yorick	yorick
+315	portable Othello set	othelloset
+316	sneakeasies	kicks
+317	flapper floppers	sandals
+318	gumshoes	tapshoes
+319	solid shifting time weirdness	confused
+320	Chroner cross	plus
+321	Time Bandit Badge of Courage	banditbadge
+322	Chroner trigger	rib
+323	Time Lord Badge of Honor	lordbadge
+324	KoL Con 13 snowglobe	consnowglobe
+325	KoL Con 3-D Glasses	3dglasses
+326	KoL Con IV Pole	coniviv
+327	KoL Con Cinco Piñata Bat	pinatabat
+328	KoL Con Six Pack	sixpack
+329	Seven Loco	7loco
+330	KoL Con 8-Bit power bracelet	8bitbracelet
+331	Hat O' Nine Tails	con9hat
+332	KoL Con X Treasure Map	map
+333	Size XI Wizard's Robe	xirobe
+334	KoL Con 12-gauge	shotgun2
+335	School of Hard Knocks Diploma	scroll2
+336	Official Council Aide Pin	smugbutton
+337	bad vibroknife	vibroknife
+338	crystal belt buckle	crystalbuckle
+339	saffron antaravasaka	brobe2
+340	saffron uttarasanga	brobe1
+341	third eye	thirdeye
+342	Krampus Horn	krampushorn
+343	Uncle Crimbo's Hat	santahat
+344	sprinkle-begging cup	starchcan
+345	gingerbeard	gingerbeard
+346	sour ball and chain	sourballchain
+347	candy dog collar	candycollar
+348	gingerbread gavel	gingergavel
+349	gingerbread moneybag	gingerbag
+350	gingerbread mask	gingermask
+351	gingerservo	gingerservo
+352	gingerbread pistol	gingergun
+353	Thwaitgold time fly statuette	thwaittimefly
+354	eldritch hammer	eldritchhammer
+355	HP-35 Calculator	longcalc
+356	Silver HP-35 Calculator	longcalc
+357	Golden HP-35 Calculator	longcalc
+358	Platinum HP-35 Calculator	longcalc
+359	Diamond HP-35 Calculator	longcalc
+360	Thwaitgold amoeba statuette	thwaitamoeba
+361	recovered cufflinks	cufflinks
+362	Thwaitgold bug statue	thwaitbug
+363	License to Chill	licensetochill
+364	Jeppson's Malort	blackrum
+365	mime army insignia (psychological warfare)	marmy6
+366	mime army insignia (cryonics)	marmy5
+367	mime army insignia (sanitation)	marmy7
+368	mime army insignia (morale)	marmy8
+369	mime army insignia (pyrotechnics)	marmy4
+370	mime army insignia (intelligence)	marmy2
+371	mime army insignia (espionage)	marmy3
+372	mime army insignia (infantry)	marmy1
+373	mime army infiltration glove	glove
+374	mime army challenge coin	marmycoin
+375	mime army shotglass	marmyshotglass
+376	primitive alien blowgun	blowgun
+377	primitive alien loincloth	wumploincloth
+378	primitive alien necklace	aliennecklace
+379	primitive alien spear	cavespear
+380	primitive alien totem	alientotem
+381	Mysterious Green Box	dreadbox
+382	Thwaitgold metabug statuette	thwaitmetabug
+383	outrageous sombrero	hat2
+384	tin star	tinstar
+385	&quot;Humorous&quot; T-shirt	wtee2
+386	Staff of Kitchen Royalty	slordstaff
+387	shield of the Skeleton Lord	skeletonshield
+388	ring of the Skeleton Lord	skeletonring
+389	scepter of the Skeleton Lord	skeletonscepter
+390	Thwaitgold chigger statuette	thwaitchigger
+391	Thwaitgold masked hunter statuette	thwaitmasked
+392	tiny plastic sword	plasword
+393	everfull glass	endlessglass
+394	fancy party pants	partypants
+395	gold skull ring	goldskullring
+396	paint palette	nicepalette
+397	PARTY HARD T-shirt	npartyshirt
+398	party crasher	partycrasher
+399	party whip	partywhip
+400	pump-up high-tops	hightops
+401	Staff of Frozen Lard	blubberstaff
+402	balanced antler	balantler
+403	pristine walrus tusk	bigtusk
+404	plastic bazooka	plasticzooka
+405	portable dam	damshield
+406	antique Canadian lantern	canadianlantern
+407	muskox-skin cap	oxhat
+408	hand-knitted Crimbo socks	abuelasocks
+409	repaid diaper	diaper
+410	space trip safety headphones	headphones
+411	sinister demon mask	sinimask
+412	dungeon fist gauntlet	dungeonfist
+413	streetfighting champion's belt	champbelt
+414	meteoid ice beam	armcannon
+415	Thwaitgold mosquito statuette	thwaitsquito
+416	lucky gold ring	weddingring
+417	Red Roger's red left foot	pr_leftfoot
+418	Red Roger's red left hand	pr_lefthand
+419	Red Roger's red right foot	pr_rightfoot
+420	Red Roger's red right hand	pr_righthand
+421	Thwaitgold nymph statuette	thwaitnymph
+422	ring	dcring
+423	beet	beet
+424	etched hourglass	beachhourglass3
+425	Thwaitgold bombardier beetle statuette	thwaitbomber
+426	ribbon candy ascot	candyascot
+427	icing poncho	icingponcho
+428	Mer-kin rollpin	rollingpin2
+429	anemoney clip	moneyclip2
+430	Crimbylow-rise jeans	lowjeans
+431	peppermint spine	peppspine
+432	soggy elf shoes	elfshoes
+433	kelp-holly drape	kelpcape
+434	kelp-holly gun	hollygun
+435	Yuleviathan necklace	yulenecklace
+436	oxygenated eggnog helmet	noghelmet
+437	hand-knitted diving booties	booties
+438	peppermint harpoon gun	peppergun
+439	Dolph Bossin's charity note	document
+440	Dolph Bossin's Crimbo hat	dolphhat
+441	Staff of the Peppermint Twist	peppstaff
+442	Thwaitgold buzzy beetle statuette	thwaitbuzzy
+443	Murgatroyd diode	sig_diode
+444	enhanced signal receiver	sig_receiver2
+445	red plumber's boots	mario_boots2
+446	Thwaitgold keyhole spider statuette	thwaitkeyspider
+447	Thwaitgold slug statuette	thwaitslug
+448	redwood rain stick	redwoodstick
+449	drippy diadem	dripdiadem
+450	Universal Seasoning	spice
+451	subscription cocoa dispenser	suscocoa
+452	Thwaitgold listening bug statuette	thwaitrobobug
+453	Thwaitgold quantum bug statuette	thwaitquantum
+454	Thwaitgold fire beetle statuette	thwaitfirebeetle
+455	boxed gumball machine	gumballbox
+456	can of mixed everything	everythingcan
+457	carnivorous potted plant	offhandplant
+458	cozy scarf	cozyscarf
+459	the Crymbich Manuscript	documents
+460	the Crymbich Manuscript (used)	documents
+461	festive egg sac	crimbosac
+462	goo magnet	c21magnet
+463	potato alarm clock	potatoclock
+464	synthetic rock	synthrock
+465	meatball machine	gumballmachine
+466	refurbished air fryer	airfryer

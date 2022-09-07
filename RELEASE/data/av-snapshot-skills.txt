@@ -1,0 +1,419 @@
+1	Seal Clubbing Frenzy	+2 Mus<br />(5 adv @ 1MP)	-	-	-	-	-	-
+2	Patience of the Tortoise	+1 Mus, +3 MaxHP<br />(5 adv @ 1MP)	-	-	-	-	-	-
+3	Manicotti Meditation	+2 Mys<br />(5 adv @ 1MP)	-	-	-	-	-	-
+4	Sauce Contemplation	+1 Mys, +3 MaxHP<br />(5 adv @ 1MP)	-	-	-	-	-	-
+5	Disco Aerobics	+2 Mox<br />(5 adv @ 1MP)	-	-	-	-	-	-
+6	Moxie of the Mariachi	1+ Mox, +3 MaxHP<br />(5 adv @ 1MP)	-	-	-	-	-	-
+7	Clobber	Attack<br />1MP	-	-	-	-	-	-
+8	Toss	Attack<br />1MP	-	-	-	-	-	-
+9	Spaghetti Spear	2-3 Phys. Damage<br />1MP	-	-	-	-	-	-
+10	Salsaball	2-3 Hot Damage<br />1MP	-	-	-	-	-	-
+11	Suckerpunch	1 Damage, 1 Delevel<br />1MP	-	-	-	-	-	-
+12	Sing	2-3 Damage, 2-3 for 2 More Rounds<br />1MP	-	-	-	-	-	-
+13	Lunge Smack	+5 Damage Attack	-	-	-	-	-	-
+14	Headbutt	Combat Skill<br />3MP	-	c	-	-	-	-
+15	Ravioli Shurikens	Combat Skill<br />4MP	-	-	-	-	-	-
+16	Stream of Sauce	Combat Skill<br />3MP	-	-	-	-	-	-
+17	Disco Eye-Poke	1-3 Damage, 3 Delevel<br />3MP	-	c	-	-	-	-
+18	The Moxious Madrigal	+10 Mox<br />(Buff @ 2MP)	-	-	-	-	-	-
+19	Audacity of the Otter	Crits do 3x Damage	-	p	-	-	-	-
+20	Skin of the Leatherback	(level/2 - 2)DR	-	p	-	-	-	-
+21	Entangling Noodles	Combat Skill<br />3MP	-	-	-	-	-	-
+22	Saucy Salve	Combat Skill - Heal 10-15HP<br />4MP	-	-	-	-	-	-
+23	Overdeveloped Sense of Self Preservation	+20% Init	-	p	-	-	-	-
+24	The Magical Mojomuscular Melody	+10Mys, +20MaxMP<br />(Buff @ 3MP)	-	-	-	-	-	-
+25	Blubber Up	+5Mox for 10adv<br />7MP	-	-	-	-	-	-
+26	Amphibian Sympathy	+5 Fam Weight	-	p	-	-	-	-
+27	Lasagna Bandages	Heals 10-30HP<br />6MP	-	-	-	-	-	-
+28	Expert Panhandling	+10% Meat	-	p	-	-	-	-
+29	Disco Nap	Heals 20HP, removes some status effects<br />8MP	-	-	-	-	-	-
+30	Cletus's Canticle of Celerity	+20% Init<br />(Buff @ 4MP)	-	-	-	-	-	-
+31	Thrust-Smack	Double Damage Combat Skill<br />4MP	-	-	-	-	-	-
+32	Ghostly Shell	+80DA<br />(Buff @ 6MP)	-	-	-	-	-	-
+33	Cannelloni Cannon	Combat Spell<br />6MP	-	-	-	-	-	-
+34	Elemental Saucesphere	So-so Resist. to all Elem.<br />(Buff @ 10MP)	-	-	-	-	-	-
+35	Disco Dance II: Electric Boogaloo	9-11 Damage, 5 Delevel	-	c	-	-	-	-
+36	The Power Ballad of the Arrowsmith	+10Mus, +20MaxHP<br />(Buff @ 5MP)	-	-	-	-	-	-
+37	Super-Advanced Meatsmithing	Create Weapons	-	p	-	-	-	-
+38	Armorcraftiness	Create Armor	-	p	-	-	-	-
+39	Pastamastery	Summon Dry Noodles<br />10MP	-	-	-	-	-	-
+40	Advanced Saucecrafting	Summon Reagents<br />10MP	-	-	-	-	-	-
+41	Advanced Cocktailcrafting	Summon Cocktail Ingredients<br />10MP	-	-	-	-	-	-
+42	The Polka of Plenty	+50% Meat<br />(Buff @ 7MP)	-	-	-	-	-	-
+43	Batter Up!	Increase Hit Chance	-	c	-	-	-	-
+44	Tenacity of the Snapper	+8 Melee Damage<br />(Buff @ 8MP)	-	-	-	-	-	-
+45	Springy Fusilli	+40% Init<br />(10adv @ 10MP)	-	-	-	-	-	-
+46	Saucestorm	Combat Spell<br />10MP	-	-	-	-	-	-
+47	Nimble Fingers	+20% Meat	-	p	-	-	-	-
+48	Jackasses' Symphony of Destruction	+12 Damage<br />(Buff @ 9MP)	-	-	-	-	-	-
+49	Hide of the Walrus	+50DA	-	-	-	-	-	-
+50	Kneebutt	Combat Attack<br />4MP	-	c	-	-	-	-
+51	Spirit of Rigatoni	Equip Chefstaffs	-	p	-	-	-	-
+52	Jalape&ntilde;o Saucesphere	+3DR, Damage Attacker<br />(Buff @ 5MP)	-	-	-	-	-	-
+53	Tricky Knifework	Become better at knives	-	p	-	-	-	-
+54	Fat Leon's Phat Loot Lyric	+20% Items<br />(Buff @ 11MP)	-	-	-	-	-	-
+55	Claws of the Walrus	+7 Melee Damage	-	p	-	-	-	-
+56	Empathy of the Newt	+5 Fam. Weight<br />(Buff @ 15MP)	-	-	-	-	-	-
+57	Stuffed Mortar Shell	Combat Spell<br />13MP	-	-	-	-	-	-
+58	Wave of Sauce	Combat Spell<br />16MP	-	-	-	-	-	-
+59	Mad Looting Skillz	+20% Items	-	p	-	-	-	-
+60	Brawnee's Anthem of Absorption	level DR<br />(Buff @ 13MP)	-	-	-	-	-	-
+61	Tongue of the Walrus	Heals 30-40HP<br />10MP	-	-	-	-	-	-
+62	Reptilian Fortitude	+30MaxHP<br />(Buff @ 10MP)	-	-	-	-	-	-
+63	Spirit of Ravioli	+25% MaxHP	-	p	-	-	-	-
+64	Intrinsic Spiciness	+level Spell Damage	-	p	-	-	-	-
+65	Disco Greed	Momentum is +Item	-	pc	-	-	-	-
+66	The Psalm of Pointiness	Attack + Delevel when Taking Damage<br />(Buff @ 15MP)	-	-	-	-	-	-
+67	Lunging Thrust-Smack	Triple Damage Combat Skill<br />8MP	-	-	-	-	-	-
+68	Shieldbutt	Auto-Hit Attack<br />5MP	-	c	-	-	-	-
+69	Weapon of the Pastalord	Combat Spell<br />24MP	-	-	-	-	-	-
+70	Antibiotic Saucesphere	4-5 HP Regen (Buff @ 15MP)	-	-	-	-	-	-
+71	Disco Bravado	Disco Momentum increases stat points	-	pc	-	-	-	-
+72	Stevedave's Shanty of Superiority	+10% All Attributes<br />(Buff @ 30MP)	-	-	-	-	-	-
+73	Rage of the Reindeer	+10%Mus, +10Melee<br />(10adv @ 10MP)	-	-	-	-	-	-
+74	Wisdom of the Elder Tortoises	+50% MaxMP	-	p	-	-	-	-
+75	Leash of Linguini	+5 Fam. Weight<br />(10adv @ 12MP)	-	-	-	-	-	-
+76	Saucegeyser	Combat Spell<br />28MP	-	-	-	-	-	-
+77	Adventurer of Leisure	Sleep soundly	-	p	-	-	-	-
+78	Aloysius' Antiphon of Aptitude	+3 Stats per Fight<br />(Buff @ 40MP)	-	-	-	-	-	-
+79	Double-Fisted Skull Smashing	Dual-Wield	-	p	-	-	-	-
+80	Astral Shell	+80DA, Slight Elem. Resist<br />(Buff @ 10MP)	-	-	-	-	-	-
+81	Cannelloni Cocoon	Heal All HP<br />20MP	-	-	-	-	-	-
+82	Impetuous Sauciness	+5 Adv. for Reagent Potions	-	p	-	-	-	-
+83	Ambidextrous Funkslinging	Use 2 items per combat round	-	p	-	-	-	-
+84	The Ode to Booze	More Adv from Booze<br />(Buff @ 50MP)	-	-	-	-	-	-
+85	Northern Exposure	So-So Cold Resist	-	p	-	-	-	-
+86	Cold-Blooded Fearlessness	So-So Spooky Resist	-	p	-	-	-	-
+87	Tolerance of the Kitchen	So-So Hot Resist	-	p	-	-	-	-
+88	Diminished Gag Reflex	So-So Stench Resist	-	p	-	-	-	-
+89	Heart of Polyester	So-So Sleaze Resist	-	p	-	-	-	-
+90	The Sonata of Sneakiness	-5% Combat<br />(Buff @ 20MP)	-	-	-	-	-	-
+91	Musk of the Moose	+5% Combat<br />(10adv @ 10MP)	-	-	-	-	-	-
+92	Hero of the Half-Shell	Musc determines damage taken if Shield equipped	-	p	-	-	-	-
+93	Flavour of Magic	Choose Elem. of Pasta Spells<br />(40adv @ 10MP)	-	p	-	-	-	-
+94	Irrepressible Spunk	+5% HP/MP	-	p	-	-	-	-
+95	Smooth Movement	-5% Combat<br />(10adv @ 10MP)	-	-	-	-	-	-
+96	Carlweather's Cantata of Confrontation	+5% Combat<br />(Buff @ 20MP)	-	-	-	-	-	-
+97	Pulverize	Smash Stuff!	-	p	-	-	-	-
+98	Tao of the Terrapin	Double DR of Hat/Pants	-	p	-	-	-	-
+99	Transcendental Noodlecraft	+2 Dry Noodles, Wok Access	-	p	-	-	-	-
+100	The Way of Sauce	+2 Reagents, use Scrum. Solutions	-	p	-	-	-	-
+101	Superhuman Cocktailcrafting	+2 Ingredients, Still Access	-	p	-	-	-	-
+102	Ur-Kel's Aria of Annoyance	+(level*2)ML<br />(Buff @ 30MP	-	-	-	-	-	-
+103	Snarl of the Timberwolf	+10 Spooky Damage<br />(10adv @ 10MP)	-	-	-	-	-	-
+104	Spectral Snapper	Combat Attack<br />20MP	-	-	-	-	-	-
+105	Fearful Fettucini	Combat Spell<br />24MP	-	-	-	-	-	-
+106	Scarysauce	So-So Sleaze/Cold Resist<br />(Buff @ 10MP)	-	-	-	-	-	-
+107	Tango of Terror	15-18 Spooky Damage, 8 Delevel<br />8MP	-	-	-	-	-	-
+108	Dirge of Dreadfulness	+12 Spooky Damage<br />(Buff @ 12MP)	-	-	-	-	-	-
+109	Harpoon!	Combat Skill<br />30MP	-	-	-	-	-	-
+110	Summon Leviatuga	301-350 Damage<br />40MP	-	-	-	-	-	-
+111	Tempuramancy	Create Tempura Dishes	-	p	-	-	-	-
+112	Deep Saucery	Create Potions with Globes of Deep Sauce	-	p	-	-	-	-
+113	Salacious Cocktailcrafting	Use Seaodes in Cocktailcrafting	-	p	-	-	-	-
+114	Donho's Bubbly Ballad	-20% Underwater Penalty<br />(Buff @ 75MP)	-	-	-	-	-	-
+115	Conjure Relaxing Campfire	-	-	-	-	-	-	-
+116	Maximum Chill	-	-	-	-	-	-	-
+117	Mudbath	-	-	-	-	-	-	-
+118	Inappropriate Backrub	-	-	-	-	-	-	-
+119	Creepy Lullaby	-	-	-	-	-	-	-
+120	Awesome Balls of Fire	-	-	-	-	-	-	-
+121	Snowclone	-	-	-	-	-	-	-
+122	Eggsplosion	-	-	-	-	-	-	-
+123	Grease Lightning	-	-	-	-	-	-	-
+124	Raise Backup Dancer	-	-	-	-	-	-	-
+125	Natural Born Scrabbler	+5% Items	-	p	-	-	-	-
+126	Thrift and Grift	+10% Meat	-	p	-	-	-	-
+127	Abs of Tin	+10% MaxHP	-	p	-	-	-	-
+128	Marginally Insane	+10% MaxMP	-	p	-	-	-	-
+129	The Ballad of Richie Thingfinder	+50% Meat, +20% Items<br />(Buff @ 50MP)	-	c	-	-	-	-
+130	Benetton's Medley of Diversity	+15 Prism. Damage<br />(Buff @ 50MP)	-	c	-	-	-	-
+131	Elron's Explosive Etude	+50% Spell Damage<br />(Buff @ 50MP)	-	c	-	-	-	-
+132	Chorale of Companionship	+10 Fam Weight<br />(Buff @ 50MP)	-	c	-	-	-	-
+133	Prelude of Precision	+2% Crit Chance<br />(Buff @ 50MP)	-	c	-	-	-	-
+134	Torso Awareness	Wear Shirts	-	p	-	-	-	-
+135	Gnomish Hardigness	+5% MaxHP	-	p	-	-	-	-
+136	Cosmic Ugnderstanding	+5% MaxMP	-	p	-	-	-	-
+137	Powers of Observatiogn	+10% Items	-	p	-	-	-	-
+138	Gnefarious Pickpocketing	+10% Meat	-	p	-	-	-	-
+139	Slimy Sinews	Up to +20 MaxHP	-	p	-	-	-	-
+140	Slimy Synapses	Up to +10 MaxMP	-	p	-	-	-	-
+141	Slimy Shoulders	Up to +20% Init	-	p	-	-	-	-
+142	Chronic Indigestion	-	-	-	-	-	-	-
+143	CLEESH	-	-	-	-	-	-	-
+144	Rainbow Gravitation	-	-	-	-	-	-	-
+145	Really Expensive Jewelrycrafting	-	-	p	-	-	-	-
+146	Transcendent Olfaction	-	-	-	-	-	-	-
+147	Vent Rage Gland	-	-	-	-	-	-	-
+148	Holiday Weight Gain	+MaxHP Buff	-	b	-	-	-	-
+149	Jingle Bells	Familiar Acts More	-	b	-	-	-	-
+150	Candyblast	Damage and Candy!	-	b	-	-	-	-
+151	Surge of Icing	Damage Spell	-	b	-	-	-	-
+152	Stealth Mistletoe	Delevels more with DB Attacks	-	b	-	-	-	-
+153	Cringle's Curative Carol	Restore 5-10HP/Adv	-	b	-	-	-	-
+154	Summon Snowcones	-	Tome of Snow	-	-	-	-	-
+155	Summon Stickers	-	Tome of Stick	-	-	-	-	-
+156	Summon Sugar Sheets	-	Tome of Sug	-	-	-	-	-
+157	Summon Party Favor	-	Libram of Div	-	-	-	-	-
+158	Summon Candy Heart	-	Libram of Can	-	-	-	-	-
+159	Summon Love Song	-	Libram of Love	-	-	-	-	-
+160	Summon Hilarious Objects	-	Grimoire of Hilarious	-	-	-	-	-
+161	Summon Tasteful Items	-	Tasteful	-	-	-	-	-
+162	Summon Crimbo Candy	-	-	-	-	-	-	-
+163	Pride of the Puffin	+10ML<br>(30MP)	-	-	-	-	-	-
+164	K&auml;seso&szlig;esturm	Stench Saucestorm	-	b	-	-	-	-
+165	Summon BRICKOs	-	Libram of BRI	-	-	-	-	-
+166	Inigo's Incantation of Inspiration	Free Crafting	-	b	-	-	-	-
+167	Curiosity of Br'er Tarrypin	+1Fam Exp/Combat	-	b	-	-	-	-
+168	Stringozzi Serpent	Attack and Poison	-	b	-	-	-	-
+169	Iron Palm Technique	Swords Become Clubs	-	b	-	-	-	-
+170	Unaccompanied Miner	-	-	pb	-	-	-	-
+171	Volcanometeor Showeruption	-	-	-	-	-	-	-
+172	Fashionably Late	+1 Adventure Per Day	-	pb	-	-	-	-
+173	Executive Narcolepsy	One Free Rest Per Day	-	pb	-	-	-	-
+174	Lunch Break	Summon a Sack Lunch	-	b	-	-	-	-
+175	Offensive Joke	Sleaze Damage, 20 Delevel	-	b	-	-	-	-
+176	Managerial Manipulation	+10 All Stats (Others Only)	-	b	-	-	-	-
+177	Wassail	-	-	b	-	-	-	-
+178	Toynado	-	-	b	-	-	-	-
+179	Kung Fu Hustler	Power to the Fists!	-	pb	-	-	-	-
+180	Summon Alice's Army Cards	-	Sorcerers of the Shore Grimoire	-	-	-	-	-
+181	Natural Born Skeleton Killer	+10% Skeleton Murder!	-	pb	-	-	-	-
+182	Summon Clip Art	-	Tome of Clip	-	-	-	-	-
+183	Master of the Surprising Fist	+10 Dam and +20 to-hit with empty hands	-	p	-	-	-	-
+184	Summon Dice	-	Gygaxian Libram	-	-	-	-	-
+185	Summon &quot;Boner Battalion&quot;	Damage Each round of Combat	-	b	-	-	-	-
+186	Summon Resolutions	-	Resolution	-	-	-	-	-
+187	Torment Plant	-	-	-	-	-	-	-
+188	Pinch Ghost	-	-	-	-	-	-	-
+189	Tattle	-	-	-	-	-	-	-
+190	Thick-Skinned	-	-	-	-	-	-	-
+191	Chip on your Shoulder	-	-	-	-	-	-	-
+192	Request Sandwich	-	-	-	-	-	-	-
+193	Frigidalmatian	-	-	b	-	-	-	-
+194	Silent Slam	-	-	b	-	-	-	-
+195	Silent Squirt	-	-	b	-	-	-	-
+196	Silent Slice	-	-	b	-	-	-	-
+197	Singer's Faithful Ocelot	-	-	-	-	-	-	-
+198	Drescher's Annoying Noise	-	-	-	-	-	-	-
+199	Walberg's Dim Bulb	-	-	-	-	-	-	-
+200	Deep Dark Visions	-	-	-	-	-	-	-
+201	Summon Taffy	-	Taffy	-	-	-	-	-
+202	Club Earth	-	-	-	-	-	-	-
+203	Carbohydrate Cudgel	-	-	-	-	-	-	-
+204	Splattersmash	-	-	-	-	-	-	-
+205	Grab a Cold One	-	-	-	-	-	-	-
+206	Song of the North	-	-	-	-	-	-	-
+207	Turtleini	-	-	-	-	-	-	-
+208	Sauceshell	-	-	-	-	-	-	-
+209	Conspiratorial Whispers	-	-	-	-	-	-	-
+210	Song of Slowness	-	-	-	-	-	-	-
+211	Spaghetti Breakfast	-	-	-	-	-	-	-
+212	Shadow Noodles	-	-	-	-	-	-	-
+213	Song of Starch	-	-	-	-	-	-	-
+214	Splashdance	-	-	-	-	-	-	-
+215	Song of Sauce	-	-	-	-	-	-	-
+216	Song of Bravado	-	-	-	-	-	-	-
+217	Fortitude of the Muskox	Regen 1-2HP/adv	-	p	-	-	-	-
+218	Hibernate	Heal HP, +3 stats/fight (10adv)<br />(1 adv)	-	-	-	-	-	-
+219	Cold Shoulder	Smack skills do +5 cold damage	-	p	-	-	-	-
+220	Wrath of the Wolverine	Build Fury	-	pc	-	-	-	-
+221	Buoyancy of the Beluga	Regen 1HP/adv for each Fury	-	pc	-	-	-	-
+222	Scowl of the Auk	(+10 Weapon Damage)<br>(8MP)	-	-	-	-	-	-
+223	Furious Wallop	Guaranteed to Hit Attack (5MP & 1 Fury)	-	c	-	-	-	-
+224	Club Foot	Delevel Attack<br>(8MP)	-	c	-	-	-	-
+225	Seething of the Snow Leopard	Addnl. Bonus Damage from Fury	-	pc	-	-	-	-
+226	Ire of the Orca	Fury Capacity increased to 5	-	pc	-	-	-	-
+227	Thirst of the Weasel	Smacks restore 1-2HP/fury	-	pc	-	-	-	-
+228	Cavalcade of Fury	Attack<br>(All Fury)	-	c	-	-	-	-
+229	Northern Explosion	Cold Attack<br>(16MP)	-	-	-	-	-	-
+230	Precision of the Penguin	+1Crit% per Fury	-	pc	-	-	-	-
+231	Deft Hands	+25% Item Damage	-	p	-	-	-	-
+232	Summon Annoyance	-	-	-	-	-	-	-
+233	Disco State of Mind	Generate Momentum	-	pc	-	-	-	-
+234	Frantic Gyrations	Momentum makes you harder to hit	-	pc	-	-	-	-
+235	That's Not a Knife	THIS is a knife!	-	-	-	-	-	-
+236	Flashy Dancer	Momentum makes you dodge	-	pc	-	-	-	-
+237	Disco Smirk	+10 Mox<br />(10 adv)	-	-	-	-	-	-
+238	Knife in the Dark	Attack with best Knife	-	c	-	-	-	-
+239	Disco Shank	-	Attack with best Knife. Again.	c	-	-	-	-
+240	Disco Dance 3: Back in the Habit	Attack. 14 Delevel	-	c	-	-	-	-
+241	Disco Inferno	Hot Damage	-	-	-	-	-	-
+242	Disco Fever	+10 Mox, +10 Ranged Dam<br />(10 Adv)	-	-	-	-	-	-
+243	Sensitive Fingers	+10% Pickpocket	-	p	-	-	-	-
+244	Disco Leer	+10% Meat<br>(10 Adv)	-	-	-	-	-	-
+245	Summon Geeky Gifts	-	Thinknerd	-	-	-	-	-
+246	Disco Face Stab	Attack with best Knife	-	c	-	-	-	-
+247	Disco Dance of Doom	6-8 Damage, 3 Delevel	-	c	-	-	-	-
+248	Dissonant Riff	Attach and Delevel	-	-	-	-	-	-
+249	Cadenza	Attack with Accordion	-	c	-	-	-	-
+250	Crab Claw Technique	Accordion +Accuracy	-	pc	-	-	-	-
+251	Accordion Bash	Hit with Accordion (Stun)	-	-	-	-	-	-
+252	Accordion Appreciation	Accordion +Accuracy	-	pc	-	-	-	-
+253	Concerto de los Muertos	Spooky Damage	-	-	-	-	-	-
+254	Five Finger Discount	5% Off!	-	p	-	-	-	-
+255	Suspicious Gaze	+20% Init<br>(10 adv @ 10MP)	-	-	-	-	-	-
+256	Bawdy Refrain	Sleaze Attack	-	-	-	-	-	-
+257	Thief Among the Honorable	+5% Items	-	p	-	-	-	-
+258	Sticky Fingers	Pickpocket Meat	-	p	-	-	-	-
+259	Master Accordion Master Thief	+10% Pickpocket Chance	-	p	-	-	-	-
+260	Knowing Smile	+1 Moxie Stat/fight<br>(10 adv @ 10MP)	-	-	-	-	-	-
+261	Mariachi Memory	+1 Song	-	p	-	-	-	-
+262	Cone of Zydeco	Attack	-	-	-	-	-	-
+263	Spirit Vacation	Restore all HP, MP Regen<br>(1 adv)	-	-	-	-	-	-
+264	Blessing of the War Snapper	(+5 Mus, +5 Weapon Dam)<br>(Inf @ 15MP)	-	c	-	-	-	-
+265	Stiff Upper Lip	(10 DR)	-	-	-	-	-	-
+266	Pizza Lover	Om nom nom pizza!	-	p	-	-	-	-
+267	Shell Up	Stun	-	-	-	-	-	-
+268	Spirit Snap	Various Attack	-	c	-	-	-	-
+269	Blessing of She-Who-Was	(+5Mys, +5 Spooky Dam)	-	c	-	-	-	-
+270	Butts of Steel	<3 Butts	-	p	-	-	-	-
+271	Spiky Shell	Damage Attacking Opponents	-	-	-	-	-	-
+272	Testudinal Teachings	Familiars Level Faster	-	p	-	-	-	-
+273	Blessing of the Storm Tortoise	+5% Init, MP+10	-	c	-	-	-	-
+274	The Long View	+3 Adv/Day	-	p	-	-	-	-
+275	Spirit Boon	Receive Boon	-	c	-	-	-	-
+276	Patient Smile	+1Mus Stat/Fight	-	-	-	-	-	-
+277	Turtle Power	Bring it on.	-	c	-	-	-	-
+278	Utensil Twist	Attack	-	-	-	-	-	-
+279	Transcendent Al Dente	+20 MaxMP, 19-20MP Regen<br>(1 adv)	-	-	-	-	-	-
+280	Bind Vampieroghi	Thrall: Vampieroghi	-	c	-	-	-	-
+281	Arched Eyebrow of the Archmage	+10 Spell Damage<br>(10adv @ 10MP)	-	-	-	-	-	-
+282	Bind Vermincelli	Thrall: Vermincelli	-	c	-	-	-	-
+283	Bringing Up the Rear	Power Up Spells!	-	pc	-	-	-	-
+284	Bind Angel Hair Wisp	Thrall: Angel Hair Wisp	-	c	-	-	-	-
+285	Shield of the Pastalord	30% Dam Reduction<br>(10 adv @ 20MP)	-	-	-	-	-	-
+286	Bind Undead Elbow Macaroni	Thrall: Elbow Macaroni	-	c	-	-	-	-
+287	Thrall Unit Tactics	-MP Cost with Thrall	-	pc	-	-	-	-
+288	Bind Penne Dreadful	Thrall: Penne Dreadful	-	c	-	-	-	-
+289	Subtle and Quick to Anger	+10% Spell Dam	-	p	-	-	-	-
+290	Bind Lasagmbie	Thrall: Lasagmbie	-	c	-	-	-	-
+291	Wizard Squint	+10% Spell Crit	-	-	-	-	-	-
+292	Bind Spice Ghost	Thrall: Spice Ghost	-	c	-	-	-	-
+293	Curse of Vichyssoise	Curse Cold	-	-	-	-	-	-
+294	Simmer	+100% Spell Dam, 8-10MP Regen<br>(10 adv @ 1 adv)	-	-	-	-	-	-
+295	Icy Glare	+10 Cold [Spell] Damage	-	-	-	-	-	-
+296	Inner Sauce	3-4MP Regen	-	p	-	-	-	-
+297	Soul Saucery	Gather Soulsauce	-	pc	-	-	-	-
+298	Curse of Marinara	Curse Damage & Healing	-	-	-	-	-	-
+299	Itchy Curse Finger	Stagger when Cursing	-	pc	-	-	-	-
+300	Curse of the Thousand Islands	Curse Stagger	-	-	-	-	-	-
+301	Saucecicle	Cold Damage	-	-	-	-	-	-
+302	Master Saucier	+10% Spell Damage	-	p	-	-	-	-
+303	Saucemaven	Om nom nom sauce!	-	p	-	-	-	-
+304	Curse of Weaksauce	Curse Weaken	-	-	-	-	-	-
+305	Wry Smile	+1 Mys per Fight	-	-	-	-	-	-
+306	Sauce Monocle	+15% Crit(10 adv @ 20MP)	-	-	-	-	-	-
+307	Blood Sugar Sauce Magic	MP at cost of HP	-	-	-	-	-	-
+308	Summon Rad Libs	-	Tome of Rad	-	-	-	-	-
+309	Bind Spaghetti Elemental	Thrall: Spaghetti	-	c	-	-	-	-
+310	Shrap	Non-Elemental Damage	-	b	-	-	-	-
+311	Psychokinetic Hug	+10 Stats	-	b	-	-	-	-
+312	Grease Up	+15 Sleaze Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
+313	Sloppy Secrets	More Beach Bucks	-	p	-	-	-	-
+314	Alien Source Code	Max MP +5	-	pb	-	-	-	-
+315	Belch The Rainbow	Burp!	-	-	-	-	-	-
+316	Pirate Bellow	Arrrr!	-	-	-	-	-	-
+317	Unoffendable	Serious Sleaze Resist (+3)	-	p	-	-	-	-
+318	Summon Confiscated Things	-	Confiscator's Grimoire	-	-	-	-	-
+319	Summon Smithsness	-	The Smith's Tome	-	-	-	-	-
+320	Hypersane	Serious Spooky Resist (+3)	-	p	-	-	-	-
+321	Intimidating Mien	+15 Spooky Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
+322	Summon Holiday Fun!	Fun!	-	-	-	-	-	-
+323	Rapid Prototyping	Craft 5 Times a Day, Free	-	pb	-	-	-	-
+324	Mathematical Precision	Combat Items 50% more Damage<br>(20 adv @ 10MP)	-	b	-	-	-	-
+325	Ruthless Efficiency	Deleveling 50% Better<br>(20 adv @ 10MP)	-	b	-	-	-	-
+326	Summon Carrot	That’s a cold carrot	-	-	-	-	-	-
+327	Speluck	Underground +5% Item, +10% Meat	-	pb	-	-	-	-
+328	Summon Kokomo Resort Pass	Aruba, Jamaica…	-	-	-	-	-	-
+329	Bear Essence	+20% Picnic Baskets	-	p	-	-	-	-
+330	Olfactory Burnout	Serious Stench Resistance (+3)	-	p	-	-	-	-
+331	Garbage Nova	-	-	-	-	-	-	-
+332	Dinsey Operations Expert	-	-	p	-	-	-	-
+333	Rotten Memories	+15 Stench Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
+334	Mild Curse	Ed brings the insults!	-	-	-	-	-	-
+335	Ancestral Recall	Draw 3 Cards	-	-	-	-	-	-
+336	Dark Ritual	Get 3 Black Mana	-	-	-	-	-	-
+337	Giant Growth	You’re huge!	-	-	-	-	-	-
+338	Healing Salve	Recover 3 Life	-	-	-	-	-	-
+339	Lightning Bolt	Does 3 Damage	-	-	-	-	-	-
+340	Asbestos Heart	Serious Hot Resistance (+3)	-	p	-	-	-	-
+341	Firegate	-	-	-	-	-	-	-
+342	Pyromania	+15 Hot Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
+343	Calculate the Universe	-	-	-	-	-	-	-
+344	Perfect Freeze	-	-	-	-	-	-	-
+345	Refusal to Freeze	Serious Cold Resistance (+3)	-	p	-	-	-	-
+346	Beardfreeze	+15 Cold Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
+347	Frost Bite	-	-	-	-	-	-	-
+348	Communism!	1000 Meat!	-	b	-	-	-	-
+349	Shattering Punch	3/day Instakill	-	-	-	-	-	-
+350	Shivering Monkey Technique	+15% Init	-	p	-	-	-	-
+351	Snokebomb	3/day Banish	-	-	-	-	-	-
+352	Bow-Legged Swagger	-	-	-	-	-	-	-
+353	Bend Hell	-	-	-	-	-	-	-
+354	Steely-Eyed Squint	-	-	-	-	-	-	-
+355	Toggle Optimality	-	-	-	-	-	-	-
+356	Brain Games	+3 Rollover Adventures	-	p	-	-	-	-
+357	20/20 Vision	+10% Item Drop	-	p	-	-	-	-
+358	Astute Angler	+10 Fishing Skill	-	p	-	-	-	-
+359	Eldritch Intellect	Spooky res/dmg +1, Eldritch Knowledge	-	p	-	-	-	-
+360	Stack Lumps	Lumps to Sludge	-	-	-	-	-	-
+361	Sweet Synthesis	Candy + Spleen = Effect	-	-	-	-	-	-
+362	Gingerbread Mob Hit	Instakill 1/day	-	-	-	-	-	-
+363	Ceci N'Est Pas Un Chapeau	Doesn’t make a hat	-	-	-	-	-	-
+364	Fifteen Minutes of Flame	+15 Hot Dmg/Spell Dmg, +15 Init	-	-	-	-	-	-
+365	Licorice Rope	Banish a Gingerman	-	-	-	-	-	-
+366	Evoke Eldritch Horror	Summon Tentacles	-	b	-	-	-	-
+367	Quantum Movement	+20% Init	-	p	-	-	-	-
+368	5-D Earning Potential	+20% Meat	-	p	-	-	-	-
+369	Object Quasi-Permanence	+10% Items	-	p	-	-	-	-
+370	Disintegrate	150 MP Yellow Ray	-	-	-	-	-	-
+371	Eternal Flame	Hot res/dmg + 1, Political Knowledge	-	pb	-	-	-	-
+372	Meteor Lore	Meteor Love!	-	p	-	-	-	-
+373	Gemelli's March of Testery	Gold stars for everyone!	-	-	-	-	-	-
+374	Silent Hunter	+25% Init (50 MP, 10 Adv)	-	b	-	-	-	-
+375	Quiet Determination	+25% Muscle (Facial Expression)	-	b	-	-	-	-
+376	Quiet Judgement	+25% Myst (Facial Expression)	-	b	-	-	-	-
+377	Silent Treatment	Ignore Resistances (20 MP Combat)	-	b	-	-	-	-
+378	Silent Knife	Knife Damage and Stagger	-	b	-	-	-	-
+379	Quiet Desperation	+25% Moxie (Facial Expression)	-	b	-	-	-	-
+380	Get Big	+20% to all stats	-	-	-	-	-	-
+381	Gallapagosian Mating Call	Weak sniff a monster	-	-	-	-	-	-
+382	Inscrutable Gaze	+10% to Myst gains (Facial Expression)	-	-	-	-	-	-
+383	Love Mixology	Summons random Love Potions	-	-	-	-	-	-
+384	Acquire Rhinestones	Creates Rhinestones	-	-	-	-	-	-
+385	Paul's Passionate Pop Song	Regen 4-5 MP/adv	-	-	-	-	-	-
+386	Expert Corner-Cutter	5 free craftings	-	p	-	-	-	-
+387	Budget Conscious	+10% Meat Drops	-	-	-	-	-	-
+388	Drinking to Drink	+1 liver capacity	-	-	-	-	-	-
+389	Experience Safari	-	-	-	-	-	-	-
+390	Army of Toddlers	Summons fightin’ babies	-	-	-	-	-	-
+391	Carol of the Bulls	+100% Weapon Damage	-	-	-	-	-	-
+392	Carol of the Hells	+100% Spell Damage	-	-	-	-	-	-
+393	Carol of the Thrills	+3 Stats	-	-	-	-	-	-
+394	Blood Frenzy	+50% Weapon Damage (10 Adv)	-	-	-	-	-	-
+395	Blood Bond	+5 Fam Weight (10 Adv)	-	-	-	-	-	-
+396	Blood Bucatini	Damage and Delevel	-	-	-	-	-	-
+397	Blood Bubble	First attack always misses (3 adv)	-	-	-	-	-	-
+398	Blood Blade	Makes a butter knife!	-	-	-	-	-	-
+399	Bram's Bloody Bagatelle	Damage everyone	-	-	-	-	-	-
+400	Prevent Scurvy and Sobriety	Summon rum, grapefruit, limes	-	-	-	-	-	-
+401	Tiki Mixology	Make rhum cocktails	-	p	-	-	-	-
+402	Implode Universe	-	-	-	-	-	-	-
+403	The Spirit of Taking	+10% Item Drops	-	-	-	-	-	-
+404	Visit your Favorite Bird	In bird culture, this is considered a dick move	-	-	-	-	-	-
+405	Always Never Not Guzzling	-	-	p	-	-	-	-
+406	Drippy Eye-Beetle	-	-	p	-	-	-	-
+407	Drippy Eye-Sprout	-	-	p	-	-	-	-
+408	Drippy Eye-Stone	-	-	p	-	-	-	-
+409	Lock Picking	Make a key, you still can’t pick locks	-	-	-	-	-	-
+410	Comprehensive Cartography	You know how to find things	-	pb	-	-	-	-
+411	Long Winter's Nap	5 free rests	-	p	-	-	-	-
+412	Bowl Full of Jelly	1/day epic food	-	-	-	-	-	-
+413	Ashes and Soot	Combat: myst-based fire/physical damage	-	-	-	-	-	-
+414	Eye and a Twist	1/day epic booze	-	-	-	-	-	-
+415	Dimples, How Merry!	+1 stats/combat	-	p	-	-	-	-
+416	Chubby and Plump	1/day +50% HP/MP (60 adv)	-	-	-	-	-	-
+417	Emotionally Chipped	All the feelings!	-	pb	-	-	-	-
+418	Dead Nostrils	Stench res/dmg + 1, Stay Fresh	-	p	-	-	-	-
+419	Ancient Crymbo Lore	+3 stats in December	-	p	-	-	-	-
