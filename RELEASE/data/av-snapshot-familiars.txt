@@ -261,8 +261,8 @@
 261	Red-Nosed Snapper	redsnapper	red-spotted snapper roe	-	-	-	-	-
 262	Antique Nutcracker	nutcfigure	antique nutcracker figurine	-	-	-	-	-
 263	Piranha Plant	piranhaplant	pristine piranha seed	-	-	-	-	-
-264	Left-Hand Man	righthandbody.png	sinistral homunculus	-	-	-	-	-
-265	Melodramedary	camelfam_left	baby camelCalf	-	-	-	-	-
+264	Left-Hand Man	otherimages/righthandbody.png	sinistral homunculus	-	-	-	-	-
+265	Melodramedary	otherimages/camelfam_left.gif	baby camelCalf	-	-	-	-	-
 266	Ghost of Crimbo Carols	cghost_carols	gregarious ghostling	-	-	-	-	-
 267	Ghost of Crimbo Cheer	cghost_cheer	grinning ghostling	-	-	-	-	-
 268	Ghost of Crimbo Commerce	cghost_commerce	greedy ghostling	-	-	-	-	-
