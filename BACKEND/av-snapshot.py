@@ -16,8 +16,13 @@ from urllib.parse import urlparse, parse_qs
 # End of mandatory packages
 import base64
 from datetime import datetime
+import math
 
+# May not have to update below lines if data files change 
+MAX_SKILL = 420
 MAX_TROPHY = 160
+MAX_FAMILIAR = 281
+
 GREEN = '8F8'
 BROWN = 'EEA'
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
@@ -134,6 +139,7 @@ def print_end():
 
 SKILLS = {}  	# dict of lists (n, name, desc)
 TROPHIES = {}   # dict of lists (n, image name, trophy name, desc)
+FAMILIARS = {}	# dict of lists (n, name, image, hatchling)
 
 
 def getbits(byts, index, eltsize):
@@ -142,12 +148,14 @@ def getbits(byts, index, eltsize):
 	bytoffs = loc % 8;
 	mask = (1 << eltsize) - 1
 	if (bytoffs+eltsize) > 8:
-		pass    # TODO: fill this in
+		bb = byts[bytloc]*256+byts[bytloc+1]
+		return (bb >> (16-bytoffs-eltsize)) & mask    
 	else:
 		return (byts[bytloc] >> (8-bytoffs-eltsize)) & mask
 
 def load_data_file(filename, map):
 	with open_file_for_reading(filename+'.txt') as fil:
+		maxx = 0
 		while True:
 			l = fil.readline()
 			if not l:
@@ -155,11 +163,17 @@ def load_data_file(filename, map):
 			l = l.split('\t')
 			if l[0]=='':
 				continue
-			map[int(l[0])] = l;
+			maxx = int(l[0])
+			map[maxx] = l;
+	return maxx
 
 def load_data():
-	load_data_file('av-snapshot-skills', SKILLS)
-	load_data_file('av-snapshot-trophies', TROPHIES)
+	global MAX_SKILL
+	MAX_SKILL = load_data_file('av-snapshot-skills', SKILLS)
+	global MAX_TROPHY
+	MAX_TROPHY = load_data_file('av-snapshot-trophies', TROPHIES)
+	global MAX_FAMILIAR
+	MAX_FAMILIAR = load_data_file('av-snapshot-familiars', FAMILIARS)
 
 ###########################################################################
 
@@ -205,17 +219,15 @@ def print_skill_cell(skill_bytes, skill_num, suffix=''):
 
 # Map av-snapshot skill numbers to positions in levels string
 LEVELED_SKILLS = {315:3, 316:4, 322:5, 326:6, 329:7, 343:8, 389:9, 402:10}
+DIGITS36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def gen_suffix(skill, levels):
 	if skill in LEVELED_SKILLS:
-		l = levels[LEVELED_SKILLS[skill]:LEVELED_SKILLS[skill]+1]
-		if l == 'A':
-			l = '10'
-		elif l == 'B':
-			l = '11'
+		lv = levels[LEVELED_SKILLS[skill]:LEVELED_SKILLS[skill]+1]
+		lv = DIGITS36.find(lv)
 		if skill == 315:	# belch the rainbow
-			return ' ' + l + '/11'
+			return f' {lv}/11'
 		else:
-			return ': Level ' + l
+			return f': Level {lv}'
 	return ''
 
 def print_skill_row(skill_bytes, header, skill_list, levels=''):
@@ -403,12 +415,95 @@ def print_trophies(trophy_bytes):
 		ct = ct + 1
 	o("</tr></table>\n")
 
+###########################################################################
 
-def arg_to_bytes(argv, key):
+def print_familiar_cell(bgcolor, imgname, name):
+	if (bgcolor != ''):
+		bgcolor = "style='background-color: #" + bgcolor
+	if imgname.find('otherimages') < 0:
+		imgname = 'itemimages/' + imgname + '.gif'
+	elif imgname.find('camelfam') >= 0:
+		# Melodramedary is a special case, need 2 images
+		imgname = f"{imgname}'><img src='{IMAGES}/otherimages/camelfam_right.gif"
+	wikilink = f"<a href='http://kol.coldfront.net/thekolwiki/index.php/{name}'>"
+	o(f"<td {bgcolor}'>" + wikilink
+				+f"<img src='{IMAGES}/{imgname}'></a><br>{wikilink}{name}</a></td>")
+
+def print_familiars(familiar_bytes):
+	have, lack, tour, hundred = (0, 0, 0, 0)
+	for i in range(len(FAMILIARS)):
+		x = getbits(familiar_bytes, i+1, 3)
+		# 0 = lack familiar
+		# 1 = have familiar hatchling
+		# 2 = have familiar
+		# 3 = have familiar with 90% run
+		# 4 = have familiar with 100% run
+		if x == 0:
+			lack = lack + 1
+		elif x == 1:
+			lack = lack + 1 # does this even count?
+		else:
+			have = have + 1
+			if x == 3:
+				tour = tour + 1
+			elif x == 4:
+				hundred = hundred + 1
+	o(f"<h3>Familiars</h3><p>You have {have} familiars (missing {lack}), have done {tour} tourguide runs and {hundred} 100% runs.</p>")
+	o("<table cellspacing='0'><tr>")
+	# First, regular familiars
+	ct = 1
+	for i in range(1, MAX_FAMILIAR+1):
+		f = FAMILIARS[i]
+		fnum = int(f[0])
+		if ((fnum >= 201) and (fnum <=245)) or (f[3] == '-'):
+			# Skip if Pokefam or no hatchling (April Foolmiliar)
+			continue
+		print_familiar_cell('', f[2], f[1])
+		if (ct % 10 == 0):
+			o("</tr><tr>")
+		ct = ct + 1
+	while ((ct % 10) != 1):
+		o("<td></td>")
+		ct = ct + 1
+	# Next, legend
+	o("</tr></table><b>Legend</b><br/><table cellspacing='0'><tr>"
+		+'<td class="fam_run_100">100% Run Done</td>'
+	    +'<td class="fam_run_90">90% Run Done</td>'
+	    +'<td class="fam_have">Have Familiar</td>'
+	    +'<td class="fam_have_hatch">Have Familiar Hatchling</td>'
+	    +"<td class='fam_missing'>Don't have Familiar</td>")
+	# Next, Pokefams
+	o("</tr></table><h4>Pocket Familiars</h4><table cellspacing='0'><tr>\n")
+	ct = 1
+	for i in range(201, 246):
+		f = FAMILIARS[i]
+		print_familiar_cell('', f[2], f[1])
+		if (ct % 10 == 0):
+			o("</tr><tr>")
+		ct = ct + 1
+	while ((ct % 10) != 1):
+		o("<td></td>")
+		ct = ct + 1
+	# Finally, April Foolmiliars
+	o("</tr></table><h4>April Foolmiliars</h4><table cellspacing='0'><tr>\n")
+	for i in range(270, 279):
+		f = FAMILIARS[i]
+		print_familiar_cell('', f[2], f[1])
+	o("</tr></table")
+
+	
+
+###########################################################################
+
+
+def arg_to_bytes(argv, key, size):
+	tgtlen = math.ceil(size/24)*4
 	if key in argv:
-		return base64.b64decode(argv[key], altchars='-_')
-	return base64.b64decode('A'*200, altchars='-_')
-
+		b64 = argv[key].replace('=','A')
+		if len(b64) < tgtlen:
+			b64 = b64 + ('A'*(tgtlen - len(b64)))
+		return base64.b64decode(b64, altchars='-_')
+	return base64.b64decode('A'*tgtlen, altchars='-_')
 
 def prepareResponse(argv, context):
 	'''
@@ -431,14 +526,20 @@ def prepareResponse(argv, context):
 	argv = fetched_argv
 	print_beginning(name, argv["tstamp"])
 	load_data()
-	skill_bytes = arg_to_bytes(argv, "skills")
+	#
+	skill_bytes = arg_to_bytes(argv, "skills", 2*MAX_SKILL)
 	if "levels" in argv:
 		levels = argv["levels"]
 	else:
 		levels = "000000000000"
 	print_skills(skill_bytes, levels)
-	trophy_bytes = arg_to_bytes(argv, "trophies")
+	#
+	trophy_bytes = arg_to_bytes(argv, "trophies", MAX_TROPHY)
 	print_trophies(trophy_bytes)
+	#
+	familiar_bytes = arg_to_bytes(argv, "familiars", 3*MAX_FAMILIAR)
+	print_familiars(familiar_bytes)
+	#
 	print_end()
 	return ''.join(OUTPUT)
 
