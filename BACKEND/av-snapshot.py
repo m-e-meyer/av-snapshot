@@ -208,9 +208,6 @@ def print_beginning(name, argv, fetched_argv):
 		query = query + '&colorblind=1'
 	o(f"Please click <a href='av-snapshot.py{query}'>here</a> to turn {switch} colorblind mode.</div>\n")
 
-def print_end():
-	o("</body></html>\n")
-
 
 ###########################################################################
 
@@ -407,6 +404,110 @@ def print_skills(skill_bytes, levels):
 
 ###########################################################################
 
+def print_tattoo_cell(tattoo_bytes, tat, levels=""):
+	if tat == 0:
+		o("<td></td>")
+	elif tat == -1:		# Hobo tattoo
+		lv = DIGITS36.find(levels[11:12])
+		clas = ""
+		if lv > 0:
+			if lv >= 19:
+				clas = "class='hcperm'"
+			else:
+				clas = "class='perm'"
+		img = ""
+		if lv > 0:
+			img = f"<img src='{IMAGES}/otherimages/sigils/hobotat{lv}.gif'><br/>"
+		o(f"<td {clas}><a href='http://kol.coldfront.net/thekolwiki/index.php/Hobo_Tattoo'>"
+		  +f"{img}Hobo Tattoo {lv}/19</a></td>")
+	else:
+		t = TATTOOS[tat]
+		clas = ""
+		x = getbits(tattoo_bytes, tat, 2)
+		if x == 1:
+			clas = "class='hcperm'"
+		elif x == 2:
+			clas = "class='perm'"
+		o(f"<td {clas}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
+
+def print_tattoo_table(tattoo_bytes, header, rows, levels=""):
+	o(f'<h2>{header}</h2><table cellspacing="0">')
+	for row in rows:
+		o("<tr>")
+		for tat in row:
+			print_tattoo_cell(tattoo_bytes, tat, levels)
+		o("</tr>")
+	o("</table>")
+
+def print_tattoos(tattoo_bytes, levels):
+	o("<h1>Tattoos</h1>")
+	tally = [0, 0, 0]
+	for i in range(len(TATTOOS)):
+		x = getbits(tattoo_bytes, i+1, 2)
+		tally[x] = tally[x] + 1
+	tally[0] = tally[0] - 8		# sneaky pete xxix and awol each have 4 redundant 
+	if levels[11:12] != '0':
+		tally[0] = tally[0] - 1		# hobo tattoo of any level counts
+		tally[1] = tally[1] + 1
+	o(f"<p class='subheader'>You have {tally[1]} tattoos and {tally[2]} outfits for which"
+	  f" you don't have the corresponding tattoo, and are missing {tally[0]} tattoos.</p>\n")
+	print_tattoo_table(tattoo_bytes, "Class", 
+		((1, 2, 3, 108),
+		 (4, 5, 6, 109),
+		 (7, 8, 9, 110),
+		 (10, 11, 12, 111),
+		 (13, 14, 15, 112),
+		 (16, 17, 18, 113),
+		 (144, 145, 149, 150),
+		 (155, 156, 179, 180),
+		 (194, 195, 211, 212),
+		 (213, 214, 215, 216),
+		 (228, 229, 257, 258),
+		 (268, 269, 0, 0)))
+	print_tattoo_table(tattoo_bytes, "Ascension", 
+		((19, 20, 21, 22, 23, 24),
+		 (25, 26, 27, 28, 29, 30),
+		 (31, 32, 33, 34, 35, 36),
+		 (37, 38, 39, 40, 41, 42),
+		 (43, 44, 45, 0, 0, 0)))
+	# do outfit table - we assume any tattoo with a component is an outfit
+	o(f'<h2>Outfits</h2><table cellspacing="0">')
+	x = 0
+	for t in range(len(TATTOOS)):
+		tat = TATTOOS[t+1]
+		if tat[3] == '-':
+			continue
+		if tat[1].find("Legendary Regalia") >= 0:
+			continue	# we did the legendary regalia in the Class section
+		if x == 0:
+			o("<tr>")
+		print_tattoo_cell(tattoo_bytes, t+1)
+		x = x+1
+		if x == 10:
+			o("</tr>")
+			x = 0
+	if x > 0:
+		while x < 10:
+			o("<td></td>")
+			x = x + 1
+		o("</tr>")
+	o("</table>")
+	print_tattoo_table(tattoo_bytes, "Other", 
+		((126, 130, 131, 139, 142, 0),
+		 (132, 133, 134, 135, 136, 0),
+		 (103, 104, 118, 106, 127, 128),
+		 (125, 140, 148, 178, 193, 192),
+		 (172, 173, 174, 175, 176, 177),
+		 (196, 203, 205, 209, 208, -1),
+		 (217, 278, 219, 220, 221, 227),
+		 (224, 231, 232, 233, 242, 246),
+		 (247, 248, 254, 260, 271, 273),
+		 (274, 275, 276, 0, 0, 0)), levels)
+	return tally[1]
+
+
+###########################################################################
+
 def print_trophy_cell(clas, imgname, trophy, desc):
 	imgname = imgname.replace('_thumb', '')
 	if (imgname == 'nopic'):
@@ -446,12 +547,7 @@ def print_trophies(trophy_bytes):
 		o("<td></td>")
 		ct = ct + 1
 	o("</tr></table>\n")
-
-
-###########################################################################
-
-def print_tattoos(tattoo_bytes):
-	pass
+	return tally[1]
 
 
 ###########################################################################
@@ -543,7 +639,16 @@ def print_familiars(familiar_bytes):
 		f = FAMILIARS[i]
 		style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
 		print_familiar_cell(style, f[2], f[1])
-	o("</tr></table")
+	o("</tr></table>")
+	return have
+
+###########################################################################
+
+def print_end(tats, trophs, fams):
+	o(f"<a name='collectorscore'><h2>Collector's Score: {tats+trophs+fams}"
+	  f" (Tattoo: {tats}, Trophy: {trophs}, Familiar: {fams})</a></h2>")
+	o("</body></html>\n")
+
 
 	
 ###########################################################################
@@ -583,16 +688,16 @@ def prepareResponse(argv, context):
 		levels = "0"*NUM_LEVELS
 	print_skills(skill_bytes, levels)
 	#
-	tattoo_bytes = arg_to_bytes(fetched_argv, "tattoos", MAX_TATTOO, 1)
-	print_tattoos(tattoo_bytes, levels)
+	tattoo_bytes = arg_to_bytes(fetched_argv, "tattoos", MAX_TATTOO, 2)
+	tats = print_tattoos(tattoo_bytes, levels)
 	#
 	trophy_bytes = arg_to_bytes(fetched_argv, "trophies", MAX_TROPHY, 1)
-	print_trophies(trophy_bytes)
+	trophs = print_trophies(trophy_bytes)
 	#
 	familiar_bytes = arg_to_bytes(fetched_argv, "familiars", MAX_FAMILIAR, 4)
-	print_familiars(familiar_bytes)
+	fams = print_familiars(familiar_bytes)
 	#
-	print_end()
+	print_end(tats, trophs, fams)
 	return ''.join(OUTPUT)
 
 ###########################################################
