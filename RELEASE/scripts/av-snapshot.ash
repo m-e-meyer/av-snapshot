@@ -392,22 +392,6 @@ int tattooCheck(string html, string outfit, string gif, string i1, string i2, st
 	if (num_items(i9) == 0)  return 0;  
 
 	return 2;
-
-	// Aventuristo: I don't know what the bottom is about.  Shouldn't make a difference to me?
-	//This is a terrible way of doing this, but the hobo tattoo goes after the salad one.
-	//We are not doing this, make it the first tattoo....
-	//if(gif == "saladtat")
-	//{
-	//	ret += "|";
-	//	for i from 19 to 1
-	//	{
-	//		if(index_of(html, "hobotat"+i) != -1)
-	//		{
-	//			ret += i;
-	//			break;
-	//		}
-	//	}
-	//}
 }
 
 string check_tattoos()
@@ -428,6 +412,15 @@ string check_tattoos()
 		b.set(x, tattooCheck(html, ii.itemname, ii.gifname, ii.a, ii.b, ii.c, ii.d, ii.e, 
 							ii.f, ii.g, ii.h, ii.i));
 	}
+
+	// What's the level on the Hobo Tattoo?
+	for lv from 19 to 1 {
+		if (index_of(html, "hobotat"+lv) != -1) {
+			LEVELS[11] = lv;
+			break;
+		}
+	}
+
     return "&tattoos=" + b.base64_encode();
 }
 
@@ -570,6 +563,7 @@ void main()
 	if (get_property("avSnapshotNosave") == "j") {
     	print(url);
 	} else {
+		print("Contacting database...");
 		buffer b = visit_url(url, false);
 		if (b.index_of("Record added") >= 0) {
 			print("Database updated", "green");
