@@ -1,3 +1,13 @@
+script "av-snapshot.ash";
+notify aventuristo;
+since r20632;
+
+#	This is a fork of cheesecookie's snapshot script, which is itself
+#   a fork of bumcheekcity's snapshot script.
+#	Like choosecookie's script, code comes straight from the predecessor,
+#	website layout is copied from it, and things are then hacked onto it 
+#   in order to increase support. So... yeah.
+
 ////////////////////////////
 
 record bitarray {
@@ -80,6 +90,14 @@ string base64_encode(bitarray b)
 
 ///////////////////////////////
 
+boolean DEBUG = (get_property('avSnapshotDebug') == 'j');
+void debug(string s)
+	{
+		if (DEBUG) { print(s, "blue"); }
+	}
+
+///////////////////////////////
+
 record ItemImage
 {
     string itemname;
@@ -95,9 +113,30 @@ record ItemImage
     string i;
 };
 
-ItemImage [int] ascrewards, booze, concocktail, confood, conmeat, conmisc, consmith, 
-    coolitems, familiars, food, hobopolis, rogueprogram, manuel, mritems, skills, 
-    slimetube, tattoos, trophies, warmedals, tracked;
+ItemImage [int] ASCREWARDS, BOOZE, CONCOCKTAIL, CONFOOD, CONMEAT, CONMISC, CONSMITH, 
+	COOLITEMS, FAMILIARS, FOOD, HOBOPOLIS, MANUEL, MRITEMS, ROGUEPROGRAM, SKILLS,
+    SLIMETUBE, TATTOOS, TROPHIES, WARMEDALS, TRACKED; 
+int[int] LEVELS = {};
+
+void set_level_counter(int i, int value)
+{
+	if (LEVELS.count() == 0) {
+		for j from 0 to 20 {
+			LEVELS[j] = 0;
+		}
+	}
+	LEVELS[i] = value;
+}
+
+string BASE36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+string levels_string() 
+{
+	string result = "";
+	foreach x, val in LEVELS {
+		result = result + BASE36.substring(val, val+1);
+	}
+	return result;
+}
 
 boolean load_current_map(string fname, ItemImage[int] map)
 {
@@ -108,12 +147,12 @@ boolean load_current_map(string fname, ItemImage[int] map)
 void load_data()
 {
     print("Updating map files...", "olive");
-	load_current_map("cc_snapshot_skills", skills);
-	load_current_map("cc_snapshot_tattoos", tattoos);
-	load_current_map("cc_snapshot_trophies", trophies);
-	load_current_map("cc_snapshot_familiars", familiars);
-	load_current_map("cc_snapshot_mritems", mritems);
-	load_current_map("cc_snapshot_coolitems", coolitems);
+	load_current_map("cc_snapshot_skills", SKILLS);
+	load_current_map("cc_snapshot_tattoos", TATTOOS);
+	load_current_map("cc_snapshot_trophies", TROPHIES);
+	load_current_map("cc_snapshot_familiars", FAMILIARS);
+	load_current_map("cc_snapshot_mritems", MRITEMS);
+	load_current_map("cc_snapshot_coolitems", COOLITEMS);
 }
 
 boolean isIn(string name, string html)
@@ -149,11 +188,10 @@ string extract_data_from_mritem(ItemImage mritem, int offset)
 	return "None";
 }
 
-int i_a(string name)
+int num_items(string name)
 {
 	item i = to_item(name);
-	if(i == $item[none])
-	{
+	if(i == $item[none]) {
 		return 0;
 	}
 
@@ -161,12 +199,9 @@ int i_a(string name)
 	amt += display_amount(i) + shop_amount(i);
 
 	//Make a check for familiar equipment NOT equipped on the current familiar.
-	foreach fam in $familiars[]
-	{
-		if(have_familiar(fam) && fam != my_familiar())
-		{
-			if(i == familiar_equipped_equipment(fam))
-			{
+	foreach fam in $familiars[] {
+		if(have_familiar(fam) && fam != my_familiar()) {
+			if(i == familiar_equipped_equipment(fam)) {
 				amt += 1;
 			}
 		}
@@ -224,7 +259,7 @@ string check_mritems(string bookshelfHtml, string familiarNamesHtml)
 	foreach x in mritems {
 		string categoryFlags = mritems[x].itemname;
 		item baseItem = to_item(mritems[x].gifname);
-		int itemAmount = i_a(baseItem);
+		int itemAmount = num_items(baseItem);
 
 		foreach index, category in split_string(categoryFlags, "")	{
 			string data = extract_data_from_mritem(mritems[x], index);
@@ -249,7 +284,7 @@ string check_mritems(string bookshelfHtml, string familiarNamesHtml)
 
 				case "i":				//Items, any of, comma separated (no whitespace)
 					foreach index, it in split_string(data, ",") {
-						itemAmount += i_a(it);
+						itemAmount += num_items(it);
 					}
 					break;
 
@@ -265,7 +300,7 @@ string check_mritems(string bookshelfHtml, string familiarNamesHtml)
 					}
 					break;
 
-				//Gardens would ideally by a campground check (just i_a)
+				//Gardens would ideally by a campground check (just num_items)
 				//but the data in mritems would need to include the harvestable since that is what mafia reports instead of the garden itself.
 				case "t":				//Tome, Libram, Grimore, Garden
 					if(index_of(html, data) > 0) {
@@ -279,6 +314,7 @@ string check_mritems(string bookshelfHtml, string familiarNamesHtml)
 	return "&mritems=" + b.base64_encode();
 }
 
+# Is the skill permed or hardcore permed?
 int skillLevel(string name, string html, string overwrite)
 {
 	if(overwrite == "-") {
@@ -304,42 +340,107 @@ int skillLevel(string name, string html, string overwrite)
 
 string check_skills(string bookshelfHtml)
 {
-    bitarray b = new_bitarray(440, 2);
+    bitarray b = new_bitarray(SKILLS.count()+1, 2);
 	print("Checking skills...", "olive");
 	string html = visit_url("charsheet.php") + bookshelfHtml;
     // Check normal skills
-	foreach x in skills {
-        b.set(x, skillLevel(skills[x].itemname, html, skills[x].a));
+	foreach x in SKILLS {
+        b.set(x, skillLevel(SKILLS[x].itemname, html, SKILLS[x].a));
 	}
 
-    // return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
-	//							 carrot, bear, numberology, safari, implode)
-	string levels = "";
-	foreach sk in $strings[46, 47, 48, 117, 118, 121, 
-	                       128, 134, 144, 180, 188] {
-		string l = get_property("skillLevel" + sk);
-		if (l == "10") {
-			l = "A";
-		} else if (l == "11") {
-			l = "B";
-		}
-		levels = levels + l;
-	}
-    return "&skills=" + b.base64_encode() 
-        + "&levels=" + levels;
+    return "&skills=" + b.base64_encode();
 }
 
 string check_trophies()
 {
-    bitarray b = new_bitarray(200, 1);
+    bitarray b = new_bitarray(TROPHIES.count()+1, 1);
     print("Checking trophies...", "olive");
 	buffer html = visit_url("trophies.php");
-	foreach x in trophies
+	foreach x in TROPHIES
 	{
-		if (isIn("/" + trophies[x].itemname, html))
+		if (isIn("/" + TROPHIES[x].itemname, html))
             b.set(x, 1);
 	}
     return "&trophies=" + b.base64_encode();
+}
+
+int famCheck(string name, string gifname, string hatchling, 
+	string familiarNamesHtml, string koldbHtml)
+{
+	#print("Looking for familiar: " + name);
+	int famCode = 0;
+
+	debug("Looking for familiar: " + name);
+	// Pre Quantum:
+	// 0: No familiar, in any capacity (retained)
+	// 1: Have familiar
+	// 2: Have hatchling, but not familiar
+	// 3: Have familiar, 100% run
+	// 4: Have familiar, 90% run
+	// ---- Post-Quantum
+	// 3: 100% run, have familiar
+	// 4: 90% run, have familiar
+	// 5: 100% run, no familiar
+	// 6: 100% run, hatching, no familiar.
+	// 7: 90% run, no familiar
+	// 8: 90% run, hatchling, no familiar.
+
+	boolean haveHatchling = false;
+	if (num_items(hatchling) > 0) {
+		haveHatchling = true;
+	}
+
+	boolean haveFamiliar = false;
+	if(have_familiar(to_familiar(name))) {
+		haveFamiliar = true;
+	} else if(index_of(familiarNamesHtml, "the " + name + "</td>") > 0) {
+		haveFamiliar = true;
+	}
+
+	matcher m = create_matcher("alt=\"" + name + " .([0-9.]+)..", koldbHtml);
+	float percent = 0.0;
+	while(find(m)) {
+		string percentMatch = group(m, 1);
+		percent = max(percent, to_float(percentMatch));
+	}
+
+	debug("Found max percentage: " + percent);
+	if(percent >= 100.0) {
+		if(haveFamiliar) {
+			return 3;
+		} else if(haveHatchling) {
+			return 6;
+		} else {
+			return 5;
+		}
+	} else if(percent >= 90.0) {
+		if(haveFamiliar) {
+			return 4;
+		} else if(haveHatchling) {
+			return 8;
+		} else {
+			return 7;
+		}
+	} else if(haveFamiliar) {
+		return 1;
+	} else if(haveHatchling) {
+		return 2;
+	}
+
+	return famCode;
+}
+
+string check_familiars(string familiarNamesHtml) 
+{
+	print("Checking familiars...", "olive");
+	bitarray b = new_bitarray(FAMILIARS.count()+1, 4);
+	string koldbHtml = visit_url("ascensionhistory.php?back=self&who=" +my_id(), false) 
+				+ visit_url("ascensionhistory.php?back=self&prens13=1&who=" +my_id(), false);
+	foreach x in FAMILIARS {
+		b.set(x, famCheck(FAMILIARS[x].itemname, FAMILIARS[x].gifname, 
+		                 FAMILIARS[x].a, familiarNamesHtml, koldbHtml));
+	}
+	return "&familiars=" + b.base64_encode();
 }
 
 void main()
@@ -349,8 +450,7 @@ void main()
 		if(!user_confirm("This script should not be run while you are in-run. It may blank out "
                         + "some of your skills, telescope, bookshelf or some other aspect of your "
                         + "profile until you next run it in aftercore. Are you sure you want to "
-                        + "run it (not recommended)?", 15000, false))
-		{
+                        + "run it (not recommended)?", 15000, false)) {
 			abort("User aborted. Beep");
 		}
 	}
@@ -359,17 +459,35 @@ void main()
     string bookshelfHtml = visit_url("campground.php?action=bookshelf");
 	string familiarNamesHtml = visit_url("familiarnames.php");
 
-    #string yourUrl = `http://localhost/cgi-bin/av-snapshot.py?name={my_name()}`;
-	string yourUrl = `https://g1wjmf0i0h.execute-api.us-east-2.amazonaws.com/default/av-snapshot?name={my_name()}`;
-    string url = yourUrl + "&update=j";
+	string yourUrl;
+	if (get_property("avSnapshotLocal") == "j") {
+    	yourUrl = `http://localhost/cgi-bin/av-snapshot.py?u={my_name()}`;
+	} else {
+		yourUrl = `https://g1wjmf0i0h.execute-api.us-east-2.amazonaws.com/default/av-snapshot?u={my_name()}`;
+	}
+	string url = yourUrl + "&update=j";
     url = url + check_skills(bookshelfHtml);
     url = url + check_trophies();
-	buffer b = visit_url(url, false);
-    #print(url);
-	if (b.index_of("Record added") >= 0) {
-		print("Database updated", "green");
-		print(`You can visit your profile at {yourUrl}`);
+	url = url + check_familiars(familiarNamesHtml);
+	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
+	//							 carrot, bear, numberology, safari, implode)
+	string[int] levelmap = {
+		0:"46", 1:"47", 2:"48", 3:"117", 4:"118", 5:"121", 6:"128", 7:"134", 
+		8:"144", 9:"180", 10:"188"
+	};
+	foreach i, sknum in levelmap {
+		set_level_counter(i, get_property("skillLevel" + sknum).to_int());
+	}
+	url = url + "&levels=" + levels_string();
+	if (get_property("avSnapshotNosave") == "j") {
+    	print(url);
 	} else {
-		print("Some error occurred", "red");
+		buffer b = visit_url(url, false);
+		if (b.index_of("Record added") >= 0) {
+			print("Database updated", "green");
+			print(`You can visit your profile at {yourUrl}`);
+		} else {
+			print("Some error occurred", "red");
+		}
 	}
 }

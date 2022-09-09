@@ -16,20 +16,31 @@ from urllib.parse import urlparse, parse_qs
 # End of mandatory packages
 import base64
 from datetime import datetime
-import math
 
 # May not have to update below lines if data files change 
 MAX_SKILL = 420
 MAX_TROPHY = 160
 MAX_FAMILIAR = 281
 
-GREEN = '8F8'
-BROWN = 'EEA'
+NUM_LEVELS = 12
+colorblind = False
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
 ON_EDGE = False
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
+
+
+def arg_to_bytes(argv, key, size, eltsize):
+	bits = (size+1)*eltsize
+	tgtlen = round(bits/24.0 + 0.49) * 4  # 24 bits = 4 base 64 characters
+	if key in argv:
+		b64 = argv[key].replace('=','A')
+		if len(b64) < tgtlen:
+			b64 = b64 + ('A'*(tgtlen - len(b64)))
+		return base64.b64decode(b64, altchars='-_')
+	return base64.b64decode('A'*tgtlen, altchars='-_')
+
 
 # This function is to handle opening files in CGI or in AWS
 def open_file_for_reading(filename):
@@ -38,10 +49,12 @@ def open_file_for_reading(filename):
 	else:
 		return open(CGI_TASK_ROOT+"/"+filename, 'r')
 
+
 # Accumulate HTML output
 OUTPUT = []
 def o(str):
 	OUTPUT.append(str)
+
 
 def split_param_string(pstring):
 	result = {}
@@ -61,8 +74,10 @@ def form_param_string(dic):
 		prefix = '&'
 	return result
 
+
 def nowstring():
 	return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+
 
 if "LAMBDA_TASK_ROOT" in os.environ:
 	import boto3
@@ -125,16 +140,7 @@ else:
 		cursor.close()
 		cnx.close()
 
-def print_beginning(name, tstamp):
-	o("<!DOCTYPE html>\n")
-	o("<html><head>")
-	with open_file_for_reading('av-snapshot-style.txt') as fil:
-		o(fil.read())
-	o("</head><body>\n")
-	o(f"<p>Snapshot for {name} taken {tstamp}.</p>\n")
 
-def print_end():
-	o("</body></html>\n")
 
 
 SKILLS = {}  	# dict of lists (n, name, desc)
@@ -175,26 +181,52 @@ def load_data():
 	global MAX_FAMILIAR
 	MAX_FAMILIAR = load_data_file('av-snapshot-familiars', FAMILIARS)
 
+
 ###########################################################################
 
-def style_for_perm(skill_bytes, skill_num):
+def print_beginning(name, argv, fetched_argv):
+	tstamp = fetched_argv['tstamp']
+	o("<!DOCTYPE html>\n")
+	o("<html><head><style>")
+	with open_file_for_reading('av-snapshot-style.css') as fil:
+		o(fil.read())
+	bclas = ''
+	if colorblind:
+		bclas = "class='cb'"
+	o(f"</style></head><body {bclas}>\n")
+	o(f"<div class='header'>Snapshot for {name} taken {tstamp}.<br/>")
+	query = f"?u={name}"
+	if 'on_or_before' in argv:
+		query = query + '&on_or_before=' + argv['on_or_before']
+	if colorblind:
+		switch = 'off'
+	else:
+		switch = 'on'
+		query = query + '&colorblind=1'
+	#o(f"Please click <a href='{os.environ['REQUEST_URI']}'>here</a> to turn off colorblind mode.</div>\n")
+	o(f"Please click <a href='av-snapshot.py{query}'>here</a> to turn {switch} colorblind mode.</div>\n")
+
+def print_end():
+	o("</body></html>\n")
+
+
+###########################################################################
+
+def class_for_perm(skill_bytes, skill_num):
 	lvl = getbits(skill_bytes, skill_num, 2)
 	if lvl == 0:
-		style = ''
+		return ''
+	elif lvl == 1:
+		return "class='perm'"
 	else:
-		style = "style='background-color: #"
-		if lvl == 1:
-			style = style + BROWN + "'"
-		else: 	# lvl == 2:
-			style = style + GREEN + "'"
-	return style
+		return "class='hcperm'"
 
 def print_skill_cell(skill_bytes, skill_num, suffix=''):
 	if skill_num == 0:
 		o("<td></td>")
 		return
 	skil = SKILLS[skill_num]
-	style = style_for_perm(skill_bytes, skill_num)
+	clas = class_for_perm(skill_bytes, skill_num)
 	if skil[2] != '' and skil[2] != 'none' and skil[2] != '-':
 		desc = "<br/>" + skil[2]
 	else:
@@ -213,7 +245,7 @@ def print_skill_cell(skill_bytes, skill_num, suffix=''):
 		usedbook = '&marker;'
 	else:
 		usedbook = ''
-	o(f"<td {style}>{ibeg}<a href='http://kol.coldfront.net/thekolwiki/index.php/{name}'>"
+	o(f"<td {clas}>{ibeg}<a href='http://kol.coldfront.net/thekolwiki/index.php/{name}'>"
 		f"{name+suffix}</a> {classist}{usedbook}"
 		f"<small>{desc}</small>{iend}</td>")
 
@@ -257,10 +289,10 @@ def print_skill_multirow(skill_bytes, header, skill_list_list, levels=''):
 		o('</tr>\n')
 
 def print_guild_skills(skill_bytes, levels):
-	o('<table cellspacing="0">')
+	o(f'<table cellspacing="0">')
 	o('<tr><th>Level</th><th>Seal Clubber</th><th>Turtle Tamer</th><th>Pastamancer</th>'
 		  '<th>Sauceror</th><th>Disco Bandit</th><th>Accordion Thief</th></tr>')
-	o('<tr><th colspan="7">Class (Original)</th></tr>')
+	o('<tr><th colspan="7" class="miniheader">Class (Original)</th></tr>')
 	print_skill_row(skill_bytes, '0 buff', (1, 2, 3, 4, 5, 6))
 	print_skill_row(skill_bytes, '0 combat', (7, 8, 9, 10, 11, 12))
 	print_skill_row(skill_bytes, '1', (217, 14, 15, 293, 17, 18))
@@ -278,7 +310,7 @@ def print_guild_skills(skill_bytes, levels):
 	print_skill_row(skill_bytes, '13', (85, 86, 87, 88, 89, 90))
 	print_skill_row(skill_bytes, '14', (91, 92, 93, 94, 95, 96))
 	print_skill_row(skill_bytes, '15', (97, 98, 99, 100, 101, 102))
-	o('<tr><th colspan="7">Class (Revamp 2013)</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Class (Revamp 2013)</th><tr>')
 	print_skill_row(skill_bytes, '1', (13, 263, 278, 294, 231, 248))
 	print_skill_row(skill_bytes, '2', (218, 264, 279, 16, 247, 249))
 	print_skill_row(skill_bytes, '3', (219, 265, 280, 295, 233, 250))
@@ -294,35 +326,35 @@ def print_guild_skills(skill_bytes, levels):
 	print_skill_row(skill_bytes, '13', (229, 275, 290, 305, 242, 259))
 	print_skill_row(skill_bytes, '14', (230, 276, 291, 306, 243, 260))
 	print_skill_row(skill_bytes, '15', (163, 277, 292, 307, 244, 261))
-	o('<tr><th colspan="7">Other Standard Class Skills</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Other Standard Class Skills</th><tr>')
 	print_skill_row(skill_bytes, 'Spookyraven', (103, 104, 105, 106, 107, 108))
 	print_skill_row(skill_bytes, 'The Sea', (109, 110, 111, 112, 113, 114))
-	o('<tr><th colspan="7">Dreadsylvania</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Dreadsylvania</th><tr>')
 	print_skill_row(skill_bytes, 'Dread (SC)', (0, 202, 203, 204, 205, 206))
 	print_skill_row(skill_bytes, 'Dread (TT)', (0, 0, 207, 208, 209, 210))
 	print_skill_row(skill_bytes, 'Dread (PM)', (0, 0, 0, 211, 212, 213))
 	print_skill_row(skill_bytes, 'Dread (SA)', (0, 0, 0, 0, 214, 215))
 	print_skill_row(skill_bytes, 'Dread (DB)', (0, 0, 0, 0, 0, 216))
-	o('<tr><th colspan="7">Hobopolis</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Hobopolis</th><tr>')
 	print_skill_row(skill_bytes, 'Hodgman', (125, 126, 127, 128, 0, 0))
 	print_skill_row(skill_bytes, '30MP Elemental', (115, 116, 117, 118, 119, 177))
 	print_skill_row(skill_bytes, '120MP Elemental', (120, 121, 122, 123, 124, 178))
 	print_skill_row(skill_bytes, 'Accordion Thief', (129, 130, 131, 132, 133, 0))
-	o('<tr><th colspan="7">Other Standard Skills</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Other Standard Skills</th><tr>')
 	print_skill_row(skill_bytes, 'Gnomish', (134, 135, 136, 137, 138, 0))
 	print_skill_row(skill_bytes, 'Daily Dungeon', (197, 198, 199, 0, 0, 0))
 	print_skill_multirow(skill_bytes, 'PVP', ((190, 191, 322, 326, 328, 329),
                                               (316, 232, 343, 355, 389, 0)), levels)
 	print_slime_row(skill_bytes, levels)
 	print_skill_row(skill_bytes, "Misc", (309, 142, 143, 200, 145, 146))
-	o('<tr><th colspan="7">Other Nonstandard Class Skills</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Other Nonstandard Class Skills</th><tr>')
 	print_skill_row(skill_bytes, 'Crimbo 2009', (148, 149, 150, 151, 152, 153))
 	print_skill_row(skill_bytes, 'Trader 2010', (169, 167, 168, 164, 179, 166))
 	print_skill_row(skill_bytes, 'Crimbo 2017<br/>Crimbotatoyotathon', 
 					(374, 375, 376, 377, 378, 379))
 	print_skill_row(skill_bytes, 'Madame Zatara', (380, 381, 382, 383, 384, 385))
 	print_skill_row(skill_bytes, 'Vampyre', (394, 395, 396, 397, 398, 399))
-	o('<tr><th colspan="7">Crimbo</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Crimbo</th><tr>')
 	print_skill_row(skill_bytes, 'Crimbo 2010', (172, 173, 174, 175, 176, 0))
 	print_skill_row(skill_bytes, 'Crimbo 2013', (310, 311, 0, 0, 0, 0))
 	print_skill_row(skill_bytes, 'Crimbo 2014', (323, 324, 325, 0, 0, 0))
@@ -334,7 +366,7 @@ def print_guild_skills(skill_bytes, levels):
 					(411, 412, 413, 414, 415, 416))
 	print_skill_row(skill_bytes, 'Crimbo 2022<br/>Crimbotatogoogoneathon', 
 					(419,0,0,0,0,0))
-	o('<tr><th colspan="7">Other</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Other</th><tr>')
 	print_skill_row(skill_bytes, 'Trader 2008', (144,0,0,0,0,0))
 	print_skill_row(skill_bytes, 'The Suburbs of Dis', (187,188,189,0,0,0))
 	print_skill_row(skill_bytes, 'Silent Invasion', (194,195,196,0,0,0))
@@ -355,7 +387,7 @@ def print_guild_skills(skill_bytes, levels):
 	print_skill_multirow(skill_bytes, 'Misc', 
 						((147,185,162,170,171,181), (193,327,358,372,386,387), 
 						 (388,390,402,404,405,409), (410,417,0,0,0,373)), levels)
-	o('<tr><th colspan="7">Mystical Bookshelf</th><tr>')
+	o('<tr><th colspan="7" class="miniheader">Mystical Bookshelf</th><tr>')
 	print_skill_row(skill_bytes, 'Tomes', (154, 155, 156, 182, 308, 319))
 	print_skill_multirow(skill_bytes, 'Librams', ((157, 158, 159, 165, 184, 186),
 												(201, 0, 0, 0, 0, 0)))
@@ -363,41 +395,39 @@ def print_guild_skills(skill_bytes, levels):
 	o('</table>\n')
 
 def print_skills(skill_bytes, levels):
-	o("<h3>Skills</h3>")
+	o("<h1>Skills</h1>")
 	tally = [0, 0, 0]
 	for i in range(len(SKILLS)):
 		x = getbits(skill_bytes, i+1, 2)
 		tally[x] = tally[x] + 1
-	o(f"<p>You have {tally[2]} skills Hardcore permed, {tally[1]} skills Softcore permed, and {tally[0]} missing.</p>\n")
+	o(f"<p class='subheader'>You have {tally[2]} skills Hardcore permed, {tally[1]} skills Softcore permed, and {tally[0]} missing.</p>\n")
 	print_guild_skills(skill_bytes, levels)
 
 ###########################################################################
 
-def print_trophy_cell(bgcolor, imgname, trophy, desc):
-	if (bgcolor != ''):
-		bgcolor = "style='background-color: #" + bgcolor
+def print_trophy_cell(clas, imgname, trophy, desc):
 	imgname = imgname.replace('_thumb', '')
 	if (imgname == 'nopic'):
 		imgname = 'itemimages/' + imgname
 	else:
 		imgname = 'otherimages/trophy/' + imgname
-	o(f"<td {bgcolor}'>"
+	o(f"<td {clas}'>"
 				+f"<img src='{IMAGES}/{imgname}.gif'"
 				+" style='width:50px; height:50px;'><br>"
 				+f"<a href='http://kol.coldfront.net/thekolwiki/index.php/{trophy}'>{desc}"
 				+"</a></td>")
 
 def print_trophies(trophy_bytes):
-	o("<h3>Trophies</h3><table cellspacing='0'><tr>")
+	o("<h1>Trophies</h1><table cellspacing='0'><tr>")
 	tally = [0, 0]
 	for i in range(len(TROPHIES)):
 		x = getbits(trophy_bytes, i+1, 1)
 		tally[x] = tally[x] + 1
-	o(f"<p>You have {tally[1]} trophies and are missing {tally[0]} trophies.</p>\n")
+	o(f"<p class='subheader'>You have {tally[1]} trophies and are missing {tally[0]} trophies.</p>\n")
 	ct = 1
 	for i in range(1, MAX_TROPHY+1):
 		t = TROPHIES[i]
-		bgcolor = ""
+		clas = ""
 		if (i == 13):
 			print_trophy_cell('', 'nopic', 'Noble Ascetic', 'Have Less Than 10,000 Meat')
 			ct = ct + 1
@@ -405,8 +435,8 @@ def print_trophies(trophy_bytes):
 			o("<td></td>")
 			ct = ct + 1
 		if (getbits(trophy_bytes, i, 1)):
-			bgcolor = GREEN
-		print_trophy_cell(bgcolor, t[1], t[2], t[3])
+			clas = 'class="hcperm"'
+		print_trophy_cell(clas, t[1], t[2], t[3])
 		if (ct % 10 == 0):
 			o("</tr><tr>")
 		ct = ct + 1
@@ -417,38 +447,50 @@ def print_trophies(trophy_bytes):
 
 ###########################################################################
 
-def print_familiar_cell(bgcolor, imgname, name):
-	if (bgcolor != ''):
-		bgcolor = "style='background-color: #" + bgcolor
+def print_familiar_cell(clas, imgname, name):
+	if (clas != ''):
+		clas = "class='" + clas + "'"
 	if imgname.find('otherimages') < 0:
 		imgname = 'itemimages/' + imgname + '.gif'
 	elif imgname.find('camelfam') >= 0:
 		# Melodramedary is a special case, need 2 images
 		imgname = f"{imgname}'><img src='{IMAGES}/otherimages/camelfam_right.gif"
 	wikilink = f"<a href='http://kol.coldfront.net/thekolwiki/index.php/{name}'>"
-	o(f"<td {bgcolor}'>" + wikilink
+	o(f"<td {clas}>" + wikilink
 				+f"<img src='{IMAGES}/{imgname}'></a><br>{wikilink}{name}</a></td>")
+
+# Pre Quantum:
+# 0: No familiar, in any capacity 
+# 1: Have familiar
+# 2: Have hatchling, but not familiar
+# 3: Have familiar, 100% run
+# 4: Have familiar, 90% run
+# ---- Post-Quantum
+# 3: 100% run, have familiar
+# 4: 90% run, have familiar
+# 5: 100% run, no familiar
+# 6: 100% run, hatching, no familiar.
+# 7: 90% run, no familiar
+# 8: 90% run, hatchling, no familiar.
+# TODO: fix below with new values
+FAM_STYLES = { 0:"", 1:"fam_have", 2:"fam_have_hatch", 3:"fam_run_100", 4:"fam_run_90", 
+			5:"fam_run_100", 6:"fam_run_100", 7:"fam_run_90", 8:"fam_run_90" }
 
 def print_familiars(familiar_bytes):
 	have, lack, tour, hundred = (0, 0, 0, 0)
 	for i in range(len(FAMILIARS)):
-		x = getbits(familiar_bytes, i+1, 3)
-		# 0 = lack familiar
-		# 1 = have familiar hatchling
-		# 2 = have familiar
-		# 3 = have familiar with 90% run
-		# 4 = have familiar with 100% run
-		if x == 0:
-			lack = lack + 1
-		elif x == 1:
-			lack = lack + 1 # does this even count?
-		else:
+		x = getbits(familiar_bytes, i+1, 4)
+		if x in (1, 3, 4):
 			have = have + 1
-			if x == 3:
-				tour = tour + 1
-			elif x == 4:
+		else:
+			lack = lack + 1
+		if x >= 3:
+			tour = tour + 1
+			if x in (3, 5, 6):
 				hundred = hundred + 1
-	o(f"<h3>Familiars</h3><p>You have {have} familiars (missing {lack}), have done {tour} tourguide runs and {hundred} 100% runs.</p>")
+	lack = lack - 9		# we won't count the April Foolmiliars
+	o("<h1>Familiars</h1>")
+	o(f"<p class='subheader'>You have {have} familiars (missing {lack}), have done {tour} tourguide runs and {hundred} 100% runs.</p>")
 	o("<table cellspacing='0'><tr>")
 	# First, regular familiars
 	ct = 1
@@ -458,7 +500,8 @@ def print_familiars(familiar_bytes):
 		if ((fnum >= 201) and (fnum <=245)) or (f[3] == '-'):
 			# Skip if Pokefam or no hatchling (April Foolmiliar)
 			continue
-		print_familiar_cell('', f[2], f[1])
+		style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
+		print_familiar_cell(style, f[2], f[1])
 		if (ct % 10 == 0):
 			o("</tr><tr>")
 		ct = ct + 1
@@ -473,11 +516,12 @@ def print_familiars(familiar_bytes):
 	    +'<td class="fam_have_hatch">Have Familiar Hatchling</td>'
 	    +"<td class='fam_missing'>Don't have Familiar</td>")
 	# Next, Pokefams
-	o("</tr></table><h4>Pocket Familiars</h4><table cellspacing='0'><tr>\n")
+	o("</tr></table><h2>Pocket Familiars</h2><table cellspacing='0'><tr>\n")
 	ct = 1
 	for i in range(201, 246):
 		f = FAMILIARS[i]
-		print_familiar_cell('', f[2], f[1])
+		style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
+		print_familiar_cell(style, f[2], f[1])
 		if (ct % 10 == 0):
 			o("</tr><tr>")
 		ct = ct + 1
@@ -485,34 +529,28 @@ def print_familiars(familiar_bytes):
 		o("<td></td>")
 		ct = ct + 1
 	# Finally, April Foolmiliars
-	o("</tr></table><h4>April Foolmiliars</h4><table cellspacing='0'><tr>\n")
+	o("</tr></table><h2>April Foolmiliars</h2><table cellspacing='0'><tr>\n")
 	for i in range(270, 279):
 		f = FAMILIARS[i]
-		print_familiar_cell('', f[2], f[1])
+		style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
+		print_familiar_cell(style, f[2], f[1])
 	o("</tr></table")
 
 	
-
 ###########################################################################
 
-
-def arg_to_bytes(argv, key, size):
-	tgtlen = math.ceil(size/24)*4
-	if key in argv:
-		b64 = argv[key].replace('=','A')
-		if len(b64) < tgtlen:
-			b64 = b64 + ('A'*(tgtlen - len(b64)))
-		return base64.b64decode(b64, altchars='-_')
-	return base64.b64decode('A'*tgtlen, altchars='-_')
 
 def prepareResponse(argv, context):
 	'''
 	prepareResponse returns the HTML string to send to the browser.
 	Call your HTML-generating functions from here.
 	'''
-	if 'name' not in argv:
-		argv['name'] = 'Aventuristo'
-	name = argv['name'].lower()
+	if 'u' not in argv:
+		argv['u'] = 'Aventuristo'
+	name = argv['u'].lower()
+	global colorblind
+	if 'colorblind' in argv:
+		colorblind = (int(argv['colorblind']) != 0)
 	if ("update" in argv) and (argv["update"] == 'j'):
 		save(name, argv)
 		return f'<html><head></head><body>Record added for {name}</body></html>'
@@ -523,21 +561,23 @@ def prepareResponse(argv, context):
 	fetched_argv = lookup(name, when)
 	if len(fetched_argv) == 0:
 		return f"<html><head></head><body>Record for user {name} at time {when} not found</body></html>"
-	argv = fetched_argv
-	print_beginning(name, argv["tstamp"])
-	load_data()
 	#
-	skill_bytes = arg_to_bytes(argv, "skills", 2*MAX_SKILL)
-	if "levels" in argv:
-		levels = argv["levels"]
+	load_data()
+	print_beginning(name, argv, fetched_argv)
+	#
+	skill_bytes = arg_to_bytes(fetched_argv, "skills", MAX_SKILL, 2)
+	if "levels" in fetched_argv:
+		levels = fetched_argv["levels"]
+		if len(levels) < NUM_LEVELS:
+			levels = levels + ("0"*(NUM_LEVELS-len(levels)))
 	else:
-		levels = "000000000000"
+		levels = "0"*NUM_LEVELS
 	print_skills(skill_bytes, levels)
 	#
-	trophy_bytes = arg_to_bytes(argv, "trophies", MAX_TROPHY)
+	trophy_bytes = arg_to_bytes(fetched_argv, "trophies", MAX_TROPHY, 1)
 	print_trophies(trophy_bytes)
 	#
-	familiar_bytes = arg_to_bytes(argv, "familiars", 3*MAX_FAMILIAR)
+	familiar_bytes = arg_to_bytes(fetched_argv, "familiars", MAX_FAMILIAR, 4)
 	print_familiars(familiar_bytes)
 	#
 	print_end()
@@ -651,7 +691,7 @@ if 'LAMBDA_TASK_ROOT' not in os.environ:
 	for arg in arguments:
 		event['queryStringParameters'][arg] = arguments[arg].value
 	event['requestContext'] = {}
-	event['requestContext']['domainName'] = "fedora"
+	event['requestContext']['domainName'] = "fedora2"
 	event['requestContext']['path'] = "/right.here/"
 	response = lambda_handler(event, FakeContext())
 	if ON_EDGE:

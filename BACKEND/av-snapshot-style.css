@@ -1,0 +1,130 @@
+body {
+	font-family: verdana, arial, san-serif; 
+	font-size: 0.8em; 
+	background-color: #ffffff
+}
+h1, h2 {
+	text-align: left; 
+	font-size: 1.5em; 
+	margin-bottom: .25em; 
+	margin-top: 1.5em; 
+}
+h2 {
+	font-size: 1.25em;
+}
+.subheader { 
+	margin-top:-.25em
+}
+table {
+	border-color: #000;
+	border-width: 0 0 1px 1px;
+	border-style: solid;
+	padding: 1em, 2em, 0, 2em
+}
+td, th {
+	border-color: #000;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	margin: 0;
+	font-size:.7em;
+	text-align: center;
+	padding:3px;
+}
+.miniheader {
+	background-color: #dddddd;
+	text-align: center;
+	font-weight: bold;
+	font-size: .7em;
+}
+#toc_header span {
+	cursor: pointer;
+	padding: 5px .5em 5px .5em;
+	border: 2px #bbbbbb outset;
+    border-radius: .5em;
+	margin: 8px;
+	height: 1.5em;
+	background-color: #eeeeee;
+}
+.legend {
+	margin-left: 3em;
+}
+table .perm {
+	background-color: #eea;
+}
+table .hcperm {
+	background-color: #8f8;
+}
+.cb table .perm {
+	background-color: #4cc;
+}
+.cb table .hcperm {
+	background-color: #5ff;
+}
+table .have {
+	background-color: #ccffcc;
+}
+table .have_notused {
+	background-color: #ffffcc;
+}
+table .have_100 {
+	background-color: #33ff33;
+}
+table .have_90 {
+	background-color: #ababfc;
+}
+.cb table .have {
+	background-color: #57feff;
+}
+.cb table .have_sc, .cb table .have_notused {
+	background-color: #46c7c7;
+}
+.cb table .have_100 {
+	background-color: #fdd017;
+}
+.cb table .have_90 {
+	background-color: #c7a317;
+}
+table .fam_run_100 {
+	background-color: #33FF33;
+	--background-color: #33FF33;
+}
+table .fam_run_90 {
+	background-color: #7777FF;
+	--background-color: #7777FF;
+}
+table .fam_have {
+	background-color: #CCFFCC;
+	--background-color: #CCFFCC;
+}
+table .fam_have_hatch {
+	background-color: #FFFFCC;
+	--background-color: #FFFFCC;
+}
+table .fam_have_hatch_fade {
+	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #FFFFCC);
+}
+table .fam_missing {
+	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #FFFFFF);
+}
+.cb table .fam_run_100 {
+	background-color: #FDD017;
+	--background-color: #FDD017;
+}
+.cb table .fam_run_90 {
+	background-color: #C7A317;
+	--background-color: #C7A317;
+}
+.cb table .fam_have {
+	background-color: #57FEFF;
+	--background-color: #57FEFF;
+}
+.cb table .fam_have_hatch {
+	background-color: #46C7C7;
+	--background-color: #46C7C7;
+}
+.cb table .fam_have_hatch_fade {
+	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #46C7C7);
+}
+.cb table .fam_missing {
+	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #FFFFFF);
+}
