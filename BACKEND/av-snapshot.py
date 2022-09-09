@@ -21,6 +21,7 @@ from datetime import datetime
 MAX_SKILL = 420
 MAX_TROPHY = 160
 MAX_FAMILIAR = 281
+MAX_TATTOO = 200
 
 NUM_LEVELS = 12
 colorblind = False
@@ -146,7 +147,7 @@ else:
 SKILLS = {}  	# dict of lists (n, name, desc)
 TROPHIES = {}   # dict of lists (n, image name, trophy name, desc)
 FAMILIARS = {}	# dict of lists (n, name, image, hatchling)
-
+TATTOOS = {}	# dict of lists (n, name)
 
 def getbits(byts, index, eltsize):
 	loc = index * eltsize;
@@ -180,6 +181,8 @@ def load_data():
 	MAX_TROPHY = load_data_file('av-snapshot-trophies', TROPHIES)
 	global MAX_FAMILIAR
 	MAX_FAMILIAR = load_data_file('av-snapshot-familiars', FAMILIARS)
+	global MAX_TATTOO
+	MAX_TATTOO = load_data_file("av-snapshot-tattoos", TATTOOS)
 
 
 ###########################################################################
@@ -203,7 +206,6 @@ def print_beginning(name, argv, fetched_argv):
 	else:
 		switch = 'on'
 		query = query + '&colorblind=1'
-	#o(f"Please click <a href='{os.environ['REQUEST_URI']}'>here</a> to turn off colorblind mode.</div>\n")
 	o(f"Please click <a href='av-snapshot.py{query}'>here</a> to turn {switch} colorblind mode.</div>\n")
 
 def print_end():
@@ -445,6 +447,13 @@ def print_trophies(trophy_bytes):
 		ct = ct + 1
 	o("</tr></table>\n")
 
+
+###########################################################################
+
+def print_tattoos(tattoo_bytes):
+	pass
+
+
 ###########################################################################
 
 def print_familiar_cell(clas, imgname, name):
@@ -573,6 +582,9 @@ def prepareResponse(argv, context):
 	else:
 		levels = "0"*NUM_LEVELS
 	print_skills(skill_bytes, levels)
+	#
+	tattoo_bytes = arg_to_bytes(fetched_argv, "tattoos", MAX_TATTOO, 1)
+	print_tattoos(tattoo_bytes, levels)
 	#
 	trophy_bytes = arg_to_bytes(fetched_argv, "trophies", MAX_TROPHY, 1)
 	print_trophies(trophy_bytes)

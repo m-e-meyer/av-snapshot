@@ -10,6 +10,15 @@ since r20632;
 
 ////////////////////////////
 
+boolean DEBUG = (get_property('avSnapshotDebug') == 'j');
+void debug(string s)
+{
+	if (DEBUG) { print(s, "blue"); }
+}
+
+
+///////////////////////////////
+
 record bitarray {
     int size;
     int eltsize;
@@ -37,6 +46,7 @@ bitarray new_bitarray(int size, int eltsize)
     for i from 0 to (size-1) {
         b.elts[i] = 0;
     }
+	debug(`Created with {size} elements`);
     return b;
 }
 
@@ -90,14 +100,6 @@ string base64_encode(bitarray b)
 
 ///////////////////////////////
 
-boolean DEBUG = (get_property('avSnapshotDebug') == 'j');
-void debug(string s)
-	{
-		if (DEBUG) { print(s, "blue"); }
-	}
-
-///////////////////////////////
-
 record ItemImage
 {
     string itemname;
@@ -147,12 +149,12 @@ boolean load_current_map(string fname, ItemImage[int] map)
 void load_data()
 {
     print("Updating map files...", "olive");
-	load_current_map("cc_snapshot_skills", SKILLS);
-	load_current_map("cc_snapshot_tattoos", TATTOOS);
-	load_current_map("cc_snapshot_trophies", TROPHIES);
-	load_current_map("cc_snapshot_familiars", FAMILIARS);
-	load_current_map("cc_snapshot_mritems", MRITEMS);
-	load_current_map("cc_snapshot_coolitems", COOLITEMS);
+	load_current_map("av-snapshot-skills", SKILLS);
+	load_current_map("av-snapshot-tattoos", TATTOOS);
+	load_current_map("av-snapshot-trophies", TROPHIES);
+	load_current_map("av-snapshot-familiars", FAMILIARS);
+	load_current_map("av-snapshot-mritems", MRITEMS);
+	load_current_map("av-snapshot-coolitems", COOLITEMS);
 }
 
 boolean isIn(string name, string html)
@@ -314,6 +316,8 @@ string check_mritems(string bookshelfHtml, string familiarNamesHtml)
 	return "&mritems=" + b.base64_encode();
 }
 
+###########################################################################
+
 # Is the skill permed or hardcore permed?
 int skillLevel(string name, string html, string overwrite)
 {
@@ -351,6 +355,84 @@ string check_skills(string bookshelfHtml)
     return "&skills=" + b.base64_encode();
 }
 
+###########################################################################
+
+boolean isEmpty(string it)
+{
+	return ((it == "-") || (it == ""));
+}
+
+int tattooCheck(string html, string outfit, string gif, string i1, string i2, string i3, 
+				string i4, string i5, string i6, string i7, string i8, string i9)
+{
+	if(last_index_of(html, "/"+gif+".gif") > 0) {
+		# If user has the tattoo, we're done
+		return 1;
+	} 
+	# Let's see if the user has the pieces needed to make the outfit for the tattoo
+	if (isEmpty(i1))	// Return if outfit doesn't exist
+		return 0;
+	if (num_items(i1) == 0)	// Stop if the player doesn't even have item 1
+		return 0;
+	if (isEmpty(i2))  return 2;	// If we have all previous items, we succeeded
+	if (num_items(i2) == 0)  return 0;  // If we lack an item, we failed
+	if (isEmpty(i3))  return 2;	
+	if (num_items(i3) == 0)  return 0;  
+	if (isEmpty(i4))  return 2;	
+	if (num_items(i4) == 0)  return 0;  
+	if (isEmpty(i5))  return 2;	
+	if (num_items(i5) == 0)  return 0;  
+	if (isEmpty(i6))  return 2;	
+	if (num_items(i6) == 0)  return 0;  
+	if (isEmpty(i7))  return 2;	
+	if (num_items(i7) == 0)  return 0;  
+	if (isEmpty(i8))  return 2;	
+	if (num_items(i8) == 0)  return 0;  
+	if (isEmpty(i9))  return 2;	
+	if (num_items(i9) == 0)  return 0;  
+
+	return 2;
+
+	// Aventuristo: I don't know what the bottom is about.  Shouldn't make a difference to me?
+	//This is a terrible way of doing this, but the hobo tattoo goes after the salad one.
+	//We are not doing this, make it the first tattoo....
+	//if(gif == "saladtat")
+	//{
+	//	ret += "|";
+	//	for i from 19 to 1
+	//	{
+	//		if(index_of(html, "hobotat"+i) != -1)
+	//		{
+	//			ret += i;
+	//			break;
+	//		}
+	//	}
+	//}
+}
+
+string check_tattoos()
+{
+	debug('Tattoos count ' + TATTOOS.count());
+	int i = 1;
+	while (i < 281) {
+		if (! (TATTOOS contains i))
+			print(`Aha!  {i}`, 'red');
+		i = i+1;
+	}
+	bitarray b = new_bitarray(TATTOOS.count()+1, 2);
+	print("Checking tattoos...", "olive");
+	string html = visit_url("account_tattoos.php");
+	foreach x in TATTOOS
+	{
+		ItemImage ii = TATTOOS[x];
+		b.set(x, tattooCheck(html, ii.itemname, ii.gifname, ii.a, ii.b, ii.c, ii.d, ii.e, 
+							ii.f, ii.g, ii.h, ii.i));
+	}
+    return "&tattoos=" + b.base64_encode();
+}
+
+###########################################################################
+
 string check_trophies()
 {
     bitarray b = new_bitarray(TROPHIES.count()+1, 1);
@@ -363,6 +445,8 @@ string check_trophies()
 	}
     return "&trophies=" + b.base64_encode();
 }
+
+###########################################################################
 
 int famCheck(string name, string gifname, string hatchling, 
 	string familiarNamesHtml, string koldbHtml)
@@ -386,7 +470,7 @@ int famCheck(string name, string gifname, string hatchling,
 	// 8: 90% run, hatchling, no familiar.
 
 	boolean haveHatchling = false;
-	if (num_items(hatchling) > 0) {
+	if ((hatchling != '-') && (hatchling != '') && num_items(hatchling) > 0) {
 		haveHatchling = true;
 	}
 
@@ -443,6 +527,9 @@ string check_familiars(string familiarNamesHtml)
 	return "&familiars=" + b.base64_encode();
 }
 
+
+###########################################################################
+
 void main()
 {
 	if(!get_property("kingLiberated").to_boolean())
@@ -467,6 +554,7 @@ void main()
 	}
 	string url = yourUrl + "&update=j";
     url = url + check_skills(bookshelfHtml);
+	url = url + check_tattoos();
     url = url + check_trophies();
 	url = url + check_familiars(familiarNamesHtml);
 	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
