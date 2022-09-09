@@ -116,9 +116,9 @@
 116	Fancy Tux	blacktie	fancy black tie	fancy tophat	fancy tuxedo pants	-	-	-	-	-	-
 117	Smoked Pottery	potterytat	pottery hat	pottery shield	pottery training pants	-	-	-	-	-	-
 118	Demon Tattoo	demontat	-	-	-	-	-	-	-	-	-
-119	Unblemished Uniform	staintat	-	-	-	-	-	-	-	-	-
-120	Transparent Trappings	plexitat	-	-	-	-	-	-	-	-	-
-121	Blasphemous Bedizenment	brimtat	-	-	-	-	-	-	-	-	-
+119	Unblemished Uniform	staintat	stainless steel skullcap	stainless steel shillelagh	stainless steel slacks	stainless steel scarf	stainless steel solitaire	stainless steel suspenders	-	-	-
+120	Transparent Trappings	plexitat	plexiglass pith helmet	plexiglass pikestaff	plexiglass pants	plexiglass pendant	plexiglass pocketwatch	plexiglass pinky ring	-	-	-
+121	Blasphemous Bedizenment	brimtat	brimstone beret	brimstone bludgeon	brimstone bunker	brimstone boxers	brimstone brooch	brimstone bracelet	-	-	-
 122	Thousandth Birthday Suit	skeletat	bonedanna	boneana hammock	bone spurs	-	-	-	-	-	-
 123	Uncle Hobo's Rags	crimbeard	Uncle Hobo's stocking cap	Uncle Hobo's gift baggy pants	Uncle Hobo's epic beard	-	-	-	-	-	-
 124	Paperclippery	cliptat	paperclip turban	paperclip-on tie	paperclip pants	paperclip cape	-	-	-	-	-
@@ -251,7 +251,7 @@
 251	Slime Enslamble	vwslimetat	slime fedora	slime knuckles	slime waders	-	-	-	-	-	-
 252	Snakeskin Suit	vwsnaketat	snakeskin cowboy hat	snakeskin jacket	snakeskin thighboots	-	-	-	-	-	-
 253	Bauxite Tattoo	bauxtat	bauxite beret	bauxite boxers	bauxite bow-tie	-	-	-	-	-	-
-254	Crimbo 2018 Tattoo	c18tat	none	none	none	-	-	-	-	-	-
+254	Crimbo 2018 Tattoo	c18tat	-	-	-	-	-	-	-	-	-
 255	Chalk Chostume	chalktat	chalk chapeau	chalk chlamys	chalk chalice	chalk chinos	chalk chain	chalk choker	-	-	-
 256	Marble Materials	marbletat	marble mariachi hat	marble mantle	marble mignonette bowl	marble maebari	marble magnet	marble medallion	-	-	-
 257	Vampyre	class24	-	-	-	-	-	-	-	-	-
