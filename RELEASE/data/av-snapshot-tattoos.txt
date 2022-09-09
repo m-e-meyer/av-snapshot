@@ -190,10 +190,10 @@
 190	Synthetic Suit Tattoo	polytat	polyester panama hat	polyester parachute	polyester peeler	polyester pad	polyester pettipants	polyester pulsera	-	-	-
 191	Topiary Tattoo	topitat	topee	topiary tights	topiary necktie	-	-	-	-	-	-
 192	Merc Core challenge coin	merctat	-	-	-	-	-	-	-	-	-
-193	Spring Break Beach tattoo coupon	sbreaktat	-	-	-	-	-	-	-	-	-
+193	Spring Break Beach Tattoo coupon	sbreaktat	-	-	-	-	-	-	-	-	-
 194	Ed	class17	-	-	-	-	-	-	-	-	-
 195	Ed HC	class17hc	-	-	-	-	-	-	-	-	-
-196	Dinsey tattoo kit	dinseytat	-	-	-	-	-	-	-	-	-
+196	Dinseylandfill Tattoo	dinseytat	-	-	-	-	-	-	-	-	-
 197	Dinsey's Brain Tattoo	wdbraintat	dinsey's brain	dinsey's pizza cutter	dinsey's radar dish	dinsey's pants	dinsey's oculus	dinsey's glove	-	-	-
 198	Toxic Togs	toxictat	isotophat	toxic mop	three mile island shorts	-	-	-	-	-	-
 199	Spelunker Tattoo	spelunktat	spelunker's fedora	spelunker's whip	spelunker's khakis	-	-	-	-	-	-
@@ -214,8 +214,8 @@
 214	Beanslinger HC	class19hc	-	-	-	-	-	-	-	-	-
 215	Snake Oiler	class20	-	-	-	-	-	-	-	-	-
 216	Snake Oiler HC	class20hc	-	-	-	-	-	-	-	-	-
-217	airplane tattoo	planetat	-	-	-	-	-	-	-	-	-
-218	Fluffy Bunny	sourcetat	-	-	-	-	-	-	-	-	-
+217	Airplane Tattoo	planetat	-	-	-	-	-	-	-	-	-
+218	Fluffy Bunny Tattoo	sourcetat	-	-	-	-	-	-	-	-	-
 219	Detective Tattoo	detbadge	-	-	-	-	-	-	-	-	-
 220	Proton Tattoo	protontat	-	-	-	-	-	-	-	-	-
 221	Twitch Television Tattoo	twitchtat	-	-	-	-	-	-	-	-	-
@@ -243,8 +243,8 @@
 243	Warrior's Tattoo	frtat1	FantasyRealm Warrior's Helm	Dragonscale breastplate	The Ghoul King's ghoulottes	belt of Ogrekind	-	-	-	-	-
 244	Wizard's Tattoo	frtat2	FantasyRealm Mage's Hat	nozzle of the Phoenix	the Archwizard's briefs	the Ley Incursion's waist	-	-	-	-	-
 245	Thief's Tattoo	frtat3	FantasyRealm Rogue's Mask	Duke Vampire's regal cloak	leggings of the Spider Queen	Master Thief's utility belt	-	-	-	-	-
-246	gattoo	gtat	-	-	-	-	-	-	-	-	-
-247	Bastille Battalion tattoo kit	bbatttat	-	-	-	-	-	-	-	-	-
+246	Gattoo	gtat	-	-	-	-	-	-	-	-	-
+247	Cheese Tattoo	bbatttat	-	-	-	-	-	-	-	-	-
 248	Party Tattoo&trade; gift certificate	partytat	-	-	-	-	-	-	-	-	-
 249	Government-Issued Garb	vwgovttat	government-issued eyeshade	government-issued slacks	government-issued necktie	-	-	-	-	-	-
 250	Mutant Parts Apparel	vwmuttat	mutant crown	mutant arm	mutant legs	-	-	-	-	-	-
@@ -257,7 +257,7 @@
 257	Vampyre	class24	-	-	-	-	-	-	-	-	-
 258	Vampyre HC	class24hc	-	-	-	-	-	-	-	-	-
 259	PirateRealm Tattoo	prealmtat	PirateRealm party hat	conquistador's breastplate	piratical blunderbuss	pirate radio ring	plush sea serpent	-	-	-	-
-260	Red Roger tattoo kit	redrogertat	-	-	-	-	-	-	-	-	-
+260	Red Roger Tattoo	redrogertat	-	-	-	-	-	-	-	-	-
 261	Shallow Sea Fishing Outfit	fishingtat	spearfish fishing spear	waders	lucky rabbitfish fin	-	-	-	-	-	-
 262	Cursed Skeleton Pirate Costume	skelepiratetat	cursed tricorn hat	cursed pirate cutlass	cursed swash buckle	-	-	-	-	-	-
 263	Whittled Wearables	whittletat	whittled tiara	whittled shorts	-	-	-	-	-	-	-
@@ -268,12 +268,12 @@
 268	Plumber	class25	-	-	-	-	-	-	-	-	-
 269	Plumber HC	class25hc	-	-	-	-	-	-	-	-	-
 270	Guzzlr Tattoo	guzzlrtat	guzzlr hat	guzzlr pants	guzzlr shoes	-	-	-	-	-	-
-271	Guzzle Tattoo 2	guzzlrtat2	-	-	-	-	-	-	-	-	-
+271	Guzzlr Tattoo 2	guzzlrtat2	-	-	-	-	-	-	-	-	-
 272	Lathed Livery	lathetat	hemlock helm	balsam barrel	purpleheart &quot;pants&quot;	wormwood wedding ring	-	-	-	-	-
 273	Yeg's Tattoo	yegtat	-	-	-	-	-	-	-	-	-
-274	Crimbo Carol tattoo kit	c20carols	-	-	-	-	-	-	-	-	-
-275	Crimbo Cheer tattoo kit	c20cheer	-	-	-	-	-	-	-	-	-
-276	Crimbo Commerce tattoo kit	c20commerce	-	-	-	-	-	-	-	-	-
+274	Crimbo Carol Tattoo	c20carols	-	-	-	-	-	-	-	-	-
+275	Crimbo Cheer Tattoo	c20cheer	-	-	-	-	-	-	-	-	-
+276	Crimbo Commerce Tattoo	c20commerce	-	-	-	-	-	-	-	-	-
 277	Stained Glass Tattoo	stainedtat	stained glass suspenders	stained glass shield	stained glass stetson	stained glass spectacles	stained glass shiv	stained glass serape	-	-	-
 278	Velour Tattoo	velourtat	velour voulge	velour vambraces	velour veil	velour viscometer	velour valise	velour vaqueros	-	-	-
 279	Loofah Tattoo	loofahtat	loofah lumberjack's hat	loofah lei	loofah lederhosen	loofah ladle	loofah legwarmers	loofah lavalier	-	-	-
