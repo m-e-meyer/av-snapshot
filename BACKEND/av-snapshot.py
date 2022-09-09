@@ -87,7 +87,7 @@ if "LAMBDA_TASK_ROOT" in os.environ:
 	    resp = err.response['Error']
 	    logger.error(msg + f": {err['Code']}: {err['Message']}")
 	def lookup(name, on_or_before='9999-99-99 99:99:99'):
-		db = boto3.resource('dynamodb', region_name='us-east-2')
+		db = boto3.resource('dynamodb', region_name='us-east-1')
 		table = db.Table('av_snapshot')
 		name = name.lower()
 		try:
@@ -104,7 +104,7 @@ if "LAMBDA_TASK_ROOT" in os.environ:
 		    log_error("Fetch failed", err)
 		    raise
 	def save(name, state):
-		db = boto3.resource('dynamodb', region_name='us-east-2')
+		db = boto3.resource('dynamodb', region_name='us-east-1')
 		table = db.Table('av_snapshot')
 		try:
 		    table.put_item(
@@ -206,7 +206,11 @@ def print_beginning(name, argv, fetched_argv):
 	else:
 		switch = 'on'
 		query = query + '&colorblind=1'
-	o(f"Please click <a href='av-snapshot.py{query}'>here</a> to turn {switch} colorblind mode.</div>\n")
+	if "LAMBDA_TASK_ROOT" in os.environ:
+		suffix = ''
+	else:
+		suffix = '.py' 
+	o(f"Please click <a href='av-snapshot{suffix}{query}'>here</a> to turn {switch} colorblind mode.</div>\n")
 
 
 ###########################################################################
@@ -665,6 +669,8 @@ def prepareResponse(argv, context):
 	global colorblind
 	if 'colorblind' in argv:
 		colorblind = (int(argv['colorblind']) != 0)
+	else:
+		colorblind = False
 	if ("update" in argv) and (argv["update"] == 'j'):
 		save(name, argv)
 		return f'<html><head></head><body>Record added for {name}</body></html>'
@@ -769,8 +775,6 @@ def lambda_handler(event, context):
 		ON_EDGE = False
 		argv = event['queryStringParameters']
 		operation = event['httpMethod']
-	logger.info(str(argv))
-	logger.info(operation)
 	if operation == 'GET':
 		html = "What happened?"
 		try:
