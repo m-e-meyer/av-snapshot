@@ -22,7 +22,7 @@ void debug(string s)
 record bitarray {
     int size;
     int eltsize;
-    int[int] elts;
+    int[int] elts;	// 0-based array of values
 };
 
 string to_string(bitarray b)
@@ -43,9 +43,11 @@ bitarray new_bitarray(int size, int eltsize)
     bitarray b;
     b.size = size;
     b.eltsize = eltsize;
-    for i from 0 to (size-1) {
-        b.elts[i] = 0;
-    }
+	if (size > 0) {
+		for i from 0 to (size-1) {
+			b.elts[i] = 0;
+		}
+	}
 	debug(`Created with {size} elements`);
     return b;
 }
@@ -97,6 +99,39 @@ string base64_encode(bitarray b)
     }
     return result;
 }
+
+void add(bitarray b, int val)
+{
+	b.elts[b.elts.count()] = val;
+	b.size = b.size + 1;
+}
+
+void add_nybbles(bitarray b, int val, boolean terminal)
+{
+	if (val < 8) {
+		b.add(terminal ? val + 8 : val);
+	} else {
+		int digit = val & 7;
+		add_nybbles(b, val >> 3, false);
+		b.add(terminal ? digit+8 : digit);
+	}
+}
+
+// This adds a new item count to the given bitarray.  These counts are coded by breaking
+// them into octal digits (sets of 3 bits) and adding a nybble for each digit, where the
+// high bit of the nybble is set if and only if the octal digit is the last.  For example,
+// encoding 163, whose octal representation is 243, will add the nybbles 0010 0100 1011, 
+// in that order, to the end of the bitarray's data.  This will later be decoded 
+// sequentially by the Python HTML renderer.
+void add_item_count(bitarray b, int val)
+{
+	if (val < 8) {
+		b.add(8 + val);		// add terminal bit
+	} else {
+		b.add_nybbles(val, true);
+	}
+}
+
 
 ///////////////////////////////
 
@@ -171,25 +206,6 @@ boolean isIn(string name, string html)
 	return reg.find();
 }
 
-// There has to be a better way to do this since the keys are incrementing, yes?
-string extract_data_from_mritem(ItemImage mritem, int offset)
-{
-	switch(offset)
-	{
-	case 0:	return mritem.a;
-	case 1:	return mritem.b;
-	case 2:	return mritem.c;
-	case 3:	return mritem.d;
-	case 4:	return mritem.e;
-	case 5:	return mritem.f;
-	case 6:	return mritem.g;
-	case 7:	return mritem.h;
-	case 8:	return mritem.i;
-	}
-	// This is an error situation, but I guess we will just try to be graceful about it
-	return "None";
-}
-
 int num_items(string name)
 {
 	item i = to_item(name);
@@ -214,107 +230,7 @@ int num_items(string name)
 	return amt;
 }
 
-void set_elemental_always(string prop, string name)
-{
-	set_property(prop, user_confirm("Mafia does not think you have " + name 
-		+ " but it appears that you might. Select Yes to confirm that you have it."
-		+ " Select No to indicate that you do not have it.", 15000, false));
-}
 
-string check_mritems(string bookshelfHtml, string familiarNamesHtml) 
-{
-	string html;
-
-    bitarray b = new_bitarray(300, 1);
-	print("Checking for Mr. Items", "olive");
-
-	if(!get_property("spookyAirportAlways").to_boolean() 
-		|| !get_property("sleazeAirportAlways").to_boolean() 
-		|| !get_property("stenchAirportAlways").to_boolean() 
-		|| !get_property("coldAirportAlways").to_boolean() 
-		|| !get_property("hotAirportAlways").to_boolean())
-	{
-		html = visit_url("place.php?whichplace=airport");
-		if(!get_property("spookyAirportAlways").to_boolean() && contains_text(html, "airport_spooky"))
-		{
-			set_elemental_always("spookyAirportAlways", "Conspiracy Island" );
-		}
-		if(!get_property("sleazeAirportAlways").to_boolean() && contains_text(html, "airport_sleaze"))
-		{
-			set_elemental_always("sleazeAirportAlways", "Spring Break Beach");
-		}
-		if(!get_property("stenchAirportAlways").to_boolean() && contains_text(html, "airport_stench"))
-		{
-			set_elemental_always("stenchAirportAlways", "Disneylandfill");
-		}
-		if(!get_property("hotAirportAlways").to_boolean() && contains_text(html, "airport_hot"))
-		{
-			set_elemental_always("hotAirportAlways", "That 70s Volcano");
-		}
-		if(!get_property("coldAirportAlways").to_boolean() && contains_text(html, "airport_cold"))
-		{
-			set_elemental_always("coldAirportAlways", "The Glaciest");
-		}
-	}
-
-	html = familiarNamesHtml + bookshelfHtml;
-	foreach x in mritems {
-		string categoryFlags = mritems[x].itemname;
-		item baseItem = to_item(mritems[x].gifname);
-		int itemAmount = num_items(baseItem);
-
-		foreach index, category in split_string(categoryFlags, "")	{
-			string data = extract_data_from_mritem(mritems[x], index);
-			switch(category)
-			{
-	            case "e":               // This only exists because florist_available() exists instead of a setting (124)
-					// This does not check if you have one installed if you have any of the tradable item.
-					// Do not use this with other flags, this is a edge scenario
-					if((itemAmount == 0) && 
-					   (contains_text(visit_url(data), extract_data_from_mritem(mritems[x], index + 1)))) {
-						itemAmount += 1;
-					}
-					break;
-
-				case "f":				//Familiars, any of, comma separated (no whitespace)
-					foreach index, it in split_string(data, ",") {
-						if(have_familiar(to_familiar(it))) {
-							itemAmount += 1;
-						}
-					}
-					break;
-
-				case "i":				//Items, any of, comma separated (no whitespace)
-					foreach index, it in split_string(data, ",") {
-						itemAmount += num_items(it);
-					}
-					break;
-
-				case "p":				//Correspondences (Pen Pal, Game Magazine, etc)
-					if(contains_text(visit_url("account.php?tab=correspondence"), ">" + data +"</option>"))	{
-						itemAmount += 1;
-					}
-					break;
-
-				case "s":				//Check mafia setting
-					if(get_property(data).to_boolean())	{
-						itemAmount += 1;
-					}
-					break;
-
-				//Gardens would ideally by a campground check (just num_items)
-				//but the data in mritems would need to include the harvestable since that is what mafia reports instead of the garden itself.
-				case "t":				//Tome, Libram, Grimore, Garden
-					if(index_of(html, data) > 0) {
-						itemAmount += 1;
-					}
-					break;
-			}
-		}
-		// TODO do something with itemAmount;  isn't this just a table of booleans?
-	}
-	return "&mritems=" + b.base64_encode();
-}
 
 ###########################################################################
 
@@ -523,6 +439,143 @@ string check_familiars(string familiarNamesHtml)
 
 ###########################################################################
 
+void set_elemental_always(string prop, string name)
+{
+	set_property(prop, user_confirm("Mafia does not think you have " + name 
+		+ " but it appears that you might. Select Yes to confirm that you have it."
+		+ " Select No to indicate that you do not have it.", 15000, false));
+}
+
+string get(ItemImage mritem, int offset)
+{
+	switch(offset)
+	{
+	case 0:	return mritem.a;
+	case 1:	return mritem.b;
+	case 2:	return mritem.c;
+	case 3:	return mritem.d;
+	case 4:	return mritem.e;
+	case 5:	return mritem.f;
+	case 6:	return mritem.g;
+	case 7:	return mritem.h;
+	case 8:	return mritem.i;
+	}
+	// This is an error situation, but I guess we will just try to be graceful about it
+	return "None";
+}
+
+string check_mritems(string html) 
+{
+	string airportHtml;
+
+    bitarray b = new_bitarray(0, 4);
+	print("Checking for Mr. Items", "olive");
+
+	if (!get_property("spookyAirportAlways").to_boolean() 
+		|| !get_property("sleazeAirportAlways").to_boolean() 
+		|| !get_property("stenchAirportAlways").to_boolean() 
+		|| !get_property("coldAirportAlways").to_boolean() 
+		|| !get_property("hotAirportAlways").to_boolean())
+	{
+		airportHtml = visit_url("place.php?whichplace=airport");
+		if (!get_property("spookyAirportAlways").to_boolean() 
+		    && contains_text(airportHtml, "airport_spooky")) {
+			set_elemental_always("spookyAirportAlways", "Conspiracy Island" );
+		}
+		if (!get_property("sleazeAirportAlways").to_boolean() 
+		    && contains_text(airportHtml, "airport_sleaze")) {
+			set_elemental_always("sleazeAirportAlways", "Spring Break Beach");
+		}
+		if (!get_property("stenchAirportAlways").to_boolean() 
+		    && contains_text(airportHtml, "airport_stench")) {
+			set_elemental_always("stenchAirportAlways", "Disneylandfill");
+		}
+		if (!get_property("hotAirportAlways").to_boolean() 
+		    && contains_text(airportHtml, "airport_hot")) {
+			set_elemental_always("hotAirportAlways", "That 70s Volcano");
+		}
+		if (!get_property("coldAirportAlways").to_boolean() 
+		    && contains_text(airportHtml, "airport_cold")) {
+			set_elemental_always("coldAirportAlways", "The Glaciest");
+		}
+	}
+
+	foreach x in MRITEMS {
+		ItemImage mrit = MRITEMS[x];
+		string categoryFlags = mrit.itemname;
+		item baseItem = to_item(mrit.gifname);
+		int amt = num_items(baseItem);
+
+		foreach index, category in split_string(categoryFlags, "")	{
+			string data = get(mrit, index);
+			switch(category)
+			{
+	            case "e":  // This only exists because florist_available() exists instead of a setting (124)
+					// This does not check if you have one installed if you have any of the tradable item.
+					// Do not use this with other flags, this is a edge scenario
+					if ((amt == 0) && 
+					     (contains_text(visit_url(data), get(mrit, index + 1)))) {
+						amt += 1;
+					}
+					break;
+
+				case "f":	//Familiars, any of, comma separated (no whitespace)
+					foreach index, it in split_string(data, ",") {
+						if(have_familiar(to_familiar(it))) {
+							amt += 1;
+						}
+					}
+					break;
+
+				case "i":	//Items, any of, comma separated (no whitespace)
+					foreach index, it in split_string(data, ",") {
+						amt += num_items(it);
+					}
+					break;
+
+				case "p":	//Correspondences (Pen Pal, Game Magazine, etc)
+					if(contains_text(visit_url("account.php?tab=correspondence"), ">" + data +"</option>"))	{
+						amt += 1;
+					}
+					break;
+
+				case "s":	//Check mafia setting
+					if(get_property(data).to_boolean())	{
+						amt += 1;
+					}
+					break;
+
+				//Gardens would ideally by a campground check (just num_items)
+				//but the data in mritems would need to include the harvestable since that is what mafia reports instead of the garden itself.
+				case "t":				//Tome, Libram, Grimore, Garden
+					if(index_of(html, data) > 0) {
+						amt += 1;
+					}
+					break;
+			}
+		}
+		b.add_item_count(amt);
+		// TODO do something with amt;  isn't this just a table of booleans?
+	}
+	return "&mritems=" + b.base64_encode();
+}
+
+
+###########################################################################
+
+string check_coolitems()
+{
+    bitarray b = new_bitarray(0, 4);
+	print("Checking for Cool Items", "olive");
+	foreach x in coolitems {
+		b.add_item_count(num_items(coolitems[x].itemname));
+	}
+	return "&coolitems=" + b.base64_encode();
+}
+
+
+###########################################################################
+
 void main()
 {
 	if(!get_property("kingLiberated").to_boolean())
@@ -550,8 +603,10 @@ void main()
 	url = url + check_tattoos();
     url = url + check_trophies();
 	url = url + check_familiars(familiarNamesHtml);
+	url = url + check_mritems(familiarNamesHtml + bookshelfHtml);
+	url = url + check_coolitems();
 	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
-	//							 carrot, bear, numberology, safari, implode)
+	//							 carrot, bear, numberology, safari, implode, hobotat)
 	string[int] levelmap = {
 		0:"46", 1:"47", 2:"48", 3:"117", 4:"118", 5:"121", 6:"128", 7:"134", 
 		8:"144", 9:"180", 10:"188"
