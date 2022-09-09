@@ -102,6 +102,7 @@
 102	Yendorian Finery	elbereth	cornuthaum	vorpal blade	ring of aggravate monster	-	-	-	-	-	-
 103	Artist	palette	-	-	-	-	-	-	-	-	-
 104	Delicious Salad	saladtat	-	-	-	-	-	-	-	-	-
+105	missing	nopic	-	-	-	-	-	-	-	-	-
 106	Martini	martini	-	-	-	-	-	-	-	-	-
 107	BRICKOfig Outfit	minifigtat	BRICKO hat	BRICKO sword	BRICKO pants	-	-	-	-	-	-
 108	Legendary Regalia of the Seal Crusher	revclass1	Scalp of Gorgolok	Sledgehammer of the Vælkyr	Krakrox's Loincloth	Claw of the Infernal Seal	-	-	-	-	-
