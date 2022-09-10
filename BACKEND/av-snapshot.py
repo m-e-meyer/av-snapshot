@@ -26,13 +26,14 @@ MAX_MRITEM = 300
 MAX_COOLITEM = 500
 
 NUM_LEVELS = 12
-colorblind = False
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-ON_EDGE = False
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
 
+
+def on_aws():
+	return ("LAMBDA_TASK_ROOT" in os.environ)
 
 def arg_to_bytes(argv, key, size, eltsize):
 	bits = (size+1)*eltsize
@@ -75,7 +76,7 @@ def arg_to_counts(argv, key, size):
 
 # This function is to handle opening files in CGI or in AWS
 def open_file_for_reading(filename):
-	if "LAMBDA_TASK_ROOT" in os.environ:
+	if on_aws():
 		return open(os.environ["LAMBDA_TASK_ROOT"]+"/"+filename, "r")
 	else:
 		return open(CGI_TASK_ROOT+"/"+filename, 'r')
@@ -110,7 +111,7 @@ def nowstring():
 	return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 
 
-if "LAMBDA_TASK_ROOT" in os.environ:
+if on_aws():
 	import boto3
 	from boto3.dynamodb.conditions import Key, Attr
 	def log_error(err, msg):
@@ -174,13 +175,6 @@ else:
 
 
 
-SKILLS = {}  	# dict of lists (n, name, desc)
-TROPHIES = {}   # dict of lists (n, image name, trophy name, desc)
-FAMILIARS = {}	# dict of lists (n, name, image, hatchling)
-TATTOOS = {}	# dict of lists (n, name)
-MRITEMS = {}	# dict of lists (n, flags, item item ...)
-COOLITEMS = {}	# dict of lists (n, name, image name)
-
 def getbits(byts, index, eltsize):
 	loc = index * eltsize;
 	bytloc = loc >> 3;
@@ -192,7 +186,8 @@ def getbits(byts, index, eltsize):
 	else:
 		return (byts[bytloc] >> (8-bytoffs-eltsize)) & mask
 
-def load_data_file(filename, map):
+def load_data_file(filename):
+	map = {}
 	with open_file_for_reading(filename+'.txt') as fil:
 		maxx = 0
 		while True:
@@ -204,26 +199,20 @@ def load_data_file(filename, map):
 				continue
 			maxx = int(l[0])
 			map[maxx] = l;
-	return maxx
+	return map
 
-def load_data():
-	global MAX_SKILL
-	MAX_SKILL = load_data_file('av-snapshot-skills', SKILLS)
-	global MAX_TROPHY
-	MAX_TROPHY = load_data_file('av-snapshot-trophies', TROPHIES)
-	global MAX_FAMILIAR
-	MAX_FAMILIAR = load_data_file('av-snapshot-familiars', FAMILIARS)
-	global MAX_TATTOO
-	MAX_TATTOO = load_data_file("av-snapshot-tattoos", TATTOOS)
-	global MAX_MRITEM
-	MAX_MRITEM = load_data_file("av-snapshot-mritems", MRITEMS)
-	global MAX_COOLITEM
-	MAX_COOLITEM = load_data_file("av-snapshot-mritems", COOLITEMS)
+def load_data(state):
+	state['skills'] = load_data_file('av-snapshot-skills')
+	state['trophies'] = load_data_file('av-snapshot-trophies')
+	state['familiars'] = load_data_file('av-snapshot-familiars')
+	state['tattoos'] = load_data_file("av-snapshot-tattoos")
+	state['mritems'] = load_data_file("av-snapshot-mritems")
+	state['coolitems'] = load_data_file("av-snapshot-mritems")
 
 
 ###########################################################################
 
-def print_beginning(name, argv, fetched_argv):
+def print_beginning(name, argv, fetched_argv, colorblind):
 	tstamp = fetched_argv['tstamp']
 	o("<!DOCTYPE html>\n")
 	o("<html><head><style>")
@@ -242,7 +231,7 @@ def print_beginning(name, argv, fetched_argv):
 	else:
 		switch = 'on'
 		query = query + '&colorblind=1'
-	if "LAMBDA_TASK_ROOT" in os.environ:
+	if on_aws():
 		suffix = ''
 	else:
 		suffix = '.py' 
@@ -260,11 +249,11 @@ def class_for_perm(skill_bytes, skill_num):
 	else:
 		return "class='hcperm'"
 
-def print_skill_cell(skill_bytes, skill_num, suffix=''):
+def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 	if skill_num == 0:
 		o("<td></td>")
 		return
-	skil = SKILLS[skill_num]
+	skil = skills[skill_num]
 	clas = class_for_perm(skill_bytes, skill_num)
 	if skil[2] != '' and skil[2] != 'none' and skil[2] != '-':
 		desc = "<br/>" + skil[2]
@@ -301,150 +290,152 @@ def gen_suffix(skill, levels):
 			return f': Level {lv}'
 	return ''
 
-def print_skill_row(skill_bytes, header, skill_list, levels=''):
+def print_skill_row(skills, skill_bytes, header, skill_list, levels=''):
 	o(f"<tr><th>{header}</th>")
 	for s in skill_list:
-		print_skill_cell(skill_bytes, s, gen_suffix(s, levels))
+		print_skill_cell(skills, skill_bytes, s, gen_suffix(s, levels))
 	o("</tr>\n")
 
-def print_slime_row(skill_bytes, levels):
+def print_slime_row(skills, skill_bytes, levels):
 	o("<tr><th>The Slime Tube</th>")
 	for i in range(0, 3):
 		suffix = f" ({levels[i:i+1]}/10)"
-		print_skill_cell(skill_bytes, 139+i, suffix)
-	print_skill_cell(skill_bytes, 0)
-	print_skill_cell(skill_bytes, 0)
-	print_skill_cell(skill_bytes, 0)
+		print_skill_cell(skills, skill_bytes, 139+i, suffix)
+	print_skill_cell(skills, skill_bytes, 0)
+	print_skill_cell(skills, skill_bytes, 0)
+	print_skill_cell(skills, skill_bytes, 0)
 	o("</tr>\n")
 
-def print_skill_multirow(skill_bytes, header, skill_list_list, levels=''):
+def print_skill_multirow(skills, skill_bytes, header, skill_list_list, levels=''):
 	tr = ""
 	o(f"<tr><th rowspan='{len(skill_list_list)}'>{header}</th>")
 	for sl in skill_list_list:
 		o(tr)
 		tr = "<tr>"
 		for s in sl:
-			print_skill_cell(skill_bytes, s, gen_suffix(s, levels))
+			print_skill_cell(skills, skill_bytes, s, gen_suffix(s, levels))
 		o('</tr>\n')
 
-def print_guild_skills(skill_bytes, levels):
+def print_skill_table(state, skill_bytes, levels):
 	o(f'<table cellspacing="0">')
 	o('<tr><th>Level</th><th>Seal Clubber</th><th>Turtle Tamer</th><th>Pastamancer</th>'
 		  '<th>Sauceror</th><th>Disco Bandit</th><th>Accordion Thief</th></tr>')
 	o('<tr><th colspan="7" class="miniheader">Class (Original)</th></tr>')
-	print_skill_row(skill_bytes, '0 buff', (1, 2, 3, 4, 5, 6))
-	print_skill_row(skill_bytes, '0 combat', (7, 8, 9, 10, 11, 12))
-	print_skill_row(skill_bytes, '1', (217, 14, 15, 293, 17, 18))
-	print_skill_row(skill_bytes, '2', (19, 20, 21, 22, 23, 24))
-	print_skill_row(skill_bytes, '3', (25, 26, 27, 28, 29, 30))
-	print_skill_row(skill_bytes, '4', (31, 32, 33, 34, 35, 36))
-	print_skill_row(skill_bytes, '5', (37, 38, 39, 40, 41, 42))
-	print_skill_row(skill_bytes, '6', (227, 44, 45, 297, 47, 48))
-	print_skill_row(skill_bytes, '7', (49, 50, 51, 52, 53, 54))
-	print_skill_row(skill_bytes, '8', (55, 56, 57, 299, 59, 60))
-	print_skill_row(skill_bytes, '9', (61, 272, 63, 64, 65, 66))
-	print_skill_row(skill_bytes, '10', (67, 68, 69, 70, 71, 72))
-	print_skill_row(skill_bytes, '11', (73, 74, 75, 76, 77, 78))
-	print_skill_row(skill_bytes, '12', (79, 80, 81, 82, 83, 84))
-	print_skill_row(skill_bytes, '13', (85, 86, 87, 88, 89, 90))
-	print_skill_row(skill_bytes, '14', (91, 92, 93, 94, 95, 96))
-	print_skill_row(skill_bytes, '15', (97, 98, 99, 100, 101, 102))
+	skills = state['skills']
+	print_skill_row(skills, skill_bytes, '0 buff', (1, 2, 3, 4, 5, 6))
+	print_skill_row(skills, skill_bytes, '0 combat', (7, 8, 9, 10, 11, 12))
+	print_skill_row(skills, skill_bytes, '1', (217, 14, 15, 293, 17, 18))
+	print_skill_row(skills, skill_bytes, '2', (19, 20, 21, 22, 23, 24))
+	print_skill_row(skills, skill_bytes, '3', (25, 26, 27, 28, 29, 30))
+	print_skill_row(skills, skill_bytes, '4', (31, 32, 33, 34, 35, 36))
+	print_skill_row(skills, skill_bytes, '5', (37, 38, 39, 40, 41, 42))
+	print_skill_row(skills, skill_bytes, '6', (227, 44, 45, 297, 47, 48))
+	print_skill_row(skills, skill_bytes, '7', (49, 50, 51, 52, 53, 54))
+	print_skill_row(skills, skill_bytes, '8', (55, 56, 57, 299, 59, 60))
+	print_skill_row(skills, skill_bytes, '9', (61, 272, 63, 64, 65, 66))
+	print_skill_row(skills, skill_bytes, '10', (67, 68, 69, 70, 71, 72))
+	print_skill_row(skills, skill_bytes, '11', (73, 74, 75, 76, 77, 78))
+	print_skill_row(skills, skill_bytes, '12', (79, 80, 81, 82, 83, 84))
+	print_skill_row(skills, skill_bytes, '13', (85, 86, 87, 88, 89, 90))
+	print_skill_row(skills, skill_bytes, '14', (91, 92, 93, 94, 95, 96))
+	print_skill_row(skills, skill_bytes, '15', (97, 98, 99, 100, 101, 102))
 	o('<tr><th colspan="7" class="miniheader">Class (Revamp 2013)</th><tr>')
-	print_skill_row(skill_bytes, '1', (13, 263, 278, 294, 231, 248))
-	print_skill_row(skill_bytes, '2', (218, 264, 279, 16, 247, 249))
-	print_skill_row(skill_bytes, '3', (219, 265, 280, 295, 233, 250))
-	print_skill_row(skill_bytes, '4', (220, 266, 281, 296, 234, 251))
-	print_skill_row(skill_bytes, '5', (221, 267, 282, 46, 235, 252))
-	print_skill_row(skill_bytes, '6', (222, 268, 283, 298, 246, 253))
-	print_skill_row(skill_bytes, '7', (223, 269, 284, 58, 236, 254))
-	print_skill_row(skill_bytes, '8', (224, 270, 285, 300, 237, 255))
-	print_skill_row(skill_bytes, '9', (225, 271, 286, 301, 238, 256))
-	print_skill_row(skill_bytes, '10', (226, 62, 287, 302, 239, 257))
-	print_skill_row(skill_bytes, '11', (43, 273, 288, 303, 240, 258))
-	print_skill_row(skill_bytes, '12', (228, 274, 289, 304, 241, 262))
-	print_skill_row(skill_bytes, '13', (229, 275, 290, 305, 242, 259))
-	print_skill_row(skill_bytes, '14', (230, 276, 291, 306, 243, 260))
-	print_skill_row(skill_bytes, '15', (163, 277, 292, 307, 244, 261))
+	print_skill_row(skills, skill_bytes, '1', (13, 263, 278, 294, 231, 248))
+	print_skill_row(skills, skill_bytes, '2', (218, 264, 279, 16, 247, 249))
+	print_skill_row(skills, skill_bytes, '3', (219, 265, 280, 295, 233, 250))
+	print_skill_row(skills, skill_bytes, '4', (220, 266, 281, 296, 234, 251))
+	print_skill_row(skills, skill_bytes, '5', (221, 267, 282, 46, 235, 252))
+	print_skill_row(skills, skill_bytes, '6', (222, 268, 283, 298, 246, 253))
+	print_skill_row(skills, skill_bytes, '7', (223, 269, 284, 58, 236, 254))
+	print_skill_row(skills, skill_bytes, '8', (224, 270, 285, 300, 237, 255))
+	print_skill_row(skills, skill_bytes, '9', (225, 271, 286, 301, 238, 256))
+	print_skill_row(skills, skill_bytes, '10', (226, 62, 287, 302, 239, 257))
+	print_skill_row(skills, skill_bytes, '11', (43, 273, 288, 303, 240, 258))
+	print_skill_row(skills, skill_bytes, '12', (228, 274, 289, 304, 241, 262))
+	print_skill_row(skills, skill_bytes, '13', (229, 275, 290, 305, 242, 259))
+	print_skill_row(skills, skill_bytes, '14', (230, 276, 291, 306, 243, 260))
+	print_skill_row(skills, skill_bytes, '15', (163, 277, 292, 307, 244, 261))
 	o('<tr><th colspan="7" class="miniheader">Other Standard Class Skills</th><tr>')
-	print_skill_row(skill_bytes, 'Spookyraven', (103, 104, 105, 106, 107, 108))
-	print_skill_row(skill_bytes, 'The Sea', (109, 110, 111, 112, 113, 114))
+	print_skill_row(skills, skill_bytes, 'Spookyraven', (103, 104, 105, 106, 107, 108))
+	print_skill_row(skills, skill_bytes, 'The Sea', (109, 110, 111, 112, 113, 114))
 	o('<tr><th colspan="7" class="miniheader">Dreadsylvania</th><tr>')
-	print_skill_row(skill_bytes, 'Dread (SC)', (0, 202, 203, 204, 205, 206))
-	print_skill_row(skill_bytes, 'Dread (TT)', (0, 0, 207, 208, 209, 210))
-	print_skill_row(skill_bytes, 'Dread (PM)', (0, 0, 0, 211, 212, 213))
-	print_skill_row(skill_bytes, 'Dread (SA)', (0, 0, 0, 0, 214, 215))
-	print_skill_row(skill_bytes, 'Dread (DB)', (0, 0, 0, 0, 0, 216))
+	print_skill_row(skills, skill_bytes, 'Dread (SC)', (0, 202, 203, 204, 205, 206))
+	print_skill_row(skills, skill_bytes, 'Dread (TT)', (0, 0, 207, 208, 209, 210))
+	print_skill_row(skills, skill_bytes, 'Dread (PM)', (0, 0, 0, 211, 212, 213))
+	print_skill_row(skills, skill_bytes, 'Dread (SA)', (0, 0, 0, 0, 214, 215))
+	print_skill_row(skills, skill_bytes, 'Dread (DB)', (0, 0, 0, 0, 0, 216))
 	o('<tr><th colspan="7" class="miniheader">Hobopolis</th><tr>')
-	print_skill_row(skill_bytes, 'Hodgman', (125, 126, 127, 128, 0, 0))
-	print_skill_row(skill_bytes, '30MP Elemental', (115, 116, 117, 118, 119, 177))
-	print_skill_row(skill_bytes, '120MP Elemental', (120, 121, 122, 123, 124, 178))
-	print_skill_row(skill_bytes, 'Accordion Thief', (129, 130, 131, 132, 133, 0))
+	print_skill_row(skills, skill_bytes, 'Hodgman', (125, 126, 127, 128, 0, 0))
+	print_skill_row(skills, skill_bytes, '30MP Elemental', (115, 116, 117, 118, 119, 177))
+	print_skill_row(skills, skill_bytes, '120MP Elemental', (120, 121, 122, 123, 124, 178))
+	print_skill_row(skills, skill_bytes, 'Accordion Thief', (129, 130, 131, 132, 133, 0))
 	o('<tr><th colspan="7" class="miniheader">Other Standard Skills</th><tr>')
-	print_skill_row(skill_bytes, 'Gnomish', (134, 135, 136, 137, 138, 0))
-	print_skill_row(skill_bytes, 'Daily Dungeon', (197, 198, 199, 0, 0, 0))
-	print_skill_multirow(skill_bytes, 'PVP', ((190, 191, 322, 326, 328, 329),
+	print_skill_row(skills, skill_bytes, 'Gnomish', (134, 135, 136, 137, 138, 0))
+	print_skill_row(skills, skill_bytes, 'Daily Dungeon', (197, 198, 199, 0, 0, 0))
+	print_skill_multirow(skills, skill_bytes, 'PVP', ((190, 191, 322, 326, 328, 329),
                                               (316, 232, 343, 355, 389, 0)), levels)
-	print_slime_row(skill_bytes, levels)
-	print_skill_row(skill_bytes, "Misc", (309, 142, 143, 200, 145, 146))
+	print_slime_row(skills, skill_bytes, levels)
+	print_skill_row(skills, skill_bytes, "Misc", (309, 142, 143, 200, 145, 146))
 	o('<tr><th colspan="7" class="miniheader">Other Nonstandard Class Skills</th><tr>')
-	print_skill_row(skill_bytes, 'Crimbo 2009', (148, 149, 150, 151, 152, 153))
-	print_skill_row(skill_bytes, 'Trader 2010', (169, 167, 168, 164, 179, 166))
-	print_skill_row(skill_bytes, 'Crimbo 2017<br/>Crimbotatoyotathon', 
+	print_skill_row(skills, skill_bytes, 'Crimbo 2009', (148, 149, 150, 151, 152, 153))
+	print_skill_row(skills, skill_bytes, 'Trader 2010', (169, 167, 168, 164, 179, 166))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2017<br/>Crimbotatoyotathon', 
 					(374, 375, 376, 377, 378, 379))
-	print_skill_row(skill_bytes, 'Madame Zatara', (380, 381, 382, 383, 384, 385))
-	print_skill_row(skill_bytes, 'Vampyre', (394, 395, 396, 397, 398, 399))
+	print_skill_row(skills, skill_bytes, 'Madame Zatara', (380, 381, 382, 383, 384, 385))
+	print_skill_row(skills, skill_bytes, 'Vampyre', (394, 395, 396, 397, 398, 399))
 	o('<tr><th colspan="7" class="miniheader">Crimbo</th><tr>')
-	print_skill_row(skill_bytes, 'Crimbo 2010', (172, 173, 174, 175, 176, 0))
-	print_skill_row(skill_bytes, 'Crimbo 2013', (310, 311, 0, 0, 0, 0))
-	print_skill_row(skill_bytes, 'Crimbo 2014', (323, 324, 325, 0, 0, 0))
-	print_skill_row(skill_bytes, 'Crimbo 2015', (348,0,0,0,0,0))
-	print_skill_row(skill_bytes, 'Crimbo 2016', (360,361,0,0,0,0))
-	print_skill_row(skill_bytes, 'Crimbo 2018', (391,392,393,0,0,0))
-	print_skill_row(skill_bytes, 'Crimbo 2019', (403,0,0,0,0,0))
-	print_skill_row(skill_bytes, 'Crimbo 2020<br/>Crimbotatodonatothon', 
+	print_skill_row(skills, skill_bytes, 'Crimbo 2010', (172, 173, 174, 175, 176, 0))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2013', (310, 311, 0, 0, 0, 0))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2014', (323, 324, 325, 0, 0, 0))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2015', (348,0,0,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2016', (360,361,0,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2018', (391,392,393,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2019', (403,0,0,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Crimbo 2020<br/>Crimbotatodonatothon', 
 					(411, 412, 413, 414, 415, 416))
-	print_skill_row(skill_bytes, 'Crimbo 2022<br/>Crimbotatogoogoneathon', 
+	print_skill_row(skills, skill_bytes, 'Crimbo 2022<br/>Crimbotatogoogoneathon', 
 					(419,0,0,0,0,0))
 	o('<tr><th colspan="7" class="miniheader">Other</th><tr>')
-	print_skill_row(skill_bytes, 'Trader 2008', (144,0,0,0,0,0))
-	print_skill_row(skill_bytes, 'The Suburbs of Dis', (187,188,189,0,0,0))
-	print_skill_row(skill_bytes, 'Silent Invasion', (194,195,196,0,0,0))
-	print_skill_row(skill_bytes, 'Ascension', (183,192,334,315,0,0), levels)
-	print_skill_multirow(skill_bytes, 'Elemental Planes', 
+	print_skill_row(skills, skill_bytes, 'Trader 2008', (144,0,0,0,0,0))
+	print_skill_row(skills, skill_bytes, 'The Suburbs of Dis', (187,188,189,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Silent Invasion', (194,195,196,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Ascension', (183,192,334,315,0,0), levels)
+	print_skill_multirow(skills, skill_bytes, 'Elemental Planes', 
 						((312,313,317,320,321,330), (331,332,333,340,341,342), 
 						 (346,347,344,345,0,0)))
-	print_skill_row(skill_bytes, 'LT&T', (352,353,354,0,0,0))
-	print_skill_row(skill_bytes, 'Twitch', (314,0,0,0,0,0))
-	print_skill_row(skill_bytes, 'Waffle House', (356,357,0,0,0,0))
-	print_skill_row(skill_bytes, 'Deck of Every Card', (335,336,337,338,339,0))
-	print_skill_row(skill_bytes, 'Snojo', (349,350,351,0,0,0))
-	print_skill_row(skill_bytes, 'Eldritch Love', (359,366,371,418,0,0))
-	print_skill_row(skill_bytes, 'Gingerbread', (365,362,364,363,0,0))
-	print_skill_row(skill_bytes, 'Spacegate', (367,368,369,370,0,0))
-	print_skill_row(skill_bytes, 'PirateRealm', (400,401,0,0,0,0))
-	print_skill_row(skill_bytes, 'Drippy', (406,407,408,0,0,0))
-	print_skill_multirow(skill_bytes, 'Misc', 
+	print_skill_row(skills, skill_bytes, 'LT&T', (352,353,354,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Twitch', (314,0,0,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Waffle House', (356,357,0,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Deck of Every Card', (335,336,337,338,339,0))
+	print_skill_row(skills, skill_bytes, 'Snojo', (349,350,351,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Eldritch Love', (359,366,371,418,0,0))
+	print_skill_row(skills, skill_bytes, 'Gingerbread', (365,362,364,363,0,0))
+	print_skill_row(skills, skill_bytes, 'Spacegate', (367,368,369,370,0,0))
+	print_skill_row(skills, skill_bytes, 'PirateRealm', (400,401,0,0,0,0))
+	print_skill_row(skills, skill_bytes, 'Drippy', (406,407,408,0,0,0))
+	print_skill_multirow(skills, skill_bytes, 'Misc', 
 						((147,185,162,170,171,181), (193,327,358,372,386,387), 
 						 (388,390,402,404,405,409), (410,417,0,0,0,373)), levels)
 	o('<tr><th colspan="7" class="miniheader">Mystical Bookshelf</th><tr>')
-	print_skill_row(skill_bytes, 'Tomes', (154, 155, 156, 182, 308, 319))
-	print_skill_multirow(skill_bytes, 'Librams', ((157, 158, 159, 165, 184, 186),
+	print_skill_row(skills, skill_bytes, 'Tomes', (154, 155, 156, 182, 308, 319))
+	print_skill_multirow(skills, skill_bytes, 'Librams', ((157, 158, 159, 165, 184, 186),
 												(201, 0, 0, 0, 0, 0)))
-	print_skill_row(skill_bytes, 'Grimoires', (160, 161, 180, 245, 318, 0))
+	print_skill_row(skills, skill_bytes, 'Grimoires', (160, 161, 180, 245, 318, 0))
 	o('</table>\n')
 
-def print_skills(skill_bytes, levels):
+def print_skills(state, skill_bytes, levels):
 	o("<h1>Skills</h1>")
 	tally = [0, 0, 0]
-	for i in range(len(SKILLS)):
+	for i in range(len(state['skills'])):
 		x = getbits(skill_bytes, i+1, 2)
 		tally[x] = tally[x] + 1
 	o(f"<p class='subheader'>You have {tally[2]} skills Hardcore permed, {tally[1]} skills Softcore permed, and {tally[0]} missing.</p>\n")
-	print_guild_skills(skill_bytes, levels)
+	print_skill_table(state, skill_bytes, levels)
+
 
 ###########################################################################
 
-def print_tattoo_cell(tattoo_bytes, tat, levels=""):
+def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
 	if tat == 0:
 		o("<td></td>")
 	elif tat == -1:		# Hobo tattoo
@@ -461,7 +452,7 @@ def print_tattoo_cell(tattoo_bytes, tat, levels=""):
 		o(f"<td {clas}><a href='http://kol.coldfront.net/thekolwiki/index.php/Hobo_Tattoo'>"
 		  +f"{img}Hobo Tattoo {lv}/19</a></td>")
 	else:
-		t = TATTOOS[tat]
+		t = tattoos[tat]
 		clas = ""
 		x = getbits(tattoo_bytes, tat, 2)
 		if x == 1:
@@ -470,19 +461,20 @@ def print_tattoo_cell(tattoo_bytes, tat, levels=""):
 			clas = "class='perm'"
 		o(f"<td {clas}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
 
-def print_tattoo_table(tattoo_bytes, header, rows, levels=""):
+def print_tattoo_table(tattoos, tattoo_bytes, header, rows, levels=""):
 	o(f'<h2>{header}</h2><table cellspacing="0">')
 	for row in rows:
 		o("<tr>")
 		for tat in row:
-			print_tattoo_cell(tattoo_bytes, tat, levels)
+			print_tattoo_cell(tattoos, tattoo_bytes, tat, levels)
 		o("</tr>")
 	o("</table>")
 
-def print_tattoos(tattoo_bytes, levels):
+def print_tattoos(state, tattoo_bytes, levels):
+	tattoos = state['tattoos']
 	o("<h1>Tattoos</h1>")
 	tally = [0, 0, 0]
-	for i in range(len(TATTOOS)):
+	for i in range(len(tattoos)):
 		x = getbits(tattoo_bytes, i+1, 2)
 		tally[x] = tally[x] + 1
 	tally[0] = tally[0] - 8		# sneaky pete xxix and awol each have 4 redundant 
@@ -491,7 +483,7 @@ def print_tattoos(tattoo_bytes, levels):
 		tally[1] = tally[1] + 1
 	o(f"<p class='subheader'>You have {tally[1]} tattoos and {tally[2]} outfits for which"
 	  f" you don't have the corresponding tattoo, and are missing {tally[0]} tattoos.</p>\n")
-	print_tattoo_table(tattoo_bytes, "Class", 
+	print_tattoo_table(tattoos, tattoo_bytes, "Class", 
 		((1, 2, 3, 108),
 		 (4, 5, 6, 109),
 		 (7, 8, 9, 110),
@@ -504,7 +496,7 @@ def print_tattoos(tattoo_bytes, levels):
 		 (213, 214, 215, 216),
 		 (228, 229, 257, 258),
 		 (268, 269, 0, 0)))
-	print_tattoo_table(tattoo_bytes, "Ascension", 
+	print_tattoo_table(tattoos, tattoo_bytes, "Ascension", 
 		((19, 20, 21, 22, 23, 24),
 		 (25, 26, 27, 28, 29, 30),
 		 (31, 32, 33, 34, 35, 36),
@@ -513,15 +505,15 @@ def print_tattoos(tattoo_bytes, levels):
 	# do outfit table - we assume any tattoo with a component is an outfit
 	o(f'<h2>Outfits</h2><table cellspacing="0">')
 	x = 0
-	for t in range(len(TATTOOS)):
-		tat = TATTOOS[t+1]
+	for t in range(len(tattoos)):
+		tat = tattoos[t+1]
 		if tat[3] == '-':
 			continue
 		if tat[1].find("Legendary Regalia") >= 0:
 			continue	# we did the legendary regalia in the Class section
 		if x == 0:
 			o("<tr>")
-		print_tattoo_cell(tattoo_bytes, t+1)
+		print_tattoo_cell(tattoos, tattoo_bytes, t+1)
 		x = x+1
 		if x == 10:
 			o("</tr>")
@@ -532,7 +524,7 @@ def print_tattoos(tattoo_bytes, levels):
 			x = x + 1
 		o("</tr>")
 	o("</table>")
-	print_tattoo_table(tattoo_bytes, "Other", 
+	print_tattoo_table(tattoos, tattoo_bytes, "Other", 
 		((126, 130, 131, 139, 142, 0),
 		 (132, 133, 134, 135, 136, 0),
 		 (103, 104, 118, 106, 127, 128),
@@ -560,16 +552,17 @@ def print_trophy_cell(clas, imgname, trophy, desc):
 				+f"<a href='http://kol.coldfront.net/thekolwiki/index.php/{trophy}'>{desc}"
 				+"</a></td>")
 
-def print_trophies(trophy_bytes):
+def print_trophies(state, trophy_bytes):
 	o("<h1>Trophies</h1><table cellspacing='0'><tr>")
 	tally = [0, 0]
-	for i in range(len(TROPHIES)):
+	trophies = state['trophies']
+	for i in range(len(trophies)):
 		x = getbits(trophy_bytes, i+1, 1)
 		tally[x] = tally[x] + 1
 	o(f"<p class='subheader'>You have {tally[1]} trophies and are missing {tally[0]} trophies.</p>\n")
 	ct = 1
-	for i in range(1, MAX_TROPHY+1):
-		t = TROPHIES[i]
+	for i in range(1, len(trophies)+1):
+		t = trophies[i]
 		clas = ""
 		if (i == 13):
 			print_trophy_cell('', 'nopic', 'Noble Ascetic', 'Have Less Than 10,000 Meat')
@@ -621,9 +614,10 @@ def print_familiar_cell(clas, imgname, name):
 FAM_STYLES = { 0:"", 1:"fam_have", 2:"fam_have_hatch", 3:"fam_run_100", 4:"fam_run_90", 
 			5:"fam_run_100", 6:"fam_run_100", 7:"fam_run_90", 8:"fam_run_90" }
 
-def print_familiars(familiar_bytes):
+def print_familiars(state, familiar_bytes):
 	have, lack, tour, hundred = (0, 0, 0, 0)
-	for i in range(len(FAMILIARS)):
+	familiars = state['familiars']
+	for i in range(len(familiars)):
 		x = getbits(familiar_bytes, i+1, 4)
 		if x in (1, 3, 4):
 			have = have + 1
@@ -640,7 +634,7 @@ def print_familiars(familiar_bytes):
 	# First, regular familiars
 	ct = 1
 	for i in range(1, MAX_FAMILIAR+1):
-		f = FAMILIARS[i]
+		f = familiars[i]
 		fnum = int(f[0])
 		if ((fnum >= 201) and (fnum <=245)) or (f[3] == '-'):
 			# Skip if Pokefam or no hatchling (April Foolmiliar)
@@ -664,7 +658,7 @@ def print_familiars(familiar_bytes):
 	o("</tr></table><h2>Pocket Familiars</h2><table cellspacing='0'><tr>\n")
 	ct = 1
 	for i in range(201, 246):
-		f = FAMILIARS[i]
+		f = familiars[i]
 		style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
 		print_familiar_cell(style, f[2], f[1])
 		if (ct % 10 == 0):
@@ -676,7 +670,7 @@ def print_familiars(familiar_bytes):
 	# Finally, April Foolmiliars
 	o("</tr></table><h2>April Foolmiliars</h2><table cellspacing='0'><tr>\n")
 	for i in range(270, 279):
-		f = FAMILIARS[i]
+		f = familiars[i]
 		style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
 		print_familiar_cell(style, f[2], f[1])
 	o("</tr></table>")
@@ -685,7 +679,7 @@ def print_familiars(familiar_bytes):
 
 ###########################################################################
 
-def print_mritems(mritem_counts):
+def print_mritems(state, mritem_counts):
 	o("<h1>Mr. Items</h1>")
 	for i in range(len(mritem_counts)):
 		o(f'{i+1}:{mritem_counts[i]} ')
@@ -693,7 +687,7 @@ def print_mritems(mritem_counts):
 
 ###########################################################################
 
-def print_coolitems(coolitem_counts):
+def print_coolitems(state, coolitem_counts):
 	o("<h1>Cool Items</h1>")
 	for i in range(len(coolitem_counts)):
 		o(f'{i+1}:{coolitem_counts[i]} ')
@@ -716,27 +710,31 @@ def prepareResponse(argv, context):
 	prepareResponse returns the HTML string to send to the browser.
 	Call your HTML-generating functions from here.
 	'''
+	state = {}	# used to capture state of user, instead of globals
+	 
 	if 'u' not in argv:
-		argv['u'] = 'Aventuristo'
+		argv['u'] = 'Aventuristo'	# for local testing
 	name = argv['u'].lower()
-	global colorblind
 	if 'colorblind' in argv:
 		colorblind = (int(argv['colorblind']) != 0)
 	else:
 		colorblind = False
+	# If updating, just store the state and return
 	if ("update" in argv) and (argv["update"] == 'j'):
 		save(name, argv)
 		return f'<html><head></head><body>Record added for {name}</body></html>'
+	#
 	if "on_or_before" in argv:
 		when = argv["on_or_before"]
 	else:
 		when = nowstring()
 	fetched_argv = lookup(name, when)
+	# If lookup failed, report and return
 	if len(fetched_argv) == 0:
 		return f"<html><head></head><body>Record for user {name} at time {when} not found</body></html>"
 	#
-	load_data()
-	print_beginning(name, argv, fetched_argv)
+	load_data(state)
+	print_beginning(name, argv, fetched_argv, colorblind)
 	#
 	skill_bytes = arg_to_bytes(fetched_argv, "skills", MAX_SKILL, 2)
 	if "levels" in fetched_argv:
@@ -745,22 +743,22 @@ def prepareResponse(argv, context):
 			levels = levels + ("0"*(NUM_LEVELS-len(levels)))
 	else:
 		levels = "0"*NUM_LEVELS
-	print_skills(skill_bytes, levels)
+	print_skills(state, skill_bytes, levels)
 	#
 	tattoo_bytes = arg_to_bytes(fetched_argv, "tattoos", MAX_TATTOO, 2)
-	tats = print_tattoos(tattoo_bytes, levels)
+	tats = print_tattoos(state, tattoo_bytes, levels)
 	#
 	trophy_bytes = arg_to_bytes(fetched_argv, "trophies", MAX_TROPHY, 1)
-	trophs = print_trophies(trophy_bytes)
+	trophs = print_trophies(state, trophy_bytes)
 	#
 	familiar_bytes = arg_to_bytes(fetched_argv, "familiars", MAX_FAMILIAR, 4)
-	fams = print_familiars(familiar_bytes)
+	fams = print_familiars(state, familiar_bytes)
 	#
 	mritem_counts = arg_to_counts(fetched_argv, "mritems", MAX_MRITEM)
-	print_mritems(mritem_counts)
+	print_mritems(state, mritem_counts)
 	#
 	coolitem_counts = arg_to_counts(fetched_argv, "coolitems", MAX_COOLITEM)
-	print_coolitems(coolitem_counts)
+	print_coolitems(state, coolitem_counts)
 	#
 	print_end(tats, trophs, fams)
 	return ''.join(OUTPUT)
@@ -772,8 +770,8 @@ def prepareResponse(argv, context):
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-def respond(err, response=None):
-	if ON_EDGE:
+def respond(err, on_edge, response=None):
+	if on_edge:
 		headers = {	'content-type': [{ 'key': 'Content-Type', 'value': 'text/html' }]}
 		statcode = 'status'
 	else:
@@ -817,13 +815,12 @@ def lambda_handler(event, context):
 	status code.
 	'''
 	logger.info("## HANDLE LAMBDA")
-	OUTPUT.clear()
+	on_edge = ('httpMethod' not in event)
+	OUTPUT.clear()	# clear that global!
 	if 'source' in event and event['source'] == 'aws.events':
-		return respond(None, 'Ping acknowledged')
+		return respond(None, on_edge, 'Ping acknowledged')
 
-	global ON_EDGE
-	if 'httpMethod' not in event:
-		ON_EDGE = True
+	if on_edge:
 		request = event['Records'][0]['cf']['request']
 		argv = urlparse('?'+request['querystring'])
 		argv = parse_qs(argv.query)
@@ -831,7 +828,6 @@ def lambda_handler(event, context):
 			argv[a] = argv[a][0]
 		operation = request['method']
 	else:
-		ON_EDGE = False
 		argv = event['queryStringParameters']
 		operation = event['httpMethod']
 	if operation == 'GET':
@@ -850,10 +846,10 @@ def lambda_handler(event, context):
 			html = exceptionInfo(traceback.format_exc(), event)
 		finally:
 			signal.alarm(0)
-			return respond(None, html)
+			return respond(None, on_edge, html)
 	else:
 		logger.info(f'NOT A GET, but a {operation}')
-		return respond(ValueError(f'Unsupported method "{operation}"'))
+		return respond(ValueError(f'Unsupported method "{operation}"'), on_edge)
 
 class FakeContext:
 	'''
@@ -863,7 +859,7 @@ class FakeContext:
 		return 300000
 
 # If CGI, create event and context to pass to lambda_handler
-if 'LAMBDA_TASK_ROOT' not in os.environ:
+if not on_aws():
 	event = {}
 	event['httpMethod'] = "GET"
 	event['queryStringParameters'] = {}
@@ -874,9 +870,6 @@ if 'LAMBDA_TASK_ROOT' not in os.environ:
 	event['requestContext']['domainName'] = "fedora2"
 	event['requestContext']['path'] = "/right.here/"
 	response = lambda_handler(event, FakeContext())
-	if ON_EDGE:
-		print(f'Content-Type: {response["headers"]["content-type"][0]["value"]}')
-	else:
-		print(f'Content-Type: {response["headers"]["Content-Type"]}')
+	print(f'Content-Type: {response["headers"]["Content-Type"]}')
 	print()
 	print(response['body'])
