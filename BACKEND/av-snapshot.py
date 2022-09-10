@@ -17,14 +17,6 @@ from urllib.parse import urlparse, parse_qs
 import base64
 from datetime import datetime
 
-# Establish presence of these globals 
-MAX_SKILL = 420
-MAX_TROPHY = 160
-MAX_FAMILIAR = 281
-MAX_TATTOO = 200
-MAX_MRITEM = 300
-MAX_COOLITEM = 500
-
 NUM_LEVELS = 12
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
 
@@ -35,9 +27,13 @@ CGI_TASK_ROOT = "/home/markmeyer/kol/data"
 def on_aws():
 	return ("LAMBDA_TASK_ROOT" in os.environ)
 
-def arg_to_bytes(argv, key, size, eltsize):
-	bits = (size+1)*eltsize
-	tgtlen = round(bits/24.0 + 0.49) * 4  # 24 bits = 4 base 64 characters
+def arg_to_bytes(state, argv, key, eltsize):
+	if key in argv:
+		size = len(state[key])
+	else:
+		size = 500	# way too big, but big enough
+	bits = (size+1)*eltsize	# pad a little
+	tgtlen = round(bits/24.0 + 0.51) * 4  # 24 bits = 4 base 64 characters
 	if key in argv:
 		b64 = argv[key].replace('=','A')
 		if len(b64) < tgtlen:
@@ -45,7 +41,7 @@ def arg_to_bytes(argv, key, size, eltsize):
 		return base64.b64decode(b64, altchars='-_')
 	return base64.b64decode('A'*tgtlen, altchars='-_')
 
-def arg_to_counts(argv, key, size):
+def arg_to_counts(state, argv, key):
 	"""
 	Looks up the specified key in argv, and decodes the resulting base64 string into
 	a series of bytes (pairs of nybbles), and in turn decodes those nybbles into a list
@@ -54,8 +50,10 @@ def arg_to_counts(argv, key, size):
 	0010 0100 1011 will decode into 163 (2*64+4*8+3).
 	"""
 	if key in argv:
+		size = len(state[key])
 		b64 = argv[key].replace('=','A')
 	else:
+		size = 500	# way too big, but big enough
 		b64 = "iIiI"*round((size/4)+1)
 	byts = base64.b64decode(b64, altchars='-_')
 	result = []
@@ -654,7 +652,7 @@ def print_familiars(state):
 	o("<table cellspacing='0'><tr>")
 	# First, regular familiars
 	ct = 1
-	for i in range(1, MAX_FAMILIAR+1):
+	for i in range(1, len(state['familiars'])+1):
 		f = familiars[i]
 		fnum = int(f[0])
 		if ((fnum >= 201) and (fnum <=245)) or (f[3] == '-'):
@@ -885,12 +883,12 @@ def prepareResponse(argv, context):
 	load_data(state)
 	print_beginning(name, argv, fetched_argv, colorblind)
 	#
-	state['skill_bytes'] = arg_to_bytes(fetched_argv, "skills", MAX_SKILL, 2)
-	state['tattoo_bytes'] = arg_to_bytes(fetched_argv, "tattoos", MAX_TATTOO, 2)
-	state['trophy_bytes'] = arg_to_bytes(fetched_argv, "trophies", MAX_TROPHY, 1)
-	state['familiar_bytes'] = arg_to_bytes(fetched_argv, "familiars", MAX_FAMILIAR, 4)
-	state['mritem_counts'] = arg_to_counts(fetched_argv, "mritems", MAX_MRITEM)
-	state['coolitem_counts'] = arg_to_counts(fetched_argv, "coolitems", MAX_COOLITEM)
+	state['skill_bytes'] = arg_to_bytes(state, fetched_argv, "skills", 2)
+	state['tattoo_bytes'] = arg_to_bytes(state, fetched_argv, "tattoos", 2)
+	state['trophy_bytes'] = arg_to_bytes(state, fetched_argv, "trophies", 1)
+	state['familiar_bytes'] = arg_to_bytes(state, fetched_argv, "familiars", 4)
+	state['mritem_counts'] = arg_to_counts(state, fetched_argv, "mritems")
+	state['coolitem_counts'] = arg_to_counts(state, fetched_argv, "coolitems")
 	if "levels" in fetched_argv:
 		levels = fetched_argv["levels"]
 		if len(levels) < NUM_LEVELS:
