@@ -915,10 +915,11 @@ logger.setLevel(logging.INFO)
 
 def respond(err, on_edge, response=None):
 	if on_edge:
-		headers = {	'content-type': [{ 'key': 'Content-Type', 'value': 'text/html' }]}
+		headers = {	'content-type': [{ 'key': 'Content-Type', 
+								'value': 'text/html; charset=UTF-8' }]}
 		statcode = 'status'
 	else:
-		headers = { 'Content-Type': 'text/html' }
+		headers = { 'Content-Type': 'text/html; charset=UTF-8' }
 		statcode = 'statusCode'
 	return {
 		statcode: '400' if err else '200',
