@@ -17,11 +17,13 @@ from urllib.parse import urlparse, parse_qs
 import base64
 from datetime import datetime
 
-# May not have to update below lines if data files change 
+# Establish presence of these globals 
 MAX_SKILL = 420
 MAX_TROPHY = 160
 MAX_FAMILIAR = 281
 MAX_TATTOO = 200
+MAX_MRITEM = 300
+MAX_COOLITEM = 500
 
 NUM_LEVELS = 12
 colorblind = False
@@ -41,6 +43,34 @@ def arg_to_bytes(argv, key, size, eltsize):
 			b64 = b64 + ('A'*(tgtlen - len(b64)))
 		return base64.b64decode(b64, altchars='-_')
 	return base64.b64decode('A'*tgtlen, altchars='-_')
+
+def arg_to_counts(argv, key, size):
+	"""
+	Looks up the specified key in argv, and decodes the resulting base64 string into
+	a series of bytes (pairs of nybbles), and in turn decodes those nybbles into a list
+	of numbers: Each nybble is treated as a octal digit, with the high bit set if and
+	only if that octal digit is the last digit of the encoded number.  For example,
+	0010 0100 1011 will decode into 163 (2*64+4*8+3).
+	"""
+	if key in argv:
+		b64 = argv[key].replace('=','A')
+	else:
+		b64 = "iIiI"*round((size/4)+1)
+	byts = base64.b64decode(b64, altchars='-_')
+	result = []
+	val = 0
+	for b in byts:
+		nyb = b >> 4
+		val = val*8 + (nyb & 7)
+		if nyb >= 8:
+			result.append(val)
+			val = 0
+		nyb = b & 15
+		val = val*8 + (nyb & 7)
+		if nyb >= 8:
+			result.append(val)
+			val = 0
+	return result
 
 
 # This function is to handle opening files in CGI or in AWS
@@ -148,6 +178,8 @@ SKILLS = {}  	# dict of lists (n, name, desc)
 TROPHIES = {}   # dict of lists (n, image name, trophy name, desc)
 FAMILIARS = {}	# dict of lists (n, name, image, hatchling)
 TATTOOS = {}	# dict of lists (n, name)
+MRITEMS = {}	# dict of lists (n, flags, item item ...)
+COOLITEMS = {}	# dict of lists (n, name, image name)
 
 def getbits(byts, index, eltsize):
 	loc = index * eltsize;
@@ -183,6 +215,10 @@ def load_data():
 	MAX_FAMILIAR = load_data_file('av-snapshot-familiars', FAMILIARS)
 	global MAX_TATTOO
 	MAX_TATTOO = load_data_file("av-snapshot-tattoos", TATTOOS)
+	global MAX_MRITEM
+	MAX_MRITEM = load_data_file("av-snapshot-mritems", MRITEMS)
+	global MAX_COOLITEM
+	MAX_COOLITEM = load_data_file("av-snapshot-mritems", COOLITEMS)
 
 
 ###########################################################################
@@ -646,6 +682,23 @@ def print_familiars(familiar_bytes):
 	o("</tr></table>")
 	return have
 
+
+###########################################################################
+
+def print_mritems(mritem_counts):
+	o("<h1>Mr. Items</h1>")
+	for i in range(len(mritem_counts)):
+		o(f'{i+1}:{mritem_counts[i]} ')
+
+
+###########################################################################
+
+def print_coolitems(coolitem_counts):
+	o("<h1>Cool Items</h1>")
+	for i in range(len(coolitem_counts)):
+		o(f'{i+1}:{coolitem_counts[i]} ')
+
+
 ###########################################################################
 
 def print_end(tats, trophs, fams):
@@ -703,12 +756,18 @@ def prepareResponse(argv, context):
 	familiar_bytes = arg_to_bytes(fetched_argv, "familiars", MAX_FAMILIAR, 4)
 	fams = print_familiars(familiar_bytes)
 	#
+	mritem_counts = arg_to_counts(fetched_argv, "mritems", MAX_MRITEM)
+	print_mritems(mritem_counts)
+	#
+	coolitem_counts = arg_to_counts(fetched_argv, "coolitems", MAX_COOLITEM)
+	print_coolitems(coolitem_counts)
+	#
 	print_end(tats, trophs, fams)
 	return ''.join(OUTPUT)
 
-###########################################################
-################ BEGIN AWS/CGI BOILERPLATE ################
-###########################################################
+###########################################################################
+######################## BEGIN AWS/CGI BOILERPLATE ########################
+###########################################################################
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
