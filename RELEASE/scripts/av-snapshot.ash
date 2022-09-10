@@ -8,6 +8,8 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
+string VERSION = '0.1.0';
+
 ////////////////////////////
 
 boolean DEBUG = (get_property('avSnapshotDebug') == 'j');
@@ -598,7 +600,7 @@ void main()
 	} else {
 		yourUrl = `https://g1wjmf0i0h.execute-api.us-east-2.amazonaws.com/default/av-snapshot?u={my_name()}`;
 	}
-	string url = yourUrl + "&update=j";
+	string url = yourUrl + `&update=j&mafiarevision={get_revision()}&snapshotversion={VERSION}`;
     url = url + check_skills(bookshelfHtml);
 	url = url + check_tattoos();
     url = url + check_trophies();
