@@ -71,6 +71,8 @@ def arg_to_counts(argv, key, size):
 		if nyb >= 8:
 			result.append(val)
 			val = 0
+	while (len(result) < size):	
+		result.append(0)	# make sure list is as big as the datafiles expect
 	return result
 
 
@@ -228,11 +230,15 @@ def print_beginning(name, argv, fetched_argv, colorblind):
 	if colorblind:
 		bclas = "class='cb'"
 	o(f"</style></head><body {bclas}>\n")
-	if 'mafia' in fetched_argv:
-		mafia = f" using {fetched_argv['mafia']}"
+	if 'mafiarevision' in fetched_argv:
+		mafia = fetched_argv['mafiarevision']
 	else:
-		mafia = ""
-	o(f"<div class='header'>Snapshot for {name} taken {tstamp}{mafia}.<br/>")
+		mafia = "(unknown)"
+	if 'snapshotversion' in fetched_argv:
+		av_version = fetched_argv['snapshotversion']
+	else:
+		av_version = '(unknown)'
+	o(f"<div class='header'>Snapshot for <b>{name}</b> taken {tstamp} using av-snapshot.ash v{av_version} running on KoLmafia revision r{mafia}.<br/>")
 	query = f"?u={name}"
 	if 'on_or_before' in argv:
 		query = query + '&on_or_before=' + argv['on_or_before']
@@ -782,7 +788,7 @@ def print_mritems(state):
 		(202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213),
 		(215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
-		(240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
+		(240, 241, 242, 243, 244, 245, 246, 247, 248, 0, 0, 0) ))
 	o("<h1>Mr. Yearly Items</h1>")
 	print_mritem_table(state, 2005, 
 		('', 'Volleychaun', 'Fairychaun', 'Fairyball', 'FairyWhelp', 'Equipment'),
