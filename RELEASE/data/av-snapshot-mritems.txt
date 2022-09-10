@@ -237,4 +237,12 @@
 237	i	packaged Daylight Shavings Helmet	Daylight Shavings Helmet	dshelmet_box	-	-	-	-
 238	i	packaged cold medicine cabinet	cold medicine cabinet	cmcabinet_box	-	-	-	-
 239	i	mint condition magnifying glass	cursed magnifying glass	cursedmagbox	-	-	-	-
-240	i	undrilled cosmic bowling ball	cosmic bowling ball	cosmicball	-	-	-	-
+240	s	undrilled cosmic bowling ball	hasCosmicBowlingBall	-	-	-	-	-
+241	i	combat lover's locket lockbox	combat lover's locket	lovelocketbox	-	-	-	-
+242	f	grey gosling	Grey Goose	greygosling	-	-	-	-
+243	i	undamaged unbreakable umbrella	unbreakable umbrella	unbrella1	-	-	-	-
+244	s	MayDay&trade; contract	hasMaydayContract	-	-	-	-	-
+245	i	packaged June cleaver	June cleaver	junecleaverbox	-	-	-	-
+246	i	designer sweatpants (new old stock)	designer sweatpants	sweats_box	-	-	-	-
+247	i	unopened tiny stillsuit	tiny stillsuit	stillsuit_box	-	-	-	-
+248	i	packaged Jurassic Parka	Jurassic Parka	jparka_box	-	-	-	-
