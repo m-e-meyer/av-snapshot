@@ -615,6 +615,7 @@ void main()
 		set_level_counter(i, get_property("skillLevel" + sknum).to_int());
 	}
 	url = url + "&levels=" + levels_string();
+	url = url + "&mafia=" + get_version().replace_string(' ', '+');
 	if (get_property("avSnapshotNosave") == "j") {
     	print(url);
 	} else {

@@ -222,7 +222,11 @@ def print_beginning(name, argv, fetched_argv, colorblind):
 	if colorblind:
 		bclas = "class='cb'"
 	o(f"</style></head><body {bclas}>\n")
-	o(f"<div class='header'>Snapshot for {name} taken {tstamp}.<br/>")
+	if 'mafia' in fetched_argv:
+		mafia = f" using {fetched_argv['mafia']}"
+	else:
+		mafia = ""
+	o(f"<div class='header'>Snapshot for {name} taken {tstamp}{mafia}.<br/>")
 	query = f"?u={name}"
 	if 'on_or_before' in argv:
 		query = query + '&on_or_before=' + argv['on_or_before']
