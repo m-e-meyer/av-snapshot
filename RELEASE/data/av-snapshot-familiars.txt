@@ -279,3 +279,4 @@
 279	Vampire Vintner	vampvint	bottled Vampire Vintner	-	-	-	-	-
 280	Arachnelf	arachnelf	festive egg sac	-	-	-	-	-
 281	Synthetic Rock	synthrock	synthetic rock	-	-	-	-	-
+282	Grey Goose	greygoose	grey gosling	-	-	-	-	-
