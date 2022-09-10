@@ -26,15 +26,21 @@ td, th {
 	border-width: 1px 1px 0 0;
 	border-style: solid;
 	margin: 0;
-	font-size:.7em;
+	font-size:.8em;
 	text-align: center;
 	padding:3px;
+}
+td .noshrink {
+	font-size:1em;
+}
+.morepad td {
+	padding:5px;
 }
 .miniheader {
 	background-color: #dddddd;
 	text-align: center;
 	font-weight: bold;
-	font-size: .7em;
+	font-size: .8em;
 }
 #toc_header span {
 	cursor: pointer;
