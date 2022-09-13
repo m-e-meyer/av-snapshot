@@ -515,7 +515,7 @@ def print_tattoos(state, levels):
 		 (194, 195, 211, 212),
 		 (213, 214, 215, 216),
 		 (228, 229, 257, 258),
-		 (268, 269, 0, 0)))
+		 (268, 269, 281, 0)))
 	print_tattoo_table(tattoos, tattoo_bytes, "Ascension", 
 		((19, 20, 21, 22, 23, 24),
 		 (25, 26, 27, 28, 29, 30),
