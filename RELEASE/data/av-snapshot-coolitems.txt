@@ -464,3 +464,73 @@
 464	synthetic rock	synthrock	-	-	-	-	-
 465	meatball machine	gumballmachine	-	-	-	-	-
 466	refurbished air fryer	airfryer	-	-	-	-	-
+467	Frosty's old silk hat	frostyhat	-	-	-	-	-
+468	Frosty's carrot	frostycarrot	-	-	-	-	-
+469	Frosty's nailbat	frostynailbat	-	-	-	-	-
+470	Frosty's iceball	styore	-	-	-	-	-
+471	Frosty's snowball sack	knobsack	-	-	-	-	-
+472	Frosty's arm	frostyarm	-	-	-	-	-
+473	Zombo's skullcap	skullcap	-	-	-	-	-
+474	Zombo's shield	zomboshield	-	-	-	-	-
+475	Zombo's grievous greaves	bonepants	-	-	-	-	-
+476	Zombo's empty eye	zomboeye	-	-	-	-	-
+477	Zombo's shoulder blade	skullsword	-	-	-	-	-
+478	Zombo's skull ring	skullring	-	-	-	-	-
+479	Chester's bag of candy	candybag	-	-	-	-	-
+480	Chester's cutoffs	cutoffs	-	-	-	-	-
+481	Chester's moustache	chestache	-	-	-	-	-
+482	Chester's Aquarius medallion	aquamedal	-	-	-	-	-
+483	Chester's muscle shirt	wifebeater	-	-	-	-	-
+484	Chester's sunglasses	chestershades	-	-	-	-	-
+485	Ol' Scratch's stovepipe hat	stovehat	-	-	-	-	-
+486	Ol' Scratch's ash can	handcan	-	-	-	-	-
+487	Ol' Scratch's ol' britches	ninjapants	-	-	-	-	-
+488	Ol' Scratch's infernal pitchfork	pitchfork2	-	-	-	-	-
+489	Ol' Scratch's manacles	cuffs	-	-	-	-	-
+490	Ol' Scratch's stove door	stovedoor	-	-	-	-	-
+491	Wand of Oscus	oscuswand	-	-	-	-	-
+492	Oscus's dumpster waders	yakpants	-	-	-	-	-
+493	Oscus's pelt	ratskin	-	-	-	-	-
+494	Oscus's flypaper pants	flypants	-	-	-	-	-
+495	Oscus's garbage can lid	trashield	-	-	-	-	-
+496	Oscus's neverending soda	soda	-	-	-	-	-
+497	Hodgman's porkpie hat	porkpiehat	-	-	-	-	-
+498	Hodgman's lobsterskin pants	bpcords	-	-	-	-	-
+499	Hodgman's bow tie	hobowtie	-	-	-	-	-
+500	Hodgman's lucky sock	tubesock	-	-	-	-	-
+501	Hodgman's almanac	book3	-	-	-	-	-
+502	Hodgman's metal detector	mdetector	-	-	-	-	-
+503	Hodgman's varcolac paw	varcolacpaw	-	-	-	-	-
+504	Hodgman's harmonica	harmonica	-	-	-	-	-
+505	Hodgman's garbage sticker	picker	-	-	-	-	-
+506	Hodgman's cane	cane	-	-	-	-	-
+507	Hodgman's whackin' stick	whackstick	-	-	-	-	-
+508	Hodgman's disgusting technicolor overcoat	hobovercoat	-	-	-	-	-
+509	Hodgman's imaginary hamster	blank	-	-	-	-	-
+510	Uncle Hobo's gift baggy pants	giftbagpants	-	-	-	-	-
+511	Uncle Hobo's epic beard	epicbeard	-	-	-	-	-
+512	Uncle Hobo's stocking cap	stockinghat	-	-	-	-	-
+513	Uncle Hobo's fingerless tinsel gloves	tinselglove	-	-	-	-	-
+514	Uncle Hobo's highest bough	highestbough	-	-	-	-	-
+515	Uncle Hobo's belt	crimbobelt	-	-	-	-	-
+516	hardened slime belt	hardslimebelt	-	-	-	-	-
+517	hardened slime hat	hardslimehat	-	-	-	-	-
+518	hardened slime pants	hardslimepants	-	-	-	-	-
+519	chamoisole	chamoisole	-	-	-	-	-
+520	pernicious cudgel	mlcudgel	-	-	-	-	-
+521	diabolical crossbow	mlcrossbow	-	-	-	-	-
+522	villainous scythe	mlscythe	-	-	-	-	-
+523	grisly shield	mlshield	-	-	-	-	-
+524	corrosive cowl	mlcowl	-	-	-	-	-
+525	corroded breeches	mlpants	-	-	-	-	-
+526	malevolent medallion	mlmedal	-	-	-	-	-
+527	baneful bandolier	mlbando	-	-	-	-	-
+528	slime-covered club	slimeclub	-	-	-	-	-
+529	slime-covered speargun	slimespeargun	-	-	-	-	-
+530	slime-covered helmet	slimehelm	-	-	-	-	-
+531	slime-covered necklace	slimenecklace	-	-	-	-	-
+532	slime-covered lantern	slimelantern	-	-	-	-	-
+533	slime-covered shovel	slimeshovel	-	-	-	-	-
+534	slime-covered compass	slimecompass	-	-	-	-	-
+535	slime-covered greaves	slimegreaves	-	-	-	-	-
+536	Slime-covered staff	slimestaff	-	-	-	-	-

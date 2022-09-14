@@ -731,16 +731,19 @@ def print_coolitem_cell(state, it, print_image=True):
 		o("<td></td>")
 	else:
 		coolitems = state['coolitems']
-		counts = state['coolitem_counts']
+		count = state['coolitem_counts'][it-1]
 		coolitem = coolitems[it]
 		name = coolitem[1]		
 		clas = ''
-		if counts[it-1] > 0:			
+		countstr = ''
+		if count > 0:			
 			clas = " class='hcperm'"
+			if count > 1:
+				countstr = f' x{count}'
 		if print_image:
-			lbody = f"<img src='{IMAGES}/itemimages/{coolitem[2]}.gif'><br/>{name}"
+			lbody = f"<img src='{IMAGES}/itemimages/{coolitem[2]}.gif'><br/>{name}{countstr}"
 		else:
-			lbody = name
+			lbody = f"{name}{countstr}"
 		o(f"<td style='margin: 5px' {clas}>{wikilink(name, lbody)}</td>")
 
 def print_mritem_header(header):
@@ -834,6 +837,49 @@ def print_mritems(state):
 
 ###########################################################################
 
+def print_loot_row(state, header, items, pad=0):
+	o("<tr>")
+	if header != '':
+		o(f"<th>{header}</th>")
+	for it in items:
+		print_coolitem_cell(state, it)
+	if pad > 0:
+		o("<td></td>"*pad)
+	o("</tr>")
+
+def print_basement(state):
+	o("<h1>Basement</h1>")
+	o("<h2>Hobopolis</h2>")
+	o("<table cellspacing='0'><tr><th>Boss</th><th colspan='3'>Outfit Pieces</th><th colspan='3'>Other Pieces</th></tr>")
+	print_loot_row(state, "Frosty", range(467, 473))
+	print_loot_row(state, "Zombo", range(473,479))
+	print_loot_row(state, "Chester", range(479,485))
+	print_loot_row(state, "Ol' Scratch", range(485,491))
+	print_loot_row(state, "Oscus", range(491,497))
+	print_loot_row(state, "Uncle Hobo", range(510,516))
+	print_loot_row(state, "Hodgman", range(497,501), 2)
+	print_loot_row(state, "Hodgman Offhands", range(501,507))
+	print_loot_row(state, "Hodgman Speed", range(507,510), 3)
+	o("</table><h2>Slime Tube</h2><table cellspacing='0'>")
+	print_loot_row(state, "", range(516, 522))
+	print_loot_row(state, "", range(522, 528))
+	print_loot_row(state, "", range(528, 532), 2)
+	print_loot_row(state, "", range(532, 537), 1)
+	o("</table><h2>Dreadsylvania</h2>")
+	o("<table cellspacing='0'><tr><th>Boss</th><th colspan='3'>Outfit Pieces</th><th colspan='3'>Other Pieces</th></tr>")
+	print_loot_row(state, "Great Wolf", range(84, 90))
+	print_loot_row(state, "Falls-From-Sky", range(90, 96))
+	print_loot_row(state, "Mayor Ghost", range(96, 102))
+	print_loot_row(state, "Zombie", range(102, 108))
+	print_loot_row(state, "Unkillable Skeleton", range(108, 114))
+	print_loot_row(state, "Count Drunkula", range(114, 120))
+	o("</table>")
+	#for i in range(len(coolitem_counts)):
+	#	o(f'{i+1}:{coolitem_counts[i]} ')
+
+
+###########################################################################
+
 def print_coolitems(state):
 	o("<h1>Cool Items</h1>")
 	#for i in range(len(coolitem_counts)):
@@ -901,6 +947,7 @@ def prepareResponse(argv, context):
 	trophs = print_trophies(state)
 	fams = print_familiars(state)
 	print_mritems(state)
+	print_basement(state)
 	print_coolitems(state)
 	#
 	print_end(tats, trophs, fams)
