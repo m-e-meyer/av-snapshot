@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '0.1.0';
+string VERSION = '0.1.1';
 
 ////////////////////////////
 
@@ -598,7 +598,7 @@ void main()
 	if (get_property("avSnapshotLocal") == "j") {
     	yourUrl = `http://localhost/cgi-bin/av-snapshot.py?u={my_name()}`;
 	} else {
-		yourUrl = `https://g1wjmf0i0h.execute-api.us-east-2.amazonaws.com/default/av-snapshot?u={my_name()}`;
+		yourUrl = `https://api.aventuristo.net/av-snapshot?u={my_name()}`;
 	}
 	string url = yourUrl + `&update=j&mafiarevision={get_revision()}&snapshotversion={VERSION}`;
     url = url + check_skills(bookshelfHtml);
