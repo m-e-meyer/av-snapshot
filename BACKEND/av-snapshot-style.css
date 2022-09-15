@@ -7,7 +7,7 @@ h1, h2 {
 	text-align: left; 
 	font-size: 1.5em; 
 	margin-bottom: .25em; 
-	margin-top: 1.5em; 
+	margin-top: .5em; 
 }
 h2 {
 	font-size: 1.25em;
@@ -21,6 +21,9 @@ table {
 	border-style: solid;
 	padding: 1em, 2em, 0, 2em
 }
+table.nobord {
+	border-width: 0 0 0 0;
+}
 td, th {
 	border-color: #000;
 	border-width: 1px 1px 0 0;
@@ -30,8 +33,11 @@ td, th {
 	text-align: center;
 	padding:3px;
 }
-td .noshrink {
-	font-size:1em;
+.nobord td {
+	border-width: 0 0 0 0;
+}
+td.noshrink {
+	font-size:1.25em;
 }
 .morepad td {
 	padding:5px;

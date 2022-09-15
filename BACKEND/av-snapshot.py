@@ -86,6 +86,9 @@ def open_file_for_reading(filename):
 OUTPUT = []
 def o(str):
 	OUTPUT.append(str)
+def o_split(state):
+	state["o-pre-toc"] = OUTPUT[:]
+	OUTPUT.clear()
 
 
 def split_param_string(pstring):
@@ -215,10 +218,24 @@ def load_data(state):
 	state['mritems'] = load_data_file("av-snapshot-mritems")
 	state['coolitems'] = load_data_file("av-snapshot-coolitems")
 
+def hx(tag, text, link):
+	o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
+	  f"<{tag} id='{link}'>{text}</{tag}></td>"
+	  "<td>[<a href='#top'>back to top</a>]</td></tr></table>")
+
+def h1(state, text, link):
+	hx('h1', text, link)
+	state['toc'].append([text, link, []])
+
+def h2(state, text, link):
+	hx('h2', text, link)
+	last = state['toc'][len(state['toc'])-1]
+	last[2].append((text, link))
+
 
 ###########################################################################
 
-def print_beginning(name, argv, fetched_argv, colorblind):
+def print_beginning(state, name, argv, fetched_argv, colorblind):
 	tstamp = fetched_argv['tstamp']
 	o("<!DOCTYPE html>\n")
 	o("<html><head><style>")
@@ -228,6 +245,19 @@ def print_beginning(name, argv, fetched_argv, colorblind):
 	if colorblind:
 		bclas = "class='cb'"
 	o(f"</style></head><body {bclas}>\n")
+	o("""<script>
+	function toggle_toc() {
+		b = document.getElementById('showhide');
+		toc = document.getElementById('toc');
+		if (b.value == 'Show') {
+			b.value = 'Hide';
+			toc.style.display = 'block';
+		} else {
+			b.value = 'Show';
+			toc.style.display = 'none';
+		}
+	}
+	</script>""")
 	if 'mafiarevision' in fetched_argv:
 		mafia = fetched_argv['mafiarevision']
 	else:
@@ -250,6 +280,10 @@ def print_beginning(name, argv, fetched_argv, colorblind):
 	else:
 		suffix = '.py' 
 	o(f"Please click <a href='av-snapshot{suffix}{query}'>here</a> to turn {switch} colorblind mode.</div>\n")
+	o("<p></p><table class='nobord' cellspacing=0 cellpadding=0><tr><td class='nobord'><button onclick='toggle_toc();' id='showhide'>Hide</b></td>"
+	  "<td class='nobord' style='font-size:1.5em;' valign='center'><b>Table of Contents</b></td></tr></table><div id='toc'>")
+	o_split(state)
+	o("</div>")
 
 
 ###########################################################################
@@ -442,7 +476,7 @@ def print_skill_table(state, levels):
 	o('</table>\n')
 
 def print_skills(state, levels):
-	o("<h1>Skills</h1>")
+	h1(state, "Skills", "a_skills")
 	tally = [0, 0, 0]
 	skill_bytes = state['skill_bytes']
 	for i in range(len(state['skills'])):
@@ -480,8 +514,9 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
 			clas = "class='perm'"
 		o(f"<td {clas}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
 
-def print_tattoo_table(tattoos, tattoo_bytes, header, rows, levels=""):
-	o(f'<h2>{header}</h2><table cellspacing="0">')
+def print_tattoo_table(state, tattoos, tattoo_bytes, header, rows, levels=""):
+	h2(state, header, "a_"+header)
+	o('<table cellspacing="0">')
 	for row in rows:
 		o("<tr>")
 		for tat in row:
@@ -492,7 +527,7 @@ def print_tattoo_table(tattoos, tattoo_bytes, header, rows, levels=""):
 def print_tattoos(state, levels):
 	tattoos = state['tattoos']
 	tattoo_bytes = state['tattoo_bytes']
-	o("<h1>Tattoos</h1>")
+	h1(state, "Tattoos", "a_tattoos")
 	tally = [0, 0, 0]
 	for i in range(len(tattoos)):
 		x = getbits(tattoo_bytes, i+1, 2)
@@ -503,7 +538,7 @@ def print_tattoos(state, levels):
 		tally[1] = tally[1] + 1
 	o(f"<p class='subheader'>You have {tally[1]} tattoos and {tally[2]} outfits for which"
 	  f" you don't have the corresponding tattoo, and are missing {tally[0]} tattoos.</p>\n")
-	print_tattoo_table(tattoos, tattoo_bytes, "Class", 
+	print_tattoo_table(state, tattoos, tattoo_bytes, "Class", 
 		((1, 2, 3, 108),
 		 (4, 5, 6, 109),
 		 (7, 8, 9, 110),
@@ -516,14 +551,15 @@ def print_tattoos(state, levels):
 		 (213, 214, 215, 216),
 		 (228, 229, 257, 258),
 		 (268, 269, 281, 0)))
-	print_tattoo_table(tattoos, tattoo_bytes, "Ascension", 
+	print_tattoo_table(state, tattoos, tattoo_bytes, "Ascension", 
 		((19, 20, 21, 22, 23, 24),
 		 (25, 26, 27, 28, 29, 30),
 		 (31, 32, 33, 34, 35, 36),
 		 (37, 38, 39, 40, 41, 42),
 		 (43, 44, 45, 0, 0, 0)))
 	# do outfit table - we assume any tattoo with a component is an outfit
-	o(f'<h2>Outfits</h2><table cellspacing="0">')
+	h2(state, "Outfits", "a_outfits")
+	o('<table cellspacing="0">')
 	x = 0
 	for t in range(len(tattoos)):
 		tat = tattoos[t+1]
@@ -544,7 +580,7 @@ def print_tattoos(state, levels):
 			x = x + 1
 		o("</tr>")
 	o("</table>")
-	print_tattoo_table(tattoos, tattoo_bytes, "Other", 
+	print_tattoo_table(state, tattoos, tattoo_bytes, "Other", 
 		((126, 130, 131, 139, 142, 0),
 		 (132, 133, 134, 135, 136, 0),
 		 (103, 104, 118, 106, 127, 128),
@@ -572,7 +608,8 @@ def print_trophy_cell(clas, imgname, trophy, desc):
 
 def print_trophies(state):
 	trophy_bytes = state['trophy_bytes']
-	o("<h1>Trophies</h1><table cellspacing='0'><tr>")
+	h1(state, "Trophies", "a_trophies")
+	o("<table cellspacing='0'><tr>")
 	tally = [0, 0]
 	trophies = state['trophies']
 	for i in range(len(trophies)):
@@ -647,7 +684,7 @@ def print_familiars(state):
 			if x in (3, 5, 6):
 				hundred = hundred + 1
 	lack = lack - 9		# we won't count the April Foolmiliars
-	o("<h1>Familiars</h1>")
+	h1(state, "Familiars", "a_familiars")
 	o(f"<p class='subheader'>You have {have} familiars (missing {lack}), have done {tour} tourguide runs and {hundred} 100% runs.</p>")
 	o("<table cellspacing='0'><tr>")
 	# First, regular familiars
@@ -674,7 +711,9 @@ def print_familiars(state):
 	    +'<td class="fam_have_hatch">Have Familiar Hatchling</td>'
 	    +"<td class='fam_missing'>Don't have Familiar</td>")
 	# Next, Pokefams
-	o("</tr></table><h2>Pocket Familiars</h2><table cellspacing='0'><tr>\n")
+	o("</tr></table>")
+	h2(state, "Pocket Familiars", "a_pokefam")
+	o("<table cellspacing='0'><tr>\n")
 	ct = 1
 	for i in range(201, 246):
 		f = familiars[i]
@@ -687,7 +726,9 @@ def print_familiars(state):
 		o("<td></td>")
 		ct = ct + 1
 	# Finally, April Foolmiliars
-	o("</tr></table><h2>April Foolmiliars</h2><table cellspacing='0'><tr>\n")
+	o("</tr></table>")
+	h2(state, "April Foolmiliars", "a_foolmiliars")
+	o("<table cellspacing='0'><tr>\n")
 	for i in range(270, 279):
 		f = familiars[i]
 		style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
@@ -767,7 +808,7 @@ def print_mritem_table(state, yr, headers, rows):
 	o("</table>")
 
 def print_mritems(state):
-	o("<h1>Mr. Items</h1>")
+	h1(state, "Mr. Items", "a_mritems")
 	print_mritem_table(state, 2004, 
 		('', 'January', 'February', 'March', 'April', 'May', 'June',
 			'July', 'August', 'September', 'October', 'November', 'December'),
@@ -790,7 +831,7 @@ def print_mritems(state):
 		(215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 0, 0, 0) ))
-	o("<h1>Mr. Yearly Items</h1>")
+	h2(state, "Mr. Yearly Items", "a_mryearly")
 	print_mritem_table(state, 2005, 
 		('', 'Volleychaun', 'Fairychaun', 'Fairyball', 'FairyWhelp', 'Equipment'),
 		((67, 68, 0, 0, 0),
@@ -812,7 +853,8 @@ def print_mritems(state):
 		(0, 0, 0, 0, 227),
 		(0, 0, 0, 0, 239)))
 	# This is a weird case, a mix of Mr. Items and Cool items
-	o("<h1>Jick's Mom and Janet's Merchandise Table</h1><table class='morepad' cellspacing='0'>")
+	h2(state, "Jick's Mom and Janet's Merchandise Table", "a_merch")
+	o("<table class='morepad' cellspacing='0'>")
 	for r in ((325, 326, 327, 328, 329, 330),
 			(331, 332, 333, 334, 0, 0)):
 		o("<tr>")
@@ -848,8 +890,8 @@ def print_loot_row(state, header, items, pad=0):
 	o("</tr>")
 
 def print_basement(state):
-	o("<h1>Basement</h1>")
-	o("<h2>Hobopolis</h2>")
+	h1(state, "Basement", "a_basement")
+	h2(state, "Hobopolis", "a_hobopolis")
 	o("<table cellspacing='0'><tr><th>Boss</th><th colspan='3'>Outfit Pieces</th><th colspan='3'>Other Pieces</th></tr>")
 	print_loot_row(state, "Frosty", range(467, 473))
 	print_loot_row(state, "Zombo", range(473,479))
@@ -860,12 +902,15 @@ def print_basement(state):
 	print_loot_row(state, "Hodgman", range(497,501), 2)
 	print_loot_row(state, "Hodgman Offhands", range(501,507))
 	print_loot_row(state, "Hodgman Speed", range(507,510), 3)
-	o("</table><h2>Slime Tube</h2><table cellspacing='0'>")
+	o("</table>")
+	h2(state, "Slime Tube", "a_tube")
+	o("<table cellspacing='0'>")
 	print_loot_row(state, "", range(516, 522))
 	print_loot_row(state, "", range(522, 528))
 	print_loot_row(state, "", range(528, 532), 2)
 	print_loot_row(state, "", range(532, 537), 1)
-	o("</table><h2>Dreadsylvania</h2>")
+	o("</table>")
+	h2(state, "Dreadsylvania", "a_dread")
 	o("<table cellspacing='0'><tr><th>Boss</th><th colspan='3'>Outfit Pieces</th><th colspan='3'>Other Pieces</th></tr>")
 	print_loot_row(state, "Great Wolf", range(84, 90))
 	print_loot_row(state, "Falls-From-Sky", range(90, 96))
@@ -881,7 +926,7 @@ def print_basement(state):
 ###########################################################################
 
 def print_coolitems(state):
-	o("<h1>Cool Items</h1>")
+	h1(state, "Cool Items", "a_coolitems")
 	#for i in range(len(coolitem_counts)):
 	#	o(f'{i+1}:{coolitem_counts[i]} ')
 
@@ -894,7 +939,17 @@ def print_end(tats, trophs, fams):
 	o("</body></html>\n")
 
 
+###########################################################################
+
+def generate_toc(entries):
+	result = []
+	for entry in entries:
+		result.append(f"<a href='#{entry[1]}'>{entry[0]}</a><br/>")
+		for subentry in entry[2]:
+			result.append(f"&nbsp;&nbsp;&nbsp;&nbsp;<a href='#{subentry[1]}'>{subentry[0]}</a><br/>")
+	return result
 	
+
 ###########################################################################
 
 
@@ -904,6 +959,7 @@ def prepareResponse(argv, context):
 	Call your HTML-generating functions from here.
 	'''
 	state = {}	# used to capture state of user, instead of globals
+	state['toc'] = []
 	 
 	if 'u' not in argv:
 		argv['u'] = 'Aventuristo'	# for local testing
@@ -927,7 +983,7 @@ def prepareResponse(argv, context):
 		return f"<html><head></head><body>Record for user {name} at time {when} not found</body></html>"
 	#
 	load_data(state)
-	print_beginning(name, argv, fetched_argv, colorblind)
+	print_beginning(state, name, argv, fetched_argv, colorblind)
 	#
 	state['skill_bytes'] = arg_to_bytes(state, fetched_argv, "skills", 2)
 	state['tattoo_bytes'] = arg_to_bytes(state, fetched_argv, "tattoos", 2)
@@ -951,7 +1007,11 @@ def prepareResponse(argv, context):
 	print_coolitems(state)
 	#
 	print_end(tats, trophs, fams)
-	return ''.join(OUTPUT)
+	pre_toc = ''.join(state["o-pre-toc"])
+	toc = ''.join(generate_toc(state['toc']))
+	post_toc = ''.join(OUTPUT)
+	return pre_toc + toc + post_toc
+
 
 ###########################################################################
 ######################## BEGIN AWS/CGI BOILERPLATE ########################
