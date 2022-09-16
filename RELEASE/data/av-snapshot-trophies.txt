@@ -124,7 +124,7 @@
 124	take_a_chanceacus	No Particular Reason	Kill 1,000 enemies with a bone abacus. 	-	-	-	-	-
 125	put_gilded_lilies_in_it	Bronzed Tin Can	Drink all the beers from A Beer Garden in a single day  	-	-	-	-	-
 126	wheel_of_space	True Believer	Have all 12 disco horoscope effects active at the same time  	-	-	-	-	-
-127	pez_porridge_hot	EEZY PEEZY	&quot;'Collect&quot; all 37 PEEZ dispensers 	-	-	-	-	-
+127	pez_porridge_hot	EEZY PEEZY	"Collect" all 37 PEEZ dispensers 	-	-	-	-	-
 128	oh_no_not_again	Very Like a Whale	Make a bowl of petunias 	-	-	-	-	-
 129	hero_dreams_of_gyros	Gyro Hero	Eat 108 warbear gyros 	-	-	-	-	-
 130	d_c_cab_squared	Alia Iacta Est	Have an entire set of Tiny Die-Cast series 1 in your Display Case  	-	-	-	-	-

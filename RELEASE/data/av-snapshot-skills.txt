@@ -182,7 +182,7 @@
 182	Summon Clip Art	-	Tome of Clip	-	-	-	-	-
 183	Master of the Surprising Fist	+10 Dam and +20 to-hit with empty hands	-	p	-	-	-	-
 184	Summon Dice	-	Gygaxian Libram	-	-	-	-	-
-185	Summon &quot;Boner Battalion&quot;	Damage Each round of Combat	-	b	-	-	-	-
+185	Summon "Boner Battalion"	Damage Each round of Combat	-	b	-	-	-	-
 186	Summon Resolutions	-	Resolution	-	-	-	-	-
 187	Torment Plant	-	-	-	-	-	-	-
 188	Pinch Ghost	-	-	-	-	-	-	-
