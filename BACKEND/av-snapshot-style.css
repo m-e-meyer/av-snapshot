@@ -24,6 +24,9 @@ table {
 table.nobord {
 	border-width: 0 0 0 0;
 }
+table.toc {
+	padding: 1em, 1em, 1em, 1em;
+}
 td, th {
 	border-color: #000;
 	border-width: 1px 1px 0 0;
@@ -36,8 +39,16 @@ td, th {
 .nobord td {
 	border-width: 0 0 0 0;
 }
+.toc td {
+	padding: 0 2em 0 2em;
+}
 td.noshrink {
 	font-size:1.25em;
+}
+td.toc {
+	font-size:1em;
+	text-align: left;
+	vertical-align: top;
 }
 .morepad td {
 	padding:5px;

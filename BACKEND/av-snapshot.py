@@ -903,6 +903,12 @@ def print_basement(state):
 	print_loot_row(state, "Hodgman Offhands", range(501,507))
 	print_loot_row(state, "Hodgman Speed", range(507,510), 3)
 	o("</table>")
+	h2(state, "Hobo Code Binder", "a_hobocode")
+	o("<p>Coming soon!</p>")
+	h2(state, "Hobo Equipment", "a_hobocode")
+	o("<p>Coming soon!</p>")
+	h2(state, "Hobo Instruments", "a_hobocode")
+	o("<p>Coming soon!</p>")
 	h2(state, "Slime Tube", "a_tube")
 	o("<table cellspacing='0'>")
 	print_loot_row(state, "", range(516, 522))
@@ -927,26 +933,142 @@ def print_basement(state):
 
 def print_coolitems(state):
 	h1(state, "Cool Items", "a_coolitems")
+	h2(state, "Ultrarares", "a_ultra")
+	o("<p>Coming soon!</p>")
+	h2(state, "Swagger Stuff", "a_pvp")
+	o("<p>Coming soon!</p>")
+	h2(state, "Thwaitgold", "a_thwait")
+	o("<p>Coming soon!</p>")
+	h2(state, "War Medals", "a_medals")
+	o("<p>Coming soon!</p>")
+	h2(state, "Sea Stuff", "a_sea")
+	o("<p>Coming soon!</p>")
+	h2(state, "Chefstaves", "a_staves")
+	o("<p>Coming soon!</p>")
+	h2(state, "A Moment of Reflection", "a_reflection")
+	o("<p>Coming soon!</p>")
+	h2(state, "Raiments of the FInal Boss", "a_raiments")
+	o("<p>Coming soon!</p>")
+	h2(state, "Psychoanalysis", "a_psycho")
+	o("<p>Coming soon!</p>")
+	h2(state, "Conspiracy Island", "a_conspiracy")
+	o("<p>Coming soon!</p>")
+	h2(state, "Dinseylandfill", "a_dinsey")
+	o("<p>Coming soon!</p>")
+	h2(state, "That 70s Volcano", "a_volcano")
+	o("<p>Coming soon!</p>")
+	h2(state, "The Glaciest", "a_glaciest")
+	o("<p>Coming soon!</p>")
+	h2(state, "Warbear Crimbo", "a_warbear")
+	o("<p>Coming soon!</p>")
+	h2(state, "Marty's Quest", "a_marty")
+	o("<p>Coming soon!</p>")
+	h2(state, "Gotpork", "a_gotpork")
+	o("<p>Coming soon!</p>")
+	h2(state, "LT&T Telegraph Office", "a_ltt")
+	o("<p>Coming soon!</p>")
+	h2(state, "Hair Club for Loathers", "a_hairclub")
+	o("<p>Coming soon!</p>")
+	h2(state, "Fishin' Gear", "a_fishin")
+	o("<p>Coming soon!</p>")
+	h2(state, "The Precinct", "a_precinct")
+	o("<p>Coming soon!</p>")
+	h2(state, "Busting Makes You Feel Good", "a_busting")
+	o("<p>Coming soon!</p>")
+	h2(state, "Secrets from the Future", "a_secrets")
+	o("<p>Coming soon!</p>")
+	h2(state, "Twitchery", "a_twitch")
+	o("<p>Coming soon!</p>")
+	h2(state, "Gingerbread City", "a_ginger")
+	o("<p>Coming soon!</p>")
+	h2(state, "Chakra Crimbo", "a_chakra")
+	o("<p>Coming soon!</p>")
+	h2(state, "Spacegate", "a_spacegate")
+	o("<p>Coming soon!</p>")
+	h2(state, "FantasyRealm", "a_fantasy")
+	o("<p>Coming soon!</p>")
+	h2(state, "Neverending Party", "a_party")
+	o("<p>Coming soon!</p>")
+	h2(state, "Silent Crombotato", "a_scrimbo")
+	o("<p>Coming soon!</p>")
+	h2(state, "PirateRealm", "a_pirate")
+	o("<p>Coming soon!</p>")
+	h2(state, "Underwater Crimbo", "a_uwcrimbo")
+	o("<p>Coming soon!</p>")
+	h2(state, "Gooified Crimbo", "a_gcrimbo")
+	o("<p>Coming soon!</p>")
+	h2(state, "Arcade Games", "a_arcade")
+	o("<p>Coming soon!</p>")
 	#for i in range(len(coolitem_counts)):
 	#	o(f'{i+1}:{coolitem_counts[i]} ')
 
 
 ###########################################################################
 
-def print_end(tats, trophs, fams):
-	o(f"<a name='collectorscore'><h2>Collector's Score: {tats+trophs+fams}"
-	  f" (Tattoo: {tats}, Trophy: {trophs}, Familiar: {fams})</a></h2>")
+def print_discoveries(state):
+	h1(state, "Discoveries", "a_disc")
+	h2(state, "Cocktailcrafting", "a_disc_cock")
+	o("<p>Coming soon!</p>")
+	h2(state, "Cooking", "a_disc_cook")
+	o("<p>Coming soon!</p>")
+	h2(state, "Meatpasting", "a_disc_paste")
+	o("<p>Coming soon!</p>")
+	h2(state, "Smithing", "a_disc_smith")
+	o("<p>Coming soon!</p>")
+	h2(state, "Miscellaneous Discoveries", "a_disc_misc")
+	o("<p>Coming soon!</p>")
+
+def print_consumption(state):
+	h1(state, "Consumption", "a_consum")
+	h2(state, "Food Consumption", "a_consum_food")
+	o("<p>Coming soon!</p>")
+	h2(state, "Booze", "a_consum_booze")
+	o("<p>Coming soon!</p>")
+
+
+###########################################################################
+
+def print_end(state, tats, trophs, fams):
+	h1(state, "Miscellaneous Accomplishments", "a_misc")
+	o("<h3>Telescope</h3>")
+	o("<p>Coming soon!</p>")
+	o("<h3>Karma</h3>")
+	o("<p>Coming soon!</p>")
+	o("<h3>Monster Manuel</h3>")
+	o("<p>Coming soon!</p>")
+	o("<h3>Demon Names</h3>")
+	o("<p>Coming soon!</p>")
+	o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"
+	  f" (Tattoo: {tats}, Trophy: {trophs}, Familiar: {fams})</a></h3>")
 	o("</body></html>\n")
 
 
 ###########################################################################
 
 def generate_toc(entries):
+	# First, count how many entries we have
+	NUM_COLUMNS = 3
+	num_entries = 0
+	for entry in entries:
+		num_entries = num_entries + 1 + len(entry[2])
+	COLSIZE = num_entries//NUM_COLUMNS + 1
+	# Now put entries in multicolumn display
 	result = []
+	e = 0
+	result.append("<table class='nobord toc' cellspacing=0 cellpadding=0><tr><td class='toc'>")
 	for entry in entries:
 		result.append(f"<a href='#{entry[1]}'>{entry[0]}</a><br/>")
+		e = e+1
+		if (e >= COLSIZE):
+			result.append("</td><td class='toc'>")
+			e = 0
 		for subentry in entry[2]:
-			result.append(f"&nbsp;&nbsp;&nbsp;&nbsp;<a href='#{subentry[1]}'>{subentry[0]}</a><br/>")
+			result.append(f"&nbsp;&bull;&nbsp;<a href='#{subentry[1]}'>{subentry[0]}</a><br/>")
+			e = e+1
+			if (e >= COLSIZE):
+				result.append("</td><td class='toc'>")
+				e = 0
+	result.append("</td></tr></table>")
 	return result
 	
 
@@ -1005,8 +1127,10 @@ def prepareResponse(argv, context):
 	print_mritems(state)
 	print_basement(state)
 	print_coolitems(state)
+	print_discoveries(state)
+	print_consumption(state)
 	#
-	print_end(tats, trophs, fams)
+	print_end(state, tats, trophs, fams)
 	pre_toc = ''.join(state["o-pre-toc"])
 	toc = ''.join(generate_toc(state['toc']))
 	post_toc = ''.join(OUTPUT)
