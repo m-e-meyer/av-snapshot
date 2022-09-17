@@ -488,7 +488,11 @@ def print_skills(state, levels):
 	for i in range(len(state['skills'])):
 		x = getbits(skill_bytes, i+1, 2)
 		tally[x] = tally[x] + 1
-	o(f"<p class='subheader'>You have {tally[2]} skills Hardcore permed, {tally[1]} skills Softcore permed, and {tally[0]} missing.</p>\n")
+	o(f"<p class='subheader'>You have {tally[2]} skills Hardcore permed,"
+	  f" {tally[1]} skills Softcore permed, and {tally[0]} missing.</p>\n"
+	  "<p>Explanation of symbols: <i>Italicized</i> skills are Passive;"
+	  " &copy; marks skills really useful only to their classes;"
+	  " &marker; marks skills that can be relearned from a used skillbook or such</p>")
 	print_skill_table(state, levels)
 
 
