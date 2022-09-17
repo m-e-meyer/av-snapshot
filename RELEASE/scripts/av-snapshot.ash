@@ -152,9 +152,9 @@ record ItemImage
     string i;
 };
 
-ItemImage [int] ASCREWARDS, BOOZE, CONCOCKTAIL, CONFOOD, CONMEAT, CONMISC, CONSMITH, 
-	COOLITEMS, FAMILIARS, FOOD, HOBOPOLIS, MANUEL, MRITEMS, ROGUEPROGRAM, SKILLS,
-    SLIMETUBE, TATTOOS, TROPHIES, WARMEDALS, TRACKED; 
+ItemImage [int] BOOZE, CONCOCKTAIL, CONFOOD, CONMEAT, CONMISC, CONSMITH, 
+	COOLITEMS, FAMILIARS, FOOD, HOBOPOLIS, MANUEL, MRITEMS, SKILLS,
+    SLIMETUBE, TATTOOS, TROPHIES, TRACKED; 
 int[int] LEVELS = {};
 
 void set_level_counter(int i, int value)
@@ -167,12 +167,12 @@ void set_level_counter(int i, int value)
 	LEVELS[i] = value;
 }
 
-string BASE36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+string BASE62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 string levels_string() 
 {
 	string result = "";
 	foreach x, val in LEVELS {
-		result = result + BASE36.substring(val, val+1);
+		result = result + BASE62.substring(val, val+1);
 	}
 	return result;
 }
@@ -192,6 +192,8 @@ void load_data()
 	load_current_map("av-snapshot-familiars", FAMILIARS);
 	load_current_map("av-snapshot-mritems", MRITEMS);
 	load_current_map("av-snapshot-coolitems", COOLITEMS);
+	load_current_map("av-snapshot-booze", BOOZE);
+	load_current_map("av-snapshot-food", FOOD);
 }
 
 boolean isIn(string name, string html)
@@ -207,6 +209,24 @@ boolean isIn(string name, string html)
 	matcher reg = create_matcher(name, html);
 	return reg.find();
 }
+
+# NOTE: html must have already been converted to lower case
+int hasConsumed(string name, string html)
+{
+	name = to_lower_case(name);
+	name = replace_string(name, "(", "\\(");
+	name = replace_string(name, ")", "\\)");
+	name = replace_string(name, "[", "\\[");
+	name = replace_string(name, "]", "\\]");
+	name = replace_string(name, "?", "\\?");
+	matcher m = create_matcher(">\\s*" + name + "(?:\\s*)</a>", html);
+	if (find(m)) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
 
 int num_items(string name)
 {
@@ -471,7 +491,7 @@ string check_mritems(string html)
 	string airportHtml;
 
     bitarray b = new_bitarray(0, 4);
-	print("Checking for Mr. Items", "olive");
+	print("Checking for Mr. Items...", "olive");
 
 	if (!get_property("spookyAirportAlways").to_boolean() 
 		|| !get_property("sleazeAirportAlways").to_boolean() 
@@ -568,11 +588,29 @@ string check_mritems(string html)
 string check_coolitems()
 {
     bitarray b = new_bitarray(0, 4);
-	print("Checking for Cool Items", "olive");
-	foreach x in coolitems {
-		b.add_item_count(num_items(coolitems[x].itemname));
+	print("Checking for Cool Items...", "olive");
+	foreach x in COOLITEMS {
+		b.add_item_count(num_items(COOLITEMS[x].itemname));
 	}
 	return "&coolitems=" + b.base64_encode();
+}
+
+
+###########################################################################
+
+string check_consumption()
+{
+    bitarray b = new_bitarray(BOOZE.count()+1, 1);
+	bitarray f = new_bitarray(FOOD.count()+1, 1);
+	print("Checking consumption...", "olive");
+	string html = to_lower_case(visit_url("showconsumption.php"));
+	foreach i, rec in BOOZE {
+		b.set(i, hasConsumed(rec.itemname, html));
+	}
+	foreach i, rec in FOOD {
+		f.set(i, hasConsumed(rec.itemname, html));
+	}
+	return "&booze=" + b.base64_encode() + "&food=" + f.base64_encode();
 }
 
 
@@ -607,6 +645,7 @@ void main()
 	url = url + check_familiars(familiarNamesHtml);
 	url = url + check_mritems(familiarNamesHtml + bookshelfHtml);
 	url = url + check_coolitems();
+	url = url + check_consumption();
 	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
 	//							 carrot, bear, numberology, safari, implode, hobotat)
 	string[int] levelmap = {
@@ -620,6 +659,7 @@ void main()
 	url = url + "&mafia=" + get_version().replace_string(' ', '+');
 	if (get_property("avSnapshotNosave") == "j") {
     	print(url);
+		print(`URL length = {url.length()}`);
 	} else {
 		print("Contacting database...");
 		buffer b = visit_url(url, false);

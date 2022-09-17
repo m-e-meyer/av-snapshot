@@ -200,7 +200,7 @@ def load_data_file(filename):
 	with open_file_for_reading(filename+'.txt') as fil:
 		maxx = 0
 		while True:
-			l = fil.readline()
+			l = fil.readline().rstrip('\n')
 			if not l:
 				break
 			l = l.split('\t')
@@ -217,6 +217,8 @@ def load_data(state):
 	state['tattoos'] = load_data_file("av-snapshot-tattoos")
 	state['mritems'] = load_data_file("av-snapshot-mritems")
 	state['coolitems'] = load_data_file("av-snapshot-coolitems")
+	state['booze'] = load_data_file("av-snapshot-booze")
+	state['food'] = load_data_file("av-snapshot-food")
 
 def hx(tag, text, link):
 	o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
@@ -1117,6 +1119,30 @@ def print_coolitems(state):
 
 ###########################################################################
 
+def print_sorted_list(state, data, bytes):
+	col = 1
+	data = list(data.values())
+	data = sorted(data, key=lambda d: d[1].lower())
+	o("<table cellspacing=0 cellpadding=0><tr>")
+	for i in range(0, len(data)):
+		name = data[i][1]
+		if name == "":	# some data entries are empty, don't know why
+			continue
+		x = int(data[i][0])
+		clas = ''
+		if getbits(bytes, x, 1) > 0:
+			clas = ' class="hcperm"'
+		o(f"<td{clas}>{wikilink(name, name)}</td>")
+		col = col+1
+		if col > 6:
+			o("</tr><tr>")
+			col = 1
+	if col > 1:
+		while col <= 6:
+			o("<td></td>")
+			col = col + 1
+	o("</tr></table>")
+
 def print_discoveries(state):
 	h1(state, "Discoveries", "a_disc")
 	h2(state, "Cocktailcrafting", "a_disc_cock")
@@ -1132,10 +1158,10 @@ def print_discoveries(state):
 
 def print_consumption(state):
 	h1(state, "Consumption", "a_consum")
-	h2(state, "Food Consumption", "a_consum_food")
-	o("<p>Coming soon!</p>")
+	h2(state, "Food", "a_consum_food")
+	print_sorted_list(state, state['food'], state['food_bytes'])
 	h2(state, "Booze", "a_consum_booze")
-	o("<p>Coming soon!</p>")
+	print_sorted_list(state, state['booze'], state['booze_bytes'])
 
 
 ###########################################################################
@@ -1225,6 +1251,8 @@ def prepareResponse(argv, context):
 	state['familiar_bytes'] = arg_to_bytes(state, fetched_argv, "familiars", 4)
 	state['mritem_counts'] = arg_to_counts(state, fetched_argv, "mritems")
 	state['coolitem_counts'] = arg_to_counts(state, fetched_argv, "coolitems")
+	state['booze_bytes'] = arg_to_bytes(state, fetched_argv, "booze", 1)
+	state['food_bytes'] = arg_to_bytes(state, fetched_argv, "food", 1)
 	if "levels" in fetched_argv:
 		levels = fetched_argv["levels"]
 		if len(levels) < NUM_LEVELS:

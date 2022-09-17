@@ -1,0 +1,716 @@
+1	missing wine
+2	Cinco Mayo Lager
+3	plastic cup of beer
+4	world's most unappetizing beverage
+5	soyburger juice
+6	CRIMBCO wine
+7	booze-soaked cherry
+8	gin-soaked blotter paper
+9	Cobb's Knob Wurstbrau
+10	wasabi-infused sake
+11	tobiko-infused sake
+12	natto-infused sake
+13	breaded beer
+14	cranberry schnapps
+15	marshmallow flamb&eacute;
+16	Acqua Del Piatto Merlot
+17	Acque Luride Grezze Cabernet
+18	Alewife&trade; Ale
+19	Bloody beer
+20	Can of Swiller
+21	Cream stout
+22	Cruelty-free wine
+23	Cup of primitive beer
+24	Cursed bottle of rum
+25	Distilled fortified wine
+26	Elven cellocello
+27	Ferita Del Petto Zinfandel
+28	Fine wine
+29	Bartles and BRAAAINS wine cooler
+30	Green beer
+31	Grimacite Bock
+32	Herringcello
+33	Ice-cold Sir Schlitz
+34	Ice-cold Willer
+35	Imp Ale
+36	Maiali Sifilitici Pinot Noir
+37	McMillicancuddy's Special Lager
+38	Melted Jell-o shot
+39	Pebblebr&auml;u
+40	Ram's Face Lager
+41	Shot of blackberry schnapps
+42	Shot of flower schnapps
+43	Shot of grapefruit schnapps
+44	Shot of orange schnapps
+45	Shot of rotgut
+46	Shot of tomato schnapps
+47	Slimy fermented bile bladder
+48	Spasmi Dolorosi Del Rene Champagne
+49	Thermos full of Knob coffee
+50	Thistle wine
+51	Uovo Marcio Shiraz
+52	Black & tan
+53	Bottle of Pinot Renoir
+54	Bottle of cooking sherry
+55	Bottle of popskull
+56	Bottle of realpagne
+57	Dusty bottle of Marsala
+58	Dusty bottle of Merlot
+59	Dusty bottle of Muscat
+60	Dusty bottle of Pinot Noir
+61	Dusty bottle of Port
+62	Dusty bottle of Zinfandel
+63	Flute of flat champagne
+64	Hodgman's blanket
+65	Mt. Noob Pale Ale
+66	Plum wine
+67	Salinated mint julep
+68	Sham champagne
+69	Shot of nepenthe schnapps
+70	Shot of peach schnapps
+71	Shot of pear schnapps
+72	Snifter of thoroughly aged brandy
+73	White Xanadian
+74	Gin and Herring
+75	Accidental cider
+76	Banana daiquiri
+77	Beertini
+78	Bilge wine
+79	Blackfly Chardonnay
+80	Bloody mary
+81	Bottle of Calcutta Emerald
+82	Bottle of Definit
+83	Bottle of Domesticated Turkey
+84	Bottle of Jorge Sinsonte
+85	Bottle of Lieutenant Freeman
+86	Bottle of gin
+87	Bottle of Ooze-O
+88	Bottle of peppermint schnapps
+89	Bottle of Pete's Sake
+90	Bottle of rum
+91	Bottle of sake
+92	Bottle of sewage schnapps
+93	Bottle of single-barrel whiskey
+94	Bottle of tequila
+95	Bottle of vodka
+96	Bottle of whiskey
+97	Boxed champagne
+98	Boxed wine
+99	Caipifruta
+100	Canteen of wine
+101	Cool mushroom wine
+102	Corpsebite
+103	Cursed bottle of black-label rum
+104	Cyder
+105	Dew yoana lei
+106	Dry martini
+107	Dry vodka martini
+108	Ecto-nog
+109	Eggnog
+110	Eggnogtini
+111	Elven moonshine
+112	Expired bottle of peppermint schnapps
+113	Extra-spicy bloody mary
+114	Fermented honey
+115	Flaming mushroom wine
+116	Flat mushroom wine
+117	Giant glass of brandy
+118	Gibson
+119	Gin and tonic
+120	Gloomy mushroom wine
+121	Grimacider
+122	Grog
+123	Ice-cold fotie
+124	Icy mushroom wine
+125	Infinitesimal IPA
+126	Kamicorpse-ee
+127	Knob mushroom wine
+128	Knoll mushroom wine
+129	Lumbering jack
+130	Lychee chuhai
+131	Mad Train wine
+132	Margarita
+133	Martini
+134	Mimosette
+135	Monkey wrench
+136	Mulled cider
+137	Nanite-infested eggnog
+138	Oily mushroom wine
+139	Old-fashioned
+140	Oozenog
+141	Oreille Divis&eacute;e brandy
+142	Papaya sling
+143	Papaya slung
+144	Parisian cathouse
+145	Petite Porter
+146	Pointy mushroom wine
+147	Purple corpsel
+148	Rabbit punch
+149	Red-headed corpse
+150	Redrum
+151	Rum and cola
+152	Salty dog
+153	Salty slug
+154	Sangria
+155	Scrawny Stout
+156	Screwdiver
+157	Screwdriver
+158	Slug of rum
+159	Slug of shochu
+160	Slug of vodka
+161	Spiced rum
+162	Spooky eggnog
+163	Spooky mushroom wine
+164	Stinky mushroom wine
+165	Strawberry daiquiri
+166	Strawberry wine
+167	Bone's Farm &quot;wine&quot;
+168	Supernova Champagne
+169	Teqiwila
+170	Tequila sunset
+171	Tequila sunrise
+172	Tequila with training wheels
+173	Tomato daiquiri
+174	Typical Tavern swill
+175	Blood Light
+176	Vodka and cranberry
+177	Vodka and tonic
+178	Vodka gibson
+179	Vodka martini
+180	Whiskey and cola
+181	Whiskey and soda
+182	Whiskey bittersweet
+183	Whiskey sour
+184	White Canadian
+185	White Hyborian
+186	White lightning
+187	White-label gin
+188	Wine spritzer
+189	Zmobie
+190	Black and Tan and Red All Over
+191	A little sump'm sump'm
+192	An evil little sump'm sump'm
+193	Around the world
+194	Berry-infused sake
+195	Blended frozen swill
+196	Boilermaker
+197	Bungle in the jungle
+198	Calle de miel
+199	Candycaine
+200	Citrus-infused sake
+201	soy cordial
+202	Decanter of fine Scotch
+203	Dew yoana salacious lei
+204	Divine
+205	CRIMBCO Egg Substitute Nog Substitute
+206	CRIMBCO Extreme Braincracker Sour
+207	CRIMBCO Ribbon Candy Schnapps
+208	Ducha de oro
+209	Especially salty dog
+210	Evil ducha de oro
+211	Evil horizontal tango
+212	Evil roll in the hay
+213	Flask of Amontillado
+214	Fruity girl swill
+215	Fuzzbump
+216	Gimlet
+217	Gordon Bennett
+218	Horizontal tango
+219	Hot toady
+220	Isotope Nog
+221	Salacious lychee chuhai
+222	Mae West
+223	Mandarina colada
+224	Melon-infused sake
+225	Mon Tiki
+226	Moons-shine
+227	Morlock's Mark Bourbon
+228	Neuromancer
+229	Ocean motion
+230	Oil Nog
+231	Perpendicular hula
+232	Pink pony
+233	Prussian cathouse
+234	Rockin' wagon
+235	Roll in the hay
+236	Salacious screwdiver
+237	Slap and tickle
+238	Slip 'n' slide
+239	Tangarita
+240	Teqiwila slammer
+241	Tropical swill
+242	Vodka stratocaster
+243	Yellow brick road
+244	Antarctic Ice Tea
+245	Braincracker sweet
+246	Gin
+247	Hi-Octane Peppermint Jet Fuel
+248	Hot choculate
+249	Jar of fermented pickle juice
+250	Mutagin 'n' Tonic
+251	Pan-Dimensional Gargle Blaster
+252	Steel margarita
+253	Bodyslam
+254	Cherry bomb
+255	Corpse Island iced tea
+256	Corpse on the beach
+257	Corpsedriver
+258	Corpsetini
+259	Dirty martini
+260	Grogtini
+261	Russian Ice
+262	Ralph IX cognac
+263	Sangria del diablo
+264	Vesper
+265	Jar of squeeze
+266	day-old beer
+267	plain old beer
+268	overpriced &quot;imported&quot; beer
+269	pumpkin beer
+270	bone aperitif
+271	honey mead
+272	astral pilsner
+273	Saison du Lune
+274	Moonthril Schnapps
+275	Wrecked Generator
+276	elven squeeze
+277	Beignet Milgranet
+278	Bordeaux Marteaux
+279	bucket of wine
+280	Fromage Pinotage
+281	Lumineux Limnio
+282	Morto Moreto
+283	Muschat
+284	Temps Tempranillo
+285	Ecto-Cooler
+286	Silver Bullet beer
+287	The Cooler Out of Space
+288	ridiculous cocktail
+289	Crimbojito
+290	Feliz Navidad
+291	Gin Mint
+292	Mint Yulep
+293	Sangria de Menthe
+294	Vodka Matryoshka
+295	Barulio's bottle
+296	green eggnog
+297	Desert Island Iced Tea
+298	Jerkitini
+299	Horseradish-infused Vodka
+300	Jeppson's Malort
+301	Zoodriver
+302	Grasshopper
+303	Green Velvet
+304	Dark & Starry
+305	Lollipop Drop
+306	Suffering Sinner
+307	Drac & Tan
+308	Firewater
+309	Caipiranha
+310	Buttery Knob
+311	Humanitini
+312	Red Dwarf
+313	Fauna Libre
+314	Mohobo
+315	Great Older Fashioned
+316	Punchplanter
+317	Cement Mixer
+318	Sazerorc
+319	Herring Daiquiri
+320	Aye Aye
+321	Slimosa
+322	Drunken Philosopher
+323	Sloe Comfortable Zoo
+324	Locust
+325	Green Muslin
+326	Black Hole
+327	Candy Alexander
+328	Suppurating Sinner
+329	Transylvania Sling
+330	Earth and Firewater
+331	Flying Caipiranha
+332	Slippery Knob
+333	More Humanitini than Humanitini
+334	Golden Mean
+335	Chakra Libre
+336	Moonshine Mohobo
+337	Fuzzy Tentacle
+338	Doublepunchplanter
+339	Jackhammer
+340	Sazuruk-hai
+341	Herring Wallbanger
+342	Aye Aye, Captain
+343	Extra-slimy Slimosa
+344	Drunken Neurologist
+345	Sloe Comfortable Zoo on Fire
+346	Plague of Locusts
+347	Green Burlap
+348	Event Horizon
+349	Candicaine
+350	Sizzling Sinner
+351	Shot of the Living Dead
+352	Earth, Wind and Firewater
+353	Flaming Caipiranha
+354	Flaming Knob
+355	Oh, the Humanitini
+356	Green Giant
+357	Aura Libre
+358	Flaming Mohobo
+359	Crazymaker
+360	Haymaker
+361	Dump Truck
+362	Flaming Sazerorc
+363	Herringtini
+364	Aye Aye, Tooth Tooth
+365	Slimebite
+366	Drunken Astrophysicist
+367	used beer
+368	slap and slap again
+369	beery blood
+370	Go-Wassail
+371	Water purification pills
+372	CSA scoutmaster's &quot;water&quot;
+373	CSA cheerfulness ration
+374	5-hour acrimony
+375	soft green echo eyedrop antidote martini
+376	acceptable vodka
+377	adequate rum
+378	Afternoon Delight
+379	Agitated Turkey
+380	Ambitious Turkey
+381	Amnesiac Ale
+382	artisanal limoncello
+383	backwoods screwdriver
+384	Bee's Knees
+385	blood-red mushroom wine
+386	bloody kiwitini
+387	Bologna Lambic
+388	bottle of Bloodweiser
+389	bottle of drinkin' gas
+390	bottle of Evermore
+391	bottle of fruity &quot;wine&quot;
+392	bottle of Greedy Dog
+393	bottle of Lambada Lambic
+394	bottle of laundry sherry
+395	bottle of Old Pugilist
+396	bottle of Professor Beer
+397	bottle of Race Car Red
+398	bottle of Rapier Witbier
+399	bottle of wine
+400	Bowl of Scorpions
+401	Breakfast Blast wine cooler
+402	broberry brogurt
+403	brocolate brogurt
+404	buzzing mushroom wine
+405	can of Br&uuml;talbr&auml;u
+406	can of Drooling Monk
+407	can of Impetuous Scofflaw
+408	can of the cheapest beer
+409	carrot claret
+410	cheap Chinese beer
+411	Cherrytastrophe wine cooler
+412	chocotini
+413	Chunky Mary
+414	Citrus Crush wine cooler
+415	Cold One
+416	complex mushroom wine
+417	Crimbo Saketini
+418	Crimboku Drop
+419	crystal skeleton vodka
+420	cup of &quot;tea&quot;
+421	Cursed Punch
+422	Das Sauerlager
+423	Dinsey Whinskey
+424	Disappointed Russian
+425	discocktail
+426	Dreadsylvanian cold-fashioned
+427	Dreadsylvanian dank and stormy
+428	Dreadsylvanian grimlet
+429	Dreadsylvanian hot toddy
+430	Dreadsylvanian slithery nipple
+431	dream of a dog
+432	electric snakebite
+433	En Una Fila Tequila
+434	expensive champagne
+435	Fantasma en la M&aacute;quina
+436	Flamin' Whatshisname
+437	Flaming Crimbo Log
+438	flat cider
+439	Flivver
+440	Fog Murderer
+441	Fortified Eggnog Slurry
+442	fountain 'soda'
+443	French bronilla brogurt
+444	Friendly Turkey
+445	gamma nog
+446	Gets-You-Drunk
+447	glass of &quot;milk&quot;
+448	glass of bourbon
+449	glass of herbal tequila
+450	
+451	Green Manalishi
+452	Highest Bitter
+453	
+454	Hot Buttered Rum
+455	hot mint schnocolate
+456	Hot Socks
+457	Hundred Headed IPA
+458	Ice Island Long Tea
+459	
+460	Irish Coffee, English Heart
+461	Ish Kabibble
+462	Jungle Juice
+463	junk yard
+464	La Fantasma y La Oscuridad
+465	large tankard of ale
+466	Le Roi
+467	legitimate business on the beach
+468	Lemonade-235
+469	Lucky Lindy
+470	magnum of fancy champagne
+471	McLeod's Hard Haggis-Ade
+472	mediocre lager
+473	mid-level medieval mead
+474	mini-martini
+475	moonberry wine cooler
+476	mulled berry wine
+477	Murderer's Punch
+478	Nachojito
+479	New Zealand iced tea
+480	non-aged vinegar
+481	open sauce
+482	Orangemageddon wine cooler
+483	Over Easy Rider
+484	overpowering mushroom wine
+485	Paint A Vulgar Pitcher
+486	painting of a glass of wine
+487	passable stout
+488	Phonus Balonus
+489	premium malt liquor
+490	Psychotic Train wine
+491	Radberry Rip wine cooler
+492	
+493	red-hot boilermaker
+494	red red wine
+495	red rum
+496	regular-size brogurt
+497	rocket fuel
+498	Rompedores de Fantasmas
+499	scotch on the rocks
+500	shining goblet
+501	shot of mescal
+502	single swig of vodka
+503	Sloppy Jalopy
+504	smooth mushroom wine
+505	snakebite
+506	Sockdollager
+507	space port
+508	Spicy Hot Chocolate
+509	stealth bomber
+510	stepmom's booze
+511	stinkwater
+512	Strikes Again Bigmouth
+513	super-size brogurt
+514	swirling mushroom wine
+515	Taco Dan's Taco Stand Chimichangarita
+516	tankard of ale
+517	thermos of &quot;whiskey&quot;
+518	Thriller Ice
+519	unflavored wine cooler
+520	unnamed cocktail
+521	unquiet spirits
+522	Vodka Dog
+523	warbear bearserker mead
+524	warbear blizzard mead
+525	warbear feasting mead
+526	Wet Russian
+527	whiskey in a broken glass
+528	white Dreadsylvanian
+529	white wine
+530	Xiblaxian space-whiskey
+531	Ye Olde Meade
+532	asbestos thermos
+533	pixel beer
+534	pixel daiquiri
+535	Gold Velvet&trade; whiskey
+536	lavawater
+537	Quaatorade&trade;
+538	emergency margarita
+539	vintage smart drink
+540	blood and blood
+541	Jack-O-Lantern beer
+542	zombie
+543	ghost beer
+544	barrel-aged martini
+545	bottle of Amontillado
+546	VYKEA mead
+547	bottle of norwhiskey
+548	ice porter
+549	ice wine
+550	perfect cosmopolitan
+551	perfect dark and stormy
+552	perfect mimosa
+553	perfect negroni
+554	perfect old-fashioned
+555	perfect paloma
+556	Gratitude chocolate (bourbon-filled)
+557	bark rootbeer
+558	red ale
+559	iced plum wine
+560	robin nog
+561	The Mad Liquor
+562	Doc Clock's thyme cocktail
+563	Miss Graves' Vermouth
+564	firemilk
+565	rodeo whiskey
+566	Sacramento wine
+567	bottle of Fishhead 900-Day IPA
+568	hacked gibson
+569	Falcon&trade; Maltese Liquor
+570	Shot of Kardashian Gin
+571	very fancy whiskey
+572	unidentified drink
+573	eldritch extract
+574	eldritch distillate
+575	eldritch elixir
+576	black brandy
+577	chakra-mental wine
+578	ginger beer
+579	gingerbread wine
+580	high-end ginger wine
+581	spiritual eggnog
+582	wax booze
+583	Bloody Nora
+584	Churchill
+585	Gnollish sangria
+586	Gnomish sagngria
+587	Great old fashioned
+588	London frog
+589	Mysterious Island iced tea
+590	Newark
+591	Phil Collins
+592	Phlegethon
+593	R'lyeh
+594	Siberian sunrise
+595	Simepore slime
+596	Tequiz Navidad
+597	dirt julep
+598	double entendre
+599	drive-by shooting
+600	eighth plague
+601	elemental caipiroska
+602	extremely slippery nipple
+603	gunner's daughter
+604	hell in a bucket
+605	literal grasshopper
+606	low tide martini
+607	mentholated wine
+608	moreltini
+609	morning dew
+610	nothingtini
+611	piscatini
+612	reverse Tantalus
+613	shroomtini
+614	single entendre
+615	soilzerac
+616	vodka barracuda
+617	vodka stinger
+618	whiskey squeeze
+619	Centauri fish wine
+620	primitive alien booze
+621	basic martini
+622	improved martini
+623	splendid martini
+624	meadeorite
+625	DUFRESNE Suds
+626	flask of port
+627	jug of booze
+628	Racisto Ruidoso
+629	stale cheer wine
+630	executive mime flask
+631	mime army wine
+632	neg grog
+633	nega-mushroom wine
+634	mulled hobo wine
+635	Bustle Hustler
+636	Third Base
+637	FantasyRealm mead
+638	bad rum and good cola
+639	mourning wine
+640	two meat muck
+641	gin and ginger
+642	hipster cocktail
+643	Middle of the Road&trade; brand whiskey
+644	TRIO cup of beer
+645	antique beer
+646	haunted bottle of vodka
+647	haunted eggnog
+648	haunted gimlet
+649	haunted martini
+650	party beer bomb
+651	twice-haunted screwdriver
+652	punch-drunk punch
+653	beavermouth
+654	beaver punch (papaya)
+655	beaver punch (peach)
+656	beaver punch (cherry)
+657	runny fermented egg
+658	hot watered rum
+659	bottle of Crimbognac
+660	martiny
+661	Red Russian
+662	bottle of Sanguiovese
+663	dusty bottle of blood
+664	mulled blood
+665	vampagne
+666	Cobra Bowl
+667	Electric Punch
+668	Island Hurricane
+669	Island Landslide
+670	Island Thunderstorm
+671	Scorpion Bowl
+672	Skull Punch
+673	Smuggler's Punch
+674	Turtle Bowl
+675	bottle of dark rhum
+676	bottle of extra-dark rhum
+677	bottle of super-extra-dark rhum
+678	blended frozen swill with a fly in it
+679	calle de miel with a fly in it
+680	rockin' wagon with a fly in it
+681	perpendicular hula with a fly in it
+682	slap and tickle with a fly in it
+683	tangarita with a fly in it
+684	mandarina colada with a fly in it
+685	prussian cathouse with a fly in it
+686	Mae West with a fly in it
+687	bottle of sea wine
+688	space wine
+689	boot flask
+690	fishelada
+691	salt plum sake
+692	mushroom whiskey
+693	Buttery Boy
+694	Ghiaccio Colada
+695	Nog-on-the-Cob
+696	Sourfinger
+697	Steamboat
+698	drippy pilsner
+699	flask of moonshine
+700	glass of drippy wine
+701	cranberry margarita (brackish)
+702	Boulevardier cocktail
+703	barrel-aged eggnog
+704	Eye and a Twist
+705	marshmallow bomb
+706	1950 Vampire Vintner wine
+707	bottle of Chateau de Vinegar
+708	Doc's Fortifying Wine
+709	Doc's Limbering Wine
+710	Doc's Smartifying Wine
+711	Doc's Medical-Grade Wine
+712	Doc's Special Reserve Wine
+713	clear Russian
+714	[experimental crimbo booze]
+715	void lager
+716	Dad's brandy
