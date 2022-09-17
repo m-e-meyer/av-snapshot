@@ -217,6 +217,11 @@ def load_data(state):
 	state['tattoos'] = load_data_file("av-snapshot-tattoos")
 	state['mritems'] = load_data_file("av-snapshot-mritems")
 	state['coolitems'] = load_data_file("av-snapshot-coolitems")
+	state['concocktail'] = load_data_file("av-snapshot-disc-cocktail")
+	state['confood'] = load_data_file("av-snapshot-disc-food")
+	state['conmeat'] = load_data_file("av-snapshot-disc-meat")
+	state['conmisc'] = load_data_file("av-snapshot-disc-misc")
+	state['consmith'] = load_data_file("av-snapshot-disc-smith")
 	state['booze'] = load_data_file("av-snapshot-booze")
 	state['food'] = load_data_file("av-snapshot-food")
 
@@ -328,11 +333,10 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 
 # Map av-snapshot skill numbers to positions in levels string
 LEVELED_SKILLS = {315:3, 316:4, 322:5, 326:6, 329:7, 343:8, 389:9, 402:10}
-DIGITS36 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def gen_suffix(skill, levels):
 	if skill in LEVELED_SKILLS:
 		lv = levels[LEVELED_SKILLS[skill]:LEVELED_SKILLS[skill]+1]
-		lv = DIGITS36.find(lv)
+		lv = str(int(lv, 36))
 		if skill == 315:	# belch the rainbow
 			return f' {lv}/11'
 		else:
@@ -341,7 +345,7 @@ def gen_suffix(skill, levels):
 
 def print_skill_row(state, header, skill_list, levels=''):
 	skills = state['skills']
-	skill_bytes = state['skill_bytes']
+	skill_bytes = state['skill-bytes']
 	o(f"<tr><th>{header}</th>")
 	for s in skill_list:
 		print_skill_cell(skills, skill_bytes, s, gen_suffix(s, levels))
@@ -349,7 +353,7 @@ def print_skill_row(state, header, skill_list, levels=''):
 
 def print_slime_row(state, levels):
 	skills = state['skills']
-	skill_bytes = state['skill_bytes']
+	skill_bytes = state['skill-bytes']
 	o("<tr><th>The Slime Tube</th>")
 	for i in range(0, 3):
 		suffix = f" ({levels[i:i+1]}/10)"
@@ -361,7 +365,7 @@ def print_slime_row(state, levels):
 
 def print_skill_multirow(state, header, skill_list_list, levels=''):
 	skills = state['skills']
-	skill_bytes = state['skill_bytes']
+	skill_bytes = state['skill-bytes']
 	tr = ""
 	o(f"<tr><th rowspan='{len(skill_list_list)}'>{header}</th>")
 	for sl in skill_list_list:
@@ -480,7 +484,7 @@ def print_skill_table(state, levels):
 def print_skills(state, levels):
 	h1(state, "Skills", "a_skills")
 	tally = [0, 0, 0]
-	skill_bytes = state['skill_bytes']
+	skill_bytes = state['skill-bytes']
 	for i in range(len(state['skills'])):
 		x = getbits(skill_bytes, i+1, 2)
 		tally[x] = tally[x] + 1
@@ -494,7 +498,7 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
 	if tat == 0:
 		o("<td></td>")
 	elif tat == -1:		# Hobo tattoo
-		lv = DIGITS36.find(levels[11:12])
+		lv = int(levels[11:12], 36)	# base-36 digit
 		clas = ""
 		if lv > 0:
 			if lv >= 19:
@@ -528,7 +532,7 @@ def print_tattoo_table(state, tattoos, tattoo_bytes, header, rows, levels=""):
 
 def print_tattoos(state, levels):
 	tattoos = state['tattoos']
-	tattoo_bytes = state['tattoo_bytes']
+	tattoo_bytes = state['tattoo-bytes']
 	h1(state, "Tattoos", "a_tattoos")
 	tally = [0, 0, 0]
 	for i in range(len(tattoos)):
@@ -609,7 +613,7 @@ def print_trophy_cell(clas, imgname, trophy, desc):
 				+f"{wikilink(trophy, desc)}</td>")
 
 def print_trophies(state):
-	trophy_bytes = state['trophy_bytes']
+	trophy_bytes = state['trophy-bytes']
 	h1(state, "Trophies", "a_trophies")
 	o("<table cellspacing='0'><tr>")
 	tally = [0, 0]
@@ -674,7 +678,7 @@ FAM_STYLES = { 0:"", 1:"fam_have", 2:"fam_have_hatch", 3:"fam_run_100", 4:"fam_r
 def print_familiars(state):
 	have, lack, tour, hundred = (0, 0, 0, 0)
 	familiars = state['familiars']
-	familiar_bytes = state['familiar_bytes']
+	familiar_bytes = state['familiar-bytes']
 	for i in range(len(familiars)):
 		x = getbits(familiar_bytes, i+1, 4)
 		if x in (1, 3, 4):
@@ -757,7 +761,7 @@ def print_mritem_cell(state, it, subtable=False):
 		o("</tr></table></td>")
 	else:
 		mritems = state['mritems']
-		counts = state['mritem_counts']
+		counts = state['mritem-counts']
 		name = mritems[it][2]		
 		clas = ''
 		if counts[it-1] > 0:			
@@ -779,7 +783,7 @@ def print_coolitem_cell(state, it, print_image=True):
 		o(f"<td{colspan}></td>")
 	else:
 		coolitems = state['coolitems']
-		count = state['coolitem_counts'][it-1]
+		count = state['coolitem-counts'][it-1]
 		coolitem = coolitems[it]
 		name = coolitem[1]		
 		clas = ''
@@ -889,9 +893,9 @@ def print_mritems(state):
 			print_coolitem_cell(state, i, False)
 		o("</tr>")
 	o("<tr>")
-	print_item_link_cell("Hippo tutu", (getbits(state['familiar_bytes'], 127, 4) > 0))
-	print_item_link_cell("Gygaxian Libram", (getbits(state['skill_bytes'], 184, 2) > 0))
-	print_item_link_cell("Tome of Rad Libs", (getbits(state['skill_bytes'], 308, 2) > 0))
+	print_item_link_cell("Hippo tutu", (getbits(state['familiar-bytes'], 127, 4) > 0))
+	print_item_link_cell("Gygaxian Libram", (getbits(state['skill-bytes'], 184, 2) > 0))
+	print_item_link_cell("Tome of Rad Libs", (getbits(state['skill-bytes'], 308, 2) > 0))
 	print_mritem_cell(state, 169)
 	print_mritem_cell(state, 170)
 	print_mritem_cell(state, 171)
@@ -986,7 +990,7 @@ def print_ascension_rewards(state):
 		range(669, 675))
 	have = 0
 	havent = 0
-	counts = state['coolitem_counts']
+	counts = state['coolitem-counts']
 	for row in rewards:
 		for it in row:
 			if counts[it-1] == 0:
@@ -1123,7 +1127,8 @@ def print_summary(data, bytes):
 	have = 0
 	havent = 0
 	for i in range(1, len(data)+1):
-		if data[i][1] == '':	# some data entries are empty, don't know why
+		name = data[i][1]
+		if name == "" or name == "-":	# some data entries are empty, don't know why
 			continue
 		if getbits(bytes, i, 1) > 0:
 			have = have + 1
@@ -1137,11 +1142,11 @@ def print_sorted_list(data, bytes):
 	print_summary(data, bytes)
 	col = 1
 	data = list(data.values())
-	data = sorted(data, key=lambda d: d[1].lower())
+	data = sorted(data, key=lambda d: d[1].upper())
 	o("<table cellspacing=0 cellpadding=0><tr>")
 	for i in range(0, len(data)):
 		name = data[i][1]
-		if name == "":	# some data entries are empty, don't know why
+		if name == "" or name == "-":	# some data entries are empty, don't know why
 			continue
 		if name.find('[') >= 0:
 			link = name.replace('[', '').replace(']', '')
@@ -1162,25 +1167,26 @@ def print_sorted_list(data, bytes):
 			col = col + 1
 	o("</tr></table>")
 
+
 def print_discoveries(state):
 	h1(state, "Discoveries", "a_disc")
 	h2(state, "Cocktailcrafting", "a_disc_cock")
-	o("<p>Coming soon!</p>")
+	print_sorted_list(state['concocktail'], state['concocktail-bytes'])
 	h2(state, "Cooking", "a_disc_cook")
-	o("<p>Coming soon!</p>")
+	print_sorted_list(state['confood'], state['confood-bytes'])
 	h2(state, "Meatpasting", "a_disc_paste")
-	o("<p>Coming soon!</p>")
+	print_sorted_list(state['conmeat'], state['conmeat-bytes'])
 	h2(state, "Smithing", "a_disc_smith")
-	o("<p>Coming soon!</p>")
+	print_sorted_list(state['consmith'], state['consmith-bytes'])
 	h2(state, "Miscellaneous Discoveries", "a_disc_misc")
-	o("<p>Coming soon!</p>")
+	print_sorted_list(state['conmisc'], state['conmisc-bytes'])
 
 def print_consumption(state):
 	h1(state, "Consumption", "a_consum")
 	h2(state, "Food", "a_consum_food")
-	print_sorted_list(state['food'], state['food_bytes'])
+	print_sorted_list(state['food'], state['food-bytes'])
 	h2(state, "Booze", "a_consum_booze")
-	print_sorted_list(state['booze'], state['booze_bytes'])
+	print_sorted_list(state['booze'], state['booze-bytes'])
 
 
 ###########################################################################
@@ -1264,14 +1270,19 @@ def prepareResponse(argv, context):
 	load_data(state)
 	print_beginning(state, name, argv, fetched_argv, colorblind)
 	#
-	state['skill_bytes'] = arg_to_bytes(state, fetched_argv, "skills", 2)
-	state['tattoo_bytes'] = arg_to_bytes(state, fetched_argv, "tattoos", 2)
-	state['trophy_bytes'] = arg_to_bytes(state, fetched_argv, "trophies", 1)
-	state['familiar_bytes'] = arg_to_bytes(state, fetched_argv, "familiars", 4)
-	state['mritem_counts'] = arg_to_counts(state, fetched_argv, "mritems")
-	state['coolitem_counts'] = arg_to_counts(state, fetched_argv, "coolitems")
-	state['booze_bytes'] = arg_to_bytes(state, fetched_argv, "booze", 1)
-	state['food_bytes'] = arg_to_bytes(state, fetched_argv, "food", 1)
+	state['skill-bytes'] = arg_to_bytes(state, fetched_argv, "skills", 2)
+	state['tattoo-bytes'] = arg_to_bytes(state, fetched_argv, "tattoos", 2)
+	state['trophy-bytes'] = arg_to_bytes(state, fetched_argv, "trophies", 1)
+	state['familiar-bytes'] = arg_to_bytes(state, fetched_argv, "familiars", 4)
+	state['mritem-counts'] = arg_to_counts(state, fetched_argv, "mritems")
+	state['coolitem-counts'] = arg_to_counts(state, fetched_argv, "coolitems")
+	state['concocktail-bytes'] = arg_to_bytes(state, fetched_argv, "concocktail", 1)
+	state['confood-bytes'] = arg_to_bytes(state, fetched_argv, "confood", 1)
+	state['conmeat-bytes'] = arg_to_bytes(state, fetched_argv, "conmeat", 1)
+	state['conmisc-bytes'] = arg_to_bytes(state, fetched_argv, "conmisc", 1)
+	state['consmith-bytes'] = arg_to_bytes(state, fetched_argv, "consmith", 1)
+	state['booze-bytes'] = arg_to_bytes(state, fetched_argv, "booze", 1)
+	state['food-bytes'] = arg_to_bytes(state, fetched_argv, "food", 1)
 	if "levels" in fetched_argv:
 		levels = fetched_argv["levels"]
 		if len(levels) < NUM_LEVELS:

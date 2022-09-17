@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '0.1.1';
+string VERSION = '0.1.2';
 
 ////////////////////////////
 
@@ -167,7 +167,7 @@ void set_level_counter(int i, int value)
 	LEVELS[i] = value;
 }
 
-string BASE62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+string BASE36 = "0123456789abcdefghijklmnopqrstuvwxyz";
 string levels_string() 
 {
 	string result = "";
@@ -185,18 +185,23 @@ boolean load_current_map(string fname, ItemImage[int] map)
 
 void load_data()
 {
-    print("Updating map files...", "olive");
+    print("Loading map files...", "olive");
 	load_current_map("av-snapshot-skills", SKILLS);
 	load_current_map("av-snapshot-tattoos", TATTOOS);
 	load_current_map("av-snapshot-trophies", TROPHIES);
 	load_current_map("av-snapshot-familiars", FAMILIARS);
 	load_current_map("av-snapshot-mritems", MRITEMS);
 	load_current_map("av-snapshot-coolitems", COOLITEMS);
+	load_current_map("av-snapshot-disc-cocktail", CONCOCKTAIL);
+	load_current_map("av-snapshot-disc-food", CONFOOD);
+	load_current_map("av-snapshot-disc-meat", CONMEAT);
+	load_current_map("av-snapshot-disc-misc", CONMISC);
+	load_current_map("av-snapshot-disc-smith", CONSMITH);
 	load_current_map("av-snapshot-booze", BOOZE);
 	load_current_map("av-snapshot-food", FOOD);
 }
 
-boolean isIn(string name, string html)
+boolean is_in(string name, string html)
 {
 	if(length(name) > 7)
 	{
@@ -211,7 +216,7 @@ boolean isIn(string name, string html)
 }
 
 # NOTE: html must have already been converted to lower case
-int hasConsumed(string name, string html)
+int has_consumed(string name, string html)
 {
 	name = to_lower_case(name);
 	name = replace_string(name, "(", "\\(");
@@ -227,6 +232,42 @@ int hasConsumed(string name, string html)
 	}
 }
 
+int find_regex(string html, string checkthis)
+{
+	checkthis = replace_string(checkthis, "+", "\\+");
+	checkthis = replace_string(checkthis, "(0)", "\\(([0-9]+)\\)");
+	checkthis = replace_string(checkthis, "</b>", "(</a>){0,1}</b>");
+	checkthis = replace_string(checkthis, "</b> <font", "</b>(\\s){0,1}<font");
+	checkthis = replace_string(checkthis, "<font size=1>", "<font size=1>(?:<font size=2>\\[<a href=\"craft.php\\?mode=\\w+&a=\\d+&b=\\d+\">\\w+</a>\\]</font>)?");
+
+	matcher reg = create_matcher(checkthis, html);
+	if (reg.find()) {
+		debug("YES --- " + checkthis);
+		return 1;
+	} else {
+		debug("NO --- " + checkthis);
+		return 0;
+	}
+}
+
+
+boolean is_empty(string it)
+{
+	return ((it == "-") || (it == ""));
+}
+
+
+int is_discovered(string name, string html, string a)
+{
+	if (a.is_empty()) {
+		if (index_of(html, ">"+name+"<") != -1) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+	return find_regex(html, a);
+}
 
 int num_items(string name)
 {
@@ -295,12 +336,7 @@ string check_skills(string bookshelfHtml)
 
 ###########################################################################
 
-boolean isEmpty(string it)
-{
-	return ((it == "-") || (it == ""));
-}
-
-int tattooCheck(string html, string outfit, string gif, string i1, string i2, string i3, 
+int tattoo_check(string html, string outfit, string gif, string i1, string i2, string i3, 
 				string i4, string i5, string i6, string i7, string i8, string i9)
 {
 	if(last_index_of(html, "/"+gif+".gif") > 0) {
@@ -308,25 +344,25 @@ int tattooCheck(string html, string outfit, string gif, string i1, string i2, st
 		return 1;
 	} 
 	# Let's see if the user has the pieces needed to make the outfit for the tattoo
-	if (isEmpty(i1))	// Return if outfit doesn't exist
+	if (is_empty(i1))	// Return if outfit doesn't exist
 		return 0;
 	if (num_items(i1) == 0)	// Stop if the player doesn't even have item 1
 		return 0;
-	if (isEmpty(i2))  return 2;	// If we have all previous items, we succeeded
+	if (is_empty(i2))  return 2;	// If we have all previous items, we succeeded
 	if (num_items(i2) == 0)  return 0;  // If we lack an item, we failed
-	if (isEmpty(i3))  return 2;	
+	if (is_empty(i3))  return 2;	
 	if (num_items(i3) == 0)  return 0;  
-	if (isEmpty(i4))  return 2;	
+	if (is_empty(i4))  return 2;	
 	if (num_items(i4) == 0)  return 0;  
-	if (isEmpty(i5))  return 2;	
+	if (is_empty(i5))  return 2;	
 	if (num_items(i5) == 0)  return 0;  
-	if (isEmpty(i6))  return 2;	
+	if (is_empty(i6))  return 2;	
 	if (num_items(i6) == 0)  return 0;  
-	if (isEmpty(i7))  return 2;	
+	if (is_empty(i7))  return 2;	
 	if (num_items(i7) == 0)  return 0;  
-	if (isEmpty(i8))  return 2;	
+	if (is_empty(i8))  return 2;	
 	if (num_items(i8) == 0)  return 0;  
-	if (isEmpty(i9))  return 2;	
+	if (is_empty(i9))  return 2;	
 	if (num_items(i9) == 0)  return 0;  
 
 	return 2;
@@ -347,14 +383,14 @@ string check_tattoos()
 	foreach x in TATTOOS
 	{
 		ItemImage ii = TATTOOS[x];
-		b.set(x, tattooCheck(html, ii.itemname, ii.gifname, ii.a, ii.b, ii.c, ii.d, ii.e, 
+		b.set(x, tattoo_check(html, ii.itemname, ii.gifname, ii.a, ii.b, ii.c, ii.d, ii.e, 
 							ii.f, ii.g, ii.h, ii.i));
 	}
 
 	// What's the level on the Hobo Tattoo?
 	for lv from 19 to 1 {
 		if (index_of(html, "hobotat"+lv) != -1) {
-			LEVELS[11] = lv;
+			set_level_counter(11, lv);
 			break;
 		}
 	}
@@ -371,7 +407,7 @@ string check_trophies()
 	buffer html = visit_url("trophies.php");
 	foreach x in TROPHIES
 	{
-		if (isIn("/" + TROPHIES[x].itemname, html))
+		if (is_in("/" + TROPHIES[x].itemname, html))
             b.set(x, 1);
 	}
     return "&trophies=" + b.base64_encode();
@@ -379,7 +415,7 @@ string check_trophies()
 
 ###########################################################################
 
-int famCheck(string name, string gifname, string hatchling, 
+int familiar_check(string name, string gifname, string hatchling, 
 	string familiarNamesHtml, string koldbHtml)
 {
 	#print("Looking for familiar: " + name);
@@ -401,7 +437,7 @@ int famCheck(string name, string gifname, string hatchling,
 	// 8: 90% run, hatchling, no familiar.
 
 	boolean haveHatchling = false;
-	if ((hatchling != '-') && (hatchling != '') && num_items(hatchling) > 0) {
+	if ((! hatchling.is_empty()) && num_items(hatchling) > 0) {
 		haveHatchling = true;
 	}
 
@@ -452,7 +488,7 @@ string check_familiars(string familiarNamesHtml)
 	string koldbHtml = visit_url("ascensionhistory.php?back=self&who=" +my_id(), false) 
 				+ visit_url("ascensionhistory.php?back=self&prens13=1&who=" +my_id(), false);
 	foreach x in FAMILIARS {
-		b.set(x, famCheck(FAMILIARS[x].itemname, FAMILIARS[x].gifname, 
+		b.set(x, familiar_check(FAMILIARS[x].itemname, FAMILIARS[x].gifname, 
 		                 FAMILIARS[x].a, familiarNamesHtml, koldbHtml));
 	}
 	return "&familiars=" + b.base64_encode();
@@ -598,6 +634,31 @@ string check_coolitems()
 
 ###########################################################################
 
+string check_discoveries_class(string what, ItemImage[int] map, string param)
+{
+	print(`Checking for Discoveries [{what}]...`, "olive");
+	string url = `craft.php?mode=discoveries&what={what}`;
+	matcher reg = create_matcher("<font size=2>.*?</font>", visit_url(url));
+	string html = replace_all(reg, "");
+	bitarray b = new_bitarray(map.count()+1, 1);
+	foreach i, rec in map {
+		b.set(i, is_discovered(rec.itemname, html, rec.gifname));
+	}
+	return `&{param}={b.base64_encode()}`;
+}
+
+string check_discoveries()
+{
+	return check_discoveries_class('cocktail', CONCOCKTAIL, "concocktail")
+		+ check_discoveries_class('cook', CONFOOD, "confood")
+		+ check_discoveries_class('combine', CONMEAT, "conmeat")
+		+ check_discoveries_class('smith', CONSMITH, "consmith")
+		+ check_discoveries_class('multi', CONMISC, "conmisc");
+}
+
+
+###########################################################################
+
 string check_consumption()
 {
     bitarray b = new_bitarray(BOOZE.count()+1, 1);
@@ -605,10 +666,10 @@ string check_consumption()
 	print("Checking consumption...", "olive");
 	string html = to_lower_case(visit_url("showconsumption.php"));
 	foreach i, rec in BOOZE {
-		b.set(i, hasConsumed(rec.itemname, html));
+		b.set(i, has_consumed(rec.itemname, html));
 	}
 	foreach i, rec in FOOD {
-		f.set(i, hasConsumed(rec.itemname, html));
+		f.set(i, has_consumed(rec.itemname, html));
 	}
 	return "&booze=" + b.base64_encode() + "&food=" + f.base64_encode();
 }
@@ -645,6 +706,7 @@ void main()
 	url = url + check_familiars(familiarNamesHtml);
 	url = url + check_mritems(familiarNamesHtml + bookshelfHtml);
 	url = url + check_coolitems();
+	url = url + check_discoveries();
 	url = url + check_consumption();
 	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
 	//							 carrot, bear, numberology, safari, implode, hobotat)
@@ -656,7 +718,6 @@ void main()
 		set_level_counter(i, get_property("skillLevel" + sknum).to_int());
 	}
 	url = url + "&levels=" + levels_string();
-	url = url + "&mafia=" + get_version().replace_string(' ', '+');
 	if (get_property("avSnapshotNosave") == "j") {
     	print(url);
 		print(`URL length = {url.length()}`);
