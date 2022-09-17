@@ -534,3 +534,141 @@
 534	slime-covered compass	slimecompass	-	-	-	-	-
 535	slime-covered greaves	slimegreaves	-	-	-	-	-
 536	Slime-covered staff	slimestaff	-	-	-	-	-
+537	Thwaitgold protozoa statuette	thwaitproto	-	-	-	-	-
+538	Thwaitgold harvestman statuette	thwaitharvestman	-	-	-	-	-
+539	Thwaitgold mosquito-in-amber statuette	thwaitamber	-	-	-	-	-
+540	Red Balloon of Valor	hmedballoon	-	-	-	-	-
+541	Purple Horseshoe of Honor	hmedhshoe	-	-	-	-	-
+542	Blue Diamond of Honesty	hmeddiamond	-	-	-	-	-
+543	Green Clover of Justice	hmedclub	-	-	-	-	-
+544	Yellow Moon of Compassion	hmedmoon	-	-	-	-	-
+545	Orange Star of Sacrifice	hmedstar	-	-	-	-	-
+546	Pink Heart of Spirit	hmedheart	-	-	-	-	-
+547	Uranium Omega of Temperance	fmedomega	-	-	-	-	-
+548	Lead Zeta of Chastity	fmedzeta	-	-	-	-	-
+549	Aluminum Epsilon of Humility	fmedepsilon	-	-	-	-	-
+550	Zinc Delta of Tranquility	fmeddelta	-	-	-	-	-
+551	Nickel Gamma of Frugality	fmedgamma	-	-	-	-	-
+552	Iron Beta of Industry	fmedbeta	-	-	-	-	-
+553	Copper Alpha of Sincerity	fmedalpha	-	-	-	-	-
+554	Order of the Silver Wossname	wossname	-	-	-	-	-
+555	stainless steel shillelagh	ssshil	-	-	-	-	-
+556	stainless steel skullcap	sscap	-	-	-	-	-
+557	stainless steel solitaire	ssnecklace	-	-	-	-	-
+558	stainless steel scarf	ssscarf	-	-	-	-	-
+559	stainless steel slacks	ssslacks	-	-	-	-	-
+560	stainless steel suspenders	sssus	-	-	-	-	-
+561	plexiglass pikestaff	plexpike	-	-	-	-	-
+562	plexiglass pith helmet	plexpith	-	-	-	-	-
+563	plexiglass pocketwatch	plexpock	-	-	-	-	-
+564	plexiglass pinky ring	plexpink	-	-	-	-	-
+565	plexiglass pants	plexpant	-	-	-	-	-
+566	plexiglass pendant	plexpend	-	-	-	-	-
+567	Brimstone Bludgeon	brimbludgeon	-	-	-	-	-
+568	Brimstone Bunker	brimbunker	-	-	-	-	-
+569	Brimstone Brooch	brimbrooch	-	-	-	-	-
+570	Brimstone Bracelet	brimbracelet	-	-	-	-	-
+571	Brimstone Boxers	brimboxers	-	-	-	-	-
+572	Brimstone Beret	brimberet	-	-	-	-	-
+573	polyester parachute	polyparachute	-	-	-	-	-
+574	polyester pad	polypad	-	-	-	-	-
+575	polyester peeler	polypeeler	-	-	-	-	-
+576	polyester pettipants	polypants	-	-	-	-	-
+577	polyester panama hat	polyhat	-	-	-	-	-
+578	polyester pulsera	polypulsera	-	-	-	-	-
+579	porcelain police baton	porcbaton	-	-	-	-	-
+580	porcelain plus-fours	porcpants	-	-	-	-	-
+581	porcelain porkpie	porchat	-	-	-	-	-
+582	porcelain pepper mill	porcshaker	-	-	-	-	-
+583	porcelain pelerine	porcpelegrine	-	-	-	-	-
+584	porcelain phantom mask	porcmask	-	-	-	-	-
+585	dice ring	dicering	-	-	-	-	-
+586	dice belt buckle	dicebuckle	-	-	-	-	-
+587	dice-shaped backpack	dicepack	-	-	-	-	-
+588	dice-print pajama pants	dicepants	-	-	-	-	-
+589	dice-print do-rag	dicerag	-	-	-	-	-
+590	dice sunglasses	diceglasses	-	-	-	-	-
+591	wicker kickers	wickerkickers	-	-	-	-	-
+592	wicker slicker	wickerslicker	-	-	-	-	-
+593	wicker knickers	wickerknickers	-	-	-	-	-
+594	wicker ticker	wickerticker	-	-	-	-	-
+595	wicker sticker	wickersticker	-	-	-	-	-
+596	wicker clicker	wickerclicker	-	-	-	-	-
+597	bakelite belt	bakebelt	-	-	-	-	-
+598	bakelite badge	bakebadge	-	-	-	-	-
+599	bakelite bowl	bakebowl	-	-	-	-	-
+600	bakelite brooch	bakebrooch	-	-	-	-	-
+601	bakelite breeches	bakebreeches	-	-	-	-	-
+602	bakelite backpack	bakepack	-	-	-	-	-
+603	aerogel anvil	aeroanvil	-	-	-	-	-
+604	aerogel akubra	aeroakubra	-	-	-	-	-
+605	aerogel apron	aeroapron	-	-	-	-	-
+606	aerogel ascot	aeroascot	-	-	-	-	-
+607	aerogel attache case	aeroattache	-	-	-	-	-
+608	aerogel accordion	aeroaccordion	-	-	-	-	-
+609	wrought-iron wig	wroughtwig	-	-	-	-	-
+610	wrought-iron winch crank	wroughtcrank	-	-	-	-	-
+611	wrought-iron widget	wroughtwidget	-	-	-	-	-
+612	wrought-iron whisk	wroughtwhisk	-	-	-	-	-
+613	wrought-iron walker	wroughtwalker	-	-	-	-	-
+614	wrought-iron waders	wroughtpants	-	-	-	-	-
+615	gabardine gaiters	gabgaiters	-	-	-	-	-
+616	gabardine garland	gabgarland	-	-	-	-	-
+617	gabardine gunnysack	gabgunny	-	-	-	-	-
+618	gabardine garibaldi	gabgaribaldi	-	-	-	-	-
+619	gabardine girdle	gabgirdle	-	-	-	-	-
+620	gabardine gloves	gabgloves	-	-	-	-	-
+621	fiberglass fetish	fiberfetish	-	-	-	-	-
+622	fiberglass foil	fiberfoil	-	-	-	-	-
+623	fiberglass fannypack	fiberfanny	-	-	-	-	-
+624	fiberglass frock	fiberfrock	-	-	-	-	-
+625	fiberglass fingerguard	fiberfinger	-	-	-	-	-
+626	fiberglass fedora	fiberfedora	-	-	-	-	-
+627	chalk chlamys	chalkchlamys	-	-	-	-	-
+628	chalk chain	chalkchain	-	-	-	-	-
+629	chalk chalice	chalkchalice	-	-	-	-	-
+630	chalk chinos	chalkchinos	-	-	-	-	-
+631	chalk chapeau	chalkchapeau	-	-	-	-	-
+632	chalk choker	chalkchoker	-	-	-	-	-
+633	marble maebari	marblemaebari	-	-	-	-	-
+634	marble mantle	marblemantle	-	-	-	-	-
+635	marble magnet	marblemagnet	-	-	-	-	-
+636	marble mignonette bowl	marblebowl	-	-	-	-	-
+637	marble medallion	marblemedallion	-	-	-	-	-
+638	marble mariachi hat	marblehat	-	-	-	-	-
+639	terra cotta truss	tc_truss	-	-	-	-	-
+640	terra cotta trousers	tc_pants	-	-	-	-	-
+641	terra cotta tongs	tc_tongs	-	-	-	-	-
+642	terra cotta train	tc_cape	-	-	-	-	-
+643	terra cotta tie tack	tc_tietack	-	-	-	-	-
+644	terra cotta tambourine	tc_tambourine	-	-	-	-	-
+645	paraffin punching bag	para_bag	-	-	-	-	-
+646	paraffin pith helmet	para_hat	-	-	-	-	-
+647	paraffin poncho	para_shirt	-	-	-	-	-
+648	paraffin pendant	para_necklace	-	-	-	-	-
+649	paraffin palazzos	para_pants	-	-	-	-	-
+650	paraffin pseudoaccordion	para_accordion	-	-	-	-	-
+651	stained glass suspenders	sg_suspenders	-	-	-	-	-
+652	stained glass shield	sg_shield	-	-	-	-	-
+653	stained glass stetson	sg_stetson	-	-	-	-	-
+654	stained glass spectacles	sg_spectacles	-	-	-	-	-
+655	stained glass shiv	sg_shiv	-	-	-	-	-
+656	stained glass serape	sg_serape	-	-	-	-	-
+657	velour voulge	vel_voulge	-	-	-	-	-
+658	velour vambraces	vel_vambraces	-	-	-	-	-
+659	velour veil	vel_veil	-	-	-	-	-
+660	velour viscometer	vel_viscometer	-	-	-	-	-
+661	velour valise	vel_valise	-	-	-	-	-
+662	velour vaqueros	vel_vaqueros	-	-	-	-	-
+663	loofah lumberjack's hat	loof_hat	-	-	-	-	-
+664	loofah lei	loof_lei	-	-	-	-	-
+665	loofah lederhosen	loof_pants	-	-	-	-	-
+666	loofah ladle	loof_ladle	-	-	-	-	-
+667	loofah legwarmers	loof_warmers	-	-	-	-	-
+668	loofah lavalier	loof_lavalier	-	-	-	-	-
+669	flagstone flag	fs_flag	-	-	-	-	-
+670	flagstone flail	fs_flail	-	-	-	-	-
+671	flagstone flip-flops	fs_flipflops	-	-	-	-	-
+672	flagstone fez	fs_fez	-	-	-	-	-
+673	flagstone fleece	fs_fleece	-	-	-	-	-
+674	flagstone fringe	fs_fringe	-	-	-	-	-
