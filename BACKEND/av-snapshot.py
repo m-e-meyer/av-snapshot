@@ -768,8 +768,13 @@ def print_mritem_cell(state, it, subtable=False):
 		o(f"<td style='margin: 5px' {clas}>{wikilink(name, name)}</td>")
 
 def print_coolitem_cell(state, it, print_image=True):
+	if type(it) == tuple:
+		colspan = " colspan=" + str(it[1])
+		it = it[0]
+	else:
+		colspan = ''
 	if it == 0:
-		o("<td></td>")
+		o(f"<td{colspan}></td>")
 	else:
 		coolitems = state['coolitems']
 		count = state['coolitem_counts'][it-1]
@@ -785,14 +790,34 @@ def print_coolitem_cell(state, it, print_image=True):
 			lbody = f"<img src='{IMAGES}/itemimages/{coolitem[2]}.gif'><br/>{name}{countstr}"
 		else:
 			lbody = f"{name}{countstr}"
-		o(f"<td style='margin: 5px' {clas}>{wikilink(name, lbody)}</td>")
+		o(f"<td style='margin: 5px' {clas}{colspan}>{wikilink(name, lbody)}</td>")
 
-def print_mritem_header(header):
+def print_header_cell(header):
 	o(f"<th>{header}</th>")
+
+def print_coolitem_row(state, its, print_image=True):
+	o("<tr>")
+	for it in its:
+		if type(it) != str:
+			print_coolitem_cell(state, it, print_image)
+		else:
+			print_header_cell(it)
+	o("</tr>")
+
+def print_coolitem_table(state, headers, rows):
+	o("<table cellspacing='0'>")
+	if headers:
+		o("<tr>")
+		for h in headers:
+			print_header_cell(h)
+		o("</tr>")
+	for r in rows:
+		print_coolitem_row(state, r)
+	o("</table>\n")
 
 def print_mritem_row(state, header, items):
 	o("<tr>")
-	print_mritem_header(header)
+	print_header_cell(header)
 	for it in items:
 		print_mritem_cell(state, it)
 	o("</tr>")
@@ -800,7 +825,7 @@ def print_mritem_row(state, header, items):
 def print_mritem_table(state, yr, headers, rows):
 	o("<table class='morepad' cellspacing='0'><tr>")
 	for h in headers:
-		print_mritem_header(h)
+		print_header_cell(h)
 	o("</tr>")
 	for row in rows:
 		print_mritem_row(state, yr, row)
@@ -894,21 +919,25 @@ def print_basement(state):
 	h2(state, "Hobopolis", "a_hobopolis")
 	o("<table cellspacing='0'><tr><th>Boss</th><th colspan='3'>Outfit Pieces</th><th colspan='3'>Other Pieces</th></tr>")
 	print_loot_row(state, "Frosty", range(467, 473))
-	print_loot_row(state, "Zombo", range(473,479))
-	print_loot_row(state, "Chester", range(479,485))
-	print_loot_row(state, "Ol' Scratch", range(485,491))
-	print_loot_row(state, "Oscus", range(491,497))
-	print_loot_row(state, "Uncle Hobo", range(510,516))
-	print_loot_row(state, "Hodgman", range(497,501), 2)
-	print_loot_row(state, "Hodgman Offhands", range(501,507))
-	print_loot_row(state, "Hodgman Speed", range(507,510), 3)
+	print_loot_row(state, "Zombo", range(473, 479))
+	print_loot_row(state, "Chester", range(479, 485))
+	print_loot_row(state, "Ol' Scratch", range(485, 491))
+	print_loot_row(state, "Oscus", range(491, 497))
+	print_loot_row(state, "Uncle Hobo", range(510, 516))
+	print_loot_row(state, "Hodgman", range(497, 501), 2)
+	print_loot_row(state, "Hodgman Offhands", range(501, 507))
+	print_loot_row(state, "Hodgman Speed", range(507, 510), 3)
 	o("</table>")
 	h2(state, "Hobo Code Binder", "a_hobocode")
 	o("<p>Coming soon!</p>")
-	h2(state, "Hobo Equipment", "a_hobocode")
-	o("<p>Coming soon!</p>")
+	h2(state, "Hobo (and other) Equipment", "a_hobocode")
+	print_coolitem_table(state, ('', 'Hat', 'Pants', 'Accessories'),
+							(('150 Nickels', 27, 30, 34),
+							 ('200 Nickels', 28, 29, 33),
+							 ('250 Nickels', 26, 31, 32)))
 	h2(state, "Hobo Instruments", "a_hobocode")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, ('Seal Clubber', 'Turtle Tamer', 'Pastamancer', 'Sauceror', 'Disco Bandit', 'Accordion Thief'),
+						(range(1, 7),))
 	h2(state, "Slime Tube", "a_tube")
 	o("<table cellspacing='0'>")
 	print_loot_row(state, "", range(516, 522))
@@ -931,74 +960,157 @@ def print_basement(state):
 
 ###########################################################################
 
+def print_ascension_rewards(state):
+	h2(state, "Ascension Rewards", "a_ascension")
+	rewards = (range(555, 561), 
+		range(561, 567),
+		range(567, 573),
+		range(573, 579),
+		range(579, 585),
+		range(585, 591),
+		range(591, 597),
+		range(597, 603),
+		range(603, 609),
+		range(609, 615),
+		range(615, 621),
+		range(621, 627),
+		range(627, 633),
+		range(633, 639),
+		range(639, 645),
+		range(645, 651),
+		range(651, 657),
+		range(657, 663),
+		range(663, 669),
+		range(669, 675))
+	have = 0
+	havent = 0
+	counts = state['coolitem_counts']
+	for row in rewards:
+		for it in row:
+			if counts[it-1] == 0:
+				havent = havent + 1
+			else:
+				have = have + 1
+	o(f"<p>You have {have} and are missing {havent}.</p>")
+	print_coolitem_table(state, None, rewards)
+
+def print_looking_glass_table(state):
+	o("<table cellspacing='0'>")
+	print_coolitem_row(state, range(180, 186))
+	o("<tr>")
+	print_coolitem_cell(state, 186)
+	print_coolitem_cell(state, 187)
+	o("<td>Coming soon!</td><td></td><td></td><td></td></tr></table>\n")
+
 def print_coolitems(state):
 	h1(state, "Cool Items", "a_coolitems")
 	h2(state, "Ultrarares", "a_ultra")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, None, ((38, 39, 40, 41, 42, 137, 43, 44),
+									(45, 46, 47, 178, 48, 409, 0, 0)))
+	print_ascension_rewards(state)
 	h2(state, "Swagger Stuff", "a_pvp")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, None, (range(207, 213),
+									(213, 214, 215, 335, 450, 0)))
 	h2(state, "Thwaitgold", "a_thwait")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, None, ((54, 55, 56, 57, 60, 61),
+									(62, 82, 83, 135, 136, 173),
+									(174, 175, 176, 177, 179, 252),
+									(291, 297, 313, 353, 360, 362),
+									(382, 390, 391, 415, 421, 425),
+									(442, 446, 447, 452, 453, 454),
+									(537, 538, 539, 0, 0, 0)))
 	h2(state, "War Medals", "a_medals")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, ('Sidequests', '0', '1', '2', '3', '4', '5', '6'), 
+		(('Hippy', 540, 541, 542, 543, 544, 545, 546),
+		('Frat', 547, 548, 549, 550, 551, 552, 553),
+		('All', (554, 7))))
 	h2(state, "Sea Stuff", "a_sea")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, None, (range(63, 69), range(69, 75), range(75, 82)))
 	h2(state, "Chefstaves", "a_staves")
-	o("<p>Coming soon!</p>")
-	h2(state, "A Moment of Reflection", "a_reflection")
-	o("<p>Coming soon!</p>")
-	h2(state, "Raiments of the FInal Boss", "a_raiments")
-	o("<p>Coming soon!</p>")
-	h2(state, "Psychoanalysis", "a_psycho")
-	o("<p>Coming soon!</p>")
-	h2(state, "Conspiracy Island", "a_conspiracy")
-	o("<p>Coming soon!</p>")
-	h2(state, "Dinseylandfill", "a_dinsey")
-	o("<p>Coming soon!</p>")
-	h2(state, "That 70s Volcano", "a_volcano")
-	o("<p>Coming soon!</p>")
-	h2(state, "The Glaciest", "a_glaciest")
-	o("<p>Coming soon!</p>")
-	h2(state, "Warbear Crimbo", "a_warbear")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, None, (range(13, 19),
+									(19, 58, 20, 21, 22, 23),
+									(24, 25, 53, 59, 172, 272),
+									(386, 401, 441, 0, 0, 0)))
+	#
 	h2(state, "Marty's Quest", "a_marty")
-	o("<p>Coming soon!</p>")
-	h2(state, "Gotpork", "a_gotpork")
-	o("<p>Coming soon!</p>")
-	h2(state, "LT&T Telegraph Office", "a_ltt")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, None, (range(216, 220),))
+	h2(state, "Secrets from the Future (2009)", "a_secrets")
+	print_coolitem_table(state, ('Seal Clubber', 'Turtle Tamer', 'Pastamancer', 'Sauceror', 'Disco Bandit', 'Accordion Thief'),
+						(range(7, 13),))
+	h2(state, "Underworld (2009)", "a_underworld")
+	print_coolitem_table(state, None, (range(35, 38),))
+	h2(state, "A Moment of Reflection (2010)", "a_reflection")
+	print_looking_glass_table(state)
+	h2(state, "Arcade Games (2010)", "a_arcade")
+	print_coolitem_table(state, None, (range(410, 415),))
+	h2(state, "Necbromancer (2011)", "a_necbro")
+	print_coolitem_table(state, None, (range(50, 53),))
+	h2(state, "Raiments of the Final Boss (2013)", "a_raiments")
+	print_coolitem_table(state, None, (range(120, 128),))
+	h2(state, "Psychoanalysis (2013)", "a_psycho")
+	print_coolitem_table(state, None, (range(128, 135),))
+	h2(state, "Warbear Crimbo (2013)", "a_warbear")
+	print_coolitem_table(state, None, 
+		(range(138, 147), range(147, 156), range(156, 165), (165, 166, 0, 0, 0, 0, 0, 0, 0))) 
+	h2(state, "We All Wear Masks (2014)", "a_masks")
+	print_coolitem_table(state, None, (range(167, 172),))
+	h2(state, "Conspiracy Island (2014)", "a_conspiracy")
+	print_coolitem_table(state, None, (range(200, 207),))
+	h2(state, "Dinseylandfill (2015)", "a_dinsey")
+	print_coolitem_table(state, None, (range(188, 194), range(194, 200)))
+	h2(state, "That 70s Volcano (2015)", "a_volcano")
+	print_coolitem_table(state, None, 
+		((248, 249, 250, 253, 254, 255), 
+		 range(257, 263),
+		 (263, 264, 265, 0, 0, 0)))
+	h2(state, "The Glaciest (2015)", "a_glaciest")
+	print_coolitem_table(state, None, (range(266, 272),))
+	h2(state, "Gotpork (2016)", "a_gotpork")
+	print_coolitem_table(state, None, (range(285, 289),))
+	h2(state, "LT&T Telegraph Office (2016)", "a_ltt")
+	print_coolitem_table(state, None, (range(274, 280), (280, 281, 282, 283, 284, 289)))
+	h2(state, "Fishin' Gear (2016)", "a_fishin")
+	print_coolitem_table(state, None, ((293, 294),))
+	h2(state, "The Precinct (2016)", "a_precinct")
+	print_coolitem_table(state, None, ((298, 299, 300),))
+	h2(state, "Busting Makes You Feel Good (2016)", "a_busting")
+	print_coolitem_table(state, None, (range(301, 307), range(307, 313)))
+	h2(state, "Twitchery (most recent 2016)", "a_twitch")
+	print_coolitem_table(state, None, 
+		((225, 320, 322, 317, 228, 318), 
+		 (230, 229, 227, 315, 316, 319),
+		 (220, 321, 221, 222, 223, 323),
+		 (224, 226, 231, 232, 233, 314)))
+	h2(state, "Gingerbread City (2016)", "a_ginger")
+	print_coolitem_table(state, None, 
+		((347, 345, 348, 349, 350, 352), 
+		 (351, 346, 344, 0, 0, 0)))
+	h2(state, "Chakra Crimbo (2016)", "a_chakra")
+	print_coolitem_table(state, None, ((337, 338, 342, 339, 340, 341, 343),))
+	h2(state, "Spacegate (2017)", "a_spacegate")
+	print_coolitem_table(state, None, (range(376, 381),))
+	h2(state, "Silent Crombotato (2017)", "a_scrimbo")
+	print_coolitem_table(state, None, (range(365, 371), (371, 372, 373, 374, 375, 0)))
+	h2(state, "FantasyRealm (2018)", "a_fantasy")
+	print_coolitem_table(state, None, (range(387, 390),))
+	h2(state, "Neverending Party (2018)", "a_party")
+	print_coolitem_table(state, None, (range(393, 397), range(397, 401)))
+	h2(state, "PirateRealm (2019)", "a_pirate")
+	print_coolitem_table(state, None, (range(416, 421),))
+	h2(state, "Underwater Crimbo (2019)", "a_uwcrimbo")
+	print_coolitem_table(state, None, 
+		((429, 430, 439, 440, 437, 427), 
+		 (433, 434, 428, 436, 438, 431),
+		 (426, 432, 435, 0, 0, 0)))
+	h2(state, "Gooified Crimbo (2021)", "a_gcrimbo")
+	print_coolitem_table(state, None, (range(455, 461), range(461, 467)))
 	h2(state, "Hair Club for Loathers", "a_hairclub")
-	o("<p>Coming soon!</p>")
-	h2(state, "Fishin' Gear", "a_fishin")
-	o("<p>Coming soon!</p>")
-	h2(state, "The Precinct", "a_precinct")
-	o("<p>Coming soon!</p>")
-	h2(state, "Busting Makes You Feel Good", "a_busting")
-	o("<p>Coming soon!</p>")
-	h2(state, "Secrets from the Future", "a_secrets")
-	o("<p>Coming soon!</p>")
-	h2(state, "Twitchery", "a_twitch")
-	o("<p>Coming soon!</p>")
-	h2(state, "Gingerbread City", "a_ginger")
-	o("<p>Coming soon!</p>")
-	h2(state, "Chakra Crimbo", "a_chakra")
-	o("<p>Coming soon!</p>")
-	h2(state, "Spacegate", "a_spacegate")
-	o("<p>Coming soon!</p>")
-	h2(state, "FantasyRealm", "a_fantasy")
-	o("<p>Coming soon!</p>")
-	h2(state, "Neverending Party", "a_party")
-	o("<p>Coming soon!</p>")
-	h2(state, "Silent Crombotato", "a_scrimbo")
-	o("<p>Coming soon!</p>")
-	h2(state, "PirateRealm", "a_pirate")
-	o("<p>Coming soon!</p>")
-	h2(state, "Underwater Crimbo", "a_uwcrimbo")
-	o("<p>Coming soon!</p>")
-	h2(state, "Gooified Crimbo", "a_gcrimbo")
-	o("<p>Coming soon!</p>")
-	h2(state, "Arcade Games", "a_arcade")
-	o("<p>Coming soon!</p>")
+	print_coolitem_table(state, None, 
+		((383, 384, 385, 256, 290, 273), 
+		 (292, 295, 296, 336, 354, 355),
+		 (356, 357, 358, 359, 361, 363),
+		 (364, 381, 392, 422, 423, 424),
+		 (443, 444, 445, 451, 0, 0)))
 	#for i in range(len(coolitem_counts)):
 	#	o(f'{i+1}:{coolitem_counts[i]} ')
 
