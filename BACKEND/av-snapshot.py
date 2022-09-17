@@ -1119,7 +1119,22 @@ def print_coolitems(state):
 
 ###########################################################################
 
-def print_sorted_list(state, data, bytes):
+def print_summary(data, bytes):
+	have = 0
+	havent = 0
+	for i in range(1, len(data)+1):
+		if data[i][1] == '':	# some data entries are empty, don't know why
+			continue
+		if getbits(bytes, i, 1) > 0:
+			have = have + 1
+		else:
+			havent = havent + 1
+	o(f"<p>You have found {have} of these discoveries and are missing {havent}.<br/>"
+	  "Are some discoveries not showing up? Turn Inventory Images ON and one-click"
+	  " crafting OFF and try again - it has a higher success rate.</p>")
+
+def print_sorted_list(data, bytes):
+	print_summary(data, bytes)
 	col = 1
 	data = list(data.values())
 	data = sorted(data, key=lambda d: d[1].lower())
@@ -1163,9 +1178,9 @@ def print_discoveries(state):
 def print_consumption(state):
 	h1(state, "Consumption", "a_consum")
 	h2(state, "Food", "a_consum_food")
-	print_sorted_list(state, state['food'], state['food_bytes'])
+	print_sorted_list(state['food'], state['food_bytes'])
 	h2(state, "Booze", "a_consum_booze")
-	print_sorted_list(state, state['booze'], state['booze_bytes'])
+	print_sorted_list(state['booze'], state['booze_bytes'])
 
 
 ###########################################################################
