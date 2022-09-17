@@ -1,0 +1,327 @@
+1	4-d camera	-	-	-	-	-	-	-
+2	Bonerdagon necklace	-	-	-	-	-	-	-
+3	Gnollish autoplunger	-	-	-	-	-	-	-
+4	Harold's hammer	-	-	-	-	-	-	-
+5	Meat maid	-	-	-	-	-	-	-
+6	Meat maid body	-	-	-	-	-	-	-
+7	ND	-	-	-	-	-	-	-
+8	NG	-	-	-	-	-	-	-
+9	Staff of Ed (eye)	Staff of Ed</b> <font size=1><br/>Eye of Ed (0) + Staff of Ed, almost (0)	-	-	-	-	-	-
+10	Staff of Ed, almost	-	-	-	-	-	-	-
+11	Talisman o' Namsilat	-	-	-	-	-	-	-
+12	WA	-	-	-	-	-	-	-
+13	Wand of Nagamar	-	-	-	-	-	-	-
+14	abridged dictionary	-	-	-	-	-	-	-
+15	aerated diving helmet	-	-	-	-	-	-	-
+16	asshat	-	-	-	-	-	-	-
+17	badass belt	-	-	-	-	-	-	-
+18	barskin tent	-	-	-	-	-	-	-
+19	bartender skull	-	-	-	-	-	-	-
+20	bartender-in-the-box	-	-	-	-	-	-	-
+21	boxing-glove-in-a-box	-	-	-	-	-	-	-
+22	beach glass necklace	-	-	-	-	-	-	-
+23	beanbag chair	-	-	-	-	-	-	-
+24	beer goggles	-	-	-	-	-	-	-
+25	bitchin' meatcar	-	-	-	-	-	-	-
+26	bone rattle	-	-	-	-	-	-	-
+27	box-in-the-box	-	-	-	-	-	-	-
+28	box-in-the-box-in-the-box	-	-	-	-	-	-	-
+29	boxing glove on a spring	-	-	-	-	-	-	-
+30	brainy skull	-	-	-	-	-	-	-
+31	burrowgrub hive	-	-	-	-	-	-	-
+32	charged magnet	-	-	-	-	-	-	-
+33	chef skull	-	-	-	-	-	-	-
+34	chef-in-the-box	-	-	-	-	-	-	-
+35	creepy voodoo doll	-	-	-	-	-	-	-
+36	chitinous pod	-	-	-	-	-	-	-
+37	clockwork bartender head	-	-	-	-	-	-	-
+38	clockwork bartender-in-the-box	-	-	-	-	-	-	-
+39	clockwork chef-in-the-box	-	-	-	-	-	-	-
+40	clockwork chef head	-	-	-	-	-	-	-
+41	holiday log	-	-	-	-	-	-	-
+42	innuendo	-	-	-	-	-	-	-
+43	clockwork detective skull	-	-	-	-	-	-	-
+44	clockwork maid	-	-	-	-	-	-	-
+45	clockwork maid head	-	-	-	-	-	-	-
+46	clockwork pirate skull	-	-	-	-	-	-	-
+47	club of corruption	-	-	-	-	-	-	-
+48	cog and sprocket assembly	-	-	-	-	-	-	-
+49	corrupt club of corrupt corruption	-	-	-	-	-	-	-
+50	corrupt club of corruption	-	-	-	-	-	-	-
+51	cottage	-	-	-	-	-	-	-
+52	decaying wooden oar	-	-	-	-	-	-	-
+53	detective skull	-	-	-	-	-	-	-
+54	disembodied smile	-	-	-	-	-	-	-
+55	dope wheels	-	-	-	-	-	-	-
+56	dusty animal skull	-	-	-	-	-	-	-
+57	eXtreme nose ring	-	-	-	-	-	-	-
+58	enchanted eyepatch	-	-	-	-	-	-	-
+59	evil golden arches	-	-	-	-	-	-	-
+60	fertilized ghuol egg	-	-	-	-	-	-	-
+61	full meat tank	-	-	-	-	-	-	-
+62	giant fishhook	-	-	-	-	-	-	-
+63	gnashing teeth	-	-	-	-	-	-	-
+64	gnatwing earring	-	-	-	-	-	-	-
+65	gnoll-tooth necklace	-	-	-	-	-	-	-
+66	goat	-	-	-	-	-	-	-
+67	grass whistle	-	-	-	-	-	-	-
+68	headpiece of the Staff of Ed	-	-	-	-	-	-	-
+69	heavy metal sonata	-	-	-	-	-	-	-
+70	heavy metal thunderrr guitarrr	-	-	-	-	-	-	-
+71	hosed fishbowl	-	-	-	-	-	-	-
+72	hosed tank	-	-	-	-	-	-	-
+73	hovering sombrero	-	-	-	-	-	-	-
+74	ice skate decoy	-	-	-	-	-	-	-
+75	ice skate doll	-	-	-	-	-	-	-
+76	imbued seal-blubber candle	-	-	-	-	-	-	-
+77	intragalactic rowboat	-	-	-	-	-	-	-
+78	leaf	-	-	-	-	-	-	-
+79	lifeless meat doll	-	-	-	-	-	-	-
+80	maid head	-	-	-	-	-	-	-
+81	makeshift SCUBA gear (hosed fishbowl)	makeshift SCUBA gear</b> <font size=1><br/>fishtank (0) + hosed fishbowl (0)	-	-	-	-	-	-
+82	maple leaf	-	-	-	-	-	-	-
+83	mass of wriggling tentacles	-	-	-	-	-	-	-
+84	meat engine	-	-	-	-	-	-	-
+85	meat face	-	-	-	-	-	-	-
+86	meat golem	-	-	-	-	-	-	-
+87	meat stack	-	-	-	-	-	-	-
+88	memory of a CA base pair	-	-	-	-	-	-	-
+89	memory of a CG base pair	-	-	-	-	-	-	-
+90	memory of a CT base pair	-	-	-	-	-	-	-
+91	memory of a GT base pair	-	-	-	-	-	-	-
+92	memory of an AG base pair	-	-	-	-	-	-	-
+93	memory of an AT base pair	-	-	-	-	-	-	-
+94	ninja pirate zombie robot head	-	-	-	-	-	-	-
+95	nothing-in-the-box	-	-	-	-	-	-	-
+96	nothing-in-the-box-in-the-box	-	-	-	-	-	-	-
+97	office-supply crossbow	-	-	-	-	-	-	-
+98	one-winged stab bat	-	-	-	-	-	-	-
+99	oyster basket	-	-	-	-	-	-	-
+100	pair of ragged claws	-	-	-	-	-	-	-
+101	pair of twitching claws	-	-	-	-	-	-	-
+102	parasitic claw	-	-	-	-	-	-	-
+103	parasitic headgnawer	-	-	-	-	-	-	-
+104	parasitic strangleworm	-	-	-	-	-	-	-
+105	parasitic tentacles	-	-	-	-	-	-	-
+106	peace-sign necklace	-	-	-	-	-	-	-
+107	phat turquoise bracelet	-	-	-	-	-	-	-
+108	pirate skull	-	-	-	-	-	-	-
+109	pirate zombie head	-	-	-	-	-	-	-
+110	pirate zombie robot head	-	-	-	-	-	-	-
+111	present	-	-	-	-	-	-	-
+112	pretty bouquet	-	-	-	-	-	-	-
+113	rainbow bomb	-	-	-	-	-	-	-
+114	really really sticky spider web	-	-	-	-	-	-	-
+115	really sticky spider web	-	-	-	-	-	-	-
+116	reassembled blackbird	-	-	-	-	-	-	-
+117	rewinged stab bat	-	-	-	-	-	-	-
+118	roller skate decoy	-	-	-	-	-	-	-
+119	roller skate doll	-	-	-	-	-	-	-
+120	rusty metal key	-	-	-	-	-	-	-
+121	rusty old lantern	-	-	-	-	-	-	-
+122	sabre-toothed lime cub	-	-	-	-	-	-	-
+123	scary death orb	-	-	-	-	-	-	-
+124	skeleton key	-	-	-	-	-	-	-
+125	spooky scarecrow	-	-	-	-	-	-	-
+126	spooky staff	-	-	-	-	-	-	-
+127	sprocket assembly	-	-	-	-	-	-	-
+128	tambourine	-	-	-	-	-	-	-
+129	wang	-	-	-	-	-	-	-
+130	wholeberd	-	-	-	-	-	-	-
+131	wriggling tentacle	-	-	-	-	-	-	-
+132	Staff of Ed (headpiece)	Staff of Ed</b> <font size=1><br/>Staff of Fats (0) + headpiece of the Staff of Ed (0)	-	-	-	-	-	-
+133	makeshift SCUBA gear (hosed tank)	makeshift SCUBA gear</b> <font size=1><br/>fishbowl (0) + hosed tank (0)	-	-	-	-	-	-
+134	smoked potsherd	-	-	-	-	-	-	-
+135	pumpkin carriage	-	-	-	-	-	-	-
+136	pumpkin bomb	-	-	-	-	-	-	-
+137	mysterious present	-	-	-	-	-	-	-
+138	popcorn	-	-	-	-	-	-	-
+139	s'more gun	-	-	-	-	-	-	-
+140	the finger	-	-	-	-	-	-	-
+141	tiny black hole	-	-	-	-	-	-	-
+142	chaos popcorn	-	-	-	-	-	-	-
+143	reconstituted crow	-	-	-	-	-	-	-
+144	The Necbronomicon (used)	-	-	-	-	-	-	-
+145	A Crimbo Carol, Ch. 1 (used)	-	-	-	-	-	-	-
+146	A Crimbo Carol, Ch. 2 (used)	-	-	-	-	-	-	-
+147	A Crimbo Carol, Ch. 3 (used)	-	-	-	-	-	-	-
+148	A Crimbo Carol, Ch. 4 (used)	-	-	-	-	-	-	-
+149	A Crimbo Carol, Ch. 5 (used)	-	-	-	-	-	-	-
+150	A Crimbo Carol, Ch. 6 (used)	-	-	-	-	-	-	-
+151	The Art of Slapfighting (used)	-	-	-	-	-	-	-
+152	Uncle Romulus (used)	-	-	-	-	-	-	-
+153	A Beginner's Guide to Charming Snakes (used)	-	-	-	-	-	-	-
+154	Zu Mannk&auml;se Dienen (used)	-	-	-	-	-	-	-
+155	Autobiography Of Dynamite Superman Jones (used)	-	-	-	-	-	-	-
+156	Inigo's Incantation of Inspiration (crumpled)	-	-	-	-	-	-	-
+157	Tales of a Kansas Toymaker (used)	-	-	-	-	-	-	-
+158	The Joy of Wassailing (used)	-	-	-	-	-	-	-
+159	CRIMBCO Employee Handbook (chapter 1) (used)	-	-	-	-	-	-	-
+160	CRIMBCO Employee Handbook (chapter 2) (used)	-	-	-	-	-	-	-
+161	CRIMBCO Employee Handbook (chapter 3) (used)	-	-	-	-	-	-	-
+162	CRIMBCO Employee Handbook (chapter 4) (used)	-	-	-	-	-	-	-
+163	CRIMBCO Employee Handbook (chapter 5) (used)	-	-	-	-	-	-	-
+164	Field Guide to Skeletal Anatomy (shredded)	-	-	-	-	-	-	-
+165	Ellsbury's journal (used)	-	-	-	-	-	-	-
+166	sandpaper	-	-	-	-	-	-	-
+167	scrap of sticky paper	-	-	-	-	-	-	-
+168	peppermint parasol	-	-	-	-	-	-	-
+169	candy cane candygram	-	-	-	-	-	-	-
+170	banana supersucker	-	-	-	-	-	-	-
+171	pear supersucker	-	-	-	-	-	-	-
+172	lime supersucker	-	-	-	-	-	-	-
+173	kumquat supersucker	-	-	-	-	-	-	-
+174	strawberry supersucker	-	-	-	-	-	-	-
+175	blank fudge mold	-	-	-	-	-	-	-
+176	ammonite candy mold	-	-	-	-	-	-	-
+177	belemnite candy mold	-	-	-	-	-	-	-
+178	trilobite candy mold	-	-	-	-	-	-	-
+179	hot daub	-	-	-	-	-	-	-
+180	wings of fire	-	-	-	-	-	-	-
+181	picture of you	-	-	-	-	-	-	-
+182	cold clusterbomb	-	-	-	-	-	-	-
+183	hot clusterbomb	-	-	-	-	-	-	-
+184	sleaze clusterbomb	-	-	-	-	-	-	-
+185	spooky clusterbomb	-	-	-	-	-	-	-
+186	stench clusterbomb	-	-	-	-	-	-	-
+187	carrot-on-a-stick	-	-	-	-	-	-	-
+188	Mark I Steam-Hat	-	-	-	-	-	-	-
+189	Mark II Steam-Hat	-	-	-	-	-	-	-
+190	Mark III Steam-Hat	-	-	-	-	-	-	-
+191	Mark IV Steam-Hat	-	-	-	-	-	-	-
+192	Mark V Steam-Hat	-	-	-	-	-	-	-
+193	government	-	-	-	-	-	-	-
+194	99.44% pure math	-	-	-	-	-	-	-
+195	corrupted bird DNA	-	-	-	-	-	-	-
+196	dove DNA	-	-	-	-	-	-	-
+197	handful of napalm	-	-	-	-	-	-	-
+198	blessed large box	-	-	-	-	-	-	-
+199	furry brown pillow	-	-	-	-	-	-	-
+200	makeshift yakuza mask	-	-	-	-	-	-	-
+201	pair of rhinoceros horns	-	-	-	-	-	-	-
+202	Flaskfull of Hollow	-	-	-	-	-	-	-
+203	Golden Light	-	-	-	-	-	-	-
+204	Handsome Devil	-	-	-	-	-	-	-
+205	Louder Than Bomb	-	-	-	-	-	-	-
+206	buffed alien drugs	-	-	-	-	-	-	-
+207	opium grenade	-	-	-	-	-	-	-
+208	goblin bone hilt	-	-	-	-	-	-	-
+209	loose blade	-	-	-	-	-	-	-
+210	Choker of the Ultragoth	-	-	-	-	-	-	-
+211	Earring of Fire	-	-	-	-	-	-	-
+212	groovy prism necklace	-	-	-	-	-	-	-
+213	Ice-Cold Aluminum Necklace	-	-	-	-	-	-	-
+214	Ice-Cold Beer Ring	-	-	-	-	-	-	-
+215	Ice-Cold Beerring	-	-	-	-	-	-	-
+216	Mudflap-Girl Earring	-	-	-	-	-	-	-
+217	Mudflap-Girl Necklace	-	-	-	-	-	-	-
+218	Mudflap-Girl Ring	-	-	-	-	-	-	-
+219	Nose Ring of Putrescence	-	-	-	-	-	-	-
+220	Pendant of Fire	-	-	-	-	-	-	-
+221	Putrid Pendant	-	-	-	-	-	-	-
+222	Ring of Fire	-	-	-	-	-	-	-
+223	Ring of the Sewer Snake	-	-	-	-	-	-	-
+224	The Ring	-	-	-	-	-	-	-
+225	Unspeakable Earring	-	-	-	-	-	-	-
+226	filigreed hamethyst earring	-	-	-	-	-	-	-
+227	filigreed hamethyst necklace	-	-	-	-	-	-	-
+228	filigreed hamethyst ring	-	-	-	-	-	-	-
+229	pulled porquoise earring	-	-	-	-	-	-	-
+230	pulled porquoise pendant	-	-	-	-	-	-	-
+231	pulled porquoise ring	-	-	-	-	-	-	-
+232	solid baconstone earring	-	-	-	-	-	-	-
+233	solid baconstone necklace	-	-	-	-	-	-	-
+234	solid baconstone ring	-	-	-	-	-	-	-
+235	bezoar ring	-	-	-	-	-	-	-
+236	floaty rock necklace	-	-	-	-	-	-	-
+237	shark tooth necklace	-	-	-	-	-	-	-
+238	torquoise ring	-	-	-	-	-	-	-
+239	baconstone earring	-	-	-	-	-	-	-
+240	baconstone pendant	-	-	-	-	-	-	-
+241	baconstone ring	-	-	-	-	-	-	-
+242	hamethyst earring	-	-	-	-	-	-	-
+243	hamethyst necklace	-	-	-	-	-	-	-
+244	hamethyst ring	-	-	-	-	-	-	-
+245	porquoise eyebrow ring	-	-	-	-	-	-	-
+246	porquoise necklace	-	-	-	-	-	-	-
+247	porquoise ring	-	-	-	-	-	-	-
+248	vampire pearl earring	-	-	-	-	-	-	-
+249	vampire pearl necklace	-	-	-	-	-	-	-
+250	vampire pearl ring	-	-	-	-	-	-	-
+251	giant diamond ring	-	-	-	-	-	-	-
+252	bananarama bangle	-	-	-	-	-	-	-
+253	pair of pearidot earrings	-	-	-	-	-	-	-
+254	tourmalime tourniquet	-	-	-	-	-	-	-
+255	kumquartz ring	-	-	-	-	-	-	-
+256	strawberyl necklace	-	-	-	-	-	-	-
+257	aquamariner's necklace	-	-	-	-	-	-	-
+258	aquamariner's ring	-	-	-	-	-	-	-
+259	pearl diver's necklace	-	-	-	-	-	-	-
+260	pearl diver's ring	-	-	-	-	-	-	-
+261	doll-eye amulet	-	-	-	-	-	-	-
+262	moon-amber necklace	-	-	-	-	-	-	-
+263	Pendant of Gargalesis	-	-	-	-	-	-	-
+264	dark baconstone ring	-	-	-	-	-	-	-
+265	dark hamethyst ring	-	-	-	-	-	-	-
+266	dark porquoise ring	-	-	-	-	-	-	-
+267	rainbow pearl earring	-	-	-	-	-	-	-
+268	rainbow pearl necklace	-	-	-	-	-	-	-
+269	rainbow pearl ring	-	-	-	-	-	-	-
+270	insulated gold wire	-	-	-	-	-	-	-
+271	capped blue lava bottle	-	-	-	-	-	-	-
+272	capped green lava bottle	-	-	-	-	-	-	-
+273	capped red lava bottle	-	-	-	-	-	-	-
+274	blue LavaCo Lamp&trade;	-	-	-	-	-	-	-
+275	green LavaCo Lamp&trade;	-	-	-	-	-	-	-
+276	red LavaCo Lamp&trade;	-	-	-	-	-	-	-
+277	double barreled barrel gun	-	-	-	-	-	-	-
+278	triple barreled barrel gun	-	-	-	-	-	-	-
+279	barrel beryl nose ring	-	-	-	-	-	-	-
+280	barrel beryl choker	-	-	-	-	-	-	-
+281	barrel beryl ring	-	-	-	-	-	-	-
+282	pine cone necklace	-	-	-	-	-	-	-
+283	nicksilver ring	-	-	-	-	-	-	-
+284	ticksilver ring	-	-	-	-	-	-	-
+285	quicksilver ring	-	-	-	-	-	-	-
+286	sicksilver ring	-	-	-	-	-	-	-
+287	slicksilver ring	-	-	-	-	-	-	-
+288	thicksilver ring	-	-	-	-	-	-	-
+289	wicksilver ring	-	-	-	-	-	-	-
+290	baconstone-handled sixgun	-	-	-	-	-	-	-
+291	hamethyst-handled sixgun	-	-	-	-	-	-	-
+292	porquoise-handled sixgun	-	-	-	-	-	-	-
+293	bomb of unknown origin	-	-	-	-	-	-	-
+294	murderbot live wire	-	-	-	-	-	-	-
+295	murderbot shield unit	-	-	-	-	-	-	-
+296	murderbot spring injector	-	-	-	-	-	-	-
+297	murderbot whip	-	-	-	-	-	-	-
+298	murderbot mask	-	-	-	-	-	-	-
+299	Potion of Heroism	-	-	-	-	-	-	-
+300	empty hourglass	-	-	-	-	-	-	-
+301	hourglass	-	-	-	-	-	-	-
+302	etched hourglass	-	-	-	-	-	-	-
+303	meteorite earring	-	-	-	-	-	-	-
+304	meteorite necklace	-	-	-	-	-	-	-
+305	meteorite ring	-	-	-	-	-	-	-
+306	drippy salt	-	-	-	-	-	-	-
+307	drippy enzyme	-	-	-	-	-	-	-
+308	drippy ichor	-	-	-	-	-	-	-
+309	salty drippy candy bar	-	-	-	-	-	-	-
+310	gooey drippy candy bar	-	-	-	-	-	-	-
+311	writhing drippy candy bar	-	-	-	-	-	-	-
+312	drippy flux	-	-	-	-	-	-	-
+313	drippy pigment	-	-	-	-	-	-	-
+314	drippy bromide	-	-	-	-	-	-	-
+315	annealed drippy orb	-	-	-	-	-	-	-
+316	lustrous drippy orb	-	-	-	-	-	-	-
+317	gory drippy orb	-	-	-	-	-	-	-
+318	battery (9-Volt) (AAA+D)	battery [(]9-Volt[)]</b> <font size=1><br/>battery [(]AAA[)] (0) + battery [(]D[)] (0)	-	-	-	-	-	-
+319	battery (9-Volt) (AA+AA)	battery [(]9-Volt[)]</b> <font size=1><br/>battery [(]AA[)] (0) + battery [(]AA[)] (0)	-	-	-	-	-	-
+320	battery (AA)	-	-	-	-	-	-	-
+321	battery (car) (AAA+lantern)	battery [(]car[)]</b> <font size=1><br/>battery [(]AAA[)] (0) + battery [(]lantern[)] (0)	-	-	-	-	-	-
+322	battery (car) (AA+9-Volt)	battery [(]car[)]</b> <font size=1><br/>battery [(]AA[)] (0) + battery [(]9-Volt[)] (0)	-	-	-	-	-	-
+323	battery (car) (D+D)	battery [(]car[)]</b> <font size=1><br/>battery [(]D[)] (0) + battery [(]D[)] (0)	-	-	-	-	-	-
+324	battery (D)	-	-	-	-	-	-	-
+325	battery (lantern) (AAA+9-Volt)	battery [(]lantern[)]</b> <font size=1><br/>battery [(]AAA[)] (0) + battery [(]9-Volt[)] (0)	-	-	-	-	-	-
+326	battery (lantern) (AA+D)	battery [(]lantern[)]</b> <font size=1><br/>battery [(]AA[)] (0) + battery [(]D[)] (0)	-	-	-	-	-	-
+327	green marshmallow	-	-	-	-	-	-	-

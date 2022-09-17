@@ -1,0 +1,162 @@
+1	balloon helmet	-	-	-	-	-	-	-
+2	balloon monkey	-	-	-	-	-	-	-
+3	balloon shield	-	-	-	-	-	-	-
+4	balloon sword	-	-	-	-	-	-	-
+5	BRICKO bat	-	-	-	-	-	-	-
+6	BRICKO elephant	-	-	-	-	-	-	-
+7	BRICKO octopus	-	-	-	-	-	-	-
+8	BRICKO ooze	-	-	-	-	-	-	-
+9	BRICKO oyster	-	-	-	-	-	-	-
+10	BRICKO python	-	-	-	-	-	-	-
+11	BRICKO turtle	-	-	-	-	-	-	-
+12	BRICKO hat	-	-	-	-	-	-	-
+13	BRICKO pants	-	-	-	-	-	-	-
+14	BRICKO sword	-	-	-	-	-	-	-
+15	clingfilm cap	-	-	-	-	-	-	-
+16	clingfilm slippers	-	-	-	-	-	-	-
+17	clingfilm tangle	-	-	-	-	-	-	-
+18	clingfilm trousers	-	-	-	-	-	-	-
+19	duct tape buckler	-	-	-	-	-	-	-
+20	duct tape dockers	-	-	-	-	-	-	-
+21	duct tape fedora	-	-	-	-	-	-	-
+22	duct tape shirt	-	-	-	-	-	-	-
+23	duct tape sword	-	-	-	-	-	-	-
+24	duct tape wallet	-	-	-	-	-	-	-
+25	gauze hammock	-	-	-	-	-	-	-
+26	gauze shorts	-	-	-	-	-	-	-
+27	mummy mask	-	-	-	-	-	-	-
+28	really thick bandage	-	-	-	-	-	-	-
+29	extra-large palm-frond toupee	-	-	-	-	-	-	-
+30	palm-frond capris	-	-	-	-	-	-	-
+31	palm-frond cloak	-	-	-	-	-	-	-
+32	palm-frond fan	-	-	-	-	-	-	-
+33	palm-frond net	-	-	-	-	-	-	-
+34	palm-frond whip	-	-	-	-	-	-	-
+35	bark beret	-	-	-	-	-	-	-
+36	bark boxers	-	-	-	-	-	-	-
+37	bark bracelet	-	-	-	-	-	-	-
+38	turtlemail breeches	-	-	-	-	-	-	-
+39	turtlemail coif	-	-	-	-	-	-	-
+40	turtlemail hauberk	-	-	-	-	-	-	-
+41	wumpus-hair bolo	-	-	-	-	-	-	-
+42	wumpus-hair loincloth	-	-	-	-	-	-	-
+43	wumpus-hair net	-	-	-	-	-	-	-
+44	wumpus-hair sweater	-	-	-	-	-	-	-
+45	wumpus-hair whip	-	-	-	-	-	-	-
+46	wumpus-hair wig	-	-	-	-	-	-	-
+47	BRICKO pyramid	-	-	-	-	-	-	-
+48	BRICKO vacuum cleaner	-	-	-	-	-	-	-
+49	BRICKO airship	-	-	-	-	-	-	-
+50	BRICKO cathedral	-	-	-	-	-	-	-
+51	BRICKO gargantuchicken	-	-	-	-	-	-	-
+52	snailmail breeches	-	-	-	-	-	-	-
+53	snailmail coif	-	-	-	-	-	-	-
+54	snailmail hauberk	-	-	-	-	-	-	-
+55	pottery club	-	-	-	-	-	-	-
+56	pottery hat	-	-	-	-	-	-	-
+57	pottery shield	-	-	-	-	-	-	-
+58	pottery training pants	-	-	-	-	-	-	-
+59	pottery yo-yo	-	-	-	-	-	-	-
+60	paperclip pants	-	-	-	-	-	-	-
+61	paperclip cape	-	-	-	-	-	-	-
+62	paperclip-on tie	-	-	-	-	-	-	-
+63	paperclip sproinger	-	-	-	-	-	-	-
+64	paperclip turban	-	-	-	-	-	-	-
+65	double-ice cap	-	-	-	-	-	-	-
+66	double-ice box	-	-	-	-	-	-	-
+67	double-ice britches	-	-	-	-	-	-	-
+68	honey dipper	-	-	-	-	-	-	-
+69	honey mead	-	-	-	-	-	-	-
+70	honeybritches	-	-	-	-	-	-	-
+71	honeycap	-	-	-	-	-	-	-
+72	honeypot	-	-	-	-	-	-	-
+73	wild honey pie	-	-	-	-	-	-	-
+74	peppermint twist	-	-	-	-	-	-	-
+75	peppermint patty	-	-	-	-	-	-	-
+76	peppermint crook	-	-	-	-	-	-	-
+77	cane-mail pants	-	-	-	-	-	-	-
+78	peppermint rhino baby	-	-	-	-	-	-	-
+79	cane-mail shirt	-	-	-	-	-	-	-
+80	ballpark hot daub	-	-	-	-	-	-	-
+81	foot-long hot daub	-	-	-	-	-	-	-
+82	hot daub bun	-	-	-	-	-	-	-
+83	hot daub stand	-	-	-	-	-	-	-
+84	wax hat	-	-	-	-	-	-	-
+85	wax pants	-	-	-	-	-	-	-
+86	auxiliary backbone	-	-	-	-	-	-	-
+87	Bonestabber	-	-	-	-	-	-	-
+88	crystal skeleton vodka	-	-	-	-	-	-	-
+89	Lazybones&trade; recliner	-	-	-	-	-	-	-
+90	shaking skull	-	-	-	-	-	-	-
+91	skeletal scabbard	-	-	-	-	-	-	-
+92	skeletal skiff	-	-	-	-	-	-	-
+93	skeleton quiche	-	-	-	-	-	-	-
+94	skeleton skis	-	-	-	-	-	-	-
+95	celestial au jus	-	-	-	-	-	-	-
+96	celestial carrot juice	-	-	-	-	-	-	-
+97	celestial olive oil	-	-	-	-	-	-	-
+98	celestial squid ink	-	-	-	-	-	-	-
+99	jar of oil	-	-	-	-	-	-	-
+100	oil cap	-	-	-	-	-	-	-
+101	oil lamp	-	-	-	-	-	-	-
+102	oil pan	-	-	-	-	-	-	-
+103	oil slacks	-	-	-	-	-	-	-
+104	oily boid	-	-	-	-	-	-	-
+105	papier-m&acirc;ch&eacute; base	-	-	-	-	-	-	-
+106	papier-m&acirc;ch&eacute; bowl	-	-	-	-	-	-	-
+107	papier-m&acirc;ch&eacute; handle	-	-	-	-	-	-	-
+108	papier-m&acirc;ch&eacute; plaque	-	-	-	-	-	-	-
+109	papier-m&acirc;ch&eacute; toothpicks	-	-	-	-	-	-	-
+110	papier-m&acirc;ch&eacute;te	-	-	-	-	-	-	-
+111	papier-m&acirc;chaeranthera	-	-	-	-	-	-	-
+112	papier-m&acirc;chine gun	-	-	-	-	-	-	-
+113	papier-m&acirc;churidars	-	-	-	-	-	-	-
+114	papier-masque	-	-	-	-	-	-	-
+115	papier-mitre	-	-	-	-	-	-	-
+116	papier-mochi	-	-	-	-	-	-	-
+117	plaid bandage	-	-	-	-	-	-	-
+118	plaid pocket square	-	-	-	-	-	-	-
+119	plaid skirt	-	-	-	-	-	-	-
+120	sugar bunny	-	-	-	-	-	-	-
+121	sugar fairy	-	-	-	-	-	-	-
+122	sweet tooth	-	-	-	-	-	-	-
+123	lemon drop trousers	-	-	-	-	-	-	-
+124	lemon party hat	-	-	-	-	-	-	-
+125	lemon shirt	-	-	-	-	-	-	-
+126	tin cup	-	-	-	-	-	-	-
+127	tin drum	-	-	-	-	-	-	-
+128	tin foil	-	-	-	-	-	-	-
+129	tin lizzie	-	-	-	-	-	-	-
+130	tin roof (rusted)	-	-	-	-	-	-	-
+131	tin snips	-	-	-	-	-	-	-
+132	tin tam	-	-	-	-	-	-	-
+133	space bar	-	-	-	-	-	-	-
+134	space heater	-	-	-	-	-	-	-
+135	space invader	-	-	-	-	-	-	-
+136	space needle	-	-	-	-	-	-	-
+137	SMOOCH bracers	-	-	-	-	-	-	-
+138	SMOOCH breastplate	-	-	-	-	-	-	-
+139	SMOOCH codpiece	-	-	-	-	-	-	-
+140	SMOOCH kneepads	-	-	-	-	-	-	-
+141	SMOOCH spaulders	-	-	-	-	-	-	-
+142	smooth velvet hanky	-	-	-	-	-	-	-
+143	smooth velvet hat	-	-	-	-	-	-	-
+144	smooth velvet pants	-	-	-	-	-	-	-
+145	smooth velvet pocket square	-	-	-	-	-	-	-
+146	smooth velvet shirt	-	-	-	-	-	-	-
+147	smooth velvet socks	-	-	-	-	-	-	-
+148	smooth velvet bra	-	-	-	-	-	-	-
+149	eldritch extract	-	-	-	-	-	-	-
+150	eldritch concentrate	-	-	-	-	-	-	-
+151	eldritch rub	-	-	-	-	-	-	-
+152	eldritch tincture	-	-	-	-	-	-	-
+153	snakeskin cowboy hat	-	-	-	-	-	-	-
+154	snakeskin jacket	-	-	-	-	-	-	-
+155	snakeskin thighboots	-	-	-	-	-	-	-
+156	fire	-	-	-	-	-	-	-
+157	small pile of sand	-	-	-	-	-	-	-
+158	pile of sand (grains)	pile of sand</b> <font size=1><br/>1000 x grain of sand	-	-	-	-	-	-
+159	pile of sand (small piles)	pile of sand</b> <font size=1><br/>10 x small pile of sand	-	-	-	-	-	-
+160	large pile of sand (grains)	pile of sand</b> <font size=1><br/>10000 x grain of sand	-	-	-	-	-	-
+161	large pile of sand (small piles)	pile of sand</b> <font size=1><br/>100 x small pile of sand	-	-	-	-	-	-
+162	large pile of sand (piles)	pile of sand</b> <font size=1><br/>10 x pile of sand	-	-	-	-	-	-

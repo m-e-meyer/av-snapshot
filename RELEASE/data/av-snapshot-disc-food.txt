@@ -1,0 +1,371 @@
+1	3vi1 pr0n m4nic0tti	-	-	-	-	-	-	-
+2	Boris's key lime	-	-	-	-	-	-	-
+3	Boris's key lime pie	-	-	-	-	-	-	-
+4	Connery's Elixir of Audacity	-	-	-	-	-	-	-
+5	Crimbo pie	-	-	-	-	-	-	-
+6	Ferrigno's Elixir of Power	-	-	-	-	-	-	-
+7	Frogade	-	-	-	-	-	-	-
+8	Hawking's Elixir of Brilliance	-	-	-	-	-	-	-
+9	Hell broth	-	-	-	-	-	-	-
+10	Hell ramen	-	-	-	-	-	-	-
+11	Himalayan Hidalgo sauce	-	-	-	-	-	-	-
+12	Jarlsberg's key lime	-	-	-	-	-	-	-
+13	Jarlsberg's key lime pie	-	-	-	-	-	-	-
+14	Knob lo mein	-	-	-	-	-	-	-
+15	-	-	-	-	-	-	-	-
+16	Knob sausage stir-fry	-	-	-	-	-	-	-
+17	Knob shroomkabob	-	-	-	-	-	-	-
+18	Knob stir-fry	-	-	-	-	-	-	-
+19	Knoll lo mein	-	-	-	-	-	-	-
+20	Knoll shroomkabob	-	-	-	-	-	-	-
+21	Knoll stir-fry	-	-	-	-	-	-	-
+22	Lucky Surprise Egg	-	-	-	-	-	-	-
+23	Sneaky Pete's key lime	-	-	-	-	-	-	-
+24	Sneaky Pete's key lime pie	-	-	-	-	-	-	-
+25	Spooky Surprise Egg	-	-	-	-	-	-	-
+26	asparagus lo mein	-	-	-	-	-	-	-
+27	asparagus stir-fry	-	-	-	-	-	-	-
+28	banana cream pie	-	-	-	-	-	-	-
+29	banana milkshake	-	-	-	-	-	-	-
+30	banana smoothie	-	-	-	-	-	-	-
+31	banana spritzer	-	-	-	-	-	-	-
+32	bat haggis	-	-	-	-	-	-	-
+33	-	-	-	-	-	-	-	-
+34	bat wing kabob	-	-	-	-	-	-	-
+35	bat wing stir-fry	-	-	-	-	-	-	-
+36	bean burrito	-	-	-	-	-	-	-
+37	beer basted brat	-	-	-	-	-	-	-
+38	bitter pill	-	-	-	-	-	-	-
+39	blackberry polite	-	-	-	-	-	-	-
+40	boring spaghetti	-	-	-	-	-	-	-
+41	brains casserole	-	-	-	-	-	-	-
+42	briny vinegar	-	-	-	-	-	-	-
+43	carob brownies	-	-	-	-	-	-	-
+44	carob chunk cookies	-	-	-	-	-	-	-
+45	catgut taco	-	-	-	-	-	-	-
+46	cherry pie	-	-	-	-	-	-	-
+47	chorizo taco	-	-	-	-	-	-	-
+48	cocoa egg	-	-	-	-	-	-	-
+49	cold and sour sauce	-	-	-	-	-	-	-
+50	-	-	-	-	-	-	-	-
+51	cold wad	-	-	-	-	-	-	-
+52	cologne of contempt	-	-	-	-	-	-	-
+53	concentrated cordial of concentration	-	-	-	-	-	-	-
+54	concoction of clumsiness	-	-	-	-	-	-	-
+55	cool mushroom casserole	-	-	-	-	-	-	-
+56	cordial of concentration	-	-	-	-	-	-	-
+57	cranberry cordial	-	-	-	-	-	-	-
+58	cream of pointy mushroom soup	-	-	-	-	-	-	-
+59	cream pie	-	-	-	-	-	-	-
+60	delicious noodles	-	-	-	-	-	-	-
+61	delicious spicy noodles	-	-	-	-	-	-	-
+62	digital key lime	-	-	-	-	-	-	-
+63	digital key lime pie	-	-	-	-	-	-	-
+64	enchanted bean burrito	-	-	-	-	-	-	-
+65	evil boring spaghetti	-	-	-	-	-	-	-
+66	evil delicious noodles	-	-	-	-	-	-	-
+67	evil delicious spicy noodles	-	-	-	-	-	-	-
+68	evil eyedrops of the ermine	-	-	-	-	-	-	-
+69	evil libation of liveliness	-	-	-	-	-	-	-
+70	evil ointment of the occult	-	-	-	-	-	-	-
+71	evil painful penne pasta	-	-	-	-	-	-	-
+72	evil philter of phorce	-	-	-	-	-	-	-
+73	evil potion of potency	-	-	-	-	-	-	-
+74	evil ravioli della hippy	-	-	-	-	-	-	-
+75	evil serum of sarcasm	-	-	-	-	-	-	-
+76	evil spicy noodles	-	-	-	-	-	-	-
+77	evil tomato juice of powerful power	-	-	-	-	-	-	-
+78	eyedrops of newt	-	-	-	-	-	-	-
+79	eyedrops of the ermine	-	-	-	-	-	-	-
+80	eyedrops of the ocelot	-	-	-	-	-	-	-
+81	fancy schmancy cheese sauce	-	-	-	-	-	-	-
+82	fettucini Inconnu	-	-	-	-	-	-	-
+83	fishy fish	-	-	-	-	-	-	-
+84	fishy fish casserole	-	-	-	-	-	-	-
+85	-	-	-	-	-	-	-	-
+86	flask of baconstone juice	-	-	-	-	-	-	-
+87	flask of hamethyst juice	-	-	-	-	-	-	-
+88	flask of porquoise juice	-	-	-	-	-	-	-
+89	flower petal pie	-	-	-	-	-	-	-
+90	ghost pickle on a stick	-	-	-	-	-	-	-
+91	ghostly pickling solution	-	-	-	-	-	-	-
+92	ghuol egg quiche	-	-	-	-	-	-	-
+93	ghuol-ear kabob	-	-	-	-	-	-	-
+94	-	-	-	-	-	-	-	-
+95	gnatloaf	-	-	-	-	-	-	-
+96	gnatloaf casserole	-	-	-	-	-	-	-
+97	gnocchetti di Nietzsche	-	-	-	-	-	-	-
+98	goat cheese pizza	-	-	-	-	-	-	-
+99	goat cheese taco	-	-	-	-	-	-	-
+100	grue egg omelette	-	-	-	-	-	-	-
+101	herb brownies	-	-	-	-	-	-	-
+102	hippy herbal tea	-	-	-	-	-	-	-
+103	hot and sour sauce	-	-	-	-	-	-	-
+104	-	-	-	-	-	-	-	-
+105	hot stuffing	-	-	-	-	-	-	-
+106	hot wad	-	-	-	-	-	-	-
+107	insanely spicy bean burrito	-	-	-	-	-	-	-
+108	insanely spicy enchanted bean burrito	-	-	-	-	-	-	-
+109	insanely spicy jumping bean burrito	-	-	-	-	-	-	-
+110	jug of baconstone juice	-	-	-	-	-	-	-
+111	jug of hamethyst juice	-	-	-	-	-	-	-
+112	jug of porquoise juice	-	-	-	-	-	-	-
+113	jumping bean burrito	-	-	-	-	-	-	-
+114	jumping bean taco	-	-	-	-	-	-	-
+115	large cocoa eggshell fragment	-	-	-	-	-	-	-
+116	lemon meringue pie	-	-	-	-	-	-	-
+117	libation of liveliness	-	-	-	-	-	-	-
+118	lihc eye pie	-	-	-	-	-	-	-
+119	long pork casserole	-	-	-	-	-	-	-
+120	long pork chop sandwiches	-	-	-	-	-	-	-
+121	-	-	-	-	-	-	-	-
+122	menudo	-	-	-	-	-	-	-
+123	milk of magnesium	-	-	-	-	-	-	-
+124	mushroom pizza	-	-	-	-	-	-	-
+125	nutty organic salad	-	-	-	-	-	-	-
+126	oil of expertise	-	-	-	-	-	-	-
+127	oil of oiliness	-	-	-	-	-	-	-
+128	oil of slipperiness	-	-	-	-	-	-	-
+129	oil of stability	-	-	-	-	-	-	-
+130	ointment of the occult	-	-	-	-	-	-	-
+131	olive lo mein	-	-	-	-	-	-	-
+132	olive stir-fry	-	-	-	-	-	-	-
+133	painful penne pasta	-	-	-	-	-	-	-
+134	papaya taco	-	-	-	-	-	-	-
+135	papotion of papower	-	-	-	-	-	-	-
+136	peach lozenge	-	-	-	-	-	-	-
+137	peach pie	-	-	-	-	-	-	-
+138	pear lozenge	-	-	-	-	-	-	-
+139	pear tart	-	-	-	-	-	-	-
+140	perfume of prejudice	-	-	-	-	-	-	-
+141	phial of coldness	-	-	-	-	-	-	-
+142	phial of hotness	-	-	-	-	-	-	-
+143	phial of sleaziness	-	-	-	-	-	-	-
+144	phial of spookiness	-	-	-	-	-	-	-
+145	phial of stench	-	-	-	-	-	-	-
+146	philter of phorce	-	-	-	-	-	-	-
+147	pie crust	-	-	-	-	-	-	-
+148	plain pizza (flat dough)	plain pizza</b> <font size=1><br/>tomato (0) + flat dough (0)	-	-	-	-	-	-
+149	plum lozenge	-	-	-	-	-	-	-
+150	potent potion of potency	-	-	-	-	-	-	-
+151	potion of potency	-	-	-	-	-	-	-
+152	potion of temporary gr8ness	-	-	-	-	-	-	-
+153	-	-	-	-	-	-	-	-
+154	pr0n cocktail (catsup)	pr0n cocktail</b> <font size=1><br/>catsup (0) + pr0n legs (0)	-	-	-	-	-	-
+155	pr0n m4nic0tti	-	-	-	-	-	-	-
+156	pr0n stir-fry	-	-	-	-	-	-	-
+157	pr0n taco	-	-	-	-	-	-	-
+158	pregnant gloomy black mushroom	-	-	-	-	-	-	-
+159	pregnant mushroom	-	-	-	-	-	-	-
+160	pregnant oily golden mushroom	-	-	-	-	-	-	-
+161	pressurized potion of perception	-	-	-	-	-	-	-
+162	pressurized potion of perspicacity	-	-	-	-	-	-	-
+163	pressurized potion of pneumaticity	-	-	-	-	-	-	-
+164	pressurized potion of proficiency	-	-	-	-	-	-	-
+165	pressurized potion of puissance	-	-	-	-	-	-	-
+166	pressurized potion of pulchritude	-	-	-	-	-	-	-
+167	-	-	-	-	-	-	-	-
+168	rat appendix kabob	-	-	-	-	-	-	-
+169	rat appendix stir-fry	-	-	-	-	-	-	-
+170	rat scrapple	-	-	-	-	-	-	-
+171	ravioli della hippy	-	-	-	-	-	-	-
+172	rocky road ice cream (baboon)	rocky road ice cream</b> <font size=1><br/>glass of baboon milk (0) + floaty gravel (0)	-	-	-	-	-	-
+173	royal jelly taco	-	-	-	-	-	-	-
+174	salamander slurry	-	-	-	-	-	-	-
+175	sauce of the ages	-	-	-	-	-	-	-
+176	sausage pizza	-	-	-	-	-	-	-
+177	-	-	-	-	-	-	-	-
+178	secret blend of herbs and spices	-	-	-	-	-	-	-
+179	serum of sarcasm	-	-	-	-	-	-	-
+180	skewered cat appendix	-	-	-	-	-	-	-
+181	sleaze wad	-	-	-	-	-	-	-
+182	sleazy and sour sauce	-	-	-	-	-	-	-
+183	sleazy fairy gravy	-	-	-	-	-	-	-
+184	-	-	-	-	-	-	-	-
+185	spaghetti with Skullheads	-	-	-	-	-	-	-
+186	spectral pickle	-	-	-	-	-	-	-
+187	spicy bean burrito	-	-	-	-	-	-	-
+188	spicy enchanted bean burrito	-	-	-	-	-	-	-
+189	spicy jumping bean burrito	-	-	-	-	-	-	-
+190	spicy mushroom quesadilla	-	-	-	-	-	-	-
+191	spicy noodles	-	-	-	-	-	-	-
+192	spooky and sour sauce	-	-	-	-	-	-	-
+193	spooky glove	-	-	-	-	-	-	-
+194	-	-	-	-	-	-	-	-
+195	spooky lo mein	-	-	-	-	-	-	-
+196	spooky shroomkabob	-	-	-	-	-	-	-
+197	spooky stir-fry	-	-	-	-	-	-	-
+198	spooky wad	-	-	-	-	-	-	-
+199	star key lime	-	-	-	-	-	-	-
+200	star key lime pie	-	-	-	-	-	-	-
+201	stench and sour sauce	-	-	-	-	-	-	-
+202	stench wad	-	-	-	-	-	-	-
+203	-	-	-	-	-	-	-	-
+204	strawberry pie	-	-	-	-	-	-	-
+205	stuffed spooky mushroom	-	-	-	-	-	-	-
+206	super ka-bob	-	-	-	-	-	-	-
+207	super salad	-	-	-	-	-	-	-
+208	tempura air	-	-	-	-	-	-	-
+209	tempura avocado	-	-	-	-	-	-	-
+210	tempura broccoli	-	-	-	-	-	-	-
+211	tempura carrot	-	-	-	-	-	-	-
+212	tempura cauliflower	-	-	-	-	-	-	-
+213	tempura cucumber	-	-	-	-	-	-	-
+214	tempura radish	-	-	-	-	-	-	-
+215	tofu casserole	-	-	-	-	-	-	-
+216	-	-	-	-	-	-	-	-
+217	tofu stir-fry	-	-	-	-	-	-	-
+218	tofu taco	-	-	-	-	-	-	-
+219	-	-	-	-	-	-	-	-
+220	tomato juice of powerful power	-	-	-	-	-	-	-
+221	-	-	-	-	-	-	-	-
+222	unwound clockwork grapefruit	-	-	-	-	-	-	-
+223	vial of baconstone juice	-	-	-	-	-	-	-
+224	vial of hamethyst juice	-	-	-	-	-	-	-
+225	vial of porquoise juice	-	-	-	-	-	-	-
+226	wet stew	-	-	-	-	-	-	-
+227	wet stunt nut stew	-	-	-	-	-	-	-
+228	white chocolate chip brownies	-	-	-	-	-	-	-
+229	white chocolate chip cookies	-	-	-	-	-	-	-
+230	pr0n cocktail (ketchup)	pr0n cocktail</b> <font size=1><br/>ketchup (0) + pr0n legs (0)	-	-	-	-	-	-
+231	plain pizza (wad of dough)	plain pizza</b> <font size=1><br/>wad of dough (0) + tomato (0)	-	-	-	-	-	-
+232	rocky road ice cream (goat)	rocky road ice cream</b> <font size=1><br/>glass of goat's milk (0) + floaty gravel (0)	-	-	-	-	-	-
+233	Humpty Dumplings	-	-	-	-	-	-	-
+234	squirmy violent party snack	-	-	-	-	-	-	-
+235	pumpkin pie	-	-	-	-	-	-	-
+236	lemon popsicle	-	-	-	-	-	-	-
+237	orange popsicle	-	-	-	-	-	-	-
+238	strawberry popsicle	-	-	-	-	-	-	-
+239	liver popsicle	-	-	-	-	-	-	-
+240	unfrosted Knob cake	-	-	-	-	-	-	-
+241	Knob cake	-	-	-	-	-	-	-
+242	Salsa de las Epocas	-	-	-	-	-	-	-
+243	spaghetti con calaveras	-	-	-	-	-	-	-
+244	fluid of fudge-finding	-	-	-	-	-	-	-
+245	fudgesicle	-	-	-	-	-	-	-
+246	fettucini &eacute;pines Inconnu	-	-	-	-	-	-	-
+247	Dreadsylvanian cold pocket	-	-	-	-	-	-	-
+248	Dreadsylvanian hot pocket	-	-	-	-	-	-	-
+249	Dreadsylvanian sleaze pocket	-	-	-	-	-	-	-
+250	Dreadsylvanian spooky pocket	-	-	-	-	-	-	-
+251	Dreadsylvanian stink pocket	-	-	-	-	-	-	-
+252	deluxe layer cake	-	-	-	-	-	-	-
+253	candy carrot cake	-	-	-	-	-	-	-
+254	carrot cake	-	-	-	-	-	-	-
+255	neutron lollipop	-	-	-	-	-	-	-
+256	ash soda	-	-	-	-	-	-	-
+257	fleetwood mac 'n' cheese	-	-	-	-	-	-	-
+258	papier-m&acirc;ch&eacute; glob	-	-	-	-	-	-	-
+259	pecan pie	-	-	-	-	-	-	-
+260	They liver popsicle	-	-	-	-	-	-	-
+261	seared dino steak	-	-	-	-	-	-	-
+262	unstable fulminate	-	-	-	-	-	-	-
+263	lotion of coldness	-	-	-	-	-	-	-
+264	lotion of hotness	-	-	-	-	-	-	-
+265	lotion of sleaziness	-	-	-	-	-	-	-
+266	lotion of spookiness	-	-	-	-	-	-	-
+267	lotion of stench	-	-	-	-	-	-	-
+268	cheesy eagle sauce	-	-	-	-	-	-	-
+269	Every Day is Like This Sundae	-	-	-	-	-	-	-
+270	Miserable Pie	-	-	-	-	-	-	-
+271	This Charming Flan	-	-	-	-	-	-	-
+272	grilled cheese sandwich	-	-	-	-	-	-	-
+273	Beefy Crunch Pastaco	-	-	-	-	-	-	-
+274	Brain Food Pastaco	-	-	-	-	-	-	-
+275	Cool Brunch Pastaco	-	-	-	-	-	-	-
+276	Energy Buzz Pastaco	-	-	-	-	-	-	-
+277	Ludovico Pastaco	-	-	-	-	-	-	-
+278	Medical Pastaco	-	-	-	-	-	-	-
+279	acceptable bagel	-	-	-	-	-	-	-
+280	loaf of soda bread	-	-	-	-	-	-	-
+281	magical baguette	-	-	-	-	-	-	-
+282	standard-issue cupcake	-	-	-	-	-	-	-
+283	ultra-deluxe cupcake	-	-	-	-	-	-	-
+284	savory dry noodles	-	-	-	-	-	-	-
+285	b&auml;tzle	-	-	-	-	-	-	-
+286	Knob stroganoff	-	-	-	-	-	-	-
+287	Knob stuffed shells	-	-	-	-	-	-	-
+288	menudo ravioli	-	-	-	-	-	-	-
+289	ratini	-	-	-	-	-	-	-
+290	hot hi mein	-	-	-	-	-	-	-
+291	cold hi mein	-	-	-	-	-	-	-
+292	sleazy hi mein	-	-	-	-	-	-	-
+293	spooky hi mein	-	-	-	-	-	-	-
+294	stinky hi mein	-	-	-	-	-	-	-
+295	fishy fish lasagna	-	-	-	-	-	-	-
+296	gnat lasagna	-	-	-	-	-	-	-
+297	long pork lasagna	-	-	-	-	-	-	-
+298	sausage wonton	-	-	-	-	-	-	-
+299	tofu wonton	-	-	-	-	-	-	-
+300	unfortunate dumplings	-	-	-	-	-	-	-
+301	wok lobster	-	-	-	-	-	-	-
+302	agnolotti arboli	-	-	-	-	-	-	-
+303	crudles	-	-	-	-	-	-	-
+304	fusilli marrownarrow	-	-	-	-	-	-	-
+305	ghuol guolash	-	-	-	-	-	-	-
+306	linguini immondizia bianco	-	-	-	-	-	-	-
+307	Mountain Stream gastrique	-	-	-	-	-	-	-
+308	oyster sauce	-	-	-	-	-	-	-
+309	shells a la shellfish	-	-	-	-	-	-	-
+310	spaghetti with ghost balls	-	-	-	-	-	-	-
+311	suggestive strozzapreti	-	-	-	-	-	-	-
+312	libertagliatelle	-	-	-	-	-	-	-
+313	linguini of the sea	-	-	-	-	-	-	-
+314	devil hair pasta	-	-	-	-	-	-	-
+315	spagecialetti	-	-	-	-	-	-	-
+316	turkish mostaccioli	-	-	-	-	-	-	-
+317	good gravy	-	-	-	-	-	-	-
+318	Salsa Libre	-	-	-	-	-	-	-
+319	illicit fish sauce	-	-	-	-	-	-	-
+320	Devil's Elbow Hot Sauce	-	-	-	-	-	-	-
+321	Special&trade; Sauce	-	-	-	-	-	-	-
+322	lava cake	-	-	-	-	-	-	-
+323	Alexy sauce	-	-	-	-	-	-	-
+324	Fettris	-	-	-	-	-	-	-
+325	fusillocybin	-	-	-	-	-	-	-
+326	rainbow sauce	-	-	-	-	-	-	-
+327	drug cocktail sauce	-	-	-	-	-	-	-
+328	prescription noodles	-	-	-	-	-	-	-
+329	robin flan	-	-	-	-	-	-	-
+330	patent aggression tonic	-	-	-	-	-	-	-
+331	patent alacrity tonic	-	-	-	-	-	-	-
+332	patent avarice tonic	-	-	-	-	-	-	-
+333	patent invisibility tonic	-	-	-	-	-	-	-
+334	patent preventative tonic	-	-	-	-	-	-	-
+335	patent sallowness tonic	-	-	-	-	-	-	-
+336	thanksgiving turkey	-	-	-	-	-	-	-
+337	candied sweet potatoes	-	-	-	-	-	-	-
+338	baked stuffing	-	-	-	-	-	-	-
+339	cranberry cylinder	-	-	-	-	-	-	-
+340	mince pie	-	-	-	-	-	-	-
+341	warm gravy	-	-	-	-	-	-	-
+342	leftovers sandwich	-	-	-	-	-	-	-
+343	bread roll	-	-	-	-	-	-	-
+344	green bean casserole	-	-	-	-	-	-	-
+345	mashed potatoes	-	-	-	-	-	-	-
+346	toast with hot jelly	-	-	-	-	-	-	-
+347	toast with cold jelly	-	-	-	-	-	-	-
+348	toast with spooky jelly	-	-	-	-	-	-	-
+349	toast with sleaze jelly	-	-	-	-	-	-	-
+350	toast with stench jelly	-	-	-	-	-	-	-
+351	eldritch mushroom pizza	-	-	-	-	-	-	-
+352	eldritch distillate	-	-	-	-	-	-	-
+353	eldritch essence	-	-	-	-	-	-	-
+354	alien sandwich	-	-	-	-	-	-	-
+355	half double fruitcake	-	-	-	-	-	-	-
+356	denastified haunch	-	-	-	-	-	-	-
+357	haunted cherry pie	-	-	-	-	-	-	-
+358	haunted Hell ramen	-	-	-	-	-	-	-
+359	haunted orange	-	-	-	-	-	-	-
+360	haunted pizza	-	-	-	-	-	-	-
+361	moosemeat pie	-	-	-	-	-	-	-
+362	bloodstick	-	-	-	-	-	-	-
+363	blood snowcone	-	-	-	-	-	-	-
+364	blood roll-up	-	-	-	-	-	-	-
+365	actual blood sausage (batgut)	actual blood sausage</b> <font size=1><br/>batgut (0) + blood bag (0)	-	-	-	-	-	-
+366	actual blood sausage (ratgut)	actual blood sausage</b> <font size=1><br/>ratgut (0) + blood bag (0)	-	-	-	-	-	-
+367	blood-soaked sponge cake (filthy poultice)	blood-soaked sponge cake</b> <font size=1><br/>filthy poultice (0) + blood bag (0)	-	-	-	-	-	-
+368	blood-soaked sponge cake (gauze garter)	blood-soaked sponge cake</b> <font size=1><br/>gauze garter (0) + blood bag (0)	-	-	-	-	-	-
+369	tempura green and red bean	-	-	-	-	-	-	-
+370	pressurized potion of possessiveness	-	-	-	-	-	-	-
+371	mushroom tea	-	-	-	-	-	-	-

@@ -1,0 +1,262 @@
+1	Divine	-	-	-	-	-	-	-
+2	Gordon Bennett	-	-	-	-	-	-	-
+3	Mae West	-	-	-	-	-	-	-
+4	Mae West with a fly in it	-	-	-	-	-	-	-
+5	Mon Tiki	-	-	-	-	-	-	-
+6	Neuromancer	-	-	-	-	-	-	-
+7	White Hyborian	-	-	-	-	-	-	-
+8	a little sump'm sump'm	-	-	-	-	-	-	-
+9	an evil little sump'm sump'm	-	-	-	-	-	-	-
+10	banana daiquiri	-	-	-	-	-	-	-
+11	berry-infused sake	-	-	-	-	-	-	-
+12	blended frozen swill	-	-	-	-	-	-	-
+13	blended frozen swill with a fly in it	-	-	-	-	-	-	-
+14	bloody beer (Sir S)	bloody beer</b> <font size=1><br/>ice-cold Sir Schlitz (0) + tomato (0)	-	-	-	-	-	-
+15	bloody mary	-	-	-	-	-	-	-
+16	bodyslam	-	-	-	-	-	-	-
+17	boilermaker	-	-	-	-	-	-	-
+18	bungle in the jungle	-	-	-	-	-	-	-
+19	caipifruta	-	-	-	-	-	-	-
+20	calle de miel	-	-	-	-	-	-	-
+21	calle de miel with a fly in it	-	-	-	-	-	-	-
+22	cherry bomb	-	-	-	-	-	-	-
+23	citrus-infused sake	-	-	-	-	-	-	-
+24	cool mushroom wine	-	-	-	-	-	-	-
+25	dew yoana lei	-	-	-	-	-	-	-
+26	dew yoana salacious lei	-	-	-	-	-	-	-
+27	dirty martini	-	-	-	-	-	-	-
+28	dry martini	-	-	-	-	-	-	-
+29	dry vodka martini	-	-	-	-	-	-	-
+30	ducha de oro	-	-	-	-	-	-	-
+31	eggnog	-	-	-	-	-	-	-
+32	especially salty dog	-	-	-	-	-	-	-
+33	evil ducha de oro	-	-	-	-	-	-	-
+34	evil horizontal tango	-	-	-	-	-	-	-
+35	evil roll in the hay	-	-	-	-	-	-	-
+36	extra-spicy bloody mary	-	-	-	-	-	-	-
+37	fine wine	-	-	-	-	-	-	-
+38	flaming mushroom wine	-	-	-	-	-	-	-
+39	pebblebr&auml;u (Willer)	pebblebr&auml;u</b> <font size=1><br/>ice-cold Willer (0) + floaty pebbles (0)	-	-	-	-	-	-
+40	flat mushroom wine	-	-	-	-	-	-	-
+41	fruity girl swill	-	-	-	-	-	-	-
+42	fuzzbump	-	-	-	-	-	-	-
+43	gibson	-	-	-	-	-	-	-
+44	gimlet	-	-	-	-	-	-	-
+45	gin and tonic	-	-	-	-	-	-	-
+46	gloomy mushroom wine	-	-	-	-	-	-	-
+47	green beer (Sir S)	green beer</b> <font size=1><br/>ten-leaf clover (0) + ice-cold Sir Schlitz (0)	-	-	-	-	-	-
+48	grog	-	-	-	-	-	-	-
+49	grogtini	-	-	-	-	-	-	-
+50	horizontal tango	-	-	-	-	-	-	-
+51	icy mushroom wine	-	-	-	-	-	-	-
+52	knob mushroom wine	-	-	-	-	-	-	-
+53	knoll mushroom wine	-	-	-	-	-	-	-
+54	lumbering jack	-	-	-	-	-	-	-
+55	lychee chuhai	-	-	-	-	-	-	-
+56	mandarina colada	-	-	-	-	-	-	-
+57	mandarina colada with a fly in it	-	-	-	-	-	-	-
+58	margarita	-	-	-	-	-	-	-
+59	martini	-	-	-	-	-	-	-
+60	melon-infused sake	-	-	-	-	-	-	-
+61	mimosette	-	-	-	-	-	-	-
+62	monkey wrench	-	-	-	-	-	-	-
+63	bottle of gin	-	-	-	-	-	-	-
+64	ocean motion	-	-	-	-	-	-	-
+65	oily mushroom wine	-	-	-	-	-	-	-
+66	old-fashioned	-	-	-	-	-	-	-
+67	papaya sling	-	-	-	-	-	-	-
+68	parisian cathouse	-	-	-	-	-	-	-
+69	pebblebr&auml;u (Sir S)	pebblebr&auml;u</b> <font size=1><br/>ice-cold Sir Schlitz (0) + floaty pebbles (0)	-	-	-	-	-	-
+70	perpendicular hula	-	-	-	-	-	-	-
+71	perpendicular hula with a fly in it	-	-	-	-	-	-	-
+72	pink pony	-	-	-	-	-	-	-
+73	plum wine	-	-	-	-	-	-	-
+74	pointy mushroom wine	-	-	-	-	-	-	-
+75	prussian cathouse	-	-	-	-	-	-	-
+76	prussian cathouse with a fly in it	-	-	-	-	-	-	-
+77	rabbit punch	-	-	-	-	-	-	-
+78	redrum	-	-	-	-	-	-	-
+79	rockin' wagon	-	-	-	-	-	-	-
+80	rockin' wagon with a fly in it	-	-	-	-	-	-	-
+81	roll in the hay	-	-	-	-	-	-	-
+82	rum and cola (dyspepsi)	rum and cola</b> <font size=1><br/>Dyspepsi-Cola (0) + bottle of rum (0)	-	-	-	-	-	-
+83	salacious lychee chuhai	-	-	-	-	-	-	-
+84	salacious screwdiver	-	-	-	-	-	-	-
+85	salty dog	-	-	-	-	-	-	-
+86	sangria	-	-	-	-	-	-	-
+87	sangria del diablo	-	-	-	-	-	-	-
+88	screwdiver	-	-	-	-	-	-	-
+89	screwdriver	-	-	-	-	-	-	-
+90	shot of blackberry schnapps	-	-	-	-	-	-	-
+91	shot of flower schnapps	-	-	-	-	-	-	-
+92	shot of grapefruit schnapps	-	-	-	-	-	-	-
+93	shot of orange schnapps	-	-	-	-	-	-	-
+94	shot of peach schnapps	-	-	-	-	-	-	-
+95	shot of pear schnapps	-	-	-	-	-	-	-
+96	shot of tomato schnapps	-	-	-	-	-	-	-
+97	skewered cherry	-	-	-	-	-	-	-
+98	skewered jumbo olive	-	-	-	-	-	-	-
+99	skewered lime	-	-	-	-	-	-	-
+100	slap and tickle	-	-	-	-	-	-	-
+101	slap and tickle with a fly in it	-	-	-	-	-	-	-
+102	slip 'n' slide	-	-	-	-	-	-	-
+103	spiced rum	-	-	-	-	-	-	-
+104	spooky mushroom wine	-	-	-	-	-	-	-
+105	stinky mushroom wine	-	-	-	-	-	-	-
+106	strawberry daiquiri	-	-	-	-	-	-	-
+107	strawberry wine	-	-	-	-	-	-	-
+108	tangarita	-	-	-	-	-	-	-
+109	tangarita with a fly in it	-	-	-	-	-	-	-
+110	teqiwila	-	-	-	-	-	-	-
+111	teqiwila slammer	-	-	-	-	-	-	-
+112	tequila sunrise	-	-	-	-	-	-	-
+113	tequila sunset	-	-	-	-	-	-	-
+114	tequila with training wheels	-	-	-	-	-	-	-
+115	tropical swill	-	-	-	-	-	-	-
+116	vesper	-	-	-	-	-	-	-
+117	vodka and cranberry	-	-	-	-	-	-	-
+118	vodka and tonic	-	-	-	-	-	-	-
+119	vodka gibson	-	-	-	-	-	-	-
+120	vodka martini	-	-	-	-	-	-	-
+121	vodka stratocaster	-	-	-	-	-	-	-
+122	whiskey and cola (dyspepsi)	whiskey and cola</b> <font size=1><br/>bottle of whiskey (0) + Dyspepsi-Cola (0)	-	-	-	-	-	-
+123	whiskey and soda	-	-	-	-	-	-	-
+124	whiskey bittersweet	-	-	-	-	-	-	-
+125	whiskey sour	-	-	-	-	-	-	-
+126	white Canadian	-	-	-	-	-	-	-
+127	wine spritzer	-	-	-	-	-	-	-
+128	yellow brick road	-	-	-	-	-	-	-
+129	zmobie	-	-	-	-	-	-	-
+130	bottle of rum	-	-	-	-	-	-	-
+131	bottle of tequila	-	-	-	-	-	-	-
+132	bottle of vodka	-	-	-	-	-	-	-
+133	bottle of whiskey	-	-	-	-	-	-	-
+134	boxed wine	-	-	-	-	-	-	-
+135	bloody beer (Willer)	bloody beer</b> <font size=1><br/>ice-cold Willer (0) + tomato (0)	-	-	-	-	-	-
+136	green beer (Willer)	green beer</b> <font size=1><br/>ten-leaf clover (0) + ice-cold Willer (0)	-	-	-	-	-	-
+137	bottle of sake	-	-	-	-	-	-	-
+138	rum and cola (cloaca)	rum and cola</b> <font size=1><br/>bottle of rum (0) + Cloaca-Cola (0)	-	-	-	-	-	-
+139	whiskey and cola (cloaca)	whiskey and cola</b> <font size=1><br/>bottle of whiskey (0) + Cloaca-Cola (0)	-	-	-	-	-	-
+140	world's most unappetizing beverage	-	-	-	-	-	-	-
+141	pumpkin beer	-	-	-	-	-	-	-
+142	Russian Ice	-	-	-	-	-	-	-
+143	Crimbojito	-	-	-	-	-	-	-
+144	Feliz Navidad	-	-	-	-	-	-	-
+145	Gin Mint	-	-	-	-	-	-	-
+146	Mint Yulep	-	-	-	-	-	-	-
+147	Sangria de Menthe	-	-	-	-	-	-	-
+148	Vodka Matryoshka	-	-	-	-	-	-	-
+149	red drunki-bear	-	-	-	-	-	-	-
+150	green drunki-bear	-	-	-	-	-	-	-
+151	yellow drunki-bear	-	-	-	-	-	-	-
+152	slap and slap again	-	-	-	-	-	-	-
+153	soft green echo eyedrop antidote martini	-	-	-	-	-	-	-
+154	Dreadsylvanian cold-fashioned	-	-	-	-	-	-	-
+155	Dreadsylvanian dank and stormy	-	-	-	-	-	-	-
+156	Dreadsylvanian grimlet	-	-	-	-	-	-	-
+157	Dreadsylvanian hot toddy	-	-	-	-	-	-	-
+158	Dreadsylvanian slithery nipple	-	-	-	-	-	-	-
+159	Breakfast Blast wine cooler	-	-	-	-	-	-	-
+160	Cherrytastrophe wine cooler	-	-	-	-	-	-	-
+161	Citrus Crush wine cooler	-	-	-	-	-	-	-
+162	Orangemageddon wine cooler	-	-	-	-	-	-	-
+163	Radberry Rip wine cooler	-	-	-	-	-	-	-
+164	Murderer's Punch	-	-	-	-	-	-	-
+165	stealth bomber	-	-	-	-	-	-	-
+166	mulled berry wine	-	-	-	-	-	-	-
+167	carrot claret	-	-	-	-	-	-	-
+168	gamma nog	-	-	-	-	-	-	-
+169	blood-red mushroom wine	-	-	-	-	-	-	-
+170	buzzing mushroom wine	-	-	-	-	-	-	-
+171	complex mushroom wine	-	-	-	-	-	-	-
+172	overpowering mushroom wine	-	-	-	-	-	-	-
+173	smooth mushroom wine	-	-	-	-	-	-	-
+174	swirling mushroom wine	-	-	-	-	-	-	-
+175	bottle of drinkin' gas	-	-	-	-	-	-	-
+176	chocotini	-	-	-	-	-	-	-
+177	snakebite	-	-	-	-	-	-	-
+178	Irish Coffee, English Heart	-	-	-	-	-	-	-
+179	Paint A Vulgar Pitcher	-	-	-	-	-	-	-
+180	Strikes Again Bigmouth	-	-	-	-	-	-	-
+181	perfect cosmopolitan	-	-	-	-	-	-	-
+182	perfect dark and stormy	-	-	-	-	-	-	-
+183	perfect mimosa	-	-	-	-	-	-	-
+184	perfect negroni	-	-	-	-	-	-	-
+185	perfect old-fashioned	-	-	-	-	-	-	-
+186	perfect paloma	-	-	-	-	-	-	-
+187	robin nog	-	-	-	-	-	-	-
+188	Bloody Nora	-	-	-	-	-	-	-
+189	Churchill	-	-	-	-	-	-	-
+190	Gnollish sangria	-	-	-	-	-	-	-
+191	Gnomish sagngria	-	-	-	-	-	-	-
+192	great old fashioned	-	-	-	-	-	-	-
+193	London frog	-	-	-	-	-	-	-
+194	Mysterious Island iced tea	-	-	-	-	-	-	-
+195	Newark	-	-	-	-	-	-	-
+196	Phil Collins	-	-	-	-	-	-	-
+197	Phlegethon	-	-	-	-	-	-	-
+198	R'lyeh	-	-	-	-	-	-	-
+199	Siberian sunrise	-	-	-	-	-	-	-
+200	Simepore slime	-	-	-	-	-	-	-
+201	Tequiz Navidad	-	-	-	-	-	-	-
+202	dirt julep	-	-	-	-	-	-	-
+203	double entendre	-	-	-	-	-	-	-
+204	drive-by shooting	-	-	-	-	-	-	-
+205	eighth plague	-	-	-	-	-	-	-
+206	elemental caipiroska	-	-	-	-	-	-	-
+207	extremely slippery nipple	-	-	-	-	-	-	-
+208	gunner's daughter	-	-	-	-	-	-	-
+209	hell in a bucket	-	-	-	-	-	-	-
+210	literal grasshopper	-	-	-	-	-	-	-
+211	low tide martini	-	-	-	-	-	-	-
+212	mentholated wine	-	-	-	-	-	-	-
+213	moreltini	-	-	-	-	-	-	-
+214	morning dew	-	-	-	-	-	-	-
+215	nothingtini	-	-	-	-	-	-	-
+216	piscatini	-	-	-	-	-	-	-
+217	reverse Tantalus	-	-	-	-	-	-	-
+218	shroomtini	-	-	-	-	-	-	-
+219	single entendre	-	-	-	-	-	-	-
+220	soilzerac	-	-	-	-	-	-	-
+221	vodka barracuda	-	-	-	-	-	-	-
+222	vodka stinger	-	-	-	-	-	-	-
+223	whiskey squeeze	-	-	-	-	-	-	-
+224	eldritch elixir	-	-	-	-	-	-	-
+225	nega-mushroom wine	-	-	-	-	-	-	-
+226	neg grog	-	-	-	-	-	-	-
+227	bad rum and good cola	-	-	-	-	-	-	-
+228	haunted bottle of vodka	-	-	-	-	-	-	-
+229	haunted eggnog	-	-	-	-	-	-	-
+230	haunted gimlet	-	-	-	-	-	-	-
+231	haunted martini	-	-	-	-	-	-	-
+232	twice-haunted screwdriver	-	-	-	-	-	-	-
+233	beaver punch (papaya)	-	-	-	-	-	-	-
+234	beaver punch (peach)	-	-	-	-	-	-	-
+235	beaver punch (cherry)	-	-	-	-	-	-	-
+236	bottle of Sanguiovese	-	-	-	-	-	-	-
+237	mulled blood	-	-	-	-	-	-	-
+238	Red Russian	-	-	-	-	-	-	-
+239	vampagne (carbonated soy milk)	vampagne</b> <font size=1><br/>carbonated soy milk (0) + blood bag (0)	-	-	-	-	-	-
+240	vampagne (Monstar energy beverage)	vampagne</b> <font size=1><br/>Monstar energy beverage (0) + blood bag (0)	-	-	-	-	-	-
+241	dusty bottle of blood (Marsala)	dusty bottle of blood</b> <font size=1><br/>dusty bottle of Marsala (0) + blood bag (0)	-	-	-	-	-	-
+242	dusty bottle of blood (Merlot)	dusty bottle of blood</b> <font size=1><br/>dusty bottle of Merlot (0) + blood bag (0)	-	-	-	-	-	-
+243	dusty bottle of blood (Muscat)	dusty bottle of blood</b> <font size=1><br/>dusty bottle of Muscat (0) + blood bag (0)	-	-	-	-	-	-
+244	dusty bottle of blood (Pinot Noir)	dusty bottle of blood</b> <font size=1><br/>dusty bottle of Pinot Noir (0) + blood bag (0)	-	-	-	-	-	-
+245	dusty bottle of blood (Port)	dusty bottle of blood</b> <font size=1><br/>dusty bottle of Port (0) + blood bag (0)	-	-	-	-	-	-
+246	dusty bottle of blood (Zinfandel)	dusty bottle of blood</b> <font size=1><br/>dusty bottle of Zinfandel (0) + blood bag (0)	-	-	-	-	-	-
+247	Island Landslide	-	-	-	-	-	-	-
+248	Scorpion Bowl	-	-	-	-	-	-	-
+249	Skull Punch	-	-	-	-	-	-	-
+250	Electric Punch	-	-	-	-	-	-	-
+251	Island Thunderstorm	-	-	-	-	-	-	-
+252	Turtle Bowl	-	-	-	-	-	-	-
+253	Cobra Bowl	-	-	-	-	-	-	-
+254	Island Hurricane	-	-	-	-	-	-	-
+255	Smuggler's Punch	-	-	-	-	-	-	-
+256	salt plum sake	-	-	-	-	-	-	-
+257	mushroom whiskey	-	-	-	-	-	-	-
+258	Buttery Boy	-	-	-	-	-	-	-
+259	Ghiaccio Colada	-	-	-	-	-	-	-
+260	Nog-on-the-Cob	-	-	-	-	-	-	-
+261	Sourfinger	-	-	-	-	-	-	-
+262	Steamboat	-	-	-	-	-	-	-

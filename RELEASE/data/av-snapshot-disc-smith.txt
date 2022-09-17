@@ -1,0 +1,315 @@
+1	17-alarm Saucepan	-	-	-	-	-	-	-
+2								
+3	7-inch discus	-	-	-	-	-	-	-
+4								
+5	Chelonian Morningstar	-	-	-	-	-	-	-
+6	Crimbo hat	-	-	-	-	-	-	-
+7	Crimbo pants	-	-	-	-	-	-	-
+8	Crimbo sword	-	-	-	-	-	-	-
+9								
+10	Frost&trade; brand sword	-	-	-	-	-	-	-
+11	Greek Pasta Spoon of Peril	-	-	-	-	-	-	-
+12	Hammer of Smiting	-	-	-	-	-	-	-
+13	Kentucky-fried meat crossbow	-	-	-	-	-	-	-
+14	Kentucky-fried meat staff	-	-	-	-	-	-	-
+15	Kentucky-fried meat sword	-	-	-	-	-	-	-
+16								
+17	PVC staff	-	-	-	-	-	-	-
+18								
+19								
+20	Shagadelic Disco Banjo	-	-	-	-	-	-	-
+21	Spirit Precipice	-	-	-	-	-	-	-
+22	Squeezebox of the Ages	-	-	-	-	-	-	-
+23	Super Magic Power Sword X	-	-	-	-	-	-	-
+24	Tropical Crimbo Hat	-	-	-	-	-	-	-
+25	Tropical Crimbo Shorts	-	-	-	-	-	-	-
+26	Tropical Crimbo Sword	-	-	-	-	-	-	-
+27	ancient turtle shell helmet	-	-	-	-	-	-	-
+28	asbestos crossbow	-	-	-	-	-	-	-
+29	asbestos helmet turtle	-	-	-	-	-	-	-
+30	asbestos meat stack	-	-	-	-	-	-	-
+31	asbestos staff	-	-	-	-	-	-	-
+32	asbestos sword	-	-	-	-	-	-	-
+33	baneful bandolier	-	-	-	-	-	-	-
+34	bar whip	-	-	-	-	-	-	-
+35	barskin buckler	-	-	-	-	-	-	-
+36	barskin cloak	-	-	-	-	-	-	-
+37	barskin hat	-	-	-	-	-	-	-
+38	barskin loincloth	-	-	-	-	-	-	-
+39	basic meat crossbow	-	-	-	-	-	-	-
+40	basic meat fez	-	-	-	-	-	-	-
+41	basic meat foon	-	-	-	-	-	-	-
+42	basic meat helmet	-	-	-	-	-	-	-
+43	basic meat kilt	-	-	-	-	-	-	-
+44	basic meat pants	-	-	-	-	-	-	-
+45	basic meat skirt	-	-	-	-	-	-	-
+46	basic meat spork	-	-	-	-	-	-	-
+47	basic meat staff	-	-	-	-	-	-	-
+48	basic meat sword	-	-	-	-	-	-	-
+49	bat hat	-	-	-	-	-	-	-
+50	bat whip	-	-	-	-	-	-	-
+51	bat-ass leather jacket	-	-	-	-	-	-	-
+52	black belt	-	-	-	-	-	-	-
+53	black cowboy hat	-	-	-	-	-	-	-
+54	bow staff	-	-	-	-	-	-	-
+55	bowlegged pants	-	-	-	-	-	-	-
+56	bowler	-	-	-	-	-	-	-
+57	bubble bauble bow	-	-	-	-	-	-	-
+58	bubblewrap bottlecap turtleban	-	-	-	-	-	-	-
+59	bubblewrap crossbow	-	-	-	-	-	-	-
+60	bubblewrap staff	-	-	-	-	-	-	-
+61	bubblewrap sword	-	-	-	-	-	-	-
+62	buffalo blade	-	-	-	-	-	-	-
+63	can cannon	-	-	-	-	-	-	-
+64	cardboard box turtle	-	-	-	-	-	-	-
+65	cardboard crossbow	-	-	-	-	-	-	-
+66	cardboard staff	-	-	-	-	-	-	-
+67	cardboard sword	-	-	-	-	-	-	-
+68	carob cannon	-	-	-	-	-	-	-
+69	catskin buckler	-	-	-	-	-	-	-
+70	catskin cap	-	-	-	-	-	-	-
+71	chrome crossbow	-	-	-	-	-	-	-
+72	chrome helmet turtle	-	-	-	-	-	-	-
+73	chrome meat stack	-	-	-	-	-	-	-
+74	chrome staff	-	-	-	-	-	-	-
+75	chrome sword	-	-	-	-	-	-	-
+76	clown whip	-	-	-	-	-	-	-
+77	clown wig	-	-	-	-	-	-	-
+78	clownskin belt	-	-	-	-	-	-	-
+79	clownskin buckler	-	-	-	-	-	-	-
+80	clownskin harness	-	-	-	-	-	-	-
+81	club of the five seasons	-	-	-	-	-	-	-
+82	corroded breeches	-	-	-	-	-	-	-
+83	corrosive cowl	-	-	-	-	-	-	-
+84	creepy-ass club	-	-	-	-	-	-	-
+85	curdflinger	-	-	-	-	-	-	-
+86	demon buckler	-	-	-	-	-	-	-
+87	demon whip	-	-	-	-	-	-	-
+88	demon-horned hat	-	-	-	-	-	-	-
+89	demonskin jacket	-	-	-	-	-	-	-
+90	demonskin trousers	-	-	-	-	-	-	-
+91	dense meat crossbow	-	-	-	-	-	-	-
+92	dense meat staff	-	-	-	-	-	-	-
+93	dense meat sword	-	-	-	-	-	-	-
+94	depleted Grimacite astrolabe	-	-	-	-	-	-	-
+95	depleted Grimacite grappling hook	-	-	-	-	-	-	-
+96	depleted Grimacite gravy boat	-	-	-	-	-	-	-
+97	depleted Grimacite hammer	-	-	-	-	-	-	-
+98	depleted Grimacite ninja mask	-	-	-	-	-	-	-
+99	depleted Grimacite shinguards	-	-	-	-	-	-	-
+100	depleted Grimacite weightlifting belt	-	-	-	-	-	-	-
+101	diabolical crossbow	-	-	-	-	-	-	-
+102	dripping meat crossbow (catsup)	dripping meat crossbow</b> <font size=1><br/>catsup (0) + basic meat crossbow (0)	-	-	-	-	-	-
+103	dripping meat staff (catsup)	dripping meat staff</b> <font size=1><br/>catsup (0) + basic meat staff (0)	-	-	-	-	-	-
+104	dripping meat sword (catsup)	dripping meat sword</b> <font size=1><br/>basic meat sword (0) + catsup (0)	-	-	-	-	-	-
+105	dueling banjo	-	-	-	-	-	-	-
+106	eXtreme meat crossbow	-	-	-	-	-	-	-
+107	eXtreme meat staff	-	-	-	-	-	-	-
+108	eXtreme meat sword	-	-	-	-	-	-	-
+109	eelskin hat	-	-	-	-	-	-	-
+110	eelskin pants	-	-	-	-	-	-	-
+111	eelskin shield	-	-	-	-	-	-	-
+112	enchantlers	-	-	-	-	-	-	-
+113	evil-ass club	-	-	-	-	-	-	-
+114	fez of etymology	-	-	-	-	-	-	-
+115	flaming cardboard sword	-	-	-	-	-	-	-
+116	floaty rock helmet	-	-	-	-	-	-	-
+117	floaty rock pants	-	-	-	-	-	-	-
+118	flypaper staff	-	-	-	-	-	-	-
+119	foon of fearfulness	-	-	-	-	-	-	-
+120	foon of fleshiness	-	-	-	-	-	-	-
+121	foon of foulness	-	-	-	-	-	-	-
+122	foon of frigidity	-	-	-	-	-	-	-
+123	foon of fulmination	-	-	-	-	-	-	-
+124	frigid-ass club	-	-	-	-	-	-	-
+125	furry green earmuffs	-	-	-	-	-	-	-
+126	furry kilt	-	-	-	-	-	-	-
+127	furry pants	-	-	-	-	-	-	-
+128	furry skirt	-	-	-	-	-	-	-
+129	gatorskin umbrella (goatskin)	gatorskin umbrella</b> <font size=1><br/>goatskin umbrella (0) + gator skin (0)	-	-	-	-	-	-
+130	giant cheesestick	-	-	-	-	-	-	-
+131	glistening staff	-	-	-	-	-	-	-
+132	gnauga hide buckler	-	-	-	-	-	-	-
+133	gnauga hide chaps	-	-	-	-	-	-	-
+134	gnauga hide kilt	-	-	-	-	-	-	-
+135	gnauga hide skirt	-	-	-	-	-	-	-
+136	gnauga hide vest	-	-	-	-	-	-	-
+137	gnauga hide whip	-	-	-	-	-	-	-
+138	goulauncher	-	-	-	-	-	-	-
+139	grass blade	-	-	-	-	-	-	-
+140	grass hat	-	-	-	-	-	-	-
+141	grass skirt	-	-	-	-	-	-	-
+142	grease gun	-	-	-	-	-	-	-
+143	grisly shield	-	-	-	-	-	-	-
+144	hairy staff	-	-	-	-	-	-	-
+145								
+146								
+147	hippo skin buckler	-	-	-	-	-	-	-
+148	hippo whip	-	-	-	-	-	-	-
+149	hippopotamus kilt	-	-	-	-	-	-	-
+150	hippopotamus pants	-	-	-	-	-	-	-
+151	hippopotamus skirt	-	-	-	-	-	-	-
+152	hipposkin poncho	-	-	-	-	-	-	-
+153	hot cross bow	-	-	-	-	-	-	-
+154	hot-ass club	-	-	-	-	-	-	-
+155	icy-hot katana	-	-	-	-	-	-	-
+156	knobby kneepads	-	-	-	-	-	-	-
+157	linoleum crossbow	-	-	-	-	-	-	-
+158	linoleum helmet turtle	-	-	-	-	-	-	-
+159	linoleum meat stack	-	-	-	-	-	-	-
+160	linoleum staff	-	-	-	-	-	-	-
+161	linoleum sword	-	-	-	-	-	-	-
+162	malevolent medallion	-	-	-	-	-	-	-
+163	meat cowboy hat	-	-	-	-	-	-	-
+164	meat shield	-	-	-	-	-	-	-
+165	meatloaf helmet (catsup)	meatloaf helmet</b> <font size=1><br/>basic meat helmet (0) + catsup (0)	-	-	-	-	-	-
+166	meatspout staff	-	-	-	-	-	-	-
+167	meaty helmet turtle	-	-	-	-	-	-	-
+168	muculent machete	-	-	-	-	-	-	-
+169	nasty rat mask	-	-	-	-	-	-	-
+170	nasty-ass club	-	-	-	-	-	-	-
+171	non-stick pugil stick	-	-	-	-	-	-	-
+172	painted shield	-	-	-	-	-	-	-
+173	penguin shorts	-	-	-	-	-	-	-
+174	penguin skin buckler	-	-	-	-	-	-	-
+175	penguin whip	-	-	-	-	-	-	-
+176	penguinskin mini-kilt	-	-	-	-	-	-	-
+177	penguinskin mini-skirt	-	-	-	-	-	-	-
+178	pernicious cudgel	-	-	-	-	-	-	-
+179	pestoblade	-	-	-	-	-	-	-
+180	pimpin' meat hat	-	-	-	-	-	-	-
+181	pink pinkslip slip	-	-	-	-	-	-	-
+182	potato pistol	-	-	-	-	-	-	-
+183	poutine pole	-	-	-	-	-	-	-
+184	projectile icemaker	-	-	-	-	-	-	-
+185	rainbow crossbow	-	-	-	-	-	-	-
+186	ram-battering staff	-	-	-	-	-	-	-
+187	raspberry beret	-	-	-	-	-	-	-
+188	ratskin belt	-	-	-	-	-	-	-
+189	rattail whip	-	-	-	-	-	-	-
+190	reinforced furry underpants	-	-	-	-	-	-	-
+191	repeating crossbow	-	-	-	-	-	-	-
+192	samurai turtle helmet	-	-	-	-	-	-	-
+193	savory crossbow	-	-	-	-	-	-	-
+194	savory staff	-	-	-	-	-	-	-
+195	savory sword	-	-	-	-	-	-	-
+196								
+197	sebaceous shield	-	-	-	-	-	-	-
+198	sequined fez	-	-	-	-	-	-	-
+199	shuddersword	-	-	-	-	-	-	-
+200	six-rainbow shield	-	-	-	-	-	-	-
+201	smoldering staff	-	-	-	-	-	-	-
+202	soup-chucks	-	-	-	-	-	-	-
+203	soylent staff	-	-	-	-	-	-	-
+204								
+205	spiky turtle helmet	-	-	-	-	-	-	-
+206	spiky turtle shield	-	-	-	-	-	-	-
+207	spiky turtle shoulderpads	-	-	-	-	-	-	-
+208	sponge helmet	-	-	-	-	-	-	-
+209	spongy shield	-	-	-	-	-	-	-
+210	square sponge pants	-	-	-	-	-	-	-
+211	squeaky staff	-	-	-	-	-	-	-
+212	starchy crossbow	-	-	-	-	-	-	-
+213	starchy staff	-	-	-	-	-	-	-
+214	starchy sword	-	-	-	-	-	-	-
+215	sticky meat skirt	-	-	-	-	-	-	-
+216	sticky meat pants	-	-	-	-	-	-	-
+217								
+218								
+219								
+220	styrofoam crossbow	-	-	-	-	-	-	-
+221	styrofoam staff	-	-	-	-	-	-	-
+222	styrofoam sword	-	-	-	-	-	-	-
+223	sword behind inappropriate prepositions	-	-	-	-	-	-	-
+224	sword of static	-	-	-	-	-	-	-
+225	tail o' nine cats	-	-	-	-	-	-	-
+226	teflon shield	-	-	-	-	-	-	-
+227	teflon spatula	-	-	-	-	-	-	-
+228	teflon swim fins	-	-	-	-	-	-	-
+229	tighty whiteys	-	-	-	-	-	-	-
+230	time helmet	-	-	-	-	-	-	-
+231	time sword	-	-	-	-	-	-	-
+232	time trousers	-	-	-	-	-	-	-
+233	tortoboggan shield	-	-	-	-	-	-	-
+234	tuxedo shirt	-	-	-	-	-	-	-
+235	velcro boots	-	-	-	-	-	-	-
+236	velcro broadsword	-	-	-	-	-	-	-
+237	velcro paddle ball	-	-	-	-	-	-	-
+238	velcro shield	-	-	-	-	-	-	-
+239	villainous scythe	-	-	-	-	-	-	-
+240	vinyl boots	-	-	-	-	-	-	-
+241	vinyl shield	-	-	-	-	-	-	-
+242	white snakeskin duster	-	-	-	-	-	-	-
+243	white whip	-	-	-	-	-	-	-
+244	wiffle-flail	-	-	-	-	-	-	-
+245	yak anorak	-	-	-	-	-	-	-
+246	yak toupee	-	-	-	-	-	-	-
+247	yak whip	-	-	-	-	-	-	-
+248	yakskin buckler	-	-	-	-	-	-	-
+249	yakskin kilt	-	-	-	-	-	-	-
+250	yakskin pants	-	-	-	-	-	-	-
+251	yakskin skirt	-	-	-	-	-	-	-
+252	dripping meat crossbow (ketchup)	dripping meat crossbow</b> <font size=1><br/>ketchup (0) + basic meat crossbow (0)	-	-	-	-	-	-
+253	dripping meat staff (ketchup)	dripping meat staff</b> <font size=1><br/>ketchup (0) + basic meat staff (0)	-	-	-	-	-	-
+254	dripping meat sword (ketchup)	dripping meat sword</b> <font size=1><br/>basic meat sword (0) + ketchup (0)	-	-	-	-	-	-
+255	meatloaf helmet (ketchup)	meatloaf helmet</b> <font size=1><br/>basic meat helmet (0) + ketchup (0)	-	-	-	-	-	-
+256	gatorskin umbrella (titanium)	gatorskin umbrella</b> <font size=1><br/>titanium assault umbrella (0) + gator skin (0)	-	-	-	-	-	-
+257	sticky meat kilt (male)	sticky meat kilt</b> <font size=1><br/>really really sticky spider web (0) + basic meat kilt (0)	-	-	-	-	-	-
+258	white belt	-	-	-	-	-	-	-
+259	shin gourds	-	-	-	-	-	-	-
+260	Staff of the November Jack-O-Lantern	-	-	-	-	-	-	-
+261	giant red gummi ingot	-	-	-	-	-	-	-
+262	giant green gummi ingot	-	-	-	-	-	-	-
+263	giant yellow gummi ingot	-	-	-	-	-	-	-
+264	staph of homophones	-	-	-	-	-	-	-
+265	rusty staff	-	-	-	-	-	-	-
+266	lynyrdskin cap	-	-	-	-	-	-	-
+267	lynyrdskin breeches	-	-	-	-	-	-	-
+268	lynyrdskin tunic	-	-	-	-	-	-	-
+269	elevent	-	-	-	-	-	-	-
+270	elevenderizing hammer	-	-	-	-	-	-	-
+271	elevennis shoes	-	-	-	-	-	-	-
+272	ghast iron cleaver	-	-	-	-	-	-	-
+273	ghast iron codpiece	-	-	-	-	-	-	-
+274	ghast iron Garibaldi	-	-	-	-	-	-	-
+275	ghast iron heater shield	-	-	-	-	-	-	-
+276	ghast iron ingot	-	-	-	-	-	-	-
+277	Belt of Loathing	-	-	-	-	-	-	-
+278	Goggles of Loathing	-	-	-	-	-	-	-
+279	Jeans of Loathing	-	-	-	-	-	-	-
+280	Scepter of Loathing	-	-	-	-	-	-	-
+281	Stick-Knife of Loathing	-	-	-	-	-	-	-
+282	Treads of Loathing	-	-	-	-	-	-	-
+283	Crimbonium fuel rod	-	-	-	-	-	-	-
+284	gelatinous meat mass	-	-	-	-	-	-	-
+285	sentient meat mass	-	-	-	-	-	-	-
+286	simple AI	-	-	-	-	-	-	-
+287	zombie dinosaur egg	-	-	-	-	-	-	-
+288	sea chaps	-	-	-	-	-	-	-
+289	sea cowboy hat	-	-	-	-	-	-	-
+290	sea holster	-	-	-	-	-	-	-
+291	A Light that Never Goes Out	-	-	-	-	-	-	-
+292	Frankly Mr. Shank	-	-	-	-	-	-	-
+293	Hairpiece On Fire	-	-	-	-	-	-	-
+294	Half a Purse	-	-	-	-	-	-	-
+295	Hand in Glove	-	-	-	-	-	-	-
+296	Hand that Rocks the Ladle	-	-	-	-	-	-	-
+297	Meat Tenderizer is Murder	-	-	-	-	-	-	-
+298	Ouija Board, Ouija Board	-	-	-	-	-	-	-
+299	Saucepanic	-	-	-	-	-	-	-
+300	Shakespeare's Sister's Accordion	-	-	-	-	-	-	-
+301	Sheila Take a Crossbow	-	-	-	-	-	-	-
+302	Staff of the Headmaster's Victuals	-	-	-	-	-	-	-
+303	Vicar's Tutu	-	-	-	-	-	-	-
+304	Work is a Four Letter Sword	-	-	-	-	-	-	-
+305	space beast fur hat	-	-	-	-	-	-	-
+306	space beast fur pants	-	-	-	-	-	-	-
+307	space beast fur whip	-	-	-	-	-	-	-
+308	sticky meat kilt (female)	sticky meat kilt</b> <font size=1><br/>really really sticky spider web (0) + basic meat skirt (0)	-	-	-	-	-	-
+309	nicksilver spurs	-	-	-	-	-	-	-
+310	quicksilver spurs	-	-	-	-	-	-	-
+311	sicksilver spurs	-	-	-	-	-	-	-
+312	slicksilver spurs	-	-	-	-	-	-	-
+313	thicksilver spurs	-	-	-	-	-	-	-
+314	ticksilver spurs	-	-	-	-	-	-	-
+315	wicksilver spurs	-	-	-	-	-	-	-
