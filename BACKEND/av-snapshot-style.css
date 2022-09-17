@@ -36,6 +36,9 @@ td, th {
 	text-align: center;
 	padding:3px;
 }
+th {
+	background-color: #DDD;
+}
 .nobord td {
 	border-width: 0 0 0 0;
 }
@@ -43,7 +46,7 @@ td, th {
 	padding: 0 2em 0 2em;
 }
 td.noshrink {
-	font-size:1.25em;
+	font-size: 1em;
 }
 td.toc {
 	font-size:1em;
