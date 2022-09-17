@@ -1128,11 +1128,15 @@ def print_sorted_list(state, data, bytes):
 		name = data[i][1]
 		if name == "":	# some data entries are empty, don't know why
 			continue
+		if name.find('[') >= 0:
+			link = name.replace('[', '').replace(']', '')
+		else:
+			link = name
 		x = int(data[i][0])
 		clas = ''
 		if getbits(bytes, x, 1) > 0:
 			clas = ' class="hcperm"'
-		o(f"<td{clas}>{wikilink(name, name)}</td>")
+		o(f"<td{clas}>{wikilink(link, name)}</td>")
 		col = col+1
 		if col > 6:
 			o("</tr><tr>")
