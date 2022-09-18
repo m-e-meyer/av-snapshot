@@ -224,6 +224,7 @@ def load_data(state):
 	state['consmith'] = load_data_file("av-snapshot-disc-smith")
 	state['booze'] = load_data_file("av-snapshot-booze")
 	state['food'] = load_data_file("av-snapshot-food")
+	state['hobocodes'] = load_data_file("av-snapshot-hobocodes")
 
 def hx(tag, text, link):
 	o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
@@ -939,7 +940,25 @@ def print_basement(state):
 	print_loot_row(state, "Hodgman Speed", range(507, 510), 3)
 	o("</table>")
 	h2(state, "Hobo Code Binder", "a_hobocode")
-	o("<p>Coming soon!</p>")
+	o("<table cellspacing=0>")
+	hobocodes = state['hobocodes']
+	col = 1
+	mask = 1 << 19
+	found = int(state['levels'][28:32], 36)
+	for x in hobocodes:
+		if col == 1:
+			o("<tr>")
+		if found & mask == 0:
+			clas = ''
+		else:
+			clas = " class='hcperm'"
+		o(f"<td{clas}>{hobocodes[x][1]}</td>")
+		col = col + 1
+		mask = mask >> 1
+		if col == 6:
+			col = 1
+			o("</tr>")
+	o("</table>")
 	h2(state, "Hobo (and other) Equipment", "a_hobocode")
 	print_coolitem_table(state, ('', 'Hat', 'Pants', 'Accessories'),
 							(('150 Nickels', 27, 30, 34),
@@ -1205,7 +1224,7 @@ def print_consumption(state):
 
 ###########################################################################
 
-def print_end(state, tats, trophs, fams, levels):
+def print_end(state, tats, trophs, fams, levels, demonnames):
 	h1(state, "Miscellaneous Accomplishments", "a_misc")
 	o("<h3>Telescope</h3>")
 	scope_lvl = levels[25:26]
@@ -1223,7 +1242,20 @@ def print_end(state, tats, trophs, fams, levels):
 		o(f"You have thoroughly researched <b>{int(levels[19:22], 36)}</b> creatures.<br/>")
 		o(f"You have exhaustively researched <b>{int(levels[22:25], 36)}</b> creatures.</p>")
 	o("<h3>Demon Names</h3>")
-	o("<p>Coming soon!</p>")
+	o("<table cellspacing=0>")
+	o(f"<tr><td>1) Pies</td><td>{demonnames[0]}</td></tr>")
+	o(f"<tr><td>2) Preternatural Greed<br/>Spooky Forest</td><td>{demonnames[1]}</td></tr>")
+	o(f"<tr><td>3) Fit To Be Tide<br/>Sonofa Beach</td><td>{demonnames[2]}</td></tr>")
+	o(f"<tr><td>4) Big Flaming Whip<br/>Friar's Gate</td><td>{demonnames[3]}</td></tr>")
+	o(f"<tr><td>5) Demonic Taint<br/>Haunted Bathroom</td><td>{demonnames[4]}</td></tr>")
+	o(f"<tr><td>6) Ragamuffin Imp</td><td>{demonnames[5]}</td></tr>")
+	o(f"<tr><td>7) Drinks</td><td>{demonnames[6]}</td></tr>")
+	o(f"<tr><td>8) Existential Torment<br/>Nemesis Lair</td><td>{demonnames[7]}</td></tr>")
+	o(f"<tr><td>9) Burning, Man<br/>Sinister Ancient Tablet</td><td>{demonnames[8]}</td></tr>")
+	o(f"<tr><td>10) The Pleasures of the Flesh<br/>Strange Cube</td><td>{demonnames[9]}</td></tr>")
+	o(f"<tr><td>11) Friend of Gary</br>The Cola Wars Battlefield</td><td>{demonnames[10]}</td></tr>")
+	o(f"<tr><td>12) Neil the Sofa Sloth<br/>Intergnat</td><td>{demonnames[11]}</td></tr>")
+	o("</table>")
 	o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"
 	  f" (Tattoo: {tats}, Trophy: {trophs}, Familiar: {fams})</a></h3>")
 	o("</body></html>\n")
@@ -1313,6 +1345,10 @@ def prepareResponse(argv, context):
 	else:
 		levels = "0"*NUM_LEVELS
 	state['levels'] = levels
+	if "demonnames" in fetched_argv:
+		demonnames = fetched_argv['demonnames'].split('|')
+	else:
+		demonnames = ['']*12
 	#
 	print_skills(state, levels)
 	tats = print_tattoos(state, levels)
@@ -1324,7 +1360,7 @@ def prepareResponse(argv, context):
 	print_discoveries(state)
 	print_consumption(state)
 	#
-	print_end(state, tats, trophs, fams, levels)
+	print_end(state, tats, trophs, fams, levels, demonnames)
 	pre_toc = ''.join(state["o-pre-toc"])
 	toc = ''.join(generate_toc(state['toc']))
 	post_toc = ''.join(OUTPUT)
@@ -1367,7 +1403,7 @@ def exceptionInfo(trace, event):
 timeoutResponse = '''
 <html><head></head>
 <body><h1>Sorry</h1>
-<p>The page timed out while {}.  Please try reloading the page.
+<p>The page timed out while processing.  Please try reloading the page.
 <p>- Aventuristo
 </body></html>
 '''
@@ -1397,10 +1433,16 @@ def lambda_handler(event, context):
 			argv[a] = argv[a][0]
 		operation = request['method']
 	else:
-		argv = event['queryStringParameters']
 		operation = event['httpMethod']
-	if operation == 'GET':
-		html = "What happened?"
+		if operation == 'GET':
+			argv = event['queryStringParameters']
+		else:	# POST, we expect
+			argv = urlparse('?' + event['body'])
+			argv = parse_qs(argv.query)
+			for a in argv:
+				argv[a] = argv[a][0]
+	if operation == 'GET' or operation == 'POST':
+		html = "What happened?"	# in case of error
 		try:
 			signal.signal(signal.SIGALRM, timeout_handler)
 			when = math.floor(context.get_remaining_time_in_millis() / 1000) - 1
@@ -1417,7 +1459,7 @@ def lambda_handler(event, context):
 			signal.alarm(0)
 			return respond(None, on_edge, html)
 	else:
-		logger.info(f'NOT A GET, but a {operation}')
+		logger.info(f'NOT A GET OR POST, but a {operation}')
 		return respond(ValueError(f'Unsupported method "{operation}"'), on_edge)
 
 class FakeContext:
