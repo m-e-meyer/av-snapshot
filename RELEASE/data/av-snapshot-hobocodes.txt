@@ -1,0 +1,20 @@
+1	The Arid, Extra-Dry Desert	-	-	-	-	-	-
+2	Belowdecks	-	-	-	-	-	-
+3	Bugbear Pen	-	-	-	-	-	-
+4	Camp Logging Camp	-	-	-	-	-	-
+5	Cobb's Knob Menagerie, Level 3	-	-	-	-	-	-
+6	Cola Wars Battlefield	-	-	-	-	-	-
+7	Defiled Nook	-	-	-	-	-	-
+8	Enormous Greater-Than Sign	-	-	-	-	-	-
+9	eXtreme Slope	-	-	-	-	-	-
+10	Frat Battlefield	-	-	-	-	-	-
+11	"Fun" House	-	-	-	-	-	-
+12	Lair of the Ninja Snowmen	-	-	-	-	-	-
+13	Limerick Dungeon	-	-	-	-	-	-
+14	Noob Cave	-	-	-	-	-	-
+15	Penultimate Fantasy Airship	-	-	-	-	-	-
+16	Poker Room	-	-	-	-	-	-
+17	Road to White Citadel	-	-	-	-	-	-
+18	Sleazy Back Alley	-	-	-	-	-	-
+19	Thugnderdome	-	-	-	-	-	-
+20	The Unquiet Garves	-	-	-	-	-	-
