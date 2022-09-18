@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '0.1.2';
+string VERSION = '0.9.0';
 
 ////////////////////////////
 
@@ -153,15 +153,15 @@ record ItemImage
 };
 
 ItemImage [int] BOOZE, CONCOCKTAIL, CONFOOD, CONMEAT, CONMISC, CONSMITH, 
-	COOLITEMS, FAMILIARS, FOOD, HOBOPOLIS, MANUEL, MRITEMS, SKILLS,
-    SLIMETUBE, TATTOOS, TROPHIES, TRACKED; 
+	COOLITEMS, FAMILIARS, FOOD, HOBOCODES, MRITEMS, SKILLS,
+    TATTOOS, TROPHIES; 
 
 int[int] LEVELS = {};
 
 void set_level_counter(int i, int value, int num_digits)
 {
 	if (LEVELS.count() == 0) {
-		for j from 0 to 32 {
+		for j from 0 to 31 {
 			LEVELS[j] = 0;
 		}
 	}
@@ -212,6 +212,7 @@ void load_data()
 	load_current_map("av-snapshot-disc-smith", CONSMITH);
 	load_current_map("av-snapshot-booze", BOOZE);
 	load_current_map("av-snapshot-food", FOOD);
+	load_current_map("av-snapshot-hobocodes", HOBOCODES);
 }
 
 boolean is_in(string name, string html)
@@ -649,7 +650,6 @@ string check_coolitems()
 
 string check_discoveries_class(string what, ItemImage[int] map, string param)
 {
-	print(`Checking for Discoveries [{what}]...`, "olive");
 	string url = `craft.php?mode=discoveries&what={what}`;
 	matcher reg = create_matcher("<font size=2>.*?</font>", visit_url(url));
 	string html = replace_all(reg, "");
@@ -662,6 +662,7 @@ string check_discoveries_class(string what, ItemImage[int] map, string param)
 
 string check_discoveries()
 {
+	print(`Checking for discoveries...`, "olive");
 	return check_discoveries_class('cocktail', CONCOCKTAIL, "concocktail")
 		+ check_discoveries_class('cook', CONFOOD, "confood")
 		+ check_discoveries_class('combine', CONMEAT, "conmeat")
@@ -734,8 +735,32 @@ string check_levels()
 	set_level_counter(25, get_property("telescopeUpgrades").to_int());
 	// Looking Glass chessboards
 	set_level_counter(26, get_property("chessboardsCleared").to_int(), 2);
-	//
+	// Hobo codes
+	string html = visit_url("questlog.php?which=5");
+	int codes = 0;
+	foreach x in HOBOCODES
+	{
+		codes = codes * 2;
+		if (is_in(HOBOCODES[x].itemname, html)) {
+			codes = codes + 1;
+		}
+	}
+	set_level_counter(28, codes, 4);
 	return "&levels=" + levels_string();
+}
+
+
+###########################################################################
+
+string check_demons()
+{
+	string result = get_property("demonName1");
+	int i = 2;
+	while (i <= 12) {	# change this number when number of demons changes
+		result = result + "|" + get_property("demonName"+i);
+		i = i + 1;
+	}
+	return "&demonnames=" + result;
 }
 
 
@@ -773,18 +798,21 @@ void main()
 	url = url + check_discoveries();
 	url = url + check_consumption();
 	url = url + check_levels();
+	url = url + check_demons();
 
 	if (get_property("avSnapshotNosave") == "j") {
     	print(url);
 		print(`URL length = {url.length()}`);
 	} else {
 		print("Contacting database...");
-		buffer b = visit_url(url, false);
+		buffer b = visit_url(url, true);
 		if (b.index_of("Record added") >= 0) {
 			print("Database updated", "green");
 			print(`You can visit your profile at {yourUrl}`);
 		} else {
 			print("Some error occurred", "red");
+			print(`URL: {url}`, "red");
+			print(`Reponse: {b}`, "red");
 		}
 	}
 }
