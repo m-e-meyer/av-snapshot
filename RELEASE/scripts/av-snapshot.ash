@@ -155,27 +155,40 @@ record ItemImage
 ItemImage [int] BOOZE, CONCOCKTAIL, CONFOOD, CONMEAT, CONMISC, CONSMITH, 
 	COOLITEMS, FAMILIARS, FOOD, HOBOPOLIS, MANUEL, MRITEMS, SKILLS,
     SLIMETUBE, TATTOOS, TROPHIES, TRACKED; 
+
 int[int] LEVELS = {};
 
-void set_level_counter(int i, int value)
+void set_level_counter(int i, int value, int num_digits)
 {
 	if (LEVELS.count() == 0) {
-		for j from 0 to 20 {
+		for j from 0 to 32 {
 			LEVELS[j] = 0;
 		}
 	}
-	LEVELS[i] = value;
+	while (num_digits > 0) {
+		num_digits = num_digits - 1;
+		int d = value % 36;
+		LEVELS[i+num_digits] = d;
+		value = (value-d) / 36; 
+	}
 }
+
+void set_level_counter(int i, int value)
+{
+	set_level_counter(i, value, 1);
+}
+
 
 string BASE36 = "0123456789abcdefghijklmnopqrstuvwxyz";
 string levels_string() 
 {
 	string result = "";
 	foreach x, val in LEVELS {
-		result = result + BASE62.substring(val, val+1);
+		result = result + BASE36.substring(val, val+1);
 	}
 	return result;
 }
+
 
 boolean load_current_map(string fname, ItemImage[int] map)
 {
@@ -677,6 +690,57 @@ string check_consumption()
 
 ###########################################################################
 
+string check_levels()
+{
+	print("Checking miscellaneous levels...", "olive");
+	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
+	//							 carrot, bear, numberology, safari, implode, hobotat,
+	//							karma (4), manuel (casual 3, thourough 3, exhaustive 3),
+	//							telescope)
+	// hobotat's already been done by this point
+	string[int] levelmap = {
+		0:"46", 1:"47", 2:"48", 3:"117", 4:"118", 5:"121", 6:"128", 7:"134", 
+		8:"144", 9:"180", 10:"188"
+	};
+	foreach i, sknum in levelmap {
+		set_level_counter(i, get_property("skillLevel" + sknum).to_int());
+	}
+	// Karma
+	string karma = visit_url("questlog.php?which=3");
+	matcher m = create_matcher("Your current Karmic balance is ([0-9,]+)", karma);
+	int k = 0;
+	if (find(m)) {
+		k = group(m, 1).to_int();
+	}
+	debug("You have "+k+" karma");
+	set_level_counter(12, k, 4);
+	// Manuel
+	string manuelHTML = visit_url("questlog.php?which=6&vl=a");
+	if(contains_text(manuelHTML, "Monster Manuel")) {
+		matcher m = create_matcher("casually(?:.*?)([0-9]+) creature(s?)[.]", manuelHTML);
+		if (find(m)) {
+			set_level_counter(16, group(m,1).to_int(), 3);
+		}
+		m = create_matcher("thoroughly(?:.*?)([0-9]+) creature(s?)[.]", manuelHTML);
+		if (find(m)) {
+			set_level_counter(19, group(m,1).to_int(), 3);
+		}
+		m = create_matcher("exhaustively(?:.*?)([0-9]+) creature(s?)[.]", manuelHTML);
+		if (find(m)) {
+			set_level_counter(22, group(m,1).to_int(), 3);
+		}
+	}
+	// Telescope
+	set_level_counter(25, get_property("telescopeUpgrades").to_int());
+	// Looking Glass chessboards
+	set_level_counter(26, get_property("chessboardsCleared").to_int(), 2);
+	//
+	return "&levels=" + levels_string();
+}
+
+
+###########################################################################
+
 void main()
 {
 	if(!get_property("kingLiberated").to_boolean())
@@ -708,16 +772,8 @@ void main()
 	url = url + check_coolitems();
 	url = url + check_discoveries();
 	url = url + check_consumption();
-	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
-	//							 carrot, bear, numberology, safari, implode, hobotat)
-	string[int] levelmap = {
-		0:"46", 1:"47", 2:"48", 3:"117", 4:"118", 5:"121", 6:"128", 7:"134", 
-		8:"144", 9:"180", 10:"188"
-	};
-	foreach i, sknum in levelmap {
-		set_level_counter(i, get_property("skillLevel" + sknum).to_int());
-	}
-	url = url + "&levels=" + levels_string();
+	url = url + check_levels();
+
 	if (get_property("avSnapshotNosave") == "j") {
     	print(url);
 		print(`URL length = {url.length()}`);

@@ -17,7 +17,7 @@ from urllib.parse import urlparse, parse_qs
 import base64
 from datetime import datetime
 
-NUM_LEVELS = 12
+NUM_LEVELS = 32
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
 
 # Set this to the CGI location of all files this application will read
@@ -1010,7 +1010,17 @@ def print_looking_glass_table(state):
 	o("<tr>")
 	print_coolitem_cell(state, 186)
 	print_coolitem_cell(state, 187)
-	o("<td>Coming soon!</td><td></td><td></td><td></td></tr></table>\n")
+	levels = state['levels']
+	chess = int(levels[26:28], 36)
+	if chess == 0:
+		clas = ''
+	elif chess == 50:
+		clas = " class='hcperm'"
+	else:
+		clas = " class='perm'"
+	chesstext = f"<img src='{IMAGES}/itemimages/chesscookie.gif'><br/>Chess Boards Completed {chess}/50"
+	o(f"<td{clas}>{wikilink('The_Great_Big_Chessboard',chesstext)}</a></td>"
+		"<td></td><td></td><td></td></tr></table>\n")
 
 def print_coolitems(state):
 	h1(state, "Cool Items", "a_coolitems")
@@ -1195,14 +1205,23 @@ def print_consumption(state):
 
 ###########################################################################
 
-def print_end(state, tats, trophs, fams):
+def print_end(state, tats, trophs, fams, levels):
 	h1(state, "Miscellaneous Accomplishments", "a_misc")
 	o("<h3>Telescope</h3>")
-	o("<p>Coming soon!</p>")
+	scope_lvl = levels[25:26]
+	if scope_lvl == "0":
+		o("<p>You don't have aTelescope in your Campground.</p>")
+	else:
+		o(f"<p>You have a Telescope in your Campground, and it's level <b>{levels[25:26]}</b>!</p>")
 	o("<h3>Karma</h3>")
-	o("<p>Coming soon!</p>")
+	o(f"<p>You have <b>{int(levels[12:16], 36)}</b> unspent Karma.</p>")
 	o("<h3>Monster Manuel</h3>")
-	o("<p>Coming soon!</p>")
+	if (levels[16:25] == "000000000"):
+		o("<p>You probably don't have a Monster Manuel.</p>")
+	else:
+		o(f"<p>You have casually researched <b>{int(levels[16:19], 36)}</b> creatures.<br/>")
+		o(f"You have thoroughly researched <b>{int(levels[19:22], 36)}</b> creatures.<br/>")
+		o(f"You have exhaustively researched <b>{int(levels[22:25], 36)}</b> creatures.</p>")
 	o("<h3>Demon Names</h3>")
 	o("<p>Coming soon!</p>")
 	o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"
@@ -1293,6 +1312,7 @@ def prepareResponse(argv, context):
 			levels = levels + ("0"*(NUM_LEVELS-len(levels)))
 	else:
 		levels = "0"*NUM_LEVELS
+	state['levels'] = levels
 	#
 	print_skills(state, levels)
 	tats = print_tattoos(state, levels)
@@ -1304,7 +1324,7 @@ def prepareResponse(argv, context):
 	print_discoveries(state)
 	print_consumption(state)
 	#
-	print_end(state, tats, trophs, fams)
+	print_end(state, tats, trophs, fams, levels)
 	pre_toc = ''.join(state["o-pre-toc"])
 	toc = ''.join(generate_toc(state['toc']))
 	post_toc = ''.join(OUTPUT)
