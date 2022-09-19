@@ -19,6 +19,7 @@ from datetime import datetime
 
 NUM_LEVELS = 32
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
+VERSION = '0.9.1'
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -111,7 +112,9 @@ def form_param_string(dic):
 
 
 def nowstring():
-	return datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+	now = datetime.now()
+	tz = now.astimezone().tzinfo.tzname(now)
+	return now.strftime('%Y-%m-%d %H:%M:%S') + ' ' + tz
 
 
 if on_aws():
@@ -274,7 +277,13 @@ def print_beginning(state, name, argv, fetched_argv, colorblind):
 		av_version = fetched_argv['snapshotversion']
 	else:
 		av_version = '(unknown)'
-	o(f"<div class='header'>Snapshot for <b>{name}</b> taken {tstamp} using av-snapshot.ash v{av_version} running on KoLmafia revision r{mafia}.<br/>")
+	o(f"<div class='header'><p>Snapshot for <b>{name}</b> taken {tstamp} using av-snapshot.ash"
+	  f" v{av_version} running on KoLmafia revision r{mafia}, rendered by av-snapshot"
+	  f" version {VERSION}.</p>")
+	o("<p>av-snapshot is a fork of the cc_snapshot project by Cheesecookie,"
+	  " whom I thank for his work."
+	  f"  <a href='http://cheesellc.com/kol/profile.php?u={argv['u']}'>Here</a> is the"
+	  " cc_snapshot equivalent of your query.</p>")
 	query = f"?u={name}"
 	if 'on_or_before' in argv:
 		query = query + '&on_or_before=' + argv['on_or_before']
@@ -287,7 +296,7 @@ def print_beginning(state, name, argv, fetched_argv, colorblind):
 		suffix = ''
 	else:
 		suffix = '.py' 
-	o(f"Please click <a href='av-snapshot{suffix}{query}'>here</a> to turn {switch} colorblind mode.</div>\n")
+	o(f"<p>Please click <a href='av-snapshot{suffix}{query}'>here</a> to turn {switch} colorblind mode.</p></div>\n")
 	o("<p></p><table class='nobord' cellspacing=0 cellpadding=0><tr><td class='nobord'><button onclick='toggle_toc();' id='showhide'>Hide</b></td>"
 	  "<td class='nobord' style='font-size:1.5em;' valign='center'><b>Table of Contents</b></td></tr></table><div id='toc'>")
 	o_split(state)
