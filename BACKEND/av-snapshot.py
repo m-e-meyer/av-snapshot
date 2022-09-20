@@ -19,7 +19,7 @@ from datetime import datetime
 
 NUM_LEVELS = 32
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '0.9.1'
+VERSION = '0.9.2'	# 2022-09-19
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -327,9 +327,9 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 	name = skil[1]
 	flags = skil[4]
 	if 'p' in flags:
-		ibeg, iend = "<i>", "</i>"
+		ibeg, iend, psv = "<i>", "</i>", "&#x2119;"
 	else:
-		ibeg, iend = '', ''
+		ibeg, iend, psv = '', '', ''
 	if 'c' in flags:
 		classist = '&copy;'
 	else:
@@ -338,7 +338,7 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 		usedbook = '&marker;'
 	else:
 		usedbook = ''
-	o(f"<td {clas}>{ibeg}{wikilink(name, name+suffix)} {classist}{usedbook}"
+	o(f"<td {clas}>{ibeg}{wikilink(name, name+suffix)} {psv}{classist}{usedbook}"
 		f"<small>{desc}</small>{iend}</td>")
 
 # Map av-snapshot skill numbers to positions in levels string
@@ -443,6 +443,7 @@ def print_skill_table(state, levels):
 	print_skill_multirow(state, 'PVP', ((190, 191, 322, 326, 328, 329),
                                           (316, 232, 343, 355, 389, 0)), levels)
 	print_slime_row(state, levels)
+	print_skill_row(state, 'Waffle House', (356,357,0,0,0,0))
 	print_skill_row(state, "Misc", (309, 142, 143, 200, 145, 146))
 	o('<tr><th colspan="7" class="miniheader">Other Nonstandard Class Skills</th><tr>')
 	print_skill_row(state, 'Crimbo 2009', (148, 149, 150, 151, 152, 153))
@@ -473,7 +474,6 @@ def print_skill_table(state, levels):
 						 (346,347,344,345,0,0)))
 	print_skill_row(state, 'LT&T', (352,353,354,0,0,0))
 	print_skill_row(state, 'Twitch', (314,0,0,0,0,0))
-	print_skill_row(state, 'Waffle House', (356,357,0,0,0,0))
 	print_skill_row(state, 'Deck of Every Card', (335,336,337,338,339,0))
 	print_skill_row(state, 'Snojo', (349,350,351,0,0,0))
 	print_skill_row(state, 'Eldritch Love', (359,366,371,418,0,0))
@@ -500,7 +500,7 @@ def print_skills(state, levels):
 		tally[x] = tally[x] + 1
 	o(f"<p class='subheader'>You have {tally[2]} skills Hardcore permed,"
 	  f" {tally[1]} skills Softcore permed, and {tally[0]} missing.</p>\n"
-	  "<p>Explanation of symbols: <i>Italicized</i> skills are Passive;"
+	  "<p>Explanation of symbols: <i>Italicized</i> skills marked with a <i>&#x2119</i> are Passive;"
 	  " &copy; marks skills really useful only to their classes;"
 	  " &marker; marks skills that can be relearned from a used skillbook or such</p>")
 	print_skill_table(state, levels)
