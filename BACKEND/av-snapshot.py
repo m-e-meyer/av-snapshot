@@ -19,7 +19,7 @@ from datetime import datetime
 
 NUM_LEVELS = 32
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '0.9.2'	# 2022-09-19
+VERSION = '0.9.2'	# released 2022-09-20
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -29,18 +29,19 @@ def on_aws():
 	return ("LAMBDA_TASK_ROOT" in os.environ)
 
 def arg_to_bytes(state, argv, key, eltsize):
+	# How many bits data do we expect from the profile?
+	size = len(state[key]) + 1	# if key not in state, that's an error
+	bits = size * eltsize
+	# How many base64 characters is that?
+	chars = round(bits/24.0 + 0.49) * 4 	# 4 chars for 24 bits
 	if key in argv:
-		size = len(state[key])
-	else:
-		size = 500	# way too big, but big enough
-	bits = (size+1)*eltsize	# pad a little
-	tgtlen = round(bits/24.0 + 0.51) * 4  # 24 bits = 4 base 64 characters
-	if key in argv:
-		b64 = argv[key].replace('=','A')
-		if len(b64) < tgtlen:
-			b64 = b64 + ('A'*(tgtlen - len(b64)))
+		b64 = argv[key].replace('=','A')	# replace padding with 0
+		if len(b64) < chars:				# add chars if not enough in profile
+			b64 = b64 + ('A'*(chars - len(b64)))
+		# decode the chars
 		return base64.b64decode(b64, altchars='-_')
-	return base64.b64decode('A'*tgtlen, altchars='-_')
+	# if key not in profile, generate empty bytes
+	return base64.b64decode('A'*chars, altchars='-_')
 
 def arg_to_counts(state, argv, key):
 	"""
