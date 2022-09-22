@@ -125,7 +125,7 @@ if on_aws():
 	    resp = err.response['Error']
 	    logger.error(msg + f": {err['Code']}: {err['Message']}")
 	def lookup(name, on_or_before='9999-99-99 99:99:99'):
-		db = boto3.resource('dynamodb', region_name='us-east-1')
+		db = boto3.resource('dynamodb', region_name='us-east-2')
 		table = db.Table('av_snapshot')
 		name = name.lower()
 		try:
@@ -142,7 +142,7 @@ if on_aws():
 		    log_error("Fetch failed", err)
 		    raise
 	def save(name, state):
-		db = boto3.resource('dynamodb', region_name='us-east-1')
+		db = boto3.resource('dynamodb', region_name='us-east-2')
 		table = db.Table('av_snapshot')
 		try:
 		    table.put_item(
