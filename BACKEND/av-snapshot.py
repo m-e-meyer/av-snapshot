@@ -16,10 +16,12 @@ from urllib.parse import urlparse, parse_qs
 # End of mandatory packages
 import base64
 from datetime import datetime
+import re
+
 
 NUM_LEVELS = 32
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '0.9.2'	# released 2022-09-20
+VERSION = '0.9.3'	# released 2022-09-22
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -112,31 +114,55 @@ def form_param_string(dic):
 	return result
 
 
+def tzname():
+	now = datetime.now()
+	return now.astimezone().tzinfo.tzname(now)
+
 def nowstring():
 	now = datetime.now()
-	tz = now.astimezone().tzinfo.tzname(now)
-	return now.strftime('%Y-%m-%d %H:%M:%S') + ' ' + tz
+	return now.strftime('%Y-%m-%d %H:%M:%S') + ' ' + tzname()
 
+def normalize_datetime(dt):
+	nums = re.findall("[0-9]+", dt)
+	if len(nums) == 0:
+		return nowstring()
+	ns = [(lambda n: int(n))(n) for n in nums]
+	if ns[0] < 100:
+		ns[0] = ns[0] + 2000
+	tz = tzname()
+	if len(ns) == 1:
+		return f"{ns[0]:04}-12-31 23:59:59 {tz}"
+	if len(ns) == 2:
+		return f"{ns[0]:04}-{ns[1]:02}-31 23:59:59 {tz}"
+	if len(ns) == 3:
+		return f"{ns[0]:04}-{ns[1]:02}-{ns[2]:02} 23:59:59 {tz}"
+	if len(ns) == 4:
+		return f"{ns[0]:04}-{ns[1]:02}-{ns[2]:02} {ns[3]:02}:59:59 {tz}"
+	if len(ns) == 5:
+		return f"{ns[0]:04}-{ns[1]:02}-{ns[2]:02} {ns[3]:02}:{ns[4]:02}:59 {tz}"
+	return f"{ns[0]:04}-{ns[1]:02}-{ns[2]:02} {ns[3]:02}:{ns[4]:02}:{ns[5]:02} {tz}"
 
 if on_aws():
+	#### Code for Amazon Web Services
 	import boto3
 	from boto3.dynamodb.conditions import Key, Attr
 	def log_error(err, msg):
 	    resp = err.response['Error']
 	    logger.error(msg + f": {err['Code']}: {err['Message']}")
-	def lookup(name, on_or_before='9999-99-99 99:99:99'):
+	def lookup(name, on_or_before):
 		db = boto3.resource('dynamodb', region_name='us-east-2')
 		table = db.Table('av_snapshot')
 		name = name.lower()
 		try:
-			response = table.query(KeyConditionExpression=Key('name').eq(name))
-			result = {}
-			last_time = '0000-00-00 00:00:00'
-			for rec in response['Items']:
-				tstamp = rec['tstamp']
-				if (tstamp < on_or_before) and (last_time < tstamp):
-					result = split_param_string(rec['state'])
-					result["tstamp"] = tstamp
+			response = table.query(
+				KeyConditionExpression=Key('name').eq(name) & Key('tstamp').lte(on_or_before),
+				ScanIndexForward = False,
+				Limit = 1)
+			if len(response['Items']) < 1:
+				return {}
+			rec = response['Items'][0]
+			result = split_param_string(rec['state'])
+			result['tstamp'] = rec['tstamp']
 			return result
 		except ClientError as err:
 		    log_error("Fetch failed", err)
@@ -155,8 +181,9 @@ if on_aws():
 		    log_error("Fetch failed", err)
 		    raise
 else:
+	#### Code for my laptop running Fedora Linux
 	import mysql.connector
-	def lookup(name, on_or_before='9999-99-99 99:99:99'):
+	def lookup(name, on_or_before):
 		name = name.lower()
 		last_time = '0000-00-00 00:00:00'
 		cnx = mysql.connector.connect(user='mmeyer', password='', host='localhost', database='m')
@@ -164,7 +191,7 @@ else:
 		cursor.execute(f"SELECT * FROM av_snapshot WHERE name='{name}'")
 		result = {}
 		for (name, tstamp, state) in cursor:
-			if (tstamp < on_or_before) and (last_time < tstamp):
+			if (tstamp <= on_or_before) and (last_time < tstamp):
 				result = split_param_string(state)
 				result["tstamp"] = tstamp
 		cursor.close()
@@ -283,20 +310,17 @@ def print_beginning(state, name, argv, fetched_argv, colorblind):
 	  f" version {VERSION}.</p>")
 	o("<p>av-snapshot is a fork of the cc_snapshot project by Cheesecookie,"
 	  " whom I thank for his work."
-	  f"  <a href='http://cheesellc.com/kol/profile.php?u={argv['u']}'>Here</a> is the"
+	  f"  <a href='http://cheesellc.com/kol/profile.php?u={name}'>Here</a> is the"
 	  " cc_snapshot equivalent of your query.</p>")
 	query = f"?u={name}"
-	if 'on_or_before' in argv:
-		query = query + '&on_or_before=' + argv['on_or_before']
+	if 'oob' in argv:
+		query = query + '&oob=' + argv['oob']
 	if colorblind:
 		switch = 'off'
 	else:
 		switch = 'on'
 		query = query + '&colorblind=1'
-	if on_aws():
-		suffix = ''
-	else:
-		suffix = '.py' 
+	suffix = '' if on_aws() else '.py'
 	o(f"<p>Please click <a href='av-snapshot{suffix}{query}'>here</a> to turn {switch} colorblind mode.</p></div>\n")
 	o("<p></p><table class='nobord' cellspacing=0 cellpadding=0><tr><td class='nobord'><button onclick='toggle_toc();' id='showhide'>Hide</b></td>"
 	  "<td class='nobord' style='font-size:1.5em;' valign='center'><b>Table of Contents</b></td></tr></table><div id='toc'>")
@@ -321,24 +345,17 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 		return
 	skil = skills[skill_num]
 	clas = class_for_perm(skill_bytes, skill_num)
-	if skil[2] != '' and skil[2] != 'none' and skil[2] != '-':
-		desc = "<br/>" + skil[2]
-	else:
-		desc = "" 
+	desc = skil[2]
+	desc = desc = "<br/>" + desc if (
+		desc != '' and desc != 'none' and desc != '-') else ""
 	name = skil[1]
 	flags = skil[4]
 	if 'p' in flags:
 		ibeg, iend, psv = "<i>", "</i>", "&#x2119;"
 	else:
 		ibeg, iend, psv = '', '', ''
-	if 'c' in flags:
-		classist = '&copy;'
-	else:
-		classist = ''
-	if 'b' in flags:
-		usedbook = '&marker;'
-	else:
-		usedbook = ''
+	classist = '&copy;' if ('c' in flags) else ''
+	usedbook = '&marker;' if ('b' in flags) else ''
 	o(f"<td {clas}>{ibeg}{wikilink(name, name+suffix)} {psv}{classist}{usedbook}"
 		f"<small>{desc}</small>{iend}</td>")
 
@@ -516,10 +533,7 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
 		lv = int(levels[11:12], 36)	# base-36 digit
 		clas = ""
 		if lv > 0:
-			if lv >= 19:
-				clas = "class='hcperm'"
-			else:
-				clas = "class='perm'"
+			clas = "class='hcperm'" if (lv >= 19) else "class='perm'"
 		img = ""
 		if lv > 0:
 			img = f"<img src='{IMAGES}/otherimages/sigils/hobotat{lv}.gif'><br/>"
@@ -619,10 +633,7 @@ def print_tattoos(state, levels):
 
 def print_trophy_cell(clas, imgname, trophy, desc):
 	imgname = imgname.replace('_thumb', '')
-	if (imgname == 'nopic'):
-		imgname = 'itemimages/' + imgname
-	else:
-		imgname = 'otherimages/trophy/' + imgname
+	imgname = ('itemimages/' if (imgname == 'nopic') else 'otherimages/trophy/') + imgname
 	o(f"<td {clas}'>"
 				+f"<img src='{IMAGES}/{imgname}.gif' style='width:50px; height:50px;'><br>"
 				+f"{wikilink(trophy, desc)}</td>")
@@ -779,11 +790,8 @@ def print_mritem_cell(state, it, subtable=False):
 		counts = state['mritem-counts']
 		name = mritems[it][2]		
 		clas = ''
-		if counts[it-1] > 0:			
-			if subtable:
-				clas = " class='hcperm noshrink'"
-			else:
-				clas = " class='hcperm'"
+		if counts[it-1] > 0:	
+			clas = " class='hcperm noshrink'" if subtable else " class='hcperm'"
 		elif subtable:
 			clas = " class='noshrink'"
 		o(f"<td style='margin: 5px' {clas}>{wikilink(name, name)}</td>")
@@ -958,10 +966,7 @@ def print_basement(state):
 	for x in hobocodes:
 		if col == 1:
 			o("<tr>")
-		if found & mask == 0:
-			clas = ''
-		else:
-			clas = " class='hcperm'"
+		clas = " class='hcperm'" if (found & mask != 0) else ''
 		o(f"<td{clas}>{hobocodes[x][1]}</td>")
 		col = col + 1
 		mask = mask >> 1
@@ -1191,14 +1196,9 @@ def print_sorted_list(data, bytes):
 		name = data[i][1]
 		if name == "" or name == "-":	# some data entries are empty, don't know why
 			continue
-		if name.find('[') >= 0:
-			link = name.replace('[', '').replace(']', '')
-		else:
-			link = name
+		link = name.replace('[', '').replace(']', '') if (name.find('[') >= 0) else name
 		x = int(data[i][0])
-		clas = ''
-		if getbits(bytes, x, 1) > 0:
-			clas = ' class="hcperm"'
+		clas = ' class="hcperm"' if (getbits(bytes, x, 1) > 0) else ''
 		o(f"<td{clas}>{wikilink(link, name)}</td>")
 		col = col+1
 		if col > 6:
@@ -1311,22 +1311,21 @@ def prepareResponse(argv, context):
 	state = {}	# used to capture state of user, instead of globals
 	state['toc'] = []
 	 
-	if 'u' not in argv:
-		argv['u'] = 'Aventuristo'	# for local testing
-	name = argv['u'].lower()
-	if 'colorblind' in argv:
-		colorblind = (int(argv['colorblind']) != 0)
+	if 'u' not in argv or argv['u'].strip() == '':
+		if on_aws():
+			return f'<html><head></head><body>Player name parameter ("u") missing.</body></html>'
+		else:
+			name = 'test guy'
 	else:
-		colorblind = False
-	# If updating, just store the state and return
+		name = argv['u'].lower()
+	# If updating, just store the state and return	
 	if ("update" in argv) and (argv["update"] == 'j'):
 		save(name, argv)
 		return f'<html><head></head><body>Record added for {name}</body></html>'
 	#
-	if "on_or_before" in argv:
-		when = argv["on_or_before"]
-	else:
-		when = nowstring()
+	colorblind = ('colorblind' in argv) and (int(argv['colorblind']) != 0)
+	when = argv["oob"] if ("oob" in argv) else ''
+	when = normalize_datetime(when)
 	fetched_argv = lookup(name, when)
 	# If lookup failed, report and return
 	if len(fetched_argv) == 0:
@@ -1355,10 +1354,8 @@ def prepareResponse(argv, context):
 	else:
 		levels = "0"*NUM_LEVELS
 	state['levels'] = levels
-	if "demonnames" in fetched_argv:
-		demonnames = fetched_argv['demonnames'].split('|')
-	else:
-		demonnames = ['']*12
+	demonnames = fetched_argv['demonnames'].split('|') if (
+		"demonnames" in fetched_argv) else ['']*12
 	#
 	print_skills(state, levels)
 	tats = print_tattoos(state, levels)
@@ -1481,12 +1478,20 @@ class FakeContext:
 
 # If CGI, create event and context to pass to lambda_handler
 if not on_aws():
+	import sys
 	event = {}
 	event['httpMethod'] = "GET"
 	event['queryStringParameters'] = {}
 	arguments = cgi.FieldStorage()
-	for arg in arguments:
-		event['queryStringParameters'][arg] = arguments[arg].value
+	if len(sys.argv) > 1:
+		# command line
+		event['queryStringParameters']['u'] = sys.argv[1]
+		if len(sys.argv) > 2:
+			event['queryStringParameters']['oob'] = sys.argv[2]
+	else:
+		# web cgi
+		for arg in arguments:
+			event['queryStringParameters'][arg] = arguments[arg].value
 	event['requestContext'] = {}
 	event['requestContext']['domainName'] = "fedora2"
 	event['requestContext']['path'] = "/right.here/"
