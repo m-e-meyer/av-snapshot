@@ -45,7 +45,7 @@
 45	Oxy	oxy	-	-	-	-	-	-	-	-	-
 46	8-Bit Finery	swordtat	pixel hat	pixel sword	pixel pants	-	-	-	-	-	-
 47	Antique Arms and Armor	armortat	antique helmet	antique spear	antique greaves	antique shield	-	-	-	-	-
-48	Arboreal Raiment	wreathtat	can of fake snow	tree skirt	coloured-light "necklace"	-	-	-	-	-	-
+48	Arboreal Raiment	wreathtat	can of fake snow	tree skirt	coloured-light &quot;necklace&quot;	-	-	-	-	-	-
 49	Arrrbor Day Apparrrrrel	arbortat	willowy bonnet	crotchety pants	saccharine maple pendant	-	-	-	-	-	-
 50	Black Armaments	blacktat	black helmet	black sword	black shield	black greaves	-	-	-	-	-
 51	Bounty-Hunting Rig	meattat	bounty-hunting helmet	bounty-hunting rifle	bounty-hunting pants	-	-	-	-	-	-
@@ -269,7 +269,7 @@
 269	Plumber HC	class25hc	-	-	-	-	-	-	-	-	-
 270	Guzzlr Tattoo	guzzlrtat	guzzlr hat	guzzlr pants	guzzlr shoes	-	-	-	-	-	-
 271	Guzzlr Tattoo 2	guzzlrtat2	-	-	-	-	-	-	-	-	-
-272	Lathed Livery	lathetat	hemlock helm	balsam barrel	purpleheart "pants"	wormwood wedding ring	-	-	-	-	-
+272	Lathed Livery	lathetat	hemlock helm	balsam barrel	purpleheart &quot;pants&quot;	wormwood wedding ring	-	-	-	-	-
 273	Yeg's Tattoo	yegtat	-	-	-	-	-	-	-	-	-
 274	Crimbo Carol Tattoo	c20carols	-	-	-	-	-	-	-	-	-
 275	Crimbo Cheer Tattoo	c20cheer	-	-	-	-	-	-	-	-	-

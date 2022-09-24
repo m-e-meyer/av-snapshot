@@ -209,9 +209,9 @@
 209	cursed microwave	microwave	-	-	-	-	-
 210	cursed pony keg	ponykeg	-	-	-	-	-
 211	hairshirt	hairshirt	-	-	-	-	-
-212	bagged stuffed "L"	baggedl	-	-	-	-	-
+212	bagged stuffed &quot;L&quot;	baggedl	-	-	-	-	-
 213	stuffed club	stuffedclub	-	-	-	-	-
-214	stuffed "L"	stuffedl	-	-	-	-	-
+214	stuffed &quot;L&quot;	stuffedl	-	-	-	-	-
 215	The Cocktail Shaker	theshaker	-	-	-	-	-
 216	Hand-carved bokken	carvedsword	-	-	-	-	-
 217	Hand-carved bow	carvedbow	-	-	-	-	-
@@ -382,7 +382,7 @@
 382	Thwaitgold metabug statuette	thwaitmetabug	-	-	-	-	-
 383	outrageous sombrero	hat2	-	-	-	-	-
 384	tin star	tinstar	-	-	-	-	-
-385	"Humorous" T-shirt	wtee2	-	-	-	-	-
+385	&quot;Humorous&quot; T-shirt	wtee2	-	-	-	-	-
 386	Staff of Kitchen Royalty	slordstaff	-	-	-	-	-
 387	shield of the Skeleton Lord	skeletonshield	-	-	-	-	-
 388	ring of the Skeleton Lord	skeletonring	-	-	-	-	-
