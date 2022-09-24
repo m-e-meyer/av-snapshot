@@ -400,7 +400,7 @@
 400	Prevent Scurvy and Sobriety	Summon rum, grapefruit, limes	-	-	-	-	-	-
 401	Tiki Mixology	Make rhum cocktails	-	p	-	-	-	-
 402	Implode Universe	-	-	-	-	-	-	-
-403	The Spirit of Taking	+10% Item Drops	-	-	-	-	-	-
+403	The Spirit of Taking	+10% Item Drops	-	b	-	-	-	-
 404	Visit your Favorite Bird	In bird culture, this is considered a dick move	-	-	-	-	-	-
 405	Always Never Not Guzzling	-	-	p	-	-	-	-
 406	Drippy Eye-Beetle	-	-	p	-	-	-	-
@@ -408,12 +408,12 @@
 408	Drippy Eye-Stone	-	-	p	-	-	-	-
 409	Lock Picking	Make a key, you still can’t pick locks	-	-	-	-	-	-
 410	Comprehensive Cartography	You know how to find things	-	pb	-	-	-	-
-411	Long Winter's Nap	5 free rests	-	p	-	-	-	-
-412	Bowl Full of Jelly	1/day epic food	-	-	-	-	-	-
-413	Ashes and Soot	Combat: myst-based fire/physical damage	-	-	-	-	-	-
-414	Eye and a Twist	1/day epic booze	-	-	-	-	-	-
-415	Dimples, How Merry!	+1 stats/combat	-	p	-	-	-	-
-416	Chubby and Plump	1/day +50% HP/MP (60 adv)	-	-	-	-	-	-
+411	Long Winter's Nap	5 free rests	-	pb	-	-	-	-
+412	Bowl Full of Jelly	1/day epic food	-	b	-	-	-	-
+413	Ashes and Soot	Combat: myst-based fire/physical damage	-	b	-	-	-	-
+414	Eye and a Twist	1/day epic booze	-	b	-	-	-	-
+415	Dimples, How Merry!	+1 stats/combat	-	pb	-	-	-	-
+416	Chubby and Plump	1/day +50% HP/MP (60 adv)	-	b	-	-	-	-
 417	Emotionally Chipped	All the feelings!	-	pb	-	-	-	-
-418	Dead Nostrils	Stench res/dmg + 1, Stay Fresh	-	p	-	-	-	-
-419	Ancient Crymbo Lore	+3 stats in December	-	p	-	-	-	-
+418	Dead Nostrils	Stench res/dmg + 1, Stay Fresh	-	pb	-	-	-	-
+419	Ancient Crymbo Lore	+3 stats in December	-	pb	-	-	-	-
