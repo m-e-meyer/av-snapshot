@@ -21,7 +21,7 @@ import re
 
 NUM_LEVELS = 32
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '0.9.3'	# released 2022-09-22
+VERSION = '1.0.0'	# released 2022-09-24
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"

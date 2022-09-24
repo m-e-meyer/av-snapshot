@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '0.9.0';
+string VERSION = '1.0.0';	# released 2022-09-24
 
 ////////////////////////////
 
