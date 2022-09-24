@@ -8,7 +8,10 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '1.0.0';	# released 2022-09-24
+string VERSION = '1.0.1';	# released 2022-09-24
+
+int NUM_LEVELS = 33;
+
 
 ////////////////////////////
 
@@ -161,7 +164,7 @@ int[int] LEVELS = {};
 void set_level_counter(int i, int value, int num_digits)
 {
 	if (LEVELS.count() == 0) {
-		for j from 0 to 31 {
+		for j from 0 to NUM_LEVELS-1 {
 			LEVELS[j] = 0;
 		}
 	}
@@ -317,18 +320,18 @@ int skillLevel(string name, string html, string overwrite)
 	if(overwrite == "-") {
 		overwrite = "";
 	}
-	if(index_of(html, ">"+name+"</a> (<b>HP</b>)") != -1) {
+	if (index_of(html, ">"+name+"</a> (<b>HP</b>)") != -1) {
         return 2;
 	}
-	else if((length(overwrite) > 0) && (index_of(html, overwrite) > 0)) {   
+	else if ((length(overwrite) > 0) && (index_of(html, overwrite) > 0)) {   
         #print(`overwrite for {name} is {overwrite}`);
 		return 2;
 	}
-	else if(index_of(html, ">"+name+"</a> (P)") != -1) {
+	else if (index_of(html, ">"+name+"</a> (P)") != -1) {
         return 1;
 	}
-	else if((name == "Toggle Optimality") && have_skill(to_skill(name))) {
-		return 1;
+	else if ((name == "Toggle Optimality") && have_skill(to_skill(name))) {
+		return 2;	# Treat Optimality as HC Permed
 	}
 	else {
 		return 0;
@@ -694,14 +697,15 @@ string check_consumption()
 string check_levels()
 {
 	print("Checking miscellaneous levels...", "olive");
-	// return skills and levels (sinew, synapse, shoulder, belch, bellow, fun,
-	//							 carrot, bear, numberology, safari, implode, hobotat,
-	//							karma (4), manuel (casual 3, thourough 3, exhaustive 3),
-	//							telescope)
+	// return skills and levels ([0] sinew, [1] synapse, [2] shoulder, [3] belch, 
+	//		[4] bellow, [5] fun, [6] carrot, [7] bear, [8] numberology, [9] safari, 
+	//		[10] implode, [11] hobotat,	[12:16] karma, 
+	//		manuel ([16:19] casual, [19:22] thourough, [22:25] exhaustive),
+	//		[25] telescope, [26:28] chessboard, [28:32] hobocodes, [32] optimality)
 	// hobotat's already been done by this point
 	string[int] levelmap = {
 		0:"46", 1:"47", 2:"48", 3:"117", 4:"118", 5:"121", 6:"128", 7:"134", 
-		8:"144", 9:"180", 10:"188"
+		8:"144", 9:"180", 10:"188", 32:"7254"
 	};
 	foreach i, sknum in levelmap {
 		set_level_counter(i, get_property("skillLevel" + sknum).to_int());
