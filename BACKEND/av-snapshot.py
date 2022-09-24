@@ -19,9 +19,9 @@ from datetime import datetime
 import re
 
 
-NUM_LEVELS = 32
+NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.0.0'	# released 2022-09-24
+VERSION = '1.0.1'	# released 2022-09-24
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -360,7 +360,7 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 		f"<small>{desc}</small>{iend}</td>")
 
 # Map av-snapshot skill numbers to positions in levels string
-LEVELED_SKILLS = {315:3, 316:4, 322:5, 326:6, 329:7, 343:8, 389:9, 402:10}
+LEVELED_SKILLS = {315:3, 316:4, 322:5, 326:6, 329:7, 343:8, 355:32, 389:9, 402:10}
 def gen_suffix(skill, levels):
 	if skill in LEVELED_SKILLS:
 		lv = levels[LEVELED_SKILLS[skill]:LEVELED_SKILLS[skill]+1]
@@ -384,7 +384,7 @@ def print_slime_row(state, levels):
 	skill_bytes = state['skill-bytes']
 	o("<tr><th>The Slime Tube</th>")
 	for i in range(0, 3):
-		suffix = f" ({levels[i:i+1]}/10)"
+		suffix = f" ({int(levels[i:i+1], 36)}/10)"
 		print_skill_cell(skills, skill_bytes, 139+i, suffix)
 	print_skill_cell(skills, skill_bytes, 0)
 	print_skill_cell(skills, skill_bytes, 0)
@@ -974,7 +974,7 @@ def print_basement(state):
 			col = 1
 			o("</tr>")
 	o("</table>")
-	h2(state, "Hobo (and other) Equipment", "a_hobocode")
+	h2(state, "Hobo Equipment", "a_hobocode")
 	print_coolitem_table(state, ('', 'Hat', 'Pants', 'Accessories'),
 							(('150 Nickels', 27, 30, 34),
 							 ('200 Nickels', 28, 29, 33),
@@ -1311,9 +1311,9 @@ def prepareResponse(argv, context):
 	state = {}	# used to capture state of user, instead of globals
 	state['toc'] = []
 	 
-	if 'u' not in argv or argv['u'].strip() == '':
+	if argv == None or 'u' not in argv or argv['u'].strip() == '':
 		if on_aws():
-			return f'<html><head></head><body>Player name parameter ("u") missing.</body></html>'
+			return f'<html><head></head><body>Player name query parameter ("u=&lt;name&gt;") missing.</body></html>'
 		else:
 			name = 'test guy'
 	else:
