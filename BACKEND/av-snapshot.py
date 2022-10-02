@@ -819,7 +819,9 @@ def print_coolitem_cell(state, it, print_image=True):
 			lbody = f"<img src='{IMAGES}/itemimages/{coolitem[2]}.gif'><br/>{name}{countstr}"
 		else:
 			lbody = f"{name}{countstr}"
-		o(f"<td style='margin: 5px' {clas}{colspan}>{wikilink(name, lbody)}</td>")
+		# item #214 is stuffed L, which needs two rows to display well
+		rowspan = " rowspan='2'" if it == 214 else ""
+		o(f"<td style='margin: 5px' {clas}{colspan}{rowspan}>{wikilink(name, lbody)}</td>")
 
 def print_header_cell(header):
 	o(f"<th>{header}</th>")
@@ -827,6 +829,7 @@ def print_header_cell(header):
 def print_coolitem_row(state, its, print_image=True):
 	o("<tr>")
 	for it in its:
+		# strings are headers, numbers are cool items
 		if type(it) != str:
 			print_coolitem_cell(state, it, print_image)
 		else:
@@ -1063,8 +1066,8 @@ def print_coolitems(state):
 									(45, 46, 47, 178, 48, 409, 0, 0)))
 	print_ascension_rewards(state)
 	h2(state, "Swagger Stuff", "a_pvp")
-	print_coolitem_table(state, None, (range(207, 213),
-									(213, 214, 215, 335, 450, 0)))
+	print_coolitem_table(state, None, ((207, 208, 209, 210, 212, 214),
+									(211, 213, 215, 335, 450)))
 	h2(state, "Thwaitgold", "a_thwait")
 	print_coolitem_table(state, None, ((54, 55, 56, 57, 60, 61),
 									(62, 82, 83, 135, 136, 173),
