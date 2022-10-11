@@ -113,7 +113,7 @@ def form_param_string(dic):
     prefix = ''
     result = ''
     for p in dic:
-        if (p == 'name') or (p == 'update'):
+        if p in ('name', 'update'):
             continue
         result = result + prefix + p + '=' + dic[p]
         prefix = '&'
@@ -130,7 +130,7 @@ def nowstring():
     now = datetime.now()
     return now.strftime('%Y-%m-%d %H:%M:%S') + ' ' + tzname()
 
-def normalize_datetime(dt):
+def normalize_datetime(dt):     # pylint: disable=too-many-return-statements
     """TODO"""
     nums = re.findall("[0-9]+", dt)
     if len(nums) == 0:
@@ -204,8 +204,8 @@ else:
         cursor = cnx.cursor()
         cursor.execute(f"SELECT * FROM av_snapshot WHERE name='{name}'")
         result = {}
-        for (name, tstamp, state) in cursor:
-            if (tstamp <= on_or_before) and (last_time < tstamp):
+        for (nm, tstamp, state) in cursor:  # pylint: disable=unused-variable
+            if last_time < tstamp <= on_or_before:
                 result = split_param_string(state)
                 result["tstamp"] = tstamp
         cursor.close()
@@ -371,8 +371,7 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
     skil = skills[skill_num]
     clas = class_for_perm(skill_bytes, skill_num)
     desc = skil[2]
-    desc = desc = "<br/>" + desc if (
-        desc != '' and desc != 'none' and desc != '-') else ""
+    desc = desc = "<br/>" + desc if desc not in ('', 'none', '-') else ""
     name = skil[1]
     flags = skil[4]
     if 'p' in flags:
@@ -581,8 +580,10 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
             clas = "class='perm'"
         o(f"<td {clas}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
 
-def print_tattoo_table(state, tattoos, tattoo_bytes, header, rows, levels=""):
+def print_tattoo_table(state, header, rows, levels=""):
     """TODO"""
+    tattoos = state['tattoos']
+    tattoo_bytes = state['tattoo-bytes']
     h2(state, header, "a_"+header)
     o('<table cellspacing="0">')
     for row in rows:
@@ -607,7 +608,7 @@ def print_tattoos(state, levels):
         tally[1] = tally[1] + 1
     o(f"<p class='subheader'>You have {tally[1]} tattoos and {tally[2]} outfits for which"
       f" you don't have the corresponding tattoo, and are missing {tally[0]} tattoos.</p>\n")
-    print_tattoo_table(state, tattoos, tattoo_bytes, "Class",
+    print_tattoo_table(state, "Class",
         ((1, 2, 3, 108),
          (4, 5, 6, 109),
          (7, 8, 9, 110),
@@ -620,7 +621,7 @@ def print_tattoos(state, levels):
          (213, 214, 215, 216),
          (228, 229, 257, 258),
          (268, 269, 281, 0)))
-    print_tattoo_table(state, tattoos, tattoo_bytes, "Ascension",
+    print_tattoo_table(state, "Ascension",
         ((19, 20, 21, 22, 23, 24),
          (25, 26, 27, 28, 29, 30),
          (31, 32, 33, 34, 35, 36),
@@ -649,7 +650,7 @@ def print_tattoos(state, levels):
             x = x + 1
         o("</tr>")
     o("</table>")
-    print_tattoo_table(state, tattoos, tattoo_bytes, "Other",
+    print_tattoo_table(state, "Other",
         ((126, 130, 131, 139, 142, 0),
          (132, 133, 134, 135, 136, 0),
          (103, 104, 118, 106, 127, 128),
@@ -735,7 +736,8 @@ def print_familiar_cell(clas, imgname, name):
 # 6: 100% run, hatching, no familiar.
 # 7: 90% run, no familiar
 # 8: 90% run, hatchling, no familiar.
-# TODO: fix below with new values
+# 5, 6, 7, and 8 should only be "possible" with April Foolmiliars... not sure if I
+#   want to try to set up separate backgrounds for something that might not happen
 FAM_STYLES = { 0:"", 1:"fam_have", 2:"fam_have_hatch", 3:"fam_run_100", 4:"fam_run_90",
             5:"fam_run_100", 6:"fam_run_100", 7:"fam_run_90", 8:"fam_run_90" }
 
@@ -764,7 +766,7 @@ def print_familiars(state):
     for i in range(1, len(state['familiars'])+1):
         f = familiars[i]
         fnum = int(f[0])
-        if ((fnum >= 201) and (fnum <=245)) or (f[3] == '-'):
+        if (201 <= fnum <=245) or (f[3] == '-'):
             # Skip if Pokefam or no hatchling (April Foolmiliar)
             continue
         style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
@@ -936,7 +938,7 @@ def print_mritems(state):
         (202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213),
         (215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
         (228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
-        (240, 241, 242, 243, 244, 245, 246, 247, 248, 0, 0, 0) ))
+        (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 0, 0) ))
     h2(state, "Mr. Yearly Items", "a_mryearly")
     print_mritem_table(state, 2005,
         ('', 'Volleychaun', 'Fairychaun', 'Fairyball', 'FairyWhelp', 'Equipment'),
@@ -1239,7 +1241,7 @@ def print_summary(data, bytess):
     havent = 0
     for i in range(1, len(data)+1):
         name = data[i][1]
-        if name == "" or name == "-":    # some data entries are empty, don't know why
+        if name in ("", "-"):    # some data entries are empty, don't know why
             continue
         if getbits(bytess, i, 1) > 0:
             have = have + 1
@@ -1258,7 +1260,7 @@ def print_sorted_list(data, bytess):
     o("<table cellspacing=0 cellpadding=0><tr>")
     for i, datum in enumerate(data):    # pylint: disable=unused-variable
         name = datum[1]
-        if name == "" or name == "-":    # some data entries are empty, don't know why
+        if name in ("", "-"):    # some data entries are empty, don't know why
             continue
         link = name.replace('[', '').replace(']', '') if (name.find('[') >= 0) else name
         x = int(datum[0])
@@ -1314,7 +1316,7 @@ def print_consumption(state):
 
 ###########################################################################
 
-def print_end(state, tats, trophs, fams, levels, demonnames):
+def print_end(state, coll_score, levels, demonnames):
     """TODO"""
     h1(state, "Miscellaneous Accomplishments", "a_misc")
     o("<h3>Telescope</h3>")
@@ -1348,6 +1350,7 @@ def print_end(state, tats, trophs, fams, levels, demonnames):
       f"<td>{demonnames[10]}</td></tr>")
     o(f"<tr><td>12) Neil the Sofa Sloth<br/>Intergnat</td><td>{demonnames[11]}</td></tr>")
     o("</table>")
+    tats, trophs, fams = coll_score['tats'], coll_score['trophs'], coll_score['fams']
     o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"
       f" (Tattoo: {tats}, Trophy: {trophs}, Familiar: {fams})</a></h3>")
     o("</body></html>\n")
@@ -1441,16 +1444,17 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
         "demonnames" in fetched_argv) else ['']*12
     #
     print_skills(state, levels)
-    tats = print_tattoos(state, levels)
-    trophs = print_trophies(state)
-    fams = print_familiars(state)
+    coll_score = {}
+    coll_score['tats'] = print_tattoos(state, levels)
+    coll_score['trophs'] = print_trophies(state)
+    coll_score['fams'] = print_familiars(state)
     print_mritems(state)
     print_basement(state)
     print_coolitems(state)
     print_discoveries(state)
     print_consumption(state)
     #
-    print_end(state, tats, trophs, fams, levels, demonnames)
+    print_end(state, coll_score, levels, demonnames)
     pre_toc = ''.join(state["o-pre-toc"])
     toc = ''.join(generate_toc(state['toc']))
     post_toc = ''.join(OUTPUT)
@@ -1534,7 +1538,7 @@ def lambda_handler(event, context):
             argv = parse_qs(argv.query)
             for a in argv:
                 argv[a] = argv[a][0]
-    if operation == 'GET' or operation == 'POST':
+    if operation in ('GET', 'POST'):
         html = "What happened?"    # in case of error
         try:
             signal.signal(signal.SIGALRM, timeout_handler)
@@ -1551,11 +1555,10 @@ def lambda_handler(event, context):
         finally:
             signal.alarm(0)
         return respond(None, on_edge, html)
-    else:
-        logger.info('NOT A GET OR POST, but a %s', operation)
-        return respond(ValueError(f'Unsupported method "{operation}"'), on_edge)
+    logger.info('NOT A GET OR POST, but a %s', operation)
+    return respond(ValueError(f'Unsupported method "{operation}"'), on_edge)
 
-class FakeContext:
+class FakeContext:  # pylint: disable=too-few-public-methods
     '''
     For CGI, just enough context for lambda_handler
     '''
