@@ -714,3 +714,5 @@
 714	[experimental crimbo booze]
 715	void lager
 716	Dad's brandy
+717	AutumnFest ale
+718	Oopsie IPA
