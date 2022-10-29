@@ -231,7 +231,7 @@
 231	i	packaged backup camera	backup camera	backcamera	-	-	-	-
 232	f	shortest-order cook	Shorter-Order Cook	shortchef	-	-	-	-
 233	i	packaged familiar scrapbook	familiar scrapbook	fambook	-	-	-	-
-234	p	Our Daily Candles&trade;	Our Daily Candles	Our Daily Candles	-	-	-	-
+234	p	Our Daily Candles&trade; order form	Our Daily Candles	Our Daily Candles	-	-	-	-
 235	i	packaged industrial fire extinguisher	industrial fire extinguisher	exting2box	-	-	-	-
 236	f	bottled Vampire Vintner	Vampire Vintner	vampvintbottle	-	-	-	-
 237	i	packaged Daylight Shavings Helmet	Daylight Shavings Helmet	dshelmet_box	-	-	-	-
