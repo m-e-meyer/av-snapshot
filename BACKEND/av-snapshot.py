@@ -1193,12 +1193,6 @@ def print_coolitems(state):
     print_coolitem_table(state, None, ((298, 299, 300),))
     h2(state, "Busting Makes You Feel Good (2016)", "a_busting")
     print_coolitem_table(state, None, (range(301, 307), range(307, 313)))
-    h2(state, "Twitchery (most recent 2016)", "a_twitch")
-    print_coolitem_table(state, None,
-        ((225, 320, 322, 317, 228, 318),
-         (230, 229, 227, 315, 316, 319),
-         (220, 321, 221, 222, 223, 323),
-         (224, 226, 231, 232, 233, 314)))
     h2(state, "Gingerbread City (2016)", "a_ginger")
     print_coolitem_table(state, None,
         ((347, 345, 348, 349, 350, 352),
@@ -1222,6 +1216,12 @@ def print_coolitems(state):
          (426, 432, 435, 0, 0, 0)))
     h2(state, "Gooified Crimbo (2021)", "a_gcrimbo")
     print_coolitem_table(state, None, (range(455, 461), range(461, 467)))
+    h2(state, "Twitchery (most recent 2022)", "a_twitch")
+    print_coolitem_table(state, None,
+        ((225, 320, 322, 317, 228, 318),
+         (230, 229, 227, 315, 316, 319),
+         (220, 321, 221, 222, 223, 323),
+         (224, 226, 231, 232, 233, 314)))
     h2(state, "Hair Club for Loathers", "a_hairclub")
     print_coolitem_table(state, None,
         ((383, 384, 385, 256, 290, 273),
