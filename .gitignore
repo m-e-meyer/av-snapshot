@@ -1,2 +1,3 @@
 *.sh
 settings.json
+geckodriver.log
