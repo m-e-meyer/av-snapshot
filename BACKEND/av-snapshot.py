@@ -27,6 +27,97 @@ VERSION = '1.0.2'    # released 2022-10-03?
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
 
 
+# Accumulate HTML output
+OUTPUT = []
+def o(strng):
+    """TODO"""
+    OUTPUT.append(strng)
+def o_split(state):
+    """TODO"""
+    state["o-pre-toc"] = OUTPUT[:]
+    OUTPUT.clear()
+
+
+class Section:
+    """Represents a section of the snapshot, with title, body, and subsections"""
+    def __init__(self, level, title, anchor, textfn, subsections = []):
+        self.level = level
+        self.title = title
+        self.anchor = anchor
+        self.textfn = textfn
+        self.subsections = subsections
+        self.enabled = True
+    def out(self, state):
+        o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
+            f"<h{self.level} id='{self.anchor}'>{self.title}</h{self.level}></td>"
+            "<td>[<a href='#top'>back to top</a>]</td></tr></table>")
+        self.textfn(state)
+        for ss in self.subsections:
+            ss.out(state)
+    def disable_all(self):
+        self.enabled = False
+        for ss in self.subsections:
+            ss.disable_all()
+    def enable_subsections(self):
+        for ss in self.subsections:
+            ss.enabled = True
+            ss.enable_subsections()
+    def enable_only(self, sections):
+        """Only mark requested sections (supplied as tuple of lowercase strs) as enabled"""
+        if self.title.lower().startswith(sections):
+            self.enabled = True
+            self.enable_subsections()
+            return True
+        result = False
+        for ss in self.subsections:
+            result = result or ss.enable_only(sections)
+        self.enabled = result
+        return result
+    def toc_entry(self):
+        if self.level == 0 or not self.enabled:
+            return ""
+        prefix = "&nbsp;&bull;&nbsp;" * (self.level - 1)
+        return f"{prefix}<a href='#{self.anchor}'>{self.title}</a><br/>"
+    def toc_entries(self):
+        if not self.enabled:
+            return []
+        if self.level == 0:
+            result = []
+        else:
+            result = [self.toc_entry()]
+        for ss in self.subsections:
+            result = result + ss.toc_entries()
+        return result
+    def out_toc(self):
+        """Output table of contents"""
+        if self.level != 0:
+            return
+        o("<p></p><table class='nobord' cellspacing=0 cellpadding=0><tr><td class='nobord'>"
+            "<button onclick='toggle_toc();' id='showhide'>Hide</b></td>"
+            "<td class='nobord' style='font-size:1.5em;' valign='center'>"
+            "<b>Table of Contents</b></td></tr></table>"
+            "<div id='toc'>")
+        entries = self.toc_entries()
+        num_entries = len(entries)
+        o(f"\n<!--DEBUG{num_entries}-->")
+        if num_entries <= 28:
+            num_columns = 1
+        elif num_entries <= 56:
+            num_columns = 2
+        else:
+            num_columns = 3
+        num_rows = (num_entries // num_columns) + 1
+        y = 0
+        o("<table class='nobord toc' cellspacing=0 cellpadding=0><tr><td class='toc'>")
+        for e in entries:
+            o(e)
+            y = y+1
+            if y >= num_rows:
+                o("</td><td class='toc'>")
+                y = 0
+        o("</td></tr>\n</table></div>\n")
+
+
 def on_aws():
     """Return whether running as AWS Lambda"""
     return "LAMBDA_TASK_ROOT" in os.environ
@@ -86,17 +177,6 @@ def open_file_for_reading(filename):
     if on_aws():
         return open(os.environ["LAMBDA_TASK_ROOT"]+"/"+filename, "r", encoding="utf-8")
     return open(CGI_TASK_ROOT+"/"+filename, 'r', encoding="utf-8")
-
-
-# Accumulate HTML output
-OUTPUT = []
-def o(strng):
-    """TODO"""
-    OUTPUT.append(strng)
-def o_split(state):
-    """TODO"""
-    state["o-pre-toc"] = OUTPUT[:]
-    OUTPUT.clear()
 
 
 def split_param_string(pstring):
@@ -294,7 +374,7 @@ def h2(state, text, link):
 
 ###########################################################################
 
-def print_beginning(state, name, argv, fetched_argv, colorblind):
+def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disable=unused-argument
     """TODO"""
     tstamp = fetched_argv['tstamp']
     o("<!DOCTYPE html>\n")
@@ -343,13 +423,7 @@ def print_beginning(state, name, argv, fetched_argv, colorblind):
         query = query + '&colorblind=1'
     suffix = '' if on_aws() else '.py'
     o(f"<p>Please click <a href='av-snapshot{suffix}{query}'>here</a> to turn {switch}"
-      " colorblind mode.</p></div>\n"
-      "<p></p><table class='nobord' cellspacing=0 cellpadding=0><tr><td class='nobord'>"
-      "<button onclick='toggle_toc();' id='showhide'>Hide</b></td>"
-      "<td class='nobord' style='font-size:1.5em;' valign='center'>"
-      "<b>Table of Contents</b></td></tr></table><div id='toc'>")
-    o_split(state)
-    o("</div>")
+      " colorblind mode.</p></div>\n")
 
 
 ###########################################################################
@@ -537,9 +611,10 @@ def print_skill_table(state, levels):
     print_skill_row(state, 'Grimoires', (160, 161, 180, 245, 318, 0))
     o('</table>\n')
 
-def print_skills(state, levels):
+def print_skills(state):
     """TODO"""
-    h1(state, "Skills", "a_skills")
+    #h1(state, "Skills", "a_skills")
+    levels = state['levels']
     tally = [0, 0, 0]
     skill_bytes = state['skill-bytes']
     for i in range(len(state['skills'])):
@@ -593,9 +668,10 @@ def print_tattoo_table(state, header, rows, levels=""):
         o("</tr>")
     o("</table>")
 
-def print_tattoos(state, levels):
+def print_tattoos(state):
     """TODO"""
     tattoos = state['tattoos']
+    levels = state['levels']
     tattoo_bytes = state['tattoo-bytes']
     h1(state, "Tattoos", "a_tattoos")
     tally = [0, 0, 0]
@@ -677,7 +753,7 @@ def print_trophy_cell(clas, imgname, trophy, desc):
 def print_trophies(state):
     """TODO"""
     trophy_bytes = state['trophy-bytes']
-    h1(state, "Trophies", "a_trophies")
+    #h1(state, "Trophies", "a_trophies")
     o("<table cellspacing='0'><tr>")
     tally = [0, 0]
     trophies = state['trophies']
@@ -706,7 +782,7 @@ def print_trophies(state):
         o("<td></td>")
         ct = ct + 1
     o("</tr></table>\n")
-    return tally[1]
+    state['score_trophs'] = tally[1]
 
 
 ###########################################################################
@@ -741,7 +817,7 @@ def print_familiar_cell(clas, imgname, name):
 FAM_STYLES = { 0:"", 1:"fam_have", 2:"fam_have_hatch", 3:"fam_run_100", 4:"fam_run_90",
             5:"fam_run_100", 6:"fam_run_100", 7:"fam_run_90", 8:"fam_run_90" }
 
-def print_familiars(state):
+def print_familiars(state): # pylint: disable=too-many-branches
     """TODO"""
     have, lack, tour, hundred = (0, 0, 0, 0)
     familiars = state['familiars']
@@ -1063,9 +1139,11 @@ def print_basement(state):
 
 ###########################################################################
 
-def print_ascension_rewards(state):
-    """TODO"""
-    h2(state, "Ascension Rewards", "a_ascension")
+def o_cool_ultrarares(state):
+    print_coolitem_table(state, None, ((38, 39, 40, 41, 42, 137, 43, 44),
+                                    (45, 46, 47, 178, 48, 409, 0, 0)))
+
+def o_cool_ascension(state):
     rewards = (range(555, 561),
         range(561, 567),
         range(567, 573),
@@ -1098,8 +1176,46 @@ def print_ascension_rewards(state):
     o(f"<p>You have {have} and are missing {havent}.</p>")
     print_coolitem_table(state, None, rewards)
 
-def print_looking_glass_table(state):
-    """TODO"""
+def o_cool_swagger(state):
+    print_coolitem_table(state, None, ((207, 208, 209, 210, 212, 214),
+                                    (211, 213, 215, 335, 450)))
+
+def o_cool_thwaitgold(state):
+    print_coolitem_table(state, None, ((54, 55, 56, 57, 60, 61),
+                                    (62, 82, 83, 135, 136, 173),
+                                    (174, 175, 176, 177, 179, 252),
+                                    (291, 297, 313, 353, 360, 362),
+                                    (382, 390, 391, 415, 421, 425),
+                                    (442, 446, 447, 452, 453, 454),
+                                    (537, 538, 539, 0, 0, 0)))
+
+def o_cool_medals(state):
+    print_coolitem_table(state, ('Sidequests', '0', '1', '2', '3', '4', '5', '6'),
+        (('Hippy', 540, 541, 542, 543, 544, 545, 546),
+        ('Frat', 547, 548, 549, 550, 551, 552, 553),
+        ('All', (554, 7))))
+
+def o_cool_sea(state):
+    print_coolitem_table(state, None, (range(63, 69), range(69, 75), range(75, 82)))
+
+def o_cool_chefstaves(state):
+    print_coolitem_table(state, None, (range(13, 19),
+                                    (19, 58, 20, 21, 22, 23),
+                                    (24, 25, 53, 59, 172, 272),
+                                    (386, 401, 441, 0, 0, 0)))
+    #
+def o_cool_marty(state):
+    print_coolitem_table(state, None, (range(216, 220),))
+
+def o_cool_secrets(state):
+    print_coolitem_table(state, ('Seal Clubber', 'Turtle Tamer', 'Pastamancer',
+                                 'Sauceror', 'Disco Bandit', 'Accordion Thief'),
+                        (range(7, 13),))
+
+def o_cool_underworld(state):
+    print_coolitem_table(state, None, (range(35, 38),))
+
+def o_cool_reflection(state):
     o("<table cellspacing='0'>")
     print_coolitem_row(state, range(180, 186))
     o("<tr>")
@@ -1118,119 +1234,101 @@ def print_looking_glass_table(state):
     o(f"<td{clas}>{wikilink('The_Great_Big_Chessboard',chesstext)}</a></td>"
         "<td></td><td></td><td></td></tr></table>\n")
 
-def print_coolitems(state):
-    """TODO"""
-    h1(state, "Cool Items", "a_coolitems")
-    h2(state, "Ultrarares", "a_ultra")
-    print_coolitem_table(state, None, ((38, 39, 40, 41, 42, 137, 43, 44),
-                                    (45, 46, 47, 178, 48, 409, 0, 0)))
-    print_ascension_rewards(state)
-    h2(state, "Swagger Stuff", "a_pvp")
-    print_coolitem_table(state, None, ((207, 208, 209, 210, 212, 214),
-                                    (211, 213, 215, 335, 450)))
-    h2(state, "Thwaitgold", "a_thwait")
-    print_coolitem_table(state, None, ((54, 55, 56, 57, 60, 61),
-                                    (62, 82, 83, 135, 136, 173),
-                                    (174, 175, 176, 177, 179, 252),
-                                    (291, 297, 313, 353, 360, 362),
-                                    (382, 390, 391, 415, 421, 425),
-                                    (442, 446, 447, 452, 453, 454),
-                                    (537, 538, 539, 0, 0, 0)))
-    h2(state, "War Medals", "a_medals")
-    print_coolitem_table(state, ('Sidequests', '0', '1', '2', '3', '4', '5', '6'),
-        (('Hippy', 540, 541, 542, 543, 544, 545, 546),
-        ('Frat', 547, 548, 549, 550, 551, 552, 553),
-        ('All', (554, 7))))
-    h2(state, "Sea Stuff", "a_sea")
-    print_coolitem_table(state, None, (range(63, 69), range(69, 75), range(75, 82)))
-    h2(state, "Chefstaves", "a_staves")
-    print_coolitem_table(state, None, (range(13, 19),
-                                    (19, 58, 20, 21, 22, 23),
-                                    (24, 25, 53, 59, 172, 272),
-                                    (386, 401, 441, 0, 0, 0)))
-    #
-    h2(state, "Marty's Quest", "a_marty")
-    print_coolitem_table(state, None, (range(216, 220),))
-    h2(state, "Secrets from the Future (2009)", "a_secrets")
-    print_coolitem_table(state, ('Seal Clubber', 'Turtle Tamer', 'Pastamancer',
-                                 'Sauceror', 'Disco Bandit', 'Accordion Thief'),
-                        (range(7, 13),))
-    h2(state, "Underworld (2009)", "a_underworld")
-    print_coolitem_table(state, None, (range(35, 38),))
-    h2(state, "A Moment of Reflection (2010)", "a_reflection")
-    print_looking_glass_table(state)
-    h2(state, "Arcade Games (2010)", "a_arcade")
+def o_cool_arcade(state):
     print_coolitem_table(state, None, (range(410, 415),))
-    h2(state, "Necbromancer (2011)", "a_necbro")
+
+def o_cool_necbromancer(state):
     print_coolitem_table(state, None, (range(50, 53),))
-    h2(state, "Raiments of the Final Boss (2013)", "a_raiments")
+
+def o_cool_raiments(state):
     print_coolitem_table(state, None, (range(120, 128),))
-    h2(state, "Psychoanalysis (2013)", "a_psycho")
+
+def o_cool_psychoanalysis(state):
     print_coolitem_table(state, None, (range(128, 135),))
-    h2(state, "Warbear Crimbo (2013)", "a_warbear")
+
+def o_cool_warbear(state):
     print_coolitem_table(state, None,
         (range(138, 147), range(147, 156), range(156, 165), (165, 166, 0, 0, 0, 0, 0, 0, 0)))
-    h2(state, "We All Wear Masks (2014)", "a_masks")
+
+def o_cool_masks(state):
     print_coolitem_table(state, None, (range(167, 172),))
-    h2(state, "Conspiracy Island (2014)", "a_conspiracy")
+
+def o_cool_conspiracy(state):
     print_coolitem_table(state, None, (range(200, 207),))
-    h2(state, "Dinseylandfill (2015)", "a_dinsey")
+
+def o_cool_dinseylandfill(state):
     print_coolitem_table(state, None, (range(188, 194), range(194, 200)))
-    h2(state, "That 70s Volcano (2015)", "a_volcano")
+
+def o_cool_volcano(state):
     print_coolitem_table(state, None,
         ((248, 249, 250, 253, 254, 255),
          range(257, 263),
          (263, 264, 265, 0, 0, 0)))
-    h2(state, "The Glaciest (2015)", "a_glaciest")
+
+def o_cool_glaciest(state):
     print_coolitem_table(state, None, (range(266, 272),))
-    h2(state, "Gotpork (2016)", "a_gotpork")
+
+def o_cool_gotpork(state):
     print_coolitem_table(state, None, (range(285, 289),))
-    h2(state, "LT&T Telegraph Office (2016)", "a_ltt")
+
+def o_cool_telegraph(state):
     print_coolitem_table(state, None, (range(274, 280), (280, 281, 282, 283, 284, 289)))
-    h2(state, "Fishin' Gear (2016)", "a_fishin")
+
+def o_cool_fishin(state):
     print_coolitem_table(state, None, ((293, 294),))
-    h2(state, "The Precinct (2016)", "a_precinct")
+
+def o_cool_precinct(state):
     print_coolitem_table(state, None, ((298, 299, 300),))
-    h2(state, "Busting Makes You Feel Good (2016)", "a_busting")
+
+def o_cool_busting(state):
     print_coolitem_table(state, None, (range(301, 307), range(307, 313)))
-    h2(state, "Gingerbread City (2016)", "a_ginger")
+
+def o_cool_gingerbread(state):
     print_coolitem_table(state, None,
         ((347, 345, 348, 349, 350, 352),
          (351, 346, 344, 0, 0, 0)))
-    h2(state, "Chakra Crimbo (2016)", "a_chakra")
+
+def o_cool_chakra(state):
     print_coolitem_table(state, None, ((337, 338, 342, 339, 340, 341, 343),))
-    h2(state, "Spacegate (2017)", "a_spacegate")
+
+def o_cool_spacegate(state):
     print_coolitem_table(state, None, (range(376, 381),))
-    h2(state, "Silent Crombotato (2017)", "a_scrimbo")
+
+def o_cool_silent(state):
     print_coolitem_table(state, None, (range(365, 371), (371, 372, 373, 374, 375, 0)))
-    h2(state, "FantasyRealm (2018)", "a_fantasy")
+
+def o_cool_fantasyrealm(state):
     print_coolitem_table(state, None, (range(387, 390),))
-    h2(state, "Neverending Party (2018)", "a_party")
+
+def o_cool_party(state):
     print_coolitem_table(state, None, (range(393, 397), range(397, 401)))
-    h2(state, "PirateRealm (2019)", "a_pirate")
+
+def o_cool_piraterealm(state):
     print_coolitem_table(state, None, (range(416, 421),))
-    h2(state, "Underwater Crimbo (2019)", "a_uwcrimbo")
+
+def o_cool_underwater(state):
     print_coolitem_table(state, None,
         ((429, 430, 439, 440, 437, 427),
          (433, 434, 428, 436, 438, 431),
          (426, 432, 435, 0, 0, 0)))
-    h2(state, "Gooified Crimbo (2021)", "a_gcrimbo")
+
+def o_cool_gooified(state):
     print_coolitem_table(state, None, (range(455, 461), range(461, 467)))
-    h2(state, "Twitchery (most recent 2022)", "a_twitch")
+
+def o_cool_twitchery(state):
     print_coolitem_table(state, None,
         ((225, 320, 322, 317, 228, 318),
          (230, 229, 227, 315, 316, 319),
          (220, 321, 221, 222, 223, 323),
          (224, 226, 231, 232, 233, 314)))
-    h2(state, "Hair Club for Loathers", "a_hairclub")
+
+def o_cool_hairclub(state):
     print_coolitem_table(state, None,
         ((383, 384, 385, 256, 290, 273),
          (292, 295, 296, 336, 354, 355),
          (356, 357, 358, 359, 361, 363),
          (364, 381, 392, 422, 423, 424),
          (443, 444, 445, 451, 0, 0)))
-    #for i in range(len(coolitem_counts)):
-    #    o(f'{i+1}:{coolitem_counts[i]} ')
 
 
 ###########################################################################
@@ -1290,39 +1388,37 @@ def print_sorted_list(data, bytess):
             col = col + 1
     o("</tr></table>")
 
-
-def print_discoveries(state):
-    """TODO"""
-    h1(state, "Discoveries", "a_disc")
-    h2(state, "Cocktailcrafting", "a_disc_cock")
+def o_disc_cocktailcrafting(state):
     print_sorted_list(state['concocktail'], state['concocktail-bytes'])
-    h2(state, "Cooking", "a_disc_cook")
+
+def o_disc_cooking(state):
     print_sorted_list(state['confood'], state['confood-bytes'])
-    h2(state, "Meatpasting", "a_disc_paste")
+
+def o_disc_meatpasting(state):
     print_sorted_list(state['conmeat'], state['conmeat-bytes'])
-    h2(state, "Smithing", "a_disc_smith")
+
+def o_disc_smithing(state):
     print_sorted_list(state['consmith'], state['consmith-bytes'])
-    h2(state, "Miscellaneous Discoveries", "a_disc_misc")
+
+def o_disc_misc(state):
     print_sorted_list(state['conmisc'], state['conmisc-bytes'])
 
-def print_consumption(state):
-    """TODO"""
-    h1(state, "Consumption", "a_consum")
-    h2(state, "Food", "a_consum_food")
+def o_consumption_food(state):
     print_sorted_list(state['food'], state['food-bytes'])
-    h2(state, "Booze", "a_consum_booze")
-    print_sorted_list(state['booze'], state['booze-bytes'])
 
+def o_consumption_booze(state):
+    print_sorted_list(state['booze'], state['booze-bytes'])
 
 ###########################################################################
 
-def print_end(state, coll_score, levels, demonnames):
+def o_various(state):
     """TODO"""
-    h1(state, "Miscellaneous Accomplishments", "a_misc")
+    demonnames = state['demonnames']
+    levels = state['levels']
     o("<h3>Telescope</h3>")
     scope_lvl = levels[25:26]
     if scope_lvl == "0":
-        o("<p>You don't have aTelescope in your Campground.</p>")
+        o("<p>You don't have a Telescope in your Campground.</p>")
     else:
         o(f"<p>You have a Telescope in your Campground, and it's level <b>{levels[25:26]}</b>!</p>")
     o("<h3>Karma</h3>")
@@ -1350,7 +1446,7 @@ def print_end(state, coll_score, levels, demonnames):
       f"<td>{demonnames[10]}</td></tr>")
     o(f"<tr><td>12) Neil the Sofa Sloth<br/>Intergnat</td><td>{demonnames[11]}</td></tr>")
     o("</table>")
-    tats, trophs, fams = coll_score['tats'], coll_score['trophs'], coll_score['fams']
+    tats, trophs, fams = state['score_tats'], state['score_trophs'], state['score_fams']
     o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"
       f" (Tattoo: {tats}, Trophy: {trophs}, Familiar: {fams})</a></h3>")
     o("</body></html>\n")
@@ -1386,6 +1482,12 @@ def generate_toc(entries):
     return result
 
 
+def o_pass(state): # pylint: disable=unused-argument
+    pass
+
+def o_tbd(state): # pylint: disable=unused-argument
+    o("<p>TBD</p>")
+
 ###########################################################################
 
 
@@ -1418,7 +1520,79 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
                 " not found</body></html>")
     #
     load_data(state)
+    sections = Section(0, "", "", o_pass, [
+        Section(1, "Skills", "a0", print_skills),
+        Section(1, "Tattoos", "a1", o_tbd, [
+            Section(2, "Class", "a1a", o_tbd),
+            Section(2, "Ascension", "a1b", o_tbd),
+            Section(2, "Outfits", "a1c", o_tbd),
+            Section(2, "Other", "a1d", o_tbd)]),
+        Section(1, "Trophies", "a2", print_trophies),
+        Section(1, "Familiars", "a3", o_tbd, [
+            Section(2, "Pocket Familiars", "a3a", o_tbd),
+            Section(2, "April Foolmiliars", "a3b", o_tbd)]),
+        Section(1, "Mr. Items", "a4", o_tbd, [
+            Section(2, "Yearly Mr. Items", "a4a", o_tbd),
+            Section(2, "Jick's Mom and Janet's Merchandise Table", "a4b", o_tbd)]),
+        Section(1, "Basement", "a5", o_tbd, [
+            Section(2, "Hobopolis", "a5a", o_tbd),
+            Section(2, "Code Binder", "a5b", o_tbd),
+            Section(2, "Equipment", "a5c", o_tbd),
+            Section(2, "Instruments", "a5d", o_tbd),
+            Section(2, "Slime Tube", "a5e", o_tbd),
+            Section(2, "Dreadsylvania", "a5f", o_tbd)]),
+        Section(1, "Cool Items", "a6", o_pass, [
+            Section(2, "Ultrarares", "a6a", o_cool_ultrarares),
+            Section(2, "Ascension Rewards", "a6b", o_cool_ascension),
+            Section(2, "Swagger Stuff", "a6c", o_cool_swagger),
+            Section(2, "Thwaitgold", "a6d", o_cool_thwaitgold),
+            Section(2, "War Medals", "a6e", o_cool_medals),
+            Section(2, "Sea Stuff", "a6f", o_cool_sea),
+            Section(2, "Chefstaves", "a6g", o_cool_chefstaves),
+            Section(2, "Marty's Quest", "a6h", o_cool_marty),
+            Section(2, "Secrets from the Future (2009)", "a6i", o_cool_secrets),
+            Section(2, "Underworld (2009)", "a6j", o_cool_underworld),
+            Section(2, "Moment of Reflection (2010)", "a6k", o_cool_reflection),
+            Section(2, "Arcade Games (2010)", "a6l", o_cool_arcade),
+            Section(2, "Necbromancer (2011)", "a6m", o_cool_necbromancer),
+            Section(2, "Raiments of the Final Boss (2013)", "a6n", o_cool_raiments),
+            Section(2, "Psychoanalysis (2013)", "a6o", o_cool_psychoanalysis),
+            Section(2, "Warbear Crimbo (2013)", "a6p", o_cool_warbear),
+            Section(2, "We All Wear Masks (2014)", "a6q", o_cool_masks),
+            Section(2, "Conspiracy Island (2014)", "a6r", o_cool_conspiracy),
+            Section(2, "Dinseylandfill (2015)", "a6s", o_cool_dinseylandfill),
+            Section(2, "That 70s Volcano (2015)", "a6t", o_cool_volcano),
+            Section(2, "Glaciest (2015)", "a6u", o_cool_glaciest),
+            Section(2, "Gotpork (2016)", "a6v", o_cool_gotpork),
+            Section(2, "LT&T Telegraph Office (2016)", "a6w", o_cool_telegraph),
+            Section(2, "Fishin' Gear (2016)", "a6x", o_cool_fishin),
+            Section(2, "Precinct (2016)", "a6y", o_cool_precinct),
+            Section(2, "Busting Makes You Feel Good (2016)", "a6z", o_cool_busting),
+            Section(2, "Gingerbread City (2016)", "a6za", o_cool_gingerbread),
+            Section(2, "Chakra Crimbo (2016)", "a6zb", o_cool_chakra),
+            Section(2, "Spacegate (2017)", "a6zc", o_cool_spacegate),
+            Section(2, "Silent Crombotato (2017)", "a6zd", o_cool_silent),
+            Section(2, "FantasyRealm (2018)", "a6ze", o_cool_fantasyrealm),
+            Section(2, "Neverending Party (2018)", "a6zf", o_cool_party),
+            Section(2, "PirateRealm (2019)", "a6zg", o_cool_piraterealm),
+            Section(2, "Underwater Crimbo (2019)", "a6zh", o_cool_underwater),
+            Section(2, "Gooified Crimbo (2021)", "a6zi", o_cool_gooified),
+            Section(2, "Twitchery (most recent 2022)", "a6zj", o_cool_twitchery),
+            Section(2, "Hair Club for Loathers", "a6zk", o_cool_hairclub)]),
+        Section(1, "Discoveries", "a7", o_pass, [
+            Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),
+            Section(2, "Cooking", "a7b", o_disc_cooking),
+            Section(2, "Meatpasting", "a7c", o_disc_meatpasting),
+            Section(2, "Smithing", "a7d", o_disc_smithing),
+            Section(2, "Miscellaneous Discoveries", "a7e", o_disc_misc)]),
+        Section(1, "Consumption", "a8", o_pass, [
+            Section(2, "Food", "a8a", o_consumption_food),
+            Section(2, "Booze", "a8b", o_consumption_booze)]),
+        Section(1, "Various Accomplishments", "a9", o_various)
+    ])
+    #
     print_beginning(state, name, argv, fetched_argv, colorblind)
+    sections.out_toc()
     #
     state['skill-bytes'] = arg_to_bytes(state, fetched_argv, "skills", 2)
     state['tattoo-bytes'] = arg_to_bytes(state, fetched_argv, "tattoos", 2)
@@ -1442,23 +1616,18 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
     state['levels'] = levels
     demonnames = fetched_argv['demonnames'].split('|') if (
         "demonnames" in fetched_argv) else ['']*12
+    state['demonnames'] = demonnames
+    state['score_tats'] = 0
+    state['score_fams'] = 0
     #
-    print_skills(state, levels)
-    coll_score = {}
-    coll_score['tats'] = print_tattoos(state, levels)
-    coll_score['trophs'] = print_trophies(state)
-    coll_score['fams'] = print_familiars(state)
+    sections.out(state)
+    #print_skills(state, levels)
+    state['score_tats'] = print_tattoos(state)
+    #state['score_trophs'] = print_trophies(state)
+    state['score_fams'] = print_familiars(state)
     print_mritems(state)
     print_basement(state)
-    print_coolitems(state)
-    print_discoveries(state)
-    print_consumption(state)
-    #
-    print_end(state, coll_score, levels, demonnames)
-    pre_toc = ''.join(state["o-pre-toc"])
-    toc = ''.join(generate_toc(state['toc']))
-    post_toc = ''.join(OUTPUT)
-    return pre_toc + toc + post_toc
+    return ''.join(OUTPUT)
 
 
 ###########################################################################
