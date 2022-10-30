@@ -21,7 +21,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.0.2'    # released 2022-10-03?
+VERSION = '1.1.0'    # released 2022-11-??
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -48,12 +48,14 @@ class Section:
         self.subsections = subsections
         self.enabled = True
     def out(self, state):
-        o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
-            f"<h{self.level} id='{self.anchor}'>{self.title}</h{self.level}></td>"
-            "<td>[<a href='#top'>back to top</a>]</td></tr></table>")
-        self.textfn(state)
-        for ss in self.subsections:
-            ss.out(state)
+        if self.level == 0 or self.enabled:
+            if self.level > 0:
+                o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
+                    f"<h{self.level} id='{self.anchor}'>{self.title}</h{self.level}></td>"
+                    "<td>[<a href='#top'>back to top</a>]</td></tr></table>")
+            self.textfn(state)
+            for ss in self.subsections:
+                ss.out(state)
     def disable_all(self):
         self.enabled = False
         for ss in self.subsections:
@@ -70,7 +72,7 @@ class Section:
             return True
         result = False
         for ss in self.subsections:
-            result = result or ss.enable_only(sections)
+            result = ss.enable_only(sections) or result
         self.enabled = result
         return result
     def toc_entry(self):
@@ -171,9 +173,8 @@ def arg_to_counts(state, argv, key):
     return result
 
 
-# This function is to handle opening files in CGI or in AWS
 def open_file_for_reading(filename):
-    """TODO"""
+    """Handle the opening of files in either CGI or AWS"""
     if on_aws():
         return open(os.environ["LAMBDA_TASK_ROOT"]+"/"+filename, "r", encoding="utf-8")
     return open(CGI_TASK_ROOT+"/"+filename, 'r', encoding="utf-8")
@@ -459,6 +460,7 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 
 # Map av-snapshot skill numbers to positions in levels string
 LEVELED_SKILLS = {315:3, 316:4, 322:5, 326:6, 329:7, 343:8, 355:32, 389:9, 402:10}
+
 def gen_suffix(skill, levels):
     """TODO"""
     if skill in LEVELED_SKILLS:
@@ -466,7 +468,7 @@ def gen_suffix(skill, levels):
         lv = str(int(lv, 36))
         if skill == 315:    # belch the rainbow
             return f' {lv}/11'
-        return f': Level {lv}'
+        return f': Level&nbsp;{lv}'
     return ''
 
 def print_skill_row(state, header, skill_list, levels=''):
@@ -611,7 +613,7 @@ def print_skill_table(state, levels):
     print_skill_row(state, 'Grimoires', (160, 161, 180, 245, 318, 0))
     o('</table>\n')
 
-def print_skills(state):
+def o_skills(state):
     """TODO"""
     #h1(state, "Skills", "a_skills")
     levels = state['levels']
@@ -655,11 +657,10 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
             clas = "class='perm'"
         o(f"<td {clas}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
 
-def print_tattoo_table(state, header, rows, levels=""):
+def print_tattoo_table(state, rows, levels=""):
     """TODO"""
     tattoos = state['tattoos']
     tattoo_bytes = state['tattoo-bytes']
-    h2(state, header, "a_"+header)
     o('<table cellspacing="0">')
     for row in rows:
         o("<tr>")
@@ -668,12 +669,10 @@ def print_tattoo_table(state, header, rows, levels=""):
         o("</tr>")
     o("</table>")
 
-def print_tattoos(state):
-    """TODO"""
+def score_tattoos(state):
     tattoos = state['tattoos']
     levels = state['levels']
     tattoo_bytes = state['tattoo-bytes']
-    h1(state, "Tattoos", "a_tattoos")
     tally = [0, 0, 0]
     for i in range(len(tattoos)):
         x = getbits(tattoo_bytes, i+1, 2)
@@ -682,9 +681,17 @@ def print_tattoos(state):
     if levels[11:12] != '0':
         tally[0] = tally[0] - 1        # hobo tattoo of any level counts
         tally[1] = tally[1] + 1
+    state["score_tats"] = tally[1]
+    return tally
+
+def o_tattoos(state):
+    """TODO"""
+    tally = score_tattoos(state)
     o(f"<p class='subheader'>You have {tally[1]} tattoos and {tally[2]} outfits for which"
       f" you don't have the corresponding tattoo, and are missing {tally[0]} tattoos.</p>\n")
-    print_tattoo_table(state, "Class",
+
+def o_class(state):
+    print_tattoo_table(state,
         ((1, 2, 3, 108),
          (4, 5, 6, 109),
          (7, 8, 9, 110),
@@ -697,14 +704,19 @@ def print_tattoos(state):
          (213, 214, 215, 216),
          (228, 229, 257, 258),
          (268, 269, 281, 0)))
-    print_tattoo_table(state, "Ascension",
+
+def o_ascension(state):
+    print_tattoo_table(state,
         ((19, 20, 21, 22, 23, 24),
          (25, 26, 27, 28, 29, 30),
          (31, 32, 33, 34, 35, 36),
          (37, 38, 39, 40, 41, 42),
          (43, 44, 45, 0, 0, 0)))
-    # do outfit table - we assume any tattoo with a component is an outfit
-    h2(state, "Outfits", "a_outfits")
+
+def o_outfits(state):
+    """do outfit table - we assume any tattoo with a component is an outfit"""
+    tattoos = state['tattoos']
+    tattoo_bytes = state['tattoo-bytes']
     o('<table cellspacing="0">')
     x = 0
     for t in range(len(tattoos)):
@@ -726,7 +738,10 @@ def print_tattoos(state):
             x = x + 1
         o("</tr>")
     o("</table>")
-    print_tattoo_table(state, "Other",
+
+def o_other(state):
+    levels = state['levels']
+    print_tattoo_table(state,
         ((126, 130, 131, 139, 142, 0),
          (132, 133, 134, 135, 136, 0),
          (103, 104, 118, 106, 127, 128),
@@ -737,7 +752,6 @@ def print_tattoos(state):
          (224, 231, 232, 233, 242, 246),
          (247, 248, 254, 260, 271, 273),
          (274, 275, 276, 0, 0, 0)), levels)
-    return tally[1]
 
 
 ###########################################################################
@@ -750,16 +764,22 @@ def print_trophy_cell(clas, imgname, trophy, desc):
                 +f"<img src='{IMAGES}/{imgname}.gif' style='width:50px; height:50px;'><br>"
                 +f"{wikilink(trophy, desc)}</td>")
 
-def print_trophies(state):
-    """TODO"""
-    trophy_bytes = state['trophy-bytes']
-    #h1(state, "Trophies", "a_trophies")
-    o("<table cellspacing='0'><tr>")
+def score_trophies(state):
     tally = [0, 0]
     trophies = state['trophies']
+    trophy_bytes = state['trophy-bytes']
     for i in range(len(trophies)):
         x = getbits(trophy_bytes, i+1, 1)
         tally[x] = tally[x] + 1
+    state['score_trophs'] = tally[1]
+    return tally
+
+def o_trophies(state):
+    """TODO"""
+    trophies = state['trophies']
+    trophy_bytes = state['trophy-bytes']
+    tally = score_trophies(state)
+    o("<table cellspacing='0'><tr>")
     o(f"<p class='subheader'>You have {tally[1]} trophies and are missing {tally[0]}"
       " trophies.</p>\n")
     ct = 1
@@ -782,7 +802,6 @@ def print_trophies(state):
         o("<td></td>")
         ct = ct + 1
     o("</tr></table>\n")
-    state['score_trophs'] = tally[1]
 
 
 ###########################################################################
@@ -817,8 +836,7 @@ def print_familiar_cell(clas, imgname, name):
 FAM_STYLES = { 0:"", 1:"fam_have", 2:"fam_have_hatch", 3:"fam_run_100", 4:"fam_run_90",
             5:"fam_run_100", 6:"fam_run_100", 7:"fam_run_90", 8:"fam_run_90" }
 
-def print_familiars(state): # pylint: disable=too-many-branches
-    """TODO"""
+def score_familiars(state):
     have, lack, tour, hundred = (0, 0, 0, 0)
     familiars = state['familiars']
     familiar_bytes = state['familiar-bytes']
@@ -833,11 +851,17 @@ def print_familiars(state): # pylint: disable=too-many-branches
             if x in (3, 5, 6):
                 hundred = hundred + 1
     lack = lack - 9        # we won't count the April Foolmiliars
-    h1(state, "Familiars", "a_familiars")
+    state['score_fams'] = have
+    return (have, lack, tour, hundred)
+
+def o_familiars(state): # pylint: disable=too-many-branches
+    """TODO"""
+    have, lack, tour, hundred = score_familiars(state)
+    familiars = state['familiars']
+    familiar_bytes = state['familiar-bytes']
     o(f"<p class='subheader'>You have {have} familiars (missing {lack}), "
       f"have done {tour} tourguide runs and {hundred} 100% runs.</p>")
     o("<table cellspacing='0'><tr>")
-    # First, regular familiars
     ct = 1
     for i in range(1, len(state['familiars'])+1):
         f = familiars[i]
@@ -860,9 +884,11 @@ def print_familiars(state): # pylint: disable=too-many-branches
         +'<td class="fam_have">Have Familiar</td>'
         +'<td class="fam_have_hatch">Have Familiar Hatchling</td>'
         +"<td class='fam_missing'>Don't have Familiar</td>")
-    # Next, Pokefams
-    o("</tr></table>")
-    h2(state, "Pocket Familiars", "a_pokefam")
+    o("</tr></table>\n")
+
+def o_pocket(state):
+    familiars = state['familiars']
+    familiar_bytes = state['familiar-bytes']
     o("<table cellspacing='0'><tr>\n")
     ct = 1
     for i in range(201, 246):
@@ -875,16 +901,17 @@ def print_familiars(state): # pylint: disable=too-many-branches
     while (ct % 10) != 1:
         o("<td></td>")
         ct = ct + 1
-    # Finally, April Foolmiliars
-    o("</tr></table>")
-    h2(state, "April Foolmiliars", "a_foolmiliars")
+    o("</tr></table>\n")
+
+def o_april(state):
+    familiars = state['familiars']
+    familiar_bytes = state['familiar-bytes']
     o("<table cellspacing='0'><tr>\n")
     for i in range(270, 279):
         f = familiars[i]
         style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
         print_familiar_cell(style, f[2], f[1])
-    o("</tr></table>")
-    return have
+    o("</tr></table>\n")
 
 
 ###########################################################################
@@ -990,9 +1017,8 @@ def print_mritem_table(state, yr, headers, rows):
         yr = yr + 1
     o("</table>")
 
-def print_mritems(state):
+def o_mritems(state):
     """TODO"""
-    h1(state, "Mr. Items", "a_mritems")
     print_mritem_table(state, 2004,
         ('', 'January', 'February', 'March', 'April', 'May', 'June',
             'July', 'August', 'September', 'October', 'November', 'December'),
@@ -1015,7 +1041,8 @@ def print_mritems(state):
         (215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
         (228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
         (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 0, 0) ))
-    h2(state, "Mr. Yearly Items", "a_mryearly")
+
+def o_yearly(state):
     print_mritem_table(state, 2005,
         ('', 'Volleychaun', 'Fairychaun', 'Fairyball', 'FairyWhelp', 'Equipment'),
         ((67, 68, 0, 0, 0),
@@ -1036,8 +1063,9 @@ def print_mritems(state):
         (0, 0, 0, 0, 214),
         (0, 0, 0, 0, 227),
         (0, 0, 0, 0, 239)))
-    # This is a weird case, a mix of Mr. Items and Cool items
-    h2(state, "Jick's Mom and Janet's Merchandise Table", "a_merch")
+
+def o_jicks_mom(state):
+    """This is a weird case, a mix of Mr. Items and Cool items"""
     o("<table class='morepad' cellspacing='0'>")
     for r in ((325, 326, 327, 328, 329, 330),
             (331, 332, 333, 334, 0, 0)):
@@ -1057,8 +1085,6 @@ def print_mritems(state):
     o("<td></td><td></td><td></td><td></td><td></td></tr><tr>")
     print_mritem_cell(state, 184)
     o("<td></td><td></td><td></td><td></td><td></td></tr></table>")
-    #for i in range(len(mritem_counts)):
-    #    o(f'{i+1}:{mritem_counts[i]} ')
 
 
 ###########################################################################
@@ -1074,10 +1100,7 @@ def print_loot_row(state, header, items, pad=0):
         o("<td></td>"*pad)
     o("</tr>")
 
-def print_basement(state):
-    """TODO"""
-    h1(state, "Basement", "a_basement")
-    h2(state, "Hobopolis", "a_hobopolis")
+def o_hobopolis(state):
     o("<table cellspacing='0'><tr><th>Boss</th><th colspan='3'>Outfit Pieces</th>"
       "<th colspan='3'>Other Pieces</th></tr>")
     print_loot_row(state, "Frosty", range(467, 473))
@@ -1090,7 +1113,8 @@ def print_basement(state):
     print_loot_row(state, "Hodgman Offhands", range(501, 507))
     print_loot_row(state, "Hodgman Speed", range(507, 510), 3)
     o("</table>")
-    h2(state, "Hobo Code Binder", "a_hobocode")
+
+def o_code_binder(state):
     o("<table cellspacing=0>")
     hobocodes = state['hobocodes']
     col = 1
@@ -1107,23 +1131,27 @@ def print_basement(state):
             col = 1
             o("</tr>")
     o("</table>")
-    h2(state, "Hobo Equipment", "a_hobocode")
+
+def o_equipment(state):
     print_coolitem_table(state, ('', 'Hat', 'Pants', 'Accessories'),
                             (('150 Nickels', 27, 30, 34),
                              ('200 Nickels', 28, 29, 33),
                              ('250 Nickels', 26, 31, 32)))
-    h2(state, "Hobo Instruments", "a_hobocode")
+
+def o_instruments(state):
     print_coolitem_table(state, ('Seal Clubber', 'Turtle Tamer', 'Pastamancer',
                                  'Sauceror', 'Disco Bandit', 'Accordion Thief'),
                         (range(1, 7),))
-    h2(state, "Slime Tube", "a_tube")
+
+def o_slime_tube(state):
     o("<table cellspacing='0'>")
     print_loot_row(state, "", range(516, 522))
     print_loot_row(state, "", range(522, 528))
     print_loot_row(state, "", range(528, 532), 2)
     print_loot_row(state, "", range(532, 537), 1)
     o("</table>")
-    h2(state, "Dreadsylvania", "a_dread")
+
+def o_dreadsylvania(state):
     o("<table cellspacing='0'><tr><th>Boss</th><th colspan='3'>Outfit Pieces</th>"
       "<th colspan='3'>Other Pieces</th></tr>")
     print_loot_row(state, "Great Wolf", range(84, 90))
@@ -1133,8 +1161,6 @@ def print_basement(state):
     print_loot_row(state, "Unkillable Skeleton", range(108, 114))
     print_loot_row(state, "Count Drunkula", range(114, 120))
     o("</table>")
-    #for i in range(len(coolitem_counts)):
-    #    o(f'{i+1}:{coolitem_counts[i]} ')
 
 
 ###########################################################################
@@ -1368,20 +1394,6 @@ def print_sorted_list(data, bytess):
         if col > 6:
             o("</tr><tr>")
             col = 1
-    """
-    for i in range(0, len(data)):
-        name = data[i][1]
-        if name == "" or name == "-":    # some data entries are empty, don't know why
-            continue
-        link = name.replace('[', '').replace(']', '') if (name.find('[') >= 0) else name
-        x = int(data[i][0])
-        clas = ' class="hcperm"' if (getbits(bytess, x, 1) > 0) else ''
-        o(f"<td{clas}>{wikilink(link, name)}</td>")
-        col = col+1
-        if col > 6:
-            o("</tr><tr>")
-            col = 1
-    """
     if col > 1:
         while col <= 6:
             o("<td></td>")
@@ -1454,39 +1466,8 @@ def o_various(state):
 
 ###########################################################################
 
-def generate_toc(entries):
-    """TODO"""
-    # First, count how many entries we have
-    NUM_COLUMNS = 3
-    num_entries = 0
-    for entry in entries:
-        num_entries = num_entries + 1 + len(entry[2])
-    COLSIZE = num_entries//NUM_COLUMNS + 1
-    # Now put entries in multicolumn display
-    result = []
-    e = 0
-    result.append("<table class='nobord toc' cellspacing=0 cellpadding=0><tr><td class='toc'>")
-    for entry in entries:
-        result.append(f"<a href='#{entry[1]}'>{entry[0]}</a><br/>")
-        e = e+1
-        if e >= COLSIZE:
-            result.append("</td><td class='toc'>")
-            e = 0
-        for subentry in entry[2]:
-            result.append(f"&nbsp;&bull;&nbsp;<a href='#{subentry[1]}'>{subentry[0]}</a><br/>")
-            e = e+1
-            if e >= COLSIZE:
-                result.append("</td><td class='toc'>")
-                e = 0
-    result.append("</td></tr></table>")
-    return result
-
-
 def o_pass(state): # pylint: disable=unused-argument
     pass
-
-def o_tbd(state): # pylint: disable=unused-argument
-    o("<p>TBD</p>")
 
 ###########################################################################
 
@@ -1520,27 +1501,27 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
                 " not found</body></html>")
     #
     load_data(state)
-    sections = Section(0, "", "", o_pass, [
-        Section(1, "Skills", "a0", print_skills),
-        Section(1, "Tattoos", "a1", o_tbd, [
-            Section(2, "Class", "a1a", o_tbd),
-            Section(2, "Ascension", "a1b", o_tbd),
-            Section(2, "Outfits", "a1c", o_tbd),
-            Section(2, "Other", "a1d", o_tbd)]),
-        Section(1, "Trophies", "a2", print_trophies),
-        Section(1, "Familiars", "a3", o_tbd, [
-            Section(2, "Pocket Familiars", "a3a", o_tbd),
-            Section(2, "April Foolmiliars", "a3b", o_tbd)]),
-        Section(1, "Mr. Items", "a4", o_tbd, [
-            Section(2, "Yearly Mr. Items", "a4a", o_tbd),
-            Section(2, "Jick's Mom and Janet's Merchandise Table", "a4b", o_tbd)]),
-        Section(1, "Basement", "a5", o_tbd, [
-            Section(2, "Hobopolis", "a5a", o_tbd),
-            Section(2, "Code Binder", "a5b", o_tbd),
-            Section(2, "Equipment", "a5c", o_tbd),
-            Section(2, "Instruments", "a5d", o_tbd),
-            Section(2, "Slime Tube", "a5e", o_tbd),
-            Section(2, "Dreadsylvania", "a5f", o_tbd)]),
+    section_tree = Section(0, "", "", o_pass, [
+        Section(1, "Skills", "a0", o_skills),
+        Section(1, "Tattoos", "a1", o_tattoos, [
+            Section(2, "Class", "a1a", o_class),
+            Section(2, "Ascension", "a1b", o_ascension),
+            Section(2, "Outfits", "a1c", o_outfits),
+            Section(2, "Other", "a1d", o_other)]),
+        Section(1, "Trophies", "a2", o_trophies),
+        Section(1, "Familiars", "a3", o_familiars, [
+            Section(2, "Pocket Familiars", "a3a", o_pocket),
+            Section(2, "April Foolmiliars", "a3b", o_april)]),
+        Section(1, "Mr. Items", "a4", o_mritems, [
+            Section(2, "Yearly Mr. Items", "a4a", o_yearly),
+            Section(2, "Jick's Mom and Janet's Merchandise Table", "a4b", o_jicks_mom)]),
+        Section(1, "Basement", "a5", o_pass, [
+            Section(2, "Hobopolis", "a5a", o_hobopolis),
+            Section(2, "Code Binder", "a5b", o_code_binder),
+            Section(2, "Equipment", "a5c", o_equipment),
+            Section(2, "Instruments", "a5d", o_instruments),
+            Section(2, "Slime Tube", "a5e", o_slime_tube),
+            Section(2, "Dreadsylvania", "a5f", o_dreadsylvania)]),
         Section(1, "Cool Items", "a6", o_pass, [
             Section(2, "Ultrarares", "a6a", o_cool_ultrarares),
             Section(2, "Ascension Rewards", "a6b", o_cool_ascension),
@@ -1590,9 +1571,15 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
             Section(2, "Booze", "a8b", o_consumption_booze)]),
         Section(1, "Various Accomplishments", "a9", o_various)
     ])
+    sections = argv["sections"] if ("sections" in argv) else ""
+    sections = sections.lower().split(",")
+    if len(sections) > 0:
+        section_tree.disable_all()
+        sections = tuple(map(lambda x: x.strip(), sections))
+        section_tree.enable_only(sections)
     #
     print_beginning(state, name, argv, fetched_argv, colorblind)
-    sections.out_toc()
+    section_tree.out_toc()
     #
     state['skill-bytes'] = arg_to_bytes(state, fetched_argv, "skills", 2)
     state['tattoo-bytes'] = arg_to_bytes(state, fetched_argv, "tattoos", 2)
@@ -1617,16 +1604,12 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
     demonnames = fetched_argv['demonnames'].split('|') if (
         "demonnames" in fetched_argv) else ['']*12
     state['demonnames'] = demonnames
-    state['score_tats'] = 0
-    state['score_fams'] = 0
+    # Need to tally the Collector's Score now in case we don't display their sections
+    score_tattoos(state)
+    score_trophies(state)
+    score_familiars(state)
     #
-    sections.out(state)
-    #print_skills(state, levels)
-    state['score_tats'] = print_tattoos(state)
-    #state['score_trophs'] = print_trophies(state)
-    state['score_fams'] = print_familiars(state)
-    print_mritems(state)
-    print_basement(state)
+    section_tree.out(state)
     return ''.join(OUTPUT)
 
 
