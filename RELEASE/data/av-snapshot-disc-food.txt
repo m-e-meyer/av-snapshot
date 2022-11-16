@@ -369,3 +369,18 @@
 369	tempura green and red bean	-	-	-	-	-	-	-
 370	pressurized potion of possessiveness	-	-	-	-	-	-	-
 371	mushroom tea	-	-	-	-	-	-	-
+372	Boris's beer	-	-	-	-	-	-	-
+373	honey bun of Boris	-	-	-	-	-	-	-
+374	ratatouille de Jarlsberg	-	-	-	-	-	-	-
+375	Jarlsberg's vegetable soup	-	-	-	-	-	-	-
+376	Pete's wily whey bar	-	-	-	-	-	-	-
+377	St. Pete's sneaky smoothie	-	-	-	-	-	-	-
+378	Boris's bread	-	-	-	-	-	-	-
+379	roasted vegetable of Jarlsberg	-	-	-	-	-	-	-
+380	Pete's rich ricotta	-	-	-	-	-	-	-
+381	roasted vegetable focaccia	-	-	-	-	-	-	-
+382	plain calzone	-	-	-	-	-	-	-
+383	baked veggie ricotta	-	-	-	-	-	-	-
+384	Deep Dish of Legend	-	-	-	-	-	-	-
+385	Calzone of Legend	-	-	-	-	-	-	-
+386	Pizza of Legend	-	-	-	-	-	-	-

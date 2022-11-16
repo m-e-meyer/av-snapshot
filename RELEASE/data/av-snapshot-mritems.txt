@@ -247,3 +247,4 @@
 247	i	unopened tiny stillsuit	tiny stillsuit	stillsuit_box	-	-	-	-
 248	i	packaged Jurassic Parka	Jurassic Parka	jparka_box	-	-	-	-
 249	s	boxed autumn-aton	hasAutumnaton	crate	-	-	-	-
+250	f	mummified entombed cookbookbat	cookbookbat	bbat_larva	-	-	-	-

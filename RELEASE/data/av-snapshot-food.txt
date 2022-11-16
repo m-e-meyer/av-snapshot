@@ -918,3 +918,17 @@
 918	fire-roasted lake trout
 919	guilty sprout
 920	autumn-spice donut
+921	honey bun of Boris
+922	ratatouille de Jarlsberg
+923	Jarlsberg's vegetable soup
+924	Pete's wily whey bar
+925	St. Pete's sneaky smoothie
+926	Boris's bread
+927	roasted vegetable of Jarlsberg
+928	Pete's rich ricotta
+929	roasted vegetable focaccia
+930	plain calzone
+931	baked veggie ricotta
+932	Deep Dish of Legend
+933	Calzone of Legend
+934	Pizza of Legend
