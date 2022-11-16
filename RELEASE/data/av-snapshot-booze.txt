@@ -717,3 +717,9 @@
 717	AutumnFest ale
 718	Oopsie IPA
 719	Boris's beer
+720	Champagne Shimmy
+721	Charleston Choo-Choo
+722	Marltini
+723	Mysterious Stranger
+724	Strong, Silent Type
+725	Velvet Veil

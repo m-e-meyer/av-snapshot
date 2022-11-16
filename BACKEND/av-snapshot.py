@@ -1084,7 +1084,8 @@ def o_jicks_mom(state):
     print_coolitem_cell(state, 324, False)
     o("<td></td><td></td><td></td><td></td><td></td></tr><tr>")
     print_mritem_cell(state, 184)
-    o("<td></td><td></td><td></td><td></td><td></td></tr></table>")
+    print_mritem_cell(state, 251)
+    o("<td></td><td></td><td></td><td></td></tr></table>")
 
 
 ###########################################################################
