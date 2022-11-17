@@ -280,3 +280,4 @@
 280	Arachnelf	arachnelf	festive egg sac	-	-	-	-	-
 281	Synthetic Rock	synthrock	synthetic rock	-	-	-	-	-
 282	Grey Goose	greygoose	grey gosling	-	-	-	-	-
+283	Cookbookbat	bbat_fam	mummified entombed cookbookbat	-	-	-	-	-
