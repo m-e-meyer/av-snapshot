@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '1.0.1';	# released 2022-09-24
+string VERSION = '1.0.2';	# released 2022-11-17
 
 int NUM_LEVELS = 33;
 
@@ -812,11 +812,12 @@ void main()
 		buffer b = visit_url(url, true);
 		if (b.index_of("Record added") >= 0) {
 			print("Database updated", "green");
-			print(`You can visit your profile at {yourUrl}`);
+			print_html(`You can visit your profile at <a href="{yourUrl}" target="_blank">{yourUrl}</a>`);
 		} else {
 			print("Some error occurred", "red");
 			print(`URL: {url}`, "red");
 			print(`Reponse: {b}`, "red");
 		}
+		print("");
 	}
 }
