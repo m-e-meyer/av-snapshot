@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-
+#
 # enable debugging
 import cgitb
 cgitb.enable()
@@ -21,7 +21,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.0'    # released 2022-11-??
+VERSION = '1.1.1'    # released 2022-11-23
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -409,7 +409,9 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
         av_version = '(unknown)'
     o(f"<div class='header'><p>Snapshot for <b>{name}</b> taken {tstamp} using av-snapshot.ash"
       f" v{av_version} running on KoLmafia revision r{mafia}, rendered by av-snapshot"
-      f" version {VERSION}.</p>")
+      f" version {VERSION}.  If you'd like to use this yourself, check out the Kingdom of"
+      f" Loathing forum link"
+      f" <a href='http://forums.kingdomofloathing.com/vb/showthread.php?t=250707'>here</a>.</p>")
     o("<p>av-snapshot is a fork of the cc_snapshot project by Cheesecookie,"
       " whom I thank for his work."
       f"  <a href='http://cheesellc.com/kol/profile.php?u={name}'>Here</a> is the"
@@ -1382,6 +1384,7 @@ def print_sorted_list(data, bytess):
     col = 1
     data = list(data.values())
     data = sorted(data, key=lambda d: d[1].upper())
+    subtype_matcher = re.compile(r"(.*?) *[(]([^)]*)[)]$")
     o("<table cellspacing=0 cellpadding=0><tr>")
     for i, datum in enumerate(data):    # pylint: disable=unused-variable
         name = datum[1]
@@ -1390,7 +1393,17 @@ def print_sorted_list(data, bytess):
         link = name.replace('[', '').replace(']', '') if (name.find('[') >= 0) else name
         x = int(datum[0])
         clas = ' class="hcperm"' if (getbits(bytess, x, 1) > 0) else ''
-        o(f"<td{clas}>{wikilink(link, name)}</td>")
+        if name.find('(') < 0:
+            o(f"<td{clas}>{wikilink(link, name)}</td>")
+        else:
+            m = subtype_matcher.match(name)
+            subtype = m.group(2)
+            if subtype in ("crumpled", "rusted", "shredded", "used"):
+                o(f"<td{clas}>{wikilink(link, name)}</td>")
+            else:
+                name2 = m.group(1)
+                link2 = name2.replace('[', '').replace(']', '') if (name2.find('[') >= 0) else name2
+                o(f"<td{clas}>{wikilink(link2, name2)} ({m.group(2)})</td>")
         col = col+1
         if col > 6:
             o("</tr><tr>")
