@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '1.0.2';	# released 2022-11-17
+string VERSION = '1.0.3';	# released 2022-12-03
 
 int NUM_LEVELS = 33;
 
@@ -786,12 +786,14 @@ void main()
     string bookshelfHtml = visit_url("campground.php?action=bookshelf");
 	string familiarNamesHtml = visit_url("familiarnames.php");
 
-	string yourUrl;
+    string yourName = my_name();
+    string yourUrl;
 	if (get_property("avSnapshotLocal") == "j") {
-    	yourUrl = `http://localhost/cgi-bin/av-snapshot.py?u={my_name()}`;
+    	yourUrl = `http://localhost/cgi-bin/av-snapshot.py?u={yourName}`;
 	} else {
-		yourUrl = `https://api.aventuristo.net/av-snapshot?u={my_name()}`;
+		yourUrl = `https://api.aventuristo.net/av-snapshot?u={yourName}`;
 	}
+    string yourEncodedUrl = replace_string(yourUrl, " ", "+");
 	string url = yourUrl + `&update=j&mafiarevision={get_revision()}&snapshotversion={VERSION}`;
     url = url + check_skills(bookshelfHtml);
 	url = url + check_tattoos();
@@ -812,7 +814,7 @@ void main()
 		buffer b = visit_url(url, true);
 		if (b.index_of("Record added") >= 0) {
 			print("Database updated", "green");
-			print_html(`You can visit your profile at <a href="{yourUrl}" target="_blank">{yourUrl}</a>`);
+			print_html(`You can visit your profile at <a href="{yourEncodedUrl}" target="_blank">{yourEncodedUrl}</a>`);
 		} else {
 			print("Some error occurred", "red");
 			print(`URL: {url}`, "red");
