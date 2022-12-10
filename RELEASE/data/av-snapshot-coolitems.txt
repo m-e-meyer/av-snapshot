@@ -672,3 +672,7 @@
 672	flagstone fez	fs_fez	-	-	-	-	-
 673	flagstone fleece	fs_fleece	-	-	-	-	-
 674	flagstone fringe	fs_fringe	-	-	-	-	-
+675	bullet necklace	oliver_necklace	-	-	-	-	-
+676	Charleston shoes	oliver_shoes	-	-	-	-	-
+677	rare oboe	oliver_oboe	-	-	-	-	-	
+678	prohie's hat	prohiehat	-	-	-	-	-

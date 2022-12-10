@@ -249,3 +249,4 @@
 249	s	boxed autumn-aton	hasAutumnaton	crate	-	-	-	-
 250	f	mummified entombed cookbookbat	cookbookbat	bbat_larva	-	-	-	-
 251	s	deed to Oliver's Place	ownsSpeakeasy	-	-	-	-	-
+252	i	packaged model train set	model train set	-	-	-	-	-
