@@ -21,7 +21,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.1'    # released 2022-11-23
+VERSION = '1.1.2'    # released 2022-12-09
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -1027,7 +1027,7 @@ def o_mritems(state):
         ((0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3),
         (4, 5, 6, (7, 8), 9, 10, 11, 12, 13, 14, 15, 16),
         (17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28),
-        (29, 30, 21, 32, 33, 34, 35, 36, 37, 38, 39, 40),
+        (29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40),
         (41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52),
         (53, 54, 55, (66, 56), 57, 58, 59, 60, 61, 62, 63, 64),
         (65, 79, 57, 80, 81, 82, 83, 84, 85, 86, 89, 90),
@@ -1042,7 +1042,7 @@ def o_mritems(state):
         (202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213),
         (215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
         (228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
-        (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 0) ))
+        (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252) ))
 
 def o_yearly(state):
     print_mritem_table(state, 2005,
@@ -1359,6 +1359,9 @@ def o_cool_hairclub(state):
          (364, 381, 392, 422, 423, 424),
          (443, 444, 445, 451, 0, 0)))
 
+def o_cool_oliver(state):
+    print_coolitem_table(state, None, ((675, 676, 677, 678),))
+
 
 ###########################################################################
 
@@ -1573,6 +1576,7 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
             Section(2, "Underwater Crimbo (2019)", "a6zh", o_cool_underwater),
             Section(2, "Gooified Crimbo (2021)", "a6zi", o_cool_gooified),
             Section(2, "Twitchery (most recent 2022)", "a6zj", o_cool_twitchery),
+            Section(2, "Oliver's Place (2022)", "a6zk", o_cool_oliver),
             Section(2, "Hair Club for Loathers", "a6zk", o_cool_hairclub)]),
         Section(1, "Discoveries", "a7", o_pass, [
             Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),
