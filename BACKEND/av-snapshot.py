@@ -21,7 +21,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.2'    # released 2022-12-09
+VERSION = '1.1.3'    # released 2022-12-2?
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -586,8 +586,11 @@ def print_skill_table(state, levels):
     print_skill_row(state, 'Crimbo 2019', (403,0,0,0,0,0))
     print_skill_row(state, 'Crimbo 2020<br/>Crimbotatodonatothon',
                     (411, 412, 413, 414, 415, 416))
-    print_skill_row(state, 'Crimbo 2022<br/>Crimbotatogoogoneathon',
+    print_skill_row(state, 'Crimbo 2021<br/>Crimbotatogoogoneathon',
                     (419,0,0,0,0,0))
+    print_skill_multirow(state, 'Crimbo 2022<br/>Crimbotrainathon',
+                         ((420, 421, 422, 423, 424, 425),
+                          (426, 427, 428, 429, 430, 0)))
     o('<tr><th colspan="7" class="miniheader">Other</th><tr>')
     print_skill_row(state, 'Trader 2008', (144,0,0,0,0,0))
     print_skill_row(state, 'The Suburbs of Dis', (187,188,189,0,0,0))

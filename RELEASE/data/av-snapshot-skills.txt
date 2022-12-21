@@ -417,3 +417,14 @@
 417	Emotionally Chipped	All the feelings!	-	pb	-	-	-	-
 418	Dead Nostrils	Stench res/dmg + 1, Stay Fresh	-	pb	-	-	-	-
 419	Ancient Crymbo Lore	+3 stats in December	-	pb	-	-	-	-
+420	Crimbo Training: First Aid Technician	Max HP +10	-	pb	-	-	-	-
+421	Crimbo Training: Passenger Greeter	+1 stats per fight	-	pb	-	-	-	-
+422	Crimbo Training: Concierge	+1 familiar weight	-	pb	-	-	-	-
+423	Crimbo Training: Track Switcher	+10% combat initiative	-	pb	-	-	-	-
+424	Crimbo Training: Bartender	+15% booze drops	-	pb	-	-	-	-
+425	Crimbo Training: Waiter	+15% food drops	-	pb	-	-	-	-
+426	Crimbo Training: Coal Taster	Slight Hot resist (+1)	-	pb	-	-	-	-
+427	Crimbo Training: Dessert Steward	Slight Cold resist (+1)	-	pb	-	-	-	-
+428	Crimbo Training: Night Watchman	Slight Spooky resist (+1)	-	pb	-	-	-	-
+429	Crimbo Training: Sanitation Consultant	Slight Stench resist (+1)	-	pb	-	-	-	-
+430	Crimbo Training: Graffiti Censor	Slight Sleaze resist (+1)	-	pb	-	-	-	-

@@ -723,3 +723,6 @@
 723	Mysterious Stranger
 724	Strong, Silent Type
 725	Velvet Veil
+726	cabooze
+727	dregs of a Crimbo cocktail
+728	mostly-empty bottle of cookie wine
