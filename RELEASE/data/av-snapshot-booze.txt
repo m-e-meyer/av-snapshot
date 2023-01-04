@@ -726,3 +726,5 @@
 726	cabooze
 727	dregs of a Crimbo cocktail
 728	mostly-empty bottle of cookie wine
+729	Crimbosmopolitan
+730	nice warm beer

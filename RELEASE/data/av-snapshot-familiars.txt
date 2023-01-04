@@ -281,3 +281,5 @@
 281	Synthetic Rock	synthrock	synthetic rock	-	-	-	-	-
 282	Grey Goose	greygoose	grey gosling	-	-	-	-	-
 283	Cookbookbat	bbat_fam	mummified entombed cookbookbat	-	-	-	-	-
+284	Mini-Trainbot	tbot_on	deactivated mini-Trainbot	-	-	-	-	-	-
+285	Hobo in Sheep's Clothing	hobosheep	unoccupied sheep suit	-	-	-	-	-	-

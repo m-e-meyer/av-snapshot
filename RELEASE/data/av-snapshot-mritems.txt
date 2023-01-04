@@ -250,3 +250,5 @@
 250	f	mummified entombed cookbookbat	cookbookbat	bbat_larva	-	-	-	-
 251	s	deed to Oliver's Place	ownsSpeakeasy	-	-	-	-	-
 252	i	packaged model train set	model train set	-	-	-	-	-
+253	f	unoccupied sheep suit	Hobo in Sheep's Clothing	hobosheepl	-	-	-	-	
+254	it	Rock Garden Guide	packet of rock seeds	Your Rock Garden	-	-	-	-

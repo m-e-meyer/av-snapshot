@@ -937,3 +937,5 @@
 937	freightcake
 938	honey-drenched ham slice
 939	Crimbo food scraps
+940	steamed oyster
+941	Crimbo dinner

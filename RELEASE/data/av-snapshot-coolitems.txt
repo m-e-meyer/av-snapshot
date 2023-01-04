@@ -676,3 +676,9 @@
 676	Charleston shoes	oliver_shoes	-	-	-	-	-
 677	rare oboe	oliver_oboe	-	-	-	-	-	
 678	prohie's hat	prohiehat	-	-	-	-	-
+679	portable ping-pong table	pingpongtable	-	-	-	-	-
+680	portable steam unit	steamunit	-	-	-	-	-
+681	really nice lump of coal	nicecoal	-	-	-	-	-
+682	The Superconductor's CPU	cpu	-	-	-	-	-
+683	train whistle	trainwhistle	-	-	-	-	-
+684	Trainbot autoassembly module	tbot0	-	-	-	-	-

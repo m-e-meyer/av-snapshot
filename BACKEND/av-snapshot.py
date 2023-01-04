@@ -21,7 +21,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.3'    # released 2022-12-2?
+VERSION = '1.1.3'    # released 2023-01-03
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -1045,7 +1045,8 @@ def o_mritems(state):
         (202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213),
         (215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
         (228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
-        (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252) ))
+        (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
+        (254, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
 
 def o_yearly(state):
     print_mritem_table(state, 2005,
@@ -1067,7 +1068,8 @@ def o_yearly(state):
         (0, 0, 201, 0, 0),
         (0, 0, 0, 0, 214),
         (0, 0, 0, 0, 227),
-        (0, 0, 0, 0, 239)))
+        (0, 0, 0, 0, 239),
+        (0, 0, 253, 0, 0)))
 
 def o_jicks_mom(state):
     """This is a weird case, a mix of Mr. Items and Cool items"""
@@ -1365,6 +1367,9 @@ def o_cool_hairclub(state):
 def o_cool_oliver(state):
     print_coolitem_table(state, None, ((675, 676, 677, 678),))
 
+def o_cool_train(state):
+    print_coolitem_table(state, None, ((679, 680, 681, 682, 683, 684),))
+
 
 ###########################################################################
 
@@ -1580,7 +1585,8 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
             Section(2, "Gooified Crimbo (2021)", "a6zi", o_cool_gooified),
             Section(2, "Twitchery (most recent 2022)", "a6zj", o_cool_twitchery),
             Section(2, "Oliver's Place (2022)", "a6zk", o_cool_oliver),
-            Section(2, "Hair Club for Loathers", "a6zk", o_cool_hairclub)]),
+            Section(2, "Train Crimbo (2022)", "a6zl", o_cool_train),
+            Section(2, "Hair Club for Loathers", "a6zz", o_cool_hairclub)]),
         Section(1, "Discoveries", "a7", o_pass, [
             Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),
             Section(2, "Cooking", "a7b", o_disc_cooking),
