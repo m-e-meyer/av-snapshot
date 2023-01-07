@@ -422,7 +422,7 @@
 422	Crimbo Training: Concierge	+1 familiar weight	-	pb	-	-	-	-
 423	Crimbo Training: Track Switcher	+10% combat initiative	-	pb	-	-	-	-
 424	Crimbo Training: Bartender	+15% booze drops	-	pb	-	-	-	-
-425	Crimbo Training: Waiter	+15% food drops	-	pb	-	-	-	-
+425	Crimbo Training:  Waiter	+15% food drops	-	pb	-	-	-	-
 426	Crimbo Training: Coal Taster	Slight Hot resist (+1)	-	pb	-	-	-	-
 427	Crimbo Training: Dessert Steward	Slight Cold resist (+1)	-	pb	-	-	-	-
 428	Crimbo Training: Night Watchman	Slight Spooky resist (+1)	-	pb	-	-	-	-
