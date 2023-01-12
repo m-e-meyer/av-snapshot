@@ -55,7 +55,7 @@
 55	Thwaitgold grasshopper statuette	thwaitgrass	-	-	-	-	-
 56	Thwaitgold butterfly statuette	thwaitbutt	-	-	-	-	-
 57	Thwaitgold stag beetle statuette	thwaitbeetle	-	-	-	-	-
-58	Staff of The Scummy Sink	scumsinkstaff	-	-	-	-	-
+58	Staff of the Scummy Sink	scumsinkstaff	-	-	-	-	-
 59	Staff of Holiday Sensations	pepperstaff	-	-	-	-	-
 60	Thwaitgold woollybear statuette	thwaitwooly	-	-	-	-	-
 61	Thwaitgold maggot statuette	thwaitmaggot	-	-	-	-	-
