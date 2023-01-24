@@ -514,13 +514,6 @@ string check_familiars(string familiarNamesHtml)
 
 ###########################################################################
 
-void set_elemental_always(string prop, string name)
-{
-	set_property(prop, user_confirm("Mafia does not think you have " + name 
-		+ " but it appears that you might. Select Yes to confirm that you have it."
-		+ " Select No to indicate that you do not have it.", 15000, false));
-}
-
 string get(ItemImage mritem, int offset)
 {
 	switch(offset)
@@ -545,35 +538,6 @@ string check_mritems(string html)
 
     bitarray b = new_bitarray(0, 4);
 	print("Checking for Mr. Items...", "olive");
-
-	if (!get_property("spookyAirportAlways").to_boolean() 
-		|| !get_property("sleazeAirportAlways").to_boolean() 
-		|| !get_property("stenchAirportAlways").to_boolean() 
-		|| !get_property("coldAirportAlways").to_boolean() 
-		|| !get_property("hotAirportAlways").to_boolean())
-	{
-		airportHtml = visit_url("place.php?whichplace=airport");
-		if (!get_property("spookyAirportAlways").to_boolean() 
-		    && contains_text(airportHtml, "airport_spooky")) {
-			set_elemental_always("spookyAirportAlways", "Conspiracy Island" );
-		}
-		if (!get_property("sleazeAirportAlways").to_boolean() 
-		    && contains_text(airportHtml, "airport_sleaze")) {
-			set_elemental_always("sleazeAirportAlways", "Spring Break Beach");
-		}
-		if (!get_property("stenchAirportAlways").to_boolean() 
-		    && contains_text(airportHtml, "airport_stench")) {
-			set_elemental_always("stenchAirportAlways", "Disneylandfill");
-		}
-		if (!get_property("hotAirportAlways").to_boolean() 
-		    && contains_text(airportHtml, "airport_hot")) {
-			set_elemental_always("hotAirportAlways", "That 70s Volcano");
-		}
-		if (!get_property("coldAirportAlways").to_boolean() 
-		    && contains_text(airportHtml, "airport_cold")) {
-			set_elemental_always("coldAirportAlways", "The Glaciest");
-		}
-	}
 
 	foreach x in MRITEMS {
 		ItemImage mrit = MRITEMS[x];
