@@ -682,3 +682,22 @@
 682	The Superconductor's CPU	cpu	-	-	-	-	-
 683	train whistle	trainwhistle	-	-	-	-	-
 684	Trainbot autoassembly module	tbot0	-	-	-	-	-
+685	ceramic cestus	ceracestus	-	-	-	-	-
+686	ceramic centurion shield	cerashield	-	-	-	-	-
+687	ceramic celery grater	ceragrater	-	-	-	-	-
+688	ceramic celsiturometer	cerameter	-	-	-	-	-
+689	ceramic cerecloth belt	cerabelt	-	-	-	-	-
+690	ceramic cenobite's robe	cerarobe	-	-	-	-	-
+691	chiffon chevrons	chifchevrons	-	-	-	-	-
+692	chiffon chapeau	chifhat	-	-	-	-	-
+693	chiffon chamberpot	chifpot	-	-	-	-	-
+694	chiffon chemise	chifchemise	-	-	-	-	-
+695	chiffon chakram	chifchakram	-	-	-	-	-
+696	chiffon chaps	chifchaps	-	-	-	-	-
+697	Abuela Crimbo's special magnet	trainmagnet	-	-	-	-	-
+698	Trainbot harness	trainharness	-	-	-	-	-
+699	Trainbot luggage hook	luggagehook	-	-	-	-	-
+700	Trainbot radar monocle	trainmonocle	-	-	-	-	-
+701	automatic wine thief	winethief	-	-	-	-	-
+702	white arm towel	waitertowel	-	-	-	-	-
+703	silver table-scraper	tablescraper	-	-	-	-	-

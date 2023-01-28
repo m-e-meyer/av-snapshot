@@ -728,3 +728,4 @@
 728	mostly-empty bottle of cookie wine
 729	Crimbosmopolitan
 730	nice warm beer
+731	pixel whiskey

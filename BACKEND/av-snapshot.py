@@ -21,7 +21,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.3'    # released 2023-01-03
+VERSION = '1.1.4'    # released 2023-02-??
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -1197,7 +1197,9 @@ def o_cool_ascension(state):
         range(651, 657),
         range(657, 663),
         range(663, 669),
-        range(669, 675))
+        range(669, 675),
+        range(685, 691),
+        range(691, 697))
     have = 0
     havent = 0
     counts = state['coolitem-counts']
@@ -1347,7 +1349,8 @@ def o_cool_underwater(state):
          (426, 432, 435, 0, 0, 0)))
 
 def o_cool_gooified(state):
-    print_coolitem_table(state, None, (range(455, 461), range(461, 467)))
+    print_coolitem_table(state, None, 
+        ((456, 457, 458, 460, 462, 463, 465, 466), ))
 
 def o_cool_twitchery(state):
     print_coolitem_table(state, None,
@@ -1368,7 +1371,8 @@ def o_cool_oliver(state):
     print_coolitem_table(state, None, ((675, 676, 677, 678),))
 
 def o_cool_train(state):
-    print_coolitem_table(state, None, ((679, 680, 681, 682, 683, 684),))
+    print_coolitem_table(state, None, ((697, 701, 679, 680, 681, 703), 
+                                       (682, 683, 698, 699, 700, 702)))
 
 
 ###########################################################################
