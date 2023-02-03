@@ -12,7 +12,8 @@ import logging
 import signal
 import math
 import traceback
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, quote_plus
+from html import escape
 # End of mandatory packages
 import base64
 from datetime import datetime
@@ -21,10 +22,14 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.4'    # released 2023-02-??
+VERSION = '1.1.5'    # released 2023-02-03
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
+
+
+class MyException(BaseException):
+    """TODO"""
 
 
 # Accumulate HTML output
@@ -196,6 +201,9 @@ def form_param_string(dic):
     for p in dic:
         if p in ('name', 'update'):
             continue
+        if p == 'demonnames':
+            if not re.match("[a-zA-Z0-9 '|]+$", dic[p]):
+                raise MyException(f'Invalid demon name(s) {escape(dic[p])}')
         result = result + prefix + p + '=' + dic[p]
         prefix = '&'
     return result
@@ -407,16 +415,16 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
         av_version = fetched_argv['snapshotversion']
     else:
         av_version = '(unknown)'
-    o(f"<div class='header'><p>Snapshot for <b>{name}</b> taken {tstamp} using av-snapshot.ash"
-      f" v{av_version} running on KoLmafia revision r{mafia}, rendered by av-snapshot"
-      f" version {VERSION}.  If you'd like to use this yourself, check out the Kingdom of"
-      f" Loathing forum link"
+    o(f"<div class='header'><p>Snapshot for <b>{escape(name)}</b> taken {tstamp} using"
+      f" av-snapshot.ash v{av_version} running on KoLmafia revision r{mafia}, rendered by"
+      f" av-snapshot version {VERSION}.  If you'd like to use this yourself, check out the"
+      f" Kingdom of Loathing forum link"
       f" <a href='http://forums.kingdomofloathing.com/vb/showthread.php?t=250707'>here</a>.</p>")
     o("<p>av-snapshot is a fork of the cc_snapshot project by Cheesecookie,"
       " whom I thank for his work."
-      f"  <a href='http://cheesellc.com/kol/profile.php?u={name}'>Here</a> is the"
+      f"  <a href='http://cheesellc.com/kol/profile.php?u={quote_plus(name)}'>Here</a> is the"
       " cc_snapshot equivalent of your query.</p>")
-    query = f"?u={name}"
+    query = f"?u={escape(name)}"
     if 'oob' in argv:
         query = query + '&oob=' + argv['oob']
     if colorblind:
@@ -1349,7 +1357,7 @@ def o_cool_underwater(state):
          (426, 432, 435, 0, 0, 0)))
 
 def o_cool_gooified(state):
-    print_coolitem_table(state, None, 
+    print_coolitem_table(state, None,
         ((456, 457, 458, 460, 462, 463, 465, 466), ))
 
 def o_cool_twitchery(state):
@@ -1371,7 +1379,7 @@ def o_cool_oliver(state):
     print_coolitem_table(state, None, ((675, 676, 677, 678),))
 
 def o_cool_train(state):
-    print_coolitem_table(state, None, ((697, 701, 679, 680, 681, 703), 
+    print_coolitem_table(state, None, ((697, 701, 679, 680, 681, 703),
                                        (682, 683, 698, 699, 700, 702)))
 
 
@@ -1454,7 +1462,7 @@ def o_consumption_booze(state):
 
 def o_various(state):
     """TODO"""
-    demonnames = state['demonnames']
+    demonnames = list(map(escape, state['demonnames']))
     levels = state['levels']
     o("<h3>Telescope</h3>")
     scope_lvl = levels[25:26]
@@ -1515,9 +1523,15 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
         name = 'test guy'
     else:
         name = argv['u'].lower()
+    # Validate user name
+    if (30 < len(name)) or (not re.match("[a-zA-Z0-9 _]+$", name)):
+        return f'<html><head></head><body>Invalid user name {escape(name)}</body></html>'
     # If updating, just store the state and return
     if ("update" in argv) and (argv["update"] == 'j'):
-        save(name, argv)
+        try:
+            save(name, argv)
+        except MyException as e:
+            return f'<html><head></head><body>{e.args[0]}</body></html>'
         return f'<html><head></head><body>Record added for {name}</body></html>'
     #
     colorblind = ('colorblind' in argv) and (int(argv['colorblind']) != 0)
@@ -1526,7 +1540,7 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
     fetched_argv = lookup(name, when)
     # If lookup failed, report and return
     if len(fetched_argv) == 0:
-        return (f"<html><head></head><body>Record for user {name} at time {when}"
+        return (f"<html><head></head><body>Record for user {escape(name)} at time {when}"
                 " not found</body></html>")
     #
     load_data(state)
@@ -1641,6 +1655,7 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
     score_familiars(state)
     #
     section_tree.out(state)
+    #
     return ''.join(OUTPUT)
 
 
