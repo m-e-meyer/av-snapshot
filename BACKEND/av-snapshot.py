@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.5'    # released 2023-02-03
+VERSION = '1.1.6'    # released 2023-02-03
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -202,7 +202,7 @@ def form_param_string(dic):
         if p in ('name', 'update'):
             continue
         if p == 'demonnames':
-            if not re.match("[a-zA-Z0-9 '|]+$", dic[p]):
+            if not re.match("[a-zA-Z0-9 '|-]+$", dic[p]):
                 raise MyException(f'Invalid demon name(s) {escape(dic[p])}')
         result = result + prefix + p + '=' + dic[p]
         prefix = '&'
