@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '1.1.6'    # released 2023-02-03
+VERSION = '1.1.7'    # released 2023-02-07
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -1054,7 +1054,7 @@ def o_mritems(state):
         (215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
         (228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
         (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
-        (254, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
+        (254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
 
 def o_yearly(state):
     print_mritem_table(state, 2005,

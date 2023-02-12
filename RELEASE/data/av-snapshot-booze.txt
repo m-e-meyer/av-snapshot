@@ -729,3 +729,6 @@
 729	Crimbosmopolitan
 730	nice warm beer
 731	pixel whiskey
+732	shot of wasp venom
+733	shadow fluid
+734	shadow venom
