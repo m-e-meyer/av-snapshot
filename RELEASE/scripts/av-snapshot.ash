@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '1.0.3';	# released 2022-12-03
+string VERSION = '1.0.4';	# released 2023-02-??
 
 int NUM_LEVELS = 33;
 
@@ -534,11 +534,12 @@ string get(ItemImage mritem, int offset)
 
 string check_mritems(string html) 
 {
-	string airportHtml;
-
     bitarray b = new_bitarray(0, 4);
 	print("Checking for Mr. Items...", "olive");
 
+    // Visit the woods to make sure getawayCampsiteUnlocked is set properly
+    buffer buf = visit_url("woods.php");
+    
 	foreach x in MRITEMS {
 		ItemImage mrit = MRITEMS[x];
 		string categoryFlags = mrit.itemname;

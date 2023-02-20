@@ -252,3 +252,4 @@
 252	i	packaged model train set	model train set	-	-	-	-	-
 253	f	unoccupied sheep suit	Hobo in Sheep's Clothing	hobosheepl	-	-	-	-	
 254	it	Rock Garden Guide	packet of rock seeds	Your Rock Garden	-	-	-	-
+255	i	S.I.T. Course Voucher	S.I.T. Course Completion Certificate	sitvoucher	-	-	-	-

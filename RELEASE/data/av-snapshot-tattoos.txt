@@ -280,3 +280,5 @@
 280	Flagstone Tattoo	flagstonetat	flagstone flag	flagstone flail	flagstone flip-flops	flagstone fez	flagstone fleece	flagstone fringe	-	-	-
 281	Grey You	class27	-	-	-	-	-	-	-	-	-
 282	Trainbot Tattoo	tbottat	head-mounted Trainbot	leg-mounted Trainbots	shoulder-mounted Trainbot	-	-	-	-	-	-
+283	Ceramic Clothing Tattoo	ceramtat	ceramic cenobite's robe	ceramic celery grater	ceramic centurion shield	ceramic cestus	ceramic celsiturometer	ceramic cerecloth belt	-	-	-
+284	Chiffon Tattoo	chiffontat	chiffon chapeau	chiffon chemise	chiffon chakram	chiffon chamberpot	chiffon chaps	chiffon chevrons	-	-	-	
