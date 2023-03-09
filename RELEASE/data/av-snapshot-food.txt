@@ -943,3 +943,4 @@
 943	super good fruit
 944	shadow bread
 945	shadow sausage
+946	shadow hot dog

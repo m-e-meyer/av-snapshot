@@ -186,8 +186,8 @@
 186	Workoutfit	workouttat	sweatband	gym shorts	ankleweights	-	-	-	-	-	-
 187	High-Radiation Tattoo	radminetat	radiation-resistant helmet	high-energy mining laser	servo-assisted exo-pants	-	-	-	-	-	-
 188	ZAP! Tattoo	zaptat	toy Crimbot mega face	toy Crimbot power glove	toy Crimbot super fist	toy Crimbot rocket legs	-	-	-	-	-
-189	Ceramic Suit Tattoo	porctat	porcelain porkpie	porcelain pelerine	porcelain police baton	porcelain pepper mill	porcelain plus-fours	porcelain phantom mask	-	-	-
-190	Synthetic Suit Tattoo	polytat	polyester panama hat	polyester parachute	polyester peeler	polyester pad	polyester pettipants	polyester pulsera	-	-	-
+189	Ceramic Suit	porctat	porcelain porkpie	porcelain pelerine	porcelain police baton	porcelain pepper mill	porcelain plus-fours	porcelain phantom mask	-	-	-
+190	Synthetic Suit	polytat	polyester panama hat	polyester parachute	polyester peeler	polyester pad	polyester pettipants	polyester pulsera	-	-	-
 191	Topiary Tattoo	topitat	topee	topiary tights	topiary necktie	-	-	-	-	-	-
 192	Merc Core challenge coin	merctat	-	-	-	-	-	-	-	-	-
 193	Spring Break Beach Tattoo coupon	sbreaktat	-	-	-	-	-	-	-	-	-
@@ -198,7 +198,7 @@
 198	Toxic Togs	toxictat	isotophat	toxic mop	three mile island shorts	-	-	-	-	-	-
 199	Spelunker Tattoo	spelunktat	spelunker's fedora	spelunker's whip	spelunker's khakis	-	-	-	-	-	-
 200	Hot Ghost Tattoo	hotghosttat	ghast iron garibaldi	ghast iron cleaver	ghast iron heater shield	ghast iron codpiece	-	-	-	-	-
-201	Emperor Tattoo	emperortat	The Emperor's new hat	The Emperor's new shirt	The Emperor's new pants	-	-	-	-	-	-
+201	The Emperor's New Tattoo	emperortat	The Emperor's new hat	The Emperor's new shirt	The Emperor's new pants	-	-	-	-	-	-
 202	SMOOCH Tattoo	smoochtat	SMOOCH breastplate	SMOOCH codpiece	SMOOCH bracers	SMOOCH kneepads	SMOOCH spaulders	-	-	-	-
 203	DEBBIE Tattoo	debbietat	-	-	-	-	-	-	-	-	-
 204	Cooper's Couture	barreltat	chest barrel	barrelhead	bottoms of the barrel	-	-	-	-	-	-
@@ -237,7 +237,7 @@
 237	Pyrotechnic Paper Paraphernalia	fpmtat	burning paper hat	burning cape	burning paper slippers	burning paper jorts	none	-	-	-	-
 238	Gabardine Guise	gabtat	gabardine garibaldi	gabardine gunnysack	gabardine gaiters	gabardine garland	gabardine girdle	gabardine gloves	-	-	-
 239	Fiberglass Finery	fibertat	fiberglass fedora	fiberglass foil	fiberglass fetish	fiberglass frock	fiberglass fannypack	fiberglass fingerguard	-	-	-
-240	Genie Lamp Tattoo	genietat	genie's turbane	genie's scimitar	genie's pants	genie's bracers	-	-	-	-	-
+240	Genie Garments	genietat	genie's turbane	genie's scimitar	genie's pants	genie's bracers	-	-	-	-	-
 241	Psychic Enpsemble	psychictat	psychic's circlet	psychic's pslacks	psychic's crystal ball	psychic's amulet	-	-	-	-	-
 242	FantasyRealm Tattoo	frtat	-	-	-	-	-	-	-	-	-
 243	Warrior's Tattoo	frtat1	FantasyRealm Warrior's Helm	Dragonscale breastplate	The Ghoul King's ghoulottes	belt of Ogrekind	-	-	-	-	-
@@ -250,20 +250,20 @@
 250	Mutant Parts Apparel	vwmuttat	mutant crown	mutant arm	mutant legs	-	-	-	-	-	-
 251	Slime Enslamble	vwslimetat	slime fedora	slime knuckles	slime waders	-	-	-	-	-	-
 252	Snakeskin Suit	vwsnaketat	snakeskin cowboy hat	snakeskin jacket	snakeskin thighboots	-	-	-	-	-	-
-253	Bauxite Tattoo	bauxtat	bauxite beret	bauxite boxers	bauxite bow-tie	-	-	-	-	-	-
+253	Bauxite Baubles	bauxtat	bauxite beret	bauxite boxers	bauxite bow-tie	-	-	-	-	-	-
 254	Crimbo 2018 Tattoo	c18tat	-	-	-	-	-	-	-	-	-
 255	Chalk Chostume	chalktat	chalk chapeau	chalk chlamys	chalk chalice	chalk chinos	chalk chain	chalk choker	-	-	-
 256	Marble Materials	marbletat	marble mariachi hat	marble mantle	marble mignonette bowl	marble maebari	marble magnet	marble medallion	-	-	-
 257	Vampyre	class24	-	-	-	-	-	-	-	-	-
 258	Vampyre HC	class24hc	-	-	-	-	-	-	-	-	-
-259	PirateRealm Tattoo	prealmtat	PirateRealm party hat	conquistador's breastplate	piratical blunderbuss	pirate radio ring	plush sea serpent	-	-	-	-
+259	PirateRealm Assortment	prealmtat	PirateRealm party hat	conquistador's breastplate	piratical blunderbuss	pirate radio ring	plush sea serpent	-	-	-	-
 260	Red Roger Tattoo	redrogertat	-	-	-	-	-	-	-	-	-
 261	Shallow Sea Fishing Outfit	fishingtat	spearfish fishing spear	waders	lucky rabbitfish fin	-	-	-	-	-	-
 262	Cursed Skeleton Pirate Costume	skelepiratetat	cursed tricorn hat	cursed pirate cutlass	cursed swash buckle	-	-	-	-	-	-
 263	Whittled Wearables	whittletat	whittled tiara	whittled shorts	-	-	-	-	-	-	-
-264	Antique Nutcracker Tattoo	nutctat	antique nutcracker hat	antique nutcracker cape	antique nutcracker waistcoat	antique nutcracker sword	antique nutcracker drumstick	antique nutcracker pants	antique nutcracker epaulets	antique nutcracker beard	antique nutcracker boots
-265	Terra Cotta Tackle Tattoo	tc_tat	terra cotta truss	terra cotta trousers	terra cotta tongs	terra cotta train	terra cotta tie tack	terra cotta tambourine	-	-	-
-266	Paraffinalia Tattoo	para_tat	paraffin punching bag	paraffin pith helmet	paraffin poncho	paraffin pendant	paraffin palazzos	paraffin pseudoaccordion	-	-	-
+264	Antique Nutcracker Outfit	nutctat	antique nutcracker hat	antique nutcracker cape	antique nutcracker waistcoat	antique nutcracker sword	antique nutcracker drumstick	antique nutcracker pants	antique nutcracker epaulets	antique nutcracker beard	antique nutcracker boots
+265	Terra Cotta Tackle	tc_tat	terra cotta truss	terra cotta trousers	terra cotta tongs	terra cotta train	terra cotta tie tack	terra cotta tambourine	-	-	-
+266	Paraffinalia	para_tat	paraffin punching bag	paraffin pith helmet	paraffin poncho	paraffin pendant	paraffin palazzos	paraffin pseudoaccordion	-	-	-
 267	Mushroom Masquerade	mushtat	mushroom cap	mushroom shield	mushroom pants	mushroom badge	-	-	-	-	-
 268	Plumber	class25	-	-	-	-	-	-	-	-	-
 269	Plumber HC	class25hc	-	-	-	-	-	-	-	-	-
@@ -274,11 +274,19 @@
 274	Crimbo Carol Tattoo	c20carols	-	-	-	-	-	-	-	-	-
 275	Crimbo Cheer Tattoo	c20cheer	-	-	-	-	-	-	-	-	-
 276	Crimbo Commerce Tattoo	c20commerce	-	-	-	-	-	-	-	-	-
-277	Stained Glass Tattoo	stainedtat	stained glass suspenders	stained glass shield	stained glass stetson	stained glass spectacles	stained glass shiv	stained glass serape	-	-	-
-278	Velour Tattoo	velourtat	velour voulge	velour vambraces	velour veil	velour viscometer	velour valise	velour vaqueros	-	-	-
-279	Loofah Tattoo	loofahtat	loofah lumberjack's hat	loofah lei	loofah lederhosen	loofah ladle	loofah legwarmers	loofah lavalier	-	-	-
-280	Flagstone Tattoo	flagstonetat	flagstone flag	flagstone flail	flagstone flip-flops	flagstone fez	flagstone fleece	flagstone fringe	-	-	-
+277	Stained Glass Suit	stainedtat	stained glass suspenders	stained glass shield	stained glass stetson	stained glass spectacles	stained glass shiv	stained glass serape	-	-	-
+278	Velour Vestments	velourtat	velour voulge	velour vambraces	velour veil	velour viscometer	velour valise	velour vaqueros	-	-	-
+279	Loofah Loungewear	loofahtat	loofah lumberjack's hat	loofah lei	loofah lederhosen	loofah ladle	loofah legwarmers	loofah lavalier	-	-	-
+280	Flagstone Finery	flagstonetat	flagstone flag	flagstone flail	flagstone flip-flops	flagstone fez	flagstone fleece	flagstone fringe	-	-	-
 281	Grey You	class27	-	-	-	-	-	-	-	-	-
-282	Trainbot Tattoo	tbottat	head-mounted Trainbot	leg-mounted Trainbots	shoulder-mounted Trainbot	-	-	-	-	-	-
-283	Ceramic Clothing Tattoo	ceramtat	ceramic cenobite's robe	ceramic celery grater	ceramic centurion shield	ceramic cestus	ceramic celsiturometer	ceramic cerecloth belt	-	-	-
-284	Chiffon Tattoo	chiffontat	chiffon chapeau	chiffon chemise	chiffon chakram	chiffon chamberpot	chiffon chaps	chiffon chevrons	-	-	-	
+282	Trainbot Trappings	tbottat	head-mounted Trainbot	leg-mounted Trainbots	shoulder-mounted Trainbot	-	-	-	-	-	-
+283	Ceramic Clothing	ceramtat	ceramic cenobite's robe	ceramic celery grater	ceramic centurion shield	ceramic cestus	ceramic celsiturometer	ceramic cerecloth belt	-	-	-
+284	Chiffon Chiffinery	chiffontat	chiffon chapeau	chiffon chemise	chiffon chakram	chiffon chamberpot	chiffon chaps	chiffon chevrons	-	-	-	
+285	Pig Skinner	class28	-	-	-	-	-	-	-	-	-
+286	Pig Skinner HC	class28hc	-	-	-	-	-	-	-	-	-
+287	Cheese Wizard	class29	-	-	-	-	-	-	-	-	-
+288	Cheese Wizard HC	class29hc	-	-	-	-	-	-	-	-	-
+289	Jazz Agent	class30	-	-	-	-	-	-	-	-	-
+290	Jazz Agent HC	class30hc	-	-	-	-	-	-	-	-	-
+291	Shadow Shuit	shadouttat	shadow chef's hat	shadow trousers	-	-	-	-	-	-	-
+292	Shadow Tattoo	shadowtat	-	-	-	-	-	-	-	-	-
