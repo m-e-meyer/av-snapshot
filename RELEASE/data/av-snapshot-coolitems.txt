@@ -359,7 +359,7 @@
 359	Diamond HP-35 Calculator	longcalc	-	-	-	-	-
 360	Thwaitgold amoeba statuette	thwaitamoeba	-	-	-	-	-
 361	recovered cufflinks	cufflinks	-	-	-	-	-
-362	Thwaitgold bug statue	thwaitbug	-	-	-	-	-
+362	Thwaitgold bug statuette	thwaitbug	-	-	-	-	-
 363	License to Chill	licensetochill	-	-	-	-	-
 364	Jeppson's Malort	blackrum	-	-	-	-	-
 365	mime army insignia (psychological warfare)	marmy6	-	-	-	-	-
