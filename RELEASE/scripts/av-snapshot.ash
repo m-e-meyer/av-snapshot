@@ -8,7 +8,7 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '1.0.4';	# released 2023-02-??
+string VERSION = '1.0.5';	# released 2023-03-25
 
 int NUM_LEVELS = 33;
 
