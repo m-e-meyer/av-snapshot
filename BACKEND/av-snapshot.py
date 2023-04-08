@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '2023.03.08'    # released 2023-03-08
+VERSION = '2023.04.07'    # released then
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -1056,7 +1056,7 @@ def o_mritems(state):
         (215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
         (228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
         (240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
-        (254, 255, 256, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
+        (254, 255, 256, 257, 0, 0, 0, 0, 0, 0, 0, 0) ))
 
 def o_yearly(state):
     print_mritem_table(state, 2005,
@@ -1233,7 +1233,7 @@ def o_cool_thwaitgold(state):
                                     (291, 297, 313, 353, 360, 362),
                                     (382, 390, 391, 415, 421, 425),
                                     (442, 446, 447, 452, 453, 454),
-                                    (537, 538, 539, 0, 0, 0)))
+                                    (537, 538, 539, 704, 0, 0)))
 
 def o_cool_medals(state):
     print_coolitem_table(state, ('Sidequests', '0', '1', '2', '3', '4', '5', '6'),

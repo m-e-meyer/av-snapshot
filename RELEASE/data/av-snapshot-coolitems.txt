@@ -701,3 +701,4 @@
 701	automatic wine thief	winethief	-	-	-	-	-
 702	white arm towel	waitertowel	-	-	-	-	-
 703	silver table-scraper	tablescraper	-	-	-	-	-
+704	Thwaitgold anti-moth statuette	thwaitantimoth	-	-	-	-	-
