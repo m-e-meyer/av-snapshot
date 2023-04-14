@@ -1,23 +1,23 @@
-1	Mosquito	familiar1	mosquito larva	-	-	-	-	-
-2	Leprechaun	familiar2	leprechaun hatchling	-	-	-	-	-
-3	Levitating Potato	familiar3	potato sprout	-	-	-	-	-
-4	Angry Goat	familiar4	goat	-	-	-	-	-
-5	Sabre-Toothed Lime	familiar5	sabre-toothed lime cub	-	-	-	-	-
-6	Fuzzy Dice	familiar6	fuzzy dice	-	-	-	-	-
-7	Spooky Pirate Skeleton	familiar7	spooky pirate skeleton	-	-	-	-	-
-8	Barrrnacle	familiar8	barrrnacle	-	-	-	-	-
-9	Howling Balloon Monkey	familiar9	balloon monkey	-	-	-	-	-
-10	Stab Bat	familiar10	rewinged stab bat	-	-	-	-	-
-11	Grue	familiar11	grue egg	-	-	-	-	-
-12	Blood-Faced Volleyball	familiar12	Blood-Faced Volleyball	-	-	-	-	-
-13	Ghuol Whelp	familiar14	fertilized ghuol egg	-	-	-	-	-
-14	Baby Gravy Fairy	familiar15	pregnant mushroom	-	-	-	-	-
-15	Cocoabo	familiar16	cocoa egg	-	-	-	-	-
-16	Star Starfish	familiar17	star starfish	-	-	-	-	-
-17	Hovering Sombrero	familiar18	hovering sombrero	-	-	-	-	-
-18	Ghost Pickle on a Stick	familiar19	Ghost Pickle on a Stick	-	-	-	-	-
-19	Killer Bee	familiar20	baby killer bee	-	-	-	-	-
-20	Whirling Maple Leaf	familiar21	maple leaf	-	-	-	-	-
+1	Mosquito	familiar1	mosquito larva	s	-	-	-	-
+2	Leprechaun	familiar2	leprechaun hatchling	s	-	-	-	-
+3	Levitating Potato	familiar3	potato sprout	s	-	-	-	-
+4	Angry Goat	familiar4	goat	s	-	-	-	-
+5	Sabre-Toothed Lime	familiar5	sabre-toothed lime cub	s	-	-	-	-
+6	Fuzzy Dice	familiar6	fuzzy dice	s	-	-	-	-
+7	Spooky Pirate Skeleton	familiar7	spooky pirate skeleton	s	-	-	-	-
+8	Barrrnacle	familiar8	barrrnacle	s	-	-	-	-
+9	Howling Balloon Monkey	familiar9	balloon monkey	s	-	-	-	-
+10	Stab Bat	familiar10	rewinged stab bat	s	-	-	-	-
+11	Grue	familiar11	grue egg	s	-	-	-	-
+12	Blood-Faced Volleyball	familiar12	Blood-Faced Volleyball	s	-	-	-	-
+13	Ghuol Whelp	familiar14	fertilized ghuol egg	s	-	-	-	-
+14	Baby Gravy Fairy	familiar15	pregnant mushroom	s	-	-	-	-
+15	Cocoabo	familiar16	cocoa egg	s	-	-	-	-
+16	Star Starfish	familiar17	star starfish	s	-	-	-	-
+17	Hovering Sombrero	familiar18	hovering sombrero	s	-	-	-	-
+18	Ghost Pickle on a Stick	familiar19	Ghost Pickle on a Stick	s	-	-	-	-
+19	Killer Bee	familiar20	baby killer bee	s	-	-	-	-
+20	Whirling Maple Leaf	familiar21	maple leaf	s	-	-	-	-
 21	Coffee Pixie	familiar22	coffee sprite	-	-	-	-	-
 22	Cheshire Bat	familiar23	cheshire bitten	-	-	-	-	-
 23	Jill-O-Lantern	familiar24	Dark Jill-O-Lantern	-	-	-	-	-
@@ -28,12 +28,12 @@
 28	Feather Boa Constrictor	familiar29	silk garter snake	-	-	-	-	-
 29	Emo Squid	familiar30	emo roe	-	-	-	-	-
 30	Personal Raincloud	familiar31	personal raindrop	-	-	-	-	-
-31	Clockwork Grapefruit	familiar32	unwound Clockwork Grapefruit	-	-	-	-	-
-32	MagiMechTech MicroMechaMech	familiar33	deactivated MicroMechaMech	-	-	-	-	-
-33	Flaming Gravy Fairy	familiar34	pregnant flaming mushroom	-	-	-	-	-
-34	Frozen Gravy Fairy	familiar35	pregnant frozen mushroom	-	-	-	-	-
-35	Stinky Gravy Fairy	familiar36	pregnant stinky mushroom	-	-	-	-	-
-36	Spooky Gravy Fairy	sgfairy	pregnant gloomy black mushroom	-	-	-	-	-
+31	Clockwork Grapefruit	familiar32	unwound Clockwork Grapefruit	s	-	-	-	-
+32	MagiMechTech MicroMechaMech	familiar33	deactivated MicroMechaMech	s	-	-	-	-
+33	Flaming Gravy Fairy	familiar34	pregnant flaming mushroom	s	-	-	-	-
+34	Frozen Gravy Fairy	familiar35	pregnant frozen mushroom	s	-	-	-	-
+35	Stinky Gravy Fairy	familiar36	pregnant stinky mushroom	s	-	-	-	-
+36	Spooky Gravy Fairy	sgfairy	pregnant gloomy black mushroom	s	-	-	-	-
 37	Inflatable Dodecapede	familiar38	deflated inflatable dodecapede	-	-	-	-	-
 38	Pygmy Bugbear Shaman	familiar39	Pygmy Bugbear Shaman	-	-	-	-	-
 39	Doppelshifter	familiar40	Doppelshifter egg	-	-	-	-	-
@@ -41,33 +41,33 @@
 41	Cymbal-Playing Monkey	familiar42	unwound Cymbal-Playing Monkey	-	-	-	-	-
 42	Temporal Riftlet	familiar43	miniscule temporal rip	-	-	-	-	-
 43	Sweet Nutcracker	familiar44	Sweet Nutcracker	-	-	-	-	-
-44	Pet Rock	familiar45	pet rock	-	-	-	-	-
+44	Pet Rock	familiar45	pet rock	s	-	-	-	-
 45	Snowy Owl	familiar46	sleeping snowy owl	-	-	-	-	-
-46	Teddy Bear	teddybear	teddy bear	-	-	-	-	-
-47	Ninja Pirate Zombie Robot	npzr	Ninja Pirate Zombie Robot	-	-	-	-	-
-48	Sleazy Gravy Fairy	slgfairy	pregnant oily golden mushroom	-	-	-	-	-
+46	Teddy Bear	teddybear	teddy bear	s	-	-	-	-
+47	Ninja Pirate Zombie Robot	npzr	Ninja Pirate Zombie Robot	s	-	-	-	-
+48	Sleazy Gravy Fairy	slgfairy	pregnant oily golden mushroom	s	-	-	-	-
 49	Wild Hare	hare	march hat	-	-	-	-	-
 50	Wind-up Chattering Teeth	chatteeth	Wind-up Chattering Teeth	-	-	-	-	-
 51	Spirit Hobo	ghobo	homeless hobo spirit	-	-	-	-	-
 52	Astral Badger	badger	astral badger	-	-	-	-	-
 53	Comma Chameleon	commacha	Comma Chameleon egg	-	-	-	-	-
-54	Misshapen Animal Skeleton	animskel	Misshapen Animal Skeleton	-	-	-	-	-
-55	Scary Death Orb	orb	Scary Death Orb	-	-	-	-	-
+54	Misshapen Animal Skeleton	animskel	Misshapen Animal Skeleton	s	-	-	-	-
+55	Scary Death Orb	orb	Scary Death Orb	s	-	-	-	-
 56	Jitterbug	jitterbug	jitterbug larva	-	-	-	-	-
 57	Nervous Tick	tick	nervous tick egg	-	-	-	-	-
-58	Reassembled Blackbird	blackbird1	Reassembled Blackbird	-	-	-	-	-
-59	Origami Towel Crane	crane1	makeshift crane	-	-	-	-	-
-60	Ninja Snowflake	snowflake	frigid mote	-	-	-	-	-
-61	Evil Teddy Bear	teddybear	Evil Teddy Bear	-	-	-	-	-
-62	Toothsome Rock	pettoothrock	Toothsome Rock	-	-	-	-	-
+58	Reassembled Blackbird	blackbird1	Reassembled Blackbird	s	-	-	-	-
+59	Origami Towel Crane	crane1	makeshift crane	s	-	-	-	-
+60	Ninja Snowflake	snowflake	frigid mote	s	-	-	-	-
+61	Evil Teddy Bear	teddybear	Evil Teddy Bear	s	-	-	-	-
+62	Toothsome Rock	pettoothrock	Toothsome Rock	s	-	-	-	-
 63	Ancient Yuletide Troll	crimbotroll	yuletide troll chrysalis	-	-	-	-	-
 64	Dandy Lion	dandylion	dandy lion cub	-	-	-	-	-
 65	O.A.F.	oaf	Deactivated O. A. F.	-	-	-	-	-
 66	Penguin Goodfella	goodfella	bad penguin egg	-	-	-	-	-
-67	Jumpsuited Hound Dog	hounddog	pompadour'd puppy	-	-	-	-	-
+67	Jumpsuited Hound Dog	hounddog	pompadour'd puppy	s	-	-	-	-
 68	Green Pixie	pictsie	bottled green pixie	-	-	-	-	-
-69	Ragamuffin Imp	ragimp	porm	-	-	-	-	-
-70	Exotic Parrot	parrot	exotic parrot egg	-	-	-	-	-
+69	Ragamuffin Imp	ragimp	porm	s	-	-	-	-
+70	Exotic Parrot	parrot	exotic parrot egg	s	-	-	-	-
 71	Wizard Action Figure	waf	Wizard Action Figure	-	-	-	-	-
 72	Gluttonous Green Ghost	ggg	class five ecto-larva	-	-	-	-	-
 73	Casagnova Gnome	cassagnome	siesta-ing Casagnova gnome	-	-	-	-	-
@@ -76,36 +76,36 @@
 76	Bulky Buddy Box	wcb	Bulky Buddy Box	-	-	-	-	-
 77	Teddy Borg	teddyborg	teddy borg	-	-	-	-	-
 78	RoboGoose	robogoose	deactivated robogoose	-	-	-	-	-
-79	El Vibrato Megadrone	megadrone	El Vibrato Megadrone	-	-	-	-	-
+79	El Vibrato Megadrone	megadrone	El Vibrato Megadrone	s	-	-	-	-
 80	Mad Hatrack	hatrack	sane hatrack	-	-	-	-	-
-81	Hobo Monkey	hobomonkey	hobo monkey	-	-	-	-	-
+81	Hobo Monkey	hobomonkey	hobo monkey	s	-	-	-	-
 82	Llama Lama	llama	llama lama cria	-	-	-	-	-
 83	Cotton Candy Carnie	cccarnie	cotton candy cocoon	-	-	-	-	-
 84	Disembodied Hand	dishand	spooky rattling cigar box	-	-	-	-	-
-85	Black Cat	blackcat	black kitten	-	-	-	-	-
+85	Black Cat	blackcat	black kitten	s	-	-	-	-
 86	Uniclops	uniclops	uniclops egg	-	-	-	-	-
 87	Psychedelic Bear	dancebear	passed-out Psychedelic Bear	-	-	-	-	-
 88	Baby Mutant Rattlesnake	rattlesnake	mutant rattlesnake egg	-	-	-	-	-
 89	Mutant Fire Ant	fireant	Mutant Fire Ant egg	-	-	-	-	-
 90	Mutant Cactus Bud	cactusbud	Mutant Cactus Bud	-	-	-	-	-
 91	Mutant Gila Monster	gilamonster	Mutant Gila Monster egg	-	-	-	-	-
-92	Cuddlefish	cuddlefish	baby cuddlefish	-	-	-	-	-
+92	Cuddlefish	cuddlefish	baby cuddlefish	s	-	-	-	-
 93	Sugar Fruit Fairy	sugarfairy	candy cornucopia	-	-	-	-	-
-94	Imitation Crab	crab	imitation crab zoea	-	-	-	-	-
+94	Imitation Crab	crab	imitation crab zoea	s	-	-	-	-
 95	Pair of Ragged Claws	raggedclaws	pair of ragged claws	-	-	-	-	-
-96	Magic Dragonfish	dragonfishfam	magic dragonfish fry	-	-	-	-	-
+96	Magic Dragonfish	dragonfishfam	magic dragonfish fry	s	-	-	-	-
 97	Frumious Bandersnatch	bandersnatch	apathargic bandersnatch	-	-	-	-	-
-98	Midget Clownfish	midgetclownfish	Midget Clownfish	-	-	-	-	-
-99	Syncopated Turtle	syncturtle	Syncopated Turtle	-	-	-	-	-
-100	Grinning Turtle	grinturtle	Grinning Turtle	-	-	-	-	-
-101	Purse Rat	purserat	designer handbag	-	-	-	-	-
-102	Wereturtle	turtle	sleeping wereturtle	-	-	-	-	-
+98	Midget Clownfish	midgetclownfish	Midget Clownfish	s	-	-	-	-
+99	Syncopated Turtle	syncturtle	Syncopated Turtle	s	-	-	-	-
+100	Grinning Turtle	grinturtle	Grinning Turtle	s	-	-	-	-
+101	Purse Rat	purserat	designer handbag	s	-	-	-	-
+102	Wereturtle	turtle	sleeping wereturtle	s	-	-	-	-
 103	Baby Sandworm	babyworm	infant sandworm	-	-	-	-	-
-104	Slimeling	slimeling	squirming Slime larva	-	-	-	-	-
+104	Slimeling	slimeling	squirming Slime larva	s	-	-	-	-
 105	He-Boulder	heboulder	floaty stone sphere	-	-	-	-	-
-106	Rock Lobster	rocklobster	rock lobster	-	-	-	-	-
-107	Urchin Urchin	urchin	urchin roe	-	-	-	-	-
-108	Grouper Groupie	grouper2	grouperfangirl	-	-	-	-	-
+106	Rock Lobster	rocklobster	rock lobster	s	-	-	-	-
+107	Urchin Urchin	urchin	urchin roe	s	-	-	-	-
+108	Grouper Groupie	grouper2	grouperfangirl	s	-	-	-	-
 109	Squamous Gibberer	gibberer	squamous polyp	-	-	-	-	-
 110	Dancing Frog	dancfrog	perfectly ordinary frog	-	-	-	-	-
 111	Chauvinist Pig	chauvpig	hungover chauvinist pig	-	-	-	-	-
@@ -113,12 +113,12 @@
 113	Snow Angel	snowangel	pile of loose snow	-	-	-	-	-
 114	Jack-in-the-Box	jackinthebox	Jack-in-the-box	-	-	-	-	-
 115	BRICKO chick	brickochick	bricko egg	-	-	-	-	-
-116	Adorable Seal Larva	seallarva	adorable seal larva	-	-	-	-	-
-117	Untamed Turtle	untamed	untamable turtle	-	-	-	-	-
-118	Animated Macaroni Duck	macaroniduck	macaroni duck	-	-	-	-	-
-119	Pet Cheezling	cheezblob	friendly cheez blob	-	-	-	-	-
-120	Autonomous Disco Ball	discoball	unusual disco ball	-	-	-	-	-
-121	Mariachi Chihuahua	chihuahua	stray chihuahua	-	-	-	-	-
+116	Adorable Seal Larva	seallarva	adorable seal larva	s	-	-	-	-
+117	Untamed Turtle	untamed	untamable turtle	s	-	-	-	-
+118	Animated Macaroni Duck	macaroniduck	macaroni duck	s	-	-	-	-
+119	Pet Cheezling	cheezblob	friendly cheez blob	s	-	-	-	-
+120	Autonomous Disco Ball	discoball	unusual disco ball	s	-	-	-	-
+121	Mariachi Chihuahua	chihuahua	stray chihuahua	s	-	-	-	-
 122	Baby Bugged Bugbear	babybugbug	panicked kernel	-	-	-	-	-
 123	Underworld Bonsai	uwbonsai	Underworld sapling	-	-	-	-	-
 124	Rogue Program	tronguy	glowing frisbee	-	-	-	-	-
@@ -141,7 +141,7 @@
 141	Blavious Kloop	kloop	The Kloop in the Coop	-	-	-	-	-
 142	Peppermint Rhino	pep_rhino	peppermint rhino baby	-	-	-	-	-
 143	Tickle-Me Emilio	emiliofam	Tickle-Me Emilio	-	-	-	-	-
-144	Reconstituted Crow	blackbird2	reconstituted crow	-	-	-	-	-
+144	Reconstituted Crow	blackbird2	reconstituted crow	s	-	-	-	-
 145	Happy Medium	medium_0	Small Medium	-	-	-	-	-
 146	Artistic Goth Kid	crayongoth	Moping Artistic Goth Kid	-	-	-	-	-
 147	Flaming Face	flameface	hot egg	-	-	-	-	-
@@ -151,24 +151,24 @@
 151	Angry Jung Man	jungman	dreaming Jung man	-	-	-	-	-
 152	Unconscious Collective	uc	avatar of the Unconscious Collective	-	-	-	-	-
 153	Nanorhino	nanorhino	deactivated nanobots	-	-	-	-	-
-154	Oily Woim	woim	woim	-	-	-	-	-
+154	Oily Woim	woim	woim	s	-	-	-	-
 155	Homemade Robot	homemadebot	homemade robot	-	-	-	-	-
 156	MiniMechaElf	mechaelf	Deactivated MiniMechaElf	-	-	-	-	-
-157	Gelatinous Cubeling	gcube	dried gelatinous cube	-	-	-	-	-
-158	Adorable Space Buddy	starspawn	Star Spawn	-	-	-	-	-
-159	Nosy Nose	nosynose	wriggling severed nose	-	-	-	-	-
+157	Gelatinous Cubeling	gcube	dried gelatinous cube	s	-	-	-	-
+158	Adorable Space Buddy	starspawn	Star Spawn	s	-	-	-	-
+159	Nosy Nose	nosynose	wriggling severed nose	s	-	-	-	-
 160	Mini-Adventurer	miniadv0	adventurer clone egg	-	-	-	-	-
-161	Mechanical Songbird	mechbird	unwound mechanical songbird	-	-	-	-	-
+161	Mechanical Songbird	mechbird	unwound mechanical songbird	s	-	-	-	-
 162	Steam-Powered Cheerleader	cheerleader	KoLHS Pep Squad Box	-	-	-	-	-
 163	Reanimated Reanimator	reanimator	deanimated reanimator's coffin	-	-	-	-	-
 164	Warbear Drone	wbdronefam	warbear drone assembler	-	-	-	-	-
 165	Grimstone Golem	grimgolem	hibernating Grimstone Golem	-	-	-	-	-
 166	Grim Brother	grimbrother	praying Grim Brother	-	-	-	-	-
-167	Miniature Sword & Martini Guy	smguy	Anniversary Miniature Sword & Martini Guy	-	-	-	-	-
-168	Putty Buddy	puttybuddy	deactivated putty buddy	-	-	-	-	-
+167	Miniature Sword & Martini Guy	smguy	Anniversary Miniature Sword & Martini Guy	s	-	-	-	-
+168	Putty Buddy	puttybuddy	deactivated putty buddy	s	-	-	-	-
 169	Twitching Space Critter	spacebeastlet	twitching space egg	-	-	-	-	-
 170	Galloping Grill	galgrill	still grill	-	-	-	-	-
-171	Helix Fossil	foss_amm	strange helix fossil	-	-	-	-	-
+171	Helix Fossil	foss_amm	strange helix fossil	s	-	-	-	-
 172	Xiblaxian Holo-Companion	holobuddy	Xiblaxian holo-buddy simcode	-	-	-	-	-
 173	Baby Z-Rex	babyzrex	zombie dinosaur egg	-	-	-	-	-
 174	Fist Turkey	fistturkey	fist turkey outline	-	-	-	-	-

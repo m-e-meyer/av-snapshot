@@ -869,20 +869,17 @@ def score_familiars(state):
     state['score_fams'] = have
     return (have, lack, tour, hundred)
 
-def o_familiars(state): # pylint: disable=too-many-branches
-    """TODO"""
-    have, lack, tour, hundred = score_familiars(state)
+def o_familiar_table(state, stdness):
     familiars = state['familiars']
     familiar_bytes = state['familiar-bytes']
-    o(f"<p class='subheader'>You have {have} familiars (missing {lack}), "
-      f"have done {tour} tourguide runs and {hundred} 100% runs.</p>")
     o("<table cellspacing='0'><tr>")
     ct = 1
     for i in range(1, len(state['familiars'])+1):
         f = familiars[i]
         fnum = int(f[0])
-        if (201 <= fnum <=245) or (f[3] == '-'):
-            # Skip if Pokefam or no hatchling (April Foolmiliar)
+        if (201 <= fnum <=245) or (f[3] == '-') or ((f[4] == 's') != stdness):
+            # Skip if Pokefam, no hatchling (April Foolmiliar), or is not
+            # the Standardness we're looking for
             continue
         style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
         print_familiar_cell(style, f[2], f[1])
@@ -892,14 +889,25 @@ def o_familiars(state): # pylint: disable=too-many-branches
     while (ct % 10) != 1:
         o("<td></td>")
         ct = ct + 1
+    o("</tr></table>")
     # Next, legend
-    o("</tr></table><b>Legend</b><br/><table cellspacing='0'><tr>"
+    o("<b>Legend</b><br/><table cellspacing='0'><tr>"
         +'<td class="fam_run_100">100% Run Done</td>'
         +'<td class="fam_run_90">90% Run Done</td>'
         +'<td class="fam_have">Have Familiar</td>'
         +'<td class="fam_have_hatch">Have Familiar Hatchling</td>'
         +"<td class='fam_missing'>Don't have Familiar</td>")
     o("</tr></table>\n")
+    
+def o_familiars(state): # pylint: disable=too-many-branches
+    """TODO"""
+    have, lack, tour, hundred = score_familiars(state)
+    o(f"<p class='subheader'>You have {have} familiars (missing {lack}), "
+      f"have done {tour} tourguide runs and {hundred} 100% runs.</p>")
+    o("<h3>Standard Forever</h3>")
+    o_familiar_table(state, True)
+    o("<h3>Nonstandard, Now or Someday</h3>")
+    o_familiar_table(state, False)
 
 def o_pocket(state):
     familiars = state['familiars']
