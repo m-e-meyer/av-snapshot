@@ -41,10 +41,10 @@
 41	Cymbal-Playing Monkey	familiar42	unwound Cymbal-Playing Monkey	-	-	-	-	-
 42	Temporal Riftlet	familiar43	miniscule temporal rip	-	-	-	-	-
 43	Sweet Nutcracker	familiar44	Sweet Nutcracker	-	-	-	-	-
-44	Pet Rock	familiar45	pet rock	s	-	-	-	-
+44	Pet Rock	familiar45	pet rock	-	-	-	-	-
 45	Snowy Owl	familiar46	sleeping snowy owl	-	-	-	-	-
-46	Teddy Bear	teddybear	teddy bear	s	-	-	-	-
-47	Ninja Pirate Zombie Robot	npzr	Ninja Pirate Zombie Robot	s	-	-	-	-
+46	Teddy Bear	teddybear	teddy bear	-	-	-	-	-
+47	Ninja Pirate Zombie Robot	npzr	Ninja Pirate Zombie Robot	-	-	-	-	-
 48	Sleazy Gravy Fairy	slgfairy	pregnant oily golden mushroom	s	-	-	-	-
 49	Wild Hare	hare	march hat	-	-	-	-	-
 50	Wind-up Chattering Teeth	chatteeth	Wind-up Chattering Teeth	-	-	-	-	-
@@ -58,8 +58,8 @@
 58	Reassembled Blackbird	blackbird1	Reassembled Blackbird	s	-	-	-	-
 59	Origami Towel Crane	crane1	makeshift crane	s	-	-	-	-
 60	Ninja Snowflake	snowflake	frigid mote	s	-	-	-	-
-61	Evil Teddy Bear	teddybear	Evil Teddy Bear	s	-	-	-	-
-62	Toothsome Rock	pettoothrock	Toothsome Rock	s	-	-	-	-
+61	Evil Teddy Bear	teddybear	Evil Teddy Bear	-	-	-	-	-
+62	Toothsome Rock	pettoothrock	Toothsome Rock	-	-	-	-	-
 63	Ancient Yuletide Troll	crimbotroll	yuletide troll chrysalis	-	-	-	-	-
 64	Dandy Lion	dandylion	dandy lion cub	-	-	-	-	-
 65	O.A.F.	oaf	Deactivated O. A. F.	-	-	-	-	-
@@ -103,7 +103,7 @@
 103	Baby Sandworm	babyworm	infant sandworm	-	-	-	-	-
 104	Slimeling	slimeling	squirming Slime larva	s	-	-	-	-
 105	He-Boulder	heboulder	floaty stone sphere	-	-	-	-	-
-106	Rock Lobster	rocklobster	rock lobster	s	-	-	-	-
+106	Rock Lobster	rocklobster	rock lobster	-	-	-	-	-
 107	Urchin Urchin	urchin	urchin roe	s	-	-	-	-
 108	Grouper Groupie	grouper2	grouperfangirl	s	-	-	-	-
 109	Squamous Gibberer	gibberer	squamous polyp	-	-	-	-	-
@@ -128,7 +128,7 @@
 128	Knob Goblin Organ Grinder	organgoblin	organ grinder	-	-	-	-	-
 129	Piano Cat	pianocat	sleeping piano cat	-	-	-	-	-
 130	Dramatic Hedgehog	dramahog	rehearsing dramatic hedgehog	-	-	-	-	-
-131	Smiling Rat	smilerat	smiling rat	-	-	-	-	-
+131	Smiling Rat	smilerat	smiling rat	s	-	-	-	-
 132	Robot Reindeer	roboreindeer	hibernating robot reindeer	-	-	-	-	-
 133	Holiday Log	holidaylog	holiday log	-	-	-	-	-
 134	Obtuse Angel	obtuseangel	a cute angel	-	-	-	-	-
@@ -174,7 +174,7 @@
 174	Fist Turkey	fistturkey	fist turkey outline	-	-	-	-	-
 175	Crimbo Shrub	crimboshrub	Crimbo sapling	-	-	-	-	-
 176	Mini-Crimbot	minicrimbot	Mini-Crimbot crate	-	-	-	-	-
-177	Topiary Skunk	topiskunk	topiary skunk	-	-	-	-	-
+177	Topiary Skunk	topiskunk	topiary skunk	s	-	-	-	-
 178	Golden Monkey	goldmonkey	golden monkey statuette	-	-	-	-	-
 179	Adventurous Spelunker	spelunker	Professor of Spelunkology	-	-	-	-	-
 180	Sludgepuppy	sludgepuppy	inert sludgepuppy	-	-	-	-	-
@@ -185,7 +185,7 @@
 185	Machine Elf	machelf	machine elf capsule	-	-	-	-	-
 186	Choctopus	choctopus	Gratitude chocolate (octopus-filled)	-	-	-	-	-
 187	Rockin' Robin	rockinrobin	baskin robin	-	-	-	-	-
-188	Restless Cow Skull	cowskull	shuddering cow skull	-	-	-	-	-
+188	Restless Cow Skull	cowskull	shuddering cow skull	s	-	-	-	-
 189	Intergnat	intergnat	disconnected intergnat	-	-	-	-	-
 190	Software Bug	softwarebug	software bug	-	-	-	-	-
 191	Bark Scorpion	barkscorp	baby bark scorpion	-	-	-	-	-
