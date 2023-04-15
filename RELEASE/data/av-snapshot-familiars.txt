@@ -283,4 +283,4 @@
 283	Cookbookbat	bbat_fam	mummified entombed cookbookbat	-	-	-	-	-
 284	Mini-Trainbot	tbot_on	deactivated mini-Trainbot	-	-	-	-	-	-
 285	Hobo in Sheep's Clothing	hobosheep	unoccupied sheep suit	-	-	-	-	-	-
-286	Pixel Rock	pixelrock	pixel rock	-	-	-	-	-	-
+286	Pixel Rock	pixelrock	pixel rock	s	-	-	-	-	-
