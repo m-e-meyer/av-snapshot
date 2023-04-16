@@ -869,15 +869,16 @@ def score_familiars(state):
     state['score_fams'] = have
     return (have, lack, tour, hundred)
 
-def o_familiar_table(state, stdness):
+def o_familiar_table(state, famtype, msg):
     familiars = state['familiars']
     familiar_bytes = state['familiar-bytes']
+    o(f"{msg}<br/>")
     o("<table cellspacing='0'><tr>")
     ct = 1
     for i in range(1, len(state['familiars'])+1):
         f = familiars[i]
         fnum = int(f[0])
-        if (201 <= fnum <=245) or (f[3] == '-') or ((f[4] == 's') != stdness):
+        if (201 <= fnum <=245) or (f[3] == '-') or (f[4] != famtype):
             # Skip if Pokefam, no hatchling (April Foolmiliar), or is not
             # the Standardness we're looking for
             continue
@@ -904,11 +905,16 @@ def o_familiars(state): # pylint: disable=too-many-branches
     have, lack, tour, hundred = score_familiars(state)
     o(f"<p class='subheader'>You have {have} familiars (missing {lack}), "
       f"have done {tour} tourguide runs and {hundred} 100% runs.</p>")
-    o("<h3>Standard Forever</h3>")
-    o_familiar_table(state, True)
-    o("<h3>Nonstandard, Now or Someday</h3>")
-    o_familiar_table(state, False)
 
+def o_purchasedfams(state):
+    o_familiar_table(state, "p", "The hatchlings for these familiars were directly purchasable from Mr. Store.  The latest few may still be in Standard.")
+    
+def o_standardfams(state):
+    o_familiar_table(state, "s", "These familiars are expected to be forever Standard.  Except the Restless Cow Skull, I didn't expect that.  That may change later.")
+
+def o_derivedfams(state):
+    o_familiar_table(state, "d", "The hatchlings for these familiars are assembled from parts, derived from an IotM, obtainable during a Crimbo or other special event, or acquired some other way.  The latest few may still be in Standard.")
+    
 def o_pocket(state):
     familiars = state['familiars']
     familiar_bytes = state['familiar-bytes']
@@ -1563,6 +1569,9 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
             Section(2, "Other", "a1d", o_other)]),
         Section(1, "Trophies", "a2", o_trophies),
         Section(1, "Familiars", "a3", o_familiars, [
+            Section(2, "Purchased Familiars", "a3d", o_purchasedfams),
+            Section(2, "Standard Familiars", "a3c", o_standardfams),
+            Section(2, "Derived Familiars", "a3c", o_derivedfams),
             Section(2, "Pocket Familiars", "a3a", o_pocket),
             Section(2, "April Foolmiliars", "a3b", o_april)]),
         Section(1, "Mr. Items", "a4", o_mritems, [
