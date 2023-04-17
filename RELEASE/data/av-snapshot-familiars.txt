@@ -168,7 +168,7 @@
 168	Putty Buddy	puttybuddy	deactivated putty buddy	s	-	-	-	-
 169	Twitching Space Critter	spacebeastlet	twitching space egg	d	-	-	-	-
 170	Galloping Grill	galgrill	still grill	p	-	-	-	-
-171	Helix Fossil	foss_amm	strange helix fossil	s	-	-	-	-
+171	Helix Fossil	foss_amm	strange helix fossil	d	-	-	-	-
 172	Xiblaxian Holo-Companion	holobuddy	Xiblaxian holo-buddy simcode	d	-	-	-	-
 173	Baby Z-Rex	babyzrex	zombie dinosaur egg	d	-	-	-	-
 174	Fist Turkey	fistturkey	fist turkey outline	p	-	-	-	-
@@ -198,51 +198,51 @@
 198	Cute Meteor	cutemeteor	cute meteoroid	d	-	-	-	-
 199	XO Skeleton	xoskeleton	xo-skeleton-in-a-box	p	-	-	-	-
 200	Garbage Fire	dumpsterfire	kerosene-soaked skip	p	-	-	-	-
-201	Globmule	pokefam1	Globmule	-	-	-	-	-
-202	Bluzzard	pokefam2	Bluzzard	-	-	-	-	-
-203	Faux	pokefam3	Faux	-	-	-	-	-
-204	Sledgehamster	pokefam4	Sledgehamster	-	-	-	-	-
-205	Pimpsqueak	pokefam5	Pimpsqueak	-	-	-	-	-
-206	Pillowbug	pokefam6	Pillowbug	-	-	-	-	-
-207	Dressage	pokefam7	Dressage	-	-	-	-	-
-208	Sequestrian	pokefam8	Sequestrian	-	-	-	-	-
-209	Carpricorn	pokefam9	Carpricorn	-	-	-	-	-
-210	Turpin	pokefam10	Turpin	-	-	-	-	-
-211	Morphan	pokefam11	Morphan	-	-	-	-	-
-212	Cycloney	pokefam12	Cycloney	-	-	-	-	-
-213	Peaclock	pokefam13	Peaclock	-	-	-	-	-
-214	Turtive	pokefam14	Turtive	-	-	-	-	-
-215	Lepardner	pokefam15	Lepardner	-	-	-	-	-
-216	Aiolion	pokefam16	Aiolion	-	-	-	-	-
-217	Waifuton	pokefam17	Waifuton	-	-	-	-	-
-218	Gorillape	pokefam18	Gorillape	-	-	-	-	-
-219	Wendtigo	pokefam19	Wendtigo	-	-	-	-	-
-220	Snoutlet	pokefam20	Snoutlet	-	-	-	-	-
-221	Ruffalo	pokefam21	Ruffalo	-	-	-	-	-
-222	Vaporpoise	pokefam22	Vaporpoise	-	-	-	-	-
-223	Ghosprey	pokefam23	Ghosprey	-	-	-	-	-
-224	Straypler	pokefam24	Straypler	-	-	-	-	-
-225	Flan	pokefam25	Flan	-	-	-	-	-
-226	Mustardigrade	pokefam26	Mustardigrade	-	-	-	-	-
-227	Ched	pokefam27	Ched	-	-	-	-	-
-228	Gazelleton	pokefam28	Gazelleton	-	-	-	-	-
-229	Mechamelion	pokefam29	Mechamelion	-	-	-	-	-
-230	Bicycle	pokefam30	Bicycle	-	-	-	-	-
-231	Vamprey	pokefam31	Vamprey	-	-	-	-	-
-232	Wullabye	pokefam32	Wullabye	-	-	-	-	-
-233	Nursine	pokefam33	Nursine	-	-	-	-	-
-234	Cantelope	pokefam34	Cantelope	-	-	-	-	-
-235	Ungulant	pokefam35	Ungulant	-	-	-	-	-
-236	Caramel	pokefam36	Caramel	-	-	-	-	-
-237	Oppossum	pokefam37	Oppossum	-	-	-	-	-
-238	Amanitee	pokefam38	Amanitee	-	-	-	-	-
-239	Smashmoth	pokefam39	Smashmoth	-	-	-	-	-
-240	Vulgure	pokefam40	Vulgure	-	-	-	-	-
-241	Squib	pokefam41	Squib	-	-	-	-	-
-242	Trafikoan	pokefam42	Trafikoan	-	-	-	-	-
-243	Slotter	pokefam43	Slotter	-	-	-	-	-
-244	Shudder	pokefam44	Shudder	-	-	-	-	-
-245	Glamare	pokefam45	Glamare	-	-	-	-	-
+201	Globmule	pokefam1	Globmule	k	-	-	-	-
+202	Bluzzard	pokefam2	Bluzzard	k	-	-	-	-
+203	Faux	pokefam3	Faux	k	-	-	-	-
+204	Sledgehamster	pokefam4	Sledgehamster	k	-	-	-	-
+205	Pimpsqueak	pokefam5	Pimpsqueak	k	-	-	-	-
+206	Pillowbug	pokefam6	Pillowbug	k	-	-	-	-
+207	Dressage	pokefam7	Dressage	k	-	-	-	-
+208	Sequestrian	pokefam8	Sequestrian	k	-	-	-	-
+209	Carpricorn	pokefam9	Carpricorn	k	-	-	-	-
+210	Turpin	pokefam10	Turpin	k	-	-	-	-
+211	Morphan	pokefam11	Morphan	k	-	-	-	-
+212	Cycloney	pokefam12	Cycloney	k	-	-	-	-
+213	Peaclock	pokefam13	Peaclock	k	-	-	-	-
+214	Turtive	pokefam14	Turtive	k	-	-	-	-
+215	Lepardner	pokefam15	Lepardner	k	-	-	-	-
+216	Aiolion	pokefam16	Aiolion	k	-	-	-	-
+217	Waifuton	pokefam17	Waifuton	k	-	-	-	-
+218	Gorillape	pokefam18	Gorillape	k	-	-	-	-
+219	Wendtigo	pokefam19	Wendtigo	k	-	-	-	-
+220	Snoutlet	pokefam20	Snoutlet	k	-	-	-	-
+221	Ruffalo	pokefam21	Ruffalo	k	-	-	-	-
+222	Vaporpoise	pokefam22	Vaporpoise	k	-	-	-	-
+223	Ghosprey	pokefam23	Ghosprey	k	-	-	-	-
+224	Straypler	pokefam24	Straypler	k	-	-	-	-
+225	Flan	pokefam25	Flan	k	-	-	-	-
+226	Mustardigrade	pokefam26	Mustardigrade	k	-	-	-	-
+227	Ched	pokefam27	Ched	k	-	-	-	-
+228	Gazelleton	pokefam28	Gazelleton	k	-	-	-	-
+229	Mechamelion	pokefam29	Mechamelion	k	-	-	-	-
+230	Bicycle	pokefam30	Bicycle	k	-	-	-	-
+231	Vamprey	pokefam31	Vamprey	k	-	-	-	-
+232	Wullabye	pokefam32	Wullabye	k	-	-	-	-
+233	Nursine	pokefam33	Nursine	k	-	-	-	-
+234	Cantelope	pokefam34	Cantelope	k	-	-	-	-
+235	Ungulant	pokefam35	Ungulant	k	-	-	-	-
+236	Caramel	pokefam36	Caramel	k	-	-	-	-
+237	Oppossum	pokefam37	Oppossum	k	-	-	-	-
+238	Amanitee	pokefam38	Amanitee	k	-	-	-	-
+239	Smashmoth	pokefam39	Smashmoth	k	-	-	-	-
+240	Vulgure	pokefam40	Vulgure	k	-	-	-	-
+241	Squib	pokefam41	Squib	k	-	-	-	-
+242	Trafikoan	pokefam42	Trafikoan	k	-	-	-	-
+243	Slotter	pokefam43	Slotter	k	-	-	-	-
+244	Shudder	pokefam44	Shudder	k	-	-	-	-
+245	Glamare	pokefam45	Glamare	k	-	-	-	-
 246	Unspeakachu	pokefam46	Unspeakachu	d	-	-	-	-
 247	Stooper	pokefam47	Stooper	d	-	-	-	-
 248	Disgeist	pokefam48	Disgeist	d	-	-	-	-
@@ -274,8 +274,8 @@
 274	Oyster Bunny	hare2	-	a	-	-	-	-
 275	Plastic Grocery Bag	grocbag	-	a	-	-	-	-
 276	Snowhitman	snowhitman	-	a	-	-	-	-
-277	Vampire Bat	jubjubbird	-	a	-	-	-	-
-278	Worm Doctor	larva	-	-	a	-	-	-
+277	Vampire Bird	jubjubbird	-	a	-	-	-	-
+278	Worm Doctor	larva	-	a	-	-	-	-
 279	Vampire Vintner	vampvint	bottled Vampire Vintner	p	-	-	-	-
 280	Arachnelf	arachnelf	festive egg sac	d	-	-	-	-
 281	Synthetic Rock	synthrock	synthetic rock	d	-	-	-	-

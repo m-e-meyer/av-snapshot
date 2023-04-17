@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '2023.04.07'    # released then
+VERSION = '2023.04.16'    # released then
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -878,19 +878,25 @@ def o_familiar_table(state, famtype, msg):
     for i in range(1, len(state['familiars'])+1):
         f = familiars[i]
         fnum = int(f[0])
-        if (201 <= fnum <=245) or (f[3] == '-') or (f[4] != famtype):
-            # Skip if Pokefam, no hatchling (April Foolmiliar), or is not
-            # the Standardness we're looking for
+        if (f[4] != famtype):
+            # Skip if not the famtype we're looking for
             continue
         style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
         print_familiar_cell(style, f[2], f[1])
         if ct % 10 == 0:
             o("</tr><tr>")
         ct = ct + 1
-    while (ct % 10) != 1:
-        o("<td></td>")
-        ct = ct + 1
+    if (ct > 10):
+        while (ct % 10) != 1:
+            o("<td></td>")
+            ct = ct + 1
     o("</tr></table>")
+    
+def o_familiars(state): # pylint: disable=too-many-branches
+    """TODO"""
+    have, lack, tour, hundred = score_familiars(state)
+    o(f"<p class='subheader'>You have {have} familiars (missing {lack}), "
+      f"have done {tour} tourguide runs and {hundred} 100% runs.</p>")
     # Next, legend
     o("<b>Legend</b><br/><table cellspacing='0'><tr>"
         +'<td class="fam_run_100">100% Run Done</td>'
@@ -899,12 +905,6 @@ def o_familiar_table(state, famtype, msg):
         +'<td class="fam_have_hatch">Have Familiar Hatchling</td>'
         +"<td class='fam_missing'>Don't have Familiar</td>")
     o("</tr></table>\n")
-    
-def o_familiars(state): # pylint: disable=too-many-branches
-    """TODO"""
-    have, lack, tour, hundred = score_familiars(state)
-    o(f"<p class='subheader'>You have {have} familiars (missing {lack}), "
-      f"have done {tour} tourguide runs and {hundred} 100% runs.</p>")
 
 def o_purchasedfams(state):
     o_familiar_table(state, "p", "The hatchlings for these familiars were directly purchasable from Mr. Store.  The latest few may still be in Standard.")
@@ -916,32 +916,10 @@ def o_derivedfams(state):
     o_familiar_table(state, "d", "The hatchlings for these familiars are assembled from parts, derived from an IotM, obtainable during a Crimbo or other special event, or acquired some other way.  The latest few may still be in Standard.")
     
 def o_pocket(state):
-    familiars = state['familiars']
-    familiar_bytes = state['familiar-bytes']
-    o("<table cellspacing='0'><tr>\n")
-    ct = 1
-    for i in range(201, 246):
-        f = familiars[i]
-        style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
-        print_familiar_cell(style, f[2], f[1])
-        if ct % 10 == 0:
-            o("</tr><tr>")
-        ct = ct + 1
-    while (ct % 10) != 1:
-        o("<td></td>")
-        ct = ct + 1
-    o("</tr></table>\n")
+    o_familiar_table(state, "k", "These familiars can be used only in the Pocket Familiars challenge path.") 
 
 def o_april(state):
-    familiars = state['familiars']
-    familiar_bytes = state['familiar-bytes']
-    o("<table cellspacing='0'><tr>\n")
-    for i in range(270, 279):
-        f = familiars[i]
-        style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
-        print_familiar_cell(style, f[2], f[1])
-    o("</tr></table>\n")
-
+    o_familiar_table(state, "a", "These familiars only appear in the Quantum Terrarium challenge path or as foes in the Pocket Familiars path (before that, only on April Fool's Day, 2010), and can't be owned.  I think.")
 
 ###########################################################################
 
