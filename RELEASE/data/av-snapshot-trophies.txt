@@ -14,7 +14,7 @@
 14	dirt_and_dirty	Bouquet of Hippies	420 Herb Brownies	-	-	-	-	-
 15	angst_with_extra_cheese	Weeping Pizza	5 White Choc and Tomato Pizzas	-	-	-	-	-
 16	he_aint_heavy_hes_my_familiar	Black Hole Terrarium	Familiars total 500+ lbs	-	-	-	-	-
-17	shakin_the_bush_here_boss	Failure to Communicate	50 Lucky Suprise Eggs	-	-	-	-	-
+17	shakin_the_bush_here_boss	Failure To Communicate	50 Lucky Suprise Eggs	-	-	-	-	-
 18	nice_trophy_pablo_honey	Tiny Plastic Trophy	All 32 TPS1 in DC	-	-	-	-	-
 19	in_a_little_toy_shop	99 Red Balloons	Use 99 Red Balloons	-	-	-	-	-
 20	go_go_gadget_trophy	Gadget Inspector	Find 10 Clockwork Keys	-	-	-	-	-
