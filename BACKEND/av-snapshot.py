@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '2023.04.16'    # released then
+VERSION = '2023.04.22'    # released then
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -516,11 +516,15 @@ def print_skill_multirow(state, header, skill_list_list, levels=''):
             print_skill_cell(skills, skill_bytes, s, gen_suffix(s, levels))
         o('</tr>\n')
 
-def print_skill_table(state, levels):
-    """TODO"""
-    o('<table cellspacing="0">')
-    o('<tr><th>Level</th><th>Seal Clubber</th><th>Turtle Tamer</th><th>Pastamancer</th>'
+def o_class_row(col1):
+    o(f"<tr><th>{col1}</th><th>Seal Clubber</th><th>Turtle Tamer</th><th>Pastamancer</th>"
           '<th>Sauceror</th><th>Disco Bandit</th><th>Accordion Thief</th></tr>')
+    
+def o_guildskills(state):
+    levels = state['levels']
+    o("Skills innate to your class or buyable from your class's Guild.")
+    o('<table cellspacing="0">')
+    o_class_row('Level')
     o('<tr><th colspan="7" class="miniheader">Class (Original)</th></tr>')
     print_skill_row(state, '0 buff', (1, 2, 3, 4, 5, 6))
     print_skill_row(state, '0 combat', (7, 8, 9, 10, 11, 12))
@@ -555,7 +559,13 @@ def print_skill_table(state, levels):
     print_skill_row(state, '13', (229, 275, 290, 305, 242, 259))
     print_skill_row(state, '14', (230, 276, 291, 306, 243, 260))
     print_skill_row(state, '15', (163, 277, 292, 307, 244, 261))
-    o('<tr><th colspan="7" class="miniheader">Other Standard Class Skills</th><tr>')
+    o('</table>\n')
+    
+def o_stdskills(state):
+    levels = state['levels']
+    o("Other skills that are permanently Standard.")
+    o('<table cellspacing="0">')
+    o_class_row('')
     print_skill_row(state, 'Spookyraven', (103, 104, 105, 106, 107, 108))
     print_skill_row(state, 'The Sea', (109, 110, 111, 112, 113, 114))
     o('<tr><th colspan="7" class="miniheader">Dreadsylvania</th><tr>')
@@ -577,7 +587,14 @@ def print_skill_table(state, levels):
     print_slime_row(state, levels)
     print_skill_row(state, 'Waffle House', (356,357,0,0,0,0))
     print_skill_row(state, "Misc", (309, 142, 143, 200, 145, 146))
-    o('<tr><th colspan="7" class="miniheader">Other Nonstandard Class Skills</th><tr>')
+    o('</table>\n')
+    
+def o_nonstdskills(state):
+    o("Skills that are no longer Standard or will someday leave Standard.")
+    levels = state['levels']
+    o('<table cellspacing="0">')
+    o('<tr><th colspan="7" class="miniheader">Nonstandard Class Skills</th><tr>')
+    o_class_row('')
     print_skill_row(state, 'Crimbo 2009', (148, 149, 150, 151, 152, 153))
     print_skill_row(state, 'Trader 2010', (169, 167, 168, 164, 179, 166))
     print_skill_row(state, 'Crimbo 2017<br/>Crimbotatoyotathon',
@@ -635,13 +652,13 @@ def o_skills(state):
     for i in range(len(state['skills'])):
         x = getbits(skill_bytes, i+1, 2)
         tally[x] = tally[x] + 1
-    o(f"<p class='subheader'>You have {tally[2]} skills Hardcore permed,"
-      f" {tally[1]} skills Softcore permed, and {tally[0]} missing.</p>\n"
+    o(f"<p class='subheader'>You have <b>{tally[2]}</b> skills Hardcore permed,"
+      f" <b>{tally[1]}</b> skills Softcore permed, and <b>{tally[0]}</b> missing.</p>\n"
+      f"You have <b>{int(levels[12:16], 36)}</b> unspent Karma.</p>"
       "<p>Explanation of symbols: <i>Italicized</i> skills marked with a"
       " <i>&#x2119</i> are Passive;"
       " &copy; marks skills really useful only to their classes;"
       " &marker; marks skills that can be relearned from a used skillbook or such</p>")
-    print_skill_table(state, levels)
 
 
 ###########################################################################
@@ -700,8 +717,9 @@ def score_tattoos(state):
 def o_tattoos(state):
     """TODO"""
     tally = score_tattoos(state)
-    o(f"<p class='subheader'>You have {tally[1]} tattoos and {tally[2]} outfits for which"
-      f" you don't have the corresponding tattoo, and are missing {tally[0]} tattoos.</p>\n")
+    o(f"<p class='subheader'>You have <b>{tally[1]}</b> tattoos and <b>{tally[2]}</b> outfits"
+      " for which you don't"
+      f" have the corresponding tattoo, and are missing <b>{tally[0]}</b> tattoos.</p>\n")
 
 def o_class(state):
     print_tattoo_table(state,
@@ -795,8 +813,8 @@ def o_trophies(state):
     trophy_bytes = state['trophy-bytes']
     tally = score_trophies(state)
     o("<table cellspacing='0'><tr>")
-    o(f"<p class='subheader'>You have {tally[1]} trophies and are missing {tally[0]}"
-      " trophies.</p>\n")
+    o(f"<p class='subheader'>You have <b>{tally[1]}</b> trophies"
+      f" and are missing <b>{tally[0]}</b> trophies.</p>\n")
     ct = 1
     for i in range(1, len(trophies)+1):
         t = trophies[i]
@@ -895,8 +913,8 @@ def o_familiar_table(state, famtype, msg):
 def o_familiars(state): # pylint: disable=too-many-branches
     """TODO"""
     have, lack, tour, hundred = score_familiars(state)
-    o(f"<p class='subheader'>You have {have} familiars (missing {lack}), "
-      f"have done {tour} tourguide runs and {hundred} 100% runs.</p>")
+    o(f"<p class='subheader'>You have <b>{have}</b> familiars (missing <b>{lack}</b>), "
+      f"have done <b>{tour}</b> tourguide runs and <b>{hundred}</b> 100% runs.</p>")
     # Next, legend
     o("<b>Legend</b><br/><table cellspacing='0'><tr>"
         +'<td class="fam_run_100">100% Run Done</td>'
@@ -1211,7 +1229,7 @@ def o_cool_ascension(state):
                 havent = havent + 1
             else:
                 have = have + 1
-    o(f"<p>You have {have} and are missing {havent}.</p>")
+    o(f"<p>You have <b>{have}</b> and are missing <b>{havent}</b>.</p>")
     print_coolitem_table(state, None, rewards)
 
 def o_cool_swagger(state):
@@ -1391,7 +1409,8 @@ def print_summary(data, bytess):
             have = have + 1
         else:
             havent = havent + 1
-    o(f"<p>You have found {have} of these discoveries and are missing {havent}.<br/>"
+    o(f"<p>You have found <b>{have}</b> of these discoveries"
+      f" and are missing <b>{havent}</b>.<br/>"
       "Are some discoveries not showing up? Turn Inventory Images ON and one-click"
       " crafting OFF and try again - it has a higher success rate.</p>")
 
@@ -1464,8 +1483,6 @@ def o_various(state):
         o("<p>You don't have a Telescope in your Campground.</p>")
     else:
         o(f"<p>You have a Telescope in your Campground, and it's level <b>{levels[25:26]}</b>!</p>")
-    o("<h3>Karma</h3>")
-    o(f"<p>You have <b>{int(levels[12:16], 36)}</b> unspent Karma.</p>")
     o("<h3>Monster Manuel</h3>")
     if levels[16:25] == "000000000":
         o("<p>You probably don't have a Monster Manuel.</p>")
@@ -1539,7 +1556,10 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
     #
     load_data(state)
     section_tree = Section(0, "", "", o_pass, [
-        Section(1, "Skills", "a0", o_skills),
+        Section(1, "Skills", "a0", o_skills, [
+            Section(2, "Guild Skills", "a0a", o_guildskills),
+            Section(2, "Other Standard Skills", "a0b", o_stdskills),
+            Section(2, "Nonstandard Skills", "a0c", o_nonstdskills)]),
         Section(1, "Tattoos", "a1", o_tattoos, [
             Section(2, "Class", "a1a", o_class),
             Section(2, "Ascension", "a1b", o_ascension),
