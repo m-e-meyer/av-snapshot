@@ -24,6 +24,7 @@ Just enter `av-snapshot` into the gCLI.  It will gather and upload your informat
 
 The parameters for viewing snapshots are:
 * `u=`: The name of the user for which the snapshot was taken.  This is the only parameter that is required.  If the name has spaces, and your browser doesn't handle them, you can substitute `+` or `%20` for each space.
+* `colorblind=`: If `0` (the default if not given), colors boxes with greens and reds.  Otherwise, colors boxes with blues and yellows.
 * `oob=`: Stands for "on or before".  Takes a string of the form `yyyy-mm-dd`, where `yyyy` is the 4-digit year, `mm` is a month from `01` to `12`, and `dd` is a day from `01` to `31`.  If this parameter is not supplied or is empty, av-snapshot shows the most recent snapshot.  Otherwise, av-snapshot shows the most recent snapshot taken on or before the given date.  Partial dates can also be supplied; `2023-01` will give the last snapshot before the end of January 2023.
 * `sections=`: Comma-delimited list of section names.  If not supplied or if empty, the entire snapshot is shown.  Otherwise, only the section names given will be shown.  If a named section has subsections, then all its subsections will be shown.  The entire section name does not need to be supplied; if the first few letters are given, then all sections with names beginning with those letters are shown.  For example, `f` will show the whole Familiars section, as well as Fishin' Gear and FantasyRealm under Cool Items, and Food under Consumption.
 
