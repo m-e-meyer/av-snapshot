@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '2023.04.22'    # released then
+VERSION = '2023.04.28'    # released then
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -1426,7 +1426,10 @@ def print_sorted_list(data, bytess):
         name = datum[1]
         if name in ("", "-"):    # some data entries are empty, don't know why
             continue
+        # Remove square brackets
         link = name.replace('[', '').replace(']', '') if (name.find('[') >= 0) else name
+        # HTML-encode percent signs
+        link = link.replace('%', '%25') if link.find('%') >= 0 else link
         x = int(datum[0])
         clas = ' class="hcperm"' if (getbits(bytess, x, 1) > 0) else ''
         if name.find('(') < 0:
