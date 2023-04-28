@@ -532,7 +532,7 @@ string get(ItemImage mritem, int offset)
 	return "None";
 }
 
-string check_mritems(string html) 
+string check_mritems(string bookshelfHtml) 
 {
     bitarray b = new_bitarray(0, 4);
 	print("Checking for Mr. Items...", "olive");
@@ -588,7 +588,7 @@ string check_mritems(string html)
 				//Gardens would ideally by a campground check (just num_items)
 				//but the data in mritems would need to include the harvestable since that is what mafia reports instead of the garden itself.
 				case "t":				//Tome, Libram, Grimore, Garden
-					if(index_of(html, data) > 0) {
+					if(index_of(bookshelfHtml, data) > 0) {
 						amt += 1;
 					}
 					break;
@@ -764,7 +764,7 @@ void main()
 	url = url + check_tattoos();
     url = url + check_trophies();
 	url = url + check_familiars(familiarNamesHtml);
-	url = url + check_mritems(familiarNamesHtml + bookshelfHtml);
+	url = url + check_mritems(bookshelfHtml);
 	url = url + check_coolitems();
 	url = url + check_discoveries();
 	url = url + check_consumption();
