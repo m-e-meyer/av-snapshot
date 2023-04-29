@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '2023.04.28'    # released then
+VERSION = '2023.04.29'    # released then
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -665,6 +665,11 @@ def o_skills(state):
 
 def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
     """TODO"""
+    if isinstance(tat, tuple):
+        colspan = f" colspan='{tat[1]}'"
+        tat = tat[0]
+    else:
+        colspan = ''
     if tat == 0:
         o("<td></td>")
     elif tat == -1:        # Hobo tattoo
@@ -685,7 +690,7 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
             clas = "class='hcperm'"
         elif x == 2:
             clas = "class='perm'"
-        o(f"<td {clas}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
+        o(f"<td {clas}{colspan}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
 
 def print_tattoo_table(state, rows, levels=""):
     """TODO"""
@@ -723,20 +728,17 @@ def o_tattoos(state):
 
 def o_class(state):
     print_tattoo_table(state,
-        ((1, 2, 3, 108),
-         (4, 5, 6, 109),
-         (7, 8, 9, 110),
-         (10, 11, 12, 111),
-         (13, 14, 15, 112),
-         (16, 17, 18, 113),
-         (144, 145, 149, 150),
-         (155, 156, 179, 180),
-         (194, 195, 211, 212),
-         (213, 214, 215, 216),
-         (228, 229, 257, 258),
-         (268, 269, 281, 0),
-         (285, 286, 287, 288),
-         (289, 290, 0, 0)))
+        ((1, 2, 3, (108, 3)),
+         (4, 5, 6, (109, 3)),
+         (7, 8, 9, (110, 3)),
+         (10, 11, 12, (111, 3)),
+         (13, 14, 15, (112, 3)),
+         (16, 17, 18, (113, 3)),
+         (144, 145, 149, 150, 155, 156),
+         (179, 180, 194, 195, 211, 212),
+         (213, 214, 215, 216, 228, 229),
+         (257, 258, 268, 269, 281, 0),
+         (285, 286, 287, 288, 289, 290)))
 
 def o_ascension(state):
     print_tattoo_table(state,
