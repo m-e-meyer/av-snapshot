@@ -702,3 +702,5 @@
 702	white arm towel	waitertowel	-	-	-	-	-
 703	silver table-scraper	tablescraper	-	-	-	-	-
 704	Thwaitgold anti-moth statuette	thwaitantimoth	-	-	-	-	-
+705	[glitch season reward name]	nopic	-	-	-	-	-
+706	Law of Averages	sheet	-	-	-	-	-

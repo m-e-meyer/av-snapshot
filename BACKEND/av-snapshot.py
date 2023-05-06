@@ -22,7 +22,7 @@ import re
 
 NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '2023.04.29'    # released then
+VERSION = '2023.05.07'    # released then
 
 # Set this to the CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -315,7 +315,10 @@ def wikilink(link, text):
     """
     Return a hyperlink to output into the HTML stream.
     NOTE: link must not contain double-quotes, must use "&quot;" instead
+    link can have square brackets, which will be removed
     """
+    # Remove square brackets
+    link = link.replace('[', '').replace(']', '') if (link.find('[') >= 0) else link
     return f'<a href="http://kol.coldfront.net/thekolwiki/index.php/{link}">{text}</a>'
 
 
@@ -416,7 +419,7 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
     else:
         av_version = '(unknown)'
     o(f"<div class='header'><p>Snapshot for <b>{escape(name)}</b> taken {tstamp} using"
-      f" av-snapshot.ash v{av_version} running on KoLmafia revision r{mafia}, rendered by"
+      f" av-snapshot.ash v{av_version} run on KoLmafia revision r{mafia}, rendered by"
       f" av-snapshot version {VERSION}.  If you'd like to use this yourself, check out the"
       f" Kingdom of Loathing forum link"
       f" <a href='http://forums.kingdomofloathing.com/vb/showthread.php?t=250707'>here</a>.</p>")
@@ -1235,8 +1238,8 @@ def o_cool_ascension(state):
     print_coolitem_table(state, None, rewards)
 
 def o_cool_swagger(state):
-    print_coolitem_table(state, None, ((207, 208, 209, 210, 212, 214),
-                                    (211, 213, 215, 335, 450)))
+    print_coolitem_table(state, None, ((207, 208, 209, 210, 211, 212, 214),
+                                    (213, 215, 335, 450, 705, 706)))
 
 def o_cool_thwaitgold(state):
     print_coolitem_table(state, None, ((54, 55, 56, 57, 60, 61),
