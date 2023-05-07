@@ -255,3 +255,4 @@
 255	i	S.I.T. Course Voucher	S.I.T. Course Completion Certificate	sitvoucher	-	-	-	-
 256	i	closed-circuit phone system	closed-circuit pay phone	rufusbox	-	-	-	-
 257	i	cursed monkey glove	cursed monkey's paw	monkeyglove	-	-	-	-
+258	i	shrink-wrapped Cincho de Mayo	Cincho de Mayo	cincho	-	-	-	-
