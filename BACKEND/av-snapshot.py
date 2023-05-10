@@ -666,7 +666,7 @@ def o_skills(state):
 
 ###########################################################################
 
-def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
+def print_tattoo_cell(tattoos, tattoo_bytes, tat, doimages, levels=""):
     """TODO"""
     if isinstance(tat, tuple):
         colspan = f" colspan='{tat[1]}'"
@@ -681,7 +681,7 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
         if lv > 0:
             clas = "class='hcperm'" if (lv >= 19) else "class='perm'"
         img = ""
-        if lv > 0:
+        if doimages and lv > 0:
             img = f"<img src='{IMAGES}/otherimages/sigils/hobotat{lv}.gif'><br/>"
         linktext = f"{img}Hobo Tattoo {lv}/19"
         o(f"<td {clas}>{wikilink('Hobo_Tattoo', linktext)}</td>")
@@ -693,7 +693,8 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, levels=""):
             clas = "class='hcperm'"
         elif x == 2:
             clas = "class='perm'"
-        o(f"<td {clas}{colspan}><img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>{t[1]}</td>")
+        img = f"<img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>" if doimages else ''
+        o(f"<td {clas}{colspan}>{img}{t[1]}</td>")
 
 def print_tattoo_table(state, rows, levels=""):
     """TODO"""
@@ -703,7 +704,7 @@ def print_tattoo_table(state, rows, levels=""):
     for row in rows:
         o("<tr>")
         for tat in row:
-            print_tattoo_cell(tattoos, tattoo_bytes, tat, levels)
+            print_tattoo_cell(tattoos, tattoo_bytes, tat, state['doimages'], levels)
         o("</tr>")
     o("</table>")
 
@@ -765,7 +766,7 @@ def o_outfits(state):
             continue    # we did the legendary regalia in the Class section
         if x == 0:
             o("<tr>")
-        print_tattoo_cell(tattoos, tattoo_bytes, t+1)
+        print_tattoo_cell(tattoos, tattoo_bytes, t+1, state['doimages'])
         x = x+1
         if x == 10:
             o("</tr>")
@@ -794,13 +795,14 @@ def o_other(state):
 
 ###########################################################################
 
-def print_trophy_cell(clas, imgname, trophy, desc):
+def print_trophy_cell(clas, imgname, trophy, desc, doimages):
     """TODO"""
-    imgname = imgname.replace('_thumb', '')
-    imgname = ('itemimages/' if (imgname == 'nopic') else 'otherimages/trophy/') + imgname
-    o(f"<td {clas}'>"
-                +f"<img src='{IMAGES}/{imgname}.gif' style='width:50px; height:50px;'><br>"
-                +f"{wikilink(trophy, desc)}</td>")
+    img = ''
+    if doimages:
+        imgname = imgname.replace('_thumb', '')
+        imgname = ('itemimages/' if (imgname == 'nopic') else 'otherimages/trophy/') + imgname
+        img = f"<img src='{IMAGES}/{imgname}.gif' style='width:50px; height:50px;'><br>"
+    o(f"<td {clas}'>{img}{wikilink(trophy, desc)}</td>")
 
 def score_trophies(state):
     tally = [0, 0]
@@ -821,18 +823,19 @@ def o_trophies(state):
     o(f"<p class='subheader'>You have <b>{tally[1]}</b> trophies"
       f" and are missing <b>{tally[0]}</b> trophies.</p>\n")
     ct = 1
+    doimages = state['doimages']
     for i in range(1, len(trophies)+1):
         t = trophies[i]
         clas = ""
         if i == 13:
-            print_trophy_cell('', 'nopic', 'Noble Ascetic', 'Have Less Than 10,000 Meat')
+            print_trophy_cell('', 'nopic', 'Noble Ascetic', 'Have Less Than 10,000 Meat', doimages)
             ct = ct + 1
         elif i == 144:
             o("<td></td>")
             ct = ct + 1
         if getbits(trophy_bytes, i, 1):
             clas = 'class="hcperm"'
-        print_trophy_cell(clas, t[1], t[2], t[3])
+        print_trophy_cell(clas, t[1], t[2], t[3], doimages)
         if ct % 10 == 0:
             o("</tr><tr>")
         ct = ct + 1
@@ -844,16 +847,19 @@ def o_trophies(state):
 
 ###########################################################################
 
-def print_familiar_cell(clas, imgname, name):
+def print_familiar_cell(clas, imgname, name, doimages):
     """TODO"""
     if clas != '':
         clas = "class='" + clas + "'"
-    if imgname.find('otherimages') < 0:
-        imgname = 'itemimages/' + imgname + '.gif'
-    elif imgname.find('camelfam') >= 0:
-        # Melodramedary is a special case, need 2 images
-        imgname = f"{imgname}'><img src='{IMAGES}/otherimages/camelfam_right.gif"
-    wikitext = f"<img src='{IMAGES}/{imgname}'><br/>{name}"
+    img = ''
+    if doimages:
+        if imgname.find('otherimages') < 0:
+            imgname = 'itemimages/' + imgname + '.gif'
+        elif imgname.find('camelfam') >= 0:
+            # Melodramedary is a special case, need 2 images
+            imgname = f"{imgname}'><img src='{IMAGES}/otherimages/camelfam_right.gif"
+        img = f"<img src='{IMAGES}/{imgname}'><br/>"
+    wikitext = f"{img}{name}"
     o(f"<td {clas}>{wikilink(name, wikitext)}</td>")
 
 # Pre Quantum:
@@ -898,6 +904,7 @@ def o_familiar_table(state, famtype, msg):
     o(f"{msg}<br/>")
     o("<table cellspacing='0'><tr>")
     ct = 1
+    doimages = state['doimages']
     for i in range(1, len(state['familiars'])+1):
         f = familiars[i]
         fnum = int(f[0])
@@ -905,7 +912,7 @@ def o_familiar_table(state, famtype, msg):
             # Skip if not the famtype we're looking for
             continue
         style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
-        print_familiar_cell(style, f[2], f[1])
+        print_familiar_cell(style, f[2], f[1], doimages)
         if ct % 10 == 0:
             o("</tr><tr>")
         ct = ct + 1
@@ -1025,7 +1032,7 @@ def print_coolitem_table(state, headers, rows):
             print_header_cell(h)
         o("</tr>")
     for r in rows:
-        print_coolitem_row(state, r)
+        print_coolitem_row(state, r, state['doimages'])
     o("</table>\n")
 
 def print_mritem_row(state, header, items):
@@ -1128,7 +1135,7 @@ def print_loot_row(state, header, items, pad=0):
     if header != '':
         o(f"<th>{header}</th>")
     for it in items:
-        print_coolitem_cell(state, it)
+        print_coolitem_cell(state, it, state['doimages'])
     if pad > 0:
         o("<td></td>"*pad)
     o("</tr>")
@@ -1277,11 +1284,12 @@ def o_cool_underworld(state):
     print_coolitem_table(state, None, (range(35, 38),))
 
 def o_cool_reflection(state):
+    doimages = state['doimages']
     o("<table cellspacing='0'>")
-    print_coolitem_row(state, range(180, 186))
+    print_coolitem_row(state, range(180, 186), doimages)
     o("<tr>")
-    print_coolitem_cell(state, 186)
-    print_coolitem_cell(state, 187)
+    print_coolitem_cell(state, 186, doimages)
+    print_coolitem_cell(state, 187, doimages)
     levels = state['levels']
     chess = int(levels[26:28], 36)
     if chess == 0:
@@ -1290,8 +1298,8 @@ def o_cool_reflection(state):
         clas = " class='hcperm'"
     else:
         clas = " class='perm'"
-    chesstext = (f"<img src='{IMAGES}/itemimages/chesscookie.gif'><br/>"
-                 f"Chess Boards Completed {chess}/50")
+    img = f"<img src='{IMAGES}/itemimages/chesscookie.gif'><br/>" if doimages else ''
+    chesstext = f"{img}Chess Boards Completed {chess}/50"
     o(f"<td{clas}>{wikilink('The_Great_Big_Chessboard',chesstext)}</a></td>"
         "<td></td><td></td><td></td></tr></table>\n")
 
@@ -1554,6 +1562,7 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
         return f'<html><head></head><body>Record added for {name}</body></html>'
     #
     colorblind = ('colorblind' in argv) and (int(argv['colorblind']) != 0)
+    noimages = ('noimages' in argv) and (int(argv['noimages']) != 0)
     when = argv["oob"] if ("oob" in argv) else ''
     when = normalize_datetime(when)
     fetched_argv = lookup(name, when)
@@ -1674,6 +1683,7 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
     demonnames = fetched_argv['demonnames'].split('|') if (
         "demonnames" in fetched_argv) else ['']*12
     state['demonnames'] = demonnames
+    state['doimages'] = not noimages
     # Need to tally the Collector's Score now in case we don't display their sections
     score_tattoos(state)
     score_trophies(state)
