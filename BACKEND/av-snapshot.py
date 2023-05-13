@@ -847,7 +847,7 @@ def o_trophies(state):
 
 ###########################################################################
 
-def print_familiar_cell(clas, imgname, name, doimages):
+def print_familiar_cell(clas, imgname, name, doimages, april=False):
     """TODO"""
     if clas != '':
         clas = "class='" + clas + "'"
@@ -860,7 +860,8 @@ def print_familiar_cell(clas, imgname, name, doimages):
             imgname = f"{imgname}'><img src='{IMAGES}/otherimages/camelfam_right.gif"
         img = f"<img src='{IMAGES}/{imgname}'><br/>"
     wikitext = f"{img}{name}"
-    o(f"<td {clas}>{wikilink(name, wikitext)}</td>")
+    link = name if not april else f"April Fools' Familiars#{name.replace(' ','_')}"
+    o(f"<td {clas}>{wikilink(link, wikitext)}</td>")
 
 # Pre Quantum:
 # 0: No familiar, in any capacity
@@ -912,7 +913,7 @@ def o_familiar_table(state, famtype, msg):
             # Skip if not the famtype we're looking for
             continue
         style = FAM_STYLES[getbits(familiar_bytes, i, 4)]
-        print_familiar_cell(style, f[2], f[1], doimages)
+        print_familiar_cell(style, f[2], f[1], doimages, famtype=='a')
         if ct % 10 == 0:
             o("</tr><tr>")
         ct = ct + 1
