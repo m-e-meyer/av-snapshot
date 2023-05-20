@@ -3,7 +3,7 @@
 3	f	crimbo elfling	Crimbo Elf	-	-	-	-	-
 4	f	orphan baby yeti	Baby Yeti	-	-	-	-	-
 5	f	silk garter snake	Feather Boa Constrictor	-	-	-	-	-
-6	i	lucky Tam O'Shanter	lucky Tam O'Shatner	-	-	-	-	-
+6	i	lucky Tam O'Shanter		-	-	-	-	-
 7	f	emo roe	Emo Squid	-	-	-	-	-
 8	f	personal raindrop	Personal Raincloud	-	-	-	-	-
 9	i	miniature gravy-covered maypole	none	-	-	-	-	-
@@ -256,3 +256,4 @@
 256	i	closed-circuit phone system	closed-circuit pay phone	rufusbox	-	-	-	-
 257	i	cursed monkey glove	cursed monkey's paw	monkeyglove	-	-	-	-
 258	i	shrink-wrapped Cincho de Mayo	Cincho de Mayo	cincho	-	-	-	-
+259	i	lucky Tam O'Shatner		-	-	-	-
