@@ -8,101 +8,96 @@ since r20632;
 #	website layout is copied from it, and things are then hacked onto it 
 #   in order to increase support. So... yeah.
 
-string VERSION = '1.0.5';	# released 2023-03-25
-
-int NUM_LEVELS = 33;
-
-
 ////////////////////////////
 
 boolean DEBUG = (get_property('avSnapshotDebug') == 'j');
 void debug(string s)
 {
-	if (DEBUG) { print(s, "blue"); }
+	if (DEBUG) { print(s, "#00dddd"); }
 }
 
 
 ///////////////////////////////
 
 record bitarray {
-    int size;
-    int eltsize;
-    int[int] elts;	// 0-based array of values
+	int size;
+	int eltsize;
+	int[int] elts;	// 0-based array of values
 };
 
 string to_string(bitarray b)
 {
-    string result = "bitarray[";
-    for i from 0 to b.elts.count()-1 {
-        int elt = b.elts[i];
-        for j from 0 to b.eltsize-1 {
-            result = result + ((elt & (1 << (b.eltsize-j-1))) == 0 ? "0" : "1");
-        }
-        result = result + " ";
-    }
-    return result+"]";
+	string result = "bitarray[";
+	for i from 0 to b.elts.count()-1 {
+		int elt = b.elts[i];
+		for j from 0 to b.eltsize-1 {
+			result = result + ((elt & (1 << (b.eltsize-j-1))) == 0 ? "0" : "1");
+		}
+		result = result + " ";
+	}
+	return result+"]";
 }
 
 bitarray new_bitarray(int size, int eltsize)
 {
-    bitarray b;
-    b.size = size;
-    b.eltsize = eltsize;
+	bitarray b;
+	b.size = size;
+	b.eltsize = eltsize;
 	if (size > 0) {
 		for i from 0 to (size-1) {
 			b.elts[i] = 0;
 		}
 	}
 	debug(`Created with {size} elements`);
-    return b;
+	return b;
 }
 
 void set(bitarray b, int index, int val)
 {
-    if ((index < 0) || (index >= b.size)) {
-        print(`Index {index} out of bounds`, "red");
-        return;
-    }
-    if ((val < 0) || (val >= (1 << b.eltsize))) {
-        print(`Value {val} out of bounds`, "red");
-    }
-    b.elts[index] = val;
+	if ((index < 0) || (index >= b.size)) {
+		print(`Index {index} out of bounds`, "red");
+		return;
+	}
+	if ((val < 0) || (val >= (1 << b.eltsize))) {
+		print(`Value {val} out of bounds`, "red");
+	}
+	b.elts[index] = val;
 }
 
 int get(bitarray b, int index)
 {
-    return b.elts[index];
+	return b.elts[index];
 }
 
 string base64_encode(bitarray b)
 {
-    string TABLE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
-    int buf = 0;
-    int bits = 0;
-    string result = "";
-    for i from 0 to b.size-1 {
-        buf <<= b.eltsize;
-        buf += b.elts[i];
-        bits += b.eltsize;
-        while (bits >= 6) {
-            int bits6 = buf >> (bits - 6);
-            result = result + TABLE.substring(bits6, bits6+1);
-            buf = buf & ((1 << bits-6) - 1);
-            bits -= 6;
-        }
-    }
-    if (bits > 0) {
-        while (bits < 6) {
-            buf <<= b.eltsize;
-            bits += b.eltsize;
-        }
-        int bits6 = buf >> (bits - 6);
-        result = result + TABLE.substring(bits6, bits6+1);
-    }
-    while ((result.length() & 3) != 0) {
-        result = result + "=";
-    }
-    return result;
+	string TABLE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+	int buf = 0;
+	int bits = 0;
+	string result = "";
+	for i from 0 to b.size-1 {
+		buf <<= b.eltsize;
+		buf += b.elts[i];
+		bits += b.eltsize;
+		while (bits >= 6) {
+			int bits6 = buf >> (bits - 6);
+			result = result + TABLE.substring(bits6, bits6+1);
+			buf = buf & ((1 << bits-6) - 1);
+			bits -= 6;
+		}
+	}
+	if (bits > 0) {
+		while (bits < 6) {
+			buf <<= b.eltsize;
+			bits += b.eltsize;
+		}
+		int bits6 = buf >> (bits - 6);
+		result = result + TABLE.substring(bits6, bits6+1);
+	}
+	while ((result.length() & 3) != 0) {
+		result = result + "=";
+	}
+	return result;
 }
 
 void add(bitarray b, int val)
@@ -142,26 +137,26 @@ void add_item_count(bitarray b, int val)
 
 record ItemImage
 {
-    string itemname;
-    string gifname;
-    string a;
-    string b;
-    string c;
-    string d;
-    string e;
-    string f;
-    string g;
-    string h;
-    string i;
+	string itemname;
+	string gifname;
+	string a;
+	string b;
+	string c;
+	string d;
+	string e;
+	string f;
+	string g;
+	string h;
+	string i;
 };
 
 ItemImage [int] BOOZE, CONCOCKTAIL, CONFOOD, CONMEAT, CONMISC, CONSMITH, 
 	COOLITEMS, FAMILIARS, FOOD, HOBOCODES, MRITEMS, SKILLS,
-    TATTOOS, TROPHIES; 
+	TATTOOS, TROPHIES; 
 
 int[int] LEVELS = {};
 
-void set_level_counter(int i, int value, int num_digits)
+void set_level_counter(int i, int value, int num_levels, int num_digits)
 {
 	if (LEVELS.count() == 0) {
 		for j from 0 to NUM_LEVELS-1 {
@@ -176,9 +171,9 @@ void set_level_counter(int i, int value, int num_digits)
 	}
 }
 
-void set_level_counter(int i, int value)
+void set_level_counter(int i, int value, int num_levels)
 {
-	set_level_counter(i, value, 1);
+	set_level_counter(i, value, num_levels, 1);
 }
 
 
@@ -201,7 +196,7 @@ boolean load_current_map(string fname, ItemImage[int] map)
 
 void load_data()
 {
-    print("Loading map files...", "olive");
+	print("Loading map files...", "olive");
 	load_current_map("av-snapshot-skills", SKILLS);
 	load_current_map("av-snapshot-tattoos", TATTOOS);
 	load_current_map("av-snapshot-trophies", TROPHIES);
@@ -321,14 +316,14 @@ int skillLevel(string name, string html, string overwrite)
 		overwrite = "";
 	}
 	if (index_of(html, ">"+name+"</a> (<b>HP</b>)") != -1) {
-        return 2;
+		return 2;
 	}
 	else if ((length(overwrite) > 0) && (index_of(html, overwrite) > 0)) {   
-        #print(`overwrite for {name} is {overwrite}`);
+		#print(`overwrite for {name} is {overwrite}`);
 		return 2;
 	}
 	else if (index_of(html, ">"+name+"</a> (P)") != -1) {
-        return 1;
+		return 1;
 	}
 	else if ((name == "Toggle Optimality") && have_skill(to_skill(name))) {
 		return 2;	# Treat Optimality as HC Permed
@@ -340,15 +335,15 @@ int skillLevel(string name, string html, string overwrite)
 
 string check_skills(string bookshelfHtml)
 {
-    bitarray b = new_bitarray(SKILLS.count()+1, 2);
+	bitarray b = new_bitarray(SKILLS.count()+1, 2);
 	print("Checking skills...", "olive");
 	string html = visit_url("charsheet.php") + bookshelfHtml;
-    // Check normal skills
+	// Check normal skills
 	foreach x in SKILLS {
-        b.set(x, skillLevel(SKILLS[x].itemname, html, SKILLS[x].a));
+		b.set(x, skillLevel(SKILLS[x].itemname, html, SKILLS[x].a));
 	}
 
-    return "&skills=" + b.base64_encode();
+	return "&skills=" + b.base64_encode();
 }
 
 ###########################################################################
@@ -385,7 +380,7 @@ int tattoo_check(string html, string outfit, string gif, string i1, string i2, s
 	return 2;
 }
 
-string check_tattoos()
+string check_tattoos(int num_levels)
 {
 	debug('Tattoos count ' + TATTOOS.count());
 	int i = 1;
@@ -407,27 +402,27 @@ string check_tattoos()
 	// What's the level on the Hobo Tattoo?
 	for lv from 19 to 1 {
 		if (index_of(html, "hobotat"+lv) != -1) {
-			set_level_counter(11, lv);
+			set_level_counter(11, lv, num_levels);
 			break;
 		}
 	}
 
-    return "&tattoos=" + b.base64_encode();
+	return "&tattoos=" + b.base64_encode();
 }
 
 ###########################################################################
 
 string check_trophies()
 {
-    bitarray b = new_bitarray(TROPHIES.count()+1, 1);
-    print("Checking trophies...", "olive");
+	bitarray b = new_bitarray(TROPHIES.count()+1, 1);
+	print("Checking trophies...", "olive");
 	buffer html = visit_url("trophies.php");
 	foreach x in TROPHIES
 	{
 		if (is_in("/" + TROPHIES[x].itemname, html))
-            b.set(x, 1);
+			b.set(x, 1);
 	}
-    return "&trophies=" + b.base64_encode();
+	return "&trophies=" + b.base64_encode();
 }
 
 ###########################################################################
@@ -506,7 +501,7 @@ string check_familiars(string familiarNamesHtml)
 				+ visit_url("ascensionhistory.php?back=self&prens13=1&who=" +my_id(), false);
 	foreach x in FAMILIARS {
 		b.set(x, familiar_check(FAMILIARS[x].itemname, FAMILIARS[x].gifname, 
-		                 FAMILIARS[x].a, familiarNamesHtml, koldbHtml));
+			             FAMILIARS[x].a, familiarNamesHtml, koldbHtml));
 	}
 	return "&familiars=" + b.base64_encode();
 }
@@ -534,12 +529,12 @@ string get(ItemImage mritem, int offset)
 
 string check_mritems(string bookshelfHtml) 
 {
-    bitarray b = new_bitarray(0, 4);
+	bitarray b = new_bitarray(0, 4);
 	print("Checking for Mr. Items...", "olive");
 
-    // Visit the woods to make sure getawayCampsiteUnlocked is set properly
-    buffer buf = visit_url("woods.php");
-    
+	// Visit the woods to make sure getawayCampsiteUnlocked is set properly
+	buffer buf = visit_url("woods.php");
+	
 	foreach x in MRITEMS {
 		ItemImage mrit = MRITEMS[x];
 		string categoryFlags = mrit.itemname;
@@ -550,7 +545,7 @@ string check_mritems(string bookshelfHtml)
 			string data = get(mrit, index);
 			switch(category)
 			{
-	            case "e":  // This only exists because florist_available() exists instead of a setting (124)
+				case "e":  // This only exists because florist_available() exists instead of a setting (124)
 					// This does not check if you have one installed if you have any of the tradable item.
 					// Do not use this with other flags, this is a edge scenario
 					if ((amt == 0) && 
@@ -605,7 +600,7 @@ string check_mritems(string bookshelfHtml)
 
 string check_coolitems()
 {
-    bitarray b = new_bitarray(0, 4);
+	bitarray b = new_bitarray(0, 4);
 	print("Checking for Cool Items...", "olive");
 	foreach x in COOLITEMS {
 		b.add_item_count(num_items(COOLITEMS[x].itemname));
@@ -643,7 +638,7 @@ string check_discoveries()
 
 string check_consumption()
 {
-    bitarray b = new_bitarray(BOOZE.count()+1, 1);
+	bitarray b = new_bitarray(BOOZE.count()+1, 1);
 	bitarray f = new_bitarray(FOOD.count()+1, 1);
 	print("Checking consumption...", "olive");
 	string html = to_lower_case(visit_url("showconsumption.php"));
@@ -659,7 +654,7 @@ string check_consumption()
 
 ###########################################################################
 
-string check_levels()
+string check_levels(int num_levels)
 {
 	print("Checking miscellaneous levels...", "olive");
 	// return skills and levels ([0] sinew, [1] synapse, [2] shoulder, [3] belch, 
@@ -673,7 +668,7 @@ string check_levels()
 		8:"144", 9:"180", 10:"188", 32:"7254"
 	};
 	foreach i, sknum in levelmap {
-		set_level_counter(i, get_property("skillLevel" + sknum).to_int());
+		set_level_counter(i, get_property("skillLevel" + sknum).to_int(), num_levels);
 	}
 	// Karma
 	string karma = visit_url("questlog.php?which=3");
@@ -683,27 +678,27 @@ string check_levels()
 		k = group(m, 1).to_int();
 	}
 	debug("You have "+k+" karma");
-	set_level_counter(12, k, 4);
+	set_level_counter(12, k, num_levels, 4);
 	// Manuel
 	string manuelHTML = visit_url("questlog.php?which=6&vl=a");
 	if(contains_text(manuelHTML, "Monster Manuel")) {
 		matcher m = create_matcher("casually(?:.*?)([0-9]+) creature(s?)[.]", manuelHTML);
 		if (find(m)) {
-			set_level_counter(16, group(m,1).to_int(), 3);
+			set_level_counter(16, group(m,1).to_int(), num_levels, 3);
 		}
 		m = create_matcher("thoroughly(?:.*?)([0-9]+) creature(s?)[.]", manuelHTML);
 		if (find(m)) {
-			set_level_counter(19, group(m,1).to_int(), 3);
+			set_level_counter(19, group(m,1).to_int(), num_levels, 3);
 		}
 		m = create_matcher("exhaustively(?:.*?)([0-9]+) creature(s?)[.]", manuelHTML);
 		if (find(m)) {
-			set_level_counter(22, group(m,1).to_int(), 3);
+			set_level_counter(22, group(m,1).to_int(), num_levels, 3);
 		}
 	}
 	// Telescope
-	set_level_counter(25, get_property("telescopeUpgrades").to_int());
+	set_level_counter(25, get_property("telescopeUpgrades").to_int(), num_levels);
 	// Looking Glass chessboards
-	set_level_counter(26, get_property("chessboardsCleared").to_int(), 2);
+	set_level_counter(26, get_property("chessboardsCleared").to_int(), num_levels, 2);
 	// Hobo codes
 	string html = visit_url("questlog.php?which=5");
 	int codes = 0;
@@ -714,7 +709,7 @@ string check_levels()
 			codes = codes + 1;
 		}
 	}
-	set_level_counter(28, codes, 4);
+	set_level_counter(28, codes, num_levels, 4);
 	return "&levels=" + levels_string();
 }
 
@@ -740,39 +735,45 @@ void main()
 	if(!get_property("kingLiberated").to_boolean())
 	{
 		if(!user_confirm("This script should not be run while you are in-run. It may blank out "
-                        + "some of your skills, telescope, bookshelf or some other aspect of your "
-                        + "profile until you next run it in aftercore. Are you sure you want to "
-                        + "run it (not recommended)?", 15000, false)) {
+			            + "some of your skills, telescope, bookshelf or some other aspect of your "
+			            + "profile until you next run it in aftercore. Are you sure you want to "
+			            + "run it (not recommended)?", 15000, false)) {
 			abort("User aborted. Beep");
 		}
 	}
 
-    load_data();
-    string bookshelfHtml = visit_url("campground.php?action=bookshelf");
+	load_data();
+	string bookshelfHtml = visit_url("campground.php?action=bookshelf");
 	string familiarNamesHtml = visit_url("familiarnames.php");
 
-    string yourName = my_name();
-    string yourUrl;
+	string yourName = my_name();
+	string yourUrl;
 	if (get_property("avSnapshotLocal") == "j") {
-    	yourUrl = `http://localhost/cgi-bin/av-snapshot.py?u={yourName}`;
+		yourUrl = `http://localhost/cgi-bin/av-snapshot.py?u={yourName}`;
 	} else {
 		yourUrl = `https://api.aventuristo.net/av-snapshot?u={yourName}`;
 	}
-    string yourEncodedUrl = replace_string(yourUrl, " ", "+");
+	
+	string[string] info;
+	file_to_map("av-snapshot-info.txt", info);
+	string VERSION = info['VERSION'];
+	int NUM_LEVELS = info['NUM_LEVELS'].to_int();
+	
+	string yourEncodedUrl = replace_string(yourUrl, " ", "+");
 	string url = yourUrl + `&update=j&mafiarevision={get_revision()}&snapshotversion={VERSION}`;
-    url = url + check_skills(bookshelfHtml);
-	url = url + check_tattoos();
-    url = url + check_trophies();
+	url = url + check_skills(bookshelfHtml);
+	url = url + check_tattoos(NUM_LEVELS);
+	url = url + check_trophies();
 	url = url + check_familiars(familiarNamesHtml);
 	url = url + check_mritems(bookshelfHtml);
 	url = url + check_coolitems();
 	url = url + check_discoveries();
 	url = url + check_consumption();
-	url = url + check_levels();
+	url = url + check_levels(NUM_LEVELS);
 	url = url + check_demons();
 
 	if (get_property("avSnapshotNosave") == "j") {
-    	print(url);
+		print(url);
 		print(`URL length = {url.length()}`);
 	} else {
 		print("Contacting database...");

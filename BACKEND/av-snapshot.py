@@ -20,11 +20,9 @@ from datetime import datetime
 import re
 
 
-NUM_LEVELS = 33
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
-VERSION = '2023.05.07'    # released then
 
-# Set this to the CGI location of all files this application will read
+# Set this to the dev CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
 
 
@@ -349,6 +347,17 @@ def load_data_file(filename):
             themap[maxx] = l
     return themap
 
+def load_info_file(filename):
+    themap = {}
+    with open_file_for_reading(filename+'.txt') as fil:
+        while True:
+            l = fil.readline().rstrip('\n')
+            if not l:
+                break
+            l = l.split('\t')
+            themap[l[0]] = l[1]
+    return themap
+
 def load_data(state):
     """TODO"""
     state['skills'] = load_data_file('av-snapshot-skills')
@@ -365,6 +374,7 @@ def load_data(state):
     state['booze'] = load_data_file("av-snapshot-booze")
     state['food'] = load_data_file("av-snapshot-food")
     state['hobocodes'] = load_data_file("av-snapshot-hobocodes")
+    state['info'] = load_info_file("av-snapshot-info")
 
 def hx(tag, text, link):
     """TODO"""
@@ -420,8 +430,8 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
         av_version = '(unknown)'
     o(f"<div class='header'><p>Snapshot for <b>{escape(name)}</b> taken {tstamp} using"
       f" av-snapshot.ash v{av_version} run on KoLmafia revision r{mafia}, rendered by"
-      f" av-snapshot version {VERSION}.  If you'd like to use this yourself, check out the"
-      f" Kingdom of Loathing forum link"
+      f" av-snapshot.py v{state['info']['VERSION']}.  If you'd like to use this yourself,"
+      f" check out the Kingdom of Loathing forum link"
       f" <a href='http://forums.kingdomofloathing.com/vb/showthread.php?t=250707'>here</a>.</p>")
     o("<p>av-snapshot is a fork of the cc_snapshot project by Cheesecookie,"
       " whom I thank for his work."
@@ -1674,12 +1684,13 @@ def prepareResponse(argv, context):     # pylint: disable=unused-argument
     state['consmith-bytes'] = arg_to_bytes(state, fetched_argv, "consmith", 1)
     state['booze-bytes'] = arg_to_bytes(state, fetched_argv, "booze", 1)
     state['food-bytes'] = arg_to_bytes(state, fetched_argv, "food", 1)
+    num_levels = int(state['info']['LEVELS'])
     if "levels" in fetched_argv:
         levels = fetched_argv["levels"]
-        if len(levels) < NUM_LEVELS:
-            levels = levels + ("0"*(NUM_LEVELS-len(levels)))
+        if len(levels) < num_levels:
+            levels = levels + ("0"*(num_levels-len(levels)))
     else:
-        levels = "0"*NUM_LEVELS
+        levels = "0"*num_levels
     state['levels'] = levels
     demonnames = fetched_argv['demonnames'].split('|') if (
         "demonnames" in fetched_argv) else ['']*12
