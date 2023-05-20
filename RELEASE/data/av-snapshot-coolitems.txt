@@ -704,3 +704,4 @@
 704	Thwaitgold anti-moth statuette	thwaitantimoth	-	-	-	-	-
 705	[glitch season reward name]	nopic	-	-	-	-	-
 706	Law of Averages	sheet	-	-	-	-	-
+707	Thwaitgold splendor beetle statuette	thwaitsplendor	-	-	-	-
