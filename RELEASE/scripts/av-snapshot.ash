@@ -757,7 +757,7 @@ void main()
 	string[string] info;
 	file_to_map("av-snapshot-info.txt", info);
 	string VERSION = info['VERSION'];
-	int NUM_LEVELS = info['NUM_LEVELS'].to_int();
+	int NUM_LEVELS = info['LEVELS'].to_int();
 	
 	string yourEncodedUrl = replace_string(yourUrl, " ", "+");
 	string url = yourUrl + `&update=j&mafiarevision={get_revision()}&snapshotversion={VERSION}`;
