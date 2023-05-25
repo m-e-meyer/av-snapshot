@@ -200,7 +200,7 @@ def form_param_string(dic):
         if p in ('name', 'update'):
             continue
         if p == 'demonnames':
-            if not re.match("[a-zA-Z0-9 '|-]+$", dic[p]):
+            if not re.match("[a-zA-Z0-9 '_|-]+$", dic[p]):
                 raise MyException(f'Invalid demon name(s) {escape(dic[p])}')
         result = result + prefix + p + '=' + dic[p]
         prefix = '&'
