@@ -257,3 +257,4 @@
 257	i	cursed monkey glove	cursed monkey's paw	monkeyglove	-	-	-	-
 258	i	shrink-wrapped Cincho de Mayo	Cincho de Mayo	cincho	-	-	-	-
 259	i	lucky Tam O'Shatner		-	-	-	-
+260	i	shrink-wrapped 2002 Mr. Store Catalog	2002 Mr. Store Catalog	-	-	-	-	-
