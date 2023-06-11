@@ -80,82 +80,82 @@
 80	garble_varble_zous_thumb	Losing Your Marbles	Sell Marbles to Collector	-	-	-	-	-
 81	dodecahardon_thumb	Hunter in Darkness	5 Consecutive Wumpus Hunts	-	-	-	-	-
 82	im_a_little_bit_country_thumb	Evil's Okay in My Book	Become a Little Bit Evil 13 Times in one Ascension	-	-	-	-	-
-83	what_the_hell_are_colitas_anyway	Desert Wind	Multi-use 29 palm-frond fans from your inventory. 	-	-	-	-	-
-84	oh_i_get_by	A Little Help From My Friends	Receive the Cold-Blooded Warm Fuzzies buff 30 times.	-	-	-	-	-
-85	every_which_way_but_footloose	Dancing With the Stars	Use all 11 disco and rave combos in a single fight. 	-	-	-	-	-
+83	what_the_hell_are_colitas_anyway	Desert Wind	Multi-use 29 palm-frond fans from your inventory	-	-	-	-	-
+84	oh_i_get_by	A Little Help From My Friends	Receive the Cold-Blooded Warm Fuzzies buff 30 times	-	-	-	-	-
+85	every_which_way_but_footloose	Dancing With the Stars	Use all 6 rave combos in a single fight	-	-	-	-	-
 86	especially_those_face_scars	Every Part of the Seal	Equip yourself entirely in seal hide	-	-	-	-	-
 87	screw_you_atkins	Spaghettihose	Eating a single pasta dish with ten days' worth of Canticle of Carboloading applied	-	-	-	-	-
 88	please_dont_taste_the_rainbow	Color Wheel of Yuck	Discover all possible Slime Potion recipes	-	-	-	-	-
-89	steal_this_music	Septuple Platinum	Make 7 unique AT Buff recordings. 	-	-	-	-	-
-90	raggedy_annie_leibovitz	Professional Photographer	Use 40 4-d cameras. 	-	-	-	-	-
+89	steal_this_music	Septuple Platinum	Make 7 unique AT Buff recordings	-	-	-	-	-
+90	raggedy_annie_leibovitz	Professional Photographer	Use 40 4-d cameras	-	-	-	-	-
 91	thats_numberwang	General Assembler	Discover 50 different miscellaneous recipes	-	-	-	-	-
 92	aeris_kills_dumbledore	Penultimate Fantasy VII	Defeat 7 Airships	-	-	-	-	-
 93	ocd_genocide	The Wrong Place at the Right Time	Defeat your Nemesis in the order SC -> TT -> P -> S -> DB -> ATs	-	-	-	-	-
-94	in_a_fruit_fight	A Screw Ain't One	Defeat 99 monsters with a Loathing Legion hammer equipped.	-	-	-	-	-
-95	giant_blue_pool_cue	Who Hustles The Hustlers?	Beat Scratch Rackonteur at pool 23 times 	-	-	-	-	-
-96	ocd_i_choose_you	Had To Have Caught Them All	Have all 15 Pokemann figurines in your display case 	-	-	-	-	-
-97	spay_or_neuter_your_pets	Elf Barker	Win 2000 lunar isotopes in Porko 	-	-	-	-	-
-98	sweat_grope_punch_repeat	Mixed Martial Arts	Perm both Kung Fu Hustler and Master of the Surprising Fist 	-	-	-	-	-
-99	tatsumaki_senpuu_kyaku	Hadouken!	Deal 5,000 damage with a single Flying Fire Fist 	-	-	-	-	-
-100	fisting_for_dollars	Good Will Punching	Donate one million Meat worth in items to charity 	-	-	-	-	-
-101	ow_my_everything	Buzzkill	Wearing 30 Bs during a Bees Hate You run in combat 	-	-	-	-	-
-102	wal_mart_is_stationary	Moving Target	Multi-using d12s 	-	-	-	-	-
-103	gonna_need_a_bigger_plaque	Grand Slammer	Use all 11 different pogs in any order as long as #11 is last in a single combat. 	-	-	-	-	-
+94	in_a_fruit_fight	A Screw Ain't One	Defeat 99 monsters with a Loathing Legion hammer equipped	-	-	-	-	-
+95	giant_blue_pool_cue	Who Hustles The Hustlers?	Beat Scratch Rackonteur at pool 23 times	-	-	-	-	-
+96	ocd_i_choose_you	Had To Have Caught Them All	Have all 15 Pokemann figurines in your display case	-	-	-	-	-
+97	spay_or_neuter_your_pets	Elf Barker	Win 2000 lunar isotopes in Porko	-	-	-	-	-
+98	sweat_grope_punch_repeat	Mixed Martial Arts	Perm both Kung Fu Hustler and Master of the Surprising Fist	-	-	-	-	-
+99	tatsumaki_senpuu_kyaku	Hadouken!	Deal 5,000 damage with a single Flying Fire Fist	-	-	-	-	-
+100	fisting_for_dollars	Good Will Punching	Donate one million Meat worth in items to charity	-	-	-	-	-
+101	ow_my_everything	Buzzkill	Wearing 30 Bs during a Bees Hate You run in combat	-	-	-	-	-
+102	wal_mart_is_stationary	Moving Target	Multi-using d12s	-	-	-	-	-
+103	gonna_need_a_bigger_plaque	Grand Slammer	Use all 11 different pogs in any order as long as #11 is last in a single combat	-	-	-	-	-
 104	look_out_death_adder	And My Axe	Lv30 AoB	-	-	-	-	-
-105	never_sicker	Spirited Drinker	Consume all 66 siphoned spirits.	-	-	-	-	-
+105	never_sicker	Spirited Drinker	Consume all 66 siphoned spirits	-	-	-	-	-
 106	papier_i_hardly_know_her	Papier Than Thou	Use a papier-mâché trophy piñata	-	-	-	-	-
-107	for_your_weiner_am_i_right_ha_ha_ha	Fantastic Voyager	Have all 11 Microplushies in your Display Case 	-	-	-	-	-
-108	haggis_is_as_haggis_does	Haggis Haggis Haggis Haggis Haggis	Cast Haggis Kick by wearing haggis socks while wearing Mr. Haggis and having the effects Sheepskinned, Highland Sheen, and Hagg-ard 	-	-	-	-	-
-109	i_can_taste_the_cosmos	Now You've Tasted Everything	Have all five possible effects from the Magic Tongue effect simultaneously 	-	-	-	-	-
-110	natures_harmonic	The Old College Try	Use 37 37x37x37 puzzle cubes 	-	-	-	-	-
-111	time_to_get_a_dog_i_guess	Great Responsibility	Keep a ChibiBuddy alive for 11 days  	-	-	-	-	-
-112	little_asian_different	Three-Tiered Tiny Plastic Trophy	Have all 32 Tiny plastic series 3 figurines in your display case 	-	-	-	-	-
-113	fruity_egocentric_magician	Cosmic Thing	Achieve level 30 as an Avatar of Jarlsberg 	-	-	-	-	-
-114	more_or_less_right_time	Right Outfit, Wrong Place	Equip the Mayor Ghost outfit. 	-	-	-	-	-
-115	taste_the_pain	 	Dreadful Rainbow	Have the 5 +elemental damage buffs from Dreadsylvania non-combats active  	-	-	-	-
-116	ermagerd_berks	Horror Enthusiast	Get all 30 Tales of Dread 	-	-	-	-	-
-117	clear_eyes_dumb_shirt	Full Heart	50 bottles of Bloodweiser 	-	-	-	-	-
-118	warranty_sold_separately	Extended Capacity	50 glasses of electric Kool-Aid.  	-	-	-	-	-
-119	bastard_son_thereof	Kissing Maniac	Independently gain 10,000 kisses in Dreadsylvania 	-	-	-	-	-
-120	dont_bleed_it_all_in_one_place	Cruising for Six Bruisings	Have all Dread Bosses Effects at Once 	-	-	-	-	-
-121	this_is_getting_ridiculous	Eleven Down, None to Go	Defeat X-fingered Shop Teacher 11 times in one ascension  	-	-	-	-	-
-122	could_you_describe_the_ruckus	Purity of Essence	Commit to Each Clique  	-	-	-	-	-
-123	who_here_knows_quark_express	Ansel Adams Jr.	Fully upgrade the yearbook camera. 	-	-	-	-	-
-124	take_a_chanceacus	No Particular Reason	Kill 1,000 enemies with a bone abacus. 	-	-	-	-	-
-125	put_gilded_lilies_in_it	Bronzed Tin Can	Drink all the beers from A Beer Garden in a single day  	-	-	-	-	-
-126	wheel_of_space	True Believer	Have all 12 disco horoscope effects active at the same time  	-	-	-	-	-
-127	pez_porridge_hot	EEZY PEEZY	"Collect" all 37 PEEZ dispensers 	-	-	-	-	-
-128	oh_no_not_again	Very Like a Whale	Make a bowl of petunias 	-	-	-	-	-
-129	hero_dreams_of_gyros	Gyro Hero	Eat 108 warbear gyros 	-	-	-	-	-
-130	d_c_cab_squared	Alia Iacta Est	Have an entire set of Tiny Die-Cast series 1 in your Display Case  	-	-	-	-	-
-131	the_choice_of_an_old_generation	Always Cloaca Cola	Use 11 bottles of Cloaca Cola Polar 	-	-	-	-	-
-132	barfily_ever_after	Thar She Blows!	Watch Cinderella throw up on the Prince's Shoes.  	-	-	-	-	-
-133	criminal_conspiracy	Partners in Crime	Conspire to frame Cinderella.  	-	-	-	-	-
-134	you_ruin_everything	Party Killer	Kill Cinderella.  	-	-	-	-	-
-135	the_harder_side_of_sears	Master Craftsman	Master glass, filling, and parchment in Rumpelstiltskin's Workshop.  	-	-	-	-	-
-136	cool_gold_jeff_game_cool	Cool Guy	Achieve level 30 as an Avatar of Sneaky Pete 	-	-	-	-	-
-137	shirto_redbetter	Option Paralysis	Wear a red shirt with Red-Shirted Escort active.  	-	-	-	-	-
-138	may_the_force_boldy_go_a_wizard	Omni-Cosplay	Acquire and equip stuff from Thinknerd packages 	-	-	-	-	-
-139	she_told_me_to_pick_up_olives	11 Martini Breakfast	Drink 11 mini-martinis 	-	-	-	-	-
-140	baloneysaurux_text	Golden Pickaxe	Nine Spelunks 	-	-	-	-	-
-141	bananarama_crux	Golden Idol	Beat Lolmec 	-	-	-	-	-
-142	badonkadonkus_flex	Golden Moustache	Beat Yomama 	-	-	-	-	-
-143	banangrama_xer	Golden Burglar	Beat 10 Shopkeepers in Spelunky 	-	-	-	-	-
-144	anger_management_about_schmidt	Bucket List	Fill 10 Walford Buckets 	-	-	-	-	-
-145	college_kids_and_divorced_men	Some Assembly Required	Assemble 6 Different Typoes of VYKEA Furniture 	-	-	-	-	-
-146	this_town_needs_an_enema	Gotpork Connoisseur	Consume one of each of the nine Gotpork villain drops 	-	-	-	-	-
-147	this_this_lemonade	A Gallon of Milk Keeps the Doctor Away	Drink 7 days worth of milk 	-	-	-	-	-
-148	ilovewesley	Prime Directive Director	Solve all Far Future scenarios without bloodshed 	-	-	-	-	-
-149	oh_the_horror	Tentacle Tickler	Defeat 666 Eldritch Tentacles (current ascension) 	-	-	-	-	-
-150	all_you_need_is_it	LOVE, LOVE, LOVE	Solve the L.O.V. Exit puzzle 	-	-	-	-	-
-151	i_had_to_drink_from_the_liquid_cup	Gelatinous Hubris	Acquire all Passive Gelatinous Noob skills 	-	-	-	-	-
-152	eleven_inch_flautist	Ultimate Cosmic Power	Defeat a Genie in Physical and Intellectual Trials 	-	-	-	-	-
-153	cross_about_naught	Commemorative Replica Blob	Defeat an Amorphous Blob 	-	-	-	-	-
-154	in_space_noone_can_hear_you_laugh	Salads of Many Worlds	Eat 11 primitive alien salad 	-	-	-	-	-
-155	working_class_republican	You Do It To Yourself	Voting against yourself 11 times 	-	-	-	-	-
-156	yule_be_happy	Traditional Crimbo	Consume Crimbo 2018 items on a single day 	-	-	-	-	-
-157	we_found_a_dead_mouse	Steak and a Beer, Eh?	Consume Grilled mooseflank and Antique beer on a single day 	-	-	-	-	-
-158	twenty_two_eyes	Talking Heads	Have all Beach Head buffs active 	-	-	-	-	-
-159	cuppa_cuppa_burning_goo	Yule Have a Headache Tomorrow	Drink 11 marshmallow bombs in a single day 	-	-	-	-	-
-160	every_christmas_is_like_sunday	Dreaming of a Bland Crimbo	Eat bread man, eggwater, flour cookie, plain candy cane 	-	-	-	-	-
+107	for_your_weiner_am_i_right_ha_ha_ha	Fantastic Voyager	Have all 11 Microplushies in your Display Case	-	-	-	-	-
+108	haggis_is_as_haggis_does	Haggis Haggis Haggis Haggis Haggis	Cast Haggis Kick by wearing haggis socks while wearing Mr. Haggis and having the effects Sheepskinned, Highland Sheen, and Hagg-ard	-	-	-	-	-
+109	i_can_taste_the_cosmos	Now You've Tasted Everything	Have all five possible effects from the Magic Tongue effect simultaneously	-	-	-	-	-
+110	natures_harmonic	The Old College Try	Use 37 37x37x37 puzzle cubes	-	-	-	-	-
+111	time_to_get_a_dog_i_guess	Great Responsibility	Keep a ChibiBuddy alive for 11 days	-	-	-	-	-
+112	little_asian_different	Three-Tiered Tiny Plastic Trophy	Have all 32 Tiny plastic series 3 figurines in your display case	-	-	-	-	-
+113	fruity_egocentric_magician	Cosmic Thing	Achieve level 30 as an Avatar of Jarlsberg	-	-	-	-	-
+114	more_or_less_right_time	Right Outfit, Wrong Place	Equip the Mayor Ghost outfit	-	-	-	-	-
+115	taste_the_pain	Dreadful Rainbow	Have the 5 +elemental damage buffs from Dreadsylvania non-combats active	-	-	-	-
+116	ermagerd_berks	Horror Enthusiast	Get all 30 Tales of Dread	-	-	-	-	-
+117	clear_eyes_dumb_shirt	Full Heart	50 bottles of Bloodweiser	-	-	-	-	-
+118	warranty_sold_separately	Extended Capacity	50 glasses of electric Kool-Aid	-	-	-	-	-
+119	bastard_son_thereof	Kissing Maniac	Independently gain 10,000 kisses in Dreadsylvania	-	-	-	-	-
+120	dont_bleed_it_all_in_one_place	Cruising for Six Bruisings	Have all Dread Bosses Effects at Once	-	-	-	-	-
+121	this_is_getting_ridiculous	Eleven Down, None to Go	Defeat X-fingered Shop Teacher 11 times in one ascension	-	-	-	-	-
+122	could_you_describe_the_ruckus	Purity of Essence	Commit to Each Clique	-	-	-	-	-
+123	who_here_knows_quark_express	Ansel Adams Jr.	Fully upgrade the yearbook camera	-	-	-	-	-
+124	take_a_chanceacus	No Particular Reason	Kill 1,000 enemies with a bone abacus	-	-	-	-	-
+125	put_gilded_lilies_in_it	Bronzed Tin Can	Drink all the beers from A Beer Garden in a single day	-	-	-	-	-
+126	wheel_of_space	True Believer	Have all 12 disco horoscope effects active at the same time	-	-	-	-	-
+127	pez_porridge_hot	EEZY PEEZY	"Collect" all 37 PEEZ dispensers	-	-	-	-	-
+128	oh_no_not_again	Very Like a Whale	Make a bowl of petunias	-	-	-	-	-
+129	hero_dreams_of_gyros	Gyro Hero	Eat 108 warbear gyros	-	-	-	-	-
+130	d_c_cab_squared	Alia Iacta Est	Have an entire set of Tiny Die-Cast series 1 in your Display Case	-	-	-	-	-
+131	the_choice_of_an_old_generation	Always Cloaca Cola	Use 11 bottles of Cloaca Cola Polar	-	-	-	-	-
+132	barfily_ever_after	Thar She Blows!	Watch Cinderella throw up on the Prince's Shoes	-	-	-	-	-
+133	criminal_conspiracy	Partners in Crime	Conspire to frame Cinderella	-	-	-	-	-
+134	you_ruin_everything	Party Killer	Kill Cinderella	-	-	-	-	-
+135	the_harder_side_of_sears	Master Craftsman	Master glass, filling, and parchment in Rumpelstiltskin's Workshop	-	-	-	-	-
+136	cool_gold_jeff_game_cool	Cool Guy	Achieve level 30 as an Avatar of Sneaky Pete	-	-	-	-	-
+137	shirto_redbetter	Option Paralysis	Wear a red shirt with Red-Shirted Escort active	-	-	-	-	-
+138	may_the_force_boldy_go_a_wizard	Omni-Cosplay	Acquire and equip stuff from Thinknerd packages	-	-	-	-	-
+139	she_told_me_to_pick_up_olives	11 Martini Breakfast	Drink 11 mini-martinis	-	-	-	-	-
+140	baloneysaurux_text	Golden Pickaxe	Nine Spelunks	-	-	-	-	-
+141	bananarama_crux	Golden Idol	Beat Lolmec	-	-	-	-	-
+142	badonkadonkus_flex	Golden Moustache	Beat Yomama	-	-	-	-	-
+143	banangrama_xer	Golden Burglar	Beat 10 Shopkeepers in Spelunky	-	-	-	-	-
+144	anger_management_about_schmidt	Bucket List	Fill 10 Walford Buckets	-	-	-	-	-
+145	college_kids_and_divorced_men	Some Assembly Required	Assemble 6 Different Typoes of VYKEA Furniture	-	-	-	-	-
+146	this_town_needs_an_enema	Gotpork Connoisseur	Consume one of each of the nine Gotpork villain drops	-	-	-	-	-
+147	this_this_lemonade	A Gallon of Milk Keeps the Doctor Away	Drink 7 days worth of milk	-	-	-	-	-
+148	ilovewesley	Prime Directive Director	Solve all Far Future scenarios without bloodshed	-	-	-	-	-
+149	oh_the_horror	Tentacle Tickler	Defeat 666 Eldritch Tentacles (current ascension)	-	-	-	-	-
+150	all_you_need_is_it	LOVE, LOVE, LOVE	Solve the L.O.V. Exit puzzle	-	-	-	-	-
+151	i_had_to_drink_from_the_liquid_cup	Gelatinous Hubris	Acquire all Passive Gelatinous Noob skills	-	-	-	-	-
+152	eleven_inch_flautist	Ultimate Cosmic Power	Defeat a Genie in Physical and Intellectual Trials	-	-	-	-	-
+153	cross_about_naught	Commemorative Replica Blob	Defeat an Amorphous Blob	-	-	-	-	-
+154	in_space_noone_can_hear_you_laugh	Salads of Many Worlds	Eat 11 primitive alien salad	-	-	-	-	-
+155	working_class_republican	You Do It To Yourself	Voting against yourself 11 times	-	-	-	-	-
+156	yule_be_happy	Traditional Crimbo	Consume Crimbo 2018 items on a single day	-	-	-	-	-
+157	we_found_a_dead_mouse	Steak and a Beer, Eh?	Consume Grilled mooseflank and Antique beer on a single day	-	-	-	-	-
+158	twenty_two_eyes	Talking Heads	Have all Beach Head buffs active	-	-	-	-	-
+159	cuppa_cuppa_burning_goo	Yule Have a Headache Tomorrow	Drink 11 marshmallow bombs in a single day	-	-	-	-	-
+160	every_christmas_is_like_sunday	Dreaming of a Bland Crimbo	Eat bread man, eggwater, flour cookie, plain candy cane	-	-	-	-	-
 161	no_religion_too	HIGH SCORE	Earn 100,000 points in the 8-Bit Realm	-	-	-	-	-
