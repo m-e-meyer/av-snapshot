@@ -1,3 +1,14 @@
+:root {
+	/* Colors */
+	--clrfam:	#CCFFCC;
+	--clrfamhatch:	#FFFFCC;
+	--clrfam100:	#33FF33;
+	--clrfam90:	#7777FF;
+	--clrbfam:	#57FEFF;
+	--clrbfamhatch:	#46C7C7;
+	--clrbfam100:	#FDD017;
+	--clrbfam90:	#C7A317;
+}
 body {
 	font-family: verdana, arial, san-serif; 
 	font-size: 0.8em; 
@@ -89,71 +100,53 @@ table .hcperm {
 .cb table .hcperm {
 	background-color: #5ff;
 }
-table .have {
-	background-color: #ccffcc;
-}
-table .have_notused {
-	background-color: #ffffcc;
-}
-table .have_100 {
-	background-color: #33ff33;
-}
-table .have_90 {
-	background-color: #ababfc;
-}
-.cb table .have {
-	background-color: #57feff;
-}
-.cb table .have_sc, .cb table .have_notused {
-	background-color: #46c7c7;
-}
-.cb table .have_100 {
-	background-color: #fdd017;
-}
-.cb table .have_90 {
-	background-color: #c7a317;
-}
 table .fam_run_100 {
-	background-color: #33FF33;
-	--background-color: #33FF33;
+	background-color: var(--clrfam100);
+}
+table .fam_run_100_u {
+	background-image: 
+		linear-gradient(to left, var(--clrfam100), var(--clrfam100) 6%, transparent 6%, transparent 94%, var(--clrfam100) 94%, var(--clrfam100)), 
+		linear-gradient(to bottom, var(--clrfam100), var(--clrfam100) 6%, transparent 6%, transparent 94%, var(--clrfam100) 94%, var(--clrfam100));
 }
 table .fam_run_90 {
-	background-color: #7777FF;
-	--background-color: #7777FF;
+	background-color: var(--clrfam90);
+}
+table .fam_run_90_u {
+	background-image: 
+		linear-gradient(to left, var(--clrfam90), var(--clrfam90) 6%, transparent 6%, transparent 94%, var(--clrfam90) 94%, var(--clrfam90)), 
+		linear-gradient(to bottom, var(--clrfam90), var(--clrfam90) 6%, transparent 6%, transparent 94%, var(--clrfam90) 94%, var(--clrfam90));
 }
 table .fam_have {
-	background-color: #CCFFCC;
-	--background-color: #CCFFCC;
+	background-color: var(--clrfam);
 }
 table .fam_have_hatch {
-	background-color: #FFFFCC;
-	--background-color: #FFFFCC;
-}
-table .fam_have_hatch_fade {
-	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #FFFFCC);
+	background-color: var(--clrfamhatch);
 }
 table .fam_missing {
-	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #FFFFFF);
+	background-color: transparent;
 }
 .cb table .fam_run_100 {
-	background-color: #FDD017;
-	--background-color: #FDD017;
+	background-color: var(--clrbfam100);
+}
+.cb table .fam_run_100_u {
+	background-image: 
+		linear-gradient(to left, var(--clrbfam100), var(--clrbfam100) 6%, transparent 6%, transparent 94%, var(--clrbfam100) 94%, var(--clrbfam100)), 
+		linear-gradient(to bottom, var(--clrbfam100), var(--clrbfam100) 6%, transparent 6%, transparent 94%, var(--clrbfam100) 94%, var(--clrbfam100));
 }
 .cb table .fam_run_90 {
-	background-color: #C7A317;
-	--background-color: #C7A317;
+	background-color: var(--clrbfam90);
+}
+.cb table .fam_run_90_u {
+	background-image: 
+		linear-gradient(to left, var(--clrbfam90), var(--clrbfam90) 6%, transparent 6%, transparent 94%, var(--clrbfam90) 94%, var(--clrbfam90)), 
+		linear-gradient(to bottom, var(--clrbfam90), var(--clrbfam90) 6%, transparent 6%, transparent 94%, var(--clrbfam90) 94%, var(--clrbfam90));
 }
 .cb table .fam_have {
-	background-color: #57FEFF;
-	--background-color: #57FEFF;
+	background-color: var(--clrbfam);
 }
 .cb table .fam_have_hatch {
-	background-color: #46C7C7;
-	--background-color: #46C7C7;
-}
-.cb table .fam_have_hatch_fade {
-	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #46C7C7);
+	background-color: var(--clrbfamhatch);
 }
 .cb table .fam_missing {
-	background: linear-gradient(to bottom, var(--background-color), var(--background-color), #FFFFFF);
+	background-color: transparent;
 }
