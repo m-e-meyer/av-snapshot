@@ -1,3 +1,4 @@
 *.sh
+*.swp
 settings.json
 geckodriver.log
