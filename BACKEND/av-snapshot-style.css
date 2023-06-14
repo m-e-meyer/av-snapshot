@@ -4,15 +4,17 @@
 	--clrfamhatch:	#FFFFCC;
 	--clrfam100:	#33FF33;
 	--clrfam90:	#7777FF;
-	--clrbfam:	#57FEFF;
-	--clrbfamhatch:	#46C7C7;
-	--clrbfam100:	#FDD017;
-	--clrbfam90:	#C7A317;
 }
 body {
 	font-family: verdana, arial, san-serif; 
 	font-size: 0.8em; 
-	background-color: #ffffff
+	background-color: #ffffff;
+}
+body.cb {
+	--clrfam:	#57FEFF;
+	--clrfamhatch:	#46C7C7;
+	--clrfam100:	#FDD017;
+	--clrfam90:	#C7A317;
 }
 h1, h2, h3 {
 	text-align: left; 
@@ -80,7 +82,7 @@ td.toc {
 	cursor: pointer;
 	padding: 5px .5em 5px .5em;
 	border: 2px #bbbbbb outset;
-    border-radius: .5em;
+	border-radius: .5em;
 	margin: 8px;
 	height: 1.5em;
 	background-color: #eeeeee;
@@ -103,18 +105,24 @@ table .hcperm {
 table .fam_run_100 {
 	background-color: var(--clrfam100);
 }
+table .fam_run_100_h {
+	background-image: 
+		linear-gradient(45deg, var(--clrfam100) 35%, var(--clrfamhatch) 35%, var(--clrfamhatch) 65%, var(--clrfam100) 65%); 
+}
 table .fam_run_100_u {
 	background-image: 
-		linear-gradient(to left, var(--clrfam100), var(--clrfam100) 6%, transparent 6%, transparent 94%, var(--clrfam100) 94%, var(--clrfam100)), 
-		linear-gradient(to bottom, var(--clrfam100), var(--clrfam100) 6%, transparent 6%, transparent 94%, var(--clrfam100) 94%, var(--clrfam100));
+		linear-gradient(-45deg, var(--clrfam100) 35%, transparent 35%, transparent 65%, var(--clrfam100) 65%); 
 }
 table .fam_run_90 {
 	background-color: var(--clrfam90);
 }
+table .fam_run_90_h {
+	background-image: 
+		linear-gradient(45deg, var(--clrfam90) 35%, var(--clrfamhatch) 35%, var(--clrfamhatch) 65%, var(--clrfam90) 65%); 
+}
 table .fam_run_90_u {
 	background-image: 
-		linear-gradient(to left, var(--clrfam90), var(--clrfam90) 6%, transparent 6%, transparent 94%, var(--clrfam90) 94%, var(--clrfam90)), 
-		linear-gradient(to bottom, var(--clrfam90), var(--clrfam90) 6%, transparent 6%, transparent 94%, var(--clrfam90) 94%, var(--clrfam90));
+		linear-gradient(-45deg, var(--clrfam90) 35%, transparent 35%, transparent 65%, var(--clrfam90) 65%); 
 }
 table .fam_have {
 	background-color: var(--clrfam);
@@ -123,30 +131,5 @@ table .fam_have_hatch {
 	background-color: var(--clrfamhatch);
 }
 table .fam_missing {
-	background-color: transparent;
-}
-.cb table .fam_run_100 {
-	background-color: var(--clrbfam100);
-}
-.cb table .fam_run_100_u {
-	background-image: 
-		linear-gradient(to left, var(--clrbfam100), var(--clrbfam100) 6%, transparent 6%, transparent 94%, var(--clrbfam100) 94%, var(--clrbfam100)), 
-		linear-gradient(to bottom, var(--clrbfam100), var(--clrbfam100) 6%, transparent 6%, transparent 94%, var(--clrbfam100) 94%, var(--clrbfam100));
-}
-.cb table .fam_run_90 {
-	background-color: var(--clrbfam90);
-}
-.cb table .fam_run_90_u {
-	background-image: 
-		linear-gradient(to left, var(--clrbfam90), var(--clrbfam90) 6%, transparent 6%, transparent 94%, var(--clrbfam90) 94%, var(--clrbfam90)), 
-		linear-gradient(to bottom, var(--clrbfam90), var(--clrbfam90) 6%, transparent 6%, transparent 94%, var(--clrbfam90) 94%, var(--clrbfam90));
-}
-.cb table .fam_have {
-	background-color: var(--clrbfam);
-}
-.cb table .fam_have_hatch {
-	background-color: var(--clrbfamhatch);
-}
-.cb table .fam_missing {
 	background-color: transparent;
 }

@@ -886,8 +886,8 @@ def print_familiar_cell(clas, imgname, name, doimages, april=False):
 #   want to try to set up separate backgrounds for something that might not happen
 FAM_STYLES = { 0:"", 1:"fam_have", 2:"fam_have_hatch", 
 	3:"fam_run_100", 4:"fam_run_90",
-	5:"fam_run_100_u", 6:"fam_run_100_u", 
-	7:"fam_run_90_u", 8:"fam_run_90_u" 
+	5:"fam_run_100_u", 6:"fam_run_100_h", 
+	7:"fam_run_90_u", 8:"fam_run_90_h" 
 }
 
 def score_familiars(state):
@@ -939,13 +939,16 @@ def o_familiars(state): # pylint: disable=too-many-branches
 	  f"have done <b>{tour}</b> tourguide runs and <b>{hundred}</b> 100% runs.</p>")
 	# Next, legend
 	o("<b>Legend</b><br/><table cellspacing='0'><tr>"
-		+'<td class="fam_run_100">100% Run Done</td>'
-		+'<td class="fam_run_100_u">100% Run Done<br/>with unowned<br/>familiar</td>'
-		+'<td class="fam_run_90">90% Run Done</td>'
-		+'<td class="fam_run_90_u">90% Run Done<br/>with unowned<br/>familiar</td>'
+		+"<td class='fam_missing'>Don't have<br/>Familiar</td>"
 		+'<td class="fam_have">Have Familiar</td>'
-		+'<td class="fam_have_hatch">Have Familiar Hatchling</td>'
-		+"<td class='fam_missing'>Don't have Familiar</td>")
+		+'<td class="fam_have_hatch">Have Familiar<br/>Hatchling</td>'
+		+'<td class="fam_run_90">90% Run Done</td>'
+		+'<td class="fam_run_100">100% Run Done</td>'
+		+'<td class="fam_run_90_u">90% Run Done<br/>with unowned<br/>familiar</td>'
+		+'<td class="fam_run_100_u">100% Run Done<br/>with unowned<br/>familiar</td>'
+		+'<td class="fam_run_90_h">90% Run Done<br/>unowned fam,<br/>have hatchling</td>'
+		+'<td class="fam_run_100_h">100% Run Done<br/>unowned fam,<br/>have hatchling</td>'
+		)
 	o("</tr></table>\n")
 
 def o_purchasedfams(state):
