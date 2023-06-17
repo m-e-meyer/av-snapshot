@@ -540,6 +540,8 @@ string check_mritems(string bookshelfHtml)
 
 	// Visit the woods to make sure getawayCampsiteUnlocked is set properly
 	buffer buf = visit_url("woods.php");
+	// Visit the Right Side of the Tracks to set telegraphOfficeAvailable 
+	buf = visit_url("place.php?whichplace=town_right");
 	
 	foreach x in MRITEMS {
 		ItemImage mrit = MRITEMS[x];
