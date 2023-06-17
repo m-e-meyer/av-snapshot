@@ -460,7 +460,13 @@ int familiar_check(string name, string gifname, string hatchling,
 		haveFamiliar = true;
 	}
 
-	matcher m = create_matcher("alt=\"" + name + " .([0-9.]+)..", koldbHtml);
+	// Some familiars (well, 1 so far) have another name in koldbHtml
+	string name2 = name;
+	if (name == "Vampire Bird") {
+		name2 = "Vampire Bat";
+	}
+
+	matcher m = create_matcher("alt=\"" + name2 + " .([0-9.]+)..", koldbHtml);
 	float percent = 0.0;
 	while(find(m)) {
 		string percentMatch = group(m, 1);
