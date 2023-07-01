@@ -66,7 +66,7 @@
 66	Penguin Goodfella	goodfella	bad penguin egg	p	-	-	-	-
 67	Jumpsuited Hound Dog	hounddog	pompadour'd puppy	s	-	-	-	-
 68	Green Pixie	pictsie	bottled green pixie	p	-	-	-	-
-69	Ragamuffin Imp	ragimp	porm	s	-	-	-	-
+69	Ragamuffin Imp	ragimp	pile of smoking rags	s	-	-	-	-
 70	Exotic Parrot	parrot	exotic parrot egg	s	-	-	-	-
 71	Wizard Action Figure	waf	Wizard Action Figure	p	-	-	-	-
 72	Gluttonous Green Ghost	ggg	class five ecto-larva	p	-	-	-	-
@@ -284,3 +284,4 @@
 284	Mini-Trainbot	tbot_on	deactivated mini-Trainbot	d	-	-	-	-	-
 285	Hobo in Sheep's Clothing	hobosheep	unoccupied sheep suit	p	-	-	-	-	-
 286	Pixel Rock	pixelrock	pixel rock	s	-	-	-	-	-
+287	Patriotic Eagle	pateagle	sleeping patriotic eagle	p	-	-	-	-	-
