@@ -429,3 +429,4 @@
 429	Crimbo Training: Sanitation Consultant	Slight Stench resist (+1)	-	pb	-	-	-	-
 430	Crimbo Training: Graffiti Censor	Slight Sleaze resist (+1)	-	pb	-	-	-	-
 431	Secret Door Awareness	There's one!	-	p	-	-	-	-
+432	Perpetrate Mild Evil	Such a prankster	-	b	-	-	-	-

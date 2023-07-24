@@ -644,7 +644,7 @@ def o_nonstdskills(state):
 	print_skill_row(state, 'Drippy', (406,407,408,0,0,0))
 	print_skill_multirow(state, 'Misc',
 						((147,185,162,170,171,181), (193,327,358,372,386,387),
-						 (388,390,402,404,405,409), (410,417,431,0,0,373)), levels)
+						 (388,390,402,404,405,409), (410,417,431,432,0,373)), levels)
 	o('<tr><th colspan="7" class="miniheader">Mystical Bookshelf</th><tr>')
 	print_skill_row(state, 'Tomes', (154, 155, 156, 182, 308, 319))
 	print_skill_multirow(state, 'Librams', ((157, 158, 159, 165, 184, 186),
