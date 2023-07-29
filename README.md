@@ -43,3 +43,18 @@ Sorry, you can't access cc_snapshot's stored profiles directly from api.aventuri
 
 ## Frequently Asked Questions
 
+### Why isn't the Mr. Item that I know I have showing up?
+Some items are unusual in that they open up places, so they don't appear in your inventory or in your Terrarium.  To detect these items, av-snapshot relies on the values of certain properties that should be set by Mafia.  If the property is set wrong, av-snapshot won't find it.  Sometimes it happens to people who have changed their names; perhaps their Mafias need to be brought up to speed.  Here are the properties used to find certain Mr. Items:
+|Unlocked Place|Property|
+|--------------|--------|
+|11th Precinct Headquarters|`hasDetectiveSchool`|
+|Chateau Mantegna|`chateauAvailable`|
+|LT&T Office|`telegraphOfficeAvailable`|
+|The Snojo|`snojoAvailable`|
+|Tunnel of L.O.V.E.|`loveTunnelAvailable`|
+
+If you have Mr. Item above that doesn't show up, go to Mafia's graphical command-line interface (gCLI) and enter
+```
+set <property>=true
+```
+where `<property>` is the property in the table above for the place.  You should only have to do this once.
