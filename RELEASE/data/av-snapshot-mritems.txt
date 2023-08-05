@@ -121,7 +121,7 @@
 121	p	GameInformPowerDailyPro subscription card	GameInformPowerDailyPro Magazine	GameInformPowerDailyPro	-	-	-	-
 122	i	Jarlsberg's pan	Jarlsberg's pan (Cosmic portal mode)	-	-	-	-	-
 123	t	Libram of Pulled Taffy	Libram of Pulled Taffy	-	-	-	-	-
-124	e	Order of the Green Thumb Order Form	forestvillage.php	friarcottage.gif	-	-	-	-
+124	s	Order of the Green Thumb Order Form	ownsFloristFriar	-	-	-	-	-
 125	f	adventurer clone egg	Mini-Adventurer	miniadv0	-	-	-	-
 126	i			-	-	-	-	-
 127	i	Folder Holder	over-the-shoulder Folder Holder	-	-	-	-	-

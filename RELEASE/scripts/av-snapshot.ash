@@ -553,15 +553,6 @@ string check_mritems(string bookshelfHtml)
 			string data = get(mrit, index);
 			switch(category)
 			{
-				case "e":  // This only exists because florist_available() exists instead of a setting (124)
-					// This does not check if you have one installed if you have any of the tradable item.
-					// Do not use this with other flags, this is a edge scenario
-					if ((amt == 0) && 
-					     (contains_text(visit_url(data), get(mrit, index + 1)))) {
-						amt += 1;
-					}
-					break;
-
 				case "f":	//Familiars, any of, comma separated (no whitespace)
 					foreach index, it in split_string(data, ",") {
 						if(have_familiar(to_familiar(it))) {
