@@ -259,3 +259,4 @@
 259	i	lucky Tam O'Shatner		-	-	-	-
 260	i	shrink-wrapped 2002 Mr. Store Catalog	2002 Mr. Store Catalog	-	-	-	-	-
 261	f	sleeping patriotic eagle	Patriotic Eagle	pateagle	-	-	-	-
+262	i	boxed august scepter	august scepter	-	-	-	-	-

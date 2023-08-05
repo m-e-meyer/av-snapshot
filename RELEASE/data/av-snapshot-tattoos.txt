@@ -290,3 +290,4 @@
 290	Jazz Agent HC	class30hc	-	-	-	-	-	-	-	-	-
 291	Shadow Shuit	shadouttat	shadow chef's hat	shadow trousers	-	-	-	-	-	-	-
 292	Shadow Tattoo	shadowtat	-	-	-	-	-	-	-	-	-
+293	Dental Drip	dentaltat	tooth cap	cat o' nine teeth	toothy trousers	-	-	-	-	-	-
