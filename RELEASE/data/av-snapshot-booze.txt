@@ -733,3 +733,5 @@
 733	shadow fluid
 734	shadow venom
 735	shadow martini
+736	bottle of Cabernet Sauvignon
+737	Sexy Cosmo
