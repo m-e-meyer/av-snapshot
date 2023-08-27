@@ -159,3 +159,4 @@
 159	cuppa_cuppa_burning_goo	Yule Have a Headache Tomorrow	Drink 11 marshmallow bombs in a single day	-	-	-	-	-
 160	every_christmas_is_like_sunday	Dreaming of a Bland Crimbo	Eat bread man, eggwater, flour cookie, plain candy cane	-	-	-	-	-
 161	no_religion_too	HIGH SCORE	Earn 100,000 points in the 8-Bit Realm	-	-	-	-	-
+162	skysubmarine	Ultimate Tosser	Toss a water balloon more than anyone on a certain day	-	-	-	-	-
