@@ -260,3 +260,4 @@
 260	i	shrink-wrapped 2002 Mr. Store Catalog	2002 Mr. Store Catalog	-	-	-	-	-
 261	f	sleeping patriotic eagle	Patriotic Eagle	pateagle	-	-	-	-
 262	i	boxed august scepter	august scepter	-	-	-	-	-
+263	i	book of facts	book of facts (dog-eared)	-	-	-	-	-

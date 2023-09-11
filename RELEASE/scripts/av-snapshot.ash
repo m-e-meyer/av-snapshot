@@ -660,11 +660,12 @@ string check_levels(int num_levels)
 	//		[4] bellow, [5] fun, [6] carrot, [7] bear, [8] numberology, [9] safari, 
 	//		[10] implode, [11] hobotat,	[12:16] karma, 
 	//		manuel ([16:19] casual, [19:22] thourough, [22:25] exhaustive),
-	//		[25] telescope, [26:28] chessboard, [28:32] hobocodes, [32] optimality)
+	//		[25] telescope, [26:28] chessboard, [28:32] hobocodes, [32] optimality),
+	//		[33] chitin
 	// hobotat's already been done by this point
 	string[int] levelmap = {
 		0:"46", 1:"47", 2:"48", 3:"117", 4:"118", 5:"121", 6:"128", 7:"134", 
-		8:"144", 9:"180", 10:"188", 32:"7254"
+		8:"144", 9:"180", 10:"188", 32:"7254", 33:"227"
 	};
 	foreach i, sknum in levelmap {
 		set_level_counter(i, get_property("skillLevel" + sknum).to_int(), num_levels);

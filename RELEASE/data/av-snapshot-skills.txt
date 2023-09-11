@@ -430,3 +430,5 @@
 430	Crimbo Training: Graffiti Censor	Slight Sleaze resist (+1)	-	pb	-	-	-	-
 431	Secret Door Awareness	There's one!	-	p	-	-	-	-
 432	Perpetrate Mild Evil	Such a prankster	-	b	-	-	-	-
+433	Chitinous Soul	+X HP	-	p	-	-	-	-
+434	Just the Facts	Trivia whiz	-	pb	-	-	-	-

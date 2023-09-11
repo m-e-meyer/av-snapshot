@@ -478,7 +478,7 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 		f"<small>{desc}</small>{iend}</td>")
 
 # Map av-snapshot skill numbers to positions in levels string
-LEVELED_SKILLS = {315:3, 316:4, 322:5, 326:6, 329:7, 343:8, 355:32, 389:9, 402:10}
+LEVELED_SKILLS = {315:3, 316:4, 322:5, 326:6, 329:7, 343:8, 355:32, 389:9, 402:10, 433:33}
 
 def gen_suffix(skill, levels):
 	"""TODO"""
@@ -644,7 +644,8 @@ def o_nonstdskills(state):
 	print_skill_row(state, 'Drippy', (406,407,408,0,0,0))
 	print_skill_multirow(state, 'Misc',
 						((147,185,162,170,171,181), (193,327,358,372,386,387),
-						 (388,390,402,404,405,409), (410,417,431,432,0,373)), levels)
+						 (388,390,402,404,405,409), (410,417,431,432,433,434),
+						 (0, 0, 0, 0, 0, 373)), levels)
 	o('<tr><th colspan="7" class="miniheader">Mystical Bookshelf</th><tr>')
 	print_skill_row(state, 'Tomes', (154, 155, 156, 182, 308, 319))
 	print_skill_multirow(state, 'Librams', ((157, 158, 159, 165, 184, 186),
@@ -1093,7 +1094,7 @@ def o_mritems(state):
 		(215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
-		(254, 255, 256, 257, 258, 260, 261, 262, 0, 0, 0, 0) ))
+		(254, 255, 256, 257, 258, 260, 261, 262, 263, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,

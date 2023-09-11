@@ -384,3 +384,4 @@
 384	Deep Dish of Legend	-	-	-	-	-	-	-
 385	Calzone of Legend	-	-	-	-	-	-	-
 386	Pizza of Legend	-	-	-	-	-	-	-
+387	chitin powder paste	-	-	-	-	-	-	-
