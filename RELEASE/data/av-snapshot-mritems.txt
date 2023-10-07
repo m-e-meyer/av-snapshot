@@ -261,3 +261,4 @@
 261	f	sleeping patriotic eagle	Patriotic Eagle	pateagle	-	-	-	-
 262	i	boxed august scepter	august scepter	-	-	-	-	-
 263	i	book of facts	book of facts (dog-eared)	-	-	-	-	-
+264	f	Dark Jill-of-All-Trades	Jill-of-All-Trades	-	-	-	-

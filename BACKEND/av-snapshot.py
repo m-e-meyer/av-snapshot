@@ -645,7 +645,7 @@ def o_nonstdskills(state):
 	print_skill_multirow(state, 'Misc',
 						((147,185,162,170,171,181), (193,327,358,372,386,387),
 						 (388,390,402,404,405,409), (410,417,431,432,433,434),
-						 (0, 0, 0, 0, 0, 373)), levels)
+						 (0, 0, 0, 0, 0, 0)), levels)
 	o('<tr><th colspan="7" class="miniheader">Mystical Bookshelf</th><tr>')
 	print_skill_row(state, 'Tomes', (154, 155, 156, 182, 308, 319))
 	print_skill_multirow(state, 'Librams', ((157, 158, 159, 165, 184, 186),
@@ -1094,7 +1094,7 @@ def o_mritems(state):
 		(215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
-		(254, 255, 256, 257, 258, 260, 261, 262, 263, 0, 0, 0) ))
+		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1192,7 +1192,8 @@ def o_equipment(state):
 	print_coolitem_table(state, ('', 'Hat', 'Pants', 'Accessories'),
 							(('150 Nickels', 27, 30, 34),
 							 ('200 Nickels', 28, 29, 33),
-							 ('250 Nickels', 26, 31, 32)))
+							 ('250 Nickels', 26, 31, 32),
+							 ('260 Nickels', 0, 0, 709)))
 
 def o_instruments(state):
 	print_coolitem_table(state, ('Seal Clubber', 'Turtle Tamer', 'Pastamancer',
@@ -1271,7 +1272,7 @@ def o_cool_thwaitgold(state):
 									(291, 297, 313, 353, 360, 362),
 									(382, 390, 391, 415, 421, 425),
 									(442, 446, 447, 452, 453, 454),
-									(537, 538, 539, 704, 707, 0)))
+									(537, 538, 539, 704, 707, 708)))
 
 def o_cool_medals(state):
 	print_coolitem_table(state, ('Sidequests', '0', '1', '2', '3', '4', '5', '6'),
@@ -1414,7 +1415,7 @@ def o_cool_hairclub(state):
 		 (292, 295, 296, 336, 354, 355),
 		 (356, 357, 358, 359, 361, 363),
 		 (364, 381, 392, 422, 423, 424),
-		 (443, 444, 445, 451, 0, 0)))
+		 (443, 444, 445, 451, 710, 0)))
 
 def o_cool_oliver(state):
 	print_coolitem_table(state, None, ((675, 676, 677, 678),))
