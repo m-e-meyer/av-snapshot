@@ -459,6 +459,20 @@ def class_for_perm(skill_bytes, skill_num):
 
 def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 	"""TODO"""
+	# if skill_num is a tuple, find the one we have
+	if isinstance(skill_num, tuple):
+		for sn in skill_num:
+			clas = class_for_perm(skill_bytes, sn)
+			if clas != '':
+				skill_num = sn
+				break
+	if isinstance(skill_num, tuple):
+		# if we don't have a skill, show something
+		if skill_num[0] == 406:
+			o(f"<td>Drippy Eye{wikilink('Drippy Eye-Beetle','-Beetle')}, {wikilink('Drippy Eye-Sprout', '-Sprout')}, or {wikilink('Drippy Eye-Stone', '-Stone')}</td>")
+			return
+		else:
+			skill_num = 0
 	if skill_num == 0:
 		o("<td></td>")
 		return
@@ -641,7 +655,7 @@ def o_nonstdskills(state):
 	print_skill_row(state, 'Gingerbread', (365,362,364,363,0,0))
 	print_skill_row(state, 'Spacegate', (367,368,369,370,0,0))
 	print_skill_row(state, 'PirateRealm', (400,401,0,0,0,0))
-	print_skill_row(state, 'Drippy', (406,407,408,0,0,0))
+	print_skill_row(state, 'Drippy', ((406,407,408),0,0,0,0,0))
 	print_skill_multirow(state, 'Misc',
 						((147,185,162,170,171,181), (193,327,358,372,386,387),
 						 (388,390,402,404,405,409), (410,417,431,432,433,434),
@@ -673,13 +687,23 @@ def o_skills(state):
 
 ###########################################################################
 
-def print_tattoo_cell(tattoos, tattoo_bytes, tat, doimages, levels=""):
+def print_tattoo_cell(tattoos, tattoo_bytes, tat, doimages, 
+					  levels="", colspan=1):
 	"""TODO"""
+	# if multiple tats, pick the one we have, if any
 	if isinstance(tat, tuple):
-		colspan = f" colspan='{tat[1]}'"
-		tat = tat[0]
+		for t in tat:
+			x = getbits(tattoo_bytes, t, 2)
+			if x > 0:
+				tat = t
+				break
+	if isinstance(tat, tuple):
+		tat = tat[0]	# or pick the lowest one that we don't have 
+	# set colspan html
+	if colspan != 1:
+		colspanstr = f" colspan='{colspan}'"
 	else:
-		colspan = ''
+		colspanstr = ''
 	if tat == 0:
 		o("<td></td>")
 	elif tat == -1:		# Hobo tattoo
@@ -701,7 +725,7 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, doimages, levels=""):
 		elif x == 2:
 			clas = "class='perm'"
 		img = f"<img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>" if doimages else ''
-		o(f"<td {clas}{colspan}>{img}{t[1]}</td>")
+		o(f"<td {clas}{colspanstr}>{img}{t[1]}</td>")
 
 def print_tattoo_table(state, rows, levels=""):
 	"""TODO"""
@@ -711,7 +735,13 @@ def print_tattoo_table(state, rows, levels=""):
 	for row in rows:
 		o("<tr>")
 		for tat in row:
-			print_tattoo_cell(tattoos, tattoo_bytes, tat, state['doimages'], levels)
+			# Legendary Regalia tats span 3 columns
+			if tat in range(108,114):
+				colspan = 3
+			else:
+				colspan = 1
+			print_tattoo_cell(tattoos, tattoo_bytes, tat, state['doimages'], 
+							  levels, colspan)
 		o("</tr>")
 	o("</table>")
 
@@ -739,12 +769,12 @@ def o_tattoos(state):
 
 def o_class(state):
 	print_tattoo_table(state,
-		((1, 2, 3, (108, 3)),
-		 (4, 5, 6, (109, 3)),
-		 (7, 8, 9, (110, 3)),
-		 (10, 11, 12, (111, 3)),
-		 (13, 14, 15, (112, 3)),
-		 (16, 17, 18, (113, 3)),
+		((1, 2, 3, 108),
+		 (4, 5, 6, 109),
+		 (7, 8, 9, 110),
+		 (10, 11, 12, 111),
+		 (13, 14, 15, 112),
+		 (16, 17, 18, 113),
 		 (144, 145, 149, 150, 155, 156),
 		 (179, 180, 194, 195, 211, 212),
 		 (213, 214, 215, 216, 228, 229),
@@ -788,16 +818,15 @@ def o_outfits(state):
 def o_other(state):
 	levels = state['levels']
 	print_tattoo_table(state,
-		((126, 130, 131, 139, 142, 0),
-		 (132, 133, 134, 135, 136, 0),
-		 (103, 104, 118, 106, 127, 128),
-		 (125, 140, 148, 178, 193, 192),
-		 (172, 173, 174, 175, 176, 177),
-		 (196, 203, 205, 209, 208, -1),
-		 (217, 218, 219, 220, 221, 227),
-		 (224, 231, 232, 233, 242, 246),
-		 (247, 248, 254, 260, 271, 273),
-		 (274, 275, 276, 292, 0, 0)), levels)
+		(((126, 130, 131, 139, 142), 
+		  (132, 133, 134, 135, 136), -1, 103, 104, 118), 
+		 (106, 127, 128, 125, 140, 148), 
+		 (172, 173, 174, 175, 176, 177), 
+		 (178, 193, 192, 196, 203, 205),
+		 (209, 208, 217, 218, 219, 220), 
+		 (221, 227, 224, 231, 232, 233), 
+		 (242, 246, 247, 248, 254, 260), 
+		 (271, 273, 274, 275, 276, 292)), levels)
 
 
 ###########################################################################
@@ -998,9 +1027,24 @@ def print_mritem_cell(state, it, subtable=False):
 
 def print_coolitem_cell(state, it, print_image=True):
 	"""TODO"""
+	# if tuple of items, find the first one we have
 	if isinstance(it, tuple):
-		colspan = " colspan=" + str(it[1])
-		it = it[0]
+		for i in it:
+			n = state['coolitem-counts'][i-1]
+			if n > 0:
+				it = i
+				break
+	if isinstance(it, tuple):
+		it = it[0]	# or the first one we don't have
+		if it == 321:
+			# Time bandit/lord badge is a special case
+			tbbc = 'Time Bandit Badge of Courage'
+			tlbh = 'Time Lord Badge of Honor'
+			o(f"<td style='margin: 5px'>{wikilink(tbbc, tbbc)}<br/>or<br/>{wikilink(tlbh, tlbh)}</td>")
+			return
+	# silver wossname gets 7 columns
+	if it == 554:
+		colspan = " colspan=7"
 	else:
 		colspan = ''
 	if it == 0:
@@ -1032,7 +1076,7 @@ def print_coolitem_row(state, its, print_image=True):
 	"""TODO"""
 	o("<tr>")
 	for it in its:
-		# strings are headers, numbers are cool items
+		# strings are headers, numbers and tuples are cool items
 		if not isinstance(it, str):
 			print_coolitem_cell(state, it, print_image)
 		else:
@@ -1278,7 +1322,7 @@ def o_cool_medals(state):
 	print_coolitem_table(state, ('Sidequests', '0', '1', '2', '3', '4', '5', '6'),
 		(('Hippy', 540, 541, 542, 543, 544, 545, 546),
 		('Frat', 547, 548, 549, 550, 551, 552, 553),
-		('All', (554, 7))))
+		('All', 554)))
 
 def o_cool_sea(state):
 	print_coolitem_table(state, None, (range(63, 69), range(69, 75), range(75, 82)))
@@ -1394,9 +1438,8 @@ def o_cool_piraterealm(state):
 
 def o_cool_underwater(state):
 	print_coolitem_table(state, None,
-		((429, 430, 439, 440, 437, 427),
-		 (433, 434, 428, 436, 438, 431),
-		 (426, 432, 435, 0, 0, 0)))
+		((429, 430, (439, 440), 437, 427, 433, 434), 
+		 (428, 436, 438, 431, 426, 432, 435)))
 
 def o_cool_gooified(state):
 	print_coolitem_table(state, None,
@@ -1406,16 +1449,15 @@ def o_cool_twitchery(state):
 	print_coolitem_table(state, None,
 		((225, 320, 322, 317, 228, 318),
 		 (230, 229, 227, 315, 316, 319),
-		 (220, 321, 221, 222, 223, 323),
-		 (224, 226, 231, 232, 233, 314)))
+		 (220, (321, 323), 221, 222, 224, 223),
+		 (226, 231, 232, 233, 314, 0)))
 
 def o_cool_hairclub(state):
 	print_coolitem_table(state, None,
 		((383, 384, 385, 256, 290, 273),
-		 (292, 295, 296, 336, 354, 355),
-		 (356, 357, 358, 359, 361, 363),
-		 (364, 381, 392, 422, 423, 424),
-		 (443, 444, 445, 451, 710, 0)))
+		 (292, 295, 296, 336, 354, (355, 356, 357, 358, 359)),
+		 (361, 363, 364, 381, 392, 422), 
+		 (423, 424, (443, 444), 445, 451, 710)))
 
 def o_cool_oliver(state):
 	print_coolitem_table(state, None, ((675, 676, 677, 678),))
