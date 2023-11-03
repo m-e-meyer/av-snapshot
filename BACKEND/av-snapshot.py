@@ -826,7 +826,8 @@ def o_other(state):
 		 (209, 208, 217, 218, 219, 220), 
 		 (221, 227, 224, 231, 232, 233), 
 		 (242, 246, 247, 248, 254, 260), 
-		 (271, 273, 274, 275, 276, 292)), levels)
+		 (271, 273, 274, 275, 276, 292),
+		 (294, 0, 0, 0, 0, 0)), levels)
 
 
 ###########################################################################
@@ -1138,7 +1139,7 @@ def o_mritems(state):
 		(215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
-		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 0, 0) ))
+		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1469,7 +1470,7 @@ def o_cool_train(state):
 
 ###########################################################################
 
-def print_summary(data, bytess):
+def print_summary(data, bytess, recipes=True):
 	"""TODO"""
 	have = 0
 	havent = 0
@@ -1481,14 +1482,18 @@ def print_summary(data, bytess):
 			have = have + 1
 		else:
 			havent = havent + 1
-	o(f"<p>You have found <b>{have}</b> of these discoveries"
-	  f" and are missing <b>{havent}</b>.<br/>"
-	  "Are some discoveries not showing up? Turn Inventory Images ON and one-click"
-	  " crafting OFF and try again - it has a higher success rate.</p>")
+	if recipes:
+		o(f"<p>You have found <b>{have}</b> of these discoveries"
+		  f" and are missing <b>{havent}</b>.<br/>"
+		  "Are some discoveries not showing up? Turn Inventory Images ON and one-click"
+		  " crafting OFF and try again - it has a higher success rate.</p>")
+	else:
+		o(f"<p>You have consumed <b>{have}</b> of these items"
+		  f" and have not yet tried <b>{havent}</b>.</p>")
 
-def print_sorted_list(data, bytess):
+def print_sorted_list(data, bytess, recipes=True):
 	"""TODO"""
-	print_summary(data, bytess)
+	print_summary(data, bytess, recipes)
 	col = 1
 	data = list(data.values())
 	data = sorted(data, key=lambda d: d[1].upper())
@@ -1541,10 +1546,10 @@ def o_disc_misc(state):
 	print_sorted_list(state['conmisc'], state['conmisc-bytes'])
 
 def o_consumption_food(state):
-	print_sorted_list(state['food'], state['food-bytes'])
+	print_sorted_list(state['food'], state['food-bytes'], False)
 
 def o_consumption_booze(state):
-	print_sorted_list(state['booze'], state['booze-bytes'])
+	print_sorted_list(state['booze'], state['booze-bytes'], False)
 
 ###########################################################################
 

@@ -291,3 +291,4 @@
 291	Shadow Shuit	shadouttat	shadow chef's hat	shadow trousers	-	-	-	-	-	-	-
 292	Shadow Tattoo	shadowtat	-	-	-	-	-	-	-	-	-
 293	Dental Drip	dentaltat	tooth cap	cat o' nine teeth	toothy trousers	-	-	-	-	-	-
+294	Burning Leaf Tattoo	al_tat	-	-	-	-	-	-	-	-	-

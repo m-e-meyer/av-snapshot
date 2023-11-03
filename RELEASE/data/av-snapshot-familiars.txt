@@ -286,3 +286,4 @@
 286	Pixel Rock	pixelrock	pixel rock	s	-	-	-	-	-
 287	Patriotic Eagle	pateagle	sleeping patriotic eagle	p	-	-	-	-	-
 288	Jill-of-All-Trades	darkjill2f	Dark Jill-of-All-Trades	p	-	-	-	-	-
+289	Flaming Leafcutter Ant	al_ant	smoldering leafcutter ant egg	d	-	-	-	-	-
