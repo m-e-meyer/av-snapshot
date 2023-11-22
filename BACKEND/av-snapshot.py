@@ -648,7 +648,7 @@ def o_nonstdskills(state):
 						((312,313,317,320,321,330), (331,332,333,340,341,342),
 						 (346,347,344,345,0,0)))
 	print_skill_row(state, 'LT&T', (352,353,354,0,0,0))
-	print_skill_row(state, 'Twitch', (314,0,0,0,0,0))
+	print_skill_row(state, 'Crash Site', (314,0,0,0,0,0))
 	print_skill_row(state, 'Deck of Every Card', (335,336,337,338,339,0))
 	print_skill_row(state, 'Snojo', (349,350,351,0,0,0))
 	print_skill_row(state, 'Eldritch Love', (359,366,371,418,0,0))
