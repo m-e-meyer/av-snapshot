@@ -222,7 +222,7 @@
 222	Time Cape	timecape	-	-	-	-	-
 223	Time Cloak	timecape	-	-	-	-	-
 224	Time Lord Participation Mug	coffeecup	-	-	-	-	-
-225	Caveman Dan's Favorite Rock	danrock	-	-	-	-	-
+225	Caveman Dan's favorite rock	danrock	-	-	-	-	-
 226	time shuriken	shuriken	-	-	-	-	-
 227	ninjammies	ninjammies	-	-	-	-	-
 228	glass eye	cglasseye	-	-	-	-	-
