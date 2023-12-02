@@ -263,3 +263,4 @@
 263	i	book of facts	book of facts (dog-eared)	-	-	-	-	-
 264	f	Dark Jill-of-All-Trades	Jill-of-All-Trades	-	-	-	-
 265	i	A Guide to Burning Leaves		-	-	-	-	-
+266	i	wrapped candy cane sword cane	candy cane sword cane	-	-	-	-	-

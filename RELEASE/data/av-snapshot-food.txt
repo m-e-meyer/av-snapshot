@@ -950,3 +950,6 @@
 950	tempura green and red bean
 951	fire crackers
 952	leafy browns
+953	corned beet
+954	pickled bread
+955	salted mutton
