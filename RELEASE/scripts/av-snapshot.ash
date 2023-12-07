@@ -301,6 +301,9 @@ int num_items(string name)
 	}
 
 	//Thanks, Bale!
+	// Turns out get_campground returns a list of the items that were used 
+	// to populate your campground, so these items don't need their opened
+	// equivalents spelled out in av-snapshot-mritems.txt.
 	if(get_campground() contains i) amt += 1;
 	return amt;
 }
