@@ -264,3 +264,4 @@
 264	f	Dark Jill-of-All-Trades	Jill-of-All-Trades	-	-	-	-
 265	i	A Guide to Burning Leaves		-	-	-	-	-
 266	i	wrapped candy cane sword cane	candy cane sword cane	-	-	-	-	-
+267	i	crated wardrobe-o-matic	wardrobe-o-matic	-	-	-	-	-
