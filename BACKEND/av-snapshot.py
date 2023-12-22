@@ -639,6 +639,8 @@ def o_nonstdskills(state):
 	print_skill_multirow(state, 'Crimbo 2022<br/>Crimbotrainathon',
 						 ((420, 421, 422, 423, 424, 425),
 						  (426, 427, 428, 429, 430, 0)))
+	print_skill_row(state, 'Crimbo 2023<br/>Crimbuccaneerathon',
+					(435, 436, 437, 438, 439, 0))
 	o('<tr><th colspan="7" class="miniheader">Other</th><tr>')
 	print_skill_row(state, 'Trader 2008', (144,0,0,0,0,0))
 	print_skill_row(state, 'The Suburbs of Dis', (187,188,189,0,0,0))
@@ -827,7 +829,7 @@ def o_other(state):
 		 (221, 227, 224, 231, 232, 233), 
 		 (242, 246, 247, 248, 254, 260), 
 		 (271, 273, 274, 275, 276, 292),
-		 (294, 0, 0, 0, 0, 0)), levels)
+		 (294, 297, 298, 0, 0, 0)), levels)
 
 
 ###########################################################################

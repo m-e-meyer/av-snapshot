@@ -735,3 +735,16 @@
 735	shadow martini
 736	bottle of Cabernet Sauvignon
 737	Sexy Cosmo
+738	mulled wine
+739	canteen of eggnog
+740	Swedish coffee
+741	hot wine
+742	flask of eggnog
+743	Jamaican coffee
+744	Crimbuccaneer mologrog cocktail
+745	officer's nog
+746	old-school pirate grog
+747	red and white claret
+748	Crimbow Rainbo
+749	red white and blue claret
+750	yule grog

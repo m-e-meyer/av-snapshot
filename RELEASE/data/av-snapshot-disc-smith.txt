@@ -313,3 +313,4 @@
 313	thicksilver spurs	-	-	-	-	-	-	-
 314	ticksilver spurs	-	-	-	-	-	-	-
 315	wicksilver spurs	-	-	-	-	-	-	-
+316	gunwale whalegun	-	-	-	-	-	-	-

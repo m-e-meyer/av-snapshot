@@ -292,3 +292,7 @@
 292	Shadow Tattoo	shadowtat	-	-	-	-	-	-	-	-	-
 293	Dental Drip	dentaltat	tooth cap	cat o' nine teeth	toothy trousers	-	-	-	-	-	-
 294	Burning Leaf Tattoo	al_tat	-	-	-	-	-	-	-	-	-
+295	Crimbuccaneer Rigging	crimbuctat1	Crimbuccaneer tricorn	Crimbuccaneer breeches	-	-	-	-	-	-	-
+296	Elf Guard Fatigues	elfguardtat1	Elf Guard patrol cap	Elf Guard hotpants	-	-	-	-	-	-	-
+297	Crimbuccaneer Tattoo	crimbopirate	-	-	-	-	-	-	-	-	-
+298	Elf Guard Tattoo	unknown	-	-	-	-	-	-	-	-	-

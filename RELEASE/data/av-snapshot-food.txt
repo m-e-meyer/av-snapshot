@@ -953,3 +953,13 @@
 953	corned beet
 954	pickled bread
 955	salted mutton
+956	peppermint donut
+957	sugarplum ration
+958	rum-soaked fruitcake
+959	gingerbread nylons
+960	grog nuts
+961	peppermint tack
+962	sundae ration
+963	whalesteak
+964	wet tack
+965	whalecake

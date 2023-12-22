@@ -385,3 +385,5 @@
 385	Calzone of Legend	-	-	-	-	-	-	-
 386	Pizza of Legend	-	-	-	-	-	-	-
 387	chitin powder paste	-	-	-	-	-	-	-
+388	wet tack	-	-	-	-	-	-	-
+389	whalecake	-	-	-	-	-	-	-

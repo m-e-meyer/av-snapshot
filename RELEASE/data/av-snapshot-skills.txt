@@ -432,3 +432,8 @@
 432	Perpetrate Mild Evil	Such a prankster	-	b	-	-	-	-
 433	Chitinous Soul	+X HP	-	p	-	-	-	-
 434	Just the Facts	Trivia whiz	-	pb	-	-	-	-
+435	Elf Guard Cooking	3 free cooks/day	-	pb	-	-	-
+436	Elf Guard Extortion Techniques	+10% meat	-	pb	-	-	-
+437	Elf Guard Relaxation Techniques	3 free rests/day	-	pb	-	-	-
+438	Fruit Recognition	+5% items	-	pb	-	-	-
+439	Old-School Cocktailcrafting	3 free mixes/day	-	pb	-	-	-
