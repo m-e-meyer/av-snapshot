@@ -295,4 +295,4 @@
 295	Crimbuccaneer Rigging	crimbuctat1	Crimbuccaneer tricorn	Crimbuccaneer breeches	-	-	-	-	-	-	-
 296	Elf Guard Fatigues	elfguardtat1	Elf Guard patrol cap	Elf Guard hotpants	-	-	-	-	-	-	-
 297	Crimbuccaneer Tattoo	crimbopirate	-	-	-	-	-	-	-	-	-
-298	Elf Guard Tattoo	unknown	-	-	-	-	-	-	-	-	-
+298	Elf Guard Tattoo	elfguardtat	-	-	-	-	-	-	-	-	-
