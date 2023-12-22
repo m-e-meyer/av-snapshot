@@ -708,3 +708,26 @@
 708	Thwaitgold fairyfly statue	pebble	-	-	-	-	-
 709	deck of lewd playing cards	lewddeck	-	-	-	-	-
 710	stuffed dinosaur	dinostuffy	-	-	-	-	-
+711	ancient Elf dessert spoon	egspoon	-	-	-	-	-
+712	brown pirate pants	brownpants	-	-	-	-	-
+713	Crimbuccaneer bombjacket	cardigan	-	-	-	-	-
+714	Crimbuccaneer fledges (disintegrating)	crimbucfledge2	-	-	-	-	-
+715	Crimbuccaneer lantern	lantern2	-	-	-	-	-
+716	Crimbuccaneer runebone	runebone	-	-	-	-	-
+717	Crimbuccaneer tavern swab	crimbucmop	-	-	-	-	-
+718	Elf Guard broom	egbroom	-	-	-	-	-
+719	Elf Guard clipboard	egclipboard	-	-	-	-	-
+720	Elf Guard fuel tank	egtank	-	-	-	-	-
+721	Elf Guard insignia (general)	eginsignia2	-	-	-	-	-
+722	Elf Guard red and white beret	egberet	-	-	-	-	-
+723	Elf Guard safety bear	egbear	-	-	-	-	-
+724	Elf Guard SCUBA tank	elfscuba	-	-	-	-	-
+725	Elvish underarmor	egarmor	-	-	-	-	-
+726	free boots	crimbucboots	-	-	-	-	-
+727	gunwale	gunwale	-	-	-	-	-
+728	gunwale whalegun	whalegungun	-	-	-	-	-
+729	Lil' Snowball Factory	snowfactory	-	-	-	-	-
+730	massive wrench	egwrench	-	-	-	-	-
+731	punching mirror	crimbucmirror	-	-	-	-	-
+732	stuffed kraken	crimbuckraken	-	-	-	-	-
+733	whalegun	whalegun	-	-	-	-	-

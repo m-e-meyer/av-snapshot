@@ -1470,6 +1470,12 @@ def o_cool_train(state):
 	print_coolitem_table(state, None, ((697, 701, 679, 680, 681, 703),
 									   (682, 683, 698, 699, 700, 702)))
 
+def o_cool_crimbuc(state):
+	print_coolitem_table(state, None, ((711, 712, 713, 714, 715, 716),
+									   (717, 718, 719, 720, 721, 722),
+									   (723, 724, 725, 726, 727, 728),
+									   (729, 730, 731, 732, 733, 0)))
+
 
 ###########################################################################
 
@@ -1705,6 +1711,7 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 			Section(2, "Twitchery (most recent 2022)", "a6zj", o_cool_twitchery),
 			Section(2, "Oliver's Place (2022)", "a6zk", o_cool_oliver),
 			Section(2, "Train Crimbo (2022)", "a6zl", o_cool_train),
+			Section(2, "Pirate Crimbo (2023)", "a6zm", o_cool_crimbuc),
 			Section(2, "Hair Club for Loathers", "a6zz", o_cool_hairclub)]),
 		Section(1, "Discoveries", "a7", o_pass, [
 			Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),
