@@ -325,3 +325,4 @@
 325	battery (lantern) (AAA+9-Volt)	battery [(]lantern[)]</b> <font size=1><br/>battery [(]AAA[)] (0) + battery [(]9-Volt[)] (0)	-	-	-	-	-	-
 326	battery (lantern) (AA+D)	battery [(]lantern[)]</b> <font size=1><br/>battery [(]AA[)] (0) + battery [(]D[)] (0)	-	-	-	-	-	-
 327	green marshmallow	-	-	-	-	-	-	-
+328	gunwale whalegun	-	-	-	-	-	-	-

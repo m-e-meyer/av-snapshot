@@ -679,7 +679,7 @@ def o_skills(state):
 		x = getbits(skill_bytes, i+1, 2)
 		tally[x] = tally[x] + 1
 	o(f"<p class='subheader'>You have <b>{tally[2]}</b> skills Hardcore permed,"
-	  f" <b>{tally[1]}</b> skills Softcore permed, and <b>{tally[0]}</b> missing.</p>\n"
+	  f" <b>{tally[1]}</b> skills Softcore permed, and <b>{tally[0]-3}</b> missing.</p>\n"
 	  f"You have <b>{int(levels[12:16], 36)}</b> unspent Karma.</p>"
 	  "<p>Explanation of symbols: <i>Italicized</i> skills marked with a"
 	  " <i>&#x2119</i> are Passive;"

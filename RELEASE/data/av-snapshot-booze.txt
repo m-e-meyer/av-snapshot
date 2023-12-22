@@ -739,7 +739,7 @@
 739	canteen of eggnog
 740	Swedish coffee
 741	hot wine
-742	flask of eggnog
+742	flask of egggrog
 743	Jamaican coffee
 744	Crimbuccaneer mologrog cocktail
 745	officer's nog
