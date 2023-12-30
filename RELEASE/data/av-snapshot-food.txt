@@ -963,3 +963,6 @@
 963	whalesteak
 964	wet tack
 965	whalecake
+966	candied lime
+967	fruit-stuffed rumcake
+968	gingerbread pirate
