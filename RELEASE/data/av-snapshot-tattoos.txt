@@ -44,7 +44,7 @@
 44	Booze	nofood	-	-	-	-	-	-	-	-	-
 45	Oxy	oxy	-	-	-	-	-	-	-	-	-
 46	8-Bit Finery	swordtat	pixel hat	pixel sword	pixel pants	-	-	-	-	-	-
-47	Antique Arms and Armor	armortat	antique helmet	antique spear	antique greaves	antique shield	-	-	-	-	-
+47	Antique Arms And Armor	armortat	antique helmet	antique spear	antique greaves	antique shield	-	-	-	-	-
 48	Arboreal Raiment	wreathtat	can of fake snow	tree skirt	coloured-light &quot;necklace&quot;	-	-	-	-	-	-
 49	Arrrbor Day Apparrrrrel	arbortat	willowy bonnet	crotchety pants	saccharine maple pendant	-	-	-	-	-	-
 50	Black Armaments	blacktat	black helmet	black sword	black shield	black greaves	-	-	-	-	-
@@ -78,8 +78,8 @@
 78	Knob Goblin Harem Girl Disguise	haremgirl	knob goblin harem pants	knob goblin harem veil	none	-	-	-	-	-	-
 79	Mining Gear	miner	miner's helmet	7-fot dwarven mattock	miner's pants	-	-	-	-	-	-
 80	Mutant Couture	dnatat	parasitic headgnawer	parasitic claw	parasitic strangleworm	parasitic tentacles	-	-	-	-	-
-81	OK Lumber. Outfit	canadiatat	balaclava	los chinos	disbelief suspenders	-	-	-	-	-	-
-82	Palmist Para.	palmtat	extra-large palm-frond toupee	palm-frond whip	palm-frond capris	-	-	-	-	-	-
+81	OK Lumberjack Outfit	canadiatat	balaclava	los chinos	disbelief suspenders	-	-	-	-	-	-
+82	Palmist Paraphernalia	palmtat	extra-large palm-frond toupee	palm-frond whip	palm-frond capris	-	-	-	-	-	-
 83	Pork Elf Prizes	pigirontat	pig-iron helm	pig-iron shinguards	pig-iron bracers	-	-	-	-	-	-
 84	Primitive Radio Duds	vol_tat	voluminous radio hat	voluminous radio pants	voluminous radio sneakers	-	-	-	-	-	-
 85	Pyretic Panhandler Paraphernalia	hothobotat	ol' scratch's stovepipe hat	ol' scratch's ash can	ol' scratch's ol' britches	-	-	-	-	-	-
@@ -134,8 +134,8 @@
 134	AWOL III	aol3	-	-	-	-	-	-	-	-	-
 135	AWOL IV	aol4	-	-	-	-	-	-	-	-	-
 136	AWOL V	aol5	-	-	-	-	-	-	-	-	-
-137	Honey	honeytat	honeycap	honey dipper	honeybritches	-	-	-	-	-	-
-138	Lunar	lunartat	Moonthril Circlet	Moonthril Flamberge	Moonthril Greaves	-	-	-	-	-	-
+137	Bits o' Honey	honeytat	honeycap	honey dipper	honeybritches	-	-	-	-	-	-
+138	Luniform	lunartat	Moonthril Circlet	Moonthril Flamberge	Moonthril Greaves	-	-	-	-	-	-
 139	Sneaky Pete XXIX 4	sspd4plunk	-	-	-	-	-	-	-	-	-
 140	Corrupted Data	datatat	-	-	-	-	-	-	-	-	-
 141	Dark Bro's Vestments	necbrotat	The Necbromancer's Hat	The Necbromancer's Stein	The Necbromancer's Shorts	-	-	-	-	-	-
@@ -143,7 +143,7 @@
 143	Sucker Samurai Suit	lollitat	sucker kabuto	sucker tachi	sucker hakama	-	-	-	-	-	-
 144	AoB	class11	-	-	-	-	-	-	-	-	-
 145	AoB HC	class11hc	-	-	-	-	-	-	-	-	-
-146	Clay Tattoo	claytat	hot daub bun	foot-long hot daub	hot daub stand	-	-	-	-	-	-
+146	Hot Daub Ensemble	claytat	hot daub bun	foot-long hot daub	hot daub stand	-	-	-	-	-	-
 147	Wax Wardrobe	crayontat	wax hat	wax pants	-	-	-	-	-	-	-
 148	FDKOL tattoo	fdkoltat	-	-	-	-	-	-	-	-	-
 149	Zombie Slayer	class12	-	-	-	-	-	-	-	-	-
@@ -161,14 +161,14 @@
 161	Violent Vestments	shubtat	Ass-Stompers of Violence	Brand of Violence	Novelty Belt Buckle of Violence	Lens of Violence	Pigsticker of Violence	Jodhpurs of Violence	-	-	-
 162	Hateful Habiliment	yogtat	Cold Stone of Hatred	Girdle of Hatred	Staff of Simmering Hatred	Pantaloons of Hatred	Fuzzy Slippers of Hatred	Lens of Hatred	-	-	-
 163	Clothing of Loathing	loathetat	Goggles of Loathing	Stick-Knife of Loathing	Scepter of Loathing	Jeans of Loathing	Treads of Loathing	Belt of Loathing	Pocket Square of Loathing	-	-
-164	Dreadful Bugbear Tattoo	dvotat2	Covers-Your-Head	Drapes-You-Regally	Warms-Your-Tush	-	-	-	-	-	-
-165	Dreadful Ghost Tattoo	dvotat5	Mayor Ghost's toupee	Mayor Ghost's cloak	Mayor Ghost's khakis	-	-	-	-	-	-
-166	Dreadful Pajama Tattoo	dvotat1	dreadful fedora	dreadful sweater	dreadful glove	-	-	-	-	-	-
-167	Dreadful Skeleton Tattoo	dvotat6	Unkillable Skeleton's skullcap	Unkillable Skeleton's breastplate	Unkillable Skeleton's shinguards	-	-	-	-	-	-
-168	Dreadful Vampire Tattoo	dvotat7	Thunkula's drinking cap	Drunkula's cape	Drunkula's silky pants	-	-	-	-	-	-
-169	Dreadful Werewolf Tattoo	dvotat3	Great Wolf's headband	Great Wolf's right paw	Great Wolf's left paw	-	-	-	-	-	-
-170	Dreadful Zombie Tattoo	dvotat4	zombie mariachi hat	zombie accordion	zombie mariachi pants	-	-	-	-	-	-
-171	Cool Iron Tattoo	dvotat8	cool iron helmet	cool iron breastplate	cool iron greaves	-	-	-	-	-	-
+164	Dreadful Bugbear Suit	dvotat2	Covers-Your-Head	Drapes-You-Regally	Warms-Your-Tush	-	-	-	-	-	-
+165	Dreadful Ghost Suit	dvotat5	Mayor Ghost's toupee	Mayor Ghost's cloak	Mayor Ghost's khakis	-	-	-	-	-	-
+166	Dreadful Pajamas	dvotat1	dreadful fedora	dreadful sweater	dreadful glove	-	-	-	-	-	-
+167	Dreadful Skeleton Suit	dvotat6	Unkillable Skeleton's skullcap	Unkillable Skeleton's breastplate	Unkillable Skeleton's shinguards	-	-	-	-	-	-
+168	Dreadful Vampire Suit	dvotat7	Thunkula's drinking cap	Drunkula's cape	Drunkula's silky pants	-	-	-	-	-	-
+169	Dreadful Werewolf Suit	dvotat3	Great Wolf's headband	Great Wolf's right paw	Great Wolf's left paw	-	-	-	-	-	-
+170	Dreadful Zombie Suit	dvotat4	zombie mariachi hat	zombie accordion	zombie mariachi pants	-	-	-	-	-	-
+171	Cool Irons	dvotat8	cool iron helmet	cool iron breastplate	cool iron greaves	-	-	-	-	-	-
 172	Mark of the Bugbear	dv_tat1	-	-	-	-	-	-	-	-	-
 173	Mark of the Werewolf	dv_tat2	-	-	-	-	-	-	-	-	-
 174	Mark of the Zombie	dv_tat3	-	-	-	-	-	-	-	-	-
@@ -180,26 +180,26 @@
 180	AoSP HC	class15hc	-	-	-	-	-	-	-	-	-
 181	Space Beast Furs	sbeasttat	space beast fur hat	space beast fur whip	space beast fur pants	-	-	-	-	-	-
 182	Brogre Brouture	brogretat	Brogre bucket hat	Brogre brolo shirt	Brogre brorts	-	-	-	-	-	-
-183	Xiblaxian Tattoo	xiblaxtat	Xiblaxian stealth cowl	Xiblaxian stealth vest	Xiblaxian stealth trousers	-	-	-	-	-	-
-184	SPQL Tattoo	spqktat	centurion helmet	gladiator tunica	madius	pteruges	Roman sadnals	radiator heater shield	-	-	-
-185	Bear Claw Tattoo	bearclawta	warbear dress helmet	warbear dress greaves	warbear dress bracers	-	-	-	-	-	-
+183	Xiblaxian Stealth Suit	xiblaxtat	Xiblaxian stealth cowl	Xiblaxian stealth vest	Xiblaxian stealth trousers	-	-	-	-	-	-
+184	Gladiatorial Glad Rags	spqktat	centurion helmet	gladiator tunica	madius	pteruges	Roman sadnals	radiator heater shield	-	-	-
+185	Warbear Dress Armor	bearclawta	warbear dress helmet	warbear dress greaves	warbear dress bracers	-	-	-	-	-	-
 186	Workoutfit	workouttat	sweatband	gym shorts	ankleweights	-	-	-	-	-	-
-187	High-Radiation Tattoo	radminetat	radiation-resistant helmet	high-energy mining laser	servo-assisted exo-pants	-	-	-	-	-	-
-188	ZAP! Tattoo	zaptat	toy Crimbot mega face	toy Crimbot power glove	toy Crimbot super fist	toy Crimbot rocket legs	-	-	-	-	-
+187	High-Radiation Mining Gear	radminetat	radiation-resistant helmet	high-energy mining laser	servo-assisted exo-pants	-	-	-	-	-	-
+188	Crimbot Crimboutfit	zaptat	toy Crimbot mega face	toy Crimbot power glove	toy Crimbot super fist	toy Crimbot rocket legs	-	-	-	-	-
 189	Ceramic Suit	porctat	porcelain porkpie	porcelain pelerine	porcelain police baton	porcelain pepper mill	porcelain plus-fours	porcelain phantom mask	-	-	-
 190	Synthetic Suit	polytat	polyester panama hat	polyester parachute	polyester peeler	polyester pad	polyester pettipants	polyester pulsera	-	-	-
-191	Topiary Tattoo	topitat	topee	topiary tights	topiary necktie	-	-	-	-	-	-
+191	Topiaria	topitat	topee	topiary tights	topiary necktie	-	-	-	-	-	-
 192	Merc Core challenge coin	merctat	-	-	-	-	-	-	-	-	-
 193	Spring Break Beach Tattoo coupon	sbreaktat	-	-	-	-	-	-	-	-	-
 194	Ed	class17	-	-	-	-	-	-	-	-	-
 195	Ed HC	class17hc	-	-	-	-	-	-	-	-	-
 196	Dinseylandfill Tattoo	dinseytat	-	-	-	-	-	-	-	-	-
-197	Dinsey's Brain Tattoo	wdbraintat	dinsey's brain	dinsey's pizza cutter	dinsey's radar dish	dinsey's pants	dinsey's oculus	dinsey's glove	-	-	-
+197	Dinsey's Exoskeleton	wdbraintat	dinsey's brain	dinsey's pizza cutter	dinsey's radar dish	dinsey's pants	dinsey's oculus	dinsey's glove	-	-	-
 198	Toxic Togs	toxictat	isotophat	toxic mop	three mile island shorts	-	-	-	-	-	-
-199	Spelunker Tattoo	spelunktat	spelunker's fedora	spelunker's whip	spelunker's khakis	-	-	-	-	-	-
-200	Hot Ghost Tattoo	hotghosttat	ghast iron garibaldi	ghast iron cleaver	ghast iron heater shield	ghast iron codpiece	-	-	-	-	-
-201	The Emperor's New Tattoo	emperortat	The Emperor's new hat	The Emperor's new shirt	The Emperor's new pants	-	-	-	-	-	-
-202	SMOOCH Tattoo	smoochtat	SMOOCH breastplate	SMOOCH codpiece	SMOOCH bracers	SMOOCH kneepads	SMOOCH spaulders	-	-	-	-
+199	Spelunker's Gear	spelunktat	spelunker's fedora	spelunker's whip	spelunker's khakis	-	-	-	-	-	-
+200	Ghast Iron Gear	hotghosttat	ghast iron garibaldi	ghast iron cleaver	ghast iron heater shield	ghast iron codpiece	-	-	-	-	-
+201	The Emperor's New Clothes	emperortat	The Emperor's new hat	The Emperor's new shirt	The Emperor's new pants	-	-	-	-	-	-
+202	SMOOCH Army Uniform	smoochtat	SMOOCH breastplate	SMOOCH codpiece	SMOOCH bracers	SMOOCH kneepads	SMOOCH spaulders	-	-	-	-
 203	DEBBIE Tattoo	debbietat	-	-	-	-	-	-	-	-	-
 204	Cooper's Couture	barreltat	chest barrel	barrelhead	bottoms of the barrel	-	-	-	-	-	-
 205	Wal-Mart Tattoo	walmarttat	-	-	-	-	-	-	-	-	-
@@ -207,7 +207,7 @@
 207	Bakelite Brigandine	baketat	bakelite belt	bakelite badge	bakelite bowl	bakelite brooch	bakelite breeches	bakelite backpack	-	-	-
 208	LT&T Tattoo	ltttat	-	-	-	-	-	-	-	-	-
 209	Batfellow Tattoo	batmantat	-	-	-	-	-	-	-	-	-
-210	The Jokester's Tattoo	jokestertat	The Jokester's pants	The Jokester's wig	The Jokester's gun	-	-	-	-	-	-
+210	The Jokester's Costume	jokestertat	The Jokester's pants	The Jokester's wig	The Jokester's gun	-	-	-	-	-	-
 211	Cow Puncher	class18	-	-	-	-	-	-	-	-	-
 212	Cow Puncher HC	class18hc	-	-	-	-	-	-	-	-	-
 213	Beanslinger	class19	-	-	-	-	-	-	-	-	-
@@ -220,7 +220,7 @@
 220	Proton Tattoo	protontat	-	-	-	-	-	-	-	-	-
 221	Twitch Television Tattoo	twitchtat	-	-	-	-	-	-	-	-	-
 222	Eldritch Equipage	elditchtat	eldritch hat	eldritch pants	-	-	-	-	-	-	-
-223	Gingerbread Tattoo	gingertat	gingerbread top hat	gingerbread waistcoat	gingerbread trousers	candy dress shoes	candy necktie	chocolate pocketwatch	-	-	-
+223	Gingerbread Best	gingertat	gingerbread top hat	gingerbread waistcoat	gingerbread trousers	candy dress shoes	candy necktie	chocolate pocketwatch	-	-	-
 224	Eternal Knot Tattoo	eternaltat	-	-	-	-	-	-	-	-	-
 225	Aeroutfit	aerotat	aerogel akubra	aerogel accordion	aerogel attache case	aerogel anvil	aerogel apron	aerogel ascot	-	-	-
 226	Wrought Wrappings	wroughttat	wrought-iron wig	wrought-iron whisk	wrought-iron waders	wrought-iron winch crank	wrought-iron widget	wrought-iron walker	-	-	-
@@ -240,9 +240,9 @@
 240	Genie Garments	genietat	genie's turbane	genie's scimitar	genie's pants	genie's bracers	-	-	-	-	-
 241	Psychic Enpsemble	psychictat	psychic's circlet	psychic's pslacks	psychic's crystal ball	psychic's amulet	-	-	-	-	-
 242	FantasyRealm Tattoo	frtat	-	-	-	-	-	-	-	-	-
-243	Warrior's Tattoo	frtat1	FantasyRealm Warrior's Helm	Dragonscale breastplate	The Ghoul King's ghoulottes	belt of Ogrekind	-	-	-	-	-
-244	Wizard's Tattoo	frtat2	FantasyRealm Mage's Hat	nozzle of the Phoenix	the Archwizard's briefs	the Ley Incursion's waist	-	-	-	-	-
-245	Thief's Tattoo	frtat3	FantasyRealm Rogue's Mask	Duke Vampire's regal cloak	leggings of the Spider Queen	Master Thief's utility belt	-	-	-	-	-
+243	FantasyRealm Warrior's Outfit	frtat1	FantasyRealm Warrior's Helm	Dragonscale breastplate	The Ghoul King's ghoulottes	belt of Ogrekind	-	-	-	-	-
+244	FantasyRealm Wizard's Outfit	frtat2	FantasyRealm Mage's Hat	nozzle of the Phoenix	the Archwizard's briefs	the Ley Incursion's waist	-	-	-	-	-
+245	FantasyRealm Thief's Outfit	frtat3	FantasyRealm Rogue's Mask	Duke Vampire's regal cloak	leggings of the Spider Queen	Master Thief's utility belt	-	-	-	-	-
 246	Gattoo	gtat	-	-	-	-	-	-	-	-	-
 247	Cheese Tattoo	bbatttat	-	-	-	-	-	-	-	-	-
 248	Party Tattoo&trade; gift certificate	partytat	-	-	-	-	-	-	-	-	-
@@ -267,7 +267,7 @@
 267	Mushroom Masquerade	mushtat	mushroom cap	mushroom shield	mushroom pants	mushroom badge	-	-	-	-	-
 268	Plumber	class25	-	-	-	-	-	-	-	-	-
 269	Plumber HC	class25hc	-	-	-	-	-	-	-	-	-
-270	Guzzlr Tattoo	guzzlrtat	guzzlr hat	guzzlr pants	guzzlr shoes	-	-	-	-	-	-
+270	Guzzlr Uniform	guzzlrtat	guzzlr hat	guzzlr pants	guzzlr shoes	-	-	-	-	-	-
 271	Guzzlr Tattoo 2	guzzlrtat2	-	-	-	-	-	-	-	-	-
 272	Lathed Livery	lathetat	hemlock helm	balsam barrel	purpleheart &quot;pants&quot;	wormwood wedding ring	-	-	-	-	-
 273	Yeg's Tattoo	yegtat	-	-	-	-	-	-	-	-	-

@@ -690,7 +690,7 @@ def o_skills(state):
 ###########################################################################
 
 def print_tattoo_cell(tattoos, tattoo_bytes, tat, doimages, 
-					  levels="", colspan=1):
+					  levels="", colspan=1, printlink=False):
 	"""TODO"""
 	# if multiple tats, pick the one we have, if any
 	if isinstance(tat, tuple):
@@ -727,7 +727,8 @@ def print_tattoo_cell(tattoos, tattoo_bytes, tat, doimages,
 		elif x == 2:
 			clas = "class='perm'"
 		img = f"<img src='{IMAGES}/otherimages/sigils/{t[2]}.gif'><br/>" if doimages else ''
-		o(f"<td {clas}{colspanstr}>{img}{t[1]}</td>")
+		txt = wikilink(t[1], t[1]) if printlink else t[1]
+		o(f"<td {clas}{colspanstr}>{img}{txt}</td>")
 
 def print_tattoo_table(state, rows, levels=""):
 	"""TODO"""
@@ -805,7 +806,7 @@ def o_outfits(state):
 			continue	# we did the legendary regalia in the Class section
 		if x == 0:
 			o("<tr>")
-		print_tattoo_cell(tattoos, tattoo_bytes, t+1, state['doimages'])
+		print_tattoo_cell(tattoos, tattoo_bytes, t+1, state['doimages'], printlink=True)
 		x = x+1
 		if x == 10:
 			o("</tr>")
@@ -1141,7 +1142,8 @@ def o_mritems(state):
 		(215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226),
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
-		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266) ))
+		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
+		(268, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,

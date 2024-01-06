@@ -265,3 +265,4 @@
 265	i	A Guide to Burning Leaves		-	-	-	-	-
 266	i	wrapped candy cane sword cane	candy cane sword cane	-	-	-	-	-
 267	i	crated wardrobe-o-matic	wardrobe-o-matic	-	-	-	-	-
+268	i	baby chest mimic	chest mimic	-	-	-	-	-
