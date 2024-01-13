@@ -731,3 +731,15 @@
 731	punching mirror	crimbucmirror	-	-	-	-	-
 732	stuffed kraken	crimbuckraken	-	-	-	-	-
 733	whalegun	whalegun	-	-	-	-	-
+734	moss mace	mossmace	-	-	-	-	-
+735	moss megaphone	mossmegaphone	-	-	-	-	-
+736	moss medal	mossmedal	-	-	-	-	-
+737	moss mitre	mossmitre	-	-	-	-	-
+738	moss mantle	mossmantle	-	-	-	-	-
+739	moss marlinspike	mossmarlin	-	-	-	-	-
+740	adobe arsecover	adobepants	-	-	-	-	-
+741	adobe adze	adobeadze	-	-	-	-	-
+742	adobe abacus	adobeabacus	-	-	-	-	-
+743	adobe ayam	adobehat	-	-	-	-	-
+744	adobe ascot	adobeascot	-	-	-	-	-
+745	adobe abaya	adobeabaya	-	-	-	-	-

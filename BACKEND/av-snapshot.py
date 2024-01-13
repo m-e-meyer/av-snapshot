@@ -738,13 +738,15 @@ def print_tattoo_table(state, rows, levels=""):
 	for row in rows:
 		o("<tr>")
 		for tat in row:
-			# Legendary Regalia tats span 3 columns
+			# Legendary Regalia tats span 3 columns and link to wiki
 			if tat in range(108,114):
 				colspan = 3
+				printlink = True
 			else:
 				colspan = 1
+				printlink = False
 			print_tattoo_cell(tattoos, tattoo_bytes, tat, state['doimages'], 
-							  levels, colspan)
+							  levels, colspan, printlink)
 		o("</tr>")
 	o("</table>")
 
@@ -1298,7 +1300,9 @@ def o_cool_ascension(state):
 		range(663, 669),
 		range(669, 675),
 		range(691, 697),
-		range(685, 691))
+		range(685, 691),
+		range(734, 740),
+		range(740, 746))
 	have = 0
 	havent = 0
 	counts = state['coolitem-counts']

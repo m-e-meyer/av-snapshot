@@ -95,7 +95,7 @@
 95	Smooth Movement	-5% Combat<br />(10adv @ 10MP)	-	-	-	-	-	-
 96	Carlweather's Cantata of Confrontation	+5% Combat<br />(Buff @ 20MP)	-	-	-	-	-	-
 97	Pulverize	Smash Stuff!	-	p	-	-	-	-
-98	Tao of the Terrapin	Double DR of Hat/Pants	-	p	-	-	-	-
+98	Tao of the Terrapin	Double DA of Hat/Pants	-	p	-	-	-	-
 99	Transcendental Noodlecraft	+2 Dry Noodles, Wok Access	-	p	-	-	-	-
 100	The Way of Sauce	+2 Reagents, use Scrum. Solutions	-	p	-	-	-	-
 101	Superhuman Cocktailcrafting	+2 Ingredients, Still Access	-	p	-	-	-	-

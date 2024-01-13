@@ -296,3 +296,5 @@
 296	Elf Guard Fatigues	elfguardtat1	Elf Guard patrol cap	Elf Guard hotpants	-	-	-	-	-	-	-
 297	Crimbuccaneer Tattoo	crimbopirate	-	-	-	-	-	-	-	-	-
 298	Elf Guard Tattoo	elfguardtat	-	-	-	-	-	-	-	-	-
+299	Moss Mufti	mosstat	moss mitre	moss mantle	moss mace	moss megaphone	moss medal	moss marlinspike	-	-	-
+300	Adobe Armor	adobetat	adobe ayam	adobe abaya	adobe adze	adobe abacus	adobe arsecover	adobe ascot	-	-	-
