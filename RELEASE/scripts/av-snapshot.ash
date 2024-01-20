@@ -571,7 +571,8 @@ string check_mritems(string bookshelfHtml)
 					break;
 
 				case "p":	//Correspondences (Pen Pal, Game Magazine, etc)
-					if(contains_text(visit_url("account.php?tab=correspondence"), ">" + data +"</option>"))	{
+					buffer b = visit_url("account.php?tab=correspondence");
+					if(contains_text(b, ">" + data +"</option>")) {
 						amt += 1;
 					}
 					break;

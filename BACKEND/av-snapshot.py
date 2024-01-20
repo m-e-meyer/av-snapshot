@@ -1020,6 +1020,8 @@ def print_mritem_cell(state, it, subtable=False):
 		print_mritem_cell(state, it[0], True)
 		print_mritem_cell(state, it[1], True)
 		o("</tr></table></td>")
+	elif isinstance(it, str):
+		o(f"<td>{it}</td>")
 	else:
 		mritems = state['mritems']
 		counts = state['mritem-counts']
@@ -1149,26 +1151,30 @@ def o_mritems(state):
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
-		('', 'Volleychaun', 'Fairychaun', 'Fairyball', 'FairyWhelp', 'Equipment'),
-		((67, 68, 0, 0, 0),
-		(75, 76, 0, 0, 0),
-		(73, 74, 0, 0, 0),
-		(71, 72, 0, 0, 0),
-		(69, 70, 0, 0, 0),
-		(77, 78, 0, 0, 0),
-		(88, 87, 0, 0, 0),
-		(105, 106, 0, 0, 0),
-		(119, 120, 0, 0, 0),
-		(133, 134, 0, 0, 0),
-		(146, 147, 0, 0, 0),
-		(0, 0, 161, 0, 0),
-		(0, 0, 176, 0, 0),
-		(0, 0, 0, 190, 0),
-		(0, 0, 201, 0, 0),
-		(0, 0, 0, 0, 214),
-		(0, 0, 0, 0, 227),
-		(0, 0, 0, 0, 239),
-		(0, 0, 253, 0, 0)))
+		('', 'Volleychaun', 'Fairychaun'),
+		((67, 68),
+		(75, 76),
+		(73, 74),
+		(71, 72),
+		(69, 70),
+		(77, 78),
+		(88, 87),
+		(105, 106),
+		(119, 120),
+		(133, 134),
+		(146, 147)))
+	o('<p/>')
+	print_mritem_table(state, 2016,
+		('', 'Item', 'Type'),
+		((161, 'Fairyball'),
+		(176, 'Fairyball'),
+		(190, 'Fairywhelp'),
+		(201, 'Fairyball'),
+		(214, 'Accessory'),
+		(227, 'Shirt'),
+		(239, 'Off-hand'),
+		(253, 'Fairyball'),
+		(269, 'Eudora')))
 
 def o_jicks_mom(state):
 	"""This is a weird case, a mix of Mr. Items and Cool items"""
@@ -1714,9 +1720,9 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 			Section(2, "PirateRealm (2019)", "a6zg", o_cool_piraterealm),
 			Section(2, "Underwater Crimbo (2019)", "a6zh", o_cool_underwater),
 			Section(2, "Gooified Crimbo (2021)", "a6zi", o_cool_gooified),
-			Section(2, "Twitchery (most recent 2022)", "a6zj", o_cool_twitchery),
 			Section(2, "Oliver's Place (2022)", "a6zk", o_cool_oliver),
 			Section(2, "Train Crimbo (2022)", "a6zl", o_cool_train),
+			Section(2, "Twitchery (most recent 2023)", "a6zj", o_cool_twitchery),
 			Section(2, "Pirate Crimbo (2023)", "a6zm", o_cool_crimbuc),
 			Section(2, "Hair Club for Loathers", "a6zz", o_cool_hairclub)]),
 		Section(1, "Discoveries", "a7", o_pass, [
