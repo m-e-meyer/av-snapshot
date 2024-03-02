@@ -298,3 +298,5 @@
 298	Elf Guard Tattoo	elfguardtat	-	-	-	-	-	-	-	-	-
 299	Moss Mufti	mosstat	moss mitre	moss mantle	moss mace	moss megaphone	moss medal	moss marlinspike	-	-	-
 300	Adobe Armor	adobetat	adobe ayam	adobe abaya	adobe adze	adobe abacus	adobe arsecover	adobe ascot	-	-	-
+301	WereProfessor	class31	-	-	-	-	-	-	-	-	-
+302	WereProfessor HC	class31hc	-	-	-	-	-	-	-	-	-
