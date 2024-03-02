@@ -51,7 +51,7 @@ class Section:
 			if self.level > 0:
 				o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
 					f"<h{self.level} id='{self.anchor}'>{self.title}</h{self.level}></td>"
-					"<td>[<a href='#top'>back to top</a>]</td></tr></table>")
+					"<td>[<a href='#top' target='_self'>back to top</a>]</td></tr></table>")
 			self.textfn(state)
 			for ss in self.subsections:
 				ss.out(state)
@@ -78,7 +78,7 @@ class Section:
 		if self.level == 0 or not self.enabled:
 			return ""
 		prefix = "&nbsp;&bull;&nbsp;" * (self.level - 1)
-		return f"{prefix}<a href='#{self.anchor}'>{self.title}</a><br/>"
+		return f"{prefix}<a href='#{self.anchor}' target='_self'>{self.title}</a><br/>"
 	def toc_entries(self):
 		if not self.enabled:
 			return []
@@ -313,7 +313,7 @@ def wikilink(link, text):
 	"""
 	# Remove square brackets
 	link = link.replace('[', '').replace(']', '') if (link.find('[') >= 0) else link
-	return f'<a href="http://kol.coldfront.net/thekolwiki/index.php/{link}">{text}</a>'
+	return f'<a href="http://kol.coldfront.net/thekolwiki/index.php/{link}" rel="noreferrer">{text}</a>'
 
 
 def getbits(byts, index, eltsize):
@@ -376,7 +376,7 @@ def hx(tag, text, link):
 	"""TODO"""
 	o(f"<table class='nobord' cellspacing=0 cellpadding=0><tr><td class='noshrink'>"
 	  f"<{tag} id='{link}'>{text}</{tag}></td>"
-	  "<td>[<a href='#top'>back to top</a>]</td></tr></table>")
+	  "<td>[<a href='#top' target='_self'>back to top</a>]</td></tr></table>")
 
 def h1(state, text, link):
 	"""TODO"""
@@ -396,7 +396,7 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
 	"""TODO"""
 	tstamp = fetched_argv['tstamp']
 	o("<!DOCTYPE html>\n")
-	o("<html><head><style>")
+	o("<html><head><base target='_blank'/><style>")
 	with open_file_for_reading('av-snapshot-style.css') as fil:
 		o(fil.read())
 	bclas = ''
@@ -428,10 +428,10 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
 	  f" av-snapshot.ash v{av_version} run on KoLmafia revision r{mafia}, rendered by"
 	  f" av-snapshot.py v{state['info']['VERSION']}.  If you'd like to use this yourself,"
 	  f" check out the Kingdom of Loathing forum link"
-	  f" <a href='http://forums.kingdomofloathing.com/vb/showthread.php?t=250707'>here</a>.</p>")
+	  f" <a href='http://forums.kingdomofloathing.com/vb/showthread.php?t=250707' rel='noreferrer'>here</a>.</p>")
 	o("<p>av-snapshot is a fork of the cc_snapshot project by Cheesecookie,"
 	  " whom I thank for his work."
-	  f"  <a href='http://cheesellc.com/kol/profile.php?u={quote_plus(name)}'>Here</a> is the"
+	  f"  <a href='http://cheesellc.com/kol/profile.php?u={quote_plus(name)}' rel='noreferrer'>Here</a> is the"
 	  " cc_snapshot equivalent of your query.</p>")
 	query = f"?u={escape(name)}"
 	if 'oob' in argv:
@@ -442,7 +442,7 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
 		switch = 'on'
 		query = query + '&colorblind=1'
 	suffix = '' if on_aws() else '.py'
-	o(f"<p>Please click <a href='av-snapshot{suffix}{query}'>here</a> to turn {switch}"
+	o(f"<p>Please click <a href='av-snapshot{suffix}{query}' target='_self'>here</a> to turn {switch}"
 	  " colorblind mode.</p></div>\n")
 
 
