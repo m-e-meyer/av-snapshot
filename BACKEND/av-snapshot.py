@@ -785,7 +785,7 @@ def o_class(state):
 		 (213, 214, 215, 216, 228, 229),
 		 (257, 258, 268, 269, 281, 0),  # no HC Grey You :-(
 		 (285, 286, 287, 288, 289, 290),
-		 (301, 0, 0, 0, 0, 0)))  # no HC WereProfessor :-(
+		 (301, 302, 0, 0, 0, 0)))  
 
 def o_ascension(state):
 	print_tattoo_table(state,
