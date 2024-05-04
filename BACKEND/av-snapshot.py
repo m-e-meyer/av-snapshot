@@ -992,7 +992,7 @@ def o_purchasedfams(state):
 	o_familiar_table(state, "p", "The hatchlings for these familiars were directly purchasable from Mr. Store.  The latest few may still be in Standard.")
 	
 def o_standardfams(state):
-	o_familiar_table(state, "s", "These familiars are expected to be forever Standard.  Except the Restless Cow Skull, I didn't expect that.  That may change later.")
+	o_familiar_table(state, "s", "These familiars are expected to be forever Standard.")
 
 def o_derivedfams(state):
 	o_familiar_table(state, "d", "The hatchlings for these familiars are assembled from parts, derived from an IotM, obtainable during a Crimbo or other special event, or acquired some other way.  The latest few may still be in Standard.")

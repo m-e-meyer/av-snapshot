@@ -185,7 +185,7 @@
 185	Machine Elf	machelf	machine elf capsule	p	-	-	-	-
 186	Choctopus	choctopus	Gratitude chocolate (octopus-filled)	d	-	-	-	-
 187	Rockin' Robin	rockinrobin	basking robin	p	-	-	-	-
-188	Restless Cow Skull	cowskull	shuddering cow skull	s	-	-	-	-
+188	Restless Cow Skull	cowskull	shuddering cow skull	d	-	-	-	-
 189	Intergnat	intergnat	disconnected intergnat	p	-	-	-	-
 190	Software Bug	softwarebug	software bug	d	-	-	-	-
 191	Bark Scorpion	barkscorp	baby bark scorpion	d	-	-	-	-
