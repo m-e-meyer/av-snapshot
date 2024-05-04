@@ -966,3 +966,9 @@
 966	candied lime
 967	fruit-stuffed rumcake
 968	gingerbread pirate
+969	yam
+970	mayam spinach
+971	yam and swiss
+972	yam slider
+973	yam mayo
+974	yam burrito

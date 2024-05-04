@@ -387,3 +387,6 @@
 387	chitin powder paste	-	-	-	-	-	-	-
 388	wet tack	-	-	-	-	-	-	-
 389	whalecake	-	-	-	-	-	-	-
+390	yam burrito	-	-	-	-	-	-	-
+391	yam mayo	-	-	-	-	-	-	-
+392	yam slider	-	-	-	-	-	-	-

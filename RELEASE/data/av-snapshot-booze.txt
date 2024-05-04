@@ -748,3 +748,7 @@
 748	Crimbow Rainbo
 749	red white and blue claret
 750	yule grog
+751	yam martini
+752	sweet potato o' mine
+753	Southern yam
+754	sweet potato punch

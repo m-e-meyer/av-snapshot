@@ -264,3 +264,7 @@
 264	red white and blue claret	-	-	-	-	-	-	-
 265	yule grog	-	-	-	-	-	-	-
 266	Crimbow Rainbo	-	-	-	-	-	-	-
+267	yam martini	-	-	-	-	-	-	-
+268	Southern yam	-	-	-	-	-	-	-
+269	sweet potato o' mine	-	-	-	-	-	-	-
+270	sweet potato punch	-	-	-	-	-	-	-
