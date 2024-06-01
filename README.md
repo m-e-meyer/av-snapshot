@@ -48,14 +48,36 @@ Some items are unusual in that they open up places, so they don't appear in your
 |Unlocked Place|Property|
 |--------------|--------|
 |11th Precinct Headquarters|`hasDetectiveSchool`|
+|Autumn-aton|`hasAutumnaton`|
+|Boxing Daycare|`daycareOpen`|
 |Chateau Mantegna|`chateauAvailable`|
+|Conspiracy Island|`spookyAirportAlways`|
+|cosmic bowling ball|`hasCosmicBowlingBall`|
+|Dinseylandfill|`stenchAirportAlways`|
+|FantasyRealm|`frAlways`|
 |Florist Friar|`ownsFloristFriar` (as of Mafia r27496)|
+|Getaway Campsite|`getawayCampsiteUnlocked`|
+|Gingerbread City|`gingerbreadCityAvailable`|
+|The Glaciest|`coldAirportAlways`|
+|Horsery|`horseryAvailable`|
+|lovebug pheromones|`lovebugsUnlocked`|
 |LT&T Office|`telegraphOfficeAvailable`|
+|MayDay|`hasMaydayContract`|
+|Neverending Party|`neverendingPartyAlways`|
+|Oliver's Place|`ownsSpeakeasy`|
+|PirateRealm|`prAlways`|
+|Shrine to the Barrel god|`barrelShrineUnlocked`|
 |The Snojo|`snojoAvailable`|
+|Spacegate|`spacegateAlways`|
+|Spring Break Beach|`sleazeAirportAlways`|
+|That 70s Volcano|`hotAirportAlways`|
 |Tunnel of L.O.V.E.|`loveTunnelAvailable`|
+|Voting Booth|`voteAlways` (but see below)|
 
 If you have Mr. Item above that doesn't show up, go to Mafia's graphical command-line interface (gCLI) and enter
 ```
 set <property>=true
 ```
 where `<property>` is the property in the table above for the place.  You should only have to do this once.
+
+Note: Aliisza observed that, in Mafia r27956, if `voteToday` is `true`, Mafia sets `voteAlways` to `false`.  If you're not seeing your Voting Booth in your snapshot, you might want to check this.
