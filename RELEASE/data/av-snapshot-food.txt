@@ -972,3 +972,5 @@
 972	yam slider
 973	yam mayo
 974	yam burrito
+975	mini kiwi
+976	mini kiwi digitized cookies

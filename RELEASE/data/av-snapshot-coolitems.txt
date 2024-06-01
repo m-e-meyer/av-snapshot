@@ -744,3 +744,4 @@
 744	adobe ascot	adobeascot	-	-	-	-	-
 745	adobe abaya	adobeabaya	-	-	-	-	-
 746	Thwaitgold wolf spider statuette	thwaitwolf	-	-	-	-	-
+747	Thwaitgold Illinigina illinoiensis statuette	thwaitilli	-	-	-	-	-

@@ -290,3 +290,4 @@
 290	Pet Anchor	anchor	pet anchor	d	-	-	-	-	-
 291	Rigging Snake	rigsnake	baby rigging snake	d	-	-	-	-	-
 292	Chest Mimic	mimicchest	baby chest mimic	p	-	-	-	-	-
+293	Mini Kiwi	kiwi_kiwi	mini kiwi egg	p	-	-	-	-	-

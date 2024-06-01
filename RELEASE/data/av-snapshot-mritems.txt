@@ -271,3 +271,4 @@
 271	i	packaged Everfull Dart Holster	Everfull Dart Holster	-	-	-	-	-
 272	i	boxed Apriling band helmet	Apriling band helmet	-	-	-	-	-
 273	i	boxed Mayam Calendar	Mayam Calendar	-	-	-	-	-
+274	f	mini kiwi egg	Mini Kiwi	-	-	-	-	-
