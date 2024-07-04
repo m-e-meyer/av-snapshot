@@ -272,3 +272,4 @@
 272	i	boxed Apriling band helmet	Apriling band helmet	-	-	-	-	-
 273	i	boxed Mayam Calendar	Mayam Calendar	-	-	-	-	-
 274	f	mini kiwi egg	Mini Kiwi	-	-	-	-	-
+275	i	packaged Roman Candelabra	Roman Candelabra	-	-	-	-	-
