@@ -340,7 +340,7 @@
 340	saffron uttarasanga	brobe1	-	-	-	-	-
 341	third eye	thirdeye	-	-	-	-	-
 342	Krampus Horn	krampushorn	-	-	-	-	-
-343	Uncle Crimbo's Hat	santahat	-	-	-	-	-
+343	Uncle Crimbo's hat	santahat	-	-	-	-	-
 344	sprinkle-begging cup	starchcan	-	-	-	-	-
 345	gingerbeard	gingerbeard	-	-	-	-	-
 346	sour ball and chain	sourballchain	-	-	-	-	-
