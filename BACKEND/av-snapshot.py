@@ -1148,7 +1148,7 @@ def o_mritems(state):
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
-		(268, 270, 271, 272, 273, 274, 275, 0, 0, 0, 0, 0) ))
+		(268, 270, 271, 272, 273, 274, 275, 276, 0, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1291,7 +1291,7 @@ def o_cool_ascension(state):
 		range(567, 573),
 		range(573, 579),
 		range(579, 585),
-		range(585, 591),
+		(585, 586, 588, 587, 589, 590),
 		range(591, 597),
 		range(597, 603),
 		range(603, 609),
@@ -1465,10 +1465,11 @@ def o_cool_gooified(state):
 
 def o_cool_twitchery(state):
 	print_coolitem_table(state, None,
-		((225, 320, 322, 317, 228, 318),
-		 (230, 229, 227, 315, 316, 319),
-		 (220, (321, 323), 221, 222, 224, 223),
-		 (226, 231, 232, 233, 314, 0)))
+		((225, 320, 322, 749, 317, 228),
+		 (318, 230, 229, 748, 227, 315),
+		 (316, 319, 220, (321, 323), 221, 222),
+		 (224, 223, 226, 231, 232, 233),
+		 (314, 0, 0, 0, 0, 0)))
 
 def o_cool_hairclub(state):
 	print_coolitem_table(state, None,
@@ -1673,7 +1674,7 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 		Section(1, "Familiars", "a3", o_familiars, [
 			Section(2, "Purchased Familiars", "a3d", o_purchasedfams),
 			Section(2, "Standard Familiars", "a3c", o_standardfams),
-			Section(2, "Derived Familiars", "a3c", o_derivedfams),
+			Section(2, "Derived Familiars", "a3e", o_derivedfams),
 			Section(2, "Pocket Familiars", "a3a", o_pocket),
 			Section(2, "April Foolmiliars", "a3b", o_april)]),
 		Section(1, "Mr. Items", "a4", o_mritems, [
@@ -1724,8 +1725,8 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 			Section(2, "Gooified Crimbo (2021)", "a6zi", o_cool_gooified),
 			Section(2, "Oliver's Place (2022)", "a6zk", o_cool_oliver),
 			Section(2, "Train Crimbo (2022)", "a6zl", o_cool_train),
-			Section(2, "Twitchery (most recent 2023)", "a6zj", o_cool_twitchery),
 			Section(2, "Pirate Crimbo (2023)", "a6zm", o_cool_crimbuc),
+			Section(2, "Twitchery (most recent 2024)", "a6zj", o_cool_twitchery),
 			Section(2, "Hair Club for Loathers", "a6zz", o_cool_hairclub)]),
 		Section(1, "Discoveries", "a7", o_pass, [
 			Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),

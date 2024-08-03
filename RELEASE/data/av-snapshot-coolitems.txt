@@ -744,4 +744,6 @@
 744	adobe ascot	adobeascot	-	-	-	-	-
 745	adobe abaya	adobeabaya	-	-	-	-	-
 746	Thwaitgold wolf spider statuette	thwaitwolf	-	-	-	-	-
-747	Thwaitgold Illinigina illinoiensis statuette	thwaitilli	-	-	-	-	-
+747	Thwaitgold Illinigina illinoiensis model	thwaitilli	-	-	-	-	-
+748	messenger bag RNA	messengerbag	-	-	-	-	-
+749	flagellate flagon	flagon	-	-	-	-	-
