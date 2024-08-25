@@ -291,5 +291,7 @@
 291	Rigging Snake	rigsnake	baby rigging snake	d	-	-	-	-	-
 292	Chest Mimic	mimicchest	baby chest mimic	p	-	-	-	-	-
 293	Mini Kiwi	kiwi_kiwi	mini kiwi egg	p	-	-	-	-	-
-294	evolving organism	bacteria	unevolved organism	d	-	-	-	-	-
+294	Evolving Organism	bacteria	unevolved organism	d	-	-	-	-	-
 295	Proto-Protozoa	protoproto	proto-proto-protozoa	d	-	-	-	-	-
+296	Burly Bodyguard	bodyguard	baby bodyguard	d	-	-	-	-	-
+297	Doll Moll	molldoll	Doll Moll violin case	d	-	-	-	-	-

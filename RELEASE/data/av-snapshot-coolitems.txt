@@ -747,3 +747,4 @@
 747	Thwaitgold Illinigina illinoiensis model	thwaitilli	-	-	-	-	-
 748	messenger bag RNA	messengerbag	-	-	-	-	-
 749	flagellate flagon	flagon	-	-	-	-	-
+750	Thwaitgold shield bug statuette	thwaitshield	-	-	-	-	-
