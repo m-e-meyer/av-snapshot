@@ -296,7 +296,7 @@
 296	Inner Sauce	3-4MP Regen	-	p	-	-	-	-
 297	Soul Saucery	Gather Soulsauce	-	pc	-	-	-	-
 298	Curse of Marinara	Curse Damage & Healing	-	-	-	-	-	-
-299	Itchy Curse Finger	Stagger when Cursing	-	pc	-	-	-	-
+299	Itchy Curse Finger	Stagger when Cursing	-	p	-	-	-	-
 300	Curse of the Thousand Islands	Curse Stagger	-	-	-	-	-	-
 301	Saucecicle	Cold Damage	-	-	-	-	-	-
 302	Master Saucier	+10% Spell Damage	-	p	-	-	-	-
@@ -437,3 +437,4 @@
 437	Elf Guard Relaxation Techniques	3 free rests/day	-	pb	-	-	-
 438	Fruit Recognition	+5% items	-	pb	-	-	-
 439	Old-School Cocktailcrafting	3 free mixes/day	-	pb	-	-	-
+440	Too Cool	Well, kinda cool	-	pb	-	-	-

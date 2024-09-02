@@ -274,3 +274,4 @@
 274	f	mini kiwi egg	Mini Kiwi	-	-	-	-	-
 275	i	packaged Roman Candelabra	Roman Candelabra	-	-	-	-	-
 276	i	untorn tearaway pants package	tearaway pants	-	-	-	-	-
+277	i	boxed Sept-Ember Censer	Sept-Ember Censer	-	-	-	-	-
