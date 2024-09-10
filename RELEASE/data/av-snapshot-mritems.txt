@@ -240,7 +240,7 @@
 240	s	undrilled cosmic bowling ball	hasCosmicBowlingBall	-	-	-	-	-
 241	i	combat lover's locket lockbox	combat lover's locket	lovelocketbox	-	-	-	-
 242	f	grey gosling	Grey Goose	greygosling	-	-	-	-
-243	i	undamaged unbreakable umbrella	unbreakable umbrella	unbrella1	-	-	-	-
+243	i	undamaged Unbreakable Umbrella	unbreakable umbrella	unbrella1	-	-	-	-
 244	s	MayDay&trade; contract	hasMaydayContract	-	-	-	-	-
 245	i	packaged June cleaver	June cleaver	junecleaverbox	-	-	-	-
 246	i	designer sweatpants (new old stock)	designer sweatpants	sweats_box	-	-	-	-
