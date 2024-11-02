@@ -276,3 +276,4 @@
 276	i	untorn tearaway pants package	tearaway pants	-	-	-	-	-
 277	i	boxed Sept-Ember Censer	Sept-Ember Censer	-	-	-	-	-
 278	i	boxed bat wings	bat wings	-	-	-	-	-
+279	f	peace turkey outline	peace turkey	-	-	-	-	-

@@ -645,7 +645,7 @@ def o_nonstdskills(state):
 	print_skill_row(state, 'Trader 2008', (144,0,0,0,0,0))
 	print_skill_row(state, 'The Suburbs of Dis', (187,188,189,0,0,0))
 	print_skill_row(state, 'Silent Invasion', (194,195,196,0,0,0))
-	print_skill_row(state, 'Ascension', (183,192,334,315,0,0), levels)
+	print_skill_row(state, 'Ascension', (183,192,334,315,402,433), levels)
 	print_skill_multirow(state, 'Elemental Planes',
 						((312,313,317,320,321,330), (331,332,333,340,341,342),
 						 (346,347,344,345,0,0)))
@@ -653,15 +653,14 @@ def o_nonstdskills(state):
 	print_skill_row(state, 'Crash Site', (314,0,0,0,0,0))
 	print_skill_row(state, 'Deck of Every Card', (335,336,337,338,339,0))
 	print_skill_row(state, 'Snojo', (349,350,351,0,0,0))
-	print_skill_row(state, 'Eldritch Love', (359,366,371,418,0,0))
+	print_skill_row(state, 'Bookmobile', (359,371,418,432,440,0))
 	print_skill_row(state, 'Gingerbread', (365,362,364,363,0,0))
 	print_skill_row(state, 'Spacegate', (367,368,369,370,0,0))
 	print_skill_row(state, 'PirateRealm', (400,401,0,0,0,0))
 	print_skill_row(state, 'Drippy', ((406,407,408),0,0,0,0,0))
 	print_skill_multirow(state, 'Misc',
-						((147,185,162,170,171,181), (193,327,358,372,386,387),
-						 (388,390,402,404,405,409), (410,417,431,432,433,434),
-						 (440, 0, 0, 0, 0, 0)), levels)
+						((147,185,162,170,171,181), (193,327,358,366,372,386),
+						 (387,388,390,404,405,409), (410,417,431,434,0,0)), levels)
 	o('<tr><th colspan="7" class="miniheader">Mystical Bookshelf</th><tr>')
 	print_skill_row(state, 'Tomes', (154, 155, 156, 182, 308, 319))
 	print_skill_multirow(state, 'Librams', ((157, 158, 159, 165, 184, 186),
@@ -1148,7 +1147,7 @@ def o_mritems(state):
 		(228, 229, 230, 231, 232, 233, 57, 234, 235, 236, 237, 238),
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
-		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 0, 0) ))
+		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,

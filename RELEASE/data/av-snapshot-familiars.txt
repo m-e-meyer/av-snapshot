@@ -296,3 +296,5 @@
 296	Burly Bodyguard	bodyguard	baby bodyguard	d	-	-	-	-	-
 297	Doll Moll	molldoll	Doll Moll violin case	d	-	-	-	-	-
 298	Emberiza Aureola	emberbird	ember egg	d	-	-	-	-	-
+299	Peace Turkey	pto_fam	peace turkey outline	p	-	-	-	-	-
+300	quantum entangler	qf	quantized familiar	d	-	-	-	-	-

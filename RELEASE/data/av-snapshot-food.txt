@@ -978,3 +978,6 @@
 978	ciliophora chowder
 979	cream of chloroplasts
 980	wheel of camembert
+981	whirled peas
+982	peaza
+983	piece of cake
