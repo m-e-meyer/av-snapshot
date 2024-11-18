@@ -99,7 +99,7 @@
 99	Transcendental Noodlecraft	+2 Dry Noodles, Wok Access	-	p	-	-	-	-
 100	The Way of Sauce	+2 Reagents, use Scrum. Solutions	-	p	-	-	-	-
 101	Superhuman Cocktailcrafting	+2 Ingredients, Still Access	-	p	-	-	-	-
-102	Ur-Kel's Aria of Annoyance	+(level*2)ML<br />(Buff @ 30MP	-	-	-	-	-	-
+102	Ur-Kel's Aria of Annoyance	+(level*2)ML<br />(Buff @ 30MP)	-	-	-	-	-	-
 103	Snarl of the Timberwolf	+10 Spooky Damage<br />(10adv @ 10MP)	-	-	-	-	-	-
 104	Spectral Snapper	Combat Attack<br />20MP	-	-	-	-	-	-
 105	Fearful Fettucini	Combat Spell<br />24MP	-	-	-	-	-	-
@@ -112,16 +112,16 @@
 112	Deep Saucery	Create Potions with Globes of Deep Sauce	-	p	-	-	-	-
 113	Salacious Cocktailcrafting	Use Seaodes in Cocktailcrafting	-	p	-	-	-	-
 114	Donho's Bubbly Ballad	-20% Underwater Penalty<br />(Buff @ 75MP)	-	-	-	-	-	-
-115	Conjure Relaxing Campfire	-	-	-	-	-	-	-
-116	Maximum Chill	-	-	-	-	-	-	-
-117	Mudbath	-	-	-	-	-	-	-
-118	Inappropriate Backrub	-	-	-	-	-	-	-
-119	Creepy Lullaby	-	-	-	-	-	-	-
-120	Awesome Balls of Fire	-	-	-	-	-	-	-
-121	Snowclone	-	-	-	-	-	-	-
-122	Eggsplosion	-	-	-	-	-	-	-
-123	Grease Lightning	-	-	-	-	-	-	-
-124	Raise Backup Dancer	-	-	-	-	-	-	-
+115	Conjure Relaxing Campfire	(10-20)+Mys/10 Hot Dmg<br/>30MP	-	-	-	-	-	-
+116	Maximum Chill	(10-20)+Mys/10 Cold Dmg<br/>30MP	-	-	-	-	-	-
+117	Mudbath	(10-20)+Mys/10 Stench Dmg<br/>30MP	-	-	-	-	-	-
+118	Inappropriate Backrub	(10-20)+Mys/10 Sleaze Dmg<br/>30MP	-	-	-	-	-	-
+119	Creepy Lullaby	(10-20)+Mys/10 Spooky Dmg<br/>30MP	-	-	-	-	-	-
+120	Awesome Balls of Fire	(35-45)+(7*Mys/20) Hot Dmg<br/>120MP	-	-	-	-	-	-
+121	Snowclone	(35-45)+(7*Mys/20) Cold Dmg<br/>120MP	-	-	-	-	-	-
+122	Eggsplosion	(35-45)+(7*Mys/20) Stench Dmg<br/>120MP	-	-	-	-	-	-
+123	Grease Lightning	(35-45)+(7*Mys/20) Sleaze Dmg<br/>120MP	-	-	-	-	-	-
+124	Raise Backup Dancer	(35-45)+(7*Mys/20) Spooky Dmg<br/>120MP	-	-	-	-	-	-
 125	Natural Born Scrabbler	+5% Items	-	p	-	-	-	-
 126	Thrift and Grift	+10% Meat	-	p	-	-	-	-
 127	Abs of Tin	+10% MaxHP	-	p	-	-	-	-
@@ -139,12 +139,12 @@
 139	Slimy Sinews	Up to +20 MaxHP	-	p	-	-	-	-
 140	Slimy Synapses	Up to +10 MaxMP	-	p	-	-	-	-
 141	Slimy Shoulders	Up to +20% Init	-	p	-	-	-	-
-142	Chronic Indigestion	-	-	-	-	-	-	-
-143	CLEESH	-	-	-	-	-	-	-
-144	Rainbow Gravitation	-	-	-	-	-	-	-
-145	Really Expensive Jewelrycrafting	-	-	p	-	-	-	-
-146	Transcendent Olfaction	-	-	-	-	-	-	-
-147	Vent Rage Gland	-	-	-	-	-	-	-
+142	Chronic Indigestion	(5-10)*Full Hot Dmg<br/>5MP	-	-	-	-	-	-
+143	CLEESH	Amphibianize foe<br/>10MP	-	-	-	-	-	-
+144	Rainbow Gravitation	Make prismatic wads	-	-	-	-	-	-
+145	Really Expensive Jewelrycrafting	Use fancy jewelry ingredients	-	p	-	-	-	-
+146	Transcendent Olfaction	Fight more of the same	-	-	-	-	-	-
+147	Vent Rage Gland	Extra damage<br/>5 adv @ 15MP	-	-	-	-	-	-
 148	Holiday Weight Gain	+MaxHP Buff	-	b	-	-	-	-
 149	Jingle Bells	Familiar Acts More	-	b	-	-	-	-
 150	Candyblast	Damage and Candy!	-	b	-	-	-	-
@@ -159,23 +159,23 @@
 159	Summon Love Song	-	Libram of Love	-	-	-	-	-
 160	Summon Hilarious Objects	-	Grimoire of Hilarious	-	-	-	-	-
 161	Summon Tasteful Items	-	Tasteful	-	-	-	-	-
-162	Summon Crimbo Candy	-	-	-	-	-	-	-
-163	Pride of the Puffin	+10ML<br>(30MP)	-	-	-	-	-	-
+162	Summon Crimbo Candy	Summon candy (3MP 1/day)	-	-	-	-	-	-
+163	Pride of the Puffin	+10ML<br>30MP	-	-	-	-	-	-
 164	K&auml;seso&szlig;esturm	Stench Saucestorm	-	b	-	-	-	-
 165	Summon BRICKOs	-	Libram of BRI	-	-	-	-	-
 166	Inigo's Incantation of Inspiration	Free Crafting	-	b	-	-	-	-
 167	Curiosity of Br'er Tarrypin	+1Fam Exp/Combat	-	b	-	-	-	-
 168	Stringozzi Serpent	Attack and Poison	-	b	-	-	-	-
 169	Iron Palm Technique	Swords Become Clubs	-	b	-	-	-	-
-170	Unaccompanied Miner	-	-	pb	-	-	-	-
-171	Volcanometeor Showeruption	-	-	-	-	-	-	-
+170	Unaccompanied Miner	5 free minings/day	-	pb	-	-	-	-
+171	Volcanometeor Showeruption	Hot dmg<br/>(for volcanic ash)	-	-	-	-	-	-
 172	Fashionably Late	+1 Adventure Per Day	-	pb	-	-	-	-
 173	Executive Narcolepsy	One Free Rest Per Day	-	pb	-	-	-	-
 174	Lunch Break	Summon a Sack Lunch	-	b	-	-	-	-
 175	Offensive Joke	Sleaze Damage, 20 Delevel	-	b	-	-	-	-
 176	Managerial Manipulation	+10 All Stats (Others Only)	-	b	-	-	-	-
-177	Wassail	-	-	b	-	-	-	-
-178	Toynado	-	-	b	-	-	-	-
+177	Wassail	(10-20)+Mys/10 dmg<br/>30MP	-	b	-	-	-	-
+178	Toynado	Physical damage<br/>120MP	-	b	-	-	-	-
 179	Kung Fu Hustler	Power to the Fists!	-	pb	-	-	-	-
 180	Summon Alice's Army Cards	-	Sorcerers of the Shore Grimoire	-	-	-	-	-
 181	Natural Born Skeleton Killer	+10% Skeleton Murder!	-	pb	-	-	-	-
@@ -184,52 +184,52 @@
 184	Summon Dice	-	Gygaxian Libram	-	-	-	-	-
 185	Summon &quot;Boner Battalion&quot;	Damage Each round of Combat	-	b	-	-	-	-
 186	Summon Resolutions	-	Resolution	-	-	-	-	-
-187	Torment Plant	-	-	-	-	-	-	-
-188	Pinch Ghost	-	-	-	-	-	-	-
-189	Tattle	-	-	-	-	-	-	-
-190	Thick-Skinned	-	-	-	-	-	-	-
-191	Chip on your Shoulder	-	-	-	-	-	-	-
-192	Request Sandwich	-	-	-	-	-	-	-
-193	Frigidalmatian	-	-	b	-	-	-	-
-194	Silent Slam	-	-	b	-	-	-	-
-195	Silent Squirt	-	-	b	-	-	-	-
-196	Silent Slice	-	-	b	-	-	-	-
-197	Singer's Faithful Ocelot	-	-	-	-	-	-	-
-198	Drescher's Annoying Noise	-	-	-	-	-	-	-
-199	Walberg's Dim Bulb	-	-	-	-	-	-	-
-200	Deep Dark Visions	-	-	-	-	-	-	-
+187	Torment Plant	40-60 dmg to plants (5MP)	-	-	-	-	-	-
+188	Pinch Ghost	40-60 dmg to ghosts (5MP)	-	-	-	-	-	-
+189	Tattle	Delevel 7 (7MP)	-	-	-	-	-	-
+190	Thick-Skinned	+10 max HP, +10 max MP	-	p	-	-	-	-
+191	Chip on your Shoulder	+5 PvP fights/day	-	p	-	-	-	-
+192	Request Sandwich	Summon sandwich, maybe (5MP)	-	-	-	-	-	-
+193	Frigidalmatian	Cold dmg every round<br/>(1 adv @ 300MP)	-	b	-	-	-	-
+194	Silent Slam	Spooky dmg, delevel, stun (5MP)	-	b	-	-	-	-
+195	Silent Squirt	Spooky dmg, stagger (10MP)	-	b	-	-	-	-
+196	Silent Slice	Spooky dmg, delevel, stun (5MP)	-	b	-	-	-	-
+197	Singer's Faithful Ocelot	+10% item drops<br/>(10 adv @ 15MP)	-	-	-	-	-	-
+198	Drescher's Annoying Noise	+10 ML<br/>(20 adv @ 40 MP)	-	-	-	-	-	-
+199	Walberg's Dim Bulb	+10% Init<br/>(10 adv @ 5MP)	-	-	-	-	-	-
+200	Deep Dark Visions	3-4x max HP Spooky dmg<br/>100MP	-	-	-	-	-	-
 201	Summon Taffy	-	Taffy	-	-	-	-	-
-202	Club Earth	-	-	-	-	-	-	-
-203	Carbohydrate Cudgel	-	-	-	-	-	-	-
-204	Splattersmash	-	-	-	-	-	-	-
-205	Grab a Cold One	-	-	-	-	-	-	-
-206	Song of the North	-	-	-	-	-	-	-
-207	Turtleini	-	-	-	-	-	-	-
-208	Sauceshell	-	-	-	-	-	-	-
-209	Conspiratorial Whispers	-	-	-	-	-	-	-
-210	Song of Slowness	-	-	-	-	-	-	-
-211	Spaghetti Breakfast	-	-	-	-	-	-	-
-212	Shadow Noodles	-	-	-	-	-	-	-
-213	Song of Starch	-	-	-	-	-	-	-
-214	Splashdance	-	-	-	-	-	-	-
-215	Song of Sauce	-	-	-	-	-	-	-
-216	Song of Bravado	-	-	-	-	-	-	-
+202	Club Earth	Damage and stagger<br/>50MP	-	-	-	-	-	-
+203	Carbohydrate Cudgel	Instakill non-boss<br/>(30MPP and dry noodles)	-	-	-	-	-	-
+204	Splattersmash	Hot melee group dmg<br/>25MP	-	-	-	-	-	-
+205	Grab a Cold One	Free drink 1/day<br/>30MP	-	-	-	-	-	-
+206	Song of the North	Bonus weapon and Cold dmg<br/>(10 adv @ 100MP)	-	-	-	-	-	-
+207	Turtleini	Physical and Spooky dmg<br/>35MP	-	-	-	-	-	-
+208	Sauceshell	Stinging Hot dmg<br/>30MP	-	-	-	-	-	-
+209	Conspiratorial Whispers	Damage and delevel<br/>25MP	-	-	-	-	-	-
+210	Song of Slowness	+50% Init<br/>(10 adv @ 100MP)	-	-	-	-	-	-
+211	Spaghetti Breakfast	Free food 1/day<br/>30MP	-	-	-	-	-	-
+212	Shadow Noodles	Entangle and delevel<br/>30MP	-	-	-	-	-	-
+213	Song of Starch	+50% max HP<br/>(10 adv @ 100MP)	-	-	-	-	-	-
+214	Splashdance	Heal 50-60 HP 1/fight<br/>30MP	-	-	-	-	-	-
+215	Song of Sauce	Bonus spell dmg, Hot dmg, Hot spell dmg<br/>(10 adv @ 100MP)-	-	-	-	-	-	-
+216	Song of Bravado	+15% all attributes<br/>(10 adv @ 100MP)	-	-	-	-	-	-
 217	Fortitude of the Muskox	Regen 1-2HP/adv	-	p	-	-	-	-
 218	Hibernate	Heal HP, +3 stats/fight (10adv)<br />(1 adv)	-	-	-	-	-	-
 219	Cold Shoulder	Smack skills do +5 cold damage	-	p	-	-	-	-
 220	Wrath of the Wolverine	Build Fury	-	pc	-	-	-	-
 221	Buoyancy of the Beluga	Regen 1HP/adv for each Fury	-	pc	-	-	-	-
-222	Scowl of the Auk	(+10 Weapon Damage)<br>(8MP)	-	-	-	-	-	-
+222	Scowl of the Auk	(+10 Weapon Damage)<br>8MP	-	-	-	-	-	-
 223	Furious Wallop	Guaranteed to Hit Attack (5MP & 1 Fury)	-	c	-	-	-	-
-224	Club Foot	Delevel Attack<br>(8MP)	-	c	-	-	-	-
+224	Club Foot	Delevel Attack<br>8MP	-	c	-	-	-	-
 225	Seething of the Snow Leopard	Addnl. Bonus Damage from Fury	-	pc	-	-	-	-
 226	Ire of the Orca	Fury Capacity increased to 5	-	pc	-	-	-	-
 227	Thirst of the Weasel	Smacks restore 1-2HP/fury	-	pc	-	-	-	-
 228	Cavalcade of Fury	Attack<br>(All Fury)	-	c	-	-	-	-
-229	Northern Explosion	Cold Attack<br>(16MP)	-	-	-	-	-	-
+229	Northern Explosion	Cold Attack<br>16MP	-	-	-	-	-	-
 230	Precision of the Penguin	+1Crit% per Fury	-	pc	-	-	-	-
 231	Deft Hands	+25% Item Damage	-	p	-	-	-	-
-232	Summon Annoyance	-	-	-	-	-	-	-
+232	Summon Annoyance	Summon "curse" item 1/day<br/>(10 swagger)	-	-	-	-	-	-
 233	Disco State of Mind	Generate Momentum	-	pc	-	-	-	-
 234	Frantic Gyrations	Momentum makes you harder to hit	-	pc	-	-	-	-
 235	That's Not a Knife	THIS is a knife!	-	-	-	-	-	-
@@ -312,7 +312,7 @@
 312	Grease Up	+15 Sleaze Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
 313	Sloppy Secrets	More Beach Bucks	-	p	-	-	-	-
 314	Alien Source Code	Max MP +5	-	pb	-	-	-	-
-315	Belch The Rainbow	Burp!	-	-	-	-	-	-
+315	Belch The Rainbow	Prismatic dmg	-	-	-	-	-	-
 316	Pirate Bellow	Arrrr!	-	-	-	-	-	-
 317	Unoffendable	Serious Sleaze Resist (+3)	-	p	-	-	-	-
 318	Summon Confiscated Things	-	Confiscator's Grimoire	-	-	-	-	-
@@ -328,8 +328,8 @@
 328	Summon Kokomo Resort Pass	Aruba, Jamaica…	-	-	-	-	-	-
 329	Bear Essence	+20% Picnic Baskets	-	p	-	-	-	-
 330	Olfactory Burnout	Serious Stench Resistance (+3)	-	p	-	-	-	-
-331	Garbage Nova	-	-	-	-	-	-	-
-332	Dinsey Operations Expert	-	-	p	-	-	-	-
+331	Garbage Nova	(45-50) + 0.4*Mys dmg (50MP)	-	-	-	-	-	-
+332	Dinsey Operations Expert	Access more tunnels	-	p	-	-	-	-
 333	Rotten Memories	+15 Stench Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
 334	Mild Curse	Ed brings the insults!	-	-	-	-	-	-
 335	Ancestral Recall	Draw 3 Cards	-	-	-	-	-	-
@@ -338,21 +338,21 @@
 338	Healing Salve	Recover 3 Life	-	-	-	-	-	-
 339	Lightning Bolt	Does 3 Damage	-	-	-	-	-	-
 340	Asbestos Heart	Serious Hot Resistance (+3)	-	p	-	-	-	-
-341	Firegate	-	-	-	-	-	-	-
+341	Firegate	Hot dmg (50MP)	-	-	-	-	-	-
 342	Pyromania	+15 Hot Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
 343	Calculate the Universe	-	-	-	-	-	-	-
-344	Perfect Freeze	-	-	-	-	-	-	-
+344	Perfect Freeze	1 perfect ice cube/day	-	-	-	-	-	-
 345	Refusal to Freeze	Serious Cold Resistance (+3)	-	p	-	-	-	-
 346	Beardfreeze	+15 Cold Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
-347	Frost Bite	-	-	-	-	-	-	-
+347	Frost Bite	Phys and Cold dmg, stun (50MP)	-	-	-	-	-	-
 348	Communism!	1000 Meat!	-	b	-	-	-	-
 349	Shattering Punch	3/day Instakill	-	-	-	-	-	-
 350	Shivering Monkey Technique	+15% Init	-	p	-	-	-	-
 351	Snokebomb	3/day Banish	-	-	-	-	-	-
-352	Bow-Legged Swagger	-	-	-	-	-	-	-
-353	Bend Hell	-	-	-	-	-	-	-
-354	Steely-Eyed Squint	-	-	-	-	-	-	-
-355	Toggle Optimality	-	-	-	-	-	-	-
+352	Bow-Legged Swagger	Double Init & Phys dmg<br/>(100MP 1/day)	-	-	-	-	-	-
+353	Bend Hell	Elemental bonus dmgs doubled<br/>(100MP 1/day)	-	-	-	-	-	-
+354	Steely-Eyed Squint	Item drop bonuses doubled<br/>(100MP 1/day)	-	-	-	-	-	-
+355	Toggle Optimality	Optimal!  Or not!	-	-	-	-	-	-
 356	Brain Games	+3 Rollover Adventures	-	p	-	-	-	-
 357	20/20 Vision	+10% Item Drop	-	p	-	-	-	-
 358	Astute Angler	+10 Fishing Skill	-	p	-	-	-	-
@@ -386,7 +386,7 @@
 386	Expert Corner-Cutter	5 free craftings	-	p	-	-	-	-
 387	Budget Conscious	+10% Meat Drops	-	-	-	-	-	-
 388	Drinking to Drink	+1 liver capacity	-	-	-	-	-	-
-389	Experience Safari	-	-	-	-	-	-	-
+389	Experience Safari	Send friend on safari X/day<br/>10MP	-	-	-	-	-	-
 390	Army of Toddlers	Summons fightin’ babies	-	-	-	-	-	-
 391	Carol of the Bulls	+100% Weapon Damage	-	-	-	-	-	-
 392	Carol of the Hells	+100% Spell Damage	-	-	-	-	-	-
@@ -402,10 +402,10 @@
 402	Implode Universe	-	-	-	-	-	-	-
 403	The Spirit of Taking	+10% Item Drops	-	b	-	-	-	-
 404	Visit your Favorite Bird	In bird culture, this is considered a dick move	-	-	-	-	-	-
-405	Always Never Not Guzzling	-	-	p	-	-	-	-
-406	Drippy Eye-Beetle	-	-	p	-	-	-	-
-407	Drippy Eye-Sprout	-	-	p	-	-	-	-
-408	Drippy Eye-Stone	-	-	p	-	-	-	-
+405	Always Never Not Guzzling	+25% booze drops	-	p	-	-	-	-
+406	Drippy Eye-Beetle	It is awful!	-	p	-	-	-	-
+407	Drippy Eye-Sprout	It tickles!	-	p	-	-	-	-
+408	Drippy Eye-Stone	It is irritating!	-	p	-	-	-	-
 409	Lock Picking	Make a key, you still can’t pick locks	-	-	-	-	-	-
 410	Comprehensive Cartography	You know how to find things	-	pb	-	-	-	-
 411	Long Winter's Nap	5 free rests	-	pb	-	-	-	-
@@ -437,4 +437,4 @@
 437	Elf Guard Relaxation Techniques	3 free rests/day	-	pb	-	-	-
 438	Fruit Recognition	+5% items	-	pb	-	-	-
 439	Old-School Cocktailcrafting	3 free mixes/day	-	pb	-	-	-
-440	Too Cool	Well, kinda cool	-	pb	-	-	-
+440	Too Cool	+1 Cold dmg, +1 Cold res	-	pb	-	-	-
