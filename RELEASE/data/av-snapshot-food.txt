@@ -981,3 +981,5 @@
 981	whirled peas
 982	peaza
 983	piece of cake
+984	cursed Aztec tamale
+985	salmagumdi
