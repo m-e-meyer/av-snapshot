@@ -302,4 +302,4 @@
 302	WereProfessor HC	class31hc	-	-	-	-	-	-	-	-	-
 303	2024 Raffle	2024raffle	-	-	-	-	-	-	-	-	-
 304	Grey You HC	class27hc	-	-	-	-	-	-	-	-	-
-305	Governor's Daughter's Tattoo	govtat	governor's daughter's pearl hairpin	governor's daughter's petticoats	governor's daughter's lace collar	-	-	-	-	-	-
+305	Governor's Daughter's Fancy Finery	govtat	governor's daughter's pearl hairpin	governor's daughter's petticoats	governor's daughter's lace collar	-	-	-	-	-	-
