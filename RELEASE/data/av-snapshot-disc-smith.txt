@@ -313,3 +313,7 @@
 313	thicksilver spurs	-	-	-	-	-	-	-
 314	ticksilver spurs	-	-	-	-	-	-	-
 315	wicksilver spurs	-	-	-	-	-	-	-
+316	gravyskin buckler	-	-	-	-	-	-	-
+317	gravyskin hat	-	-	-	-	-	-	-
+318	gravyskin pants	-	-	-	-	-	-	-
+319	gravyskin skirt	-	-	-	-	-	-	-

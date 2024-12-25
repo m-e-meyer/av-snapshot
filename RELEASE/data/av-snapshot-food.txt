@@ -983,3 +983,12 @@
 983	piece of cake
 984	cursed Aztec tamale
 985	salmagumdi
+986	chocolate ostrich egg
+987	candied beef and cabbage
+988	candy rations
+989	double-candied yams
+990	Christmas ham
+991	holiday smorgasbord
+992	Thanksgiving ration
+993	coney haunch
+994	room scale green bean casserole

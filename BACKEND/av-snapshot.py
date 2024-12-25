@@ -641,6 +641,7 @@ def o_nonstdskills(state):
 						  (426, 427, 428, 429, 430, 0)))
 	print_skill_row(state, 'Crimbo 2023<br/>Crimbuccaneerathon',
 					(435, 436, 437, 438, 439, 0))
+	print_skill_row(state, 'Crimbo 2024<br/>Crrrrimbo', (441, 442, 443, 444, 445, 0))
 	o('<tr><th colspan="7" class="miniheader">Other</th><tr>')
 	print_skill_row(state, 'Trader 2008', (144,0,0,0,0,0))
 	print_skill_row(state, 'The Suburbs of Dis', (187,188,189,0,0,0))
@@ -832,7 +833,7 @@ def o_other(state):
 		 (221, 227, 224, 231, 232, 233), 
 		 (242, 246, 247, 248, 254, 260), 
 		 (271, 273, 274, 275, 276, 292),
-		 (294, 297, 298, 303, 0, 0)), levels)
+		 (294, 297, 298, 303, 306, 307)), levels)
 
 
 ###########################################################################
@@ -1489,6 +1490,10 @@ def o_cool_crimbuc(state):
 									   (717, 718, 719, 720, 721, 722),
 									   (723, 724, 725, 726, 727, 728),
 									   (729, 730, 731, 732, 733, 0)))
+	
+def o_cool_crrrrimbo(state):
+	print_coolitem_table(state, None, ((751, 752, 753, 754, 755, 756),
+									   (757, 758, 759, 760, 761, 0)))
 
 
 ###########################################################################
@@ -1726,6 +1731,7 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 			Section(2, "Train Crimbo (2022)", "a6zl", o_cool_train),
 			Section(2, "Pirate Crimbo (2023)", "a6zm", o_cool_crimbuc),
 			Section(2, "Twitchery (most recent 2024)", "a6zj", o_cool_twitchery),
+			Section(2, "Pirate Crrrrimbo (2024)", "a6zn", o_cool_crrrrimbo),
 			Section(2, "Hair Club for Loathers", "a6zz", o_cool_hairclub)]),
 		Section(1, "Discoveries", "a7", o_pass, [
 			Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),

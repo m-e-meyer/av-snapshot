@@ -748,3 +748,14 @@
 748	messenger bag RNA	messengerbag	-	-	-	-	-
 749	flagellate flagon	flagon	-	-	-	-	-
 750	Thwaitgold shield bug statuette	thwaitshield	-	-	-	-	-
+751	bejazzled eyepatch	xmaspatch	-	-	-	-	-
+752	candy egg deviler	deviler	-	-	-	-	-
+753	Congressional Medal of Insanity	insanitymedal	-	-	-	-	-
+754	egg gun	egggun	-	-	-	-	-
+755	lucky army helmet	luckyhelmet	-	-	-	-	-
+756	moaiball	moaieye	-	-	-	-	-
+757	nylon Christmas stockings	xmasstockings	-	-	-	-	-
+758	perfect Christmas scarf	xmasscarf	-	-	-	-	-
+759	potato jacket	potatojacket	-	-	-	-	-
+760	pumpkin spice whorl	spicewhorl	-	-	-	-	-
+761	snowman-enchanting tophat	snowmanhat	-	-	-	-	-
