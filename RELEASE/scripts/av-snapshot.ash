@@ -332,6 +332,9 @@ int skillLevel(string name, string html, string overwrite)
 		return 2;	# Treat Optimality as HC Permed
 	}
 	else {
+		if (index_of(html, ">"+name+"</a>") != -1) {
+			print(`You have {name}, but not permed`);
+		}
 		return 0;
 	}
 }
