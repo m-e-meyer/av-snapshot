@@ -759,3 +759,4 @@
 759	potato jacket	potatojacket	-	-	-	-	-
 760	pumpkin spice whorl	spicewhorl	-	-	-	-	-
 761	snowman-enchanting tophat	snowmanhat	-	-	-	-	-
+762	Bowl of Infinite Jelly	infinitejelly	-	-	-	-	-
