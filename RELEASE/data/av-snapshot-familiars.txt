@@ -300,3 +300,4 @@
 300	quantum entangler	qf	quantized familiar	d	-	-	-	-	-
 301	golden pet rock	ts_goldrock	golden pet rock	d	-	-	-	-	-
 302	Profane Parrot	ts_parrot2	sleeping profane parrot	d	-	-	-	-	-
+303	Significant Bit	cr_sbit	insignificant bit	d	-	-	-	-	-

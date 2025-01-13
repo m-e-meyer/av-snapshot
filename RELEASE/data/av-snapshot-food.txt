@@ -992,3 +992,4 @@
 992	Thanksgiving ration
 993	coney haunch
 994	room scale green bean casserole
+995	cyburger

@@ -432,14 +432,17 @@
 432	Perpetrate Mild Evil	Such a prankster	-	b	-	-	-	-
 433	Chitinous Soul	+X HP	-	p	-	-	-	-
 434	Just the Facts	Trivia whiz	-	pb	-	-	-	-
-435	Elf Guard Cooking	3 free cooks/day	-	pb	-	-	-
-436	Elf Guard Extortion Techniques	+10% meat	-	pb	-	-	-
-437	Elf Guard Relaxation Techniques	3 free rests/day	-	pb	-	-	-
-438	Fruit Recognition	+5% items	-	pb	-	-	-
-439	Old-School Cocktailcrafting	3 free mixes/day	-	pb	-	-	-
-440	Too Cool	+1 Cold dmg, +1 Cold res	-	pb	-	-	-
-441	Attract Snakes	+5% combat (50 MP, 10 Adv)	-	b	-	-	-
-442	Hide From Seekers	-5% combat (50 MP, 10 adv)	-	b	-	-	-
-443	Reindeer Games	+30% init	-	pb	-	-	-
-444	Master Egg Hunter	+10% item	-	pb	-	-	-
-445	Holiday Multitasking	3 free crafts/day	-	pb	-	-	-
+435	Elf Guard Cooking	3 free cooks/day	-	pb	-	-	-	-
+436	Elf Guard Extortion Techniques	+10% meat	-	pb	-	-	-	-
+437	Elf Guard Relaxation Techniques	3 free rests/day	-	pb	-	-	-	-
+438	Fruit Recognition	+5% items	-	pb	-	-	-	-
+439	Old-School Cocktailcrafting	3 free mixes/day	-	pb	-	-	-	-
+440	Too Cool	+1 Cold dmg, +1 Cold res	-	pb	-	-	-	-
+441	Attract Snakes	+5% combat (50 MP, 10 Adv)	-	b	-	-	-	-
+442	Hide From Seekers	-5% combat (50 MP, 10 adv)	-	b	-	-	-	-
+443	Reindeer Games	+30% init	-	pb	-	-	-	-
+444	Master Egg Hunter	+10% item	-	pb	-	-	-	-
+445	Holiday Multitasking	3 free crafts/day	-	pb	-	-	-	-
+446	OVERCLOCK(10)	First 10 fights in CyberRealm free	-	p	-	-	-	-
+447	SLEEP(5)	5 free rests	-	p	-	-	-	-
+448	STATS+++	+3 substats/fight	-	p	-	-	-	-
