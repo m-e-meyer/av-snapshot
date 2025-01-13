@@ -1313,7 +1313,9 @@ def o_cool_ascension(state):
 		range(691, 697),
 		range(685, 691),
 		range(734, 740),
-		range(740, 746))
+		range(740, 746),
+		range(763, 769),
+		range(769, 775))
 	have = 0
 	havent = 0
 	counts = state['coolitem-counts']

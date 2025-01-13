@@ -760,3 +760,15 @@
 760	pumpkin spice whorl	spicewhorl	-	-	-	-	-
 761	snowman-enchanting tophat	snowmanhat	-	-	-	-	-
 762	Bowl of Infinite Jelly	infinitejelly	-	-	-	-	-
+763	crepe paper phrygian cap	crepehat	-	-	-	-	-
+764	crepe paper parachute cape	crepecape	-	-	-	-	-
+765	crepe paper pie clip	crepepin	-	-	-	-	-
+766	crepe paper puzzle cube	crepecube	-	-	-	-	-
+767	crepe paper plunge camisole	crepecamisole	-	-	-	-	-
+768	crepe paper polka charm	crepecharm	-	-	-	-	-
+769	petrified wood war pike	pwoodpike	-	-	-	-	-
+770	petrified wood waist protector	pwoodbelt	-	-	-	-	-
+771	petrified wood wizard's pouch	pwoodpouch	-	-	-	-	-
+772	petrified wood water purifier	pwoodpurifier	-	-	-	-	-
+773	petrified wood whoopie panama	pwoodhat	-	-	-	-	-
+774	petrified wood walking pants	pwoodpants	-	-	-	-	-
