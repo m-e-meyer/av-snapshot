@@ -280,3 +280,4 @@
 280	i	Sealed TakerSpace letter of Marque	TakerSpace letter of Marque	-	-	-	-	-
 281	i	McHugeLarge deluxe ski set	McHugeLarge duffel bag	-	-	-	-	-
 282	i	CyberRealm keycode	server room key	-	-	-	-	-
+283	i	new-in-box toy Cupid bow	toy Cupid bow	-	-	-	-	-
