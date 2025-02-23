@@ -786,7 +786,7 @@ def o_class(state):
 		 (213, 214, 215, 216, 228, 229),
 		 (257, 258, 268, 269, 281, 304), 
 		 (285, 286, 287, 288, 289, 290),
-		 (301, 302, 0, 0, 0, 0)))  
+		 (301, 302, 311, 312, 0, 0)))
 
 def o_ascension(state):
 	print_tattoo_table(state,
@@ -1589,7 +1589,7 @@ def o_consumption_booze(state):
 
 def o_various(state):
 	"""TODO"""
-	demonnames = list(map(escape, state['demonnames']))
+	demonnames = list(map(escape, state['demonnames']+[""]))  # old versions had fewer demon names
 	levels = state['levels']
 	o("<h3>Telescope</h3>")
 	scope_lvl = levels[25:26]
@@ -1619,6 +1619,7 @@ def o_various(state):
 	o("<tr><td>11) Friend of Gary</br>The Cola Wars Battlefield</td>"
 	  f"<td>{demonnames[10]}</td></tr>")
 	o(f"<tr><td>12) Neil the Sofa Sloth<br/>Intergnat</td><td>{demonnames[11]}</td></tr>")
+	o(f"<tr><td>13) Herald of Yeg<br/>Cargo Cultist Shorts</td><td>{demonnames[12]}</td></tr>")
 	o("</table>")
 	tats, trophs, fams = state['score_tats'], state['score_trophs'], state['score_fams']
 	o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"

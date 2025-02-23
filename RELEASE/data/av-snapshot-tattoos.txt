@@ -308,3 +308,5 @@
 308	CyberRealm Tattoo	cybertat	-	-	-	-	-	-	-	-	-
 309	Crepe Paper Participant's Clothes	crepetat	crepe paper phrygian cap	crepe paper parachute cape	crepe paper pie clip	crepe paper puzzle cube	crepe paper plunge camisole	crepe paper polka charm	-	-	-
 310	Petrified Wood Professional Wardrobe	pwoodtat	petrified wood war pike	petrified wood waist protector	petrified wood wizard's pouch	petrified wood water purifier	petrified wood whoopie panama	petrified wood walking pants	-	-	-
+311	Zootomist	class32	-	-	-	-	-	-	-	-	-
+312	Zootomist HC	class32hc	-	-	-	-	-	-	-	-	-

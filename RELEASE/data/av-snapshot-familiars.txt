@@ -301,3 +301,14 @@
 301	golden pet rock	ts_goldrock	golden pet rock	d	-	-	-	-	-
 302	Profane Parrot	ts_parrot2	sleeping profane parrot	d	-	-	-	-	-
 303	Significant Bit	cr_sbit	insignificant bit	d	-	-	-	-	-
+304	Heat Wave	heatwave	heat arc	d	-	-	-	-	-
+305	Cold Cut	coldcut	cold scrape	d	-	-	-	-	-
+306	Phantom Limb	phantomlimb	phantom digit	d	-	-	-	-	-
+307	Foul Ball	foulball	foul line	d	-	-	-	-	-
+308	Dire Cassava	direcassava	dark manioc	d	-	-	-	-	-
+309	Observer	observer	Observer source code	d	-	-	-	-	-
+310	Cool Cucumber	coolcuke	chill gherkin	d	-	-	-	-	-
+311	Defective Childrens' Stapler	kidstaplerbad	childrens' stapler	d	-	-	-	-	-
+312	Glover	glover	plover's egg	d	-	-	-	-	-
+313	Zapper Bug	zapperbug	electric flyswatter	d	-	-	-	-	-
+314	Shame Spiral	shamespiral	shame coil	d	-	-	-	-	-
