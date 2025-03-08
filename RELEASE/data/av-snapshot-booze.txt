@@ -768,3 +768,10 @@
 768	Easter eggnog
 769	moai toai
 770	cybeer
+771	pint of Leprechaun Stout
+772	Divine sidecar
+773	tangarita sidecar
+774	gimlet sidecar
+775	vodka stratocaster sidecar
+776	prussian cathouse sidecar
+777	Mon Tiki sidecar

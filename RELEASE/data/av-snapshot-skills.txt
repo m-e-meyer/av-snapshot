@@ -446,3 +446,4 @@
 446	OVERCLOCK(10)	First 10 fights in CyberRealm free	-	p	-	-	-	-
 447	SLEEP(5)	5 free rests	-	p	-	-	-	-
 448	STATS+++	+3 substats/fight	-	p	-	-	-	-
+449	Generate Irony	Definitely not a knife	-	-	-	-	-	-

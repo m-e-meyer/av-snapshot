@@ -993,3 +993,8 @@
 993	coney haunch
 994	room scale green bean casserole
 995	cyburger
+996	Heck ramen
+997	tiny burrito
+998	small beer brat
+999	tiny peach pie
+1000	incredible mini-pizza

@@ -606,7 +606,7 @@ def o_stdskills(state):
 	print_skill_row(state, 'Gnomish', (134, 135, 136, 137, 138, 0))
 	print_skill_row(state, 'Daily Dungeon', (197, 198, 199, 0, 0, 0))
 	print_skill_multirow(state, 'PVP', ((190, 191, 322, 326, 328, 329),
-										  (316, 232, 343, 355, 389, 0)), levels)
+										  (316, 232, 343, 355, 389, 449)), levels)
 	print_slime_row(state, levels)
 	print_skill_row(state, 'Waffle House', (356,357,0,0,0,0))
 	print_skill_row(state, "Misc", (309, 142, 143, 200, 145, 146))
@@ -1151,7 +1151,7 @@ def o_mritems(state):
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
 		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 280),
-		(281, 283, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
+		(281, 283, 284, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
