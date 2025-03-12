@@ -1655,6 +1655,17 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 	# If updating, just store the state and return
 	if ("update" in argv) and (argv["update"] == 'j'):
 		try:
+			# Check human-readable parameters
+			mafiarevision = argv['mafiarevision']
+			if (6 < len(mafiarevision) or (not re.match("[0-9]*$", mafiarevision))):
+				return f'<html><head></head><body>Invalid Mafia revision: {escape(mafiarevision)}</body></html>'
+			snapshotversion = argv['snapshotversion']
+			if (12 < len(snapshotversion) or (not re.match("[0-9a-zA-Z.]*$", snapshotversion))):
+				return f'<html><head></head><body>Invalid snapshot version: {escape(snapshotversion)}</body></html>'
+			demonnames = argv['demonnames']
+			if (200 < len(demonnames) or (not re.match("[a-zA-Z0-9 '_|-]+$", demonnames))):
+				return f'<html><head></head><body>Invalid demon name list: {escape(demonnames)}</body></html>'
+			# Save if all is well
 			save(name, argv)
 		except MyException as e:
 			return f'<html><head></head><body>{e.args[0]}</body></html>'
