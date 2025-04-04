@@ -297,8 +297,8 @@
 297	Doll Moll	molldoll	Doll Moll violin case	d	-	-	-	-	-
 298	Emberiza Aureola	emberbird	ember egg	d	-	-	-	-	-
 299	Peace Turkey	pto_fam	peace turkey outline	p	-	-	-	-	-
-300	quantum entangler	qf	quantized familiar	d	-	-	-	-	-
-301	golden pet rock	ts_goldrock	golden pet rock	d	-	-	-	-	-
+300	Quantum Entangler	qf	quantized familiar	d	-	-	-	-	-
+301	Golden Pet Rock	ts_goldrock	golden pet rock	d	-	-	-	-	-
 302	Profane Parrot	ts_parrot2	sleeping profane parrot	d	-	-	-	-	-
 303	Significant Bit	cr_sbit	insignificant bit	d	-	-	-	-	-
 304	Heat Wave	heatwave	heat arc	d	-	-	-	-	-

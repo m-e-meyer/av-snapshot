@@ -374,7 +374,7 @@
 374	ratatouille de Jarlsberg	-	-	-	-	-	-	-
 375	Jarlsberg's vegetable soup	-	-	-	-	-	-	-
 376	Pete's wiley whey bar	-	-	-	-	-	-	-
-377	St. Pete's sneaky smoothie	St. Pete's sneaky smoothie    	-	-	-	-	-	-
+377	St. Pete's sneaky smoothie	-	-	-	-	-	-	-
 378	Boris's bread	-	-	-	-	-	-	-
 379	roasted vegetable of Jarlsberg	-	-	-	-	-	-	-
 380	Pete's rich ricotta	-	-	-	-	-	-	-
