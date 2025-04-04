@@ -310,3 +310,5 @@
 310	Petrified Wood Professional Wardrobe	pwoodtat	petrified wood war pike	petrified wood waist protector	petrified wood wizard's pouch	petrified wood water purifier	petrified wood whoopie panama	petrified wood walking pants	-	-	-
 311	Zootomist	class32	-	-	-	-	-	-	-	-	-
 312	Zootomist HC	class32hc	-	-	-	-	-	-	-	-	-
+313	(wet shower stamp placeholder)	nopic	-	-	-	-	-	-	-	-	-
+314	Wet Wear	wetoutfittat	wet shower cap	wet shower shorts	wet shower shoes	-	-	-	-	-	-

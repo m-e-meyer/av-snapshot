@@ -998,3 +998,4 @@
 998	small beer brat
 999	tiny peach pie
 1000	incredible mini-pizza
+1001	pile of wet dates

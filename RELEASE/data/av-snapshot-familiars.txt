@@ -312,3 +312,4 @@
 312	Glover	glover	plover's egg	d	-	-	-	-	-
 313	Zapper Bug	zapperbug	electric flyswatter	d	-	-	-	-	-
 314	Shame Spiral	shamespiral	shame coil	d	-	-	-	-	-
+315	Wet Paper Tiger	wetpapertiger2	wet paper tiger	d	-	-	-	-	-
