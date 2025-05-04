@@ -488,7 +488,8 @@ def print_skill_cell(skills, skill_bytes, skill_num, suffix=''):
 		ibeg, iend, psv = '', '', ''
 	classist = '&copy;' if ('c' in flags) else ''
 	usedbook = '&marker;' if ('b' in flags) else ''
-	o(f"<td {clas}>{ibeg}{wikilink(name, name+suffix)} {psv}{classist}{usedbook}"
+	hcperm = '&#9405;' if ('h' in flags) else ''
+	o(f"<td {clas}>{ibeg}{wikilink(name, name+suffix)} {psv}{classist}{usedbook}{hcperm}"
 		f"<small>{desc}</small>{iend}</td>")
 
 # Map av-snapshot skill numbers to positions in levels string
@@ -675,17 +676,22 @@ def o_skills(state):
 	#h1(state, "Skills", "a_skills")
 	levels = state['levels']
 	tally = [0, 0, 0]
+	autohc = 0
 	skill_bytes = state['skill-bytes']
 	for i in range(len(state['skills'])):
 		x = getbits(skill_bytes, i+1, 2)
 		tally[x] = tally[x] + 1
-	o(f"<p class='subheader'>You have <b>{tally[2]}</b> skills Hardcore permed,"
+		if ((x == 2) and ('h' in state['skills'][i+1][4])):
+			autohc = autohc + 1
+	o(f"<p class='subheader'>You have <b>{tally[2]}</b> skills Hardcore permed"
+      f" (<b>{autohc}</b> were automatic),"
 	  f" <b>{tally[1]}</b> skills Softcore permed, and <b>{tally[0]-3}</b> missing.</p>\n"
 	  f"You have <b>{int(levels[12:16], 36)}</b> unspent Karma.</p>"
-	  "<p>Explanation of symbols: <i>Italicized</i> skills marked with a"
-	  " <i>&#x2119</i> are Passive;"
-	  " &copy; marks skills really useful only to their classes;"
-	  " &marker; marks skills that can be relearned from a used skillbook or such</p>")
+	  "<p>Explanation of symbols: <br/>"
+	  "<i>Italicized</i> skills marked with a <i>&#x2119</i> are Passive;<br/>"
+	  "&copy; marks skills really useful only to their classes;<br/>"
+	  "&marker; marks skills that can be relearned from a used skillbook or such;<br/>"
+	  "&#9405; marks skills automatically marked Hardcore Permanent when acquired</p>")
 
 
 ###########################################################################
@@ -1151,7 +1157,7 @@ def o_mritems(state):
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
 		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 280),
-		(281, 283, 284, 285, 0, 0, 0, 0, 0, 0, 0, 0) ))
+		(281, 283, 284, 285, 286, 0, 0, 0, 0, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,

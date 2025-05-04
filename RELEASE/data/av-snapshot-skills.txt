@@ -141,28 +141,28 @@
 141	Slimy Shoulders	Up to +20% Init	-	p	-	-	-	-
 142	Chronic Indigestion	(5-10)*Full Hot Dmg<br/>5MP	-	-	-	-	-	-
 143	CLEESH	Amphibianize foe<br/>10MP	-	-	-	-	-	-
-144	Rainbow Gravitation	Make prismatic wads	-	-	-	-	-	-
+144	Rainbow Gravitation	Make prismatic wads	-	h	-	-	-	-
 145	Really Expensive Jewelrycrafting	Use fancy jewelry ingredients	-	p	-	-	-	-
-146	Transcendent Olfaction	Fight more of the same	-	-	-	-	-	-
-147	Vent Rage Gland	Extra damage<br/>5 adv @ 15MP	-	-	-	-	-	-
+146	Transcendent Olfaction	Fight more of the same	-	h	-	-	-	-
+147	Vent Rage Gland	Extra damage<br/>5 adv @ 15MP	-	h	-	-	-	-
 148	Holiday Weight Gain	+MaxHP Buff	-	b	-	-	-	-
 149	Jingle Bells	Familiar Acts More	-	b	-	-	-	-
 150	Candyblast	Damage and Candy!	-	b	-	-	-	-
 151	Surge of Icing	Damage Spell	-	b	-	-	-	-
 152	Stealth Mistletoe	Delevels more with DB Attacks	-	b	-	-	-	-
 153	Cringle's Curative Carol	Restore 5-10HP/Adv	-	b	-	-	-	-
-154	Summon Snowcones	-	Tome of Snow	-	-	-	-	-
-155	Summon Stickers	-	Tome of Stick	-	-	-	-	-
-156	Summon Sugar Sheets	-	Tome of Sug	-	-	-	-	-
-157	Summon Party Favor	-	Libram of Div	-	-	-	-	-
-158	Summon Candy Heart	-	Libram of Can	-	-	-	-	-
-159	Summon Love Song	-	Libram of Love	-	-	-	-	-
-160	Summon Hilarious Objects	-	Grimoire of Hilarious	-	-	-	-	-
-161	Summon Tasteful Items	-	Tasteful	-	-	-	-	-
+154	Summon Snowcones	-	Tome of Snow	h	-	-	-	-
+155	Summon Stickers	-	Tome of Stick	h	-	-	-	-
+156	Summon Sugar Sheets	-	Tome of Sug	h	-	-	-	-
+157	Summon Party Favor	-	Libram of Div	h	-	-	-	-
+158	Summon Candy Heart	-	Libram of Can	h	-	-	-	-
+159	Summon Love Song	-	Libram of Love	h	-	-	-	-
+160	Summon Hilarious Objects	-	Grimoire of Hilarious	h	-	-	-	-
+161	Summon Tasteful Items	-	Tasteful	h	-	-	-	-
 162	Summon Crimbo Candy	Summon candy (3MP 1/day)	-	-	-	-	-	-
 163	Pride of the Puffin	+10ML<br>30MP	-	-	-	-	-	-
 164	K&auml;seso&szlig;esturm	Stench Saucestorm	-	b	-	-	-	-
-165	Summon BRICKOs	-	Libram of BRI	-	-	-	-	-
+165	Summon BRICKOs	-	Libram of BRI	h	-	-	-	-
 166	Inigo's Incantation of Inspiration	Free Crafting	-	b	-	-	-	-
 167	Curiosity of Br'er Tarrypin	+1Fam Exp/Combat	-	b	-	-	-	-
 168	Stringozzi Serpent	Attack and Poison	-	b	-	-	-	-
@@ -177,19 +177,19 @@
 177	Wassail	(10-20)+Mys/10 dmg<br/>30MP	-	b	-	-	-	-
 178	Toynado	Physical damage<br/>120MP	-	b	-	-	-	-
 179	Kung Fu Hustler	Power to the Fists!	-	pb	-	-	-	-
-180	Summon Alice's Army Cards	-	Sorcerers of the Shore Grimoire	-	-	-	-	-
+180	Summon Alice's Army Cards	-	Sorcerers of the Shore Grimoire	h	-	-	-	-
 181	Natural Born Skeleton Killer	+10% Skeleton Murder!	-	pb	-	-	-	-
-182	Summon Clip Art	-	Tome of Clip	-	-	-	-	-
+182	Summon Clip Art	-	Tome of Clip	h	-	-	-	-
 183	Master of the Surprising Fist	+10 Dam and +20 to-hit with empty hands	-	p	-	-	-	-
-184	Summon Dice	-	Gygaxian Libram	-	-	-	-	-
+184	Summon Dice	-	Gygaxian Libram	h	-	-	-	-
 185	Summon &quot;Boner Battalion&quot;	Damage Each round of Combat	-	b	-	-	-	-
-186	Summon Resolutions	-	Resolution	-	-	-	-	-
+186	Summon Resolutions	-	Resolution	h	-	-	-	-
 187	Torment Plant	40-60 dmg to plants (5MP)	-	-	-	-	-	-
 188	Pinch Ghost	40-60 dmg to ghosts (5MP)	-	-	-	-	-	-
 189	Tattle	Delevel 7 (7MP)	-	-	-	-	-	-
-190	Thick-Skinned	+10 max HP, +10 max MP	-	p	-	-	-	-
-191	Chip on your Shoulder	+5 PvP fights/day	-	p	-	-	-	-
-192	Request Sandwich	Summon sandwich, maybe (5MP)	-	-	-	-	-	-
+190	Thick-Skinned	+10 max HP, +10 max MP	-	ph	-	-	-	-
+191	Chip on your Shoulder	+5 PvP fights/day	-	ph	-	-	-	-
+192	Request Sandwich	Summon sandwich, maybe (5MP)	-	h	-	-	-	-
 193	Frigidalmatian	Cold dmg every round<br/>(1 adv @ 300MP)	-	b	-	-	-	-
 194	Silent Slam	Spooky dmg, delevel, stun (5MP)	-	b	-	-	-	-
 195	Silent Squirt	Spooky dmg, stagger (10MP)	-	b	-	-	-	-
@@ -198,7 +198,7 @@
 198	Drescher's Annoying Noise	+10 ML<br/>(20 adv @ 40 MP)	-	-	-	-	-	-
 199	Walberg's Dim Bulb	+10% Init<br/>(10 adv @ 5MP)	-	-	-	-	-	-
 200	Deep Dark Visions	3-4x max HP Spooky dmg<br/>100MP	-	-	-	-	-	-
-201	Summon Taffy	-	Taffy	-	-	-	-	-
+201	Summon Taffy	-	Taffy	h	-	-	-	-
 202	Club Earth	Damage and stagger<br/>50MP	-	-	-	-	-	-
 203	Carbohydrate Cudgel	Instakill non-boss<br/>(30MPP and dry noodles)	-	-	-	-	-	-
 204	Splattersmash	Hot melee group dmg<br/>25MP	-	-	-	-	-	-
@@ -229,7 +229,7 @@
 229	Northern Explosion	Cold Attack<br>16MP	-	-	-	-	-	-
 230	Precision of the Penguin	+1Crit% per Fury	-	pc	-	-	-	-
 231	Deft Hands	+25% Item Damage	-	p	-	-	-	-
-232	Summon Annoyance	Summon "curse" item 1/day<br/>(10 swagger)	-	-	-	-	-	-
+232	Summon Annoyance	Summon "curse" item 1/day<br/>(10 swagger)	-	h	-	-	-	-
 233	Disco State of Mind	Generate Momentum	-	pc	-	-	-	-
 234	Frantic Gyrations	Momentum makes you harder to hit	-	pc	-	-	-	-
 235	That's Not a Knife	THIS is a knife!	-	-	-	-	-	-
@@ -242,7 +242,7 @@
 242	Disco Fever	+10 Mox, +10 Ranged Dam<br />(10 Adv)	-	-	-	-	-	-
 243	Sensitive Fingers	+10% Pickpocket	-	p	-	-	-	-
 244	Disco Leer	+10% Meat<br>(10 Adv)	-	-	-	-	-	-
-245	Summon Geeky Gifts	-	Thinknerd	-	-	-	-	-
+245	Summon Geeky Gifts	-	Thinknerd	h	-	-	-	-
 246	Disco Face Stab	Attack with best Knife	-	c	-	-	-	-
 247	Disco Dance of Doom	6-8 Damage, 3 Delevel	-	c	-	-	-	-
 248	Dissonant Riff	Attach and Delevel	-	-	-	-	-	-
@@ -305,7 +305,7 @@
 305	Wry Smile	+1 Mys per Fight	-	-	-	-	-	-
 306	Sauce Monocle	+15% Crit(10 adv @ 20MP)	-	-	-	-	-	-
 307	Blood Sugar Sauce Magic	MP at cost of HP	-	-	-	-	-	-
-308	Summon Rad Libs	-	Tome of Rad	-	-	-	-	-
+308	Summon Rad Libs	-	Tome of Rad	h	-	-	-	-
 309	Bind Spaghetti Elemental	Thrall: Spaghetti	-	c	-	-	-	-
 310	Shrap	Non-Elemental Damage	-	b	-	-	-	-
 311	Psychokinetic Hug	+10 Stats	-	b	-	-	-	-
@@ -313,20 +313,20 @@
 313	Sloppy Secrets	More Beach Bucks	-	p	-	-	-	-
 314	Alien Source Code	Max MP +5	-	pb	-	-	-	-
 315	Belch The Rainbow	Prismatic dmg	-	-	-	-	-	-
-316	Pirate Bellow	Arrrr!	-	-	-	-	-	-
+316	Pirate Bellow	Arrrr!	-	h	-	-	-	-
 317	Unoffendable	Serious Sleaze Resist (+3)	-	p	-	-	-	-
-318	Summon Confiscated Things	-	Confiscator's Grimoire	-	-	-	-	-
-319	Summon Smithsness	-	The Smith's Tome	-	-	-	-	-
+318	Summon Confiscated Things	-	Confiscator's Grimoire	h	-	-	-	-
+319	Summon Smithsness	-	The Smith's Tome	h	-	-	-	-
 320	Hypersane	Serious Spooky Resist (+3)	-	p	-	-	-	-
 321	Intimidating Mien	+15 Spooky Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
-322	Summon Holiday Fun!	Fun!	-	-	-	-	-	-
+322	Summon Holiday Fun!	Fun!	-	h	-	-	-	-
 323	Rapid Prototyping	Craft 5 Times a Day, Free	-	pb	-	-	-	-
 324	Mathematical Precision	Combat Items 50% more Damage<br>(20 adv @ 10MP)	-	b	-	-	-	-
 325	Ruthless Efficiency	Deleveling 50% Better<br>(20 adv @ 10MP)	-	b	-	-	-	-
-326	Summon Carrot	That’s a cold carrot	-	-	-	-	-	-
+326	Summon Carrot	That’s a cold carrot	-	h	-	-	-	-
 327	Speluck	Underground +5% Item, +10% Meat	-	pb	-	-	-	-
-328	Summon Kokomo Resort Pass	Aruba, Jamaica…	-	-	-	-	-	-
-329	Bear Essence	+20% Picnic Baskets	-	p	-	-	-	-
+328	Summon Kokomo Resort Pass	Aruba, Jamaica…	-	h	-	-	-	-
+329	Bear Essence	+20% Picnic Baskets	-	ph	-	-	-	-
 330	Olfactory Burnout	Serious Stench Resistance (+3)	-	p	-	-	-	-
 331	Garbage Nova	(45-50) + 0.4*Mys dmg (50MP)	-	-	-	-	-	-
 332	Dinsey Operations Expert	Access more tunnels	-	p	-	-	-	-
@@ -340,7 +340,7 @@
 340	Asbestos Heart	Serious Hot Resistance (+3)	-	p	-	-	-	-
 341	Firegate	Hot dmg (50MP)	-	-	-	-	-	-
 342	Pyromania	+15 Hot Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
-343	Calculate the Universe	-	-	-	-	-	-	-
+343	Calculate the Universe	-	-	h	-	-	-	-
 344	Perfect Freeze	1 perfect ice cube/day	-	-	-	-	-	-
 345	Refusal to Freeze	Serious Cold Resistance (+3)	-	p	-	-	-	-
 346	Beardfreeze	+15 Cold Damage<br>(10 adv @ 15MP)	-	-	-	-	-	-
@@ -352,13 +352,13 @@
 352	Bow-Legged Swagger	Double Init & Phys dmg<br/>(100MP 1/day)	-	-	-	-	-	-
 353	Bend Hell	Elemental bonus dmgs doubled<br/>(100MP 1/day)	-	-	-	-	-	-
 354	Steely-Eyed Squint	Item drop bonuses doubled<br/>(100MP 1/day)	-	-	-	-	-	-
-355	Toggle Optimality	Optimal!  Or not!	-	-	-	-	-	-
-356	Brain Games	+3 Rollover Adventures	-	p	-	-	-	-
-357	20/20 Vision	+10% Item Drop	-	p	-	-	-	-
+355	Toggle Optimality	Optimal!  Or not!	-	h	-	-	-	-
+356	Brain Games	+3 Rollover Adventures	-	ph	-	-	-	-
+357	20/20 Vision	+10% Item Drop	-	ph	-	-	-	-
 358	Astute Angler	+10 Fishing Skill	-	p	-	-	-	-
 359	Eldritch Intellect	Spooky res/dmg +1, Eldritch Knowledge	-	p	-	-	-	-
-360	Stack Lumps	Lumps to Sludge	-	-	-	-	-	-
-361	Sweet Synthesis	Candy + Spleen = Effect	-	-	-	-	-	-
+360	Stack Lumps	Lumps to Sludge	-	h	-	-	-	-
+361	Sweet Synthesis	Candy + Spleen = Effect	-	h	-	-	-	-
 362	Gingerbread Mob Hit	Instakill 1/day	-	-	-	-	-	-
 363	Ceci N'Est Pas Un Chapeau	Doesn’t make a hat	-	-	-	-	-	-
 364	Fifteen Minutes of Flame	+15 Hot Dmg/Spell Dmg, +15 Init	-	-	-	-	-	-
@@ -369,7 +369,7 @@
 369	Object Quasi-Permanence	+10% Items	-	p	-	-	-	-
 370	Disintegrate	150 MP Yellow Ray	-	-	-	-	-	-
 371	Eternal Flame	Hot res/dmg + 1, Political Knowledge	-	pb	-	-	-	-
-372	Meteor Lore	Meteor Love!	-	p	-	-	-	-
+372	Meteor Lore	Meteor Love!	-	ph	-	-	-	-
 373	Gemelli's March of Testery	Gold stars for everyone!	-	-	-	-	-	-
 374	Silent Hunter	+25% Init (50 MP, 10 Adv)	-	b	-	-	-	-
 375	Quiet Determination	+25% Muscle (Facial Expression)	-	b	-	-	-	-
@@ -377,20 +377,20 @@
 377	Silent Treatment	Ignore Resistances (20 MP Combat)	-	b	-	-	-	-
 378	Silent Knife	Knife Damage and Stagger	-	b	-	-	-	-
 379	Quiet Desperation	+25% Moxie (Facial Expression)	-	b	-	-	-	-
-380	Get Big	+20% to all stats	-	-	-	-	-	-
-381	Gallapagosian Mating Call	Weak sniff a monster	-	-	-	-	-	-
-382	Inscrutable Gaze	+10% to Myst gains (Facial Expression)	-	-	-	-	-	-
-383	Love Mixology	Summons random Love Potions	-	-	-	-	-	-
-384	Acquire Rhinestones	Creates Rhinestones	-	-	-	-	-	-
-385	Paul's Passionate Pop Song	Regen 4-5 MP/adv	-	-	-	-	-	-
+380	Get Big	+20% to all stats	-	h	-	-	-	-
+381	Gallapagosian Mating Call	Weak sniff a monster	-	h	-	-	-	-
+382	Inscrutable Gaze	+10% to Myst gains (Facial Expression)	-	h	-	-	-	-
+383	Love Mixology	Summons random Love Potions	-	h	-	-	-	-
+384	Acquire Rhinestones	Creates Rhinestones	-	h	-	-	-	-
+385	Paul's Passionate Pop Song	Regen 4-5 MP/adv	-	h	-	-	-	-
 386	Expert Corner-Cutter	5 free craftings	-	p	-	-	-	-
-387	Budget Conscious	+10% Meat Drops	-	-	-	-	-	-
-388	Drinking to Drink	+1 liver capacity	-	-	-	-	-	-
-389	Experience Safari	Send friend on safari X/day<br/>10MP	-	-	-	-	-	-
+387	Budget Conscious	+10% Meat Drops	-	h	-	-	-	-
+388	Drinking to Drink	+1 liver capacity	-	h	-	-	-	-
+389	Experience Safari	Send friend on safari X/day<br/>10MP	-	h	-	-	-	-
 390	Army of Toddlers	Summons fightin’ babies	-	-	-	-	-	-
-391	Carol of the Bulls	+100% Weapon Damage	-	-	-	-	-	-
-392	Carol of the Hells	+100% Spell Damage	-	-	-	-	-	-
-393	Carol of the Thrills	+3 Stats	-	-	-	-	-	-
+391	Carol of the Bulls	+100% Weapon Damage	-	h	-	-	-	-
+392	Carol of the Hells	+100% Spell Damage	-	h	-	-	-	-
+393	Carol of the Thrills	+3 Stats	-	h	-	-	-	-
 394	Blood Frenzy	+50% Weapon Damage (10 Adv)	-	-	-	-	-	-
 395	Blood Bond	+5 Fam Weight (10 Adv)	-	-	-	-	-	-
 396	Blood Bucatini	Damage and Delevel	-	-	-	-	-	-
@@ -398,23 +398,23 @@
 398	Blood Blade	Makes a butter knife!	-	-	-	-	-	-
 399	Bram's Bloody Bagatelle	Damage everyone	-	-	-	-	-	-
 400	Prevent Scurvy and Sobriety	Summon rum, grapefruit, limes	-	-	-	-	-	-
-401	Tiki Mixology	Make rhum cocktails	-	p	-	-	-	-
-402	Implode Universe	-	-	-	-	-	-	-
+401	Tiki Mixology	Make rhum cocktails	-	ph	-	-	-	-
+402	Implode Universe	-	-	h	-	-	-	-
 403	The Spirit of Taking	+10% Item Drops	-	b	-	-	-	-
 404	Visit your Favorite Bird	In bird culture, this is considered a dick move	-	-	-	-	-	-
 405	Always Never Not Guzzling	+25% booze drops	-	p	-	-	-	-
-406	Drippy Eye-Beetle	It is awful!	-	p	-	-	-	-
-407	Drippy Eye-Sprout	It tickles!	-	p	-	-	-	-
-408	Drippy Eye-Stone	It is irritating!	-	p	-	-	-	-
+406	Drippy Eye-Beetle	It is awful!	-	ph	-	-	-	-
+407	Drippy Eye-Sprout	It tickles!	-	ph	-	-	-	-
+408	Drippy Eye-Stone	It is irritating!	-	ph	-	-	-	-
 409	Lock Picking	Make a key, you still can’t pick locks	-	-	-	-	-	-
-410	Comprehensive Cartography	You know how to find things	-	pb	-	-	-	-
+410	Comprehensive Cartography	You know how to find things	-	pbh	-	-	-	-
 411	Long Winter's Nap	5 free rests	-	pb	-	-	-	-
 412	Bowl Full of Jelly	1/day epic food	-	b	-	-	-	-
 413	Ashes and Soot	Combat: myst-based fire/physical damage	-	b	-	-	-	-
 414	Eye and a Twist	1/day epic booze	-	b	-	-	-	-
 415	Dimples, How Merry!	+1 stats/combat	-	pb	-	-	-	-
 416	Chubby and Plump	1/day +50% HP/MP (60 adv)	-	b	-	-	-	-
-417	Emotionally Chipped	All the feelings!	-	pb	-	-	-	-
+417	Emotionally Chipped	All the feelings!	-	pbh	-	-	-	-
 418	Dead Nostrils	Stench res/dmg + 1, Stay Fresh	-	pb	-	-	-	-
 419	Ancient Crymbo Lore	+3 stats in December	-	pb	-	-	-	-
 420	Crimbo Training: First Aid Technician	Max HP +10	-	pb	-	-	-	-
@@ -431,7 +431,7 @@
 431	Secret Door Awareness	There's one!	-	p	-	-	-	-
 432	Perpetrate Mild Evil	Such a prankster	-	b	-	-	-	-
 433	Chitinous Soul	+X HP	-	p	-	-	-	-
-434	Just the Facts	Trivia whiz	-	pb	-	-	-	-
+434	Just the Facts	Trivia whiz	-	pbh	-	-	-	-
 435	Elf Guard Cooking	3 free cooks/day	-	pb	-	-	-	-
 436	Elf Guard Extortion Techniques	+10% meat	-	pb	-	-	-	-
 437	Elf Guard Relaxation Techniques	3 free rests/day	-	pb	-	-	-	-
@@ -446,4 +446,4 @@
 446	OVERCLOCK(10)	First 10 fights in CyberRealm free	-	p	-	-	-	-
 447	SLEEP(5)	5 free rests	-	p	-	-	-	-
 448	STATS+++	+3 substats/fight	-	p	-	-	-	-
-449	Generate Irony	Definitely not a knife	-	-	-	-	-	-
+449	Generate Irony	Definitely not a knife	-	h	-	-	-	-
