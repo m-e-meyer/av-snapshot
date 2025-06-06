@@ -161,3 +161,4 @@
 161	no_religion_too	HIGH SCORE	Earn 100,000 points in the 8-Bit Realm	-	-	-	-	-
 162	skysubmarine	Ultimate Tosser	Toss a water balloon more than anyone on a certain day	-	-	-	-	-
 163	godricks_got_nothing_on_you	Zoo Graft-on	Graft all 11 Zootomist familiars in one run	-	-	-	-	-
+164	the_third_time_is_the_chapeau	Mad Hattest	Equip 100 or more hats at once	-	-	-	-	-

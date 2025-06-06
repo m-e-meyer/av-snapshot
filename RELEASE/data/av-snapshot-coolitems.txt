@@ -773,3 +773,4 @@
 773	petrified wood whoopie panama	pwoodhat	-	-	-	-	-
 774	petrified wood walking pants	pwoodpants	-	-	-	-	-
 775	Thwaitgold cordyceps ant statuette	thwaitcordyceps	-	-	-	-	-
+776	Thwaitgold mad hatterpillar statuette	thwaithatter	-	-	-	-	-
