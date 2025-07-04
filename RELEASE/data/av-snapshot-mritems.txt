@@ -285,3 +285,4 @@
 285	i	Packaged April Shower Thoughts Calendar	April Shower Thoughts shield	-	-	-	-	-
 286	i	Unpeeled Peridot of Peril	Peridot of Peril	-	-	-	-	-
 287	i	packaged prismatic beret	prismatic beret	-	-	-	-	-
+288	f	yeti in a travel cooler	cooler yeti	-	-	-	-	-
