@@ -35,6 +35,8 @@ The parameters for viewing snapshots are:
 * `noimages=`: If `0` (the default if not given), the page will be drawn with images.  If `1`, the page will be drawn without images, which may be faster and will certainly take fewer pages to print. 
 * `oob=`: Stands for "on or before".  Takes a string of the form `yyyy-mm-dd`, where `yyyy` is the 4-digit year, `mm` is a month from `01` to `12`, and `dd` is a day from `01` to `31`.  If this parameter is not supplied or is empty, av-snapshot shows the most recent snapshot.  Otherwise, av-snapshot shows the most recent snapshot taken on or before the given date.  Partial dates can also be supplied; `2023-01` will give the last snapshot before the end of January 2023.
 * `sections=`: Comma-delimited list of section names.  If not supplied or if empty, the entire snapshot is shown.  Otherwise, only the section names given will be shown.  If a named section has subsections, then all its subsections will be shown.  The entire section name does not need to be supplied; if the first few letters are given, then all sections with names beginning with those letters are shown.  For example, `f` will show the whole Familiars section, as well as Fishin' Gear and FantasyRealm under Cool Items, and Food under Consumption.
+* `unicorn=`: Numeric.  If present and set to a nonzero value, displays page in unicorn mode.  Thanks to DeadNed 
+(#1909053), whose exploit of an input validation failure made this possible.
 
 For eaxmple, `https://api.aventuristo.net/av-snapshot?u=mortigulo&oob=2022&sections=skil,fam` will show the Skills and Familiars sections of Mortigulo's last snapshot before the end of 2022.
 

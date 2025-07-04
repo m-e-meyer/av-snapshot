@@ -313,7 +313,7 @@ def wikilink(link, text):
 	"""
 	# Remove square brackets
 	link = link.replace('[', '').replace(']', '') if (link.find('[') >= 0) else link
-	return f'<a href="http://kol.coldfront.net/thekolwiki/index.php/{link}" rel="noreferrer">{text}</a>'
+	return f'<a href="https://kol.coldfront.net/thekolwiki/index.php/{link}" rel="noreferrer">{text}</a>'
 
 
 def getbits(byts, index, eltsize):
@@ -392,7 +392,7 @@ def h2(state, text, link):
 
 ###########################################################################
 
-def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disable=unused-argument
+def print_beginning(state, name, argv, fetched_argv, colorblind, unicorn): # pylint: disable=unused-argument
 	"""TODO"""
 	tstamp = fetched_argv['tstamp']
 	o("<!DOCTYPE html>\n")
@@ -444,6 +444,24 @@ def print_beginning(state, name, argv, fetched_argv, colorblind): # pylint: disa
 	suffix = '' if on_aws() else '.py'
 	o(f"<p>Please click <a href='av-snapshot{suffix}{query}' target='_self'>here</a> to turn {switch}"
 	  " colorblind mode.</p></div>\n")
+	if unicorn:
+		o("""<script>
+(function() {
+  function R() {
+    C = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
+    E = document.querySelectorAll('.hcperm, .perm');
+    E.forEach(function(element, index) {
+      element.style.backgroundColor = C[index % C.length];
+      });
+  }
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    R();
+  } else { document.addEventListener('DOMContentLoaded', R); }
+})();
+</script>
+<style>body{ background: url('https://wallpaperaccess.com/full/5888613.jpg');}
+</style>
+""")
 
 
 ###########################################################################
@@ -1678,6 +1696,7 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 		return f'<html><head></head><body>Record added for {name}</body></html>'
 	#
 	colorblind = ('colorblind' in argv) and (int(argv['colorblind']) != 0)
+	unicorn = ('unicorn' in argv) and (int(argv['unicorn']) != 0)
 	noimages = ('noimages' in argv) and (int(argv['noimages']) != 0)
 	when = argv["oob"] if ("oob" in argv) else ''
 	when = normalize_datetime(when)
@@ -1775,7 +1794,7 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 		sections = tuple(map(lambda x: x.strip(), sections))
 		section_tree.enable_only(sections)
 	#
-	print_beginning(state, name, argv, fetched_argv, colorblind)
+	print_beginning(state, name, argv, fetched_argv, colorblind, unicorn)
 	section_tree.out_toc()
 	#
 	state['skill-bytes'] = arg_to_bytes(state, fetched_argv, "skills", 2)
