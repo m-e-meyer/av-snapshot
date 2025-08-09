@@ -774,3 +774,4 @@
 774	petrified wood walking pants	pwoodpants	-	-	-	-	-
 775	Thwaitgold cordyceps ant statuette	thwaitcordyceps	-	-	-	-	-
 776	Thwaitgold mad hatterpillar statuette	thwaithatter	-	-	-	-	-
+777	Axis codebook	book4	-	-	-	-	-

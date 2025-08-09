@@ -286,3 +286,4 @@
 286	i	Unpeeled Peridot of Peril	Peridot of Peril	-	-	-	-	-
 287	i	packaged prismatic beret	prismatic beret	-	-	-	-	-
 288	f	yeti in a travel cooler	cooler yeti	-	-	-	-	-
+289	i	Möbius ring box	Möbius ring	-	-	-	-	-

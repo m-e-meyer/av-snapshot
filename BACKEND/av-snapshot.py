@@ -1175,7 +1175,7 @@ def o_mritems(state):
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
 		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 280),
-		(281, 283, 284, 285, 286, 287, 288, 0, 0, 0, 0, 0) ))
+		(281, 283, 284, 285, 286, 287, 288, 289, 0, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1495,11 +1495,11 @@ def o_cool_gooified(state):
 
 def o_cool_twitchery(state):
 	print_coolitem_table(state, None,
-		((225, 320, 322, 749, 317, 228),
-		 (318, 230, 229, 748, 227, 315),
-		 (316, 319, 220, (321, 323), 221, 222),
-		 (224, 223, 226, 231, 232, 233),
-		 (314, 0, 0, 0, 0, 0)))
+		((777, 225, 320, 322, 749, 317),
+		 (228, 318, 230, 229, 748, 227),
+		 (315, 316, 319, 220, (321, 323), 221),
+		 (222, 224, 223, 226, 231, 232),
+		 (233, 314, 0, 0, 0, 0)))
 
 def o_cool_hairclub(state):
 	print_coolitem_table(state, None,
@@ -1773,8 +1773,8 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 			Section(2, "Oliver's Place (2022)", "a6zk", o_cool_oliver),
 			Section(2, "Train Crimbo (2022)", "a6zl", o_cool_train),
 			Section(2, "Pirate Crimbo (2023)", "a6zm", o_cool_crimbuc),
-			Section(2, "Twitchery (most recent 2024)", "a6zj", o_cool_twitchery),
 			Section(2, "Pirate Crrrrimbo (2024)", "a6zn", o_cool_crrrrimbo),
+			Section(2, "Twitchery (most recent 2025)", "a6zj", o_cool_twitchery),
 			Section(2, "Hair Club for Loathers", "a6zz", o_cool_hairclub)]),
 		Section(1, "Discoveries", "a7", o_pass, [
 			Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),

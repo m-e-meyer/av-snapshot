@@ -999,3 +999,7 @@
 999	tiny peach pie
 1000	incredible mini-pizza
 1001	pile of wet dates
+1002	Skeleton Wars rations
+1003	toast with mixed berry jelly
+1004	cup of sugar
+1005	Susie's cupcake
