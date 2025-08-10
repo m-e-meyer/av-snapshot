@@ -609,7 +609,11 @@ string check_coolitems()
 	bitarray b = new_bitarray(0, 4);
 	print("Checking for Cool Items...", "olive");
 	foreach x in COOLITEMS {
-		b.add_item_count(num_items(COOLITEMS[x].itemname));
+		int n = num_items(COOLITEMS[x].itemname);
+		if ((x == 760) && (get_property("pumpkinSpiceWhorlUsed") == "true")) {
+			n = n+1;
+		}
+		b.add_item_count(n);
 	}
 	return "&coolitems=" + b.base64_encode();
 }

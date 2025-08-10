@@ -313,3 +313,4 @@
 313	Wet Paper Tattoo	wetpapertat	-	-	-	-	-	-	-	-	-
 314	Wet Wear	wetoutfittat	wet shower cap	wet shower shorts	wet shower shoes	-	-	-	-	-	-
 315	Axis Uniform	axistat	axis helmet	axis fatigues	axis suspenders	-	-	-	-	-	-
+316	Allied Tattoo	allytat	-	-	-	-	-	-	-	-	-

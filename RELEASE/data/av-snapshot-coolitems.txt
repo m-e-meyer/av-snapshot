@@ -226,8 +226,8 @@
 226	time shuriken	shuriken	-	-	-	-	-
 227	ninjammies	ninjammies	-	-	-	-	-
 228	glass eye	cglasseye	-	-	-	-	-
-229	ishield	ishield	-	-	-	-	-
-230	iflail	iflail	-	-	-	-	-
+229	iShield	ishield	-	-	-	-	-
+230	iFlail	iflail	-	-	-	-	-
 231	white earbuds	earbuds	-	-	-	-	-
 232	wooly loincloth	loincloth	-	-	-	-	-
 233	yabba dabba doo rag	yabbadabba	-	-	-	-	-
@@ -775,3 +775,7 @@
 775	Thwaitgold cordyceps ant statuette	thwaitcordyceps	-	-	-	-	-
 776	Thwaitgold mad hatterpillar statuette	thwaithatter	-	-	-	-	-
 777	Axis codebook	book4	-	-	-	-	-
+778	chocolate and nylons detector	chocodetector	-	-	-	-	-
+779	Allied Forces insignia	alliedpin	-	-	-	-	-
+780	confetti grenade	confettigrenade	-	-	-	-	-
+781	ordnance magnet	ordmagnet	-	-	-	-	-
