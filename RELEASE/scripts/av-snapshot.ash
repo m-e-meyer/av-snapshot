@@ -731,7 +731,7 @@ string check_demons()
 {
 	string result = get_property("demonName1");
 	int i = 2;
-	while (i <= 13) {	# change this number when number of demons changes
+	while (i <= 14) {	# change this number when number of demons changes
 		result = result + "|" + get_property("demonName"+i);
 		i = i + 1;
 	}

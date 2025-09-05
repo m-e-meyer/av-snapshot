@@ -1003,3 +1003,4 @@
 1003	toast with mixed berry jelly
 1004	cup of sugar
 1005	Susie's cupcake
+1006	kelp puck

@@ -779,3 +779,4 @@
 779	Allied Forces insignia	alliedpin	-	-	-	-	-
 780	confetti grenade	confettigrenade	-	-	-	-	-
 781	ordnance magnet	ordmagnet	-	-	-	-	-
+782	Thwaitgold lobster statuette	thwaitlobster	-	-	-	-	-

@@ -1175,7 +1175,7 @@ def o_mritems(state):
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
 		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 280),
-		(281, 283, 284, 285, 286, 287, 288, 289, 0, 0, 0, 0) ))
+		(281, 283, 284, 285, 286, 287, 288, 289, 291, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1366,7 +1366,7 @@ def o_cool_thwaitgold(state):
 									(382, 390, 391, 415, 421, 425),
 									(442, 446, 447, 452, 453, 454),
 									(537, 538, 539, 704, 707, 708),
-									(746, 747, 750, 775, 776, 0)))
+									(746, 747, 750, 775, 776, 782)))
 
 def o_cool_medals(state):
 	print_coolitem_table(state, ('Sidequests', '0', '1', '2', '3', '4', '5', '6'),
@@ -1615,7 +1615,7 @@ def o_consumption_booze(state):
 
 def o_various(state):
 	"""TODO"""
-	demonnames = list(map(escape, state['demonnames']+[""]))  # old versions had fewer demon names
+	demonnames = list(map(escape, state['demonnames']+[""]+[""]))  # old versions had fewer demon names
 	levels = state['levels']
 	o("<h3>Telescope</h3>")
 	scope_lvl = levels[25:26]
@@ -1646,6 +1646,7 @@ def o_various(state):
 	  f"<td>{demonnames[10]}</td></tr>")
 	o(f"<tr><td>12) Neil the Sofa Sloth<br/>Intergnat</td><td>{demonnames[11]}</td></tr>")
 	o(f"<tr><td>13) Herald of Yeg<br/>Cargo Cultist Shorts</td><td>{demonnames[12]}</td></tr>")
+	o(f"<tr><td>14) Bane of Allies<br/>Allied Radio Backpack</td><td>{demonnames[13]}</td></tr>")
 	o("</table>")
 	tats, trophs, fams = state['score_tats'], state['score_trophs'], state['score_fams']
 	o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"
