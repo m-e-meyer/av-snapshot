@@ -288,4 +288,4 @@
 288	f	yeti in a travel cooler	cooler yeti	-	-	-	-	-
 289	i	Möbius ring box	Möbius ring	-	-	-	-	-
 290	i	Allied Radio Backpack Pack	Allied Radio Backpack	-	-	-	-	-
-291	i	Packaged Monodent of the Sea	Monodent of the Sea	-	-	-	-	-
+291	i	packaged Monodent of the Sea	Monodent of the Sea	-	-	-	-	-

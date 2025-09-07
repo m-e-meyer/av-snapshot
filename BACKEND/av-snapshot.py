@@ -17,6 +17,8 @@ import re
 
 
 IMAGES = 'https://d2uyhvukfffg5a.cloudfront.net'
+#WIKI_URL = 'https://kol.coldfront.net/thekolwiki/index.php'	# old site
+WIKI_URL = 'https://wiki.kingdomofloathing.com'	# new site as of Sep 2025
 
 # Set this to the dev CGI location of all files this application will read
 CGI_TASK_ROOT = "/home/markmeyer/kol/data"
@@ -313,7 +315,7 @@ def wikilink(link, text):
 	"""
 	# Remove square brackets
 	link = link.replace('[', '').replace(']', '') if (link.find('[') >= 0) else link
-	return f'<a href="https://kol.coldfront.net/thekolwiki/index.php/{link}" rel="noreferrer">{text}</a>'
+	return f'<a href="{WIKI_URL}/{link}" rel="noreferrer">{text}</a>'
 
 
 def getbits(byts, index, eltsize):
