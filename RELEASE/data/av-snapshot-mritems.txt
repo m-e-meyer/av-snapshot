@@ -289,3 +289,4 @@
 289	i	Möbius ring box	Möbius ring	-	-	-	-	-
 290	i	Allied Radio Backpack Pack	Allied Radio Backpack	-	-	-	-	-
 291	i	packaged Monodent of the Sea	Monodent of the Sea	-	-	-	-	-
+292	i	lab-grown blood cubic zirconia	blood cubic zirconia	-	-	-	-	-
