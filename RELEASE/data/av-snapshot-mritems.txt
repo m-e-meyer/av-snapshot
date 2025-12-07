@@ -291,3 +291,4 @@
 291	i	packaged Monodent of the Sea	Monodent of the Sea	-	-	-	-	-
 292	i	lab-grown blood cubic zirconia	blood cubic zirconia	-	-	-	-	-
 293	i	shrunken head in a duffel bag	shrunken head	-	-	-	-	-
+294	f	stocking full of bones	Skeleton of Crimbo Past	-	-	-	-	-

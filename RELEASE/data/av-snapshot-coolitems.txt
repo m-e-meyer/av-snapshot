@@ -177,11 +177,11 @@
 177	Thwaitgold scarab beetle statuette	thwaitscarab	-	-	-	-	-
 178	The Nuge's favorite crossbow	nugebow	-	-	-	-	-
 179	Thwaitgold caterpillar statuette	thwaitcat	-	-	-	-	-
-180	Walrus ice cream	rricecream	-	-	-	-	-
+180	walrus ice cream	rricecream	-	-	-	-	-
 181	beautiful soup	soupbowl	-	-	-	-	-
 182	eggman noodles	eggnoodles	-	-	-	-	-
 183	vial of jus de larmes	potion2	-	-	-	-	-
-184	lobster qua grill	lobstertail	-	-	-	-	-
+184	Lobster qua Grill	lobstertail	-	-	-	-	-
 185	missing wine	missingwine	-	-	-	-	-
 186	Humpty Dumplings	bowl	-	-	-	-	-
 187	ittah bittah hookah	hookah	-	-	-	-	-

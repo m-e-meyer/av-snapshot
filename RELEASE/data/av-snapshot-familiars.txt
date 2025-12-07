@@ -315,3 +315,4 @@
 315	Wet Paper Tiger	wetpapertiger2	wet paper tiger	d	-	-	-	-	-
 316	Cooler Yeti	cooleryeti	yeti in a travel cooler	p	-	-	-	-	-
 317	Baby Skeleton	babyskel	orphaned baby skeleton	d	-	-	-	-	-
+318	Skeleton of Crimbo Past	skeletonocp	stocking full of bones	p	-	-	-	-	-
