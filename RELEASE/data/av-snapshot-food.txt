@@ -1008,3 +1008,6 @@
 1008	prize turkey
 1009	full-sized pumpkin pie
 1010	treasure chestnut
+1011	wing bone
+1012	traditional gingerloaf
+1013	wedge of prize-winning cheese

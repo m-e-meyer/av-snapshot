@@ -780,3 +780,10 @@
 780	confetti grenade	confettigrenade	-	-	-	-	-
 781	ordnance magnet	ordmagnet	-	-	-	-	-
 782	Thwaitgold lobster statuette	thwaitlobster	-	-	-	-	-
+783	bone-polishing rag	bonerag	-	-	-	-	-
+784	burnt bone belt	bonebelt2	-	-	-	-	-
+785	flaming fistbone	flamefist	-	-	-	-	-
+786	hot boning knife	hotboningknife	-	-	-	-	-
+787	smoldering vertebra	vertebraring	-	-	-	-	-
+788	scorched skull trophy	skulltrophy	-	-	-	-	-
+789	undertakers' forceps	forceps	-	-	-	-	-

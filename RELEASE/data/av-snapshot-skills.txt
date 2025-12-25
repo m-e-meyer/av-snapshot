@@ -447,3 +447,9 @@
 447	SLEEP(5)	5 free rests	-	p	-	-	-	-
 448	STATS+++	+3 substats/fight	-	p	-	-	-	-
 449	Generate Irony	Definitely not a knife	-	h	-	-	-	-
+450	Let's Beat Up This Drunken Sailor	+2 Mus stats/fight (10 adv)	-	b	-	-	-	-
+451	I'm Smarter Than a Drunken Sailor	+2 Mys stats/fight (10 adv)	-	b	-	-	-	-
+452	Look At That Drunken Sailor Dance	+2 Mox stats/fight (10 adv)	-	b	-	-	-	-
+453	Who's Going to Pay This Drunken Sailor?	+25% item drops (10 adv)	-	b	-	-	-	-
+454	Only Dogs Love a Drunken Sailor	+5 fam wt (10 adv)	-	b	-	-	-	-
+455	Holiday Burial Knowledge	+25% stats from Undead	-	pb	-	-	-	-

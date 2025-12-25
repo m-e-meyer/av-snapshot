@@ -316,3 +316,4 @@
 316	Cooler Yeti	cooleryeti	yeti in a travel cooler	p	-	-	-	-	-
 317	Baby Skeleton	babyskel	orphaned baby skeleton	d	-	-	-	-	-
 318	Skeleton of Crimbo Past	skeletonocp	stocking full of bones	p	-	-	-	-	-
+319	Tiny Plastic Santa Claus Skeleton	santaskel	assembled tiny plastic Santa skeleton	d	-	-	-	-	-
