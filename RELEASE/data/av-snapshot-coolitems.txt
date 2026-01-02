@@ -787,3 +787,15 @@
 787	smoldering vertebra	vertebraring	-	-	-	-	-
 788	scorched skull trophy	skulltrophy	-	-	-	-	-
 789	undertakers' forceps	forceps	-	-	-	-	-
+790	angelbone kilt	abonekilt	-	-	-	-	-
+791	angelbone totem	abonetotem	-	-	-	-	-
+792	angelbone chopsticks	abonechopsticks	-	-	-	-	-
+793	angelbone mantle	abonemantle	-	-	-	-	-
+794	angelbone dice	abonedice	-	-	-	-	-
+795	angelbone halo	abonehalo	-	-	-	-	-
+796	devilbone helmet	dbonehelm	-	-	-	-	-
+797	devilbone corset	dbonecorset	-	-	-	-	-
+798	devilbone greaves	dbonepants	-	-	-	-	-
+799	devilbone shinguards	dboneshins	-	-	-	-	-
+800	devilbone flute	dboneflute	-	-	-	-	-
+801	devilbone rosary	dbonerosary	-	-	-	-	-

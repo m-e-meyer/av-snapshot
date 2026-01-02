@@ -1178,7 +1178,8 @@ def o_mritems(state):
 		(240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 252),
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
 		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 280),
-		(281, 283, 284, 285, 286, 287, 288, 289, 291, 292, 293, 294) ))
+		(281, 283, 284, 285, 286, 287, 288, 289, 291, 292, 293, 294),
+		(296, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1206,7 +1207,8 @@ def o_yearly(state):
 		(239, 'Off-hand'),
 		(253, 'Fairyball'),
 		(269, 'Eudora'),
-		(282, 'Content unlocker')))
+		(282, 'Content unlocker'),
+		(295, 'Accessory')))
 
 def o_jicks_mom(state):
 	"""This is a weird case, a mix of Mr. Items and Cool items"""
@@ -1344,7 +1346,9 @@ def o_cool_ascension(state):
 		range(734, 740),
 		range(740, 746),
 		range(763, 769),
-		range(769, 775))
+		range(769, 775),
+		range(790, 796),
+		range(796, 802))
 	have = 0
 	havent = 0
 	counts = state['coolitem-counts']

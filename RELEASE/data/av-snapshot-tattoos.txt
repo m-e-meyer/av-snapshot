@@ -316,3 +316,5 @@
 316	Allied Tattoo	allytat	-	-	-	-	-	-	-	-	-
 317	Crymbocurrency	cryptotat	-	-	-	-	-	-	-	-	-
 318	Scorched Skeleton	sskeltat	scorched skeleton mask	scorched skeleton shirt	scorched skeleton pants	-	-	-	-	-	-
+319	Angelbone Vestments	abonetat	angelbone kilt	angelbone totem	angelbone chopsticks	angelbone mantle	angelbone dice	angelbone halo	-	-	-
+320	Devilbone Prison	dbonetat	devilbone helmet	devilbone corset	devilbone greaves	devilbone shinguards	devilbone flute	devilbone rosary	-	-	-
