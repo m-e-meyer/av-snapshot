@@ -294,3 +294,4 @@
 294	f	stocking full of bones	Skeleton of Crimbo Past	-	-	-	-	-
 295	i	discreetly-wrapped Eternity Codpiece	The Eternity Codpiece	-	-	-	-	-
 296	i	seal-clubbing club loot box	legendary seal-clubbing club	-	-	-	-	-
+297	i	boxed Heartstone	Heartstone	-	-	-	-	-
