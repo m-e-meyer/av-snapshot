@@ -305,6 +305,13 @@ int num_items(string name)
 	// to populate your campground, so these items don't need their opened
 	// equivalents spelled out in av-snapshot-mritems.txt.
 	if(get_campground() contains i) amt += 1;
+
+	//Check Eternity Codpiece for items (how to know whether item is codpieceable?)
+	foreach s in $slots[codpiece1, codpiece2, codpiece3, codpiece4, codpiece5] {
+		if (i == equipped_item(s))
+			amt += 1;
+	}
+
 	return amt;
 }
 
