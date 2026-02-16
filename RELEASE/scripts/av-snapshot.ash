@@ -1,6 +1,6 @@
 script "av-snapshot.ash";
 notify aventuristo;
-since r20632;
+since r28870;
 
 #	This is a fork of cheesecookie's snapshot script, which is itself
 #   a fork of bumcheekcity's snapshot script.
