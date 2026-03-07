@@ -799,3 +799,4 @@
 799	devilbone shinguards	dboneshins	-	-	-	-	-
 800	devilbone flute	dboneflute	-	-	-	-	-
 801	devilbone rosary	dbonerosary	-	-	-	-	-
+802	Thwaitgold meat bee statuette	thwaitmeatbee	-	-	-	-	-
