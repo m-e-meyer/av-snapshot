@@ -1012,3 +1012,4 @@
 1012	traditional gingerloaf
 1013	wedge of prize-winning cheese
 1014	rat pizza
+1015	discarded hot dog

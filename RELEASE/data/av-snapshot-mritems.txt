@@ -296,3 +296,4 @@
 296	i	seal-clubbing club loot box	legendary seal-clubbing club	-	-	-	-	-
 297	i	boxed Heartstone	Heartstone	-	-	-	-	-
 298	i	boxed Archaeologist's Spade	Archaeologist's Spade	-	-	-	-	-
+299	i	wrapped Baseball Diamond	Baseball Diamond	-	-	-	-	-
