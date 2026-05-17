@@ -297,3 +297,4 @@
 297	i	boxed Heartstone	Heartstone	-	-	-	-	-
 298	i	boxed Archaeologist's Spade	Archaeologist's Spade	-	-	-	-	-
 299	i	wrapped Baseball Diamond	Baseball Diamond	-	-	-	-	-
+300	i	pasta wand loot box	legendary pasta wand	-	-	-	-	-
