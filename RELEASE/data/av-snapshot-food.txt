@@ -1013,3 +1013,12 @@
 1013	wedge of prize-winning cheese
 1014	rat pizza
 1015	discarded hot dog
+1016	can of tuna
+1017	alien salad
+1018	ratbatatouille
+1019	spicy onigiri
+1020	haunted crudités
+1021	sauced mutton
+1022	hot honey ant
+1023	tomb aspic
+1024	later tots
