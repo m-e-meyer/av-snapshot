@@ -1017,8 +1017,17 @@
 1017	alien salad
 1018	ratbatatouille
 1019	spicy onigiri
-1020	haunted crudités
+1020	haunted crudit&eacute;s
 1021	sauced mutton
 1022	hot honey ant
 1023	tomb aspic
 1024	later tots
+1025	Frutti di Scatoletta
+1026	Pesto alla Marziano
+1027	Arrattabbattabiata
+1028	Orzo di Riso
+1029	Pasta Grimavera
+1030	Linguini Ubriacapa
+1031	Gnocci Domani
+1032	Formica e Pepe
+1033	Tubetto Gelatto

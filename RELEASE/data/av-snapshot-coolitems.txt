@@ -800,3 +800,4 @@
 800	devilbone flute	dboneflute	-	-	-	-	-
 801	devilbone rosary	dbonerosary	-	-	-	-	-
 802	Thwaitgold meat bee statuette	thwaitmeatbee	-	-	-	-	-
+803	Thwaitgold wallet moth statuette	thwaitmoth2	-	-	-	-	-

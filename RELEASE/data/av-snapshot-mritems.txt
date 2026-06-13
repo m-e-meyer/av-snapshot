@@ -298,3 +298,4 @@
 298	i	boxed Archaeologist's Spade	Archaeologist's Spade	-	-	-	-	-
 299	i	wrapped Baseball Diamond	Baseball Diamond	-	-	-	-	-
 300	i	pasta wand loot box	legendary pasta wand	-	-	-	-	-
+301	f	scabbarded Sword of S Words	Sword of S Words	-	-	-	-	-

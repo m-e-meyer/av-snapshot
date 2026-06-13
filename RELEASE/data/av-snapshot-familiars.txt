@@ -318,3 +318,4 @@
 318	Skeleton of Crimbo Past	skeletonocp	stocking full of bones	p	-	-	-	-	-
 319	Tiny Plastic Santa Claus Skeleton	santaskel	assembled tiny plastic Santa skeleton	d	-	-	-	-	-
 320	Cute Skeletal Dinosaur	bonedino	intact dinosaur egg	d	-	-	-	-	-
+321	Sword of S Words	swordsword	scabbarded Sword of S Words	p	-	-	-	-	-
