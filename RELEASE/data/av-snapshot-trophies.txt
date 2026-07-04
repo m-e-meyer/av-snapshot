@@ -117,7 +117,7 @@
 117	clear_eyes_dumb_shirt	Full Heart	50 bottles of Bloodweiser	-	-	-	-	-
 118	warranty_sold_separately	Extended Capacity	50 glasses of electric Kool-Aid	-	-	-	-	-
 119	bastard_son_thereof	Kissing Maniac	Independently gain 10,000 kisses in Dreadsylvania	-	-	-	-	-
-120	dont_bleed_it_all_in_one_place	Cruising for Six Bruisings	Have all Dread Bosses Effects at Once	-	-	-	-	-
+120	dont_bleed_it_all_in_one_place	Cruising For Six Bruisings	Have all Dread Bosses Effects at Once	-	-	-	-	-
 121	this_is_getting_ridiculous	Eleven Down, None to Go	Defeat X-fingered Shop Teacher 11 times in one ascension	-	-	-	-	-
 122	could_you_describe_the_ruckus	Purity of Essence	Commit to Each Clique	-	-	-	-	-
 123	who_here_knows_quark_express	Ansel Adams Jr.	Fully upgrade the yearbook camera	-	-	-	-	-
