@@ -321,3 +321,6 @@
 321	Meat Golem	class33	-	-	-	-	-	-	-	-	-
 322	Meat Golem HC	class33hc	-	-	-	-	-	-	-	-	-
 323	Dino Drip	dinotat	dinosaur bone club	dinosaur skull helmet	dinosaur bone corset	-	-	-	-	-	-
+324	Flimsy Plastic Armor	flimsytat	flimsy plastic helmet	flimsy plastic greaves	flimsy plastic breastplate	flimsy plastic shield	-	-	-	-	-
+325	Bear Tattoo	beartat	-	-	-	-	-	-	-	-	-
+326	Bull Tattoo	bulltat	-	-	-	-	-	-	-	-	-

@@ -269,3 +269,9 @@
 269	sweet potato o' mine	-	-	-	-	-	-	-
 270	sweet potato punch	-	-	-	-	-	-	-
 271	peasco sour	-	-	-	-	-	-	-
+272	Aesop Daiquiri	-	-	-	-	-	-	-
+273	Monkey Congress	-	-	-	-	-	-	-
+274	Melonegroni	-	-	-	-	-	-	-
+275	Melonade Spritz	-	-	-	-	-	-	-
+276	Quiskey Sour	-	-	-	-	-	-	-
+277	Quincea&ntilde;era Cooler	-	-	-	-	-	-	-

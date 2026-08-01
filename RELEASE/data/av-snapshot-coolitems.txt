@@ -801,3 +801,8 @@
 801	devilbone rosary	dbonerosary	-	-	-	-	-
 802	Thwaitgold meat bee statuette	thwaitmeatbee	-	-	-	-	-
 803	Thwaitgold wallet moth statuette	thwaitmoth2	-	-	-	-	-
+804	Portable Laughing Stock	stocks	-	-	-	-	-
+805	Staff of Anachronistic Churning	churnstaff	-	-	-	-	-
+806	Space Soldier Helmet	stormhelmet2	-	-	-	-	-
+807	The Wizard's Android	android	-	-	-	-	-
+808	tactical jester's cap	jestercap	-	-	-	-	-

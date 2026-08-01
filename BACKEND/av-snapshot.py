@@ -862,7 +862,7 @@ def o_other(state):
 		 (242, 246, 247, 248, 254, 260), 
 		 (271, 273, 274, 275, 276, 292),
 		 (294, 297, 298, 303, 306, 307),
-		 (308, 313, 316, 317, 0, 0)), levels)
+		 (308, 313, 316, 317, 325, 326)), levels)
 
 
 ###########################################################################
@@ -1179,7 +1179,7 @@ def o_mritems(state):
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
 		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 280),
 		(281, 283, 284, 285, 286, 287, 288, 289, 291, 292, 293, 294),
-		(296, 297, 298, 299, 300, 301, 302, 0, 0, 0, 0, 0) ))
+		(296, 297, 298, 299, 300, 301, 302, 304, 0, 0, 0, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1318,7 +1318,7 @@ def o_dreadsylvania(state):
 
 def o_cool_ultrarares(state):
 	print_coolitem_table(state, None, ((38, 39, 40, 41, 42, 137, 43, 44),
-									(45, 46, 47, 178, 48, 409, 0, 0)))
+									(45, 46, 47, 178, 409, 806, 48, 0)))
 
 def o_cool_ascension(state):
 	rewards = (range(555, 561),
@@ -1389,7 +1389,7 @@ def o_cool_chefstaves(state):
 	print_coolitem_table(state, None, (range(13, 19),
 									(19, 58, 20, 21, 22, 23),
 									(24, 25, 53, 59, 172, 272),
-									(386, 401, 441, 0, 0, 0)))
+									(386, 401, 441, 805, 0, 0)))
 	#
 def o_cool_marty(state):
 	print_coolitem_table(state, None, (range(216, 220),))
@@ -1507,9 +1507,10 @@ def o_cool_twitchery(state):
 	print_coolitem_table(state, None,
 		((779, 777, 225, 778, 320, 322),
 		 (780, 749, 317, 228, 318, 230),
-		 (229, 748, 227, 781, 315, 316),
-		 (319, 220, (321, 323), 221, 222, 224),
-		 (223, 226, 231, 232, 233, 314)))
+		 (229, 748, 227, 781, 804, 315),
+		 (316, 319, 808, 807, 220, (321, 323)), 
+		 (221, 222, 224, 223, 226, 231), 
+		 (232, 233, 314, 0, 0, 0)))
 
 def o_cool_hairclub(state):
 	print_coolitem_table(state, None,
@@ -1788,8 +1789,8 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 			Section(2, "Train Crimbo (2022)", "a6zl", o_cool_train),
 			Section(2, "Pirate Crimbo (2023)", "a6zm", o_cool_crimbuc),
 			Section(2, "Pirate Crrrrimbo (2024)", "a6zn", o_cool_crrrrimbo),
-			Section(2, "Twitchery (most recent 2025)", "a6zj", o_cool_twitchery),
 			Section(2, "Skeleton Crimbo (2025)", "a6zo", o_cool_skelecrimbo),
+			Section(2, "Twitchery (most recent 2026)", "a6zj", o_cool_twitchery),
 			Section(2, "Hair Club for Loathers", "a6zz", o_cool_hairclub)]),
 		Section(1, "Discoveries", "a7", o_pass, [
 			Section(2, "Cocktailcrafting", "a7a", o_disc_cocktailcrafting),
