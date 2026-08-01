@@ -1231,7 +1231,8 @@ def o_jicks_mom(state):
 	print_mritem_cell(state, 267)
 	print_item_link_cell("unevolved organism", (getbits(state['familiar-bytes'], 294, 4) > 0))
 	print_mritem_cell(state, 290)
-	o("<td></td><td></td></tr><tr>")
+	print_mritem_cell(state, 303)
+	o("<td></td></tr><tr>")
 	print_mritem_cell(state, 184)
 	print_mritem_cell(state, 251)
 	o("<td></td><td></td><td></td><td></td></tr></table>")
@@ -1507,10 +1508,10 @@ def o_cool_twitchery(state):
 	print_coolitem_table(state, None,
 		((779, 777, 225, 778, 320, 322),
 		 (780, 749, 317, 228, 318, 230),
-		 (229, 748, 227, 781, 804, 315),
-		 (316, 319, 808, 807, 220, (321, 323)), 
-		 (221, 222, 224, 223, 226, 231), 
-		 (232, 233, 314, 0, 0, 0)))
+		 (229, 748, 227, 781, 315, 316), 
+		 (319, 808, 807, 220, (321, 323), 221), 
+		 (222, 224, 223, 226, 231, 232), 
+		 (233, 314, 0, 0, 0, 0)))
 
 def o_cool_hairclub(state):
 	print_coolitem_table(state, None,
