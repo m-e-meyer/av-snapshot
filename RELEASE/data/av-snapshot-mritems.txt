@@ -299,6 +299,6 @@
 299	i	wrapped Baseball Diamond	Baseball Diamond	-	-	-	-	-
 300	i	pasta wand loot box	legendary pasta wand	-	-	-	-	-
 301	f	scabbarded Sword of S Words	Sword of S Words	-	-	-	-	-
-302	i	shrink-wrapped Cup of 13s	Cup of 13	-	-	-	-	-
+302	i	shrink-wrapped Cup of 13s	Cup of 13s	-	-	-	-	-
 303	i	packaged Portable Laughing Stock	Portable Laughing Stock	-	-	-	-	-
 304	i	Interesting Coin Inheritance Letter	Interesting Coin	-	-	-	-	-
