@@ -54,7 +54,7 @@
 54	Cloaca-Cola Uniform	cola1tat	cloaca-cola helmet	cloaca-cola shield	cloaca-cola fatigues	-	-	-	-	-	-
 55	Clockwork Apparatus	clocktat	clockwork hat	clockwork pants	clockwork trench coat	-	-	-	-	-	-
 56	Crimbo Duds	pressietat	crimbo hat	crimbo sword	crimbo pants	-	-	-	-	-	-
-57	Crimborg Assault Armor	halotat	biomechanical crimborg helmet	c.b.f.g.	biomechanical crimbord leg armor	-	-	-	-	-	-
+57	Crimborg Assault Armor	halotat	biomechanical crimborg helmet	c.b.f.g.	biomechanical crimborg leg armor	-	-	-	-	-	-
 58	Cursed Zombie Pirate Costume	zompirtat	cursed eyepatch	cursed cutlass	cursed breeches	-	-	-	-	-	-
 59	Dire Drifter Duds	spohobotat	zombo's skullcap	zombo's shield	zombo's grievous greaves	-	-	-	-	-	-
 60	Dwarvish War Uniform	dwarvish	dwarvish war helmet	dwarvish war mattock	dwarvish war kilt	-	-	-	-	-	-

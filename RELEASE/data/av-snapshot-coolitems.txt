@@ -806,3 +806,4 @@
 806	Space Soldier Helmet	stormhelmet2	-	-	-	-	-
 807	The Wizard's Android	android	-	-	-	-	-
 808	tactical jester's cap	jestercap	-	-	-	-	-
+809	Thwaitgold red and blue beetle statuette	thwaitredblue	-	-	-	-	-
