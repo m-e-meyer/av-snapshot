@@ -453,3 +453,5 @@
 453	Who's Going to Pay This Drunken Sailor?	+25% item drops (10 adv)	-	b	-	-	-	-
 454	Only Dogs Love a Drunken Sailor	+5 fam wt (10 adv)	-	b	-	-	-	-
 455	Holiday Burial Knowledge	+25% stats from Undead	-	pb	-	-	-	-
+456	Order a Kneecapping	Banish til rollover, 1/day	-	h	-	-	-	-
+457	Old Country Cooking	More dry noodles!	-	ph	-	-	-	-

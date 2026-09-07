@@ -302,3 +302,4 @@
 302	i	shrink-wrapped Cup of 13s	Cup of 13s	-	-	-	-	-
 303	i	packaged Portable Laughing Stock	Portable Laughing Stock	-	-	-	-	-
 304	i	Interesting Coin Inheritance Letter	Interesting Coin	-	-	-	-	-
+305	f	meat shield toddler	Meat Shield Maiden	-	-	-	-	-

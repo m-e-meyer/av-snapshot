@@ -698,7 +698,7 @@ string check_levels(int num_levels)
 	debug("You have "+k+" karma");
 	set_level_counter(12, k, num_levels, 4);
 	// Manuel
-	string manuelHTML = visit_url("questlog.php?which=6&vl=a");
+	string manuelHTML = visit_url("questlog.php?which=6&vl=-");
 	if(contains_text(manuelHTML, "Monster Manuel")) {
 		matcher m = create_matcher("casually(?:.*?)([0-9]+) creature(s?)[.]", manuelHTML);
 		if (find(m)) {
