@@ -321,3 +321,4 @@
 321	Sword of S Words	swordsword	scabbarded Sword of S Words	p	-	-	-	-	-
 322	Gross Prophet	prophet	gross prophet chrysalis	d	-	-	-	-	-
 323	Meat Shield Maiden	msm	meat shield toddler	p	-	-	-	-	-
+324	Weeping Cherub Statue	cherubawake	wide-eye cherub statue	d	-	-	-	-	-

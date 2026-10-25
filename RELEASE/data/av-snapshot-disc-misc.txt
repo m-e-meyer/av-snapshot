@@ -160,3 +160,7 @@
 160	large pile of sand (grains)	pile of sand</b> <font size=1><br/>10000 x grain of sand	-	-	-	-	-	-
 161	large pile of sand (small piles)	pile of sand</b> <font size=1><br/>100 x small pile of sand	-	-	-	-	-	-
 162	large pile of sand (piles)	pile of sand</b> <font size=1><br/>10 x pile of sand	-	-	-	-	-	-
+163	partial tombstone	-	-	-	-	-	-	-
+164	giant stonefruit	-	-	-	-	-	-	-
+165	bed of stone roses	-	-	-	-	-	-	-
+166	wide-eyed cherub statue	-	-	-	-	-	-	-

@@ -324,3 +324,5 @@
 324	Flimsy Plastic Armor	lightknighttat	flimsy plastic helmet	flimsy plastic greaves	flimsy plastic breastplate	flimsy plastic shield	-	-	-	-	-
 325	Bear Tattoo	beartat	-	-	-	-	-	-	-	-	-
 326	Bull Tattoo	bulltat	-	-	-	-	-	-	-	-	-
+327	Rose Tattoo	rosetat	black thorn crown	black thorn whip	black thorn sarong	black thorn necklace	-	-	-	-	-
+
