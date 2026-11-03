@@ -1179,7 +1179,7 @@ def o_mritems(state):
 		(254, 255, 256, 257, 258, 260, 261, 262, 263, 264, 265, 266),
 		(268, 270, 271, 272, 273, 274, 275, 276, 277, (278, 57), 279, 280),
 		(281, 283, 284, 285, 286, 287, 288, 289, 291, 292, 293, 294),
-		(296, 297, 298, 299, 300, 301, 302, 304, 305, 306, 0, 0) ))
+		(296, 297, 298, 299, 300, 301, 302, 304, 305, 306, 307, 0) ))
 
 def o_yearly(state):
 	print_mritem_table(state, 2005,
@@ -1628,7 +1628,7 @@ def o_consumption_booze(state):
 
 def o_various(state):
 	"""TODO"""
-	demonnames = list(map(escape, state['demonnames']+[""]+[""]))  # old versions had fewer demon names
+	demonnames = list(map(escape, state['demonnames']+[""]+[""]+[""]))  # old versions had fewer demon names
 	levels = state['levels']
 	o("<h3>Telescope</h3>")
 	scope_lvl = levels[25:26]
@@ -1660,6 +1660,7 @@ def o_various(state):
 	o(f"<tr><td>12) Neil the Sofa Sloth<br/>Intergnat</td><td>{demonnames[11]}</td></tr>")
 	o(f"<tr><td>13) Herald of Yeg<br/>Cargo Cultist Shorts</td><td>{demonnames[12]}</td></tr>")
 	o(f"<tr><td>14) Bane of Allies<br/>Allied Radio Backpack</td><td>{demonnames[13]}</td></tr>")
+	o(f"<tr><td>15) Lover of Roses<br/>Black Rose Garden</td><td>{demonnames[14]}</td></tr>")
 	o("</table>")
 	tats, trophs, fams = state['score_tats'], state['score_trophs'], state['score_fams']
 	o(f"<a name='collectorscore'><h3>Collector's Score: {tats+trophs+fams}"

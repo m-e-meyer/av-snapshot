@@ -304,4 +304,4 @@
 304	s	Interesting Coin Inheritance Letter	hasInterestingCoin	-	-	-	-	-
 305	f	meat shield toddler	Meat Shield Maiden	-	-	-	-	-
 306	it	black rosebud	black garden rose	The Black Rose Garden	-	-	-	-
-
+307	i	unopened legendary acorndion	legendary acorndion	-	-	-	-	-
