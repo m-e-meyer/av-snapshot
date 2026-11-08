@@ -198,7 +198,7 @@ def form_param_string(dic):
 		if p in ('name', 'update'):
 			continue
 		if p == 'demonnames':
-			if not re.match("[a-zA-Z0-9 '_|-]+$", dic[p]):
+			if not re.match("[a-zA-Z0-9 ,'_|-]+$", dic[p]):
 				raise MyException(f'Invalid demon name(s) {escape(dic[p])}')
 		result = result + prefix + p + '=' + dic[p]
 		prefix = '&'
@@ -1704,7 +1704,7 @@ def prepareResponse(argv, context):	 # pylint: disable=unused-argument
 			if (12 < len(snapshotversion) or (not re.match("[0-9a-zA-Z.]*$", snapshotversion))):
 				return f'<html><head></head><body>Invalid snapshot version: {escape(snapshotversion)}</body></html>'
 			demonnames = argv['demonnames']
-			if (200 < len(demonnames) or (not re.match("[a-zA-Z0-9 '_|-]+$", demonnames))):
+			if (200 < len(demonnames) or (not re.match("[a-zA-Z0-9 ,'_|-]+$", demonnames))):
 				return f'<html><head></head><body>Invalid demon name list: {escape(demonnames)}</body></html>'
 			# Save if all is well
 			save(name, argv)
